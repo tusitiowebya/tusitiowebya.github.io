@@ -207,9 +207,8 @@ section{position:relative}
 .ficha .btn{align-self:flex-start}
 
 /* ---------- galería ---------- */
-.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .gal figure{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/5}
-.gal figure:first-child{aspect-ratio:auto;grid-row:span 1}
 .gal img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
 .gal figcaption{
   position:absolute;left:14px;bottom:14px;background:var(--ink);color:var(--mustard);
@@ -275,7 +274,6 @@ section{position:relative}
   .tablero{grid-template-columns:1fr}
   .board{grid-template-columns:repeat(3,1fr);min-height:auto}
   .gal{grid-template-columns:1fr 1fr}
-  .gal figure:first-child{grid-column:span 2}
   .why-grid{grid-template-columns:1fr}
   .strip-in{grid-template-columns:repeat(2,1fr);gap:26px}
 }
@@ -285,7 +283,6 @@ section{position:relative}
   .serv-grid{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr;gap:28px}
   .gal{grid-template-columns:1fr}
-  .gal figure:first-child{grid-column:span 1}
 }
 @media(max-width:480px){
   .brand-sub{display:none}

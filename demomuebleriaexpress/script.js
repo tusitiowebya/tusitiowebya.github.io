@@ -205,13 +205,20 @@
   // los kits entran con reveal la primera vez
   $$('.kit', kitsEl).forEach(el => el.classList.remove('in')); U.reveal(kitsEl);
 
-  /* ---------- Promos reales ---------- */
-  const PROMOS = 13;
+  /* ---------- Ofertas del mes: los productos marcados como "Destacado" en CobrOS
+     (tocar uno abre su ficha). Si no hay ninguno, quedan las 13 piezas fijas. ---------- */
   const promos = $('[data-promos]'), lb = $('[data-lightbox]');
-  promos.innerHTML = Array.from({ length: PROMOS }, (_, i) => {
-    const n = String(i).padStart(2, '0');
-    return `<button class="promo" type="button" data-promo="${n}" aria-label="Ver oferta ${i + 1}"><img src="img/promo/promo-${n}.jpg" alt="Oferta de Mueblería Express ${i + 1}" loading="lazy"></button>`;
-  }).join('');
+  const destacados = ME.productos.filter(p => p.d);
+  if (destacados.length) {
+    promos.innerHTML = destacados.map(p =>
+      `<button class="promo" type="button" data-ficha="${p.id}" aria-label="Ver ${esc(p.n)}"><img src="${ME.flyer(p)}" alt="${esc(p.n)}" loading="lazy"></button>`
+    ).join('');
+  } else {
+    promos.innerHTML = Array.from({ length: 13 }, (_, i) => {
+      const n = String(i).padStart(2, '0');
+      return `<button class="promo" type="button" data-promo="${n}" aria-label="Ver oferta ${i + 1}"><img src="img/promo/promo-${n}.jpg" alt="Oferta de Mueblería Express ${i + 1}" loading="lazy"></button>`;
+    }).join('');
+  }
   promos.addEventListener('click', e => {
     const b = e.target.closest('[data-promo]'); if (!b) return;
     const img = $('img', lb); img.src = `img/promo/promo-${b.dataset.promo}.jpg`; img.alt = 'Oferta ampliada';

@@ -507,12 +507,12 @@ section h2 { font-family: var(--f-display); font-weight: 600; font-size: clamp(1
 .fleet__row button:hover { background: rgba(201, 160, 79, .1); }
 .fleet__row button:hover svg { background: var(--gold-2); color: var(--ink); transform: translateY(-3px); }
 .ap-band { display: grid; grid-template-columns: .9fr 1.1fr; background: var(--white); border-radius: 24px; overflow: hidden; border: 1px solid var(--line); }
-.ap-band__art { position: relative; min-height: 460px; padding: 32px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; background: radial-gradient(circle at 52% 48%, #30291a 0, #191714 48%, var(--ink) 100%); color: var(--gold-2); }
-.ap-band__art::before { content: ""; position: absolute; inset: 15px; border: 1px solid rgba(201, 160, 79, .3); border-radius: 15px; pointer-events: none; }
-.ap-band__eyebrow { position: relative; z-index: 1; font-family: var(--f-cond); font-size: .88rem; letter-spacing: .2em; text-transform: uppercase; }
-.ap-band__drawing { position: absolute; width: min(94%, 560px); max-height: 90%; left: 50%; top: 48%; transform: translate(-50%, -50%); filter: drop-shadow(0 25px 34px rgba(0, 0, 0, .3)); }
-.ap-band__mark { position: relative; z-index: 1; display: flex; align-items: baseline; gap: 14px; font-family: var(--f-display); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; color: var(--paper); }
-.ap-band__mark small { font-family: var(--f-cond); font-size: .78rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-2); }
+.ap-band__photo { position: relative; min-height: 460px; margin: 0; overflow: hidden; background: var(--ink); }
+.ap-band__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 52% 50%; }
+.ap-band__photo::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(13, 12, 10, .78)); pointer-events: none; }
+.ap-band__photo figcaption { position: absolute; z-index: 1; left: clamp(24px, 3vw, 42px); right: 24px; bottom: 28px; display: flex; align-items: baseline; gap: 14px; color: var(--paper); }
+.ap-band__photo figcaption span { font-family: var(--f-display); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; }
+.ap-band__photo figcaption small { font-family: var(--f-cond); font-size: .78rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-3); }
 .ap-band__copy { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .ap-band__copy .kicker { margin-bottom: 12px; }
 .ap-band h3 { font-family: var(--f-display); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.1; margin-bottom: 16px; }
@@ -738,7 +738,7 @@ html.qa .promise__track, html.qa .hero__seal::after { animation: none; }
   .fleet__row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .fleet__row button:nth-child(4)::before { display: none; }
   .ap-band { grid-template-columns: 1fr; }
-  .ap-band__art { min-height: 350px; }
+  .ap-band__photo { min-height: 350px; }
   .fleet__more-head { grid-template-columns: 1fr; }
   .client__grid .phone { order: 2; }
   .foot__grid { grid-template-columns: 1fr 1fr; }
@@ -799,10 +799,10 @@ html.qa .promise__track, html.qa .hero__seal::after { animation: none; }
   .ficha__stamp { width: 90px; height: 90px; top: 50px; right: 12px; }
   .apps__brands li { font-size: 1.25rem; padding: 0 14px; }
   .apps .ribbon span { font-size: .9rem; letter-spacing: .1em; }
-  .ap-band__art { min-height: 295px; padding: 25px; }
-  .ap-band__drawing { width: min(90%, 390px); top: 48%; }
-  .ap-band__mark { font-size: 2.5rem; }
-  .ap-band__mark small { font-size: .65rem; letter-spacing: .13em; }
+  .ap-band__photo { min-height: 295px; }
+  .ap-band__photo figcaption { left: 25px; bottom: 22px; }
+  .ap-band__photo figcaption span { font-size: 2.5rem; }
+  .ap-band__photo figcaption small { font-size: .65rem; letter-spacing: .13em; }
   .fleet__row svg { width: 60px; height: 60px; padding: 11px; }
   .fleet__row span { font-size: .85rem; letter-spacing: .1em; }
   .fleet__more-list a { min-height: 144px; padding: 16px; }

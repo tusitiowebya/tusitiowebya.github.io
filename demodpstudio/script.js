@@ -2,6 +2,8 @@
   const html = document.documentElement;
   const isLite = () => html.classList.contains('lite');
   const WA = '5491130784813';
+  const QA = /[?&]qa/.test(location.search);
+  if (QA) html.classList.add('qa');
 
   /* ---------- nav + floating WhatsApp ---------- */
   const nav = document.getElementById('nav');
@@ -27,7 +29,7 @@
   mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
   /* ---------- fit text: Android text scaling enlarges px fonts but not vw widths ---------- */
-  const FIT = '.hero__title, .hero__kicker, .brushlabel span, .h2, .btn, .result__name, .htag h3, .case h3, .step h3, .steps b, .mnav a, .foot__claim, .sticker';
+  const FIT = '.hero__title, .hero__kicker, .brushlabel span, .h2, .btn, .result__name, .htag h3, .case h3, .step h3, .steps b, .depo__h3, .depo__sports li, .why b, .mnav a, .foot__claim, .sticker';
   const fitEls = [...document.querySelectorAll(FIT)];
   const overflows = el => el.scrollWidth > el.clientWidth + 1;
   const fitText = () => {
@@ -60,7 +62,8 @@
       rvIO.unobserve(el);
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.rv').forEach(el => rvIO.observe(el));
+  if (QA) document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+  else document.querySelectorAll('.rv').forEach(el => rvIO.observe(el));
 
   /* ---------- videos (lazy, only the visible ones, never in LITE) ---------- */
   const videos = [...document.querySelectorAll('video[data-src]')];
