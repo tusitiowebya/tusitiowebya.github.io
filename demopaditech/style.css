@@ -446,6 +446,8 @@ html.lite .cam3d, html.cam-fallback .cam3d { display: none; }
 .foot-brand p { margin: 14px 0 12px; max-width: 30em; }
 .foot-wa { display: inline-flex; align-items: center; gap: 8px; color: var(--snow); text-decoration: none; font-weight: 600; cursor: pointer; }
 .foot-wa svg { width: 18px; height: 18px; color: #3BDB7E; }
+.foot-wa { margin: 6px 18px 0 0; }
+.foot-ig svg { color: var(--snow); }
 .foot-nav { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .foot-nav a { color: #C3C8CF; text-decoration: none; }
 .foot-nav a:hover { color: #fff; }
@@ -513,30 +515,26 @@ html.js.is-ready .feed { opacity: 1; transform: none; }
 .sk-feed figcaption { padding-top: 36px; }
 .sk-pared { aspect-ratio: 4 / 5; }
 .sk-pared img { object-position: 50% 30%; }
-.combo { display: grid; gap: 20px; padding: 18px; border-radius: 20px; background: var(--paper); color: var(--text); }
-.combo-fig { display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 18px 36px -20px rgba(14, 16, 19, .55); }
-.combo-fig img { width: 100%; height: auto; transition: transform .5s var(--ease); }
-.combo-fig:hover img { transform: scale(1.03); }
+.redes { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 26px 22px; border-radius: 20px; background: var(--paper); color: var(--text); }
+.redes h3 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.02; letter-spacing: -.035em; font-weight: 740; margin-bottom: 14px; }
+.redes-txt { margin: 0 0 22px; font-size: 15.5px; line-height: 1.5; color: var(--muted); max-width: 46ch; }
+.redes-ig { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; font: 800 clamp(20px, 2vw, 24px)/1 var(--f-disp); letter-spacing: -.02em; color: var(--text); text-decoration: none; }
+.redes-ig svg { width: 30px; height: 30px; color: var(--rec-deep); transition: transform .3s var(--ease); }
+.redes-ig:hover svg { transform: rotate(-8deg) scale(1.08); }
+.redes-fb { display: inline-flex; align-items: center; gap: 8px; margin: -4px 0 20px; font-size: 15px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.redes-fb svg { width: 18px; height: 18px; color: #1877F2; }
+.redes-fb:hover { color: var(--text); }
 .combo-k { font: 900 11.5px/1.3 var(--f-dot); letter-spacing: .12em; text-transform: uppercase; color: var(--rec-deep); margin-bottom: 8px; }
-.combo h3 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1; letter-spacing: -.035em; font-weight: 740; margin-bottom: 14px; }
-.combo-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 9px; font-size: 15.5px; line-height: 1.45; color: var(--muted); }
-.combo-list li { position: relative; padding-left: 18px; }
-.combo-list li::before { content: ''; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
-.combo-list b { color: var(--text); font-weight: 650; }
-.combo-price { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid #D5D9DE; }
-.combo-price small { font-size: 14px; color: var(--muted); }
-.combo-price b { font: 800 clamp(34px, 4vw, 46px)/1 var(--f-disp); letter-spacing: -.035em; color: var(--text); }
-.combo-note { margin: 6px 0 18px; font-size: 14px; color: var(--muted); }
 @media (min-width: 640px) {
   .stock-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: dense; }
   .sk-feed { grid-column: span 2; }
-  .combo { grid-column: span 2; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; padding: 22px; gap: 28px; }
+  .redes { grid-column: span 2; padding: 30px; }
   .sk-video { aspect-ratio: auto; }
 }
 @media (min-width: 1100px) {
   .stock-grid { grid-template-columns: minmax(0, .82fr) minmax(0, 1.5fr) minmax(0, .82fr); grid-template-rows: 1fr 1fr; }
   .sk-video { grid-row: span 2; }
-  .combo { grid-column: 2; grid-row: 1 / span 2; grid-template-columns: minmax(0, .75fr) minmax(0, 1fr); }
+  .redes { grid-column: 2; grid-row: 1 / span 2; padding: 40px; }
   .sk-feed { grid-column: 3; aspect-ratio: auto; }
   .sk-pared { grid-column: 3; aspect-ratio: auto; }
 }

@@ -159,6 +159,34 @@ section{padding:96px 0}
 .serv-link{font-weight:700;font-size:14px;color:var(--ladrillo-d);text-decoration:none}
 .serv-link:hover{text-decoration:underline}
 
+/* ---------- proyectos y ejecución (llave en mano) ---------- */
+.llave{background:var(--crema);border-top:1px solid rgba(27,24,21,.07);border-bottom:1px solid rgba(27,24,21,.07)}
+.llave-inner{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:start}
+@media (max-width:960px){.llave-inner{grid-template-columns:1fr;gap:38px}}
+.llave-head{position:sticky;top:104px}
+@media (max-width:960px){.llave-head{position:static}}
+.llave-head .sec-lead{margin-bottom:22px}
+.llave-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.llave-badges li{font-family:"JetBrains Mono";font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--carbon);background:rgba(27,24,21,.06);border-radius:999px;padding:7px 13px}
+.llave-cols{display:flex;flex-direction:column;gap:20px}
+.llave-card{background:var(--papel);border:1px solid rgba(27,24,21,.08);border-radius:var(--radius);
+  padding:32px 30px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.llave-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -24px rgba(27,24,21,.3)}
+.llave-card.dark{background:var(--carbon);color:#fff;border-color:rgba(255,255,255,.08)}
+.llave-tag{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono";font-size:12px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ladrillo-d);margin-bottom:14px}
+.llave-card.dark .llave-tag{color:#e8b195}
+.llave-tag b{font-family:"Bebas Neue";font-size:26px;font-weight:400;letter-spacing:.02em;color:var(--ladrillo);line-height:1}
+.llave-card h3{font-family:"Bebas Neue";font-weight:400;font-size:clamp(21px,2.5vw,27px);line-height:1.12;
+  letter-spacing:.01em;margin-bottom:18px}
+.llave-list{display:grid;gap:11px}
+.llave-list li{position:relative;padding-left:28px;color:var(--muted);font-size:15px;line-height:1.55}
+.llave-card.dark .llave-list li{color:#cfc8ba}
+.llave-list li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;
+  border-left:2px solid var(--ladrillo);border-bottom:2px solid var(--ladrillo);transform:rotate(-45deg)}
+@media (max-width:560px){.llave-card{padding:26px 22px}}
+
 /* ---------- trabajos en video ---------- */
 .trabajos{background:var(--carbon);position:relative}
 .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}

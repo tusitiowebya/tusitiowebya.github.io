@@ -6,11 +6,14 @@
    - precio      = cuota por día del plan de 85 días (0 = "consultar")
    - descripcion = specs separadas por " · " y una línea "Planes: 85 días $X · 155 días $Y · 250 días $Z"
    - categoria   = nombre del rubro (ver RUBROS; uno nuevo aparece solo como rubro extra)
-   - codigo      = id del producto en la web (con eso usa la foto y el flyer locales) */
+   - codigo      = id del producto en la web (sin foto cargada en CobrOS usa la foto y el flyer locales)
+   - foto        = si el negocio sube una foto en CobrOS, esa manda (en la tarjeta y en la ficha)
+   - destacado   = tildado en CobrOS → aparece en "Ofertas del mes" (si no hay ninguno, quedan las piezas fijas)
+   WhatsApp: el del negocio en CobrOS (Configuración); WA queda de respaldo. */
 (function () {
   'use strict';
 
-  const WA = '5493412773692';
+  let WA = '5493417804489';
   const API = 'https://vps-5905394-x.dattaweb.com/cobros/api/cobros-publico';
   const SLUG = 'muebleria-express';
   const TIMEOUT = 4000;
@@ -79,10 +82,33 @@
     const spec = desc.split('\n').filter(l => !/^\s*(planes?|precio)\s*:/i.test(l)).join(' · ').replace(/\s*·\s*$/, '').trim();
     const cod = String(x.codigo || '').trim();
     const id = cod || String(x._id);
+    const foto = String(x.foto || '').trim();
+    // la foto sembrada al activar apunta a la copia local: en ese caso se usan img/p y img/f locales
+    const sembrada = locales.has(id) && foto.endsWith(`/img/p/${id}.jpg`);
     return {
       id, n: String(x.nombre || '').trim(), s: spec, c: rubroDe(x.categoria), p, q: !Object.keys(p).length,
-      foto: locales.has(id) ? '' : (x.foto || '')
+      foto: sembrada ? '' : foto, d: !!x.destacado
     };
+  }
+
+  /* WhatsApp del negocio en CobrOS → 549 + área + número */
+  function waDe(neg) {
+    let d = String((neg && (neg.whatsapp || neg.telefono)) || '').replace(/\D/g, '');
+    if (!d) return '';
+    if (d.startsWith('0')) d = d.slice(1);
+    if (d.startsWith('54')) d = d.slice(2);
+    if (d.startsWith('9')) d = d.slice(1);
+    d = d.replace(/^(\d{2,4})15/, '$1');
+    return d.length === 10 ? '549' + d : '';
+  }
+  /* 5493417804489 → "341 780-4489" */
+  const waTexto = n => { const d = n.slice(3); return `${d.slice(0, 3)} ${d.slice(3, 6)}-${d.slice(6)}`; };
+  function aplicarWA(nuevo) {
+    if (!nuevo || nuevo === WA) return;
+    const viejo = WA, txtViejo = waTexto(viejo), txtNuevo = waTexto(nuevo);
+    WA = nuevo;
+    document.querySelectorAll('a[href*="wa.me/"]').forEach(a => { a.href = a.href.replace('wa.me/' + viejo, 'wa.me/' + nuevo); });
+    document.querySelectorAll('[data-wa-txt]').forEach(el => { el.textContent = el.textContent.replace(txtViejo, txtNuevo); });
   }
 
   function cargar() {
@@ -91,6 +117,7 @@
     return fetch(`${API}/catalogo/${SLUG}`, ctl ? { signal: ctl.signal } : {})
       .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(d => {
+        aplicarWA(waDe(d.negocio));
         const lista = (d.productos || []).map(desdeCobros).filter(p => p.n);
         if (!lista.length) return;          // cuenta vacía o recién creada: queda el respaldo
         productos.length = 0; productos.push(...lista); reindex();
@@ -102,7 +129,7 @@
   const waLink = texto => 'https://wa.me/' + WA + '?text=' + encodeURIComponent(texto);
 
   window.ME = {
-    WA, PLANES, RUBROS, productos, porId, fmt, cuota, waLink,
+    get WA() { return WA; }, PLANES, RUBROS, productos, porId, fmt, cuota, waLink,
     get ORDEN() { return ORDEN.filter(r => productos.some(p => p.c === r)); },
     ready: cargar(),
     img(p) { return p.foto || `${B}img/p/${p.id}.jpg`; },
