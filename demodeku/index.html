@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construcciones Deku SAS - Transformamos tus espacios</title>
+    <meta name="description" content="Especialistas en construcción en seco, pintura, revestimientos y remodelaciones en CABA y Gran Buenos Aires">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deku-slate': '#475569',
+                        'deku-orange': '#f97316',
+                        'deku-dark': '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23475569" width="1200" height="600"/><path fill="%231e293b" d="M0 300h1200v300H0z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    
+    <!-- Header -->
+    <header id="header" class="sticky top-0 bg-white shadow-md z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-deku-orange rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">D</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-deku-dark">Construcciones Deku</h1>
+                    <p class="text-xs text-gray-600">SAS</p>
+                </div>
+            </div>
+            
+            <ul class="hidden md:flex gap-8 items-center">
+                <li><a href="#servicios" class="text-deku-slate hover:text-deku-orange transition-colors font-medium">Servicios</a></li>
+                <li><a href="#proyectos" class="text-deku-slate hover:text-deku-orange transition-colors font-medium">Proyectos</a></li>
+                <li><a href="#contacto" class="bg-deku-orange text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium">Contacto</a></li>
+            </ul>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-deku-slate">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <ul class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <li><a href="#servicios" class="text-deku-slate hover:text-deku-orange transition-colors font-medium block">Servicios</a></li>
+                <li><a href="#proyectos" class="text-deku-slate hover:text-deku-orange transition-colors font-medium block">Proyectos</a></li>
+                <li><a href="#contacto" class="bg-deku-orange text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium inline-block text-center">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[600px] flex items-center justify-center text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up text-balance">
+                Transformamos tus espacios con precisión y estilo
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                Especialistas en construcción en seco, pintura y remodelaciones integrales
+            </p>
+            <a href="#contacto" class="inline-block bg-deku-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg fade-in-up" style="animation-delay: 0.4s;">
+                Pedir Presupuesto Gratis
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center text-deku-dark mb-4">Nuestros Servicios</h3>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Ofrecemos soluciones completas para la construcción y renovación de tus espacios
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-deku-orange/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-deku-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-deku-dark mb-3">Construcción en Seco (Durlock)</h4>
+                    <p class="text-gray-600">Cielorrasos, tabiques y revestimientos con terminación profesional</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-deku-orange/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-deku-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-deku-dark mb-3">Pintura General & Revestimientos</h4>
+                    <p class="text-gray-600">Pinturas decorativas, revestimientos texturados y acabados especiales</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-deku-orange/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-deku-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-deku-dark mb-3">Electricidad & Gas</h4>
+                    <p class="text-gray-600">Instalaciones eléctricas y de gas con certificación profesional</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-deku-orange/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-deku-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-deku-dark mb-3">Remodelaciones Integrales</h4>
+                    <p class="text-gray-600">Renovación completa de ambientes, cocinas y baños</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="proyectos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center text-deku-dark mb-4">Nuestros Proyectos</h3>
+            <p class="text-center text-gray-600 mb-12">Algunos de nuestros trabajos realizados</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-deku-dark">Remodelación Living</h5>
+                        <p class="text-sm text-gray-600">CABA - Palermo</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-deku-dark">Cielorraso Durlock</h5>
+                        <p class="text-sm text-gray-600">Gran Buenos Aires</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-deku-dark">Pintura Integral</h5>
+                        <p class="text-sm text-gray-600">CABA - Belgrano</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-12 bg-deku-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-deku-orange mb-2">10+</div>
+                    <p class="text-gray-300">Años de Experiencia</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-deku-orange mb-2">CABA & GBA</div>
+                    <p class="text-gray-300">Zona de Cobertura</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-deku-orange mb-2">100%</div>
+                    <p class="text-gray-300">Presupuestos Sin Cargo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center text-deku-dark mb-4">Contactanos</h3>
+            <p class="text-center text-gray-600 mb-12">Obtené tu presupuesto sin cargo</p>
+            
+            <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                        <input type="text" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deku-orange focus:border-transparent outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                        <input type="tel" name="telefono" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deku-orange focus:border-transparent outline-none transition">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deku-orange focus:border-transparent outline-none transition">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label>
+                    <select name="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deku-orange focus:border-transparent outline-none transition">
+                        <option>Construcción en Seco (Durlock)</option>
+                        <option>Pintura General & Revestimientos</option>
+                        <option>Electricidad & Gas</option>
+                        <option>Remodelaciones Integrales</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                    <textarea name="mensaje" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deku-orange focus:border-transparent outline-none transition"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-deku-orange text-white py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+                    Enviar Consulta
+                </button>
+            </form>
+            
+            <div id="form-message" class="mt-4 text-center hidden"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deku-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Construcciones Deku SAS</h5>
+                    <p class="text-gray-400">Transformamos espacios con calidad y precisión desde hace más de 10 años.</p>
+                </div>
+                
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Contacto</h5>
+                    <p class="text-gray-400 mb-2">WhatsApp: +54 11 2311 3666</p>
+                    <p class="text-gray-400">Zona: CABA & Gran Buenos Aires</p>
+                </div>
+                
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Seguinos</h5>
+                    <a href="https://www.instagram.com/deku.pintura" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-deku-orange transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        @deku.pintura
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Construcciones Deku SAS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491123113666" target="_blank" class="whatsapp-float" title="Contactar por WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="30" height="30">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header shadow on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+        
+        // Observe gallery items
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            const message = `Hola! Me contacto desde la web de Construcciones Deku.
+            
+Nombre: ${data.nombre}
+Teléfono: ${data.telefono}
+Email: ${data.email}
+Servicio: ${data.servicio}
+Mensaje: ${data.mensaje}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/5491123113666?text=${encodedMessage}`;
+            
+            // Show success message
+            formMessage.textContent = 'Redirigiendo a WhatsApp...';
+            formMessage.className = 'mt-4 text-center text-green-600 font-semibold';
+            formMessage.classList.remove('hidden');
+            
+            // Redirect to WhatsApp
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                contactForm.reset();
+                formMessage.classList.add('hidden');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
