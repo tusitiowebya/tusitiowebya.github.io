@@ -17,7 +17,7 @@
   --text-muted: #8888a8;
   --neon: #408948;
   --neon-glow: rgba(75, 226, 55, 0.342);
-  --neon-soft: rgba(59, 130, 246, 0.12);
+  --neon-soft: rgba(175, 175, 175, 0.12);
   --whatsapp: #25d366;
   --whatsapp-hover: #1db954;
   --radius: 0.75rem;
@@ -979,4 +979,16 @@ section {
   section {
     padding: 6rem 0;
   }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 105px;   /* tamaño ideal */
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
 }
