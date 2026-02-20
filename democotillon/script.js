@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
       img: "images/globos.jpg",
     },
     {
-      title: "Pinatas Tematicas",
-      desc: "Pinatas artesanales de todos los personajes y formas.",
+      title: "Piñatas Tematicas",
+      desc: "Piñatas artesanales de todos los personajes y formas.",
       img: "images/pinata.jpg",
     },
     {
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---- Why Us Grid ----
   var reasons = [
     {
-      title: "Disenos Personalizados",
+      title: "Diseños Personalizados",
       desc: "Creamos cada detalle a medida para que tu fiesta sea unica e irrepetible.",
       color: "#FF1493",
       icon: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></svg>',
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "images/gallery3.jpg", alt: "Fiesta tematica unicornio" },
     { src: "images/gallery4.jpg", alt: "Decoracion de fiesta al aire libre" },
     { src: "images/globos.jpg", alt: "Bouquet de globos personalizados" },
-    { src: "images/pinata.jpg", alt: "Pinata artesanal" },
+    { src: "images/pinata.jpg", alt: "Piñata artesanal" },
   ];
 
   var galleryGrid = document.getElementById("gallery-grid");
