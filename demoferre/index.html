@@ -1,276 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FerreOnline 1365 - Herramientas y ferretería en Villaguay, Entre Ríos. Calidad, precio y confianza." />
-  <title>FerreOnline 1365 | Ferretería en Villaguay</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Pendiente de Activación</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    .logo {
+      max-width: 180px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #0a3d75; /* Azul fuerte estilo corporativo */
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background-color: #0a3d75;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn-link:hover {
+      background-color: #092f5c;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+  </style>
 </head>
+
 <body>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <img src="img/logo.jpg" alt="Logo FerreOnline 1365" class="nav-logo-img" />
-        <span>FerreOnline 1365</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="nav-link">Inicio</a></li>
-        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-        <li><a href="#productos" class="nav-link">Productos</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content animate-on-load">
-      <img src="img/logo.jpg" alt="Logo FerreOnline 1365" class="hero-logo" />
-      <h1 class="hero-title">Todo lo que necesitás en herramientas y ferretería</h1>
-      <p class="hero-subtitle">Calidad, precio y confianza en Villaguay, Entre Ríos</p>
-      <div class="hero-buttons">
-        <a href="#productos" class="btn btn-primary">Ver productos</a>
-        <a href="#contacto" class="btn btn-secondary">Contactar ahora</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SOBRE NOSOTROS ========== -->
-  <section class="section section-about" id="nosotros">
-    <div class="container">
-      <h2 class="section-title scroll-reveal">&iquest;Quiénes somos?</h2>
-      <p class="section-text scroll-reveal">
-        FerreOnline 1365 es una ferretería ubicada en San Martín 1365, Villaguay, Entre Ríos.
-        Ofrecemos herramientas eléctricas, manuales, accesorios y todo lo necesario para profesionales y particulares.
-      </p>
-      <div class="features-grid">
-        <div class="feature-card scroll-reveal">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-              <path d="m9 12 2 2 4-4"/>
-            </svg>
-          </div>
-          <h3>Calidad</h3>
-          <p>Trabajamos con las mejores marcas del mercado para garantizar durabilidad y rendimiento.</p>
-        </div>
-        <div class="feature-card scroll-reveal">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
-          </div>
-          <h3>Buen precio</h3>
-          <p>Precios competitivos y ofertas permanentes para que siempre ahorres en tus compras.</p>
-        </div>
-        <div class="feature-card scroll-reveal">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Atención personalizada</h3>
-          <p>Te asesoramos para que encuentres exactamente lo que necesitás para tu proyecto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRODUCTOS ========== -->
-<section class="section-products facebook-section" id="productos">
   <div class="container">
 
-    <h2 class="section-title scroll-reveal">Productos Destacados</h2>
-    <p class="section-text scroll-reveal">
-      Explorá nuestra selección de herramientas y productos de primera calidad.
+    <!-- Podés reemplazar este placeholder con tu logo real si querés -->
+   
+
+    <h1>Sitio pendiente de Activación</h1>
+
+    <p>
+      Para abonar la activación y subida de tu web lo podrás hacer desde el siguiente link 👇
     </p>
 
-    <div id="loading" class="pub-grid" >
-         </div>
+    <a class="btn-link" href="https://mpago.la/1m3gD5C" target="_blank">
+      Pagar Activación & Subida
+    </a>
 
-    <!-- Grid -->
-    <div id="pub-grid" class="pub-grid" hidden></div>
+    <div class="footer">
+      © 2026 Tu Página Ya. Todos los derechos reservados.
+    </div>
 
   </div>
-</section>
-
-  <!-- ========== CONTACTO ========== -->
-  <section class="section section-contact" id="contacto">
-    <div class="container">
-      <h2 class="section-title scroll-reveal">Contacto</h2>
-      <p class="section-text scroll-reveal">Estamos para ayudarte. Contactanos por cualquiera de estos medios.</p>
-      <div class="contact-grid">
-        <div class="contact-card scroll-reveal">
-          <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <h3>Dirección</h3>
-          <p>San Martín 1365, Villaguay, Entre Ríos</p>
-        </div>
-        <div class="contact-card scroll-reveal">
-          <a href="https://wa.me/5493455000000" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp-link">
-            <div class="contact-icon whatsapp-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </div>
-            <h3>WhatsApp</h3>
-            <p>Escribinos por WhatsApp</p>
-          </a>
-        </div>
-        <div class="contact-card scroll-reveal">
-          <a href="https://instagram.com/ferreonline1365" target="_blank" rel="noopener noreferrer" class="contact-link instagram-link">
-            <div class="contact-icon instagram-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-            </div>
-            <h3>Instagram</h3>
-            <p>Seguinos en @ferreonline1365</p>
-          </a>
-        </div>
-        <div class="contact-card scroll-reveal">
-          <a href="mailto:contacto@ferreonline1365.com" class="contact-link email-link">
-            <div class="contact-icon email-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <h3>Email</h3>
-            <p>contacto@ferreonline1365.com</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="img/logo.jpg" alt="Logo FerreOnline 1365" class="footer-logo" />
-          <h3>FerreOnline 1365</h3>
-          <p>Tu ferretería de confianza en Villaguay, Entre Ríos.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Enlaces rápidos</h4>
-          <ul>
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h4>Redes sociales</h4>
-          <div class="social-icons">
-            <a href="https://wa.me/5493455000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </a>
-            <a href="https://instagram.com/ferreonline1365" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-            </a>
-            <a href="mailto:contacto@ferreonline1365.com" aria-label="Email">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="footerYear"></span> FerreOnline 1365. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-
-   <script>
-    const API_BASE = window.location.origin;
-    let allPublications = [];
-    let currentFilter = 'Todas';
-
-    function formatDate(iso) {
-      return new Date(iso).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-    }
-
-    
-
-    function renderGrid() {
-      const grid = document.getElementById('pub-grid');
-      const empty = document.getElementById('empty-state');
-      const filtered = currentFilter === 'Todas'
-        ? allPublications
-        : allPublications.filter(p => p.category === currentFilter);
-
-      if (filtered.length === 0) {
-        grid.hidden = true;
-        empty.hidden = false;
-        return;
-      }
-
-      grid.hidden = false;
-      grid.innerHTML = filtered.map(pub => `
-        <article class="pub-card">
-          ${pub.image
-            ? `<div class="pub-card__img-wrap"><img class="pub-card__img" src="${pub.image}" alt="${pub.title}"></div>`
-            : `<div class="pub-card__no-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="2" y2="22"/><path d="M10.41 10.41a2 2 0 1 1-2.83-2.83"/><line x1="13.5" x2="6" y1="13.5" y2="21"/><line x1="18" x2="21" y1="12" y2="15"/><path d="M3.59 3.59A1.99 1.99 0 0 0 3 5v14a2 2 0 0 0 2 2h14c.55 0 1.052-.22 1.41-.59"/><path d="M21 15V5a2 2 0 0 0-2-2H9"/></svg></div>`
-          }
-          <div class="pub-card__body">
-            <span class="pub-card__badge">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
-              ${pub.category}
-            </span>
-            <h3 class="pub-card__title">${pub.title}</h3>
-            <p class="pub-card__desc">${pub.description}</p>
-            <div class="pub-card__date">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
-              ${formatDate(pub.createdAt)}
-            </div>
-          </div>
-        </article>
-      `).join('');
-    }
-
-    async function init() {
-      try {
-        const res = await fetch(API_BASE + '/api/publications');
-        allPublications = await res.json();
-      } catch {
-        allPublications = [];
-      }
-
-      document.getElementById('loading').hidden = true;
-      renderGrid();
-    }
-
-    init();
-  </script>
 </body>
+
 </html>
