@@ -754,12 +754,17 @@ body {
     .cta-buttons {
         flex-direction: row;
     }
+
+}
+
+@media only screen and (max-width: 600px) {
         .brand-logo {
         text-align: center;
     }
     .hero-text{ 
         text-align: center;
     }
+
 }
 
 @media (min-width: 768px) {
