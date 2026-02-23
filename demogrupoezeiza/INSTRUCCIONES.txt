@@ -1,0 +1,166 @@
+═══════════════════════════════════════════════════════════════════
+  GRUPO EZEIZA JL - LANDING PAGE
+  Demo Completa Lista Para Usar
+═══════════════════════════════════════════════════════════════════
+
+📁 ARCHIVOS INCLUIDOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ index.html          → Página principal
+✅ style.css           → Todos los estilos
+✅ script.js           → Interactividad y animaciones
+✅ images/             → Carpeta con 5 imágenes generadas
+   ├── hero-excavator.jpg
+   ├── gallery-1.jpg
+   ├── gallery-2.jpg
+   ├── gallery-3.jpg
+   └── gallery-4.jpg
+✅ README.md           → Documentación completa
+✅ INSTRUCCIONES.txt   → Este archivo
+
+═══════════════════════════════════════════════════════════════════
+📱 CÓMO USAR LA DEMO
+═══════════════════════════════════════════════════════════════════
+
+OPCIÓN 1 - RÁPIDA:
+------------------
+1. Doble click en "index.html"
+2. Se abrirá en tu navegador
+3. ¡Listo! Ya podés ver la página
+
+OPCIÓN 2 - RECOMENDADA (con servidor local):
+---------------------------------------------
+Para que las imágenes funcionen mejor:
+
+Con Python instalado:
+  python -m http.server 8000
+  
+Luego abrir: http://localhost:8000
+
+═══════════════════════════════════════════════════════════════════
+🎨 SECCIONES INCLUIDAS
+═══════════════════════════════════════════════════════════════════
+
+1. ✅ HERO - Pantalla completa con imagen de excavadora
+2. ✅ SOBRE NOSOTROS - Presentación de la empresa
+3. ✅ SERVICIOS - 7 servicios con iconos:
+   • Pilotes
+   • Movimiento de Suelos
+   • Demoliciones
+   • Canchas de Fútbol
+   • Canchas de Tenis
+   • Pavimento
+   • Carpeta Asfáltica
+
+4. ✅ GALERÍA - 4 imágenes de trabajos
+5. ✅ POR QUÉ ELEGIRNOS - 4 ventajas destacadas
+6. ✅ LLAMADO A LA ACCIÓN - Botones grandes de contacto
+7. ✅ FORMULARIO - Completo con validación
+8. ✅ FOOTER - Datos de contacto y horarios
+9. ✅ BOTÓN WHATSAPP FLOTANTE - Siempre visible
+
+═══════════════════════════════════════════════════════════════════
+⚙️ PERSONALIZACIÓN
+═══════════════════════════════════════════════════════════════════
+
+CAMBIAR TELÉFONO Y CONTACTO:
+----------------------------
+Buscar y reemplazar en index.html y script.js:
+
+  +5491112345678          → Tu número de WhatsApp
+  info@grupoezeizajl.com  → Tu email
+
+CAMBIAR COLORES:
+----------------
+Editar en style.css (línea 10):
+
+  --color-primary: #e87538;    (naranja industrial)
+  --color-secondary: #2d2d2d;  (gris oscuro)
+
+CAMBIAR IMÁGENES:
+-----------------
+Reemplazar archivos en carpeta "images/" con tus fotos.
+Mantener los mismos nombres de archivo.
+
+Tamaños recomendados:
+  • Hero: 1920x1080px
+  • Galería: 800x600px
+
+═══════════════════════════════════════════════════════════════════
+🚀 CARACTERÍSTICAS TÉCNICAS
+═══════════════════════════════════════════════════════════════════
+
+✓ Diseño 100% Responsive (móvil, tablet, desktop)
+✓ Menú sticky con efecto al hacer scroll
+✓ Animaciones suaves en todas las secciones
+✓ Smooth scroll al navegar
+✓ Efecto parallax en el hero
+✓ Formulario con validación
+✓ Integración directa con WhatsApp
+✓ Sin dependencias externas (no jQuery, no Bootstrap)
+✓ Código limpio y comentado
+✓ Compatible con todos los navegadores modernos
+
+═══════════════════════════════════════════════════════════════════
+📤 PUBLICAR EN INTERNET
+═══════════════════════════════════════════════════════════════════
+
+Para subir a internet, necesitás un hosting web. Opciones:
+
+GRATUITAS:
+  • GitHub Pages
+  • Netlify
+  • Vercel
+  
+PAGAS:
+  • Hostinger
+  • DonWeb
+  • Cualquier hosting con cPanel
+
+Simplemente subí todos los archivos de esta carpeta.
+
+═══════════════════════════════════════════════════════════════════
+📞 NÚMEROS DE CONTACTO EN LA PÁGINA
+═══════════════════════════════════════════════════════════════════
+
+Actualmente configurados con números de ejemplo:
+  📱 WhatsApp: +54 9 11 1234-5678
+  📧 Email: info@grupoezeizajl.com
+  📍 Ubicación: Ezeiza, Buenos Aires
+
+¡IMPORTANTE! Reemplazarlos con tus datos reales antes de publicar.
+
+═══════════════════════════════════════════════════════════════════
+💡 PRÓXIMOS PASOS SUGERIDOS
+═══════════════════════════════════════════════════════════════════
+
+1. ✏️  Personalizar textos e información
+2. 📸 Reemplazar imágenes con fotos reales de la empresa
+3. 📱 Actualizar número de WhatsApp real
+4. 📧 Configurar email real
+5. 🌐 Contratar hosting y dominio
+6. 🚀 Publicar en internet
+7. 📊 Agregar Google Analytics (opcional)
+8. 🔍 Optimizar SEO con meta tags
+
+═══════════════════════════════════════════════════════════════════
+✨ EXTRAS INCLUIDOS
+═══════════════════════════════════════════════════════════════════
+
+• Botón flotante de WhatsApp (abajo a la derecha)
+• Menú hamburguesa para móviles
+• Efectos hover en servicios y galería
+• Scroll suave entre secciones
+• Diseño inspirado en Grupo Mitre
+• Colores industriales (naranja + gris oscuro)
+• Tipografía robusta y profesional
+
+═══════════════════════════════════════════════════════════════════
+
+¿NECESITÁS AYUDA?
+
+Toda la documentación detallada está en el archivo README.md
+
+═══════════════════════════════════════════════════════════════════
+Desarrollado con ❤️ para GRUPO EZEIZA JL
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Empresa especializada en movimiento de suelos, demoliciones, pilotes y obras civiles en Ezeiza, Buenos Aires. Maquinaria propia y personal capacitado.">
+  <title>Grupo Ezeiza JL - Movimiento de Suelos, Demoliciones y Obras Civiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <h1 class="logo">GRUPO EZEIZA JL</h1>
+        <div class="nav-menu" id="navMenu">
+          <button onclick="scrollToSection('inicio')" class="nav-link">Inicio</button>
+          <button onclick="scrollToSection('servicios')" class="nav-link">Servicios</button>
+          <button onclick="scrollToSection('galeria')" class="nav-link">Galería</button>
+          <button onclick="scrollToSection('contacto')" class="nav-link">Contacto</button>
+          <button onclick="openWhatsApp()" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            WhatsApp
+          </button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 class="hero-title">
+        Movimiento de Suelos,<br>
+        Demoliciones y Obras Civiles<br>
+        en Ezeiza
+      </h2>
+      <p class="hero-subtitle">
+        Empresa especializada en obras de infraestructura, nivelaciones y pavimentación
+      </p>
+      <div class="hero-buttons">
+        <button onclick="scrollToSection('contacto')" class="btn btn-primary btn-lg">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Solicitar Presupuesto
+        </button>
+        <button onclick="openWhatsApp()" class="btn btn-secondary btn-lg">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          WhatsApp Directo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title">Sobre Grupo Ezeiza JL</h2>
+        <p class="section-text">
+          Somos una empresa especializada en movimiento de suelos, pilotes y obras civiles. 
+          Contamos con maquinaria propia y personal capacitado para garantizar eficiencia, 
+          seguridad y cumplimiento en cada proyecto.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <h3 class="service-title">Pilotes</h3>
+          <p class="service-description">Fundaciones profundas con maquinaria especializada para cimentaciones de gran escala.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"></path>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <h3 class="service-title">Movimiento de Suelos</h3>
+          <p class="service-description">Excavaciones, nivelaciones y preparación de terrenos para todo tipo de obras.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m4 15 8-8 8 8M6 11h12v10H6z"></path>
+          </svg>
+          <h3 class="service-title">Demoliciones</h3>
+          <p class="service-description">Demoliciones controladas de estructuras con maquinaria pesada y personal capacitado.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+            <path d="M4 22h16"></path>
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+          </svg>
+          <h3 class="service-title">Canchas de Fútbol</h3>
+          <p class="service-description">Construcción completa de canchas de fútbol con nivelación profesional.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+          </svg>
+          <h3 class="service-title">Canchas de Tenis</h3>
+          <p class="service-description">Instalación de canchas de tenis con acabados de alta calidad.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="19" cy="12" r="1"></circle>
+            <circle cx="5" cy="12" r="1"></circle>
+            <circle cx="12" cy="5" r="1"></circle>
+            <circle cx="12" cy="19" r="1"></circle>
+            <circle cx="19" cy="19" r="1"></circle>
+            <circle cx="5" cy="19" r="1"></circle>
+            <circle cx="5" cy="5" r="1"></circle>
+            <circle cx="19" cy="5" r="1"></circle>
+          </svg>
+          <h3 class="service-title">Pavimento</h3>
+          <p class="service-description">Pavimentación de calles, accesos y estacionamientos.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"></path>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <h3 class="service-title">Carpeta Asfáltica</h3>
+          <p class="service-description">Colocación de carpeta asfáltica para caminos y rutas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="galeria" class="gallery">
+    <div class="container">
+      <h2 class="section-title">Galería de Trabajos</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-image: url('images/gallery-1.jpg')"></div>
+        <div class="gallery-item" style="background-image: url('images/gallery-2.jpg')"></div>
+        <div class="gallery-item" style="background-image: url('images/gallery-3.jpg')"></div>
+        <div class="gallery-item" style="background-image: url('images/gallery-4.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose">
+    <div class="container">
+      <h2 class="section-title">Por Qué Elegirnos</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <p class="feature-text">Maquinaria propia</p>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <p class="feature-text">Personal especializado</p>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <p class="feature-text">Obras en tiempo y forma</p>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <p class="feature-text">Presupuestos sin cargo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta-title">¿Tenés una obra en mente?</h2>
+      <div class="cta-buttons">
+        <button onclick="window.open('tel:+5491151047769')" class="btn btn-secondary btn-lg">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Llamar Ahora
+        </button>
+        <button onclick="openWhatsApp()" class="btn btn-outline btn-lg">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Enviar WhatsApp
+        </button>
+        <button onclick="scrollToSection('contacto')" class="btn btn-secondary btn-lg">
+          Solicitar Presupuesto
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="section-title">Formulario de Contacto</h2>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="servicio">Tipo de Servicio</label>
+          <select id="servicio" name="servicio" required>
+            <option value="pilotes">Pilotes</option>
+            <option value="movimiento">Movimiento de Suelos</option>
+            <option value="demoliciones">Demoliciones</option>
+            <option value="canchas">Construcción de Canchas</option>
+            <option value="pavimentacion">Pavimentación</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntenos sobre su proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full">Enviar Consulta</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-title">GRUPO EZEIZA JL</h3>
+          <p class="footer-text">
+            Movimiento de suelos, demoliciones y obras civiles en Ezeiza y zonas aledañas.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Contacto</h4>
+          <div class="footer-links">
+            <a href="tel:+5491151047769" class="footer-link">
+              <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              +54 9 11 1234-5678
+            </a>
+            <a href="https://wa.me/5491151047769" target="_blank" class="footer-link">
+              <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              WhatsApp
+            </a>
+            <a href="mailto:info@grupoezeizajl.com" class="footer-link">
+              <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              info@grupoezeizajl.com
+            </a>
+            <div class="footer-link">
+              <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Ezeiza, Buenos Aires
+            </div>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Horarios</h4>
+          <p class="footer-text">
+            Lunes a Viernes: 8:00 - 18:00<br>
+            Sábados: 9:00 - 13:00<br>
+            Domingos: Cerrado
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 TuPaginaYa - Una marca del Grupo JV - Todos los derchos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5491151047769" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
