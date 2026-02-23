@@ -770,6 +770,9 @@ body {
     .brand-logo {
         text-align: center;
     }
+    .hero-text{ 
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
