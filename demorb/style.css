@@ -754,6 +754,12 @@ body {
     .cta-buttons {
         flex-direction: row;
     }
+        .brand-logo {
+        text-align: center;
+    }
+    .hero-text{ 
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) {
@@ -767,12 +773,7 @@ body {
         height: 4px;
         background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     }
-    .brand-logo {
-        text-align: center;
-    }
-    .hero-text{ 
-        text-align: center;
-    }
+
 }
 
 @media (min-width: 1024px) {
