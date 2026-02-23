@@ -767,6 +767,9 @@ body {
         height: 4px;
         background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     }
+    .brand-logo {
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
