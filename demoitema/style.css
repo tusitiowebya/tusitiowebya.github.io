@@ -11,7 +11,7 @@
   --bg: #020306;
   --bg-card: #080c0f;
   --fg: #f2f2f2;
-  --fg-muted: #7a6e63;
+  --fg-muted: #808080;
   --accent: #0186fa;
   --primary: #0099fa;
   --primary-fg: #000000;
@@ -121,7 +121,7 @@ a {
   color: var(--primary-fg);
 }
 .btn-dark:hover {
-  background-color: #3a261f;
+  background-color: #0099fb;
 }
 .btn-sm {
   padding: 0.5rem 1rem;
