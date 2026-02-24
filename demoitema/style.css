@@ -8,15 +8,15 @@
 }
 
 :root {
-  --bg: #f5f0eb;
-  --bg-card: #ffffff;
-  --fg: #2e221a;
+  --bg: #020306;
+  --bg-card: #080c0f;
+  --fg: #f2f2f2;
   --fg-muted: #7a6e63;
-  --accent: #a3402a;
-  --primary: #4a3228;
-  --primary-fg: #faf5f0;
-  --secondary: #ede8e2;
-  --border: #ddd6ce;
+  --accent: #0186fa;
+  --primary: #0099fa;
+  --primary-fg: #000000;
+  --secondary: #13161a;
+  --border: #1a222b;
   --radius: 0.5rem;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
