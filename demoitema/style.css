@@ -522,7 +522,7 @@ a {
   background: var(--bg-card);
 }
 .testimonial-quote-icon {
-  color: rgba(163, 64, 42, 0.3);
+  color: #0186fa;
   margin-bottom: 1rem;
 }
 .testimonial-quote-icon svg {
@@ -674,7 +674,7 @@ a {
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(245, 240, 235, 0.9);
+  background: rgba(2, 3, 6, 0.50);
 ;
   text-align: center;
 }
@@ -683,7 +683,7 @@ a {
   color: #0186fa70;
 }
 .courses-extra strong {
-  color: #080c0f;
+  color: #f2f2f2d7;
 }
 .courses-extra .btn-dark {
   margin-top: 1rem;
