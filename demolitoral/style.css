@@ -16,13 +16,13 @@
   --fg: #2c1810;
   --card: #fff8f0;
   --card-fg: #2c1810;
-  --primary: #2e6b3a;
+  --primary: #bbb458;
   --primary-fg: #faf6f1;
   --secondary: #8b5e3c;
   --secondary-fg: #faf6f1;
   --muted: #ede4d8;
   --muted-fg: #5c4033;
-  --accent: #3d8b4f;
+  --accent: #fffc00;
   --accent-fg: #faf6f1;
   --border: #d4c4a8;
   --dark: #2c1810;
@@ -133,7 +133,7 @@ img {
 }
 
 .navbar-links a:hover {
-  color: var(--accent);
+  color: rgb(79, 112, 52);
 }
 
 .navbar-cta {
@@ -150,7 +150,7 @@ img {
 }
 
 .navbar-cta:hover {
-  background: var(--accent);
+  background: #fffc00;
   box-shadow: 0 4px 15px rgba(46, 107, 58, 0.4);
 }
 
@@ -301,7 +301,7 @@ img {
 }
 
 .btn-primary:hover {
-  background: var(--accent);
+  background: rgb(79, 112, 52);
   box-shadow: 0 8px 25px rgba(46, 107, 58, 0.4);
   transform: translateY(-2px);
 }
