@@ -779,6 +779,10 @@ button {
   margin-top: 2.5rem;
 }
 
+.gallery-cta a {
+  padding: 1vh;
+}
+
 /* ===== LIGHTBOX ===== */
 .lightbox {
   position: fixed;
