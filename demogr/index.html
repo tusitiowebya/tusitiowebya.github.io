@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.R Instalaciones | Servicio Técnico Profesional</title>
+    <meta name="description" content="Servicio técnico especializado para hogares y comercios en La Plata. Refrigeración, electricidad y plomería.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d9488', // Teal
+                        secondary: '#facc15', // Yellow
+                        dark: '#0f172a', // Dark blue
+                        darker: '#020617',
+                        light: '#f8fafc'
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-light font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="wrench" class="text-primary h-8 w-8"></i>
+                    <span class="font-bold text-xl tracking-tight">G.R INSTALACIONES</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">Servicios</a>
+                    <a href="#ventajas" class="text-gray-300 hover:text-white transition-colors">¿Por qué elegirnos?</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/542216002424?text=Hola,%20necesito%20un%20servicio%20t%C3%A9cnico%20de%20G.R%20Instalaciones." target="_blank" class="bg-primary hover:bg-teal-500 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-[0_0_15px_rgba(13,148,136,0.3)] hover:shadow-[0_0_25px_rgba(13,148,136,0.5)]">
+                        Solicitar Servicio
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darker border-t border-white/10 mt-4 absolute w-full">
+            <div class="px-2 pt-2 pb-4 space-y-1 shadow-xl">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Inicio</a>
+                <a href="#servicios" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Servicios</a>
+                <a href="#ventajas" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">¿Por qué elegirnos?</a>
+                <a href="#contacto" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop" alt="Técnico trabajando" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+            <div class="absolute inset-0 bg-dark/80 bg-gradient-to-t from-darker via-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
+            <div class="animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-secondary text-sm font-semibold mb-6 backdrop-blur-sm">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                    </span>
+                    Servicio Técnico Especializado
+                </span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
+                G.R INSTALACIONES
+            </h1>
+            
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-200 animate-fade-in-up" style="animation-delay: 0.3s; opacity: 0;">
+                Refrigeración, Electricidad y Plomería Profesional
+            </h2>
+            
+            <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+                "Servicio técnico especializado para hogares y comercios. Instalación, reparación y mantenimiento general."
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.5s; opacity: 0;">
+                <a href="#contacto" class="bg-primary hover:bg-teal-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(13,148,136,0.4)] flex items-center justify-center gap-2">
+                    <i data-lucide="calendar-check" class="h-5 w-5"></i>
+                    Solicitar Servicio
+                </a>
+                <a href="https://wa.me/542216002424?text=Hola,%20necesito%20un%20servicio%20t%C3%A9cnico%20de%20G.R%20Instalaciones." target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="h-5 w-5"></i>
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-darker relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Soluciones integrales con técnicos matriculados y garantía de confianza.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Refrigeración -->
+                <div class="service-card group bg-dark border border-white/5 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(13,148,136,0.15)] reveal">
+                    <div class="bg-primary/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="snowflake" class="h-8 w-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Refrigeración</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Instalación de aire acondicionado</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Desinstalación</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Carga de gas</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Reparaciones generales</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Mantenimiento preventivo</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Cambio de motores</li>
+                    </ul>
+                </div>
+
+                <!-- Plomería -->
+                <div class="service-card group bg-dark border border-white/5 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] reveal" style="transition-delay: 100ms;">
+                    <div class="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="droplets" class="h-8 w-8 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Plomería</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Reparaciones en general</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Instalaciones sanitarias</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Cloacas</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Colocación de artefactos</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Instalaciones de gas</li>
+                    </ul>
+                </div>
+
+                <!-- Electricidad -->
+                <div class="service-card group bg-dark border border-white/5 rounded-2xl p-8 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(250,204,21,0.15)] reveal" style="transition-delay: 200ms;">
+                    <div class="bg-secondary/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="zap" class="h-8 w-8 text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Electricidad</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Instalaciones eléctricas</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Reparaciones domiciliarias</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Mantenimiento eléctrico</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="h-5 w-5 text-secondary shrink-0"></i> Solución de fallas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="ventajas" class="py-24 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué elegirnos?</h2>
+                <div class="h-1 w-20 bg-secondary mx-auto rounded-full mb-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-darker/50 border border-white/5 reveal hover:bg-white/5 transition-colors duration-300">
+                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="award" class="h-8 w-8 text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Técnicos especializados</h4>
+                    <p class="text-gray-400 text-sm">Personal capacitado y en constante actualización.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-2xl bg-darker/50 border border-white/5 reveal hover:bg-white/5 transition-colors duration-300" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="clock" class="h-8 w-8 text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Atención rápida</h4>
+                    <p class="text-gray-400 text-sm">Respuesta ágil para urgencias y servicios programados.</p>
+                </div>
+
+                <div class="text-center p-6 rounded-2xl bg-darker/50 border border-white/5 reveal hover:bg-white/5 transition-colors duration-300" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="h-8 w-8 text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Trabajo garantizado</h4>
+                    <p class="text-gray-400 text-sm">Todos nuestros servicios cuentan con garantía escrita.</p>
+                </div>
+
+                <div class="text-center p-6 rounded-2xl bg-darker/50 border border-white/5 reveal hover:bg-white/5 transition-colors duration-300" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" class="h-8 w-8 text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Presupuestos sin cargo</h4>
+                    <p class="text-gray-400 text-sm">Cotizamos su trabajo de forma transparente y sin compromiso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-12 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col md:flex-row items-center justify-center gap-4 reveal">
+            <i data-lucide="map-pin" class="h-8 w-8 text-white"></i>
+            <p class="text-2xl font-bold text-white">
+                "Atendemos hogares y comercios en La Plata y zonas cercanas."
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-darker relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctenos</h2>
+                    <div class="h-1 w-20 bg-primary rounded-full mb-8"></div>
+                    <p class="text-gray-400 mb-8 text-lg">Estamos listos para resolver sus problemas técnicos. Comuníquese con nosotros por cualquiera de estos medios.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-white/5 p-4 rounded-full">
+                                <i data-lucide="phone" class="h-6 w-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Teléfono / WhatsApp</p>
+                                <p class="text-xl font-bold">+54 221 600-2424</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <a href="tel:+542216002424" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="phone-call" class="h-5 w-5"></i>
+                            Llamar Ahora
+                        </a>
+                        <a href="https://wa.me/542216002424?text=Hola,%20necesito%20un%20servicio%20t%C3%A9cnico%20de%20G.R%20Instalaciones." target="_blank" class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="h-5 w-5"></i>
+                            Mensaje de WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-dark p-8 rounded-3xl border border-white/5 shadow-2xl reveal">
+                    <h3 class="text-2xl font-bold mb-6">Envíenos su consulta</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Nombre y Apellido</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-darker border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-400 mb-1">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full bg-darker border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Mensaje / Servicio Requerido</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full bg-darker border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-teal-500 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            <span>Enviar Mensaje</span>
+                            <i data-lucide="send" class="h-4 w-4"></i>
+                        </button>
+                        <p id="form-status" class="text-sm text-center hidden mt-2"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i data-lucide="wrench" class="text-primary h-6 w-6"></i>
+                <span class="font-bold">G.R INSTALACIONES</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <a href="https://wa.me/542216002424?text=Hola,%20necesito%20un%20servicio%20t%C3%A9cnico%20de%20G.R%20Instalaciones." target="_blank" class="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 group">
+        <i data-lucide="message-circle" class="h-7 w-7"></i>
+        <span class="absolute left-full ml-4 top-1/2 -translate-y-1/2 bg-dark/90 text-white px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10 backdrop-blur-sm">
+            ¡Escribinos!
+        </span>
+    </a>
+
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 z-50 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 translate-y-10 pointer-events-none">
+        <i data-lucide="arrow-up" class="h-6 w-6"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
