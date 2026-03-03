@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cataratas Traslados | Servicio de traslados en Puerto Iguazú</title>
+    <meta name="description" content="Servicio seguro y confiable de traslados a Cataratas del Iguazú y alrededores. Traslado aeropuerto - hotel, servicio privado y personalizado en Misiones.">
+    <meta name="keywords" content="traslados en Puerto Iguazú, traslado Cataratas del Iguazú, servicio de traslado Misiones, transporte Iguazú, transfer aeropuerto Iguazú">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for standalone usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#00df81',
+                            foreground: '#00331f'
+                        },
+                        background: '#0a0f12',
+                        foreground: '#f8fafc',
+                        muted: {
+                            DEFAULT: '#1e293b',
+                            foreground: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 glass-panel py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
+        <div class="text-xl md:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <i data-lucide="map-pin" class="text-primary-foreground w-5 h-5"></i>
+            </div>
+            <span class="font-display">Cataratas Traslados</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
+            <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
+            <a href="#nosotros" class="hover:text-primary transition-colors">Por qué elegirnos</a>
+            <a href="#galeria" class="hover:text-primary transition-colors">Galería</a>
+        </div>
+        <a href="#contacto" class="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm">
+            Contactar
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[100svh] flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://pixabay.com/get/g6adc386a183579c46cd12f3d86cfcf47183d582260029c72a7a5f3b9936ce3df8ec94f3925c609abb97c1efb75269190769d73c37bd6e2a7416aa24d4a386c07_1280.jpg" alt="Cataratas del Iguazú" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
+        </div>
+
+        <div class="container relative z-10 px-4 py-32 mx-auto text-center flex flex-col items-center">
+            <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8 border-primary/30">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-sm font-medium text-primary-foreground/90">Operando en Puerto Iguazú, Misiones</span>
+            </div>
+            
+            <h1 class="reveal text-5xl md:text-7xl lg:text-8xl font-bold text-white max-w-5xl mx-auto leading-[1.1] mb-6">
+                Tu viaje a las maravillas de <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-300 text-glow">Iguazú</span>
+            </h1>
+            
+            <p class="reveal text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 font-light">
+                Servicio de traslados exclusivo, seguro y puntual. Conectamos el aeropuerto, tu hotel y las Cataratas con el máximo confort.
+            </p>
+            
+            <div class="reveal flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#contacto" class="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all duration-300 box-glow flex items-center justify-center gap-2 group">
+                    Reservar ahora
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1Ddwab7dCa/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full glass-panel text-white font-semibold text-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                    <i data-lucide="facebook" class="w-5 h-5 text-[#1877F2]"></i>
+                    Ver en Facebook
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-xs text-muted-foreground uppercase tracking-widest font-semibold">Explorar</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-24 relative z-10">
+        <div class="container px-4 mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Nuestros Servicios</h2>
+                <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Soluciones de movilidad adaptadas a tus necesidades para que disfrutes sin preocupaciones.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Servicio 1 -->
+                <div class="reveal h-full glass-panel p-8 rounded-3xl flex flex-col items-start box-glow-hover transition-all duration-500 group">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                        <i data-lucide="map-pin" class="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Cataratas del Iguazú</h3>
+                    <p class="text-muted-foreground leading-relaxed">Traslados ida y vuelta al Parque Nacional (Lado Argentino y Brasileño).</p>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="reveal h-full glass-panel p-8 rounded-3xl flex flex-col items-start box-glow-hover transition-all duration-500 group" style="transition-delay: 100ms">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                        <i data-lucide="plane" class="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Aeropuerto – Hotel</h3>
+                    <p class="text-muted-foreground leading-relaxed">Recepción en el aeropuerto y traslado directo a tu alojamiento.</p>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="reveal h-full glass-panel p-8 rounded-3xl flex flex-col items-start box-glow-hover transition-all duration-500 group" style="transition-delay: 200ms">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                        <i data-lucide="car" class="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Traslados Personalizados</h3>
+                    <p class="text-muted-foreground leading-relaxed">Itinerarios a medida para excursiones, compras o restaurantes.</p>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="reveal h-full glass-panel p-8 rounded-3xl flex flex-col items-start box-glow-hover transition-all duration-500 group" style="transition-delay: 300ms">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                        <i data-lucide="user-check" class="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Servicio Privado</h3>
+                    <p class="text-muted-foreground leading-relaxed">Vehículos exclusivos para ti y tu grupo con total privacidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos Section -->
+    <section id="nosotros" class="py-24 bg-white/5 border-y border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px]"></div>
+        
+        <div class="container px-4 mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">¿Por qué elegirnos?</h2>
+                    <p class="text-lg text-muted-foreground mb-8">
+                        Más de una década de experiencia brindando el mejor servicio de transporte en la región de las tres fronteras.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start group">
+                            <div class="mt-1 w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/50 transition-colors">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Servicio seguro</h4>
+                                <p class="text-muted-foreground">Vehículos habilitados y asegurados según normativas vigentes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div class="mt-1 w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/50 transition-colors">
+                                <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Puntualidad garantizada</h4>
+                                <p class="text-muted-foreground">Respetamos tus horarios para que aproveches cada minuto.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div class="mt-1 w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/50 transition-colors">
+                                <i data-lucide="heart-handshake" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Atención personalizada</h4>
+                                <p class="text-muted-foreground">Trato cordial y asistencia en todo lo que necesites.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div class="mt-1 w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/50 transition-colors">
+                                <i data-lucide="user-check" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Conductores responsables</h4>
+                                <p class="text-muted-foreground">Choferes profesionales, experimentados y conocedores de la zona.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal-right relative">
+                    <div class="relative rounded-3xl overflow-hidden glass-panel aspect-square md:aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80&fit=crop" alt="Viaje seguro en ruta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl"></div>
+                    </div>
+                    
+                    <div class="absolute -bottom-10 -left-10 glass-panel p-6 rounded-2xl animate-pulse-slow">
+                        <div class="flex items-center gap-4">
+                            <div class="text-4xl font-black text-primary">10+</div>
+                            <div class="text-sm font-medium text-white leading-tight">Años de<br>Experiencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="py-24">
+        <div class="container px-4 mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Experiencia Iguazú</h2>
+                <p class="text-muted-foreground text-lg">Un vistazo a los paisajes y nuestro moderno parque automotor.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="reveal lg:col-span-2 lg:row-span-2 h-64 lg:h-auto min-h-[250px] relative rounded-2xl overflow-hidden group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1543026402-4fc46ce014f9?w=600&q=80&fit=crop" alt="Galería" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="reveal h-64 lg:h-auto min-h-[250px] relative rounded-2xl overflow-hidden group cursor-pointer" style="transition-delay: 100ms">
+                    <img src="https://images.unsplash.com/photo-1520638515082-841933a0bcf6?w=600&q=80&fit=crop" alt="Galería" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="reveal h-64 lg:h-auto min-h-[250px] relative rounded-2xl overflow-hidden group cursor-pointer" style="transition-delay: 200ms">
+                    <img src="https://images.unsplash.com/photo-1440615496174-83ef87bce9bc?w=600&q=80&fit=crop" alt="Galería" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="reveal sm:col-span-2 lg:col-span-1 h-64 lg:h-auto min-h-[250px] relative rounded-2xl overflow-hidden group cursor-pointer" style="transition-delay: 300ms">
+                    <img src="https://images.unsplash.com/photo-1621532057917-09d57a530f9a?w=600&q=80&fit=crop" alt="Galería" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-24 bg-gradient-to-b from-background to-white/5 relative">
+        <div class="container px-4 mx-auto max-w-5xl">
+            <div class="reveal glass-panel rounded-3xl overflow-hidden flex flex-col md:flex-row">
+                
+                <div class="w-full md:w-5/12 bg-primary/10 p-10 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-primary/5"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold text-white mb-4">Reserva tu traslado</h3>
+                        <p class="text-muted-foreground mb-8">Completa el formulario y nos contactaremos contigo para coordinar los detalles de tu viaje.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-background/50 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <span class="text-sm font-medium text-white">Puerto Iguazú, Misiones, Argentina</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-background/50 flex items-center justify-center shrink-0">
+                                    <i data-lucide="facebook" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <a href="https://www.facebook.com/share/1Ddwab7dCa/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white hover:text-primary transition-colors">
+                                    Seguinos en Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-7/12 p-10">
+                    <form id="contactForm" class="space-y-5">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-muted-foreground">Nombre completo</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-background/50 border border-white/10 text-white placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Ej. Juan Pérez">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label for="phone" class="text-sm font-medium text-muted-foreground">Teléfono</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl bg-background/50 border border-white/10 text-white placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="+54 9...">
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="date" class="text-sm font-medium text-muted-foreground">Fecha del traslado</label>
+                                <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl bg-background/50 border border-white/10 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all [&::-webkit-calendar-picker-indicator]:filter-[invert(1)]">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-muted-foreground">Mensaje o itinerario</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-background/50 border border-white/10 text-white placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" placeholder="Contanos a dónde vas y cuántas personas son..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,223,129,0.3)] transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>Solicitar traslado</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/5 bg-background relative z-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="text-primary w-5 h-5"></i>
+                <span class="font-display font-bold text-lg text-white">Cataratas Traslados</span>
+            </div>
+            <p class="text-muted-foreground text-sm text-center">
+                © <span id="currentYear"></span> Cataratas Traslados - Puerto Iguazú, Misiones.
+            </p>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/share/1Ddwab7dCa/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary/20 hover:text-primary transition-colors">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/549XXXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20traslados%20en%20Puerto%20Iguazú" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.5)] transition-all duration-300 z-50 group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:-rotate-12 transition-transform duration-300"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <div class="absolute -top-10 right-0 bg-background/90 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 pointer-events-none">
+            ¡Contactanos!
+        </div>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
