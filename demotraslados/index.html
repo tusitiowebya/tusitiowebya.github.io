@@ -205,10 +205,25 @@
                 </div>
                 
                 <div class="reveal-right relative">
-                    <div class="relative rounded-3xl overflow-hidden glass-panel aspect-square md:aspect-[4/3]">
-                        <img src="images/fotocatarata.jpeg" alt="Viaje seguro en ruta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl"></div>
-                    </div>
+<div class="relative rounded-3xl overflow-hidden glass-panel aspect-square md:aspect-[4/3]">
+    
+    <video 
+            id="miVideo"
+
+    autoplay 
+        muted 
+        loop 
+        playsinline
+        preload="metadata"
+        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+    >
+        <source src="images/video.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+
+    <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl"></div>
+
+</div>
                     
                     <div class="absolute -bottom-10 -left-10 glass-panel p-6 rounded-2xl animate-pulse-slow">
                         <div class="flex items-center gap-4">
@@ -335,5 +350,24 @@
     </a>
 
     <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("miVideo");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.5 // Se activa cuando el 50% del video está visible
+    });
+
+    observer.observe(video);
+});
+</script>
 </body>
 </html>
