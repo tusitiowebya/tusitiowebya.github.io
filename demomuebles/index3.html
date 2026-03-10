@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheMuebles | Diseño que transforma tu hogar</title>
+  <meta name="description" content="Diseñamos, producimos e instalamos muebles de cocina 100% a medida. Muebles modernos y funcionales pensados para cada espacio.">
+  <meta name="keywords" content="muebles, cocina, diseño, muebles a medida, instalación, Argentina">
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased bg-background text-foreground">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <img src="logo.png" alt="TheMuebles Logo" width="50" height="50">
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#cita" class="nav-link">Programar Cita</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="nav-cta btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        Agendar Cita
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg class="icon-close hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#productos" class="mobile-link">Productos</a>
+      <a href="#nosotros" class="mobile-link">Nosotros</a>
+      <a href="#cita" class="mobile-link">Programar Cita</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile-cta">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        Agendar Cita
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg">
+        <img src="https://images.pexels.com/photos/6284229/pexels-photo-6284229.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Muebles modernos" class="hero-img">
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Diseño que transforma tu hogar</h1>
+          <p class="hero-subtitle">Muebles modernos y funcionales pensados para cada espacio. Diseñamos, producimos e instalamos muebles de cocina 100% a medida.</p>
+          <div class="hero-buttons">
+            <a href="#productos" class="btn btn-glass">
+              Ver Muebles
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              Agendar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <svg class="icon-lg bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="nosotros" class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">¿Qué hacemos?</h2>
+          <p class="section-subtitle">Diseñamos, producimos e instalamos todo tipo de muebles de cocina. Cada proyecto es 100% a medida.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg>
+            </div>
+            <span class="service-number">01</span>
+            <h3 class="service-title">Diseñamos</h3>
+            <p class="service-desc">Visitamos la locación del cliente. Tomamos fotos y medidas. Luego realizamos planos con el diseño concordado.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg>
+            </div>
+            <span class="service-number">02</span>
+            <h3 class="service-title">Producimos</h3>
+            <p class="service-desc">Fabricamos y producimos cada mueble de tu cocina en nuestro taller con materiales de primera calidad.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <span class="service-number">03</span>
+            <h3 class="service-title">Instalamos</h3>
+            <p class="service-desc">Trasladamos desde nuestro taller hasta tu casa los muebles, e instalamos los mismos dejando la obra final antes de irnos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nuestros Productos</h2>
+          <p class="section-subtitle">Soluciones completas para tu cocina, desde el diseño hasta la instalación.</p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/7061393/pexels-photo-7061393.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cocinas Integrales">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Cocinas Integrales</h3>
+              <p class="product-desc">Diseños modernos y funcionales para el corazón de tu hogar.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Cocinas Integrales" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/6284235/pexels-photo-6284235.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Muebles de Guardado">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Muebles de Guardado</h3>
+              <p class="product-desc">Soluciones de almacenamiento elegantes y prácticas.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Muebles de Guardado" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/6782429/pexels-photo-6782429.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bajomesadas">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Bajomesadas</h3>
+              <p class="product-desc">Maximiza el espacio con diseños personalizados.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Bajomesadas" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/6284230/pexels-photo-6284230.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Alacenas">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Alacenas</h3>
+              <p class="product-desc">Organización y estilo en cada rincón.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Alacenas" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/6508342/pexels-photo-6508342.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Islas de Cocina">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Islas de Cocina</h3>
+              <p class="product-desc">El centro perfecto para cocinar y compartir.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Islas de Cocina" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.pexels.com/photos/6284229/pexels-photo-6284229.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Muebles a Medida">
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Muebles a Medida</h3>
+              <p class="product-desc">Creamos lo que imaginás, adaptado a tu espacio.</p>
+              <a href="https://wa.me/541132956863?text=Hola, quiero consultar sobre Muebles a Medida" target="_blank" rel="noopener noreferrer" class="btn btn-outline product-btn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Furniture CTA -->
+    <section class="cta-section">
+      <div class="cta-bg"></div>
+      <div class="container cta-content">
+        <h2 class="cta-title">Muebles a Medida</h2>
+        <p class="cta-text">Hacemos muebles personalizados para que cada espacio tenga identidad propia. Contanos tu idea y la hacemos realidad.</p>
+        <a href="https://wa.me/541132956863?text=Hola, quiero solicitar un diseño personalizado" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Solicitar Diseño por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Cómo Trabajamos</h2>
+          <p class="section-subtitle">Un proceso simple y transparente de principio a fin.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Contacto</h3>
+            <p class="step-desc">Escribinos por WhatsApp y contanos qué necesitás</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Asesoramiento</h3>
+            <p class="step-desc">Visitamos tu espacio para tomar medidas y asesorarte</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Diseño</h3>
+            <p class="step-desc">Creamos el diseño y te enviamos el presupuesto detallado</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Entrega</h3>
+            <p class="step-desc">Fabricamos, entregamos e instalamos en tu hogar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="cita" class="section">
+      <div class="container-sm">
+        <div class="form-card">
+          <div class="section-header">
+            <h2 class="section-title">Programar una Cita</h2>
+            <p class="section-subtitle">Completá el formulario y nos contactaremos a la brevedad.</p>
+          </div>
+
+          <form id="appointmentForm" class="form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required class="form-input">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tipoMueble" class="form-label">Tipo de Mueble</label>
+                <select id="tipoMueble" name="tipoMueble" required class="form-input">
+                  <option value="">Seleccionar...</option>
+                  <option value="Cocina Integral">Cocina Integral</option>
+                  <option value="Muebles de Guardado">Muebles de Guardado</option>
+                  <option value="Bajomesada">Bajomesada</option>
+                  <option value="Alacena">Alacena</option>
+                  <option value="Isla de Cocina">Isla de Cocina</option>
+                  <option value="Mueble a Medida">Mueble a Medida</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dia" class="form-label">Día Preferido</label>
+                <input type="text" id="dia" name="dia" placeholder="Ej: Lunes por la tarde" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" class="form-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              Agendar Cita por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Galería de Trabajos</h2>
+          <p class="section-subtitle">Algunos de nuestros proyectos realizados.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-tall">
+            <img src="https://images.pexels.com/photos/7061393/pexels-photo-7061393.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 1">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/6782429/pexels-photo-6782429.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 2">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/6284230/pexels-photo-6284230.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 3">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/6284229/pexels-photo-6284229.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 4">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/6284235/pexels-photo-6284235.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 5">
+          </div>
+          <div class="gallery-item gallery-tall">
+            <img src="https://images.pexels.com/photos/6508342/pexels-photo-6508342.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo 6">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="testimonial-text">"Excelente trabajo. Cumplieron con los tiempos y el resultado superó mis expectativas. Mi cocina quedó espectacular."</p>
+            <div class="testimonial-author">
+              <p class="testimonial-name">María García</p>
+              <p class="testimonial-location">Buenos Aires</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="testimonial-text">"Profesionales de principio a fin. El diseño fue exactamente lo que buscábamos y la instalación impecable."</p>
+            <div class="testimonial-author">
+              <p class="testimonial-name">Carlos Rodríguez</p>
+              <p class="testimonial-location">CABA</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg viewBox="0 0 20 20" class="star"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="testimonial-text">"Muy recomendables. Desde el primer contacto hasta la entrega, todo fue transparente y de calidad."</p>
+            <div class="testimonial-author">
+              <p class="testimonial-name">Ana Martínez</p>
+              <p class="testimonial-location">Zona Norte</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-muted">
+      <div class="container-sm">
+        <div class="section-header">
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Hacen muebles a medida?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Sí, todos nuestros trabajos son 100% a medida. Visitamos tu espacio, tomamos las medidas exactas y diseñamos según tus necesidades específicas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Cuánto tarda la fabricación?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>El tiempo de fabricación varía según la complejidad del proyecto. Generalmente, una cocina completa tarda entre 3 a 5 semanas desde la aprobación del diseño.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Realizan envíos?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Sí, realizamos el traslado e instalación de los muebles en tu domicilio. Este servicio está incluido en nuestro presupuesto.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Cómo solicito presupuesto?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Podés contactarnos por WhatsApp o completar el formulario de contacto. Coordinamos una visita para tomar medidas y luego te enviamos el presupuesto detallado.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Puedo coordinar una visita?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>¡Por supuesto! Contactanos por WhatsApp y coordinamos día y horario para visitar tu espacio y asesorarte personalmente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+      <div class="container text-center">
+        <h2 class="section-title">Contactanos</h2>
+        <p class="section-subtitle">Estamos para ayudarte con tu proyecto.</p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3 class="contact-title">WhatsApp</h3>
+            <p class="contact-text">+54 11 3295-6863</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="contact-title">Ubicación</h3>
+            <p class="contact-text">Buenos Aires, Argentina</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <h3 class="contact-title">Email</h3>
+            <p class="contact-text">info@themuebles.com</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg contact-cta">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Hablar por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="TheMuebles Logo" class="footer-logo">
+          <p class="footer-desc">Diseñamos, producimos e instalamos muebles de cocina 100% a medida. Transformamos tu hogar con calidad y estilo.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Links Rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#cita">Programar Cita</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-title">Contacto</h4>
+          <ul>
+            <li>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +54 11 3295-6863
+            </li>
+            <li>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Buenos Aires, Argentina
+            </li>
+          </ul>
+          <div class="footer-social">
+            <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 TheMuebles. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/541132956863" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
