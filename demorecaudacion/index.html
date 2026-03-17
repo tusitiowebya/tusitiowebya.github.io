@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Granito Ayuda - Ayuda a Florencia</title>
+  <meta name="description" content="Campaña solidaria para ayudar a Florencia a reconstruir su hogar después de un incendio">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="/" class="logo">
+        <span class="logo-text">TU GRANITO AYUDA</span>
+        <span class="logo-heart">🤍</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Column -->
+        <div class="hero-content">
+          <h1 class="hero-title">Florencia necesita tu ayuda hoy</h1>
+          <p class="hero-description">
+            Hoy su vida cambió por completo. Un incendio destruyó su casa en
+            cuestión de minutos y <strong>perdió absolutamente todo</strong>.
+            Heladera, freezer, ropa, muebles, pertenencias de toda la vida...
+            no quedó nada. Incluso perdió a su mascota.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('donar')">
+              Quiero donar
+            </button>
+            <button class="btn btn-outline" onclick="scrollToSection('historia')">
+              Conocé su historia
+            </button>
+          </div>
+
+          <!-- Progress Section -->
+          <div class="progress-section">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="progress-info">
+              <span class="progress-raised">Recaudado $12.714.480</span>
+              <span class="progress-goal">
+                de $17.659.000 estimados para cubrir los costos de reconstrucción de su hogar.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Image -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-container">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-R2nzPUyQRpRD61r5bd3WzGJqnUwKqe.png"
+              alt="Florencia pidiendo ayuda"
+              class="hero-image"
+            >
+          </div>
+          <p class="hero-image-caption">
+            Tu gesto hoy es un paso más para que Florencia y su familia puedan volver a empezar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="historia" class="story-section">
+    <div class="container">
+      <div class="story-content">
+        <h2 class="section-title">El 19 de diciembre, Florencia lo perdió todo.</h2>
+
+        <div class="story-text">
+          <p>
+            Ese día salió alrededor de las 7:05 para llevar a su hijo a entrenar.
+            Cuando iba volviendo, todavía desde lejos ya veía el humo y sintió el
+            pecho apretado, como si supiera lo que estaba pasando. Al llegar, la
+            casa ya estaba completamente prendida fuego.
+          </p>
+
+          <p>
+            Era una casa de madera, y el incendio se propagó al instante. Según
+            cuentan, hubo una baja tensión tras cortes de luz repetidos y ahí
+            comenzó todo. Su hijo mayor, de 17 años, vio las llamas e intentó
+            apagar el fuego... pero no había agua: ese día también habían cortado
+            el suministro y no salió una gota.
+          </p>
+
+          <p>
+            La policía llegó rápido y los bomberos también, pero cuando pudieron
+            actuar, el daño ya era total. En minutos se consumió todo lo que
+            habían conseguido con sacrificio junto a su marido y sus hijos:
+            heladera, freezer y cada cosa que habían construido para su hogar.
+          </p>
+
+          <p>
+            Hoy Florencia vive en la casa de su suegra y su familia está separada
+            porque no tienen dónde quedarse. La gente de Güemes fue solidaria y
+            los ayudó con ropa y mercadería, pero necesitan lo más difícil:
+            materiales para reconstruir y volver a tener una casa segura.
+          </p>
+
+          <p class="story-highlight">
+            Hoy necesita de todos nosotros. Cada aporte es una forma concreta de
+            ayudarlos a reconstruir su casa y recuperar la estabilidad que perdieron.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section id="donar" class="donation-section">
+    <div class="container">
+      <div class="donation-content">
+        <div class="donation-header">
+          <h2 class="section-title-light">Cómo donar</h2>
+          <p class="donation-subtitle">Podés colaborar por transferencia.</p>
+        </div>
+
+        <div class="donation-box">
+          <div class="donation-grid">
+            <!-- Alias Field -->
+            <div class="copy-field">
+              <label class="copy-label">Alias</label>
+              <div class="copy-input-wrapper">
+                <div class="copy-input" id="aliasValue">TUGRANITOFLORENCIA</div>
+                <button class="btn btn-secondary copy-btn" onclick="copyToClipboard('TUGRANITOFLORENCIA', this)">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copiar alias</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CBU Field -->
+            <div class="copy-field">
+              <label class="copy-label">CBU / CVU</label>
+              <div class="copy-input-wrapper">
+                <div class="copy-input" id="cbuValue">0070016730004057023018</div>
+                <button class="btn btn-secondary copy-btn" onclick="copyToClipboard('0070016730004057023018', this)">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copiar CBU/CVU</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="donation-footer">
+            <p class="account-holder">
+              <span class="account-label">Titular de la cuenta:</span>
+              <span class="account-name">Valentín Postorivo (Hermano de Florencia)</span>
+            </p>
+            <p class="account-note">
+              * Usá el botón "Copiar" para pegar los datos en tu app bancaria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency Section -->
+  <section class="transparency-section">
+    <div class="container">
+      <div class="transparency-content">
+        <h2 class="section-title">Transparencia</h2>
+
+        <div class="costs-list">
+          <p class="costs-intro">Estos son costos estimados del proceso de recuperación:</p>
+
+          <ul class="costs-items">
+            <li>
+              <span class="bullet">•</span>
+              <span>Reconstrucción básica de la vivienda (estructura, techo y cerramientos) — <strong>$7.200.000</strong></span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Materiales eléctricos y sanitarios — <strong>$2.150.000</strong></span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Mano de obra (albañilería, electricidad y plomería) — <strong>$3.480.000</strong></span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Mobiliario esencial y electrodomésticos básicos — <strong>$2.690.000</strong></span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Herramientas de trabajo y equipamiento perdido — <strong>$1.539.000</strong></span>
+            </li>
+            <li>
+              <span class="bullet">•</span>
+              <span>Traslados, limpieza y gastos urgentes — <strong>$600.000</strong></span>
+            </li>
+          </ul>
+
+          <p class="costs-note">
+            Estos valores pueden ajustarse según cada caso y el avance de la reconstrucción.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-content">
+        <h2 class="section-title text-center">Preguntas frecuentes</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)">
+              <span>¿Hay un monto mínimo para donar?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content">
+              <p>No. Cada aporte, sin importar el monto, ayuda muchísimo a que Florencia pueda reconstruir su hogar y recuperar lo esencial para vivir y trabajar.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)">
+              <span>¿Puedo donar desde otro banco o billetera virtual?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content">
+              <p>Sí, podés transferir desde cualquier banco o billetera virtual (Mercado Pago, Ualá, Brubank, etc.) usando el alias o CBU proporcionado.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)">
+              <span>¿Qué pasa si no llegamos al objetivo?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content">
+              <p>Cada peso donado se destina directamente a la reconstrucción. Si no se alcanza el objetivo total, se priorizarán las necesidades más urgentes como la estructura básica de la vivienda y los servicios esenciales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">© 2026, TU GRANITO AYUDA · Campaña solidaria. Gracias por tu apoyo.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
