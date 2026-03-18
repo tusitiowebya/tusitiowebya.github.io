@@ -204,6 +204,137 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ========================================
+  // GALLERY FILTERING
+  // ========================================
+  const galleryFilters = document.querySelectorAll('.gallery-filter');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryFilters.forEach(function(filter) {
+    filter.addEventListener('click', function() {
+      // Update active filter
+      galleryFilters.forEach(function(f) {
+        f.classList.remove('active');
+      });
+      this.classList.add('active');
+
+      // Filter items
+      const category = this.getAttribute('data-filter');
+
+      galleryItems.forEach(function(item) {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.classList.remove('hidden');
+          item.style.display = '';
+        } else {
+          item.classList.add('hidden');
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // ========================================
+  // GALLERY LIGHTBOX
+  // ========================================
+  const lightbox = document.getElementById('lightbox');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  const lightboxCategory = document.getElementById('lightboxCategory');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCurrent = document.getElementById('lightboxCurrent');
+  const lightboxTotal = document.getElementById('lightboxTotal');
+const lightboxImage = document.getElementById('lightboxImage');
+  let currentImageIndex = 0;
+  let visibleItems = [];
+
+function updateVisibleItems() {
+  visibleItems = Array.from(galleryItems)
+    .filter(item => !item.classList.contains('hidden'))
+    .sort((a, b) => {
+      const idA = parseInt(a.querySelector('img').id);
+      const idB = parseInt(b.querySelector('img').id);
+      return idA - idB;
+    });
+}
+
+  function openLightbox(index) {
+    updateVisibleItems();
+    currentImageIndex = index;
+    updateLightboxContent();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+function updateLightboxContent() {
+  const item = visibleItems[currentImageIndex];
+  if (!item) return;
+
+  const img = item.querySelector('img');
+  const category = item.querySelector('.gallery-category').textContent;
+  const caption = item.querySelector('.gallery-caption').textContent;
+
+  // 👉 Imagen
+  lightboxImage.src = img.src;
+  lightboxImage.alt = caption;
+
+  // 👉 Info
+  lightboxCategory.textContent = category;
+  lightboxCaption.textContent = caption;
+  lightboxCurrent.textContent = currentImageIndex + 1;
+  lightboxTotal.textContent = visibleItems.length;
+}
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + visibleItems.length) % visibleItems.length;
+    updateLightboxContent();
+  }
+
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % visibleItems.length;
+    updateLightboxContent();
+  }
+
+  // Event Listeners for Lightbox
+  galleryItems.forEach(function(item, index) {
+    item.addEventListener('click', function() {
+      updateVisibleItems();
+      const visibleIndex = visibleItems.indexOf(item);
+      if (visibleIndex !== -1) {
+        openLightbox(visibleIndex);
+      }
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', showPrevImage);
+  lightboxNext.addEventListener('click', showNextImage);
+
+  // Close on background click
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      showPrevImage();
+    } else if (e.key === 'ArrowRight') {
+      showNextImage();
+    }
+  });
+
+  // ========================================
   // PRELOADER (OPTIONAL)
   // ========================================
   window.addEventListener('load', function() {
