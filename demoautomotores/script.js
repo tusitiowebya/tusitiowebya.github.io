@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Gallery Lightbox =====
 const cars = [
-  { src: 'images/car-sedan.jpg', title: 'Sedán Premium', category: 'Sedán' },
+  { src: 'images/cauto4.jpeg', title: 'Camión Ligero', category: 'Carga' },
   { src: 'images/car-suv.jpg', title: 'SUV Familiar', category: 'SUV' },
   { src: 'images/car-hatchback.jpg', title: 'Hatchback Deportivo', category: 'Hatchback' },
   { src: 'images/auto1.jpeg', title: 'Camioneta Nissan', category: 'SUV' },
