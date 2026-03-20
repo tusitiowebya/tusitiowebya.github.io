@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mensaje;
 
       const url =
-        "https://wa.me/5491100000000?text=" + encodeURIComponent(text);
+        "https://wa.me/549113703-6278?text=" + encodeURIComponent(text);
       window.open(url, "_blank");
     });
   }
