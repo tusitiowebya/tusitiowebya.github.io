@@ -1034,3 +1034,63 @@ button {
 .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
 .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
 .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Fondo de la sección (oscuro como tu web) */
+.buy-banner {
+  padding: 5rem 1rem;
+  background: transparent;
+}
+
+/* EL RECUADRO */
+.buy-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* TÍTULOS */
+.buy-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.buy-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+/* TEXTOS */
+.buy-text {
+  color: #a1a1aa;
+  margin-bottom: 1.5rem;
+}
+
+.buy-year {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.buy-cash {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+.buy-extra {
+  margin-bottom: 1rem;
+}
+
+.buy-highlight {
+  color: #facc15;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
