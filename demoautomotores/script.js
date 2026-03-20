@@ -30,9 +30,9 @@ const cars = [
   { src: 'images/car-sedan.jpg', title: 'Sedán Premium', category: 'Sedán' },
   { src: 'images/car-suv.jpg', title: 'SUV Familiar', category: 'SUV' },
   { src: 'images/car-hatchback.jpg', title: 'Hatchback Deportivo', category: 'Hatchback' },
-  { src: 'images/car-sports.jpg', title: 'Deportivo de Lujo', category: 'Coupé' },
+  { src: 'images/auto1.jpeg', title: 'Camioneta Nissan', category: 'SUV' },
   { src: 'images/car-pickup.jpg', title: 'Pickup Robusta', category: 'Pickup' },
-  { src: 'images/car-sedan2.jpg', title: 'Ejecutivo', category: 'Sedán' }
+  { src: 'images/auto3.jpeg', title: 'Compacto', category: 'SUV' }
 ];
 
 const lightbox = document.getElementById('lightbox');
