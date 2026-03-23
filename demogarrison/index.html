@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheGarrisonVinoteca | Vinos y Licores Premium</title>
+  <meta name="description" content="Nos importa lo que a la gente le importa. Vinoteca premium en Bernal, Buenos Aires. Vinos tintos, blancos, espumantes y licores seleccionados.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="wine-glass">
+        <div class="wine-fill"></div>
+      </div>
+      <div class="loader-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wine-icon"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+        <span class="brand-name">TheGarrisonVinoteca</span>
+      </div>
+      <p class="loader-text">Cargando experiencia...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header id="navbar" class="navbar">
+    <nav class="nav-container">
+      <a href="#inicio" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wine-icon"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+        <span class="logo-text">TheGarrisonVinoteca</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg">
+        <img src="images/hero-bg.jpg" alt="Wine cellar interior" class="hero-image">
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="hero-content fade-up">
+        <div class="hero-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wine-icon-large"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+        </div>
+        
+        <h1 class="hero-title">
+          <span>The Garrison</span>
+          <span class="gold-text shimmer">Vinoteca</span>
+        </h1>
+        
+        <p class="hero-tagline">"Nos importa lo que a la gente le importa"</p>
+        
+        <p class="hero-description">
+          Descubrí nuestra selección de vinos y licores premium, cuidadosamente elegidos para los paladares más exigentes.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#productos" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+            Ver Catálogo
+          </a>
+          <a href="https://wa.me/541128942070" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            Contactar por WhatsApp
+          </a>
+        </div>
+        
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+      <div class="container">
+        <div class="about-grid reveal">
+          <div class="about-image">
+            <img src="images/about-vinoteca.jpg" alt="Interior de TheGarrisonVinoteca">
+          </div>
+          
+          <div class="about-content">
+            <span class="section-label">Nuestra Historia</span>
+            <h2 class="section-title">Pasión por el vino, amor por el detalle</h2>
+            <div class="section-divider"></div>
+            
+            <p>
+              En TheGarrisonVinoteca creemos que cada botella cuenta una historia. 
+              Desde hace años, nos dedicamos a seleccionar los mejores vinos y licores 
+              para ofrecerte una experiencia única.
+            </p>
+            
+            <p>
+              Nuestro compromiso es simple: brindarte atención personalizada y 
+              productos de la más alta calidad. Porque entendemos que cuando 
+              elegís un vino, elegís un momento especial.
+            </p>
+            
+            <blockquote class="about-quote">
+              <p>"Nos importa lo que a la gente le importa"</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Nuestra Selección</span>
+          <h2 class="section-title">Categorías Premium</h2>
+          <div class="section-divider center"></div>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-card reveal" data-delay="0">
+            <img src="images/wine-tinto.jpg" alt="Vinos Tintos">
+            <div class="product-overlay"></div>
+            <div class="product-content">
+              <h3>Vinos Tintos</h3>
+              <p>Malbec, Cabernet Sauvignon, Merlot y más</p>
+              <div class="product-line"></div>
+            </div>
+          </div>
+          
+          <div class="product-card reveal" data-delay="150">
+            <img src="images/wine-blanco.jpg" alt="Vinos Blancos">
+            <div class="product-overlay"></div>
+            <div class="product-content">
+              <h3>Vinos Blancos</h3>
+              <p>Chardonnay, Sauvignon Blanc, Torrontés</p>
+              <div class="product-line"></div>
+            </div>
+          </div>
+          
+          <div class="product-card reveal" data-delay="300">
+            <img src="images/wine-espumante.jpg" alt="Espumantes">
+            <div class="product-overlay"></div>
+            <div class="product-content">
+              <h3>Espumantes</h3>
+              <p>Champagne, Prosecco, Extra Brut</p>
+              <div class="product-line"></div>
+            </div>
+          </div>
+          
+          <div class="product-card reveal" data-delay="450">
+            <img src="images/licores.jpg" alt="Licores">
+            <div class="product-overlay"></div>
+            <div class="product-content">
+              <h3>Licores</h3>
+              <p>Whisky, Cognac, Gin Premium</p>
+              <div class="product-line"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="products-cta reveal">
+          <a href="https://wa.me/541128942070?text=Hola!%20Me%20gustaría%20conocer%20más%20sobre%20su%20catálogo" target="_blank" rel="noopener noreferrer" class="link-arrow">
+            Consultá por nuestro catálogo completo
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Por Qué Elegirnos</span>
+          <h2 class="section-title">La Diferencia Garrison</h2>
+          <div class="section-divider center"></div>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card reveal" data-delay="0">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Atención Personalizada</h3>
+            <p>Te asesoramos para encontrar el vino perfecto para cada ocasión.</p>
+          </div>
+          
+          <div class="feature-card reveal" data-delay="150">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <h3>Productos Seleccionados</h3>
+            <p>Cada etiqueta pasa por nuestra rigurosa selección de calidad.</p>
+          </div>
+          
+          <div class="feature-card reveal" data-delay="300">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Calidad Garantizada</h3>
+            <p>Trabajamos solo con bodegas y distribuidores de confianza.</p>
+          </div>
+          
+          <div class="feature-card reveal" data-delay="450">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Experiencia en el Rubro</h3>
+            <p>Años de trayectoria nos respaldan en el mundo del vino.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="instagram">
+      <div class="container">
+        <div class="section-header reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <span class="section-label">Seguinos en Instagram</span>
+          <h2 class="section-title">@thegarrisonvinoteca</h2>
+          <div class="section-divider center"></div>
+        </div>
+        
+        <div class="instagram-grid">
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="0">
+            <img src="images/wine-tinto.jpg" alt="Vino tinto premium">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="100">
+            <img src="images/wine-blanco.jpg" alt="Vino blanco selecto">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="200">
+            <img src="images/wine-espumante.jpg" alt="Espumante de celebración">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="300">
+            <img src="images/licores.jpg" alt="Licores premium">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="400">
+            <img src="images/about-vinoteca.jpg" alt="Interior de la vinoteca">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="instagram-item reveal" data-delay="500">
+            <img src="images/hero-bg.jpg" alt="Bodega de vinos">
+            <div class="instagram-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+          </a>
+        </div>
+        
+        <div class="instagram-cta reveal">
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            Seguinos en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Visitanos</span>
+          <h2 class="section-title">Nuestra Ubicación</h2>
+          <div class="section-divider center"></div>
+        </div>
+        
+        <div class="contact-grid reveal">
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5!2d-58.28!3d-34.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCaseros%201643%2C%20Bernal!5e0!3m2!1ses!2sar!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0; filter: grayscale(80%) contrast(1.1);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación TheGarrisonVinoteca">
+            </iframe>
+          </div>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3>Dirección</h3>
+                <p>Caseros 1643, Bernal<br>Buenos Aires, Argentina</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3>Teléfono / WhatsApp</h3>
+                <a href="tel:+541128942070">+54 11 2894-2070</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3>Horarios</h3>
+                <p>Lunes a Sábado: 10:00 - 21:00<br>Domingos: Cerrado</p>
+              </div>
+            </div>
+            
+            <a href="https://wa.me/541128942070?text=Hola!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              Envianos un WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="wine-icon"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+            <span>TheGarrisonVinoteca</span>
+          </div>
+          <p class="footer-tagline">"Nos importa lo que a la gente le importa"</p>
+          <p class="footer-description">Vinos y licores premium seleccionados para vos.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <a href="https://www.instagram.com/thegarrisonvinoteca" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            @thegarrisonvinoteca
+          </a>
+          <a href="tel:+541128942070">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +54 11 2894-2070
+          </a>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Caseros 1643, Bernal, BA
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> TheGarrisonVinoteca. Todos los derechos reservados.</p>
+        <p class="footer-disclaimer">Beber con moderación. Prohibida la venta a menores de 18 años.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div id="whatsapp-float" class="whatsapp-float hidden">
+    <div id="whatsapp-tooltip" class="whatsapp-tooltip hidden">
+      <button id="close-tooltip" class="close-tooltip" aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <p class="tooltip-title">¿Tenés alguna consulta?</p>
+      <p class="tooltip-text">Escribinos por WhatsApp</p>
+    </div>
+    <a href="https://wa.me/541128942070?text=Hola!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+      <span class="whatsapp-pulse"></span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
