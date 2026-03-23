@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servi Tec Ays | Servicio Técnico Rápido y Confiable</title>
+    <meta name="description" content="Servicio técnico especializado en reparación, instalación y mantenimiento de electrodomésticos. Lavarropas, heladeras, aire acondicionado. Atención rápida.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                Servi Tec <span class="logo-accent">Ays</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#problemas">Problemas</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#galeria">Trabajos</a></li>
+                <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="Técnico profesional trabajando">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Atención en el día
+            </div>
+            <h1 class="animate-slide-up">Servicio Técnico<br><span class="gradient-text">Rápido y Confiable</span><br>en tu Zona</h1>
+            <p class="hero-subtitle animate-slide-up delay-1">Instalación, reparación y mantenimiento de electrodomésticos.<br>Todas las marcas. Presupuesto sin cargo.</p>
+            <div class="hero-buttons animate-slide-up delay-2">
+                <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20un%20servicio%20t%C3%A9cnico" class="btn btn-primary" target="_blank">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Contactar por WhatsApp
+                </a>
+                <a href="#servicios" class="btn btn-secondary">
+                    Solicitar diagnóstico
+                    <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="hero-brands animate-fade-in delay-3">
+                <span>Trabajamos con todas las marcas:</span>
+                <div class="brands-list">
+                    <span>Samsung</span>
+                    <span>LG</span>
+                    <span>Whirlpool</span>
+                    <span>Electrolux</span>
+                    <span>BGH</span>
+                    <span>+más</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2>Soluciones técnicas<br><span class="gradient-text">para tu hogar</span></h2>
+                <p>Ofrecemos servicios completos de reparación y mantenimiento para todos tus electrodomésticos</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="12" y="8" width="40" height="48" rx="4"/>
+                            <circle cx="32" cy="28" r="10"/>
+                            <line x1="32" y1="44" x2="32" y2="50"/>
+                            <circle cx="32" cy="28" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Reparación de Lavarropas</h3>
+                    <p>Solucionamos problemas de centrifugado, desagote, ruidos y más. Todas las marcas.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20reparar%20mi%20lavarropas" class="service-link" target="_blank">
+                        Consultar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Más solicitado</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="14" y="6" width="36" height="52" rx="4"/>
+                            <line x1="14" y1="38" x2="50" y2="38"/>
+                            <rect x="20" y="14" width="24" height="18" rx="2"/>
+                            <circle cx="32" cy="48" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Reparación de Heladeras</h3>
+                    <p>Diagnóstico y reparación de sistemas de enfriamiento, motores y termostatos.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20reparar%20mi%20heladera" class="service-link" target="_blank">
+                        Consultar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="16" width="52" height="28" rx="4"/>
+                            <path d="M14 24h8M14 32h8M14 28h6"/>
+                            <line x1="42" y1="20" x2="42" y2="40"/>
+                            <path d="M48 24l-3 6 3 6"/>
+                            <rect x="20" y="44" width="8" height="4"/>
+                            <rect x="36" y="44" width="8" height="4"/>
+                        </svg>
+                    </div>
+                    <h3>Aire Acondicionado</h3>
+                    <p>Instalación, carga de gas, limpieza y mantenimiento de equipos split y ventana.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20servicio%20de%20aire%20acondicionado" class="service-link" target="_blank">
+                        Consultar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 8L8 24v24l24 8 24-8V24L32 8z"/>
+                            <path d="M32 40V24"/>
+                            <path d="M20 30l12 10 12-10"/>
+                            <circle cx="32" cy="20" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Mantenimiento General</h3>
+                    <p>Servicio preventivo para extender la vida útil de tus electrodomésticos.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20mantenimiento%20general" class="service-link" target="_blank">
+                        Consultar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="24"/>
+                            <path d="M32 18v14l10 10"/>
+                            <circle cx="32" cy="32" r="4"/>
+                            <path d="M32 8v4M32 52v4M8 32h4M52 32h4"/>
+                        </svg>
+                    </div>
+                    <h3>Diagnóstico Técnico</h3>
+                    <p>Evaluación profesional para identificar fallas y soluciones óptimas.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20un%20diagn%C3%B3stico%20t%C3%A9cnico" class="service-link" target="_blank">
+                        Consultar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems" id="problemas">
+        <div class="container">
+            <div class="problems-wrapper">
+                <div class="problems-content">
+                    <span class="section-tag">Problemas Comunes</span>
+                    <h2>¿Te suena<br><span class="gradient-text">familiar?</span></h2>
+                    <p>Si experimentás alguno de estos problemas, no te preocupes. Tenemos la solución.</p>
+                    <a href="https://wa.me/5491164830485?text=Hola%21%20Tengo%20un%20problema%20con%20mi%20electrodom%C3%A9stico" class="btn btn-primary" target="_blank">
+                        Nosotros lo solucionamos
+                        <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="problems-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">🔄</div>
+                        <h4>¿Tu lavarropas no centrifuga?</h4>
+                        <p>Puede ser el motor, la correa o el sistema de drenaje.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">❄️</div>
+                        <h4>¿La heladera no enfría?</h4>
+                        <p>Revisamos compresor, termostato y sistema de gas.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">💨</div>
+                        <h4>¿El aire pierde gas?</h4>
+                        <p>Detectamos fugas y recargamos el sistema.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">🔊</div>
+                        <h4>¿Hace ruidos raros?</h4>
+                        <p>Identificamos y solucionamos el origen del problema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about-technician.jpg" alt="Técnico profesional de Servi Tec Ays">
+                    <div class="about-experience">
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">Años de<br>experiencia</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Sobre Nosotros</span>
+                    <h2>Técnicos especializados<br><span class="gradient-text">a tu servicio</span></h2>
+                    <p class="about-text">Somos un equipo de técnicos profesionales con amplia experiencia en reparación de electrodomésticos. Nos especializamos en brindar soluciones rápidas, honestas y garantizadas para tu hogar.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Atención personalizada</h4>
+                                <p>Cada cliente recibe trato único y dedicado</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Respuesta rápida</h4>
+                                <p>Atención en el día, cuando más lo necesitás</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Presupuestos sin compromiso</h4>
+                                <p>Te informamos antes de realizar cualquier trabajo</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Garantía en trabajos</h4>
+                                <p>Respaldamos cada reparación que realizamos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Trabajos</span>
+                <h2>Galería de<br><span class="gradient-text">proyectos</span></h2>
+                <p>Conocé algunos de los trabajos que hemos realizado para nuestros clientes</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.jpg" alt="Reparación de lavarropas">
+                    <div class="gallery-overlay">
+                        <span>Reparación Lavarropas</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.jpg" alt="Instalación de aire acondicionado">
+                    <div class="gallery-overlay">
+                        <span>Instalación Aire</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.jpg" alt="Reparación de heladera">
+                    <div class="gallery-overlay">
+                        <span>Service Heladera</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4.jpg" alt="Diagnóstico técnico">
+                    <div class="gallery-overlay">
+                        <span>Diagnóstico</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-5.jpg" alt="Taller de reparaciones">
+                    <div class="gallery-overlay">
+                        <span>Nuestro Taller</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-6.jpg" alt="Cliente satisfecho">
+                    <div class="gallery-overlay">
+                        <span>Clientes Satisfechos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonios</span>
+                <h2>Lo que dicen<br><span class="gradient-text">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Excelente servicio. Vinieron el mismo día y solucionaron el problema de mi heladera en menos de una hora. Muy profesionales."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MG</div>
+                        <div>
+                            <h4>María García</h4>
+                            <span>Palermo, CABA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Mi lavarropas hacía un ruido terrible. Lo arreglaron rápido y a buen precio. Ya los recomendé a varios vecinos."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CR</div>
+                        <div>
+                            <h4>Carlos Rodríguez</h4>
+                            <span>Villa Crespo, CABA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Instalaron el aire acondicionado impecable. Muy prolijos y explicaron todo el proceso. 100% recomendados."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LM</div>
+                        <div>
+                            <h4>Laura Martínez</h4>
+                            <span>Belgrano, CABA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"Respondieron enseguida por WhatsApp y al otro día ya tenía mi electrodoméstico funcionando. Servicio de primera."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JP</div>
+                        <div>
+                            <h4>Juan Pérez</h4>
+                            <span>Caballito, CABA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contacto">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Necesitás un técnico<br><span class="gradient-text">urgente?</span></h2>
+                <p>Estamos disponibles para atenderte. Contactanos ahora y resolvemos tu problema hoy mismo.</p>
+                <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20un%20t%C3%A9cnico%20urgente" class="btn btn-primary btn-large" target="_blank">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Escribinos por WhatsApp ahora
+                </a>
+                <div class="cta-info">
+                    <div class="cta-info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>+54 9 11 6483-0485</span>
+                    </div>
+                    <div class="cta-info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>CABA y Gran Buenos Aires</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        Servi Tec <span class="logo-accent">Ays</span>
+                    </a>
+                    <p>Servicio técnico profesional para todos tus electrodomésticos. Calidad, rapidez y confianza.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/servitecays" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5491164830485" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Lavarropas</a></li>
+                        <li><a href="#servicios">Heladeras</a></li>
+                        <li><a href="#servicios">Aire Acondicionado</a></li>
+                        <li><a href="#servicios">Diagnóstico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#galeria">Trabajos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            +54 9 11 6483-0485
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            CABA y GBA
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            Lun - Sáb: 8:00 - 20:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Servi Tec Ays. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491164830485?text=Hola%21%20Necesito%20un%20servicio%20t%C3%A9cnico" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="whatsapp-tooltip">¿Necesitás ayuda?</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
