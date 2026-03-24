@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Venta, alquiler y asesoramiento inmobiliario en Alta Gracia, Córdoba. Encontrá tu propiedad ideal con atención personalizada y confianza.">
+  <meta name="keywords" content="inmobiliaria, alta gracia, cordoba, argentina, venta, alquiler, propiedades, casas, lotes, departamentos">
+  <meta name="author" content="Victoria Martínez">
+  <meta name="theme-color" content="#1e3a5f">
+  
+  <meta property="og:title" content="Victoria Martínez Servicios Inmobiliarios">
+  <meta property="og:description" content="Encontrá tu propiedad ideal en Alta Gracia con confianza y asesoramiento personalizado.">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:type" content="website">
+  
+  <title>Victoria Martínez Servicios Inmobiliarios | Alta Gracia, Córdoba</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-content">
+      <a href="#inicio" class="logo">
+        <div class="logo-icon">VM</div>
+        <div class="logo-text">
+          <span class="logo-name">Victoria Martínez</span>
+          <span class="logo-subtitle">Servicios Inmobiliarios</span>
+        </div>
+      </a>
+      
+      <nav class="nav-desktop">
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      
+      <div class="header-cta">
+        <a href="tel:+5493547446960" class="phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+54 9 3547 44-6960</span>
+        </a>
+        <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="btn btn-accent">WhatsApp</a>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-full">Contactar por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <img src="images/hero-house.jpg" alt="Casa moderna en Alta Gracia" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-in">
+        <div class="hero-badge-icon">VM</div>
+        <span>Victoria Martínez Servicios Inmobiliarios</span>
+      </div>
+      
+      <h1 class="hero-title animate-fade-in-up">Encontrá tu propiedad ideal en Alta Gracia</h1>
+      
+      <p class="hero-subtitle animate-fade-in-up delay-200">
+        Venta, alquiler y asesoramiento inmobiliario con confianza. 
+        Más de 100 propiedades disponibles para vos.
+      </p>
+      
+      <div class="hero-cta animate-fade-in-up delay-400">
+        <a href="#propiedades" class="btn btn-accent btn-lg">Ver propiedades</a>
+        <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">Contactar por WhatsApp</a>
+      </div>
+    </div>
+    
+    <a href="#social-proof" class="scroll-indicator" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- Social Proof -->
+  <section id="social-proof" class="social-proof">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="stat-value">+100</span>
+          <span class="stat-label">Propiedades publicadas</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="stat-value">+500</span>
+          <span class="stat-label">Clientes satisfechos</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+          </div>
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Atención personalizada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section id="propiedades" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestro catálogo</span>
+        <h2 class="section-title">Propiedades Destacadas</h2>
+        <p class="section-desc">
+          Descubrí las mejores opciones en venta y alquiler. Casas, lotes y departamentos 
+          en Alta Gracia y alrededores.
+        </p>
+      </div>
+      
+      <div class="properties-grid">
+        <!-- Property 1 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-1.jpg')">
+            <img src="images/property-1.jpg" alt="Casa Moderna en Barrio Norte">
+            <div class="property-badges">
+              <span class="badge badge-primary">Casa</span>
+              <span class="badge badge-accent">Destacada</span>
+            </div>
+            <div class="property-price">USD 135.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Casa Moderna en Barrio Norte</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Alta Gracia, Córdoba</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg> 3 dorm</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg> 2 baños</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 180 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Casa Moderna en Barrio Norte" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+        
+        <!-- Property 2 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-2.jpg')">
+            <img src="images/property-2.jpg" alt="Lote en Zona Residencial">
+            <div class="property-badges">
+              <span class="badge badge-primary">Lote</span>
+            </div>
+            <div class="property-price">USD 28.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Lote en Zona Residencial</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Villa Carlos Paz</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 450 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Lote en Zona Residencial" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+        
+        <!-- Property 3 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-3.jpg')">
+            <img src="images/property-3.jpg" alt="Departamento Céntrico">
+            <div class="property-badges">
+              <span class="badge badge-primary">Departamento</span>
+              <span class="badge badge-accent">Destacada</span>
+            </div>
+            <div class="property-price">$550.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Departamento Céntrico</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Centro, Alta Gracia</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg> 2 dorm</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg> 1 baño</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 65 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Departamento Céntrico" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+        
+        <!-- Property 4 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-4.jpg')">
+            <img src="images/property-4.jpg" alt="Casa con Jardín Amplio">
+            <div class="property-badges">
+              <span class="badge badge-primary">Casa</span>
+            </div>
+            <div class="property-price">USD 95.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Casa con Jardín Amplio</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Barrio Sur, Alta Gracia</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg> 2 dorm</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg> 1 baño</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 120 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Casa con Jardín Amplio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+        
+        <!-- Property 5 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-5.jpg')">
+            <img src="images/property-5.jpg" alt="Duplex de Categoría">
+            <div class="property-badges">
+              <span class="badge badge-primary">Duplex</span>
+              <span class="badge badge-accent">Destacada</span>
+            </div>
+            <div class="property-price">USD 180.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Duplex de Categoría</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Country Los Pinos</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg> 4 dorm</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg> 3 baños</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 240 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Duplex de Categoría" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+        
+        <!-- Property 6 -->
+        <div class="property-card">
+          <div class="property-image" onclick="openModal('images/property-6.jpg')">
+            <img src="images/property-6.jpg" alt="Departamento con Vista">
+            <div class="property-badges">
+              <span class="badge badge-primary">Departamento</span>
+            </div>
+            <div class="property-price">$420.000</div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">Departamento con Vista</h3>
+            <div class="property-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Centro, Alta Gracia</span>
+            </div>
+            <div class="property-features">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg> 1 dorm</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg> 1 baño</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg> 45 m²</span>
+            </div>
+            <a href="https://wa.me/5493547446960?text=Hola! Me interesa la propiedad: Departamento con Vista" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">Consultar</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="https://www.instagram.com/inmobiliaria.victoriamartinez" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Ver más propiedades en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="servicios" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lo que ofrecemos</span>
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-desc">
+          Brindamos un servicio integral para cubrir todas tus necesidades inmobiliarias 
+          con profesionalismo y dedicación.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="service-title">Venta de Propiedades</h3>
+          <p class="service-desc">Asesoramiento completo para la compra y venta de inmuebles.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="service-title">Lotes</h3>
+          <p class="service-desc">Terrenos en las mejores ubicaciones de Alta Gracia y alrededores.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
+          </div>
+          <h3 class="service-title">Alquileres</h3>
+          <p class="service-desc">Gestión integral de alquileres residenciales y comerciales.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M4 12h8"/><path d="M12 4v8"/><path d="m4 20 4-4"/><path d="m16 20-4-4"/></svg>
+          </div>
+          <h3 class="service-title">Tasaciones</h3>
+          <p class="service-desc">Valuación profesional de tu propiedad para venta o alquiler.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </div>
+          <h3 class="service-title">Asesoramiento</h3>
+          <p class="service-desc">Consultoría personalizada para todas tus decisiones inmobiliarias.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="service-title">Atención al Cliente</h3>
+          <p class="service-desc">Acompañamiento durante todo el proceso de compra o venta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="images/hero-house.jpg" alt="Victoria Martínez Servicios Inmobiliarios">
+          <div class="about-badge">
+            <div class="about-badge-icon">10+</div>
+            <div>
+              <p class="about-badge-number">Años</p>
+              <p class="about-badge-text">de experiencia</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-content">
+          <span class="section-tag">Sobre nosotros</span>
+          <h2 class="section-title text-left">Tu socio inmobiliario de confianza</h2>
+          <p class="about-text">
+            Somos una empresa con trayectoria en el rubro inmobiliario, brindando 
+            asesoramiento personalizado para ayudarte a tomar la mejor decisión. 
+            Nuestro compromiso es acompañarte en cada paso del proceso, garantizando 
+            transparencia y profesionalismo.
+          </p>
+          
+          <div class="trust-grid">
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Seriedad y transparencia</span>
+            </div>
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Responsabilidad en cada operación</span>
+            </div>
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Atención personalizada</span>
+            </div>
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Trayectoria comprobada</span>
+            </div>
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Amplia cartera de propiedades</span>
+            </div>
+            <div class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Asesoramiento integral</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light">Testimonios</span>
+        <h2 class="section-title light">Lo que dicen nuestros clientes</h2>
+        <p class="section-desc light">
+          La satisfacción de nuestros clientes es nuestra mejor carta de presentación.
+        </p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          
+          <p class="testimonial-text">"Excelente atención y profesionalismo. Encontramos nuestra casa ideal gracias a Victoria. Muy recomendable."</p>
+          
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <p class="testimonial-name">María García</p>
+              <p class="testimonial-location">Alta Gracia</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          
+          <p class="testimonial-text">"Muy responsables y serios. El proceso de compra fue claro y sin complicaciones. Gracias por todo."</p>
+          
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">C</div>
+            <div>
+              <p class="testimonial-name">Carlos Rodríguez</p>
+              <p class="testimonial-location">Villa Carlos Paz</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          
+          <p class="testimonial-text">"La atención personalizada marca la diferencia. Siempre disponibles para responder consultas. 100% recomendados."</p>
+          
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div>
+              <p class="testimonial-name">Laura Fernández</p>
+              <p class="testimonial-location">Córdoba Capital</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="trust-badge-center">
+        <div class="trust-badge">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span>100% recomendado por nuestros clientes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Estamos para ayudarte</h2>
+        <p class="section-desc">
+          Contactanos por el medio que prefieras. Estamos disponibles para responder 
+          todas tus consultas.
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="tel:+5493547446960" class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h3>Teléfono</h3>
+              <p>+54 9 3547 44-6960</p>
+            </div>
+          </a>
+          
+          <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp">
+            <div class="contact-icon accent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </div>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>Escribinos para una respuesta rápida</p>
+            </div>
+          </a>
+          
+          <a href="mailto:victoria.martinez2020@outlook.com" class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>victoria.martinez2020@outlook.com</p>
+            </div>
+          </a>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3>Dirección</h3>
+              <p>3 de Febrero 707, Alta Gracia, Córdoba, Argentina</p>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-full btn-lg">
+            Contactar por WhatsApp
+          </a>
+        </div>
+        
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.0!2d-64.4344!3d-31.6683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3+de+Febrero+707%2C+Alta+Gracia%2C+C%C3%B3rdoba%2C+Argentina!5e0!3m2!1ses!2sar!4v1"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Victoria Martínez Servicios Inmobiliarios">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Hours -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="hours-wrapper">
+        <div class="hours-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h2 class="hours-title">Horarios de Atención</h2>
+        </div>
+        
+        <div class="hours-card">
+          <div class="hours-row" data-day="1">
+            <span class="hours-day">Lunes</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+          <div class="hours-row" data-day="2">
+            <span class="hours-day">Martes</span>
+            <span class="hours-time">9:30 – 19:00</span>
+          </div>
+          <div class="hours-row" data-day="3">
+            <span class="hours-day">Miércoles</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+          <div class="hours-row" data-day="4">
+            <span class="hours-day">Jueves</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+          <div class="hours-row" data-day="5">
+            <span class="hours-day">Viernes</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+          <div class="hours-row" data-day="6">
+            <span class="hours-day">Sábado</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+          <div class="hours-row" data-day="0">
+            <span class="hours-day">Domingo</span>
+            <span class="hours-time">9:30 – 20:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="instagram-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <span>@inmobiliaria.victoriamartinez</span>
+        </div>
+        <h2 class="section-title">Seguinos en Instagram</h2>
+        <p class="section-desc">
+          Descubrí las últimas propiedades y novedades del mercado inmobiliario.
+        </p>
+      </div>
+      
+      <div class="instagram-grid">
+        <div class="instagram-item" onclick="openModal('images/property-1.jpg')">
+          <img src="images/property-1.jpg" alt="Propiedad 1">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="instagram-item" onclick="openModal('images/property-2.jpg')">
+          <img src="images/property-2.jpg" alt="Propiedad 2">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="instagram-item" onclick="openModal('images/property-3.jpg')">
+          <img src="images/property-3.jpg" alt="Propiedad 3">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="instagram-item" onclick="openModal('images/property-4.jpg')">
+          <img src="images/property-4.jpg" alt="Propiedad 4">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="instagram-item" onclick="openModal('images/property-5.jpg')">
+          <img src="images/property-5.jpg" alt="Propiedad 5">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="instagram-item" onclick="openModal('images/property-6.jpg')">
+          <img src="images/property-6.jpg" alt="Propiedad 6">
+          <div class="instagram-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="https://www.instagram.com/inmobiliaria.victoriamartinez" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          Seguir en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon accent">VM</div>
+            <div class="logo-text">
+              <span class="logo-name">Victoria Martínez</span>
+              <span class="logo-subtitle">Servicios Inmobiliarios</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Tu socio inmobiliario de confianza en Alta Gracia. Venta, alquiler y 
+            asesoramiento personalizado.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#propiedades">Propiedades</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <a href="tel:+5493547446960">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +54 9 3547 44-6960
+              </a>
+            </li>
+            <li>
+              <a href="mailto:victoria.martinez2020@outlook.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                victoria.martinez2020@outlook.com
+              </a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              3 de Febrero 707, Alta Gracia, Córdoba
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Redes Sociales</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/inmobiliaria.victoriamartinez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/InmobiliariaMavictoria" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+          <a href="https://mavictoriamartinez.com.ar" target="_blank" rel="noopener noreferrer" class="footer-website">
+            mavictoriamartinez.com.ar
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="currentYear"></span> 2026 - TuPaginaYa - Una marca del Grupo JV - Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5493547446960" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    <span class="whatsapp-tooltip">¡Escribinos!</span>
+    <span class="whatsapp-pulse"></span>
+  </a>
+
+  <!-- Image Modal -->
+  <div class="modal" id="imageModal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="modal-content">
+      <img src="" alt="Imagen ampliada" id="modalImage">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
