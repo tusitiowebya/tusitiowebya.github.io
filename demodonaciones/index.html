@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARLOS - TUMOR CEREBRAL – TU GRANITO AYUDA</title>
+  <meta name="description" content="Campaña solidaria para ayudar a Carlos, un niño de 5 años que lucha contra un tumor cerebral. Tu donación puede hacer la diferencia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <span class="navbar-logo">TU GRANITO AYUDA 🤍</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Carlos necesita tu ayuda hoy</h1>
+          <p class="hero-subtitle">
+            Tiene <strong>5 años</strong> y lucha contra <strong>un tumor cerebral</strong>. Hoy necesita tratamientos médicos para seguir peleando por su vida.
+          </p>
+          <div class="hero-buttons">
+            <a href="#donar" class="btn btn-primary">Quiero donar</a>
+            <a href="#historia" class="btn btn-secondary">Conocé su historia</a>
+          </div>
+          
+          <!-- Progress Bar -->
+          <div class="progress-section">
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-info">
+              <p class="progress-amount">Recaudado <strong>$129.446.100</strong></p>
+              <p class="progress-goal">de $205.470.000 estimados para cubrir su trasplante y tratamiento médico.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="image-card">
+            <img src="images/carlos.png" alt="Carlos en el hospital" class="carlos-image">
+            <p class="image-caption">Tu gesto hoy es un paso más para Carlos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg-pattern"></div>
+  </section>
+
+  <!-- Historia Section -->
+  <section class="historia" id="historia">
+    <div class="container">
+      <h2 class="section-title">Carlos tiene 5 años y...</h2>
+      
+      <div class="historia-content">
+        <p>Hasta hace poco llevaba una vida normal, llena de juegos, risas y momentos simples de la infancia.</p>
+        
+        <p>Pero hace un tiempo comenzaron a aparecer <strong>síntomas preocupantes</strong>. Dolores de cabeza muy fuertes, mareos y problemas para caminar hicieron que su familia decidiera llevarlo al hospital para realizar estudios.</p>
+        
+        <p>Después de varios análisis y consultas médicas, los especialistas dieron un diagnóstico muy difícil: <strong>Carlos tiene un tumor cerebral</strong>.</p>
+        
+        <p>Desde ese momento su vida cambió por completo.</p>
+        
+        <p>Los días que antes estaban llenos de juegos ahora se transformaron en <strong>hospitales, estudios médicos y tratamientos constantes</strong>.</p>
+        
+        <p>Hoy Carlos necesita <strong>tratamientos especializados, controles médicos permanentes y cuidados intensivos</strong> mientras los médicos luchan por tratar la enfermedad.</p>
+        
+        <p>Su familia está haciendo todo lo posible para acompañarlo en esta batalla, pero los tratamientos y cuidados médicos generan <strong>costos muy difíciles de afrontar solos</strong>.</p>
+        
+        <p>Por eso se creó esta campaña.</p>
+        
+        <p class="highlight-message">💙 Cada ayuda puede acercar a Carlos a la oportunidad de seguir luchando por su vida.</p>
+      </div>
+      
+      <!-- Aclaración -->
+      <div class="aclaracion">
+        <h3 class="aclaracion-title">*ACLARACIÓN*</h3>
+        <p>Los fondos recaudados se transfieren directamente a los padres de Carlos, sin intermediarios. En ningún momento el dinero pasa por cuentas ni por la gestión de la organización <strong>Tu Granito Ayuda</strong>.</p>
+        <p>Al momento de realizar la donación se informa claramente el titular de la cuenta y su vínculo con Carlos, para que cada persona que colabora sepa exactamente a quién está ayudando.</p>
+        <p>Este mecanismo busca garantizar <strong>transparencia, trazabilidad y confianza</strong>, asegurando que cada aporte llegue directamente a la familia que atraviesa esta situación. 💙</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo Donar Section -->
+  <section class="donar" id="donar">
+    <div class="container">
+      <h2 class="donar-title">Cómo donar</h2>
+      <p class="donar-subtitle">Podés colaborar por transferencia.</p>
+      
+      <div class="donar-cards">
+        <div class="donar-card">
+          <label class="donar-label">Alias</label>
+          <div class="donar-input-group">
+            <input type="text" readonly value="tuayuda.carlos" id="aliasInput" class="donar-input">
+            <button class="btn-copy" onclick="copyToClipboard('aliasInput', this)">Copiar alias</button>
+          </div>
+        </div>
+        
+        <div class="donar-card">
+          <label class="donar-label">CBU / CVU</label>
+          <div class="donar-input-group">
+            <input type="text" readonly value="4530000800012454471518" id="cbuInput" class="donar-input">
+            <button class="btn-copy" onclick="copyToClipboard('cbuInput', this)">Copiar CBU/CVU</button>
+          </div>
+        </div>
+      </div>
+      
+      <p class="donar-titular">Titular de la cuenta: <strong>Alexis Ivan Brizuela (Hermano de Carlos)</strong></p>
+      <p class="donar-note">* Usá el botón "Copiar" para pegar los datos en tu app bancaria.</p>
+    </div>
+  </section>
+
+  <!-- Transparencia Section -->
+  <section class="transparencia">
+    <div class="container">
+      <h2 class="section-title">Transparencia</h2>
+      <p class="transparencia-intro">Estos son costos aproximados del proceso médico:</p>
+      
+      <ul class="costos-lista">
+        <li><span class="costo-item">Cirugía neurológica especializada</span> <span class="costo-valor">— $92.430.000</span></li>
+        <li><span class="costo-item">Internación hospitalaria y cuidados intensivos</span> <span class="costo-valor">— $41.760.000</span></li>
+        <li><span class="costo-item">Estudios neurológicos de alta complejidad</span> <span class="costo-valor">— $27.850.000</span></li>
+        <li><span class="costo-item">Medicamentos especializados y tratamiento</span> <span class="costo-valor">— $24.960.000</span></li>
+        <li><span class="costo-item">Controles médicos y seguimiento</span> <span class="costo-valor">— $18.470.000</span></li>
+      </ul>
+      
+      <p class="transparencia-note"><em>Actualizaremos estos valores a medida que avance el plan médico</em></p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>¿Quién es Carlos?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Carlos es un niño de <strong>5 años</strong> que fue diagnosticado con <strong>un tumor cerebral</strong>, una enfermedad que requiere tratamiento médico intensivo y seguimiento constante.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>¿Cuál es su situación actual?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Carlos se encuentra en tratamiento médico intensivo. Requiere cirugías, estudios especializados y cuidados constantes en el hospital. Su familia está acompañándolo en cada paso de este difícil proceso.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>¿En qué se utilizarán las donaciones?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Las donaciones se destinarán a cubrir los gastos médicos de Carlos: cirugía neurológica, internación, medicamentos especializados, estudios de alta complejidad y controles médicos permanentes.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>¿Cómo se garantiza la transparencia?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Los fondos van directamente a la cuenta de la familia, sin intermediarios. Se informa claramente el titular de la cuenta y su vínculo con Carlos. Además, publicamos actualizaciones sobre los avances del tratamiento y uso de los fondos.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>¿Cómo puedo ayudar además de donar?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <p>Podés compartir esta campaña en tus redes sociales, enviársela a amigos y familiares, o simplemente difundir la historia de Carlos. Cada persona que conoce su caso es una posibilidad más de ayuda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 TU GRANITO AYUDA — Campaña solidaria</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
