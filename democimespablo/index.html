@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimes Pablo y Javi | Distribución de Agua y Soda a Domicilio</title>
+    <meta name="description" content="Servicio de distribución de agua y soda a domicilio. Entrega rápida, confiable y al mejor precio.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">💧</span>
+                <span>Cimes <span class="highlight">Pablo y Javi</span></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#como-funciona" class="nav-link">Cómo Funciona</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <a href="https://wa.me/5491162305164" class="nav-cta">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+            <div class="bubble bubble-5"></div>
+            <div class="bubble bubble-6"></div>
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Agua y Soda en tu casa,
+                <span class="gradient-text">sin moverte</span>
+            </h1>
+            <p class="hero-subtitle">Entrega rápida, confiable y al mejor precio</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20hacer%20un%20pedido" class="btn btn-primary">
+                    <span class="btn-icon">📱</span>
+                    Pedir ahora por WhatsApp
+                </a>
+                <a href="#productos" class="btn btn-secondary">
+                    <span class="btn-icon">📦</span>
+                    Ver productos
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Clientes felices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24h</span>
+                    <span class="stat-label">Entrega máxima</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-bg.jpg" alt="Agua fresca y pura" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">¿Por qué elegirnos?</span>
+                <h2 class="section-title">Beneficios que nos hacen <span class="gradient-text">diferentes</span></h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🚚</span>
+                    </div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Recibí tu pedido en menos de 24 horas. Coordinamos el horario que mejor te convenga.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>💧</span>
+                    </div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Productos Cimes originales con todos los controles de calidad y certificaciones.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>💸</span>
+                    </div>
+                    <h3>Precios Accesibles</h3>
+                    <p>Los mejores precios del mercado sin sacrificar calidad. Consultá nuestras ofertas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span>🔁</span>
+                    </div>
+                    <h3>Reposición Semanal</h3>
+                    <p>Nunca te quedes sin agua. Programá entregas recurrentes automáticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Productos</span>
+                <h2 class="section-title">Elegí lo que <span class="gradient-text">necesitás</span></h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Más vendido</div>
+                    <div class="product-image">
+                        <img src="images/bidon-agua.jpg" alt="Bidón de agua 20 litros">
+                    </div>
+                    <div class="product-content">
+                        <h3>Bidones de Agua</h3>
+                        <p>Agua mineral pura en bidones de 12 y 20 litros. Ideal para dispensers.</p>
+                        <div class="product-features">
+                            <span>✓ 12L y 20L</span>
+                            <span>✓ Agua mineral</span>
+                            <span>✓ Retornable</span>
+                        </div>
+                        <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20pedir%20bidones%20de%20agua" class="btn btn-primary btn-block">
+                            Pedir ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/soda.jpg" alt="Soda en sifón">
+                    </div>
+                    <div class="product-content">
+                        <h3>Soda</h3>
+                        <p>Soda refrescante en sifones de vidrio tradicionales. El sabor de siempre.</p>
+                        <div class="product-features">
+                            <span>✓ Sifón vidrio</span>
+                            <span>✓ Bien fría</span>
+                            <span>✓ Retornable</span>
+                        </div>
+                        <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20pedir%20soda" class="btn btn-primary btn-block">
+                            Pedir ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card featured">
+                    <div class="product-badge">Mejor precio</div>
+                    <div class="product-image">
+                        <img src="images/pack-combo.jpg" alt="Pack combinado">
+                    </div>
+                    <div class="product-content">
+                        <h3>Packs Combinados</h3>
+                        <p>Combiná agua y soda con descuentos especiales. Armá tu pack a medida.</p>
+                        <div class="product-features">
+                            <span>✓ Descuentos</span>
+                            <span>✓ Personalizable</span>
+                            <span>✓ Envío gratis</span>
+                        </div>
+                        <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20consultar%20por%20los%20packs%20combinados" class="btn btn-primary btn-block">
+                            Consultar pack
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Super Fácil</span>
+                <h2 class="section-title">Cómo <span class="gradient-text">funciona</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">💬</div>
+                    <h3>Escribinos</h3>
+                    <p>Mandanos un mensaje por WhatsApp con tu pedido</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📅</div>
+                    <h3>Coordinamos</h3>
+                    <p>Acordamos día y horario de entrega que te convenga</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🏠</div>
+                    <h3>Recibís</h3>
+                    <p>Te llevamos el pedido hasta la puerta de tu casa</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">✅</div>
+                    <h3>¡Listo!</h3>
+                    <p>Disfrutá agua y soda fresca sin moverte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">@cimespablojavi</span>
+                <h2 class="section-title">Clientes reales, <span class="gradient-text">servicio real</span></h2>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-card">
+                    <div class="instagram-content">
+                        <p>"Excelente servicio, siempre puntuales y con la mejor onda. Los recomiendo 100%"</p>
+                    </div>
+                    <div class="instagram-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <strong>María G.</strong>
+                            <span>Cliente desde 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-card">
+                    <div class="instagram-content">
+                        <p>"Nunca más me quedé sin agua. La reposición semanal es un golazo."</p>
+                    </div>
+                    <div class="instagram-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <strong>Juan P.</strong>
+                            <span>Cliente desde 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-card">
+                    <div class="instagram-content">
+                        <p>"Los mejores precios que encontré. Además son super atentos con cualquier consulta."</p>
+                    </div>
+                    <div class="instagram-author">
+                        <div class="author-avatar">L</div>
+                        <div class="author-info">
+                            <strong>Laura S.</strong>
+                            <span>Cliente desde 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="instagram-cta">
+                <a href="https://instagram.com/cimespablojavi" target="_blank" class="btn btn-secondary">
+                    <span class="btn-icon">📷</span>
+                    Seguinos en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="about-bg">
+            <img src="images/about-bg.jpg" alt="Nuestro servicio">
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <span class="section-tag">Sobre Nosotros</span>
+                <h2 class="section-title">Tu distribuidora de <span class="gradient-text">confianza</span></h2>
+                <p>Somos distribuidores oficiales de Cimes, brindando un servicio rápido y confiable en tu zona. Nos apasiona llevar agua de calidad a cada hogar, con la atención personalizada que te merecés.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <span class="feature-icon">🏆</span>
+                        <span>Distribuidores oficiales</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="feature-icon">🤝</span>
+                        <span>Atención personalizada</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="feature-icon">📍</span>
+                        <span>Cobertura en tu zona</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">Hablemos de tu <span class="gradient-text">pedido</span></h2>
+                    <p>Estamos disponibles para atenderte y resolver todas tus dudas. Elegí el medio que más te guste.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5491162305164" class="contact-method whatsapp">
+                            <div class="method-icon">💬</div>
+                            <div class="method-info">
+                                <strong>WhatsApp</strong>
+                                <span>+54 9 11 6230-5164</span>
+                            </div>
+                        </a>
+                        <a href="tel:+5491162305164" class="contact-method phone">
+                            <div class="method-icon">📞</div>
+                            <div class="method-info">
+                                <strong>Teléfono</strong>
+                                <span>Llamanos directo</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/cimespablojavi" target="_blank" class="contact-method instagram">
+                            <div class="method-icon">📷</div>
+                            <div class="method-info">
+                                <strong>Instagram</strong>
+                                <span>@cimespablojavi</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Dejanos tu pedido</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Tu dirección de entrega" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pedido">¿Qué necesitás?</label>
+                            <textarea id="pedido" name="pedido" placeholder="Ej: 2 bidones de 20L y 6 sifones de soda" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span class="btn-icon">📱</span>
+                            Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pedí hoy y recibí <span class="gradient-text">sin complicaciones</span></h2>
+                <p>No esperes más. Tu agua y soda te están esperando.</p>
+                <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20hacer%20un%20pedido" class="btn btn-primary btn-large">
+                    <span class="btn-icon">👉</span>
+                    WhatsApp directo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">💧</span>
+                    <span>Cimes <span class="highlight">Pablo y Javi</span></span>
+                    <p>Distribución de agua y soda a domicilio</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/5491162305164" aria-label="WhatsApp">💬</a>
+                    <a href="https://instagram.com/cimespablojavi" target="_blank" aria-label="Instagram">📷</a>
+                    <a href="tel:+5491162305164" aria-label="Teléfono">📞</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cimes Pablo y Javi. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5491162305164?text=Hola!%20Quiero%20hacer%20un%20pedido" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">¿Necesitás ayuda?</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
