@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extinsur Matafuegos - Venta, mantenimiento y recarga de matafuegos certificados en Villa Carlos Paz, Córdoba. Seguridad contra incendios.">
+    <title>Extinsur Matafuegos | Seguridad Contra Incendios en Córdoba</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-fire-extinguisher"></i>
+                <span>EXTINSUR</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/5403541556377" class="btn btn-primary nav-cta">
+                <i class="fab fa-whatsapp"></i> Contactar
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="Seguridad contra incendios">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="fire-particles" id="fireParticles"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Servicio Certificado</span>
+            </div>
+            <h1 class="hero-title">
+                La seguridad <span class="text-gradient">no se improvisa.</span><br>
+                Protegé tu negocio hoy.
+            </h1>
+            <p class="hero-subtitle">
+                Venta, mantenimiento y recarga de matafuegos certificados en Córdoba
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5403541556377?text=Hola!%20Quiero%20solicitar%20un%20presupuesto" class="btn btn-primary btn-glow">
+                    <i class="fab fa-whatsapp"></i>
+                    Solicitar presupuesto
+                </a>
+                <a href="tel:03541556377" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Llamar ahora
+                </a>
+            </div>
+            <div class="hero-badges">
+                <div class="badge-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Atención inmediata</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Equipos certificados</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Servicio a domicilio</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-fire"></i> Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones completas en <span class="text-gradient">seguridad contra incendios</span></h2>
+                <p class="section-subtitle">Equipos de primera calidad y servicio profesional garantizado</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/fire-extinguisher.jpg" alt="Matafuegos nuevos">
+                    </div>
+                    <h3>Matafuegos Nuevos</h3>
+                    <p>Venta de extintores de todas las clases y capacidades. ABC, CO2, agua y más.</p>
+                    <a href="https://wa.me/5403541556377?text=Hola!%20Me%20interesa%20comprar%20matafuegos%20nuevos" class="service-link">
+                        Consultar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/maintenance.jpg" alt="Recarga y carga">
+                    </div>
+                    <h3>Recarga y Carga</h3>
+                    <p>Servicio de recarga profesional con agentes extintores de máxima calidad.</p>
+                    <a href="https://wa.me/5403541556377?text=Hola!%20Necesito%20recargar%20mis%20matafuegos" class="service-link">
+                        Consultar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/maintenance.jpg" alt="Mantenimiento anual">
+                    </div>
+                    <h3>Mantenimiento Anual</h3>
+                    <p>Control obligatorio según normativa. Evitá multas y mantené tu negocio seguro.</p>
+                    <a href="https://wa.me/5403541556377?text=Hola!%20Necesito%20el%20mantenimiento%20anual%20de%20mis%20matafuegos" class="service-link">
+                        Consultar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-blanket"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/fire-blanket.jpg" alt="Mantas ignífugas">
+                    </div>
+                    <h3>Mantas Ignífugas</h3>
+                    <p>Protección adicional para cocinas industriales y áreas de alto riesgo.</p>
+                    <a href="https://wa.me/5403541556377?text=Hola!%20Me%20interesan%20las%20mantas%20ignífugas" class="service-link">
+                        Consultar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciales Section -->
+    <section class="diferenciales" id="nosotros">
+        <div class="container">
+            <div class="diferenciales-grid">
+                <div class="diferenciales-content">
+                    <span class="section-tag"><i class="fas fa-star"></i> Por qué elegirnos</span>
+                    <h2 class="section-title">Tu seguridad es <span class="text-gradient">nuestra prioridad</span></h2>
+                    <div class="diferencial-items">
+                        <div class="diferencial-item">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="diferencial-text">
+                                <h4>Cobertura Local</h4>
+                                <p>Atención rápida en Villa Carlos Paz y toda la zona de Punilla</p>
+                            </div>
+                        </div>
+                        <div class="diferencial-item">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="diferencial-text">
+                                <h4>Normativas Vigentes</h4>
+                                <p>Cumplimos con todas las regulaciones y certificaciones requeridas</p>
+                            </div>
+                        </div>
+                        <div class="diferencial-item">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="diferencial-text">
+                                <h4>Asesoramiento Personalizado</h4>
+                                <p>Te ayudamos a elegir el equipo adecuado para tu espacio</p>
+                            </div>
+                        </div>
+                        <div class="diferencial-item">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="diferencial-text">
+                                <h4>Servicio a Domicilio</h4>
+                                <p>Vamos a tu negocio o domicilio sin costo adicional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="diferenciales-image">
+                    <img src="images/fire-extinguisher.jpg" alt="Matafuegos profesionales">
+                    <div class="floating-card">
+                        <i class="fas fa-check-circle"></i>
+                        <span>+500 clientes confían en nosotros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgencia Section -->
+    <section class="urgencia">
+        <div class="urgencia-bg">
+            <img src="images/urgency-bg.jpg" alt="Emergencia">
+            <div class="urgencia-overlay"></div>
+        </div>
+        <div class="container urgencia-content">
+            <div class="urgencia-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>Un matafuego vencido <span class="text-gradient">no sirve</span> en una emergencia.</h2>
+            <p>Evitá multas y riesgos. Hacé el mantenimiento hoy.</p>
+            <div class="urgencia-stats">
+                <div class="urgencia-stat">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-text">de los incendios se controlan con un matafuegos en buen estado</span>
+                </div>
+            </div>
+            <a href="https://wa.me/5403541556377?text=Hola!%20Necesito%20revisar%20mis%20matafuegos%20urgente" class="btn btn-primary btn-glow btn-lg">
+                <i class="fab fa-whatsapp"></i>
+                Revisar mis matafuegos ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Años de experiencia</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Clientes atendidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <div class="stat-number" data-count="2000">0</div>
+                    <div class="stat-label">Equipos revisados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">% Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section class="proceso" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-cogs"></i> Cómo trabajamos</span>
+                <h2 class="section-title">Proceso <span class="text-gradient">simple y rápido</span></h2>
+                <p class="section-subtitle">En 4 pasos tenés tu equipo listo y certificado</p>
+            </div>
+            <div class="proceso-grid">
+                <div class="proceso-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Contacto Rápido</h3>
+                    <p>Escribinos por WhatsApp o llamanos. Respondemos al instante.</p>
+                </div>
+                <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="proceso-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Evaluación</h3>
+                    <p>Analizamos tus necesidades y te asesoramos sin compromiso.</p>
+                </div>
+                <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="proceso-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Servicio en el Lugar</h3>
+                    <p>Vamos a tu domicilio o negocio a realizar el trabajo.</p>
+                </div>
+                <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="proceso-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificación Final</h3>
+                    <p>Te entregamos toda la documentación correspondiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-quote-left"></i> Testimonios</span>
+                <h2 class="section-title">Lo que dicen <span class="text-gradient">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Excelente servicio. Vinieron al local, revisaron todo y me dejaron los matafuegos como nuevos. Muy profesionales."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Martín González</h4>
+                            <span>Restaurante El Fogón</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Respuesta inmediata y precios justos. Atendieron mi consulta por WhatsApp y al otro día ya tenía todo solucionado."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Laura Pérez</h4>
+                            <span>Hotel Villa Serrana</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Llevamos años trabajando con ellos. Siempre puntuales, siempre cumpliendo. Los recomiendo 100%."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Fernández</h4>
+                            <span>Taller Mecánico CF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <span class="section-tag"><i class="fas fa-map-pin"></i> Contacto</span>
+                    <h2 class="section-title">Estamos para <span class="text-gradient">ayudarte</span></h2>
+                    <p>Comunicate con nosotros por el medio que prefieras. Respondemos rápido.</p>
+                    
+                    <div class="contacto-items">
+                        <a href="https://wa.me/5403541556377" class="contacto-item">
+                            <div class="contacto-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contacto-text">
+                                <h4>WhatsApp</h4>
+                                <span>03541 55-6377</span>
+                            </div>
+                        </a>
+                        <a href="tel:03541556377" class="contacto-item">
+                            <div class="contacto-icon phone">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contacto-text">
+                                <h4>Teléfono</h4>
+                                <span>03541 55-6377</span>
+                            </div>
+                        </a>
+                        <a href="mailto:matafuegosextinsur@gmail.com" class="contacto-item">
+                            <div class="contacto-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contacto-text">
+                                <h4>Email</h4>
+                                <span>matafuegosextinsur@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://maps.google.com/?q=Perón+1287+Villa+Carlos+Paz+Córdoba+Argentina" target="_blank" class="contacto-item">
+                            <div class="contacto-icon location">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contacto-text">
+                                <h4>Dirección</h4>
+                                <span>Perón 1287, Villa Carlos Paz, Córdoba</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contacto-horarios">
+                        <h4><i class="fas fa-clock"></i> Horarios de atención</h4>
+                        <p>Lunes a Viernes: 8:00 - 18:00</p>
+                        <p>Sábados: 9:00 - 13:00</p>
+                    </div>
+                </div>
+                <div class="contacto-mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5!2d-64.5!3d-31.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDI0JzAwLjAiUyA2NMKwMzAnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <a href="https://maps.google.com/?q=Perón+1287+Villa+Carlos+Paz+Córdoba+Argentina" target="_blank" class="btn btn-secondary mapa-btn">
+                        <i class="fas fa-directions"></i>
+                        Cómo llegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2>No esperes a que pase algo. <span class="text-gradient">Actuá ahora.</span></h2>
+                <p>Tu seguridad y la de tu negocio no pueden esperar. Contactanos hoy mismo.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5403541556377?text=Hola!%20Quiero%20más%20información%20sobre%20sus%20servicios" class="btn btn-primary btn-glow btn-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        Escribir por WhatsApp
+                    </a>
+                    <a href="tel:03541556377" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        Llamar ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-fire-extinguisher"></i>
+                        <span>EXTINSUR</span>
+                    </a>
+                    <p>Seguridad contra incendios en Villa Carlos Paz y zona de Punilla. Más de 15 años protegiendo negocios y hogares.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5403541556377"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Matafuegos nuevos</a></li>
+                        <li><a href="#servicios">Recarga y carga</a></li>
+                        <li><a href="#servicios">Mantenimiento anual</a></li>
+                        <li><a href="#servicios">Mantas ignífugas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Zona de cobertura</h4>
+                    <ul>
+                        <li>Villa Carlos Paz</li>
+                        <li>Cosquín</li>
+                        <li>La Falda</li>
+                        <li>Valle de Punilla</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 03541 55-6377</li>
+                        <li><i class="fas fa-envelope"></i> matafuegosextinsur@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Perón 1287, Villa Carlos Paz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Extinsur Matafuegos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5403541556377?text=Hola!%20Necesito%20información%20sobre%20matafuegos" class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Necesitás ayuda?</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
