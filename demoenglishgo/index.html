@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISHGO - Hablá inglés con confianza</title>
+    <meta name="description" content="Cursos de inglés prácticos para hablar en la vida real, viajar y crecer profesionalmente. Método conversacional desde el día 1.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">🌍</span>
+                ENGLISH<span class="logo-accent">GO</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#cursos" class="nav-link">Cursos</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#proceso" class="nav-link">Proceso</a>
+                <a href="#testimonios" class="nav-link">Testimonios</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <a href="https://wa.me/5492604345465" target="_blank" class="btn btn-primary header-cta">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="Estudiantes viajando" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🚀 Nuevo método conversacional</span>
+                <h1 class="hero-title">Hablá inglés con confianza y abrí puertas al mundo</h1>
+                <p class="hero-subtitle">Cursos prácticos para hablar en la vida real, viajar y crecer profesionalmente</p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Empezar ahora
+                        <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5492604345465" target="_blank" class="btn btn-secondary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Hablar por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-cards">
+                    <div class="floating-card card-1">
+                        <span class="card-emoji">✈️</span>
+                        <span>Work & Travel</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <span class="card-emoji">💬</span>
+                        <span>Speaking</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <span class="card-emoji">🌎</span>
+                        <span>Global</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Descubrí más</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-count="500">
+                    <span class="stat-number">0+</span>
+                    <span class="stat-label">Alumnos activos</span>
+                </div>
+                <div class="stat-item" data-count="1200">
+                    <span class="stat-number">0+</span>
+                    <span class="stat-label">Clases dictadas</span>
+                </div>
+                <div class="stat-item" data-count="98">
+                    <span class="stat-number">0%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+                <div class="stat-item" data-count="4">
+                    <span class="stat-number">0+</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="cursos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nuestros Cursos</span>
+                <h2 class="section-title">Elegí el curso perfecto para vos</h2>
+                <p class="section-subtitle">Programas diseñados para que hables inglés desde el primer día</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/travel.jpg" alt="Inglés para viajar">
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-icon">✈️</div>
+                        <h3 class="course-title">Inglés para Viajar</h3>
+                        <p class="course-desc">Aprendé las frases y vocabulario esencial para moverte con confianza en cualquier país.</p>
+                        <ul class="course-features">
+                            <li>Situaciones reales de viaje</li>
+                            <li>Vocabulario práctico</li>
+                            <li>Roleplay interactivo</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline">Más información</a>
+                    </div>
+                </div>
+                <div class="course-card featured">
+                    <div class="course-image">
+                        <img src="images/work-travel.jpg" alt="Work & Travel">
+                        <div class="course-badge">Recomendado</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-icon">🌍</div>
+                        <h3 class="course-title">Work & Travel</h3>
+                        <p class="course-desc">Preparación completa para tu experiencia de trabajo en el exterior. Entrevistas, CV y más.</p>
+                        <ul class="course-features">
+                            <li>Preparación de entrevistas</li>
+                            <li>CV en inglés</li>
+                            <li>Inglés laboral</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/conversation.jpg" alt="Inglés conversacional">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-icon">💬</div>
+                        <h3 class="course-title">Inglés Conversacional</h3>
+                        <p class="course-desc">Clases 100% enfocadas en speaking. Perdé el miedo y ganá fluidez natural.</p>
+                        <ul class="course-features">
+                            <li>100% conversación</li>
+                            <li>Temas actuales</li>
+                            <li>Corrección en tiempo real</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline">Más información</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/interview.jpg" alt="Preparación entrevistas">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-icon">💼</div>
+                        <h3 class="course-title">Entrevistas Laborales</h3>
+                        <p class="course-desc">Dominá las entrevistas en inglés y conseguí el trabajo de tus sueños.</p>
+                        <ul class="course-features">
+                            <li>Simulacros reales</li>
+                            <li>Preguntas frecuentes</li>
+                            <li>Feedback personalizado</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="nosotros">
+        <div class="container">
+            <div class="why-us-content">
+                <div class="why-us-text">
+                    <span class="section-badge">Por qué elegirnos</span>
+                    <h2 class="section-title">Un método que realmente funciona</h2>
+                    <p class="section-subtitle">Nos enfocamos en lo que importa: que hables inglés con confianza desde el día 1</p>
+                    <div class="why-features">
+                        <div class="why-feature">
+                            <div class="why-icon">🎯</div>
+                            <div class="why-info">
+                                <h4>Método Práctico</h4>
+                                <p>Hablás desde el primer día. Nada de gramática aburrida sin contexto.</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">⚡</div>
+                            <div class="why-info">
+                                <h4>Clases Dinámicas</h4>
+                                <p>Cada clase es diferente. Usamos juegos, roleplay y situaciones reales.</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">🗣️</div>
+                            <div class="why-info">
+                                <h4>Enfoque en Speaking</h4>
+                                <p>80% de la clase es práctica oral. La fluidez se gana hablando.</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">👤</div>
+                            <div class="why-info">
+                                <h4>Atención Personalizada</h4>
+                                <p>Grupos reducidos y seguimiento individual de tu progreso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-visual">
+                    <div class="visual-card">
+                        <img src="images/conversation.jpg" alt="Clase de inglés">
+                        <div class="visual-overlay">
+                            <span class="visual-stat">+500</span>
+                            <span class="visual-label">Estudiantes satisfechos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Beneficios</span>
+                <h2 class="section-title">Lo que vas a lograr</h2>
+                <p class="section-subtitle">El inglés abre puertas que nunca imaginaste</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌎</div>
+                    <h3>Viajá sin miedo</h3>
+                    <p>Movete por el mundo con confianza. Pedí en restaurantes, preguntá direcciones, hacé amigos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Mejores oportunidades</h3>
+                    <p>Accedé a trabajos mejor pagos y empresas internacionales que buscan bilingües.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Conectá con el mundo</h3>
+                    <p>Comunicarte con personas de cualquier país y cultura sin barreras.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Seguridad al hablar</h3>
+                    <p>Perdé el miedo y ganá la confianza para expresarte en cualquier situación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Cómo funciona</span>
+                <h2 class="section-title">Tu camino hacia la fluidez</h2>
+                <p class="section-subtitle">Un proceso simple y efectivo</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Te contactás</h3>
+                        <p>Escribinos por WhatsApp o completá el formulario. Te respondemos en menos de 24hs.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Evaluamos tu nivel</h3>
+                        <p>Una charla relajada para conocer tu nivel actual y tus objetivos.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Empezás a hablar</h3>
+                        <p>Desde la primera clase practicás conversación real con nuestro método.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Lográs fluidez</h3>
+                        <p>En pocos meses vas a notar cómo tu confianza y fluidez crecen exponencialmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonios</span>
+                <h2 class="section-title">Lo que dicen nuestros alumnos</h2>
+                <p class="section-subtitle">Historias reales de personas que transformaron su inglés</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Después de años intentando con otros métodos, finalmente encontré uno que funciona. En 3 meses ya estaba teniendo conversaciones fluidas. ¡Increíble!"</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.jpg" alt="Valentina" class="author-img">
+                        <div class="author-info">
+                            <span class="author-name">Valentina García</span>
+                            <span class="author-role">Viajó a Australia con Work & Travel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Las clases son super dinámicas, nada que ver con el inglés aburrido del colegio. Paula tiene una manera única de enseñar que te hace perder el miedo."</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.jpg" alt="Martín" class="author-img">
+                        <div class="author-info">
+                            <span class="author-name">Martín López</span>
+                            <span class="author-role">Consiguió trabajo en empresa internacional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Tenía pánico de hablar en inglés. Hoy mantengo reuniones con clientes de USA sin problema. El cambio fue increíble, 100% recomendado."</p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.jpg" alt="Sofía" class="author-img">
+                        <div class="author-info">
+                            <span class="author-name">Sofía Mendez</span>
+                            <span class="author-role">Freelancer con clientes internacionales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">Contacto</span>
+                    <h2 class="section-title">¿Listo para empezar?</h2>
+                    <p class="contact-desc">Escribinos y te ayudamos a encontrar el curso perfecto para vos. ¡La primera consulta es gratis!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5492604345465" target="_blank" class="contact-method whatsapp">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">WhatsApp</span>
+                                <span class="method-value">+54 9 260 434 5465</span>
+                            </div>
+                        </a>
+                        <a href="mailto:paulagirod4@gmail.com" class="contact-method email">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 6l-10 7L2 6"/>
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">paulagirod4@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/englishgo_cursos" target="_blank" class="contact-method instagram">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Instagram</span>
+                                <span class="method-value">@englishgo_cursos</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3 class="form-title">Dejanos tus datos</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <input type="number" id="edad" name="edad" required placeholder="25">
+                            </div>
+                            <div class="form-group">
+                                <label for="nivel">Nivel de inglés</label>
+                                <select id="nivel" name="nivel" required>
+                                    <option value="">Seleccionar</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="basico">Básico</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="objetivo">¿Cuál es tu objetivo?</label>
+                            <select id="objetivo" name="objetivo" required>
+                                <option value="">Seleccionar</option>
+                                <option value="viajar">Viajar</option>
+                                <option value="trabajo">Trabajo / Carrera</option>
+                                <option value="worktravel">Work & Travel</option>
+                                <option value="conversacion">Mejorar conversación</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos más sobre tus objetivos..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            Enviar consulta
+                            <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Tu inglés empieza hoy</h2>
+                <p class="cta-text">No esperes más. Cada día que pasa es una oportunidad perdida. ¡Empezá ahora!</p>
+                <div class="cta-buttons">
+                    <a href="#contacto" class="btn btn-primary btn-xl">
+                        Quiero empezar
+                        <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5492604345465" target="_blank" class="btn btn-ghost btn-xl">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp directo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🌍</span>
+                        ENGLISH<span class="logo-accent">GO</span>
+                    </a>
+                    <p class="footer-desc">Cursos de inglés prácticos para hablar con confianza en la vida real.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/englishgo_cursos" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5492604345465" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Cursos</h4>
+                        <a href="#cursos">Inglés para viajar</a>
+                        <a href="#cursos">Work & Travel</a>
+                        <a href="#cursos">Conversacional</a>
+                        <a href="#cursos">Entrevistas</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Empresa</h4>
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#proceso">Método</a>
+                        <a href="#testimonios">Testimonios</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <a href="https://wa.me/5492604345465" target="_blank">WhatsApp</a>
+                        <a href="mailto:paulagirod4@gmail.com">Email</a>
+                        <a href="https://instagram.com/englishgo_cursos" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ENGLISHGO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5492604345465" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-tooltip">¡Chateá con nosotros!</span>
+    </a>
+
+    <!-- Form Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Te contactaremos en menos de 24 horas. ¡Gracias por tu interés!</p>
+            <button class="btn btn-primary" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
