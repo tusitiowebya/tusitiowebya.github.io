@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sabores de la Tata - Comida casera, viandas corporativas, catering y rotisería en General Rojo, Buenos Aires. El sabor de lo casero de verdad.">
+    <title>Sabores de la Tata | Comida Casera con Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-tooltip">¡Hacé tu pedido!</span>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Sabores de la Tata</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#historia" class="nav-link">Nuestra Historia</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#empresas" class="nav-link">Empresas</a></li>
+                <li><a href="#contacto" class="nav-link nav-link--cta">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <img src="images/hero-empanadas.jpg" alt="Empanadas caseras recién horneadas" class="hero-img">
+            <div class="hero-overlay"></div>
+            <div class="smoke-effect"></div>
+        </div>
+        <div class="hero-content container">
+            <h1 class="hero-title animate-fade-up">
+                Comida casera que se siente <span class="highlight">como en casa</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-up delay-1">
+                Viandas, catering y sabores reales hechos con amor
+            </p>
+            <div class="hero-buttons animate-fade-up delay-2">
+                <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20hacer%20un%20pedido" class="btn btn-primary" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Hacer pedido por WhatsApp
+                </a>
+                <a href="#menu" class="btn btn-secondary">Ver menú</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Descubrí más</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story" id="historia">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image animate-on-scroll">
+                    <img src="images/familia-cocina.jpg" alt="Cocina familiar con amor">
+                    <div class="story-image-frame"></div>
+                </div>
+                <div class="story-content animate-on-scroll">
+                    <span class="section-tag">Nuestra Historia</span>
+                    <h2 class="section-title">Una historia que se cocina con el <span class="highlight">corazón</span></h2>
+                    <p class="story-text">
+                        <strong>Sabores de la Tata</strong> nace del amor por la cocina casera que nos enseñó nuestra abuela, "La Tata". Cada receta que preparamos lleva consigo años de tradición familiar, el cariño de las manos que amasan y el sabor único de lo hecho en casa.
+                    </p>
+                    <p class="story-text">
+                        Somos una familia de General Rojo dedicada a llevar el verdadero sabor casero a tu mesa. No somos una fábrica, somos una cocina con alma, donde cada plato se prepara con la misma dedicación que si fuera para nuestra propia familia.
+                    </p>
+                    <p class="story-text">
+                        <em>"La Tata siempre decía que la comida hecha con amor se siente diferente... y tenía razón."</em>
+                    </p>
+                    <div class="story-signature">
+                        <span>Con amor,</span>
+                        <strong>Familia Sabores de la Tata</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">Todo lo que necesitás, <span class="highlight">con sabor a hogar</span></h2>
+                <p class="section-description">Desde tu almuerzo diario hasta el evento más especial, tenemos la solución perfecta para vos.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Viandas Corporativas</h3>
+                    <p class="service-description">Soluciones de alimentación para empresas. Menús variados, entregas puntuales y planes flexibles.</p>
+                    <a href="#empresas" class="service-link">Conocer más →</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>
+                            <path d="M3 9V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"/>
+                            <path d="M12 4v5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Viandas Particulares</h3>
+                    <p class="service-description">¿No tenés tiempo de cocinar? Te llevamos comida casera lista para disfrutar.</p>
+                    <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20consultar%20por%20viandas%20particulares" class="service-link" target="_blank">Consultar →</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5Z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Catering para Eventos</h3>
+                    <p class="service-description">Hacemos que tu evento sea inolvidable con nuestra comida casera de calidad.</p>
+                    <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20consultar%20por%20catering%20para%20un%20evento" class="service-link" target="_blank">Consultar →</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Rotisería</h3>
+                    <p class="service-description">Comidas listas para llevar: pollo, milanesas, pastas y mucho más.</p>
+                    <a href="#menu" class="service-link">Ver opciones →</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mesas Saladas</h3>
+                    <p class="service-description">Perfectas para reuniones, cumpleaños y celebraciones. Variedad y sabor garantizado.</p>
+                    <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20consultar%20por%20una%20mesa%20salada" class="service-link" target="_blank">Consultar →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Nuestro Menú</span>
+                <h2 class="section-title">Sabores que <span class="highlight">enamoran</span></h2>
+                <p class="section-description">Mirá algunas de nuestras especialidades más pedidas</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/hero-empanadas.jpg" alt="Empanadas caseras">
+                        <div class="menu-item-overlay">
+                            <span class="menu-item-tag">Más pedido</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Empanadas Caseras</h3>
+                        <p class="menu-item-description">Carne, pollo, jamón y queso, verdura. Hechas a mano con masa casera.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">Desde $800 c/u</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20pedir%20empanadas" class="menu-item-btn" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/pizza-casera.jpg" alt="Pizza casera">
+                        <div class="menu-item-overlay">
+                            <span class="menu-item-tag">Especial</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Pizzas a la Piedra</h3>
+                        <p class="menu-item-description">Muzzarella, napolitana, especial, fugazzeta. Masa madre y mucho queso.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">Desde $6.500</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20pedir%20pizzas" class="menu-item-btn" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/hamburguesa.jpg" alt="Hamburguesas caseras">
+                        <div class="menu-item-overlay">
+                            <span class="menu-item-tag">Nuevo</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Hamburguesas Gourmet</h3>
+                        <p class="menu-item-description">Medallón de carne casero, pan artesanal, vegetales frescos y salsas especiales.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">Desde $5.500</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20pedir%20hamburguesas" class="menu-item-btn" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/viandas.jpg" alt="Viandas completas">
+                        <div class="menu-item-overlay">
+                            <span class="menu-item-tag">Ideal empresas</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Viandas Completas</h3>
+                        <p class="menu-item-description">Plato principal + guarnición + postre. Menú rotativo semanal.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">Desde $4.500</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20consultar%20por%20viandas" class="menu-item-btn" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/rotiseria.jpg" alt="Rotisería">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Rotisería del Día</h3>
+                        <p class="menu-item-description">Milanesas, pollo, pastas, tartas, tortillas. Siempre fresco y listo.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">Consultar</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Que%20tienen%20hoy%20en%20rotiseria?" class="menu-item-btn" target="_blank">Preguntar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item animate-on-scroll">
+                    <div class="menu-item-image">
+                        <img src="images/mesa-salada.jpg" alt="Mesa salada">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Mesa Salada Completa</h3>
+                        <p class="menu-item-description">Sandwiches, empanadas, pizzetas, brochettes, tabla de fiambres y más.</p>
+                        <div class="menu-item-footer">
+                            <span class="menu-item-price">A presupuestar</span>
+                            <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20presupuesto%20para%20una%20mesa%20salada" class="menu-item-btn" target="_blank">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">¿Por qué elegirnos?</span>
+                <h2 class="section-title">Lo que nos hace <span class="highlight">diferentes</span></h2>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-item animate-on-scroll">
+                    <div class="why-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>Casero de Verdad</h3>
+                    <p>No somos una fábrica. Cada plato se hace con las mismas recetas de siempre.</p>
+                </div>
+                <div class="why-us-item animate-on-scroll">
+                    <div class="why-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Ingredientes de Calidad</h3>
+                    <p>Seleccionamos los mejores ingredientes para que disfrutes sabor real.</p>
+                </div>
+                <div class="why-us-item animate-on-scroll">
+                    <div class="why-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3>Entregas Puntuales</h3>
+                    <p>Sabemos que tu tiempo es valioso. Cumplimos con los horarios acordados.</p>
+                </div>
+                <div class="why-us-item animate-on-scroll">
+                    <div class="why-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Nos adaptamos a tus necesidades y preferencias. Vos sos lo primero.</p>
+                </div>
+                <div class="why-us-item animate-on-scroll">
+                    <div class="why-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3>Opciones para Empresas</h3>
+                    <p>Planes especiales, descuentos por cantidad y degustación sin cargo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Section -->
+    <section class="corporate" id="empresas">
+        <div class="container">
+            <div class="corporate-grid">
+                <div class="corporate-content animate-on-scroll">
+                    <span class="section-tag">Para Empresas</span>
+                    <h2 class="section-title">Soluciones de alimentación <span class="highlight">corporativa</span></h2>
+                    <p class="corporate-description">
+                        Entendemos las necesidades de tu empresa. Ofrecemos planes de viandas completas que incluyen plato principal, guarnición y postre, con menús rotativos para que tus empleados disfruten variedad todos los días.
+                    </p>
+                    <ul class="corporate-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Viandas completas (plato + guarnición + postre)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Planes semanales y mensuales</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Descuentos especiales por cantidad</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Degustación sin cargo</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Facturación según tu necesidad</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5493364282072?text=Hola!%20Soy%20de%20una%20empresa%20y%20quiero%20solicitar%20una%20propuesta%20de%20viandas%20corporativas" class="btn btn-primary" target="_blank">
+                        Solicitar propuesta
+                    </a>
+                </div>
+                <div class="corporate-image animate-on-scroll">
+                    <img src="images/viandas.jpg" alt="Viandas corporativas">
+                    <div class="corporate-badge">
+                        <span class="badge-number">+50</span>
+                        <span class="badge-text">Empresas confían en nosotros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">¿Cómo funciona?</span>
+                <h2 class="section-title">Pedir es <span class="highlight">muy fácil</span></h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Nos escribís</h3>
+                        <p>Contactanos por WhatsApp y contanos qué necesitás.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Armamos tu menú</h3>
+                        <p>Te asesoramos y armamos la propuesta perfecta para vos.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Cocinamos con amor</h3>
+                        <p>Preparamos todo fresco el día de la entrega.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Disfrutás</h3>
+                        <p>Te lo llevamos listo para que solo tengas que disfrutar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Galería</span>
+                <h2 class="section-title">Momentos <span class="highlight">deliciosos</span></h2>
+                <p class="section-description">Seguinos en Instagram para ver más</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/hero-empanadas.jpg" alt="Empanadas">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/pizza-casera.jpg" alt="Pizza">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/hamburguesa.jpg" alt="Hamburguesa">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/catering.jpg" alt="Catering">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/mesa-salada.jpg" alt="Mesa salada">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/rotiseria.jpg" alt="Rotisería">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cta animate-on-scroll">
+                <a href="https://instagram.com/saboresdelatata_gr" class="btn btn-secondary" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Seguinos en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">Lo que dicen <span class="highlight">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Las empanadas de Sabores de la Tata son las mejores que probé. Se nota que están hechas con amor y los ingredientes son de primera. Mi familia las pide siempre."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MG</div>
+                        <div class="author-info">
+                            <strong>María González</strong>
+                            <span>Cliente particular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Contratamos el servicio de viandas para nuestra empresa y estamos encantados. Siempre puntuales, comida deliciosa y atención impecable. 100% recomendados."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CL</div>
+                        <div class="author-info">
+                            <strong>Carlos López</strong>
+                            <span>Gerente - Empresa local</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"El catering de mi cumpleaños fue un éxito total. Todos preguntaban de dónde era la comida. La mesa salada estaba espectacular y los precios muy accesibles."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <strong>Laura Pérez</strong>
+                            <span>Evento privado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">¿Listo para <span class="highlight">probar?</span></h2>
+                    <p class="contact-description">
+                        Escribinos por WhatsApp o completá el formulario y te respondemos a la brevedad. ¡Estamos para ayudarte!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5493364282072" class="contact-method" target="_blank">
+                            <div class="contact-method-icon whatsapp">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>3364 28-2072</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/saboresdelatata_gr" class="contact-method" target="_blank">
+                            <div class="contact-method-icon instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@saboresdelatata_gr</span>
+                            </div>
+                        </a>
+                        <div class="contact-method">
+                            <div class="contact-method-icon location">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span>General Rojo, Buenos Aires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Tu número de contacto">
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">Tipo de servicio</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="empresa">Viandas para empresa</option>
+                                <option value="particular">Viandas particulares</option>
+                                <option value="evento">Catering para evento</option>
+                                <option value="rotiseria">Rotisería</option>
+                                <option value="mesa-salada">Mesa salada</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué necesitás..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content animate-on-scroll">
+                <h2>Probá el sabor de lo <span class="highlight">casero de verdad</span></h2>
+                <p>Dejá que te mimemos con nuestra comida. Tu familia, tu empresa y tus invitados lo van a agradecer.</p>
+                <a href="https://wa.me/5493364282072?text=Hola!%20Quiero%20hacer%20un%20pedido" class="btn btn-primary btn-large" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Hacer pedido ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Sabores de la Tata</h3>
+                    <p>Comida casera hecha con amor. Viandas, catering y rotisería en General Rojo, Buenos Aires.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/saboresdelatata_gr" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5493364282072" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#historia">Nuestra Historia</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#empresas">Empresas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Viandas Corporativas</a></li>
+                        <li><a href="#servicios">Viandas Particulares</a></li>
+                        <li><a href="#servicios">Catering</a></li>
+                        <li><a href="#servicios">Rotisería</a></li>
+                        <li><a href="#servicios">Mesas Saladas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><strong>WhatsApp:</strong> 3364 28-2072</p>
+                    <p><strong>Instagram:</strong> @saboresdelatata_gr</p>
+                    <p><strong>Ubicación:</strong> General Rojo, Buenos Aires, Argentina</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sabores de la Tata. Todos los derechos reservados.</p>
+                <p>Hecho con amor en General Rojo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
