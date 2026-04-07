@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISNA - Tu Libertad Financiera Empieza Aquí</title>
+    <meta name="description" content="Aprendé a crear tu negocio digital y ordenar tus finanzas desde cero con CRISNA">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493513368436" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">CRISNA</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#programa">Programa</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge fade-in">Tu transformación empieza aquí</span>
+            <h1 class="hero-title fade-in">
+                Dejá de sobrevivir.<br>
+                <span class="gradient-text">Empezá a construir tu libertad</span>
+            </h1>
+            <p class="hero-subtitle fade-in">
+                Aprendé a crear tu negocio digital y ordenar tus finanzas desde cero
+            </p>
+            <div class="hero-ctas fade-in">
+                <a href="#contacto" class="btn btn-primary glow-btn">
+                    <span>Quiero empezar</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5493513368436" target="_blank" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Hablar por WhatsApp</span>
+                </a>
+            </div>
+            <div class="hero-stats fade-in">
+                <div class="stat">
+                    <span class="stat-number" data-target="1000">0</span>
+                    <span class="stat-label">Personas transformadas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Países alcanzados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="98">0</span>
+                    <span class="stat-label">% Satisfacción</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Descubrí más</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-items">
+                <div class="proof-item fade-in">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Método Probado</h3>
+                    <p>Sistema paso a paso validado por cientos de alumnos</p>
+                </div>
+                <div class="proof-item fade-in">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Comunidad Activa</h3>
+                    <p>Grupo exclusivo de apoyo y networking</p>
+                </div>
+                <div class="proof-item fade-in">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Resultados Reales</h3>
+                    <p>Testimonios verificados de transformaciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problema">
+        <div class="problem-bg">
+            <img src="images/dark-abstract-bg.jpg" alt="" class="problem-bg-img">
+            <div class="problem-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="problem-content">
+                <span class="section-tag fade-in">¿Te identificás?</span>
+                <h2 class="section-title fade-in">
+                    Si sentís que trabajás todo el día<br>
+                    <span class="gradient-text">y no avanzás...</span>
+                </h2>
+                <div class="problem-cards">
+                    <div class="problem-card fade-in">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <p>Trabajás más de 8 horas y el sueldo no te alcanza</p>
+                    </div>
+                    <div class="problem-card fade-in">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                <line x1="12" y1="19" x2="12" y2="23"/>
+                                <line x1="8" y1="23" x2="16" y2="23"/>
+                            </svg>
+                        </div>
+                        <p>Dependés de un sueldo que otro decide por vos</p>
+                    </div>
+                    <div class="problem-card fade-in">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <p>Querés más tiempo para vos y tu familia</p>
+                    </div>
+                    <div class="problem-card fade-in">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <p>No sabés cómo manejar tu dinero y siempre estás en cero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-grid">
+                <div class="solution-image fade-in">
+                    <img src="images/freedom-lifestyle.jpg" alt="Libertad financiera trabajando desde cualquier lugar">
+                    <div class="solution-image-glow"></div>
+                </div>
+                <div class="solution-content fade-in">
+                    <span class="section-tag">La solución</span>
+                    <h2 class="section-title">
+                        Hay otra forma de<br>
+                        <span class="gradient-text">vivir y trabajar</span>
+                    </h2>
+                    <p class="solution-text">
+                        Un programa completo que te enseña a construir tu negocio digital desde cero, 
+                        ordenar tus finanzas y crear la vida que siempre soñaste.
+                    </p>
+                    <ul class="solution-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Negocios digitales rentables</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Educación financiera práctica</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Sistema paso a paso</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Acompañamiento personalizado</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary glow-btn">
+                        <span>Quiero saber más</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program-section" id="programa">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">El Programa</span>
+                <h2 class="section-title">
+                    Todo lo que vas a<br>
+                    <span class="gradient-text">aprender</span>
+                </h2>
+                <p class="section-subtitle">Un sistema completo para transformar tu vida financiera</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-card fade-in">
+                    <div class="program-card-number">01</div>
+                    <div class="program-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Mentalidad Emprendedora</h3>
+                    <p>Transformá tu forma de pensar sobre el dinero y el éxito. Desarrollá la mentalidad necesaria para emprender.</p>
+                    <ul class="program-features">
+                        <li>Reprogramación financiera</li>
+                        <li>Hábitos de éxito</li>
+                        <li>Gestión del tiempo</li>
+                    </ul>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-card-number">02</div>
+                    <div class="program-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Negocio Digital</h3>
+                    <p>Aprendé a crear tu propio negocio online paso a paso, desde cero y sin experiencia previa.</p>
+                    <ul class="program-features">
+                        <li>Modelos de negocio</li>
+                        <li>Marketing digital</li>
+                        <li>Automatización</li>
+                    </ul>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-card-number">03</div>
+                    <div class="program-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20V10"/>
+                            <path d="M18 20V4"/>
+                            <path d="M6 20v-4"/>
+                        </svg>
+                    </div>
+                    <h3>Ventas Online</h3>
+                    <p>Dominá las técnicas de venta digital para generar ingresos constantes y escalables.</p>
+                    <ul class="program-features">
+                        <li>Copywriting</li>
+                        <li>Embudos de venta</li>
+                        <li>Cierre de ventas</li>
+                    </ul>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-card-number">04</div>
+                    <div class="program-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Finanzas Personales</h3>
+                    <p>Organizá tu dinero, eliminá deudas y empezá a construir riqueza real y sostenible.</p>
+                    <ul class="program-features">
+                        <li>Presupuesto inteligente</li>
+                        <li>Inversiones básicas</li>
+                        <li>Libertad financiera</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="beneficios">
+        <div class="benefits-bg">
+            <img src="images/dark-abstract-bg.jpg" alt="" class="benefits-bg-img">
+            <div class="benefits-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Transformación</span>
+                <h2 class="section-title">
+                    Lo que vas a<br>
+                    <span class="gradient-text">lograr</span>
+                </h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Trabajar desde casa</h3>
+                    <p>Generá ingresos sin salir de tu hogar, con total flexibilidad horaria</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Control financiero</h3>
+                    <p>Tomá el control total de tu dinero y empezá a construir patrimonio</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline points="17 6 23 6 23 12"/>
+                        </svg>
+                    </div>
+                    <h3>Escalar tu negocio</h3>
+                    <p>Aprendé a crecer sin límites con estrategias probadas</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Vivir con libertad</h3>
+                    <p>Diseñá la vida que querés, con tiempo para lo importante</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonios">
+        <div class="testimonials-bg">
+            <img src="images/testimonial-bg.jpg" alt="" class="testimonials-bg-img">
+            <div class="testimonials-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">
+                    Historias de<br>
+                    <span class="gradient-text">transformación</span>
+                </h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "Antes trabajaba 10 horas diarias y apenas llegaba a fin de mes. Hoy genero ingresos desde mi casa y tengo tiempo para mi familia. CRISNA me cambió la vida."
+                        </p>
+                        <div class="testimonial-before-after">
+                            <span class="before">Antes: Empleado agotado</span>
+                            <span class="after">Después: Emprendedor libre</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <strong>Martín L.</strong>
+                            <span>Córdoba, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "No sabía nada de negocios online. Con el método de CRISNA pude crear mi primer ingreso digital en menos de 2 meses. El acompañamiento es increíble."
+                        </p>
+                        <div class="testimonial-before-after">
+                            <span class="before">Antes: Sin experiencia</span>
+                            <span class="after">Después: Generando ingresos</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SG</div>
+                        <div class="author-info">
+                            <strong>Sofía G.</strong>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "Por fin entendí cómo manejar mi dinero. Pasé de estar siempre en cero a tener mis primeros ahorros e inversiones. Este programa te ordena la cabeza y el bolsillo."
+                        </p>
+                        <div class="testimonial-before-after">
+                            <span class="before">Antes: Deudas constantes</span>
+                            <span class="after">Después: Ahorrando e invirtiendo</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JP</div>
+                        <div class="author-info">
+                            <strong>Juan P.</strong>
+                            <span>Mendoza, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img src="images/couple-success.jpg" alt="Crisna - Pareja emprendedora">
+                    <div class="about-image-frame"></div>
+                </div>
+                <div class="about-content fade-in">
+                    <span class="section-tag">Nosotros</span>
+                    <h2 class="section-title">
+                        Conocé a<br>
+                        <span class="gradient-text">CRISNA</span>
+                    </h2>
+                    <p class="about-text">
+                        Somos una pareja que pasó de trabajar en empleos tradicionales a construir 
+                        un negocio digital que nos da libertad financiera y de tiempo.
+                    </p>
+                    <p class="about-text">
+                        Después de años de prueba y error, desarrollamos un método simple y efectivo 
+                        que cualquiera puede aplicar. Hoy nuestra misión es ayudarte a vivir la misma 
+                        transformación que nosotros vivimos.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">5+</span>
+                            <span class="about-stat-label">Años de experiencia</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">1000+</span>
+                            <span class="about-stat-label">Alumnos transformados</span>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/somos.crisna/" target="_blank" class="btn btn-outline">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        <span>Seguinos en Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">El proceso</span>
+                <h2 class="section-title">
+                    ¿Cómo<br>
+                    <span class="gradient-text">funciona?</span>
+                </h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Te contactás</h3>
+                        <p>Hablamos por WhatsApp para conocer tu situación y objetivos</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Entrás al programa</h3>
+                        <p>Accedés al contenido y la comunidad exclusiva de CRISNA</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Aplicás el método</h3>
+                        <p>Seguís el sistema paso a paso con nuestro acompañamiento</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Generás resultados</h3>
+                        <p>Empezás a ver cambios reales en tu vida y tus finanzas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-bg">
+            <img src="images/hero-bg.jpg" alt="" class="contact-bg-img">
+            <div class="contact-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">
+                        ¿Listo para tu<br>
+                        <span class="gradient-text">transformación?</span>
+                    </h2>
+                    <p class="contact-text">
+                        Escribinos y empezá hoy mismo tu camino hacia la libertad financiera. 
+                        Estamos acá para ayudarte.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5493513368436" target="_blank" class="contact-method">
+                            <div class="contact-method-icon whatsapp-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-method-info">
+                                <strong>WhatsApp</strong>
+                                <span>+54 9 3513 36-8436</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/somos.crisna/" target="_blank" class="contact-method">
+                            <div class="contact-method-icon instagram-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-method-info">
+                                <strong>Instagram</strong>
+                                <span>@somos.crisna</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper fade-in">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Dejanos tus datos</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edad">Edad</label>
+                            <input type="number" id="edad" name="edad" placeholder="Tu edad" min="18" max="99" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="situacion">Situación actual</label>
+                            <select id="situacion" name="situacion" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="empleado">Empleado/a</option>
+                                <option value="emprendedor">Emprendedor/a</option>
+                                <option value="desempleado">Sin empleo actualmente</option>
+                                <option value="estudiante">Estudiante</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="objetivo">¿Cuál es tu objetivo?</label>
+                            <textarea id="objetivo" name="objetivo" placeholder="Contanos qué querés lograr..." rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary glow-btn full-width">
+                            <span>Enviar mensaje</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"/>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content fade-in">
+                <h2 class="section-title">
+                    Tu nueva vida<br>
+                    <span class="gradient-text">empieza hoy</span>
+                </h2>
+                <p>No esperes más para tomar el control de tu futuro financiero</p>
+                <a href="https://wa.me/5493513368436" target="_blank" class="btn btn-primary glow-btn btn-large">
+                    <span>Quiero mi cambio</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-text">CRISNA</span>
+                    </a>
+                    <p>Transformando vidas a través de la educación financiera y los negocios digitales.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#programa">Programa</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>WhatsApp: +54 9 3513 36-8436</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/somos.crisna/" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5493513368436" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CRISNA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
