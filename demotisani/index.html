@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tisoni Academy | Formación Profesional en Depilación Láser</title>
+    <meta name="description" content="Convertite en operadora láser profesional. Formación intensiva con práctica real y salida laboral en Argentina y Uruguay.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5491127395246" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">TISONI</span>
+                <span class="logo-accent">ACADEMY</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#ubicaciones">Ubicaciones</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-cta">Inscribirme</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge animate-fade-in">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                Cupos Limitados
+            </span>
+            <h1 class="hero-title animate-fade-in-up">
+                Convertite en <span class="text-gradient">operadora láser</span> profesional
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Formación intensiva con práctica real y salida laboral inmediata en Argentina y Uruguay
+            </p>
+            <div class="hero-buttons animate-fade-in-up delay-2">
+                <a href="#contacto" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    Reservar mi lugar
+                </a>
+                <a href="https://wa.me/5491127395246" class="btn btn-secondary" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Consultar por WhatsApp
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-number">+500</span>
+                    <span class="stat-label">Alumnas certificadas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">+9</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Países</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="images/hero-bg.jpg" alt="Formación en depilación láser" class="hero-image">
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item animate-on-scroll">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>Práctica Real Supervisada</h3>
+                    <p>Trabajás con equipos profesionales y modelos reales</p>
+                </div>
+                <div class="proof-item animate-on-scroll">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Certificación Oficial</h3>
+                    <p>Diploma avalado con validez profesional</p>
+                </div>
+                <div class="proof-item animate-on-scroll">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Cursos en Todo el País</h3>
+                    <p>Argentina y Uruguay, múltiples ciudades</p>
+                </div>
+                <div class="proof-item animate-on-scroll">
+                    <div class="proof-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Salida Laboral Rápida</h3>
+                    <p>Empezá a trabajar apenas termines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section class="courses" id="cursos">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Nuestra Formación</span>
+                <h2 class="section-title">Curso Intensivo de <span class="text-gradient">Depilación Láser</span></h2>
+                <p class="section-subtitle">Formación completa para convertirte en profesional certificada</p>
+            </div>
+            
+            <div class="course-content">
+                <div class="course-image animate-on-scroll">
+                    <img src="images/laser-equipment.jpg" alt="Equipamiento láser profesional">
+                    <div class="course-badge">
+                        <span>Más Popular</span>
+                    </div>
+                </div>
+                <div class="course-details animate-on-scroll">
+                    <div class="course-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Teoría Completa</h4>
+                                <p>Fundamentos científicos y protocolos profesionales</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polygon points="10 8 16 12 10 16 10 8"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Práctica Intensiva</h4>
+                                <p>Trabajás con modelos reales desde el primer día</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Equipos Reales</h4>
+                                <p>Tecnología de última generación</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Certificación</h4>
+                                <p>Diploma oficial al finalizar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-cta">
+                        <a href="#contacto" class="btn btn-primary btn-large">
+                            Quiero inscribirme
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations" id="ubicaciones">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Dónde Estamos</span>
+                <h2 class="section-title">Cursos en <span class="text-gradient">Argentina y Uruguay</span></h2>
+                <p class="section-subtitle">Llevamos la formación a tu ciudad</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="location-card animate-on-scroll">
+                    <div class="location-flag">
+                        <img src="https://flagcdn.com/w80/ar.png" alt="Argentina">
+                    </div>
+                    <h3>Argentina</h3>
+                    <ul class="location-cities">
+                        <li>Buenos Aires</li>
+                        <li>Córdoba</li>
+                        <li>Rosario</li>
+                        <li>Mendoza</li>
+                        <li>Tucumán</li>
+                        <li>Y más ciudades...</li>
+                    </ul>
+                    <a href="https://wa.me/5491127395246?text=Hola!%20Quiero%20info%20sobre%20cursos%20en%20Argentina" class="btn btn-outline" target="_blank">
+                        Consultar fechas
+                    </a>
+                </div>
+                <div class="location-card animate-on-scroll">
+                    <div class="location-flag">
+                        <img src="https://flagcdn.com/w80/uy.png" alt="Uruguay">
+                    </div>
+                    <h3>Uruguay</h3>
+                    <ul class="location-cities">
+                        <li>Montevideo</li>
+                        <li>Punta del Este</li>
+                        <li>Colonia</li>
+                        <li>Salto</li>
+                        <li>Paysandú</li>
+                        <li>Y más departamentos...</li>
+                    </ul>
+                    <a href="https://wa.me/5491127395246?text=Hola!%20Quiero%20info%20sobre%20cursos%20en%20Uruguay" class="btn btn-outline" target="_blank">
+                        Consultar fechas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="benefits-bg"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Tu Transformación</span>
+                <h2 class="section-title">Por qué elegir <span class="text-gradient">Tisoni Academy</span></h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">01</div>
+                    <h3>Salida Laboral Rápida</h3>
+                    <p>Empezá a trabajar apenas termines el curso. Alta demanda en el mercado.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">02</div>
+                    <h3>Ingreso Independiente</h3>
+                    <p>Trabajá por tu cuenta o en centros de estética. Vos elegís tu futuro.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">03</div>
+                    <h3>Sin Experiencia Previa</h3>
+                    <p>No necesitás conocimientos previos. Te formamos desde cero.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">04</div>
+                    <h3>Capacitación Completa</h3>
+                    <p>Teoría, práctica y certificación. Todo incluido en un curso intensivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Experiencias Reales</span>
+                <h2 class="section-title">Lo que dicen nuestras <span class="text-gradient">alumnas</span></h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        </div>
+                        <p>"Increíble experiencia! En solo unos días aprendí todo lo necesario. Ya estoy trabajando en un centro de estética y amo mi nueva profesión."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.jpg" alt="Camila R.">
+                        <div>
+                            <strong>Camila R.</strong>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        </div>
+                        <p>"Venía de otro rubro y no sabía nada de estética. La formación fue súper completa y ahora tengo mi propio emprendimiento. Gracias Tisoni!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.jpg" alt="María L.">
+                        <div>
+                            <strong>María L.</strong>
+                            <span>Montevideo, Uruguay</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        </div>
+                        <p>"Las profes son excelentes y la práctica con modelos reales te da mucha seguridad. 100% recomendado para quien quiera cambiar su vida."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.jpg" alt="Lucía M.">
+                        <div>
+                            <strong>Lucía M.</strong>
+                            <span>Córdoba, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Galería</span>
+                <h2 class="section-title">Mirá nuestros <span class="text-gradient">cursos en acción</span></h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large animate-on-scroll">
+                    <img src="images/students.jpg" alt="Alumnas de Tisoni Academy">
+                    <div class="gallery-overlay">
+                        <span>Alumnas certificadas</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-1.jpg" alt="Práctica de curso">
+                    <div class="gallery-overlay">
+                        <span>Práctica supervisada</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-2.jpg" alt="Equipamiento profesional">
+                    <div class="gallery-overlay">
+                        <span>Equipos profesionales</span>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-3.jpg" alt="Formación práctica">
+                    <div class="gallery-overlay">
+                        <span>Formación intensiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Cómo Funciona</span>
+                <h2 class="section-title">Tu camino hacia una <span class="text-gradient">nueva profesión</span></h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Reservás tu lugar</h3>
+                        <p>Contactanos por WhatsApp y asegurá tu cupo en la próxima fecha disponible.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Asistís al curso</h3>
+                        <p>Formación intensiva con teoría y práctica en un ambiente profesional.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Practicás con modelos</h3>
+                        <p>Experiencia real con equipos de última tecnología y supervisión experta.</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Salís lista para trabajar</h3>
+                        <p>Certificación en mano y todas las herramientas para empezar tu carrera.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image animate-on-scroll">
+                    <img src="images/hero-bg.jpg" alt="Tisoni Academy">
+                    <div class="about-experience">
+                        <span class="exp-number">+9</span>
+                        <span class="exp-text">Años de experiencia</span>
+                    </div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <span class="section-tag">Sobre Nosotros</span>
+                    <h2 class="section-title">Conocé <span class="text-gradient">Tisoni Academy</span></h2>
+                    <p>Somos una academia de formación profesional especializada en depilación láser y estética avanzada. Con más de 9 años de experiencia, hemos capacitado a cientos de profesionales que hoy trabajan exitosamente en Argentina y Uruguay.</p>
+                    <p>Nuestra misión es brindar formación de calidad, accesible y práctica, para que cualquier persona pueda transformar su vida y acceder a una profesión con alta demanda en el mercado.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Instructoras certificadas</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Equipamiento de última generación</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Grupos reducidos</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Seguimiento post-curso</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contacto">
+        <div class="contact-bg"></div>
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">Tu nueva profesión <span class="text-gradient">empieza hoy</span></h2>
+                    <p>Completá el formulario y nos pondremos en contacto con vos para brindarte toda la información que necesités.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5491127395246" class="contact-method" target="_blank">
+                            <div class="method-icon whatsapp">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+54 9 11 2739-5246</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/tisoniacademy" class="contact-method" target="_blank">
+                            <div class="method-icon instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@tisoniacademy</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="limited-spots">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                        <span>Cupos limitados - Reservá tu lugar ahora</span>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="edad">Edad</label>
+                            <input type="number" id="edad" name="edad" required placeholder="Tu edad" min="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad / Departamento</label>
+                            <input type="text" id="ciudad" name="ciudad" required placeholder="¿De dónde sos?">
+                        </div>
+                        <div class="form-group">
+                            <label for="experiencia">¿Tenés experiencia previa?</label>
+                            <select id="experiencia" name="experiencia" required>
+                                <option value="">Seleccioná una opción</option>
+                                <option value="sin-experiencia">No, soy principiante</option>
+                                <option value="algo">Tengo algo de experiencia</option>
+                                <option value="profesional">Ya trabajo en estética</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span>Quiero inscribirme</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Tu nueva profesión <span class="text-gradient">empieza hoy</span></h2>
+                <p>No dejes pasar esta oportunidad. Cupos limitados para los próximos cursos.</p>
+                <a href="https://wa.me/5491127395246?text=Hola!%20Quiero%20inscribirme%20en%20el%20curso%20de%20depilación%20láser" class="btn btn-primary btn-large" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Quiero inscribirme ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">TISONI</span>
+                        <span class="logo-accent">ACADEMY</span>
+                    </a>
+                    <p>Formación profesional en depilación láser. Tu nueva carrera empieza acá.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#ubicaciones">Ubicaciones</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            </svg>
+                            <a href="https://wa.me/5491127395246">+54 9 11 2739-5246</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                            </svg>
+                            <a href="https://instagram.com/tisoniacademy">@tisoniacademy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Seguinos</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/tisoniacademy" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5491127395246" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tisoni Academy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
