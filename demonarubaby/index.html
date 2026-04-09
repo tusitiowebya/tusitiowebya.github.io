@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Narubaby — Comodidad y estilo para tu bebé</title>
+  <meta name="description" content="Accesorios y ropa suave, segura y con diseño único para los más pequeños. Baberos bandana en colores pastel, hecho con amor." />
+  <meta property="og:title" content="Narubaby — Comodidad y estilo para tu bebé" />
+  <meta property="og:description" content="Accesorios y ropa suave, segura y con diseño único para los más pequeños." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────── -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <a href="#" class="navbar-brand">Narubaby.</a>
+
+      <nav role="navigation" aria-label="Menú principal">
+        <ul class="navbar-links" id="nav-links">
+          <li><a href="#features">Nosotros</a></li>
+          <li><a href="#products">Colección</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#products" class="btn btn-dark">Tienda</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────── -->
+    <section class="hero" aria-label="Inicio">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Text -->
+          <div>
+            <div class="fade-up">
+              <span class="hero-badge">Nueva colección</span>
+            </div>
+            <h1 class="hero-title fade-up">
+              Comodidad y estilo<br>para tu bebé
+            </h1>
+            <p class="hero-subtitle fade-up">
+              Accesorios y ropa suave, segura y con diseño único. Creamos piezas esenciales que abrazan la piel de tu bebé.
+            </p>
+            <div class="fade-up">
+              <a href="#products" class="btn btn-primary" data-testid="btn-ver-productos">
+                Ver productos
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="hero-image-wrap fade-up">
+            <div class="blob blob-1" aria-hidden="true"></div>
+            <div class="blob blob-2" aria-hidden="true"></div>
+            <img
+              src="images/hero-baby.png"
+              alt="Bebé sonriente usando babero bandana Narubaby"
+              class="hero-image"
+              loading="eager"
+              width="600"
+              height="750"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES ──────────────────────────── -->
+    <section class="features" id="features" aria-label="Por qué Narubaby">
+      <div class="container">
+        <div class="features-grid">
+
+          <div class="feature-card fade-up">
+            <div class="feature-icon green" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Materiales suaves</h3>
+              <p class="feature-text">Telas naturales y respirables seleccionadas cuidadosamente para proteger la piel más delicada.</p>
+            </div>
+          </div>
+
+          <div class="feature-card fade-up">
+            <div class="feature-icon pink" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3 4 6l-1 1 1 1 1 3"/><path d="M19 3l1 3 1 1-1 1-1 3"/></svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Diseños únicos</h3>
+              <p class="feature-text">Estampados exclusivos y paletas de colores pensadas para combinar fácilmente con cualquier estilo.</p>
+            </div>
+          </div>
+
+          <div class="feature-card fade-up">
+            <div class="feature-icon peach" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Hecho con amor</h3>
+              <p class="feature-text">Confección detallada y segura, pensada por padres, para acompañar el crecimiento de tu bebé.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT QUOTE ───────────────────────── -->
+    <section class="about-quote" aria-label="Sobre Narubaby">
+      <div class="container">
+        <div class="about-quote-inner fade-up">
+          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <h2>
+            "En Narubaby creamos accesorios pensados para la comodidad y el estilo de los más pequeños, con amor en cada detalle."
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRODUCTS ──────────────────────────── -->
+    <section class="products" id="products" aria-label="Nuestros productos">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <h2>Nuestros Baberos Bandana</h2>
+          <p>El accesorio perfecto para cada día</p>
+        </div>
+
+        <div class="products-grid" role="list">
+
+          <div class="product-card fade-up" role="listitem" data-testid="card-product-green">
+            <div class="product-image-wrap">
+              <span class="product-badge">Nuevo</span>
+              <img
+                src="images/product-green.png"
+                alt="Babero Bandana Verde Salvia"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+            </div>
+            <div class="product-info">
+              <div>
+                <p class="product-name">Babero Bandana Verde Salvia</p>
+                <p class="product-color">Verde Salvia</p>
+              </div>
+              <span class="product-price">$18.00</span>
+            </div>
+          </div>
+
+          <div class="product-card fade-up" role="listitem" data-testid="card-product-blue">
+            <div class="product-image-wrap">
+              <img
+                src="images/product-blue.png"
+                alt="Babero Bandana Celeste"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+            </div>
+            <div class="product-info">
+              <div>
+                <p class="product-name">Babero Bandana Celeste</p>
+                <p class="product-color">Azul Pastel</p>
+              </div>
+              <span class="product-price">$18.00</span>
+            </div>
+          </div>
+
+          <div class="product-card fade-up" role="listitem" data-testid="card-product-pink">
+            <div class="product-image-wrap">
+              <span class="product-badge">Más vendido</span>
+              <img
+                src="images/product-pink.png"
+                alt="Babero Bandana Rosa Suave"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+            </div>
+            <div class="product-info">
+              <div>
+                <p class="product-name">Babero Bandana Rosa Suave</p>
+                <p class="product-color">Rosa Palo</p>
+              </div>
+              <span class="product-price">$18.00</span>
+            </div>
+          </div>
+
+          <div class="product-card fade-up" role="listitem" data-testid="card-product-yellow">
+            <div class="product-image-wrap">
+              <img
+                src="images/product-yellow.png"
+                alt="Babero Bandana Amarillo"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+            </div>
+            <div class="product-info">
+              <div>
+                <p class="product-name">Babero Bandana Amarillo</p>
+                <p class="product-color">Amarillo Crema</p>
+              </div>
+              <span class="product-price">$18.00</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="products-cta fade-up">
+          <a href="#contact" class="btn btn-outline">Ver tienda completa</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────── -->
+    <section class="contact" id="contact" aria-label="Contacto">
+      <div class="container">
+        <div class="contact-card fade-up">
+
+          <!-- Info column -->
+          <div class="contact-info">
+            <h2>Hablemos</h2>
+            <p>
+              ¿Tienes alguna duda sobre nuestros productos o quieres consultar por pedidos mayoristas? Escríbenos, nos encanta conversar contigo.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:narubabyok@gmail.com" class="contact-link" data-testid="link-email">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
+                <span>narubabyok@gmail.com</span>
+              </a>
+
+              <a href="https://www.instagram.com/narubaby2026/" target="_blank" rel="noopener noreferrer" class="contact-link" data-testid="link-instagram">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </span>
+                <span>@narubaby2026</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form column -->
+          <div>
+            <form id="contact-form" novalidate aria-label="Formulario de contacto">
+
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Tu nombre"
+                  autocomplete="name"
+                  data-testid="input-name"
+                />
+                <span class="form-error" id="name-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="hola@ejemplo.com"
+                  autocomplete="email"
+                  data-testid="input-email"
+                />
+                <span class="form-error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="¿En qué te podemos ayudar?"
+                  data-testid="input-message"
+                ></textarea>
+                <span class="form-error" id="message-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn-submit" data-testid="btn-submit">Enviar mensaje</button>
+
+              <div class="form-success" id="form-success" role="status">
+                Gracias por tu mensaje. Nos pondremos en contacto contigo muy pronto.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-top">
+          <span class="footer-brand">Narubaby.</span>
+
+          <ul class="footer-social">
+            <li>
+              <a href="https://www.instagram.com/narubaby2026/" target="_blank" rel="noopener noreferrer" data-testid="link-footer-instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:narubabyok@gmail.com" data-testid="link-footer-email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year"></span> TuPaginaYa - Una marca del Grupo JV - Todos los derchos reservados.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
