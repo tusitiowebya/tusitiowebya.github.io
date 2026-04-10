@@ -77,52 +77,61 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ---- CONTACT FORM ---- */
-  const contactForm = document.getElementById("contact-form");
-  const formSuccess = document.getElementById("form-success");
+/* ---- CONTACT FORM WHATSAPP ---- */
+const contactForm = document.getElementById("contact-form");
+const formSuccess = document.getElementById("form-success");
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
+// Número configurado
+const telefono = "5493548504321";
 
-      const nombre = document.getElementById("nombre").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      if (!nombre || nombre.length < 2) {
-        showError("nombre", "Por favor ingresa tu nombre.");
-        return;
-      }
+    const nombre = document.getElementById("nombre").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
 
-      if (!mensaje || mensaje.length < 10) {
-        showError("mensaje", "El mensaje debe ser más largo.");
-        return;
-      }
+    if (!nombre || nombre.length < 2) {
+      showError("nombre", "Por favor ingresa tu nombre.");
+      return;
+    }
 
-      clearErrors();
+    if (!mensaje || mensaje.length < 10) {
+      showError("mensaje", "El mensaje debe ser más largo.");
+      return;
+    }
 
-      // Simulated form submission
-      contactForm.style.display = "none";
-      if (formSuccess) {
-        formSuccess.style.display = "block";
-      }
-    });
-  }
-
-  function showError(fieldId, message) {
     clearErrors();
-    const field = document.getElementById(fieldId);
-    const errorEl = document.createElement("p");
-    errorEl.className = "form-error";
-    errorEl.style.cssText = "color: #e05c5c; font-size: 0.8rem; margin-top: 0.35rem;";
-    errorEl.textContent = message;
-    field.parentNode.appendChild(errorEl);
-  }
 
-  function clearErrors() {
-    document.querySelectorAll(".form-error").forEach(function (el) {
-      el.remove();
-    });
-  }
+    // 📩 Mensaje para WhatsApp
+    const texto = `Hola! 👋\n\nSoy *${nombre}*\n\n${mensaje}\n\nGracias!`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+
+    // Mostrar mensaje y abrir WhatsApp
+    contactForm.style.display = "none";
+    formSuccess.style.display = "block";
+
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 400);
+  });
+}
+
+function showError(fieldId, message) {
+  clearErrors();
+  const field = document.getElementById(fieldId);
+  const errorEl = document.createElement("p");
+  errorEl.className = "form-error";
+  errorEl.style.cssText = "color: #e05c5c; font-size: 0.8rem; margin-top: 0.35rem;";
+  errorEl.textContent = message;
+  field.parentNode.appendChild(errorEl);
+}
+
+function clearErrors() {
+  document.querySelectorAll(".form-error").forEach(function (el) {
+    el.remove();
+  });
+}
 
   /* ---- ACTIVE NAV LINK on scroll ---- */
   const sections = document.querySelectorAll("section[id]");
