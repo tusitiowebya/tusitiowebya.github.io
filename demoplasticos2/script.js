@@ -56,34 +56,7 @@ const products = [
             'Atóxico y apto para alimentos'
         ]
     },
-    {
-        id: 'abs',
-        name: 'ABS',
-        shortName: 'ABS',
-        image: 'images/abs.jpg',
-        properties: {
-            resistencia: 'Muy Alta',
-            flexibilidad: 'Baja',
-            tempMax: '105°C',
-            uso: 'Impacto'
-        },
-        description: 'Termoplástico de ingeniería que combina rigidez, resistencia al impacto y excelente acabado superficial.',
-        specs: {
-            densidad: '1.04 - 1.06 g/cm³',
-            puntoFusion: '200 - 260°C',
-            resistenciaTensil: '40 - 50 MPa',
-            modulo: '2.0 - 2.6 GPa'
-        },
-        chemResistance: 'Buena resistencia a ácidos y bases diluidas. Sensible a solventes orgánicos y ésteres.',
-        applications: ['Carcasas electrónicas', 'Autopartes', 'Electrodomésticos', 'Juguetes LEGO', 'Instrumentos musicales', 'Equipaje'],
-        advantages: [
-            'Excelente resistencia al impacto',
-            'Acabado superficial superior',
-            'Fácil de pintar y pegar',
-            'Buena estabilidad dimensional',
-            'Procesamiento versátil'
-        ]
-    },
+    
     {
         id: 'ps-cristal',
         name: 'Poliestireno Cristal',
@@ -732,11 +705,41 @@ function setupEventListeners() {
         const telefono = formData.get('telefono');
         const consulta = formData.get('consulta');
 
-        const message = `Hola! Mi nombre es ${nombre}${empresa ? ` de ${empresa}` : ''}.\n\nTeléfono: ${telefono}\n\nConsulta: ${consulta}`;
+        const message = `Hola! Mi nombre es ${nombre}${empresa ? ` de ${empresa}` : ''}.\n\nTelefono: ${telefono}\n\nConsulta: ${consulta}`;
         const whatsappUrl = `https://wa.me/5491160124001?text=${encodeURIComponent(message)}`;
         
         window.open(whatsappUrl, '_blank');
     });
+
+    // Buy form (Compramos Materia Prima)
+    const buyForm = document.getElementById('buyForm');
+    if (buyForm) {
+        buyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(buyForm);
+            const nombre = formData.get('nombre');
+            const telefono = formData.get('telefono');
+            const email = formData.get('email');
+            const material = formData.get('material');
+            const cantidad = formData.get('cantidad');
+            const estado = formData.get('estado');
+            const descripcion = formData.get('descripcion');
+
+            let message = `Hola! Quiero venderles materia prima.\n\n`;
+            message += `*Datos de contacto:*\n`;
+            message += `Nombre/Empresa: ${nombre}\n`;
+            message += `Telefono: ${telefono}\n`;
+            if (email) message += `Email: ${email}\n`;
+            message += `\n*Detalles del material:*\n`;
+            message += `Tipo: ${material}\n`;
+            if (cantidad) message += `Cantidad: ${cantidad}\n`;
+            if (estado) message += `Estado: ${estado}\n`;
+            if (descripcion) message += `Descripcion: ${descripcion}\n`;
+
+            const whatsappUrl = `https://wa.me/5491160124001?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

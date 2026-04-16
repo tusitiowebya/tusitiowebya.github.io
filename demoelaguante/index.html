@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL AGUANTE - Motos Eléctricas</title>
+    <meta name="description" content="EL AGUANTE - Potencia Eléctrica Sin Límites. Motos eléctricas premium con tecnología, estilo y libertad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">EL AGUANTE</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#motos">Motos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#como-funciona">Cómo Funciona</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-motorcycle.jpg" alt="Moto eléctrica futurista" class="hero-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="particles"></div>
+            <div class="hero-light-streaks">
+                <div class="light-streak streak-1"></div>
+                <div class="light-streak streak-2"></div>
+                <div class="light-streak streak-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Potencia Eléctrica.</span>
+                <span class="title-line title-accent">Sin Límites.</span>
+            </h1>
+            <p class="hero-subtitle">Movete con tecnología, estilo y libertad</p>
+            <div class="hero-cta">
+                <a href="#motos" class="btn btn-primary">
+                    <span>Ver Motos</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5491123456789" target="_blank" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Consultar por WhatsApp</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">60+</span>
+                    <span class="stat-label">km autonomía</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">km/h máx</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0$</span>
+                    <span class="stat-label">combustible</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Motos Section -->
+    <section class="motos-section" id="motos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Catálogo</span>
+                <h2 class="section-title">Nuestras Motos</h2>
+                <p class="section-desc">Elegí tu compañera perfecta para la ciudad</p>
+            </div>
+            <div class="motos-carousel" id="motosCarousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Moto 1 -->
+                    <div class="moto-card" data-moto="1">
+                        <div class="moto-badge">Más vendida</div>
+                        <div class="moto-image-wrapper">
+                            <img src="images/moto-1.jpg" alt="Volt X1" class="moto-image">
+                            <div class="moto-glow"></div>
+                        </div>
+                        <div class="moto-info">
+                            <h3 class="moto-name">Volt X1</h3>
+                            <p class="moto-highlight">Autonomía 60km</p>
+                            <p class="moto-price">$850.000</p>
+                            <div class="moto-actions">
+                                <button class="btn btn-small btn-primary open-modal" data-moto="1">Ver detalles</button>
+                                <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Volt X1" target="_blank" class="btn btn-small btn-outline">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moto 2 -->
+                    <div class="moto-card" data-moto="2">
+                        <div class="moto-badge badge-new">Nueva</div>
+                        <div class="moto-image-wrapper">
+                            <img src="images/moto-2.jpg" alt="Storm E2" class="moto-image">
+                            <div class="moto-glow"></div>
+                        </div>
+                        <div class="moto-info">
+                            <h3 class="moto-name">Storm E2</h3>
+                            <p class="moto-highlight">Velocidad 55km/h</p>
+                            <p class="moto-price">$1.100.000</p>
+                            <div class="moto-actions">
+                                <button class="btn btn-small btn-primary open-modal" data-moto="2">Ver detalles</button>
+                                <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Storm E2" target="_blank" class="btn btn-small btn-outline">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moto 3 -->
+                    <div class="moto-card" data-moto="3">
+                        <div class="moto-badge badge-sport">Sport</div>
+                        <div class="moto-image-wrapper">
+                            <img src="images/moto-3.jpg" alt="Thunder R3" class="moto-image">
+                            <div class="moto-glow"></div>
+                        </div>
+                        <div class="moto-info">
+                            <h3 class="moto-name">Thunder R3</h3>
+                            <p class="moto-highlight">Batería removible</p>
+                            <p class="moto-price">$1.350.000</p>
+                            <div class="moto-actions">
+                                <button class="btn btn-small btn-primary open-modal" data-moto="3">Ver detalles</button>
+                                <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Thunder R3" target="_blank" class="btn btn-small btn-outline">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moto 4 -->
+                    <div class="moto-card" data-moto="4">
+                        <div class="moto-badge badge-premium">Premium</div>
+                        <div class="moto-image-wrapper">
+                            <img src="images/moto-4.jpg" alt="Flash Pro" class="moto-image">
+                            <div class="moto-glow"></div>
+                        </div>
+                        <div class="moto-info">
+                            <h3 class="moto-name">Flash Pro</h3>
+                            <p class="moto-highlight">Carga rápida 2h</p>
+                            <p class="moto-price">$1.650.000</p>
+                            <div class="moto-actions">
+                                <button class="btn btn-small btn-primary open-modal" data-moto="4">Ver detalles</button>
+                                <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Flash Pro" target="_blank" class="btn btn-small btn-outline">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="beneficios-section" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ventajas</span>
+                <h2 class="section-title">¿Por qué eléctrica?</h2>
+                <p class="section-desc">Descubrí los beneficios de moverte sin humo ni ruido</p>
+            </div>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Ahorro Total</h3>
+                    <p class="beneficio-desc">Olvidate del combustible. Cargá en tu casa por centavos y ahorrá miles cada mes.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Bajo Mantenimiento</h3>
+                    <p class="beneficio-desc">Sin aceite, sin filtros, sin embrague. Menos piezas, menos problemas, más tiempo para vos.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/>
+                            <circle cx="12" cy="10" r="3"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Silenciosas</h3>
+                    <p class="beneficio-desc">Disfrutá el viaje sin ruido. Llegá sin despertar al vecino y sin contaminar con sonido.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M7 12h10M12 7l5 5-5 5"/>
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Ecológicas</h3>
+                    <p class="beneficio-desc">Cero emisiones. Contribuí al planeta mientras te movés con estilo por la ciudad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section class="como-funciona-section" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Proceso</span>
+                <h2 class="section-title">¿Cómo funciona?</h2>
+                <p class="section-desc">En 3 simples pasos tenés tu moto</p>
+            </div>
+            <div class="pasos-grid">
+                <div class="paso-card">
+                    <div class="paso-number">01</div>
+                    <div class="paso-content">
+                        <h3 class="paso-title">Elegí tu moto</h3>
+                        <p class="paso-desc">Explorá nuestro catálogo y encontrá el modelo perfecto para tus necesidades.</p>
+                    </div>
+                    <div class="paso-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="paso-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M0 12h36M28 4l8 8-8 8"/>
+                    </svg>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-number">02</div>
+                    <div class="paso-content">
+                        <h3 class="paso-title">Consultá por WhatsApp</h3>
+                        <p class="paso-desc">Escribinos y te asesoramos sobre financiación, colores y disponibilidad.</p>
+                    </div>
+                    <div class="paso-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="paso-connector">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M0 12h36M28 4l8 8-8 8"/>
+                    </svg>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-number">03</div>
+                    <div class="paso-content">
+                        <h3 class="paso-title">Coordinamos entrega</h3>
+                        <p class="paso-desc">Te llevamos tu moto a domicilio o pasás a retirarla por nuestro local.</p>
+                    </div>
+                    <div class="paso-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13" rx="2"/>
+                            <path d="M16 8h4l3 3v5h-7V8z"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="testimonios-section" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Opiniones</span>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-desc">Historias reales de usuarios satisfechos</p>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"La mejor decisión que tomé. Ahorro más de $50.000 por mes en nafta y el mantenimiento es casi nulo. La uso todos los días para ir al trabajo."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">MG</div>
+                        <div class="author-info">
+                            <span class="author-name">Martín García</span>
+                            <span class="author-moto">Volt X1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card featured">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"Increíble la atención de EL AGUANTE. Me asesoraron perfecto y me entregaron la moto en casa. La calidad es premium y la autonomía me alcanza para toda la semana."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <span class="author-name">Luciana Pérez</span>
+                            <span class="author-moto">Storm E2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"Tenía dudas sobre las motos eléctricas pero me animé y no me arrepiento. Silenciosa, rápida y súper cómoda. La recomiendo 100%."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">CR</div>
+                        <div class="author-info">
+                            <span class="author-name">Carlos Rodríguez</span>
+                            <span class="author-moto">Thunder R3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto-section" id="contacto">
+        <div class="container">
+            <div class="contacto-wrapper">
+                <div class="contacto-info">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">¿Listo para tu moto eléctrica?</h2>
+                    <p class="contacto-desc">Escribinos y te respondemos al instante. Estamos para ayudarte a elegir la moto perfecta.</p>
+                    <a href="https://wa.me/5491123456789" target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Hablar ahora por WhatsApp</span>
+                    </a>
+                    <div class="contacto-datos">
+                        <div class="dato">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                        <div class="dato">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            <span>Lun - Sáb: 9:00 - 19:00</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contacto-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consulta">Consulta</label>
+                        <textarea id="consulta" name="consulta" placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        <span>Enviar consulta</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">EL AGUANTE</span>
+                    </a>
+                    <p class="footer-desc">Potencia eléctrica sin límites. Movete con tecnología, estilo y libertad.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#motos">Motos</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#como-funciona">Cómo Funciona</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5491123456789">WhatsApp</a></li>
+                        <li><a href="mailto:info@elaguante.com">info@elaguante.com</a></li>
+                        <li><a href="#">Buenos Aires, Argentina</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EL AGUANTE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-pulse"></span>
+    </a>
+
+    <!-- Modal -->
+    <div class="modal" id="motoModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <img src="" alt="" class="modal-main-image" id="modalImage">
+                    <div class="modal-image-glow"></div>
+                </div>
+                <div class="modal-info">
+                    <span class="modal-badge" id="modalBadge"></span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-specs">
+                        <h4>Especificaciones</h4>
+                        <div class="specs-grid" id="modalSpecs"></div>
+                    </div>
+                    <a href="" target="_blank" class="btn btn-whatsapp btn-lg btn-full" id="modalCta">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Consultar por esta moto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
