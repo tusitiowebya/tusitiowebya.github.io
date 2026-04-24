@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming en Vivo 24/7 | Plataforma de Transmisión</title>
+    <meta name="description" content="Conectate a nuestros canales en tiempo real. Desde 2007 transmitiendo contenido en vivo las 24 horas.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">▶</span>
+                <span class="logo-text">STREAM<span class="accent">LIVE</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#channels" class="nav-link">Canales</a></li>
+                <li><a href="#about" class="nav-link">Nosotros</a></li>
+                <li><a href="#features" class="nav-link">Características</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.jpg" alt="" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Desde 2007 transmitiendo
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Streaming en Vivo <span class="gradient-text">24/7</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Conectate a nuestros canales en tiempo real
+            </p>
+            <div class="hero-buttons animate-fade-in-up delay-2">
+                <a href="#channels" class="btn btn-primary">
+                    <span class="btn-icon">▶</span>
+                    Ver Canales
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Contactar
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Canales en Vivo</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Transmisión Continua</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Live Channels Section -->
+    <section class="channels" id="channels">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">EN VIVO AHORA</span>
+                <h2 class="section-title">Nuestros Canales</h2>
+                <p class="section-subtitle">Selecciona un canal y disfruta del contenido en tiempo real</p>
+            </div>
+            
+            <div class="channels-grid">
+                <!-- Channel 1 -->
+                <div class="channel-card" data-channel="1">
+                    <div class="channel-header">
+                        <h3 class="channel-title">SEX TV</h3>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            EN VIVO
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder" data-channel="1">
+                            <img src="images/channel-1.jpg" alt="SEX TV" class="placeholder-image">
+                            <div class="play-overlay">
+                                <button class="play-btn" aria-label="Reproducir">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Replace with actual stream URL -->
+                        <iframe 
+                            class="video-iframe hidden" 
+                            src="" 
+                            data-src="YOUR_STREAM_URL_1"
+                            allowfullscreen
+                            allow="autoplay; encrypted-media"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                    <div class="channel-info">
+                        <p class="channel-description">Contenido exclusivo en vivo las 24 horas del día, los 7 días de la semana.</p>
+                        <button class="btn btn-fullscreen" data-channel="1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                            </svg>
+                            Ver en pantalla completa
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Channel 2 -->
+                <div class="channel-card" data-channel="2">
+                    <div class="channel-header">
+                        <h3 class="channel-title">SEX TV MUSIC</h3>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            EN VIVO
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder" data-channel="2">
+                            <img src="images/channel-2.jpg" alt="SEX TV MUSIC" class="placeholder-image">
+                            <div class="play-overlay">
+                                <button class="play-btn" aria-label="Reproducir">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Replace with actual stream URL -->
+                        <iframe 
+                            class="video-iframe hidden" 
+                            src="" 
+                            data-src="YOUR_STREAM_URL_2"
+                            allowfullscreen
+                            allow="autoplay; encrypted-media"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                    <div class="channel-info">
+                        <p class="channel-description">Los mejores videos musicales y contenido de entretenimiento sin parar.</p>
+                        <button class="btn btn-fullscreen" data-channel="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                            </svg>
+                            Ver en pantalla completa
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Channel 3 -->
+                <div class="channel-card" data-channel="3">
+                    <div class="channel-header">
+                        <h3 class="channel-title">CANAL 3</h3>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            EN VIVO
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder" data-channel="3">
+                            <img src="images/channel-3.jpg" alt="CANAL 3" class="placeholder-image">
+                            <div class="play-overlay">
+                                <button class="play-btn" aria-label="Reproducir">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Replace with actual stream URL -->
+                        <iframe 
+                            class="video-iframe hidden" 
+                            src="" 
+                            data-src="YOUR_STREAM_URL_3"
+                            allowfullscreen
+                            allow="autoplay; encrypted-media"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                    <div class="channel-info">
+                        <p class="channel-description">Nuevo canal con contenido variado. ¡Próximamente más sorpresas!</p>
+                        <button class="btn btn-fullscreen" data-channel="3">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                            </svg>
+                            Ver en pantalla completa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-bg">
+            <img src="images/about-bg.jpg" alt="" class="about-bg-image">
+            <div class="about-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-badge">NUESTRA HISTORIA</span>
+                    <h2 class="section-title">Sobre Nosotros</h2>
+                    <p class="about-description">
+                        Somos una <strong>plataforma de retransmisión en vivo</strong> con más de <strong>15 años de experiencia</strong> en el sector del streaming. Desde 2007, hemos estado transmitiendo contenido en tiempo real, conectando a nuestra audiencia con entretenimiento de calidad las 24 horas del día.
+                    </p>
+                    <p class="about-description">
+                        Nuestra misión es ofrecer una experiencia de visualización inmersiva, accesible desde cualquier dispositivo y en cualquier momento. Combinamos tecnología de punta con un compromiso inquebrantable hacia nuestros espectadores.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">📡</span>
+                            <span class="highlight-text">Transmisión 24/7</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🎬</span>
+                            <span class="highlight-text">Desde 2007</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🌐</span>
+                            <span class="highlight-text">Alcance Global</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats-grid">
+                    <div class="about-stat-card">
+                        <span class="stat-icon">🎥</span>
+                        <span class="stat-value">3</span>
+                        <span class="stat-text">Canales Activos</span>
+                    </div>
+                    <div class="about-stat-card">
+                        <span class="stat-icon">📅</span>
+                        <span class="stat-value">15+</span>
+                        <span class="stat-text">Años Online</span>
+                    </div>
+                    <div class="about-stat-card">
+                        <span class="stat-icon">⏱️</span>
+                        <span class="stat-value">24/7</span>
+                        <span class="stat-text">Sin Interrupciones</span>
+                    </div>
+                    <div class="about-stat-card">
+                        <span class="stat-icon">👥</span>
+                        <span class="stat-value">100K+</span>
+                        <span class="stat-text">Espectadores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">CARACTERÍSTICAS</span>
+                <h2 class="section-title">¿Por qué elegirnos?</h2>
+                <p class="section-subtitle">Ofrecemos la mejor experiencia de streaming en vivo</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Streaming 24/7</h3>
+                    <p class="feature-description">Transmisión continua las 24 horas del día, los 7 días de la semana. Nunca te pierdas nada.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Alta Calidad</h3>
+                    <p class="feature-description">Video en alta definición con la mejor calidad de imagen y sonido disponible.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Acceso Inmediato</h3>
+                    <p class="feature-description">Sin registros complicados. Accede al contenido en vivo con un solo clic.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Todos los Dispositivos</h3>
+                    <p class="feature-description">Compatible con PC, tablets, smartphones y Smart TVs. Ve desde donde quieras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">CONTACTO</span>
+                    <h2 class="section-title">¿Tienes alguna consulta?</h2>
+                    <p class="contact-description">
+                        Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">contacto@streamlive.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">WhatsApp</span>
+                                <span class="method-value">+1 234 567 890</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Consulta</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Contactar ahora</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">▶</span>
+                        <span class="logo-text">STREAM<span class="accent">LIVE</span></span>
+                    </a>
+                    <p class="footer-description">
+                        Plataforma de streaming en vivo desde 2007. Conectando audiencias con contenido de calidad las 24 horas.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#000"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#channels">Canales</a></li>
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Canales</h4>
+                    <ul>
+                        <li><a href="#channels">SEX TV</a></li>
+                        <li><a href="#channels">SEX TV MUSIC</a></li>
+                        <li><a href="#channels">Canal 3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Información</h4>
+                    <ul>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2007 - 2024 StreamLive. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Fullscreen Modal -->
+    <div class="fullscreen-modal" id="fullscreenModal">
+        <button class="modal-close" id="modalClose" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <div class="modal-content">
+            <iframe id="fullscreenIframe" src="" allowfullscreen allow="autoplay; encrypted-media" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
