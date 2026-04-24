@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AlquiSeason - Alquiler premium de equipos de esquí, nieve y camping. Reserva actividades de invierno y verano con facilidad.">
+  <title>AlquiSeason - Alquiler de Equipos para Todas las Estaciones</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+          </svg>
+          AlquiSeason
+        </a>
+        
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#equipos" onclick="scrollToSection('equipos')">Equipos</a></li>
+            <li><a href="#actividades" onclick="scrollToSection('actividades')">Actividades</a></li>
+            <li><a href="#temporadas" onclick="scrollToSection('temporadas')">Temporadas</a></li>
+            <li><a href="#testimonios" onclick="scrollToSection('testimonios')">Testimonios</a></li>
+            <li><a href="#contacto" onclick="scrollToSection('contacto')">Contacto</a></li>
+          </ul>
+          
+          <div class="nav-actions">
+            <button class="btn btn-ghost cart-btn" onclick="openCart()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+              </svg>
+              <span class="cart-count" id="cart-count" style="display: none;">0</span>
+            </button>
+            <button class="btn btn-primary" onclick="scrollToSection('contacto')">Reservar Ahora</button>
+          </div>
+          
+          <button class="btn btn-ghost mobile-menu-btn" onclick="toggleMobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#equipos" onclick="scrollToSection('equipos')">Equipos</a></li>
+        <li><a href="#actividades" onclick="scrollToSection('actividades')">Actividades</a></li>
+        <li><a href="#temporadas" onclick="scrollToSection('temporadas')">Temporadas</a></li>
+        <li><a href="#testimonios" onclick="scrollToSection('testimonios')">Testimonios</a></li>
+        <li><a href="#contacto" onclick="scrollToSection('contacto')">Contacto</a></li>
+        <li><button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="scrollToSection('contacto')">Reservar Ahora</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&h=1080&fit=crop" alt="Montañas nevadas">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Temporada de Invierno 2026
+        </div>
+        
+        <h1>Equipamiento Premium para <span>Cada Aventura</span></h1>
+        
+        <p>Alquila el mejor equipo de esquí, snowboard y camping. Vive experiencias únicas en cualquier temporada con equipos de primera calidad.</p>
+        
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg" onclick="scrollToSection('equipos')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+            </svg>
+            Ver Equipos
+          </button>
+          <button class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: white;" onclick="scrollToSection('actividades')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+            </svg>
+            Reservar Actividad
+          </button>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">5000+</div>
+            <div class="stat-label">Clientes Satisfechos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">200+</div>
+            <div class="stat-label">Equipos Disponibles</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">15</div>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Section -->
+  <section id="equipos" class="section equipment-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nuestros Equipos</h2>
+        <p>Encuentra el equipo perfecto para tu próxima aventura. Todos nuestros productos están en excelente estado y listos para usar.</p>
+      </div>
+      
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Todos</button>
+        <button class="filter-tab" data-filter="winter">Invierno</button>
+        <button class="filter-tab" data-filter="summer">Verano</button>
+      </div>
+      
+      <div class="equipment-grid" id="equipment-grid">
+        <!-- Equipment cards will be rendered here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="actividades" class="section activities-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Actividades Guiadas</h2>
+        <p>Vive experiencias únicas con nuestros guías expertos. Desde clases de esquí hasta trekking de montaña.</p>
+      </div>
+      
+      <div class="activities-grid" id="activities-grid">
+        <!-- Activity cards will be rendered here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasons Section -->
+  <section id="temporadas" class="section seasons-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Para Todas las Temporadas</h2>
+        <p>Ya sea invierno o verano, tenemos todo lo que necesitas para disfrutar al máximo.</p>
+      </div>
+      
+      <div class="seasons-grid">
+        <!-- Winter Season Card -->
+        <div class="season-card" onclick="scrollToSection('equipos')">
+          <div class="season-card-image">
+            <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&h=1000&fit=crop" alt="Temporada de Invierno">
+          </div>
+          <div class="season-card-overlay"></div>
+          <div class="season-card-content">
+            <div class="season-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/>
+                <line x1="20" x2="4" y1="20" y2="4"/><line x1="20" x2="4" y1="4" y2="20"/>
+                <line x1="6.34" x2="6.34" y1="6.34" y2="6.34"/><line x1="17.66" x2="17.66" y1="6.34" y2="6.34"/>
+                <line x1="17.66" x2="17.66" y1="17.66" y2="17.66"/><line x1="6.34" x2="6.34" y1="17.66" y2="17.66"/>
+              </svg>
+            </div>
+            <h3>Temporada de Invierno</h3>
+            <p>Esquí, snowboard, raquetas de nieve y más. Todo el equipo que necesitas para conquistar la montaña.</p>
+            <div class="season-features">
+              <span class="season-feature">Esquís</span>
+              <span class="season-feature">Snowboard</span>
+              <span class="season-feature">Raquetas</span>
+              <span class="season-feature">Cascos</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Summer Season Card -->
+        <div class="season-card" onclick="scrollToSection('equipos')">
+          <div class="season-card-image">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=1000&fit=crop" alt="Temporada de Verano">
+          </div>
+          <div class="season-card-overlay"></div>
+          <div class="season-card-content">
+            <div class="season-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/><path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+            </div>
+            <h3>Temporada de Verano</h3>
+            <p>Camping, kayak, trekking y ciclismo. Disfruta del aire libre con el mejor equipamiento.</p>
+            <div class="season-features">
+              <span class="season-feature">Camping</span>
+              <span class="season-feature">Kayak</span>
+              <span class="season-feature">Bicicletas</span>
+              <span class="season-feature">Trekking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonios" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lo Que Dicen Nuestros Clientes</h2>
+        <p>Miles de aventureros confían en nosotros. Descubre por qué somos su primera opción.</p>
+      </div>
+      
+      <div class="testimonials-grid" id="testimonials-grid">
+        <!-- Testimonial cards will be rendered here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Contáctanos</h2>
+          <p>Estamos aquí para ayudarte a planificar tu próxima aventura. No dudes en escribirnos.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Ubicación</h4>
+                <p>Av. San Martín 1234<br>San Carlos de Bariloche, Río Negro</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Teléfono</h4>
+                <p>+54 294 444-5555</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>info@alquiseason.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Horarios</h4>
+                <p>Lun - Vie: 9:00 - 19:00<br>Sáb - Dom: 10:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="+54 9 11 2386-4671">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <select id="subject" name="subject" required>
+              <option value="">Selecciona una opción</option>
+              <option value="alquiler">Consulta sobre alquiler</option>
+              <option value="actividades">Reserva de actividades</option>
+              <option value="grupos">Grupos y empresas</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
+            </svg>
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+            </svg>
+            AlquiSeason
+          </a>
+          <p>Tu destino para alquiler de equipos de aventura. Calidad premium para todas las estaciones del año.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
+                <path d="m10 15 5-3-5-3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Equipos</h4>
+          <ul>
+            <li><a href="#equipos">Esquí</a></li>
+            <li><a href="#equipos">Snowboard</a></li>
+            <li><a href="#equipos">Camping</a></li>
+            <li><a href="#equipos">Kayak</a></li>
+            <li><a href="#equipos">Bicicletas</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Actividades</h4>
+          <ul>
+            <li><a href="#actividades">Clases de Esquí</a></li>
+            <li><a href="#actividades">Snowshoeing</a></li>
+            <li><a href="#actividades">Kayak</a></li>
+            <li><a href="#actividades">Trekking</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="#contacto">Ubicación</a></li>
+            <li><a href="tel:+542944445555">+54 294 444-5555</a></li>
+            <li><a href="mailto:info@alquiseason.com">info@alquiseason.com</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>2026 - TuPaginaYa - Una marca del Grupo JV - Todos los derchos reservados.</p>
+        <a href="https://tupaginaya.com.ar/" target="_blank" rel="noreferrer">TuPaginaYa.com.ar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+        </svg>
+        Tu Carrito
+      </h3>
+      <button class="cart-close" onclick="closeCart()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be rendered here by JavaScript -->
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width: 100%; gap: 0.5rem;" onclick="sendToWhatsApp()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+          <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+        </svg>
+        Enviar por WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Date Picker Modal -->
+  <div class="datepicker-overlay" id="datepicker-overlay" onclick="closeDatePicker()"></div>
+  <div class="datepicker-modal" id="datepicker-modal">
+    <div class="datepicker-header">
+      <div class="datepicker-header-info">
+        <div class="datepicker-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <h3 id="datepicker-title">Seleccionar Fechas</h3>
+          <p id="datepicker-subtitle" class="datepicker-subtitle">Item name</p>
+        </div>
+      </div>
+      <button class="datepicker-close" onclick="closeDatePicker()">&times;</button>
+    </div>
+    
+    <div class="datepicker-calendar">
+      <div class="datepicker-month-nav">
+        <button onclick="prevMonth()">&lt;</button>
+        <span id="datepicker-month-year">Enero 2026</span>
+        <button onclick="nextMonth()">&gt;</button>
+      </div>
+      <div class="datepicker-days-header">
+        <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+      </div>
+      <div class="datepicker-days" id="datepicker-days"></div>
+    </div>
+    
+    <div class="datepicker-summary">
+      <div class="datepicker-summary-row">
+        <span>Desde:</span>
+        <span id="datepicker-start-date">--</span>
+      </div>
+      <div class="datepicker-summary-row">
+        <span>Hasta:</span>
+        <span id="datepicker-end-date">--</span>
+      </div>
+      <div class="datepicker-summary-row">
+        <span>Días:</span>
+        <span id="datepicker-days-count">--</span>
+      </div>
+    </div>
+    
+    <!-- Participants for activities -->
+    <div class="datepicker-participants" id="datepicker-participants" style="display: none;">
+      <span>Participantes:</span>
+      <div class="participants-control">
+        <button onclick="decreaseParticipants()">-</button>
+        <span id="participants-count">1</span>
+        <button onclick="increaseParticipants()">+</button>
+      </div>
+    </div>
+    
+    <div class="datepicker-footer">
+      <div class="datepicker-total">
+        <span>Total estimado:</span>
+        <span id="datepicker-total">$0</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="confirmDateSelection()">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
