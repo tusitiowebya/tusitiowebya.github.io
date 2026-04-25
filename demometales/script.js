@@ -1,5 +1,5 @@
 /* ===========================================
-   METALES ZAIRA - Interactions
+   METALES - Interactions
    =========================================== */
 
 // Sticky header
