@@ -1,0 +1,3 @@
+spam_prefix	****SPAM****
+spam_threshold	50
+spam_delete	yes
