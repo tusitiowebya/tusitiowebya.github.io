@@ -115,6 +115,8 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
     cursor: pointer;
     transition: var(--transition);
     white-space: nowrap;
+        padding: 10px;
+
 }
 
 .btn-sm {
