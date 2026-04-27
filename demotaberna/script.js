@@ -67,15 +67,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Fetch Menu Data =====
+const API_URL = 'https://newback.quierolacarta.com/v1/locals/261/categories/2137';
+const CORS_PROXIES = [
+    'https://corsproxy.io/?',
+    'https://api.allorigins.win/raw?url='
+];
+
 async function fetchMenu() {
+    // Try direct fetch first
     try {
-        const response = await fetch('https://newback.quierolacarta.com/v1/locals/261/categories/2137');
-        const data = await response.json();
-        processMenuData(data);
-    } catch (error) {
-        console.error('Error fetching menu:', error);
-        showErrorState();
+        const response = await fetch(API_URL);
+        if (response.ok) {
+            const data = await response.json();
+            processMenuData(data);
+            return;
+        }
+    } catch (e) {
+        // CORS error, try proxies
     }
+    
+    // Try CORS proxies
+    for (const proxy of CORS_PROXIES) {
+        try {
+            const response = await fetch(proxy + encodeURIComponent(API_URL));
+            if (response.ok) {
+                const data = await response.json();
+                processMenuData(data);
+                return;
+            }
+        } catch (e) {
+            continue;
+        }
+    }
+    
+    // All methods failed
+    console.error('Error fetching menu: CORS blocked and proxies failed');
+    showErrorState();
 }
 
 function processMenuData(data) {
