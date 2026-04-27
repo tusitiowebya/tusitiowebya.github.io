@@ -130,11 +130,8 @@
         <div class="container">
             <div class="menu-header">
                 <span class="section-tag">NUESTRA CARTA</span>
-                <h2 class="section-title">TRAGOS & <span class="highlight">BEBIDAS</span></h2>
-                <p class="menu-intro">Todos los tragos que necesitas para pasar una noche de rock</p>
-            </div>
-            <div class="menu-filters" id="menuFilters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
+                <h2 class="section-title">TRAGOS <span class="highlight">DESTACADOS</span></h2>
+                <p class="menu-intro">Algunos de nuestros tragos favoritos. Toca para ver la carta completa.</p>
             </div>
             <div class="menu-grid" id="menuGrid">
                 <div class="loading-state">
@@ -142,8 +139,41 @@
                     <p>Cargando carta...</p>
                 </div>
             </div>
+            <div class="menu-cta">
+                <button class="btn btn-primary" id="openMenuModal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    Ver Carta Completa
+                </button>
+            </div>
         </div>
     </section>
+
+    <!-- Menu Modal -->
+    <div class="menu-modal" id="menuModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h2>Carta Completa</h2>
+                    <p>Todos nuestros tragos y bebidas</p>
+                </div>
+                <button class="modal-close" id="closeMenuModal" aria-label="Cerrar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18"/>
+                        <path d="M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="modalMenuGrid">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Cargando carta...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Gallery Section -->
     <section class="gallery" id="galeria">
