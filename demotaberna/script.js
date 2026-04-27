@@ -79,60 +79,35 @@ async function fetchMenu() {
 }
 
 function processMenuData(data) {
-    // The API returns the category with relationships containing subcategories
-    // Each subcategory contains products
-    
     allProducts = [];
     allSubcategories = [];
     
-    // Check if data has relationships with subcategories
-    if (data.relationships && data.relationships.subcategories) {
-        const subcategories = data.relationships.subcategories;
-        
-        subcategories.forEach(subcat => {
-            const subcatName = subcat.attributes?.name || 'Sin categoria';
-            allSubcategories.push(subcatName);
-            
-            // Get products from subcategory relationships
-            if (subcat.relationships && subcat.relationships.products) {
-                subcat.relationships.products.forEach(product => {
-                    allProducts.push({
-                        id: product.id,
-                        name: product.attributes?.name || 'Sin nombre',
-                        description: product.attributes?.description || '',
-                        price: product.attributes?.price || 0,
-                        image: product.attributes?.image ? `https://quierolacarta.com/storage/${product.attributes.image}` : null,
-                        enabled: product.attributes?.enabled !== false,
-                        category: subcatName,
-                        order: product.attributes?.order || 0
-                    });
-                });
-            }
-        });
-    }
+    // Products are at root level in the API response (data.products)
+    const products = data.products || [];
     
-    // If no subcategories, check for direct products
-    if (allProducts.length === 0 && data.relationships && data.relationships.products) {
-        data.relationships.products.forEach(product => {
-            allProducts.push({
-                id: product.id,
-                name: product.attributes?.name || 'Sin nombre',
-                description: product.attributes?.description || '',
-                price: product.attributes?.price || 0,
-                image: product.attributes?.image ? `https://quierolacarta.com/storage/${product.attributes.image}` : null,
-                enabled: product.attributes?.enabled !== false,
-                category: 'Tragos',
-                order: product.attributes?.order || 0
-            });
+    // Process all products
+    products.forEach(product => {
+        const attrs = product.attributes || {};
+        allProducts.push({
+            id: product.id,
+            name: attrs.name || 'Sin nombre',
+            description: attrs.description || '',
+            price: attrs.price || 0,
+            image: attrs.image ? `https://quierolacarta.com/storage/${attrs.image}` : null,
+            enabled: attrs.enabled !== false,
+            category: 'Tragos',
+            order: attrs.order || 0
         });
-        allSubcategories = ['Tragos'];
-    }
+    });
     
     // Sort products by order
     allProducts.sort((a, b) => a.order - b.order);
     
-    // Create filter buttons
-    createFilterButtons();
+    // No subcategories filter needed since all are "Tragos"
+    allSubcategories = [];
+    
+    // Hide filters since there's only one category
+    menuFilters.style.display = 'none';
     
     // Render all products
     renderProducts(allProducts);
