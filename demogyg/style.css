@@ -1233,15 +1233,19 @@ section {
 }
 
 .footer-bottom {
-    padding-top: var(--spacing-xl);
-    text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-bottom p {
-    color: var(--color-gray-500);
-    font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
 }
-
 /* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
     position: fixed;
