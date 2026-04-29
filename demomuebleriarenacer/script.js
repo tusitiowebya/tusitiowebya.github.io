@@ -76,10 +76,8 @@
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = src;
     lightboxImg.alt = alt || '';
-    lightbox.hidden = false;
-    requestAnimationFrame(function () {
-      lightbox.classList.add('open');
-    });
+    lightbox.removeAttribute('hidden');
+    lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
@@ -88,19 +86,20 @@
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
     setTimeout(function () {
-      lightbox.hidden = true;
+      lightbox.setAttribute('hidden', '');
       if (lightboxImg) lightboxImg.src = '';
     }, 300);
   }
 
-  document.querySelectorAll('[data-img]').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      var src = el.getAttribute('data-img');
-      var img = el.querySelector('img');
-      var alt = img ? img.getAttribute('alt') : '';
-      openLightbox(src, alt);
-    });
+  // Event delegation: works for any child element clicked inside [data-img]
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest ? e.target.closest('[data-img]') : null;
+    if (!trigger) return;
+    e.preventDefault();
+    var src = trigger.getAttribute('data-img');
+    var img = trigger.querySelector('img');
+    var alt = img ? img.getAttribute('alt') : '';
+    openLightbox(src, alt);
   });
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);

@@ -310,7 +310,7 @@ p {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('hero-bg.png') center/cover no-repeat;
+  background: url('./images/hero-bg.png') center/cover no-repeat;
   filter: brightness(0.45) saturate(1.05);
   z-index: 0;
 }
@@ -882,9 +882,11 @@ p {
 }
 
 .footer-brand img {
-  width: 64px;
   height: 64px;
-  border-radius: 50%;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
   margin-bottom: 18px;
 }
 
