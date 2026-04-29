@@ -214,7 +214,7 @@ input, textarea {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-white);
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-md);
 }
