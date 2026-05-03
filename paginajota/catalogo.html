@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>DHM Distribuidora - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="catalog-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo-dhm.png" alt="DHM Distribuidora" class="logo-medium">
+            </div>
+            <p class="catalog-subtitle">Catálogo de Productos — Precios Actualizados</p>
+            <div class="catalog-export-btns">
+                <button onclick="exportToExcel()" class="btn-export excel">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>Exportar Excel</span>
+                </button>
+
+                <button onclick="exportToPDF()" class="btn-export pdf">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Exportar PDF</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Buscar producto..." class="search-input">
+            <select id="categoryFilter" class="category-select">
+                <option value="">Todas las categorías</option>
+            </select>
+            <div class="product-count">
+                <span id="productCount">0</span> productos
+            </div>
+        </div>
+
+        <div id="productList" class="product-list"></div>
+    </main>
+
+    <footer>
+        <p>DHM Distribuidora - Todos los derechos reservados</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img id="modalImg" class="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { loadCatalog(); });
+    </script>
+</body>
+
+</html>

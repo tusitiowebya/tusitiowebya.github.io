@@ -1,0 +1,950 @@
+/* ==========================================
+   DHM DISTRIBUIDORA — style.css
+   ========================================== */
+
+/* ── Reset ── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Variables ── */
+:root {
+    --primary:             #1a1a1a;
+    --secondary:           #333;
+    --accent:              #0066cc;
+    --background:          #f5f5f5;
+    --white:               #ffffff;
+    --border:              #e0e0e0;
+    --danger:              #dc3545;
+    --success:             #28a745;
+    --text:                #333;
+    --text-light:          #666;
+    --background-gradient: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+    --shadow:              0 1px 3px rgba(0,0,0,.1);
+    --shadow-lg:           0 10px 25px rgba(0,0,0,.1);
+    --radius:              10px;
+}
+
+/* ── Base ── */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    padding: 12px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-titles {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.header-brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.header-sub {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.logo { height: 60px; width: auto; }
+.logo-medium { height: 80px; width: auto; }
+.logo-large  { height: 128px; width: auto; }
+.logo-badge  { height: 60px; margin-bottom: 5px; }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Nav buttons (header) */
+nav .btn-catalog,
+nav .btn-danger {
+    padding: 7px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+nav .btn-catalog:hover { background: var(--background); }
+nav .btn-danger:hover  { background: var(--background); color: var(--danger); }
+
+.catalog-export-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Botón base */
+.btn-export {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Icono */
+.btn-export i {
+    font-size: 18px;
+}
+
+.btn-export span {
+    letter-spacing: 0.3px;
+}
+
+/* Excel */
+.btn-export.excel {
+    background: linear-gradient(135deg, #1d6f42, #2ecc71);
+    color: white;
+}
+
+.btn-export.excel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(46, 204, 113, 0.4);
+}
+
+/* PDF */
+.btn-export.pdf {
+    background: linear-gradient(135deg, #b71c1c, #ff4d4d);
+    color: white;
+}
+
+.btn-export.pdf:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 77, 77, 0.4);
+}
+
+
+/* ==========================================
+   BOTONES GLOBALES
+   ========================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary   { background-color: var(--primary); color: var(--white); }
+.btn-primary:hover { background-color: var(--secondary); }
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+.btn-outline:hover { background-color: var(--background); }
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-danger:hover { background-color: #c82333; }
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.btn-secondary:hover { background-color: var(--primary); }
+
+.btn-submit {
+    background-color: var(--success);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn-submit:hover { background-color: #218838; }
+
+.btn-admin {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    background-color: var(--primary);
+    color: var(--white);
+}
+.btn-admin:hover { background-color: var(--secondary); }
+
+.btn-full { width: 100%; }
+.btn-sm   { padding: 8px 16px; font-size: 13px; }
+
+/* Editar / Eliminar (lista admin) */
+.btn-edit, .btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+.btn-edit               { background-color: var(--accent); color: var(--white); }
+.btn-edit:hover         { background-color: #0055aa; }
+.btn-delete             { background-color: var(--danger); color: var(--white); }
+.btn-delete:hover       { background-color: #c82333; }
+
+/* ==========================================
+   LAYOUT / MAIN
+   ========================================== */
+main, .catalog-main {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 24px;
+}
+
+.admin-main { max-width: 1000px; }
+
+/* ==========================================
+   CARD
+   ========================================== */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.card::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--success));
+}
+
+.card-header {
+    padding: 1px 22px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+}
+
+.card-content { padding: 20px; }
+
+/* ==========================================
+   FORMULARIOS
+   ========================================== */
+.add-product-section,
+.bulk-section,
+.products-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label { font-weight: 500; color: var(--text); }
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.image-preview { margin-top: 10px; }
+.image-preview img,
+#imagePreview img,
+#editImagePreview img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   FILTROS
+   ========================================== */
+.filters {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+}
+.search-input:focus { outline: none; border-color: var(--accent); }
+
+.category-select {
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.select-input {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    background: var(--white);
+}
+
+.product-count { color: var(--text-light); font-size: 14px; }
+.last-update   { font-size: 12px; color: var(--text-light); }
+
+.admin-filters {
+    display: flex;
+    gap: 15px;
+    padding: 12px 20px;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.admin-filters .search-input { flex: 1; min-width: 200px; }
+
+/* ==========================================
+   PRODUCTOS — CATÁLOGO
+   ========================================== */
+.catalog-page { min-height: 100vh; background: var(--background); }
+
+.catalog-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+}
+.catalog-header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.catalog-filters {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+}
+
+.filter-group { display: flex; align-items: center; gap: 8px; }
+.filter-group label { font-size: 14px; color: var(--text); }
+
+.catalog-subtitle { font-size: 16px; color: #64748b; margin-top: 2rem; }
+
+.product-list { display: flex; flex-direction: column; gap: 8px; }
+
+.product-item {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--background);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.product-info     { flex: 1; min-width: 0; }
+.product-name     { font-weight: 600; font-size: 16px; color: var(--primary); margin-bottom: 4px; }
+.product-category { font-size: 12px; color: var(--accent); margin-bottom: 4px; }
+.product-description {
+    font-size: 13px;
+    color: var(--text-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-price { font-size: 18px; font-weight: 700; color: var(--success); white-space: nowrap; }
+
+/* ==========================================
+   PRODUCTOS — ADMIN
+   ========================================== */
+.admin-product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.admin-product-item {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.admin-product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--background);
+    flex-shrink: 0;
+}
+
+.admin-product-info    { flex: 1; min-width: 0; }
+.admin-product-name    { font-weight: 600; font-size: 14px; }
+.admin-product-price   { color: var(--success); font-weight: 600; }
+.admin-product-actions { display: flex; gap: 8px; }
+
+/* ==========================================
+   CARGA MASIVA
+   ========================================== */
+.bulk-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+#load950Btn {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+#load950Btn::before { content: '📦'; }
+#load950Btn:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(0,102,204,.25);
+}
+
+.products-section { position: relative; overflow: hidden; }
+
+.products-section h3 {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+}
+
+#totalProducts {
+    color: var(--accent);
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+/* ==========================================
+   MODAL
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+.close-modal:hover { color: var(--danger); }
+
+/* ==========================================
+   LOGIN
+   ========================================== */
+#loginScreen {
+    position: fixed;
+    inset: 0;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-box h2 { text-align: center; }
+.login-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.login-box button {
+    padding: 10px;
+    background: #2563eb;
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   HOME PAGE
+   ========================================== */
+.home-page {
+    min-height: 100vh;
+    background: var(--background-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.home-page .container { max-width: 900px; width: 100%; }
+
+.home-header     { text-align: center; margin-bottom: 48px; }
+.logo-container-large { margin-bottom: 24px; }
+.home-subtitle   { font-size: 20px; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 24px;
+    transition: box-shadow 0.3s ease;
+}
+.home-card:hover { box-shadow: var(--shadow-lg); }
+.home-card .card-header { margin-bottom: 0px; }
+.home-card .card-title  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+.home-card .card-description { font-size: 14px; color: var(--text-light); }
+.home-footer { text-align: center; margin-top: 48px; color: var(--text-light); }
+
+/* ==========================================
+   MISCELÁNEA
+   ========================================== */
+.no-products { text-align: center; padding: 40px; color: var(--text-light); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--white);
+    margin-top: 40px;
+    color: var(--text-light);
+}
+
+.icon    { width: 24px; height: 24px; color: var(--accent); }
+.icon-sm { width: 16px; height: 16px; }
+
+/* Loading spinner */
+.loading { text-align: center; padding: 40px; color: var(--text-light); }
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    header { flex-wrap: wrap; }
+
+    .logo { height: 50px; }
+
+    .filters,
+    .admin-filters { flex-direction: column; }
+
+    .search-input,
+    .category-select { width: 100%; }
+
+    .product-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-image  { width: 100px; height: 100px; }
+    .product-info   { width: 100%; }
+    .product-description { white-space: normal; }
+
+    .admin-product-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .admin-product-actions { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .bulk-actions { flex-direction: column; }
+    #load950Btn,
+    .bulk-actions .btn-danger { width: 100%; justify-content: center; }
+}
+/* ==========================================
+   MEJORAS DHM 2026
+   ========================================== */
+
+/* Código de producto */
+.product-code       { font-size: 11px; color: #999; margin-bottom: 2px; font-family: monospace; }
+.admin-product-code { font-size: 11px; color: #aaa; font-family: monospace; margin-bottom: 2px; }
+
+/* Badge sin stock */
+.product-image-wrap,
+.admin-product-image-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.badge-no-stock {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dc3545;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+}
+
+/* Producto sin stock → imagen levemente grisada */
+.product-item.out-of-stock       .product-image,
+.admin-product-item.out-of-stock .admin-product-image {
+    opacity: 0.55;
+    filter: grayscale(40%);
+}
+
+/* Checkbox sin stock en modal editar */
+.form-group-check { flex-direction: row; align-items: center; gap: 10px; }
+.check-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.check-label input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: #dc3545; }
+
+/* Botones exportar */
+.btn-export-excel {
+    background: #217346;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-export-excel:hover { background: #185c38; }
+
+.btn-export-pdf {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-export-pdf:hover { background: #96281b; }
+
+/* Botones exportar en header catálogo */
+.catalog-export-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   OVERRIDE VISUAL (estilo moderno tipo nuevo)
+   AGREGAR AL FINAL DEL CSS
+   ========================================== */
+
+/* Variables más modernas */
+:root {
+    --primary: #1e3a8a;
+    --secondary: #4f46e5;
+    --accent: #3b82f6;
+    --background: #f8fafc;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-light: #64748b;
+}
+
+/* Catalogo más limpio */
+.catalog-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Filtros estilo moderno */
+.catalog-filters {
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+
+/* LISTA DE PRODUCTOS */
+.product-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    gap: 16px;
+    transition: all 0.2s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    transform: translateY(-1px);
+}
+
+/* IMAGEN MÁS GRANDE Y PRO */
+.product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/* INFO MÁS LIMPIA */
+.product-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.product-description {
+    font-size: 13px;
+    color: var(--text-light);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* PRECIO MÁS PRO */
+.product-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #22c55e;
+}
+
+/* CÓDIGO MÁS SUAVE */
+.product-code {
+    color: #94a3b8;
+}
+
+/* ======================
+   MOBILE MEJORADO
+   ====================== */
+@media (max-width: 768px) {
+
+    .product-item {
+        flex-direction: row; /* 👈 clave: no columna */
+        align-items: center;
+        padding: 12px;
+    }
+
+    .product-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-info {
+        flex: 1;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 15px;
+    }
+}
+
+/* Desktop más grande */
+@media (min-width: 769px) {
+    .product-image {
+        width: 120px;
+        height: 120px;
+    }
+}

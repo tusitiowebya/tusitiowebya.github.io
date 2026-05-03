@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>DHM Distribuidora - Panel de Administración</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <div id="loginScreen">
+        <form onsubmit="handleLogin(event)" class="login-box">
+            <h2>Login Admin</h2>
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <!-- PANEL ADMIN -->
+    <div id="adminPanel" style="display:none;">
+
+        <header>
+            <div class="header-left">
+                <img src="images/logo-dhm.png" class="logo">
+                <div class="header-titles">
+                    <span class="header-brand">DHM Distribuidora</span>
+                    <span class="header-sub">Panel de Administración</span>
+                </div>
+            </div>
+            <nav>
+                <a href="catalogo.html" class="btn-catalog">🔗 Ver Catálogo</a>
+                <button onclick="logout()" class="btn-danger">↪ Cerrar sesión</button>
+            </nav>
+        </header>
+
+        <main class="admin-main">
+            <h2>Panel de Administración</h2>
+
+            <!-- Formulario agregar -->
+            <section class="add-product-section">
+                <h3>Agregar Nuevo Producto</h3>
+                <form id="productForm" class="product-form">
+                    <div class="form-group">
+                        <input type="text" id="productName" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="productPrice" placeholder="Precio" required>
+                    </div>
+                    <div class="form-group">
+                        <input list="categories" id="productCategory" placeholder="Elegir o escribir categoría">
+                        <datalist id="categories"></datalist>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="productDescription" placeholder="Descripción"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="productImage" accept="image/*">
+                        <div id="imagePreview"></div>
+                    </div>
+                    <button type="submit" class="btn-submit">Agregar Producto</button>
+                </form>
+            </section>
+
+            <!-- Carga masiva -->
+            <!-- <div class="home-card">
+                <div class="card-header">
+                    <h2 class="card-title">Carga Masiva</h2>
+                </div>
+                <div class="card-content">
+                    <div class="bulk-actions">
+                        <button id="load950Btn" class="btn btn-outline">Cargar 950 Productos de Ejemplo</button>
+                        <button id="deleteAllBtn" class="btn btn-danger">Eliminar Todos los Productos</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Exportar y Backup -->
+            <div class="home-card">
+                <div class="card-header">
+                    <h2 class="card-title">Exportar y Backup</h2>
+                </div>
+
+                <div class="card-content">
+                    <div class="bulk-actions">
+
+                        <!-- Excel -->
+                        <button id="exportExcelBtn" class="btn-export excel">
+                            <i class="fa-solid fa-file-excel"></i>
+                            <span>Exportar a Excel</span>
+                        </button>
+
+                        <!-- PDF -->
+                        <button id="exportPdfBtn" class="btn-export pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Exportar a PDF</span>
+                        </button>
+
+                        <!-- Backup -->
+                        <button onclick="backupData()" class="btn-export backup">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Descargar Backup</span>
+                        </button>
+
+                        <!-- Restaurar -->
+                        <button onclick="restoreData()" class="btn-export restore">
+                            <i class="fa-solid fa-upload"></i>
+                            <span>Cargar Backup</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input oculto para restaurar -->
+            <input type="file" id="restoreFile" accept=".json" style="display:none;">
+
+            <!-- Lista -->
+            <section class="products-section">
+                <h3>Productos (<span id="totalProducts">0</span>)</h3>
+                <div class="admin-filters">
+                    <input type="text" id="adminSearch" placeholder="Buscar por nombre, categoría o código..."
+                        class="search-input">
+                </div>
+                <div id="adminProductList" class="admin-product-list"></div>
+            </section>
+        </main>
+
+        <!-- Modal editar -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Editar Producto</h3>
+                <form id="editForm" class="product-form">
+                    <input type="hidden" id="editId">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="editName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Precio</label>
+                        <input type="number" id="editPrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <input list="categoriesEdit" id="editCategory" placeholder="Elegir o escribir categoría">
+                        <datalist id="categoriesEdit"></datalist>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="editDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" id="editImage" accept="image/*">
+                        <div id="editImagePreview" class="image-preview"></div>
+                    </div>
+                    <div class="form-group form-group-check">
+                        <label class="check-label">
+                            <input type="checkbox" id="editNoStock">
+                            <span>Marcar como <strong>Sin Stock</strong></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+
+    </div><!-- /adminPanel -->
+
+    <!-- Modal imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img id="modalImage" class="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
