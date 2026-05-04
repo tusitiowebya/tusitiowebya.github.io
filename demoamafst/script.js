@@ -1,4 +1,4 @@
-// Year in footer
+// . Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Sticky nav state
