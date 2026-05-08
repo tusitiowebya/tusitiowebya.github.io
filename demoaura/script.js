@@ -10,7 +10,7 @@ function waLink(productName) {
 
 const products = [
   {
-    img: 'https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'images/perfumarab.png',
     fallbackIcon: 'fa-spray-can',
     name: 'Perfumes Árabes Premium',
     category: 'Perfumes',
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSub   = document.querySelector('.hero-product-info p');
   if (heroImgEl && heroTitle && heroSub) {
     const showcaseProducts = [
-      { img: 'https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=400',  name: 'Perfume Árabe Premium',   sub: 'Fragancias exclusivas 100ml' },
+      { img: 'images/perfumarab.png',  name: 'Perfume Árabe Premium',   sub: 'Fragancias exclusivas 100ml' },
       { img: 'https://ladelfina.uy/wp-content/uploads/2025/05/Perfume-GD-Amakha-paris-15ml.png', name: 'Amakha Paris Collection',  sub: 'Collection 15ml' },
       { img: 'https://afaar.vtexassets.com/arquivos/ids/158644-800-auto?v=638979860679030000&width=800&height=auto&aspect=true', name: 'Camiseta Argentina 2026',  sub: 'Edición especial' },
       { img: 'https://www.karseell.com/wp-content/uploads/2024/08/%E8%AF%A6%E6%83%85%E9%A1%B5-21-768x768.png', name: 'Cremas Karseell',          sub: 'Cuidado capilar premium' },
