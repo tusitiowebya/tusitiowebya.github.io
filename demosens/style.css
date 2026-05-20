@@ -216,6 +216,30 @@ h1, h2, h3, h4, h5 {
     transition: var(--transition-medium);
 }
 
+/* Navbar transparent sobre hero: textos en blanco */
+.navbar:not(.scrolled) .logo {
+    color: var(--color-surface);
+}
+
+.navbar:not(.scrolled) .nav-links a {
+    color: var(--color-surface);
+}
+
+.navbar:not(.scrolled) .btn-outline {
+    color: var(--color-surface);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar:not(.scrolled) .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: var(--color-surface);
+}
+
+.navbar:not(.scrolled) .mobile-toggle span {
+    background: var(--color-surface);
+}
+
 .navbar.scrolled {
     background: rgba(248, 246, 243, 0.9);
     backdrop-filter: blur(20px);
