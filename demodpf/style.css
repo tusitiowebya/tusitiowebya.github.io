@@ -641,6 +641,35 @@ ul { list-style: none; }
 }
 .bene-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.65; }
 
+/* ===== EMBARCACIONES SECUNDARIA ===== */
+.emb-sec { }
+.emb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.emb-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.25s;
+  cursor: default;
+}
+.emb-card:hover {
+  background: var(--surface-2);
+  border-color: var(--green-border);
+  transform: translateY(-4px);
+}
+.emb-icon  { font-size: 2rem; }
+.emb-label { font-size: 0.88rem; font-weight: 700; color: var(--gray-2); text-align: center; }
+.emb-cta   { text-align: center; }
+
 /* ===== ZONAS ===== */
 .zonas-inner {
   display: grid;
@@ -987,6 +1016,7 @@ ul { list-style: none; }
   .servicios-grid  { grid-template-columns: 1fr 1fr; }
   .plagas-grid     { grid-template-columns: repeat(2, 1fr); }
   .beneficios-grid { grid-template-columns: 1fr 1fr; }
+  .emb-grid        { grid-template-columns: repeat(2, 1fr); }
   .zonas-inner     { grid-template-columns: 1fr; gap: 40px; }
   .zonas-img-wrap  { height: 280px; }
 
