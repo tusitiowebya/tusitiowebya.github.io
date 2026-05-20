@@ -190,12 +190,14 @@ h4,h5 { font-family: var(--font-body); }
 }
 .hero-bg {
   position:absolute; inset:0;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0d00 40%, #0d0d0d 100%);
+  background: #0a0a0a;
 }
 .hero-bg-img {
   position:absolute; inset:0;
-  width:100%; height:100%; object-fit:cover;
-  opacity:0.35;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  opacity:0.4;
+  display:block;
 }
 .hero-overlay {
   position:absolute; inset:0;
@@ -212,8 +214,13 @@ h4,h5 { font-family: var(--font-body); }
 
 .hero-content {
   position:relative; z-index:10;
-  text-align:center; padding:120px 24px 80px;
+  text-align:center;
+  padding: 140px 24px 60px;
   max-width:900px;
+  width:100%;
+}
+@media(max-width:767px){
+  .hero-content { padding: 100px 20px 48px; }
 }
 
 .hero-badge {
@@ -260,17 +267,22 @@ h4,h5 { font-family: var(--font-body); }
 
 .hero-stats {
   display:flex; align-items:center; justify-content:center;
-  gap:32px; flex-wrap:wrap;
-  padding:28px 32px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  gap:0; flex-wrap:nowrap;
+  padding:20px 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  max-width:560px; margin:0 auto;
 }
-.stat { text-align:center; }
-.stat-num { display:block; font-family: var(--font-head); font-size:2rem; font-weight:700; color:var(--accent); }
-.stat-label { display:block; font-size:0.8rem; color:var(--gray3); text-transform:uppercase; letter-spacing:0.08em; margin-top:2px; }
-.stat-divider { width:1px; height:40px; background: rgba(255,255,255,0.1); }
+@media(max-width:575px){
+  .hero-stats { gap:0; padding:16px 12px; }
+}
+.stat { text-align:center; flex:1; padding:0 12px; }
+.stat-num { display:block; font-family: var(--font-head); font-size:1.75rem; font-weight:700; color:var(--accent); }
+@media(max-width:575px){ .stat-num{ font-size:1.4rem; } }
+.stat-label { display:block; font-size:0.7rem; color:var(--gray3); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; line-height:1.3; }
+.stat-divider { width:1px; height:36px; background: rgba(255,255,255,0.12); flex-shrink:0; }
 
 .hero-scroll {
   position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
@@ -456,15 +468,15 @@ h4,h5 { font-family: var(--font-body); }
 .galeria { padding: 120px 0; background: var(--dark); }
 
 .galeria-grid {
-  display:grid; gap:16px;
+  display:grid; gap:12px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
   margin-bottom: 32px;
 }
 @media(min-width:768px){
   .galeria-grid{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 240px 240px;
+    grid-template-rows: 260px 260px;
+    gap:16px;
   }
 }
 
@@ -472,10 +484,10 @@ h4,h5 { font-family: var(--font-body); }
   position:relative; overflow:hidden;
   border-radius: var(--radius);
   cursor:pointer;
-  aspect-ratio: 4/3;
+  height: 200px;
 }
 @media(min-width:768px){
-  .galeria-item{ aspect-ratio: auto; }
+  .galeria-item{ height:auto; }
   .galeria-item--large {
     grid-column: span 1;
     grid-row: span 2;
@@ -618,9 +630,9 @@ h4,h5 { font-family: var(--font-body); }
 
 /* ===== Footer Agencia ===== */
 .footer-agency {
-  background: #050505;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 14px 0;
+  background: #000000;
+  border-top: 1px solid rgba(245,166,35,0.15);
+  padding: 16px 0;
 }
 .footer-agency-inner {
   max-width:1280px; margin:0 auto; padding:0 24px;
@@ -629,8 +641,13 @@ h4,h5 { font-family: var(--font-body); }
 }
 @media(min-width:768px){ .footer-agency-inner{ padding:0 48px; } }
 .footer-agency span {
-  font-size:0.75rem; color:rgba(255,255,255,0.35);
-  letter-spacing:0.02em;
+  font-size:0.75rem; color:rgba(255,255,255,0.4);
+  letter-spacing:0.03em;
+}
+.footer-agency span:last-child {
+  color: var(--accent);
+  font-weight:600;
+  letter-spacing:0.05em;
 }
 
 /* ===== Responsive Extras ===== */
@@ -640,6 +657,4 @@ h4,h5 { font-family: var(--font-body); }
   .cta-btns .btn-primary,
   .cta-btns .btn-outline-light { width:100%; justify-content:center; }
   .solucion-visual { grid-template-columns:1fr; }
-  .hero-stats { gap:20px; padding:20px; }
-  .stat-divider { display:none; }
 }
