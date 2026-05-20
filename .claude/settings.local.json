@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s ftp://enlaceosc.com.ar/public_html/ --user \"enlaosc:Xnw6wDvEp@\" --list-only)",
+      "Bash(curl --max-time 10 --connect-timeout 10 ftp://enlaceosc.com.ar/ --user \"enlaosc:Xnw6wDvEp@\" -v)",
+      "Bash(where lftp *)",
+      "Bash(where winscp *)",
+      "Bash(where wget *)",
+      "Bash(curl -s --max-time 10 http://enlaceosc.com.ar/)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__tabs_create_mcp",
+      "mcp__Claude_in_Chrome__list_connected_browsers",
+      "mcp__Claude_in_Chrome__select_browser",
+      "Bash(mkdir -p \"C:\\\\Users\\\\patop\\\\OneDrive\\\\Escritorio\\\\TusVentas\\\\frontend\\\\tusitiowebya.github.io\\\\demorjo\")"
+    ]
+  }
+}
