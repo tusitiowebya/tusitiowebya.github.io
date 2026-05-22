@@ -91,6 +91,22 @@
     }, 6000);
   }, 'fadein');
 
+  /* ── Video autoplay fix (workaround Chrome/Safari autoplay gate) ── */
+  safe(function () {
+    var vid = document.querySelector('.hero-video');
+    if (!vid) return;
+    vid.muted = true;
+    var p = vid.play();
+    if (p !== undefined) {
+      p.catch(function () {
+        document.addEventListener('click', function once() {
+          vid.play();
+          document.removeEventListener('click', once);
+        }, { once: true });
+      });
+    }
+  }, 'video');
+
   /* ── Stagger delays ── */
   safe(function () {
     [
