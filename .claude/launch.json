@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demotet",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "demotet"],
+      "port": 8787
+    },
+    {
+      "name": "demofnc",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8766", "--directory", "demofnc"],
+      "port": 8766
+    },
+    {
+      "name": "demobyl",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "demobyl"],
+      "port": 8765
+    },
+    {
+      "name": "demotf",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8768", "--directory", "demotf"],
+      "port": 8768
+    }
+  ]
+}
