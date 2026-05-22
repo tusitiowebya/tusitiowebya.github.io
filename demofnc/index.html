@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando Nieto Carranza | Servicios Inmobiliarios | Córdoba</title>
+  <meta name="description" content="Asesoramiento inmobiliario personalizado en Córdoba. Compra, venta, alquiler y tasación de propiedades. Experiencia que construye confianza." />
+  <meta name="keywords" content="inmobiliaria córdoba, compra venta propiedades, alquiler, tasación, asesoramiento inmobiliario, Fernando Nieto Carranza" />
+  <meta name="author" content="Fernando Nieto Carranza Servicios Inmobiliarios" />
+  <meta property="og:title" content="Fernando Nieto Carranza | Servicios Inmobiliarios" />
+  <meta property="og:description" content="Experiencia que construye confianza. Compra, venta, alquiler y asesoramiento inmobiliario personalizado en Córdoba." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fernando Nieto Carranza | Servicios Inmobiliarios" />
+  <meta name="twitter:description" content="Experiencia que construye confianza. Asesoramiento inmobiliario personalizado en Córdoba." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260522" />
+</head>
+<body>
+
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Float WA -->
+  <a class="float-wa" href="https://wa.me/5493516698170?text=Hola%20Fernando%2C%20me%20interesa%20recibir%20asesoramiento%20inmobiliario." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+    <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Mobile menu -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <button class="mob-close" id="mobClose" aria-label="Cerrar menú">
+      <i class="bx bx-x" aria-hidden="true"></i>
+    </button>
+    <div class="mob-logo">
+      <i class="bx bxs-buildings" aria-hidden="true"></i>
+      <span>FNC Inmobiliaria</span>
+    </div>
+    <ul>
+      <li><a href="#servicios" onclick="closeMob()">Servicios</a></li>
+      <li><a href="#propiedades" onclick="closeMob()">Propiedades</a></li>
+      <li><a href="#proceso" onclick="closeMob()">Cómo trabajamos</a></li>
+      <li><a href="#diferenciales" onclick="closeMob()">Por qué elegirnos</a></li>
+      <li><a href="#galeria" onclick="closeMob()">Galería</a></li>
+      <li><a href="#faq" onclick="closeMob()">Preguntas frecuentes</a></li>
+    </ul>
+    <a href="#contacto" onclick="closeMob()" class="mob-cta">
+      <i class="bx bxs-envelope" aria-hidden="true"></i>Enviar consulta
+    </a>
+  </nav>
+
+  <!-- Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#inicio" aria-label="Fernando Nieto Carranza Servicios Inmobiliarios">
+        <div class="logo-badge">
+          <i class="bx bxs-buildings" aria-hidden="true"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Fernando Nieto Carranza</span>
+          <span class="logo-tag">Servicios Inmobiliarios</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#galeria">Galería</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto" class="nav-cta">Consultar</a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="inicio">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <video
+        autoplay muted loop playsinline
+        class="hero-video"
+        poster="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&fit=crop"
+        preload="metadata">
+        <source src="hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <div class="hero-monogram">
+        <span class="monogram-letters">FNC</span>
+        <div class="monogram-text">
+          <span class="monogram-name">Fernando Nieto Carranza</span>
+          <span class="monogram-sub">Servicios Inmobiliarios</span>
+        </div>
+      </div>
+      <p class="hero-eyebrow">Asesoramiento inmobiliario · Córdoba, Argentina</p>
+      <h1 class="hero-title">Experiencia que<br /><em>construye confianza.</em></h1>
+      <p class="hero-lead">Te acompañamos en cada paso para comprar, vender o alquilar tu propiedad con seguridad y asesoramiento profesional.</p>
+      <div class="hero-badges">
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Asesoramiento personalizado</span>
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Gestión integral</span>
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Confianza y experiencia</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5493516698170?text=Hola%20Fernando%2C%20quiero%20consultar%20por%20una%20propiedad." target="_blank" rel="noopener" class="btn-primary">
+          <i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultar propiedad
+        </a>
+        <a href="#servicios" class="btn-ghost">
+          Ver servicios<i class="bx bxs-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#servicios" aria-label="Ir a servicios">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ── SERVICIOS ── -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Servicios inmobiliarios</h2>
+        <p>Soluciones completas para cada etapa de tu operación inmobiliaria.</p>
+      </div>
+      <div class="servicios-grid">
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-home-smile" aria-hidden="true"></i></div>
+          <h3>Venta de propiedades</h3>
+          <p>Asesoramiento integral para vender tu propiedad al mejor precio y en el menor tiempo posible.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-key" aria-hidden="true"></i></div>
+          <h3>Alquileres</h3>
+          <p>Gestión completa: publicación, selección de inquilinos, contrato y seguimiento del alquiler.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-search-alt-2" aria-hidden="true"></i></div>
+          <h3>Búsqueda de inmuebles</h3>
+          <p>Encontramos la propiedad ideal según tus necesidades, presupuesto y zona de interés.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-bar-chart-alt-2" aria-hidden="true"></i></div>
+          <h3>Tasaciones</h3>
+          <p>Valuación profesional y precisa de tu propiedad basada en el mercado actual de Córdoba.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-cog" aria-hidden="true"></i></div>
+          <h3>Administración de propiedades</h3>
+          <p>Gestión completa de tu inmueble para que no tengas que preocuparte por nada.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-user-voice" aria-hidden="true"></i></div>
+          <h3>Asesoramiento inmobiliario</h3>
+          <p>Consultoría estratégica para tomar las mejores decisiones en el mercado.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-file-doc" aria-hidden="true"></i></div>
+          <h3>Gestión de documentación</h3>
+          <p>Tramitación y seguimiento de toda la documentación legal de tu operación.</p>
+        </article>
+        <article class="servicio-card fade-in">
+          <div class="sc-icon"><i class="bx bxs-megaphone" aria-hidden="true"></i></div>
+          <h3>Publicación y promoción</h3>
+          <p>Difusión estratégica de tu propiedad en los principales portales inmobiliarios.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONFIANZA ── -->
+  <section class="section confianza bg-dark" id="confianza">
+    <div class="container">
+      <div class="confianza-wrap fade-in">
+        <div class="confianza-left">
+          <span class="eyebrow light">Nuestra forma de trabajar</span>
+          <h2>Una gestión clara,<br /><em>segura y personalizada</em></h2>
+          <p>Fernando Nieto Carranza Servicios Inmobiliarios acompaña al cliente durante todo el proceso. Desde la primera consulta hasta la firma del contrato, estamos con vos.</p>
+          <a href="#contacto" class="btn-gold">Iniciar consulta</a>
+        </div>
+        <div class="confianza-right">
+          <div class="conf-item">
+            <i class="bx bxs-phone-call" aria-hidden="true"></i>
+            <div>
+              <strong>Atención directa y personalizada</strong>
+              <span>Hablás directamente con Fernando, sin intermediarios.</span>
+            </div>
+          </div>
+          <div class="conf-item">
+            <i class="bx bxs-analyse" aria-hidden="true"></i>
+            <div>
+              <strong>Análisis de necesidades</strong>
+              <span>Escuchamos en profundidad lo que buscás para encontrar la mejor solución.</span>
+            </div>
+          </div>
+          <div class="conf-item">
+            <i class="bx bxs-map" aria-hidden="true"></i>
+            <div>
+              <strong>Acompañamiento en visitas</strong>
+              <span>Te acompañamos en cada visita y coordinamos todo por vos.</span>
+            </div>
+          </div>
+          <div class="conf-item">
+            <i class="bx bxs-shield-alt-2" aria-hidden="true"></i>
+            <div>
+              <strong>Asesoramiento en operaciones</strong>
+              <span>Guía experta en precio, negociación y cierre de cada operación.</span>
+            </div>
+          </div>
+          <div class="conf-item">
+            <i class="bx bxs-comment-dots" aria-hidden="true"></i>
+            <div>
+              <strong>Comunicación clara y constante</strong>
+              <span>Te mantenemos informado en cada paso del proceso.</span>
+            </div>
+          </div>
+          <div class="conf-item">
+            <i class="bx bxs-star" aria-hidden="true"></i>
+            <div>
+              <strong>Seguimiento personalizado</strong>
+              <span>No desaparecemos después de la operación. Seguimos disponibles.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROPIEDADES ── -->
+  <section class="section propiedades" id="propiedades">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Categorías</span>
+        <h2>Encontrá el lugar ideal</h2>
+        <p>Trabajamos con todo tipo de propiedades para adaptarnos a tus objetivos.</p>
+      </div>
+      <div class="prop-grid">
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&fit=crop" alt="Casas" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-home" aria-hidden="true"></i>
+            <h3>Casas</h3>
+            <p>Residencias para cada estilo de vida</p>
+          </div>
+        </div>
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&fit=crop" alt="Departamentos" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-building" aria-hidden="true"></i>
+            <h3>Departamentos</h3>
+            <p>Unidades modernas en ubicaciones clave</p>
+          </div>
+        </div>
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80&fit=crop" alt="Terrenos" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-map-pin" aria-hidden="true"></i>
+            <h3>Terrenos</h3>
+            <p>Lotes para construcción e inversión</p>
+          </div>
+        </div>
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&fit=crop" alt="Locales comerciales" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-store" aria-hidden="true"></i>
+            <h3>Locales comerciales</h3>
+            <p>Espacios estratégicos para tu negocio</p>
+          </div>
+        </div>
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80&fit=crop" alt="Oficinas" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-briefcase" aria-hidden="true"></i>
+            <h3>Oficinas</h3>
+            <p>Espacios profesionales para empresas</p>
+          </div>
+        </div>
+        <div class="prop-card fade-in">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&fit=crop" alt="Inversiones inmobiliarias" loading="lazy" />
+            <div class="prop-overlay"></div>
+          </div>
+          <div class="prop-body">
+            <i class="bx bxs-dollar-circle" aria-hidden="true"></i>
+            <h3>Inversiones inmobiliarias</h3>
+            <p>Oportunidades rentables para tu capital</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESO ── -->
+  <section class="section proceso bg-cream" id="proceso">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Metodología</span>
+        <h2>Cómo trabajamos</h2>
+        <p>Un proceso claro, acompañado y sin sorpresas de principio a fin.</p>
+      </div>
+      <div class="proceso-track">
+        <div class="proceso-step fade-in">
+          <div class="ps-dot">
+            <span class="ps-num">01</span>
+          </div>
+          <div class="ps-content">
+            <i class="bx bxs-conversation" aria-hidden="true"></i>
+            <h3>Escuchamos tu necesidad</h3>
+            <p>Una consulta inicial para entender qué buscás, tus tiempos y tu presupuesto.</p>
+          </div>
+        </div>
+        <div class="proceso-step fade-in">
+          <div class="ps-dot">
+            <span class="ps-num">02</span>
+          </div>
+          <div class="ps-content">
+            <i class="bx bxs-analyse" aria-hidden="true"></i>
+            <h3>Evaluamos opciones</h3>
+            <p>Analizamos el mercado y seleccionamos las propiedades que mejor se adaptan a tus objetivos.</p>
+          </div>
+        </div>
+        <div class="proceso-step fade-in">
+          <div class="ps-dot">
+            <span class="ps-num">03</span>
+          </div>
+          <div class="ps-content">
+            <i class="bx bxs-user-check" aria-hidden="true"></i>
+            <h3>Te asesoramos en la operación</h3>
+            <p>Negociación, documentación y cada paso de la transacción con total transparencia.</p>
+          </div>
+        </div>
+        <div class="proceso-step fade-in">
+          <div class="ps-dot">
+            <span class="ps-num">04</span>
+          </div>
+          <div class="ps-content">
+            <i class="bx bxs-check-shield" aria-hidden="true"></i>
+            <h3>Cerramos con seguridad</h3>
+            <p>Acompañamos el cierre legal para que tengas tranquilidad en cada detalle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DIFERENCIALES ── -->
+  <section class="section diferenciales bg-dark" id="diferenciales">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow light">Diferencias</span>
+        <h2>Por qué elegirnos</h2>
+        <p>Una propuesta diferente, centrada en el cliente y en resultados reales.</p>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-item fade-in">
+          <i class="bx bxs-heart" aria-hidden="true"></i>
+          <h3>Trato personalizado</h3>
+          <p>Cada cliente es único. No hay soluciones genéricas ni atención estandarizada.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-badge-check" aria-hidden="true"></i>
+          <h3>Experiencia en el mercado</h3>
+          <p>Conocimiento profundo del mercado inmobiliario de Córdoba y sus distintas zonas.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-shield" aria-hidden="true"></i>
+          <h3>Seriedad profesional</h3>
+          <p>Cumplimos lo que prometemos y actuamos con responsabilidad en cada operación.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-show" aria-hidden="true"></i>
+          <h3>Transparencia total</h3>
+          <p>Información clara, sin letra chica ni sorpresas al final del proceso.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-hand-left" aria-hidden="true"></i>
+          <h3>Acompañamiento real</h3>
+          <p>Estamos presentes en cada visita, reunión y firma. No solo por teléfono.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-chat" aria-hidden="true"></i>
+          <h3>Comunicación directa</h3>
+          <p>Acceso directo a Fernando en todo momento, sin asistentes ni demoras.</p>
+        </div>
+        <div class="dif-item fade-in">
+          <i class="bx bxs-bulb" aria-hidden="true"></i>
+          <h3>Mirada estratégica</h3>
+          <p>Cada operación es analizada para maximizar tus beneficios a corto y largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALERÍA ── -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Visual</span>
+        <h2>Propiedades que inspiran</h2>
+        <p>Un vistazo al tipo de propiedades que gestionamos. Fotos reales próximamente.</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80&fit=crop" alt="Casa premium" loading="lazy" />
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80&fit=crop" alt="Propiedad moderna" loading="lazy" />
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80&fit=crop" alt="Interior elegante" loading="lazy" />
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=700&q=80&fit=crop" alt="Edificio residencial" loading="lazy" />
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=700&q=80&fit=crop" alt="Llaves de propiedad" loading="lazy" />
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700&q=80&fit=crop" alt="Asesor inmobiliario" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA INTERMEDIO ── -->
+  <section class="section cta-mid bg-gold-section">
+    <div class="container">
+      <div class="cta-mid-wrap fade-in">
+        <h2>¿Querés vender, comprar o alquilar?</h2>
+        <p>Recibí asesoramiento inmobiliario personalizado y empezá tu operación con confianza.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/5493516698170?text=Hola%20Fernando%2C%20quiero%20hablar%20con%20un%20asesor%20inmobiliario." target="_blank" rel="noopener" class="btn-dark">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>Hablar con un asesor
+          </a>
+          <a href="#contacto" class="btn-outline-dark">Solicitar tasación</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section faq-section bg-cream" id="faq">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Consultas</span>
+        <h2>Preguntas frecuentes</h2>
+        <p>Respondemos las dudas más comunes sobre nuestros servicios.</p>
+      </div>
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            ¿Realizan venta de propiedades?
+            <i class="bx bxs-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p>Sí. La venta de propiedades es uno de nuestros servicios principales. Te asesoramos en la valorización, publicación, negociación y cierre de la operación con total profesionalismo.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            ¿También trabajan alquileres?
+            <i class="bx bxs-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p>Sí, gestionamos alquileres tanto para propietarios como para inquilinos. Nos encargamos de la publicación, selección de candidatos, contrato y seguimiento durante la locación.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            ¿Puedo solicitar una tasación?
+            <i class="bx bxs-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p>Sí. Realizamos tasaciones profesionales basadas en el análisis del mercado actual de Córdoba. Podés solicitarla por WhatsApp o a través del formulario. Es el primer paso para tomar decisiones informadas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            ¿Trabajan con propiedades comerciales?
+            <i class="bx bxs-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p>Sí, trabajamos con una amplia variedad de propiedades: casas, departamentos, locales comerciales, oficinas, terrenos e inversiones inmobiliarias. Cada operación tiene su propio enfoque estratégico.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            ¿Puedo consultar por WhatsApp?
+            <i class="bx bxs-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p>Sí, es el canal más directo. Podés escribirle a Fernando al +54 9 3516 69-8170 en cualquier momento. También podés usar el formulario de contacto de esta página o llamar directamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FORMULARIO DE CONTACTO ── -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto-wrap">
+        <div class="contacto-info fade-in">
+          <span class="eyebrow">Contacto</span>
+          <h2>Hablemos de tu propiedad</h2>
+          <p>Completá el formulario y Fernando te responde personalmente a la brevedad.</p>
+          <div class="contact-detail">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5493516698170" target="_blank" rel="noopener">+54 9 3516 69-8170</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxs-phone" aria-hidden="true"></i>
+            <div>
+              <strong>Teléfono</strong>
+              <a href="tel:+5493516698170">+54 9 3516 69-8170</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxs-map-pin" aria-hidden="true"></i>
+            <div>
+              <strong>Zona de cobertura</strong>
+              <span>Córdoba, Argentina</span>
+            </div>
+          </div>
+        </div>
+        <div class="contacto-form fade-in">
+          <form id="frmContacto" novalidate>
+            <div class="form-group">
+              <label for="f-nombre">Nombre completo</label>
+              <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="f-telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="f-telefono" name="telefono" placeholder="Tu número de contacto" autocomplete="tel" required />
+            </div>
+            <div class="form-group">
+              <label for="f-operacion">Tipo de operación</label>
+              <select id="f-operacion" name="operacion" required>
+                <option value="">Seleccioná una opción</option>
+                <option value="comprar">Quiero comprar</option>
+                <option value="vender">Quiero vender</option>
+                <option value="alquilar">Quiero alquilar</option>
+                <option value="tasar">Solicitar tasación</option>
+                <option value="asesoramiento">Asesoramiento general</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-mensaje">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Contanos qué buscás o qué propiedad querés publicar..." required></textarea>
+            </div>
+            <button type="submit" class="btn-form">
+              <i class="bx bxs-send" aria-hidden="true"></i>Enviar consulta
+            </button>
+          </form>
+          <div id="formSuccess" class="form-success" hidden>
+            <i class="bx bxs-check-circle" aria-hidden="true"></i>
+            <strong>¡Consulta recibida!</strong>
+            <p>Fernando te va a contactar a la brevedad. También podés escribirle directamente por WhatsApp.</p>
+            <a href="https://wa.me/5493516698170" target="_blank" rel="noopener" class="btn-primary">
+              <i class="bx bxl-whatsapp" aria-hidden="true"></i>Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="section cta-final bg-dark">
+    <div class="container">
+      <div class="cta-final-wrap fade-in">
+        <i class="bx bxs-buildings cta-big-icon" aria-hidden="true"></i>
+        <h2>Tu próxima operación inmobiliaria<br /><em>empieza con confianza</em></h2>
+        <p>Fernando Nieto Carranza Servicios Inmobiliarios te acompaña con experiencia, seriedad y atención personalizada en cada paso.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/5493516698170?text=Hola%20Fernando%2C%20quiero%20iniciar%20una%20consulta%20inmobiliaria." target="_blank" rel="noopener" class="btn-gold">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultar ahora
+          </a>
+          <a href="#servicios" class="btn-ghost-light">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="bx bxs-buildings" aria-hidden="true"></i>
+            <div>
+              <span class="footer-name">Fernando Nieto Carranza</span>
+              <span class="footer-subtitle">Servicios Inmobiliarios</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Experiencia que construye confianza.</p>
+          <p class="footer-services">Compra · Venta · Alquiler · Tasación · Asesoramiento</p>
+        </div>
+        <div class="footer-contact">
+          <a href="https://wa.me/5493516698170" target="_blank" rel="noopener" class="footer-link">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>+54 9 3516 69-8170
+          </a>
+          <a href="tel:+5493516698170" class="footer-link">
+            <i class="bx bxs-phone" aria-hidden="true"></i>+54 9 3516 69-8170
+          </a>
+          <span class="footer-link">
+            <i class="bx bxs-map-pin" aria-hidden="true"></i>Córdoba, Argentina
+          </span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fernando Nieto Carranza Servicios Inmobiliarios. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TuPaginaYa strip -->
+  <div class="tupaginaya-footer" aria-label="Créditos del sitio">
+    <span>Sitio web creado por</span>
+    <a href="https://tusitiowebya.github.io" target="_blank" rel="noopener">TuPáginaYa</a>
+  </div>
+
+  <script src="main.js?v=20260522"></script>
+</body>
+</html>
