@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TermoElian TECH | Electrodomésticos, Tecnología y Bazar</title>
+  <meta name="description" content="Electrodomésticos, tecnología y bazar para tu hogar. Productos modernos y útiles al mejor precio. Seguinos en Instagram y Facebook." />
+  <meta name="keywords" content="electrodomésticos, tecnología, bazar, hogar, cocina, TermoElian TECH, productos tech" />
+  <meta property="og:title" content="TermoElian TECH | Electrodomésticos · Tecnología · Bazar" />
+  <meta property="og:description" content="Equipá tu hogar con tecnología. Electrodomésticos, productos tech y bazar para hacer tu día más fácil." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260522" />
+</head>
+<body>
+
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Float WA -->
+  <a class="float-wa" href="https://wa.me/5491126430355?text=Hola%20TermoElian%20TECH%2C%20quiero%20consultar%20por%20un%20producto." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+    <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Float Instagram -->
+  <a class="float-ig" href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" aria-label="Ver Instagram">
+    <i class="bx bxl-instagram" aria-hidden="true"></i>
+  </a>
+
+  <!-- Mobile menu -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <button class="mob-close" id="mobClose" aria-label="Cerrar menú">
+      <i class="bx bx-x" aria-hidden="true"></i>
+    </button>
+    <div class="mob-brand">
+      <span class="mb-bolt"><i class="bx bxs-zap" aria-hidden="true"></i></span>
+      <span class="mb-name">TermoElian <span>TECH</span></span>
+    </div>
+    <ul>
+      <li><a href="#categorias" onclick="closeMob()">Categorías</a></li>
+      <li><a href="#productos" onclick="closeMob()">Productos</a></li>
+      <li><a href="#beneficios" onclick="closeMob()">Beneficios</a></li>
+      <li><a href="#redes" onclick="closeMob()">Redes</a></li>
+      <li><a href="#galeria" onclick="closeMob()">Galería</a></li>
+    </ul>
+    <div class="mob-socials">
+      <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="mob-social-btn ig">
+        <i class="bx bxl-instagram" aria-hidden="true"></i>Instagram
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61574409793099" target="_blank" rel="noopener" class="mob-social-btn fb">
+        <i class="bx bxl-facebook" aria-hidden="true"></i>Facebook
+      </a>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#inicio" aria-label="TermoElian TECH">
+        <span class="nl-bolt"><i class="bx bxs-zap" aria-hidden="true"></i></span>
+        <span class="nl-text">
+          <span class="nl-name">TermoElian</span><span class="nl-tech">TECH</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación">
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#redes">Redes</a>
+        <a href="#galeria">Galería</a>
+        <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="nav-cta">
+          <i class="bx bxl-instagram" aria-hidden="true"></i>Ver Instagram
+        </a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="inicio">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <video
+        autoplay muted loop playsinline
+        class="hero-video"
+        poster="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&fit=crop"
+        preload="metadata">
+        <source src="hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <div class="hero-brand">
+        <span class="hb-bolt"><i class="bx bxs-zap" aria-hidden="true"></i></span>
+        <div class="hb-text">
+          <span class="hb-name">TermoElian</span>
+          <span class="hb-tech">TECH</span>
+        </div>
+      </div>
+      <div class="hero-tag">Electrodomésticos · Tecnología · Bazar</div>
+      <h1 class="hero-title">Equipá tu hogar<br /><span class="hero-glow">con tecnología</span></h1>
+      <p class="hero-lead">Electrodomésticos, productos tech y bazar para hacer tu día más fácil. Calidad, variedad y atención personalizada.</p>
+      <div class="hero-badges">
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Electrodomésticos</span>
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Tecnología</span>
+        <span class="hbadge"><i class="bx bxs-check-circle" aria-hidden="true"></i>Bazar</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5491126430355?text=Hola%21%20Quiero%20consultar%20por%20productos%20de%20TermoElian%20TECH." target="_blank" rel="noopener" class="btn-neon">
+          <i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultar productos
+        </a>
+        <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="btn-ghost">
+          <i class="bx bxl-instagram" aria-hidden="true"></i>Ver Instagram
+        </a>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#categorias" aria-label="Ir a categorías">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- ── CATEGORÍAS ── -->
+  <section class="section categorias" id="categorias">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Explorá</span>
+        <h2>Categorías principales</h2>
+        <p>Todo lo que necesitás para tu hogar en un solo lugar.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80&fit=crop" alt="Electrodomésticos" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon"><i class="bx bxs-washer" aria-hidden="true"></i></div>
+            <h3>Electrodomésticos</h3>
+            <p>Lavadoras, heladeras, microondas y mucho más para tu hogar.</p>
+            <a href="https://wa.me/5491126430355?text=Hola%2C%20consulto%20por%20electrodom%C3%A9sticos." target="_blank" rel="noopener" class="btn-cat">
+              Consultar<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cat-card fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80&fit=crop" alt="Tecnología" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon"><i class="bx bxs-chip" aria-hidden="true"></i></div>
+            <h3>Tecnología</h3>
+            <p>Accesorios, gadgets y dispositivos tech para tu vida diaria.</p>
+            <a href="https://wa.me/5491126430355?text=Hola%2C%20consulto%20por%20tecnolog%C3%ADa." target="_blank" rel="noopener" class="btn-cat">
+              Consultar<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cat-card fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500&q=80&fit=crop" alt="Bazar" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon"><i class="bx bxs-store-alt" aria-hidden="true"></i></div>
+            <h3>Bazar</h3>
+            <p>Artículos prácticos y útiles para el día a día en el hogar.</p>
+            <a href="https://wa.me/5491126430355?text=Hola%2C%20consulto%20por%20productos%20de%20bazar." target="_blank" rel="noopener" class="btn-cat">
+              Consultar<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cat-card fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80&fit=crop" alt="Hogar" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon"><i class="bx bxs-home-heart" aria-hidden="true"></i></div>
+            <h3>Hogar</h3>
+            <p>Todo para hacer de tu casa un espacio más cómodo y moderno.</p>
+            <a href="https://wa.me/5491126430355?text=Hola%2C%20consulto%20por%20productos%20del%20hogar." target="_blank" rel="noopener" class="btn-cat">
+              Consultar<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cat-card fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=500&q=80&fit=crop" alt="Cocina" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon"><i class="bx bxs-bowl-hot" aria-hidden="true"></i></div>
+            <h3>Cocina</h3>
+            <p>Utensilios, electrodomésticos y gadgets de cocina modernos.</p>
+            <a href="https://wa.me/5491126430355?text=Hola%2C%20consulto%20por%20productos%20de%20cocina." target="_blank" rel="noopener" class="btn-cat">
+              Consultar<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cat-card cat-card--offer fade-in">
+          <div class="cat-img-wrap">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&q=80&fit=crop" alt="Ofertas destacadas" loading="lazy" />
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-icon yellow"><i class="bx bxs-zap" aria-hidden="true"></i></div>
+            <h3>Ofertas destacadas</h3>
+            <p>Las mejores promociones en electrodomésticos y tecnología. ¡No te las pierdas!</p>
+            <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="btn-cat yellow">
+              Ver ofertas<i class="bx bxs-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCTOS DESTACADOS ── -->
+  <section class="section productos bg-dark" id="productos">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Catálogo</span>
+        <h2>Productos destacados</h2>
+        <p>Consultá disponibilidad y precios por redes sociales o WhatsApp.</p>
+      </div>
+      <div class="prod-grid">
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80&fit=crop" alt="Licuadora portátil" loading="lazy" />
+            <span class="prod-tag">Nuevo</span>
+          </div>
+          <div class="prod-body">
+            <h3>Licuadora portátil</h3>
+            <p class="prod-desc">Ideal para smoothies y batidos. Diseño compacto con vaso de viaje.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20la%20licuadora%20port%C3%A1til." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80&fit=crop" alt="Auriculares inalámbricos" loading="lazy" />
+            <span class="prod-tag">Tech</span>
+          </div>
+          <div class="prod-body">
+            <h3>Auriculares inalámbricos</h3>
+            <p class="prod-desc">Bluetooth 5.0, cancelación de ruido y batería de larga duración.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesan%20los%20auriculares%20inal%C3%A1mbricos." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80&fit=crop" alt="Cafetera eléctrica" loading="lazy" />
+            <span class="prod-tag">Hogar</span>
+          </div>
+          <div class="prod-body">
+            <h3>Cafetera eléctrica</h3>
+            <p class="prod-desc">Prepará tu café favorito con calentataza incluido. Múltiples tazas.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20la%20cafetera%20el%C3%A9ctrica." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f4362c?w=500&q=80&fit=crop" alt="Smart TV" loading="lazy" />
+            <span class="prod-tag yellow-tag">Oferta</span>
+          </div>
+          <div class="prod-body">
+            <h3>Smart TV</h3>
+            <p class="prod-desc">Televisor con Android TV integrado. WiFi y acceso a streaming.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20el%20Smart%20TV." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=500&q=80&fit=crop" alt="Ventilador de pie" loading="lazy" />
+            <span class="prod-tag">Hogar</span>
+          </div>
+          <div class="prod-body">
+            <h3>Ventilador de pie</h3>
+            <p class="prod-desc">3 velocidades, cabezal oscilante y bajo consumo energético.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20el%20ventilador%20de%20pie." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=80&fit=crop" alt="Termo Stanley" loading="lazy" />
+            <span class="prod-tag yellow-tag">Popular</span>
+          </div>
+          <div class="prod-body">
+            <h3>Termo acero inoxidable</h3>
+            <p class="prod-desc">Conserva temperatura 24 hs. Varios colores y capacidades disponibles.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20el%20termo." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=500&q=80&fit=crop" alt="Pava eléctrica" loading="lazy" />
+            <span class="prod-tag">Cocina</span>
+          </div>
+          <div class="prod-body">
+            <h3>Pava eléctrica</h3>
+            <p class="prod-desc">1.7 litros. Apagado automático y base 360°. Ideal para mates.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20la%20pava%20el%C3%A9ctrica." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card fade-in">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&q=80&fit=crop" alt="Router WiFi" loading="lazy" />
+            <span class="prod-tag">Tech</span>
+          </div>
+          <div class="prod-body">
+            <h3>Router WiFi</h3>
+            <p class="prod-desc">Doble banda AC1200. Mayor cobertura y velocidad en todo el hogar.</p>
+            <div class="prod-footer">
+              <span class="prod-price"><i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá el precio</span>
+              <a href="https://wa.me/5491126430355?text=Hola%2C%20me%20interesa%20el%20router%20WiFi." target="_blank" rel="noopener" class="btn-prod">Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prod-cta fade-in">
+        <p>¿No encontrás lo que buscás?</p>
+        <a href="https://wa.me/5491126430355?text=Hola%21%20Busco%20un%20producto%20que%20no%20encuentro%20en%20la%20web." target="_blank" rel="noopener" class="btn-neon">
+          <i class="bx bxl-whatsapp" aria-hidden="true"></i>Consultá por más productos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BENEFICIOS ── -->
+  <section class="section beneficios" id="beneficios">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Razones</span>
+        <h2>Por qué comprar en<br /><span class="text-blue">TermoElian TECH</span></h2>
+        <p>Una tienda pensada para hacer tu vida más práctica y moderna.</p>
+      </div>
+      <div class="ben-grid">
+        <div class="ben-item fade-in">
+          <div class="ben-icon"><i class="bx bxs-user-voice" aria-hidden="true"></i></div>
+          <h3>Atención personalizada</h3>
+          <p>Te respondemos por WhatsApp, Instagram y Facebook con toda la info que necesitás.</p>
+        </div>
+        <div class="ben-item fade-in">
+          <div class="ben-icon"><i class="bx bxs-grid-alt" aria-hidden="true"></i></div>
+          <h3>Variedad de productos</h3>
+          <p>Electrodomésticos, tecnología, bazar y mucho más. Siempre con novedades.</p>
+        </div>
+        <div class="ben-item fade-in">
+          <div class="ben-icon"><i class="bx bxs-home" aria-hidden="true"></i></div>
+          <h3>Artículos para el hogar</h3>
+          <p>Todo lo que necesita tu casa: cocina, living, dormitorio y más.</p>
+        </div>
+        <div class="ben-item fade-in">
+          <div class="ben-icon yellow"><i class="bx bxs-zap" aria-hidden="true"></i></div>
+          <h3>Tecnología práctica</h3>
+          <p>Productos que simplifican tu día a día con la última tecnología disponible.</p>
+        </div>
+        <div class="ben-item fade-in">
+          <div class="ben-icon"><i class="bx bxs-bell" aria-hidden="true"></i></div>
+          <h3>Novedades y ofertas</h3>
+          <p>Seguinos en redes para enterarte primero de todas las promociones y nuevos productos.</p>
+        </div>
+        <div class="ben-item fade-in">
+          <div class="ben-icon"><i class="bx bxl-instagram" aria-hidden="true"></i></div>
+          <h3>Consultas por redes</h3>
+          <p>Canal directo por Instagram y Facebook para que contactes cuando quieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REDES SOCIALES ── -->
+  <section class="section redes bg-dark" id="redes">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Comunidad</span>
+        <h2>Seguinos y conocé las novedades</h2>
+        <p>Las últimas ofertas, productos nuevos y novedades están en nuestras redes.</p>
+      </div>
+      <div class="redes-grid">
+        <div class="red-card ig-card fade-in">
+          <div class="rc-icon">
+            <i class="bx bxl-instagram" aria-hidden="true"></i>
+          </div>
+          <h3>Instagram</h3>
+          <p>Fotos de productos, ofertas exclusivas y novedades todos los días.</p>
+          <span class="rc-handle">@termoelectro</span>
+          <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="btn-red ig-btn">
+            <i class="bx bxl-instagram" aria-hidden="true"></i>Ver Instagram
+          </a>
+        </div>
+        <div class="red-card fb-card fade-in">
+          <div class="rc-icon fb">
+            <i class="bx bxl-facebook" aria-hidden="true"></i>
+          </div>
+          <h3>Facebook</h3>
+          <p>Publicaciones con precios, consultas en comentarios y catálogo actualizado.</p>
+          <span class="rc-handle">TermoElian TECH</span>
+          <a href="https://www.facebook.com/profile.php?id=61574409793099" target="_blank" rel="noopener" class="btn-red fb-btn">
+            <i class="bx bxl-facebook" aria-hidden="true"></i>Ver Facebook
+          </a>
+        </div>
+      </div>
+      <div class="redes-wa fade-in">
+        <i class="bx bxl-whatsapp rwa-icon" aria-hidden="true"></i>
+        <div>
+          <h3>¿Preferís WhatsApp?</h3>
+          <p>Escribinos directamente al <strong>+54 9 11 2643-0355</strong> y te respondemos al instante.</p>
+        </div>
+        <a href="https://wa.me/5491126430355?text=Hola%20TermoElian%20TECH%2C%20consulto%20por%20productos." target="_blank" rel="noopener" class="btn-wa-section">
+          <i class="bx bxl-whatsapp" aria-hidden="true"></i>Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALERÍA ── -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Visual</span>
+        <h2>Productos que transforman tu hogar</h2>
+        <p>Un vistazo a la variedad de artículos que tenemos disponibles.</p>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fit=crop" alt="Electrodomésticos de cocina" loading="lazy" />
+          <div class="gal-label">Cocina moderna</div>
+        </div>
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop" alt="Tecnología" loading="lazy" />
+          <div class="gal-label">Tecnología</div>
+        </div>
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1493941089073-5bbc1f2f0b72?w=600&q=80&fit=crop" alt="Hogar moderno" loading="lazy" />
+          <div class="gal-label">Hogar</div>
+        </div>
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1489674267075-cee793167a08?w=600&q=80&fit=crop" alt="Electrodomésticos" loading="lazy" />
+          <div class="gal-label">Electrodomésticos</div>
+        </div>
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&q=80&fit=crop" alt="Dispositivos tech" loading="lazy" />
+          <div class="gal-label">Tech & Accesorios</div>
+        </div>
+        <div class="gal-item fade-in">
+          <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&fit=crop" alt="Conectividad" loading="lazy" />
+          <div class="gal-label">Bazar & Más</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="section cta-final bg-cta">
+    <div class="container">
+      <div class="cta-final-wrap fade-in">
+        <div class="cta-bolt-deco" aria-hidden="true">
+          <i class="bx bxs-zap" aria-hidden="true"></i>
+        </div>
+        <h2>Consultá hoy por productos disponibles</h2>
+        <p>Encontrá electrodomésticos, tecnología y bazar para tu casa en un solo lugar. Siempre con novedades y las mejores opciones.</p>
+        <div class="cta-actions">
+          <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="btn-ig-final">
+            <i class="bx bxl-instagram" aria-hidden="true"></i>Consultar por Instagram
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61574409793099" target="_blank" rel="noopener" class="btn-fb-final">
+            <i class="bx bxl-facebook" aria-hidden="true"></i>Ver Facebook
+          </a>
+          <a href="https://wa.me/5491126430355?text=Hola%21%20Quiero%20consultar%20por%20productos%20de%20TermoElian%20TECH." target="_blank" rel="noopener" class="btn-wa-final">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="bx bxs-zap ft-bolt" aria-hidden="true"></i>
+            <div>
+              <span class="ft-name">TermoElian</span><span class="ft-tech">TECH</span>
+            </div>
+          </div>
+          <p class="ft-tagline">Tecnología, electrodomésticos y bazar para tu hogar.</p>
+          <p class="ft-cats">Electrodomésticos · Tecnología · Bazar</p>
+        </div>
+        <div class="footer-redes">
+          <h4>Seguinos</h4>
+          <a href="https://www.instagram.com/termoelectro" target="_blank" rel="noopener" class="ft-link">
+            <i class="bx bxl-instagram" aria-hidden="true"></i>@termoelectro
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61574409793099" target="_blank" rel="noopener" class="ft-link">
+            <i class="bx bxl-facebook" aria-hidden="true"></i>TermoElian TECH
+          </a>
+          <a href="https://wa.me/5491126430355" target="_blank" rel="noopener" class="ft-link">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i>+54 9 11 2643-0355
+          </a>
+        </div>
+        <div class="footer-links-nav">
+          <h4>Secciones</h4>
+          <a href="#categorias" class="ft-link-nav">Categorías</a>
+          <a href="#productos" class="ft-link-nav">Productos</a>
+          <a href="#beneficios" class="ft-link-nav">Beneficios</a>
+          <a href="#galeria" class="ft-link-nav">Galería</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TermoElian TECH. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TuPaginaYa strip -->
+  <div class="tupaginaya-footer" aria-label="Créditos del sitio">
+    <span>Sitio web creado por</span>
+    <a href="https://tusitiowebya.github.io" target="_blank" rel="noopener">TuPáginaYa</a>
+  </div>
+
+  <script src="main.js?v=20260522"></script>
+</body>
+</html>
