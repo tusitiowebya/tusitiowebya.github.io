@@ -8,24 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --navy:    #090f1a;
-            --navy2:   #0c1828;
-            --navy3:   #0f2035;
-            --blue:    #0ea5e9;
-            --teal:    #06b6d4;
-            --teal2:   #0891b2;
-            --amber:   #f59e0b;
-            --gold:    #fbbf24;
-            --white:   #ffffff;
-            --gray:    #94a3b8;
-            --gray2:   #cbd5e1;
-            --glass:   rgba(255,255,255,0.04);
-            --glass2:  rgba(255,255,255,0.07);
-        }
+    <link rel="stylesheet" href="style.css">
 
         html { scroll-behavior: smooth; }
         body {
@@ -673,10 +656,6 @@
             background: linear-gradient(to right, transparent, rgba(6,182,212,.2), transparent);
         }
 
-        /* ── FADE UP ── */
-        .fu { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
-        .fu.vis { opacity: 1; transform: translateY(0); }
-    </style>
 </head>
 <body>
 
@@ -1160,55 +1139,6 @@
     </div>
 </footer>
 
-<script>
-    // Navbar scroll
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(q => {
-        q.addEventListener('click', () => {
-            const item = q.parentElement;
-            const open = item.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            if (!open) item.classList.add('open');
-        });
-    });
-
-    // Fade-up observer
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach((e, i) => {
-            if (e.isIntersecting) {
-                setTimeout(() => e.target.classList.add('vis'), i * 70);
-                obs.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.fu').forEach(el => obs.observe(el));
-
-    // Counter animation
-    function animateCounter(el) {
-        const target = parseInt(el.dataset.target);
-        const suffix = el.dataset.target.includes('+') ? '+' : (el.closest('.stat-item').querySelector('.stat-label').textContent.includes('%') ? '%' : '+');
-        const duration = 1800;
-        const step = target / (duration / 16);
-        let current = 0;
-        const timer = setInterval(() => {
-            current = Math.min(current + step, target);
-            el.textContent = Math.floor(current) + (current >= target ? suffix : '');
-            if (current >= target) clearInterval(timer);
-        }, 16);
-    }
-
-    const counterObs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.querySelectorAll('[data-target]').forEach(animateCounter);
-                counterObs.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.stats-bar').forEach(el => counterObs.observe(el));
-</script>
+<script src="script.js"></script>
 </body>
 </html>
