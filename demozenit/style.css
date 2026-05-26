@@ -80,12 +80,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-brand {
     display: flex; align-items: center; gap: 10px;
 }
-.nav-logo-mark {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: linear-gradient(135deg, var(--teal2) 0%, var(--blue) 50%, var(--amber) 100%);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.2rem; font-weight: 900; color: #fff;
+.nav-logo-img {
+    height: 40px; width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 .nav-brand-name {
     font-family: 'Space Grotesk', sans-serif;
@@ -621,6 +619,11 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;
 }
 .ft-brand-name span { color: var(--amber); }
+.ft-logo {
+    height: 36px; width: auto; object-fit: contain;
+    filter: brightness(0) invert(1); opacity: .85;
+    margin-bottom: 10px;
+}
 .ft-brand p { font-size: .88rem; color: var(--gray); line-height: 1.6; max-width: 260px; }
 .ft-social { display: flex; gap: 10px; margin-top: 20px; }
 .soc {
