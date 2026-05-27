@@ -155,7 +155,7 @@ ul { list-style: none; }
     box-shadow: 0 2px 20px rgba(11,46,99,.1);
 }
 .nav-logo-img {
-    height: 42px; width: auto;
+    height: 54px; width: auto;
     filter: brightness(0) invert(1);  /* blanco sobre hero oscuro */
     transition: filter .3s;
 }
