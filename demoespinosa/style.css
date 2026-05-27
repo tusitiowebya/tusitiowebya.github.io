@@ -154,7 +154,14 @@ ul { list-style: none; }
     backdrop-filter: blur(16px);
     box-shadow: 0 2px 20px rgba(11,46,99,.1);
 }
-.nav-logo-img { height: 42px; width: auto; transition: filter .3s; }
+.nav-logo-img {
+    height: 42px; width: auto;
+    filter: brightness(0) invert(1);  /* blanco sobre hero oscuro */
+    transition: filter .3s;
+}
+.navbar.scrolled .nav-logo-img {
+    filter: none;  /* colores originales sobre navbar blanco */
+}
 .nav-links {
     display: flex; align-items: center; gap: 30px;
     list-style: none;
