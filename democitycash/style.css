@@ -183,7 +183,7 @@ ul { list-style: none; }
 }
 .nav-logo { display: flex; align-items: center; }
 .nav-logo-img {
-  height: 52px;
+  height: 70px;
   width: auto;
   filter: brightness(0) invert(1);
   transition: filter var(--transition), transform var(--transition);
@@ -288,7 +288,7 @@ ul { list-style: none; }
   margin: 0 auto;
 }
 .hero-logo {
-  height: 90px;
+  height: 130px;
   width: auto;
   margin: 0 auto 28px;
   filter: brightness(0) invert(1) drop-shadow(0 0 30px rgba(20,164,77,.6));
@@ -919,7 +919,7 @@ ul { list-style: none; }
 }
 .cta-final-content { position: relative; z-index: 1; }
 .cta-logo {
-  height: 80px;
+  height: 110px;
   width: auto;
   margin: 0 auto 32px;
   filter: brightness(0) invert(1) opacity(.85);
@@ -976,7 +976,7 @@ ul { list-style: none; }
 }
 .ft-brand {}
 .ft-logo {
-  height: 52px;
+  height: 70px;
   width: auto;
   filter: brightness(0) invert(1) opacity(.75);
   margin-bottom: 18px;
@@ -1121,7 +1121,7 @@ ul { list-style: none; }
   .nav-toggle { display: flex; z-index: 1000; }
 
   /* Hero mobile */
-  .hero-logo { height: 70px; }
+  .hero-logo { height: 100px; }
   .hero-title { font-size: clamp(2.2rem, 8vw, 3.2rem); }
   .hero-btns { flex-direction: column; gap: 12px; }
   .hero-btns .btn-primary,
