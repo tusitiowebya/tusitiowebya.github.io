@@ -494,6 +494,48 @@ h2 em { font-style: italic; color: var(--teal); font-weight: 600; }
   color: var(--muted);
   line-height: 1.65;
 }
+/* cards as links */
+a.cob-card { color: inherit; text-decoration: none; display: flex; flex-direction: column; }
+.cob-card p { flex: 1; }
+
+/* online badge (top-right chip) */
+.cob-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--teal-bg);
+  color: var(--teal);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(0,168,181,0.3);
+}
+.cob-card { position: relative; }
+
+/* cta text at bottom of card */
+.cob-action {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+.cob-action--online { color: var(--teal); }
+.cob-action--wa     { color: var(--muted); }
+.cob-card:hover .cob-action { color: var(--teal); letter-spacing: 0.08em; }
+
+/* highlighted card (online) */
+.cob-card--online {
+  border-color: rgba(0,168,181,0.25);
+  background: linear-gradient(160deg, rgba(0,168,181,0.04) 0%, var(--white) 60%);
+}
+
 .cob-cta { text-align: center; }
 
 /* ── NOSOTROS ────────────────────────────────────────────── */
@@ -1219,7 +1261,7 @@ h2 em { font-style: italic; color: var(--teal); font-weight: 600; }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
   .nav-inner { grid-template-columns: auto 1fr auto; }
-  .cob-grid { grid-template-columns: repeat(2, 1fr); }
+  .cob-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .caucion-inner {
     grid-template-columns: 1fr;
     gap: 48px;
