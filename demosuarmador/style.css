@@ -301,15 +301,16 @@ ul { list-style: none; }
 .hero-title {
   font-family: var(--serif);
   font-size: clamp(3rem, 7.5vw, 5.8rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.04;
   color: #fff;
   margin-bottom: 22px;
   max-width: 720px;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.25);
 }
 .hero-title em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--cream);
 }
 
