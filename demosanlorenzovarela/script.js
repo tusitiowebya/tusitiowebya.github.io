@@ -104,18 +104,39 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 /* ---------- GALLERY FILTERS ---------- */
-const filterBtns = document.querySelectorAll('.gal-filter');
-const gmItems    = Array.from(document.querySelectorAll('.gm-item'));
+const filterBtns  = document.querySelectorAll('.gal-filter');
+const galMasonry  = document.getElementById('galMasonry');
+const gmItems     = Array.from(document.querySelectorAll('.gm-item'));
+
+// Contenedor oculto fuera del flujo para guardar items filtrados
+const galBench = document.createElement('div');
+galBench.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden;visibility:hidden;pointer-events:none';
+document.body.appendChild(galBench);
+
+function applyFilter(filter) {
+  // Fade out
+  galMasonry.style.opacity = '0';
+  galMasonry.style.transition = 'opacity .2s ease';
+
+  setTimeout(() => {
+    gmItems.forEach(item => {
+      const match = filter === 'all' || item.dataset.cat === filter;
+      if (match) {
+        if (!galMasonry.contains(item)) galMasonry.appendChild(item);
+      } else {
+        if (!galBench.contains(item)) galBench.appendChild(item);
+      }
+    });
+    // Fade in
+    galMasonry.style.opacity = '1';
+  }, 200);
+}
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    gmItems.forEach(item => {
-      const match = filter === 'all' || item.dataset.cat === filter;
-      item.classList.toggle('hidden', !match);
-    });
+    applyFilter(btn.dataset.filter);
   });
 });
 
