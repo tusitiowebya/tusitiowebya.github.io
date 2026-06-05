@@ -268,37 +268,85 @@
     <div class="head">
       <span class="eye fu">— Galería</span>
       <h2 class="fu">Viví el fútbol <span class="t-red">desde adentro</span></h2>
-      <p class="fu">Una mirada al día a día del equipo: entrenamientos, partidos y compañerismo.</p>
+      <p class="fu">Entrenamientos, partidos y momentos del equipo. La pasión en imágenes.</p>
     </div>
 
-    <div class="gal-grid">
-      <div class="gi gi-tall fu" data-src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=900&q=80" alt="Equipo de fútbol" />
+    <!-- Filtros -->
+    <div class="gal-filters fu">
+      <button class="gal-filter active" data-filter="all">Todos</button>
+      <button class="gal-filter" data-filter="entrenamiento">Entrenamientos</button>
+      <button class="gal-filter" data-filter="partido">Partidos</button>
+      <button class="gal-filter" data-filter="equipo">Equipo</button>
+    </div>
+
+    <div class="gal-masonry" id="galMasonry">
+
+      <div class="gm-item fu" data-cat="equipo" data-src="fotoscasla/foto01.jpg">
+        <img src="fotoscasla/foto01.jpg" alt="Equipo San Lorenzo Varela" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Equipo</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80" alt="Partido de fútbol" />
+
+      <div class="gm-item gm-tall fu" data-cat="entrenamiento" data-src="fotoscasla/foto02.jpg">
+        <img src="fotoscasla/foto02.jpg" alt="Entrenamiento fútbol infantil" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Entrenamiento</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=900&q=80" alt="Niños jugando" />
+
+      <div class="gm-item fu" data-cat="partido" data-src="fotoscasla/foto03.jpg">
+        <img src="fotoscasla/foto03.jpg" alt="Partido de fútbol" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Partido</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi gi-wide fu" data-src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1200&q=80" alt="Cancha de fútbol" />
+
+      <div class="gm-item gm-wide fu" data-cat="equipo" data-src="fotoscasla/foto04.jpg">
+        <img src="fotoscasla/foto04.jpg" alt="Grupo de jugadores" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Equipo</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=900&q=80" alt="Niño con pelota" />
+
+      <div class="gm-item fu" data-cat="entrenamiento" data-src="fotoscasla/foto05.jpg">
+        <img src="fotoscasla/foto05.jpg" alt="Técnica individual" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Entrenamiento</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1551281044-8af1a2bd6c64?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1551281044-8af1a2bd6c64?w=900&q=80" alt="Pelota de fútbol" />
+
+      <div class="gm-item fu" data-cat="partido" data-src="fotoscasla/foto06.jpg">
+        <img src="fotoscasla/foto06.jpg" alt="Acción en el partido" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Partido</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi gi-tall fu" data-src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=900&q=80" alt="Jugador infantil" />
+
+      <div class="gm-item gm-tall fu" data-cat="entrenamiento" data-src="fotoscasla/foto07.jpg">
+        <img src="fotoscasla/foto07.jpg" alt="Entrenamiento cancha" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Entrenamiento</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=900&q=80" alt="Entrenamiento" />
+
+      <div class="gm-item fu" data-cat="equipo" data-src="fotoscasla/foto08.jpg">
+        <img src="fotoscasla/foto08.jpg" alt="Compañerismo" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Equipo</span><span class="gm-zoom">🔍</span></div>
       </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=1400&q=80">
-        <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=900&q=80" alt="Grupo de chicos" />
+
+      <div class="gm-item fu" data-cat="partido" data-src="fotoscasla/foto09.jpg">
+        <img src="fotoscasla/foto09.jpg" alt="Jugada de partido" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Partido</span><span class="gm-zoom">🔍</span></div>
       </div>
+
+      <div class="gm-item gm-wide fu" data-cat="entrenamiento" data-src="fotoscasla/foto10.jpg">
+        <img src="fotoscasla/foto10.jpg" alt="Cancha de 11" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Entrenamiento</span><span class="gm-zoom">🔍</span></div>
+      </div>
+
+      <div class="gm-item fu" data-cat="equipo" data-src="fotoscasla/foto11.jpg">
+        <img src="fotoscasla/foto11.jpg" alt="Festejo del equipo" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Equipo</span><span class="gm-zoom">🔍</span></div>
+      </div>
+
+      <div class="gm-item fu" data-cat="partido" data-src="fotoscasla/foto12.jpg">
+        <img src="fotoscasla/foto12.jpg" alt="Gol en el partido" loading="lazy" />
+        <div class="gm-overlay"><span class="gm-tag">Partido</span><span class="gm-zoom">🔍</span></div>
+      </div>
+
+    </div>
+
+    <div class="gal-cta fu">
+      <a href="https://wa.me/5491157583706?text=Hola%2C%20quiero%20ver%20m%C3%A1s%20sobre%20el%20equipo." target="_blank" rel="noopener" class="btn btn-primary">
+        Sumate al equipo →
+      </a>
     </div>
   </div>
 </section>
