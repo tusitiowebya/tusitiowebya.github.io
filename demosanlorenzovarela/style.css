@@ -131,35 +131,17 @@ h3{ font-size:clamp(18px,1.7vw,22px); }
 }
 .btn-lg{ padding:18px 38px; font-size:15px; }
 
-/* ============ LOGO/SHIELD ============ */
-.logo-shield{
-  position:relative;
-  width:46px; height:52px;
-  background:var(--navy);
-  border-radius:6px 6px 22px 22px;
-  display:grid; place-items:center;
-  overflow:hidden;
-  box-shadow:0 8px 18px -6px rgba(6,18,51,.5);
+/* ============ LOGO IMG ============ */
+.logo-img{
+  height:clamp(44px,5vw,56px);
+  width:auto;
+  display:block;
   flex-shrink:0;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.4));
+  transition:transform .3s ease;
 }
-.logo-stripes{
-  position:absolute; inset:0;
-  background:repeating-linear-gradient(
-    90deg,
-    var(--navy) 0 6px,
-    var(--red) 6px 12px
-  );
-  opacity:.95;
-}
-.logo-letter{
-  position:relative;
-  font-family:var(--display);
-  font-size:22px;
-  color:var(--white);
-  letter-spacing:.02em;
-  text-shadow:0 2px 4px rgba(0,0,0,.5);
-  z-index:2;
-}
+.logo:hover .logo-img{ transform:scale(1.06); }
+.ft-logo .logo-img{ height:54px; }
 
 /* ============ NAVBAR ============ */
 .nav{
