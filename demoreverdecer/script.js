@@ -15,19 +15,24 @@ const onScroll = () => {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Mobile toggle
+// Menú mobile — abrir / cerrar
 const toggle = document.getElementById('navToggle');
 const mobile = document.getElementById('navMobile');
+const navClose = document.getElementById('navClose');
 if (toggle && mobile) {
-  toggle.addEventListener('click', () => {
-    mobile.classList.toggle('open');
-    document.body.style.overflow = mobile.classList.contains('open') ? 'hidden' : '';
-  });
-  mobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobile.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  const openMenu = () => {
+    mobile.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeMenu = () => {
+    mobile.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  toggle.addEventListener('click', openMenu);
+  if (navClose) navClose.addEventListener('click', closeMenu);
+  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobile.classList.contains('open')) closeMenu();
   });
 }
 
@@ -46,44 +51,42 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fu').forEach(el => io.observe(el));
 
-// Tallo del brote — se "dibuja" al entrar en viewport
-const branchLine = document.querySelector('.branch-line');
-if (branchLine) {
-  const branchIO = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        branchLine.classList.add('drawn');
-        branchIO.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05 });
-  branchIO.observe(document.querySelector('.branch-stage') || branchLine);
-}
+// ============================================================
+// SIGNATURE: círculo de respiración guiada
+// Sincroniza el texto con la animación CSS @keyframes breathe
+// (12s: inhalá 0-4s · sostené 4-6s · exhalá 6-12s).
+// ============================================================
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const phaseEl = document.getElementById('breathPhase');
+const countEl = document.getElementById('breathCount');
 
-// SVG hero — paraguas que sube + sol que aparece cuando el hero termina de entrar
-const heroArt = document.querySelector('.hero-art');
-if (heroArt) {
-  const heroIO = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const sun = heroArt.querySelector('.sun');
-        const sprout = heroArt.querySelector('.sprout');
-        const stem = heroArt.querySelector('.stem');
-        if (sun) {
-          sun.style.transition = 'opacity 2.2s ease 1.2s';
-          sun.style.opacity = '.95';
-        }
-        if (sprout) {
-          sprout.style.transformOrigin = '180px 460px';
-          sprout.style.transform = 'scaleY(.2)';
-          sprout.style.transition = 'transform 2s cubic-bezier(.2,.7,.3,1) .6s';
-          requestAnimationFrame(() => {
-            sprout.style.transform = 'scaleY(1)';
-          });
-        }
-        heroIO.unobserve(entry.target);
+if (phaseEl && countEl) {
+  if (reduceMotion) {
+    phaseEl.textContent = 'Respirá';
+    countEl.textContent = 'a tu ritmo';
+  } else {
+    // Fases dentro del ciclo de 12s (ms desde el inicio del ciclo)
+    const phases = [
+      { at: 0,    label: 'Inhalá',  note: '4 segundos' },
+      { at: 4000, label: 'Sostené', note: '2 segundos' },
+      { at: 6000, label: 'Exhalá',  note: '6 segundos' },
+    ];
+    const CYCLE = 12000;
+    const start = performance.now();
+    let lastLabel = '';
+
+    const tick = (now) => {
+      const t = (now - start) % CYCLE;
+      // buscar la fase activa (la última cuyo "at" ya pasó)
+      let current = phases[0];
+      for (const p of phases) { if (t >= p.at) current = p; }
+      if (current.label !== lastLabel) {
+        phaseEl.textContent = current.label;
+        countEl.textContent = current.note;
+        lastLabel = current.label;
       }
-    });
-  }, { threshold: 0.3 });
-  heroIO.observe(heroArt);
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
 }
