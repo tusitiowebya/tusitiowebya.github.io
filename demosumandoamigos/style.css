@@ -211,9 +211,9 @@ body > *:not(.bg-glow) { position: relative; z-index: 1; }
 .plan-tag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--amber); color: var(--bg); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 16px; border-radius: 50px; white-space: nowrap; }
 .plan-name { font-family: var(--disp); font-weight: 700; font-size: 1.9rem; color: var(--cream); line-height: 1; }
 .plan-for { font-size: 0.92rem; color: var(--ink); margin-top: 6px; }
-.plan-price { display: flex; align-items: flex-start; gap: 2px; margin: 24px 0; color: var(--cream); }
+.plan-price { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 2px; margin: 24px 0; color: var(--cream); }
 .pp-cur { font-family: var(--disp); font-size: 1.4rem; font-weight: 600; margin-top: 8px; color: var(--amber); }
-.pp-amount { font-family: var(--disp); font-weight: 900; font-size: 3.2rem; line-height: 1; color: var(--amber); letter-spacing: -0.02em; }
+.pp-amount { font-family: var(--disp); font-weight: 900; font-size: clamp(2.5rem, 7vw, 3.2rem); line-height: 1; color: var(--amber); letter-spacing: -0.02em; }
 .pp-cycle { align-self: flex-end; font-family: var(--mono); font-size: 0.8rem; color: var(--ink); margin-bottom: 8px; margin-left: 4px; }
 .plan-feats { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; flex: 1; }
 .plan-feats li { position: relative; padding-left: 28px; font-size: 0.96rem; color: var(--cream); }
@@ -319,6 +319,9 @@ body > *:not(.bg-glow) { position: relative; z-index: 1; }
   .gal-grid { grid-template-columns: repeat(3, 1fr); }
   .testi-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
 }
+@media (max-width: 1024px) {
+  .prog-badge { right: 0; }
+}
 @media (max-width: 768px) {
   .nav-links, .btn-nav { display: none; }
   .nav-toggle { display: flex; }
@@ -327,17 +330,46 @@ body > *:not(.bg-glow) { position: relative; z-index: 1; }
   .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle.active span:nth-child(2) { opacity: 0; }
   .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* hero: dejar respirar y no recortar arriba */
+  .hero { align-items: flex-start; padding-top: 116px; padding-bottom: 70px; min-height: 100svh; height: auto; }
+  .ht-big { font-size: clamp(3rem, 15vw, 4.6rem); }
+  .hero-sub { font-size: 1.02rem; }
+  .hero-eq { height: 42px; max-width: 100%; }
+
   .gal-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; }
+  .gal-tall { grid-row: span 2; }
   .gal-wide { grid-column: span 2; }
   .modal-nav { display: none; }
-  section { padding-block: 76px !important; }
+  section { padding-block: 72px !important; }
 }
 @media (max-width: 480px) {
-  .container { padding: 0 18px; }
+  .container { padding: 0 16px; }
+  .ht-pre { font-size: 1.05rem; }
+  .ht-big { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+  .onair { font-size: 0.68rem; padding: 7px 13px; letter-spacing: 0.08em; }
+  .hero-host { font-size: 1.1rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { width: 100%; }
+
   .seg-grid { grid-template-columns: 1fr; }
   .ben-grid { grid-template-columns: 1fr; }
-  .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+
+  /* galería en una columna, sin spans que descuadren */
+  .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 210px; }
   .gal-tall, .gal-wide { grid-column: span 1; grid-row: span 1; }
-  .prog-badge { right: 0; }
-  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .gal-item figcaption { opacity: 1; transform: none; }
+
+  /* planes: que el precio nunca se desborde */
+  .plan { padding: 30px 22px; }
+  .pp-amount { font-size: 2.6rem; }
+  .plan-name { font-size: 1.7rem; }
+
+  .billing-toggle { width: 100%; justify-content: center; }
+  .bt-opt { padding: 10px 16px; font-size: 0.9rem; }
+  .bt-save { display: none; }
+
+  .prog-badge { transform: rotate(3deg) scale(0.9); transform-origin: bottom right; }
+  .ticker-track span { font-size: 0.95rem; }
+  .cta h2, .sec-title { word-break: break-word; }
 }
