@@ -26,25 +26,23 @@
   --tr: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html, body { max-width: 100%; overflow-x: clip; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; width: 100%; }
 body {
   font-family: var(--body); background: var(--bg); color: var(--cream);
-  line-height: 1.65; position: relative;
+  line-height: 1.65; position: relative; width: 100%; max-width: 100%; overflow-x: hidden;
 }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 26px; }
 
-/* warm radial glow background */
+/* warm radial glow background — detrás de todo, sin romper position:fixed */
 .bg-glow {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
     radial-gradient(60% 50% at 80% 0%, rgba(232,97,44,0.16), transparent 70%),
     radial-gradient(50% 50% at 10% 90%, rgba(242,169,59,0.10), transparent 70%);
 }
-body > *:not(.bg-glow) { position: relative; z-index: 1; }
 
 /* ░░ TYPOGRAPHY HELPERS ░░ */
 .kicker {
@@ -342,6 +340,13 @@ body > *:not(.bg-glow) { position: relative; z-index: 1; }
   .gal-tall { grid-row: span 2; }
   .gal-wide { grid-column: span 2; }
   .modal-nav { display: none; }
+
+  /* footer y testimonios a una sola columna (causa real del desborde) */
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .seg-grid { grid-template-columns: 1fr 1fr; }
+  .ben-grid { grid-template-columns: 1fr 1fr; }
+
   section { padding-block: 72px !important; }
 }
 @media (max-width: 480px) {
@@ -378,4 +383,7 @@ body > *:not(.bg-glow) { position: relative; z-index: 1; }
   /* botón flotante + cerrar modal: márgenes seguros en celu */
   .wa-float { bottom: 18px; right: 18px; width: 56px; height: 56px; }
   .modal-close { top: 16px; right: 16px; }
+
+  /* botón grande de WhatsApp: que no se desborde en pantallas chicas */
+  .btn-whatsapp-xl { font-size: clamp(1.05rem, 5vw, 1.4rem); padding: 16px 22px; max-width: 100%; flex-wrap: wrap; }
 }
