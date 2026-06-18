@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Destapaciones con Máquinas. Cloacas, cocinas, cámaras sépticas, rejillas y desagüe. Con garantía y factura. Llamá: 1158038753">
+    <title>Destapaciones con Máquinas | Servicio Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --yellow: #f59e0b;
+            --orange: #ea580c;
+            --red: #dc2626;
+            --dark:  #050505;
+            --dark2: #0d0d0d;
+            --dark3: #141414;
+            --dark4: #1c1c1c;
+            --white: #ffffff;
+            --gray:  #9ca3af;
+            --gray-light: #d1d5db;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+        .section-title .accent { color: var(--yellow); }
+
+        /* ── FLOATING BUTTONS ── */
+        .float-buttons {
+            position: fixed; bottom: 24px; right: 20px;
+            display: flex; flex-direction: column; gap: 12px; z-index: 9999;
+        }
+        .float-btn {
+            width: 56px; height: 56px; border-radius: 50%; border: none;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,.5);
+            transition: transform .2s, box-shadow .2s; text-decoration: none;
+        }
+        .float-btn:hover { transform: scale(1.12); }
+        .float-btn.whatsapp { background: #25d366; animation: pulseG 2s infinite; }
+        .float-btn.call     { background: var(--yellow); animation: pulseY 2s infinite .5s; }
+        .float-btn svg { width: 28px; height: 28px; fill: #fff; }
+        .float-btn.call svg { fill: #000; }
+
+        @keyframes pulseG {
+            0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+            50%      { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+        }
+        @keyframes pulseY {
+            0%,100% { box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+            50%      { box-shadow: 0 0 0 14px rgba(245,158,11,0); }
+        }
+
+        /* ── MOBILE STICKY BAR ── */
+        .sticky-bar {
+            display: none; position: fixed; bottom: 0; left: 0; right: 0;
+            z-index: 9998; background: var(--dark2);
+            border-top: 2px solid var(--yellow);
+            padding: 10px 16px; gap: 10px;
+        }
+        .sticky-bar a {
+            flex: 1; padding: 13px 8px; border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem; font-weight: 800;
+            text-align: center; text-transform: uppercase; letter-spacing: .05em;
+        }
+        .sticky-bar .s-call { background: var(--yellow); color: #000; }
+        .sticky-bar .s-wa   { background: #25d366; color: #fff; }
+
+        @media (max-width: 768px) {
+            .sticky-bar { display: flex; }
+            .float-buttons { display: none; }
+            body { padding-bottom: 76px; }
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+            padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            transition: background .3s, backdrop-filter .3s;
+        }
+        .navbar.scrolled {
+            background: rgba(5,5,5,.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(245,158,11,.18);
+        }
+        .nav-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.25rem; font-weight: 900; text-transform: uppercase;
+        }
+        .nav-logo span { color: var(--yellow); }
+        .nav-phone {
+            display: flex; align-items: center; gap: 7px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem; font-weight: 800; color: var(--yellow);
+        }
+        .nav-phone svg { width: 17px; height: 17px; fill: var(--yellow); }
+        .nav-cta {
+            background: var(--yellow); color: #000;
+            padding: 8px 18px; border-radius: 6px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: .9rem; font-weight: 800; text-transform: uppercase;
+        }
+        @media (max-width: 600px) { .nav-cta { display: none; } }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; background: var(--dark);
+        }
+
+        /* animated grid */
+        .hero-grid {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(245,158,11,.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(245,158,11,.06) 1px, transparent 1px);
+            background-size: 44px 44px;
+            animation: gridScroll 18s linear infinite;
+        }
+        @keyframes gridScroll {
+            from { background-position: 0 0; }
+            to   { background-position: 0 44px; }
+        }
+
+        /* glow orbs */
+        .hero-orb1 {
+            position: absolute; width: 700px; height: 700px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(245,158,11,.1) 0%, transparent 70%);
+            top: -180px; left: -180px;
+            animation: orbFloat1 9s ease-in-out infinite alternate;
+        }
+        .hero-orb2 {
+            position: absolute; width: 500px; height: 500px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(234,88,12,.09) 0%, transparent 70%);
+            bottom: -60px; right: 5%;
+            animation: orbFloat2 7s ease-in-out infinite alternate;
+        }
+        @keyframes orbFloat1 {
+            from { transform: translate(0,0) scale(1); }
+            to   { transform: translate(80px,70px) scale(1.25); }
+        }
+        @keyframes orbFloat2 {
+            from { transform: translate(0,0) scale(1); }
+            to   { transform: translate(-60px,-50px) scale(1.2); }
+        }
+
+        /* pipe silhouettes */
+        .hero-pipes {
+            position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+        }
+        .pipe {
+            position: absolute;
+            background: rgba(245,158,11,.04);
+            border: 1px solid rgba(245,158,11,.06);
+        }
+        .pipe-h { height: 6px; left: 0; right: 0; border-radius: 3px; }
+        .pipe-v { width: 6px; top: 0; bottom: 0; border-radius: 3px; }
+
+        canvas#dropsCanvas {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(5,5,5,.15) 0%,
+                rgba(5,5,5,.45) 55%,
+                rgba(5,5,5,.92) 100%
+            );
+        }
+
+        /* hero content */
+        .hero-content {
+            position: relative; z-index: 10;
+            text-align: center;
+            padding: 100px 20px 60px;
+            max-width: 960px; width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(220,38,38,.18);
+            border: 1px solid rgba(220,38,38,.5);
+            color: #fca5a5;
+            padding: 6px 18px; border-radius: 100px;
+            font-size: .82rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .1em;
+            margin-bottom: 22px;
+            animation: badgePulse 2.5s ease-in-out infinite;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; background: var(--red); border-radius: 50%;
+            animation: blink 1s ease-in-out infinite;
+        }
+        @keyframes badgePulse {
+            0%,100% { box-shadow: 0 0 0 0 rgba(220,38,38,.3); }
+            50%      { box-shadow: 0 0 12px 4px rgba(220,38,38,.2); }
+        }
+        @keyframes blink {
+            0%,100% { opacity: 1; } 50% { opacity: .2; }
+        }
+
+        .hero-title {
+            font-size: clamp(3.2rem, 11vw, 8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: .93;
+            letter-spacing: -.025em;
+            margin-bottom: 18px;
+        }
+        .hero-title .t1 { display: block; color: var(--white); }
+        .hero-title .t2 {
+            display: block; color: var(--yellow);
+            text-shadow: 0 0 50px rgba(245,158,11,.45);
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            color: var(--gray-light); margin-bottom: 10px;
+        }
+        .hero-services {
+            font-size: clamp(.85rem, 1.8vw, 1rem);
+            color: var(--gray); margin-bottom: 30px;
+            letter-spacing: .02em;
+        }
+
+        .hero-badges {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            justify-content: center; margin-bottom: 34px;
+        }
+        .hbadge {
+            display: flex; align-items: center; gap: 6px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1);
+            padding: 6px 15px; border-radius: 100px;
+            font-size: .83rem; font-weight: 600; color: var(--gray-light);
+        }
+        .hbadge.y {
+            background: rgba(245,158,11,.12);
+            border-color: rgba(245,158,11,.35);
+            color: var(--yellow);
+        }
+
+        .phone-label {
+            display: block;
+            font-size: .78rem; font-weight: 600;
+            color: var(--gray); text-transform: uppercase;
+            letter-spacing: .18em; margin-bottom: 6px;
+        }
+        .hero-phone {
+            display: block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(3rem, 9vw, 6rem);
+            font-weight: 900; letter-spacing: .03em;
+            color: var(--yellow);
+            text-shadow: 0 0 60px rgba(245,158,11,.4);
+            margin-bottom: 34px;
+            transition: text-shadow .3s;
+        }
+        .hero-phone:hover { text-shadow: 0 0 90px rgba(245,158,11,.7); }
+
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+        /* buttons */
+        .btn-call {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--yellow); color: #000;
+            padding: 18px 38px; border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: .05em;
+            box-shadow: 0 4px 30px rgba(245,158,11,.4);
+            transition: all .2s;
+        }
+        .btn-call:hover {
+            background: #fbbf24; transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(245,158,11,.6);
+        }
+        .btn-wa {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #25d366; color: #fff;
+            padding: 18px 38px; border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: .05em;
+            box-shadow: 0 4px 30px rgba(37,211,102,.3);
+            transition: all .2s;
+        }
+        .btn-wa:hover {
+            background: #22c55e; transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(37,211,102,.5);
+        }
+        .btn-call svg, .btn-wa svg { width: 22px; height: 22px; fill: currentColor; }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(245,158,11,.25), transparent);
+        }
+
+        /* ── SERVICIOS ── */
+        .servicios { padding: 80px 0; background: var(--dark2); }
+        .sec-header { text-align: center; margin-bottom: 48px; }
+        .sec-header p { color: var(--gray); margin-top: 12px; font-size: 1.05rem; }
+
+        .srv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 14px;
+        }
+        .srv-card {
+            background: var(--dark3);
+            border: 1px solid rgba(255,255,255,.06);
+            border-radius: 12px; padding: 26px 20px;
+            text-align: center; transition: all .3s; cursor: default;
+        }
+        .srv-card:hover {
+            border-color: rgba(245,158,11,.45);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 40px rgba(245,158,11,.1);
+        }
+        .srv-icon {
+            width: 58px; height: 58px;
+            background: rgba(245,158,11,.08);
+            border: 1px solid rgba(245,158,11,.18);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 14px; font-size: 1.75rem;
+            transition: all .3s;
+        }
+        .srv-card:hover .srv-icon {
+            background: rgba(245,158,11,.18);
+            border-color: rgba(245,158,11,.5);
+        }
+        .srv-card h3 {
+            font-size: 1.15rem; font-weight: 800;
+            text-transform: uppercase; margin-bottom: 8px;
+        }
+        .srv-card p { font-size: .88rem; color: var(--gray); line-height: 1.55; }
+
+        /* ── URGENCIAS ── */
+        .urgencias {
+            padding: 80px 0; background: var(--dark);
+            position: relative; overflow: hidden;
+        }
+        .urgencias::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 0% 50%, rgba(220,38,38,.05) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 70% at 100% 50%, rgba(245,158,11,.05) 0%, transparent 60%);
+        }
+        .urg-inner {
+            position: relative;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: center;
+        }
+        .urg-text h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900;
+            text-transform: uppercase; line-height: 1; margin-bottom: 18px;
+        }
+        .urg-text h2 span { color: var(--red); }
+        .urg-text p {
+            font-size: 1.05rem; color: var(--gray-light);
+            line-height: 1.7; margin-bottom: 26px;
+        }
+        .feat-list { display: flex; flex-direction: column; gap: 12px; }
+        .feat-item {
+            display: flex; align-items: center; gap: 12px;
+            font-size: .97rem; font-weight: 500;
+        }
+        .feat-check {
+            width: 24px; height: 24px; flex-shrink: 0;
+            background: rgba(245,158,11,.12);
+            border: 1px solid rgba(245,158,11,.3);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: .7rem; color: var(--yellow);
+        }
+        .urg-stats { display: flex; flex-direction: column; gap: 14px; }
+        .urg-stat {
+            background: var(--dark3);
+            border: 1px solid rgba(255,255,255,.05);
+            border-left: 4px solid var(--yellow);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+        }
+        .urg-stat.r { border-left-color: var(--red); }
+        .urg-stat.o { border-left-color: var(--orange); }
+        .urg-stat .snum {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.4rem; font-weight: 900;
+            color: var(--yellow); line-height: 1;
+        }
+        .urg-stat.r .snum { color: var(--red); }
+        .urg-stat.o .snum { color: var(--orange); }
+        .urg-stat .slabel { font-size: .88rem; color: var(--gray); margin-top: 3px; }
+
+        @media (max-width: 768px) {
+            .urg-inner { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        /* ── POR QUÉ ── */
+        .porque { padding: 80px 0; background: var(--dark2); }
+        .pq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+            gap: 18px;
+        }
+        .pq-card {
+            background: var(--dark);
+            border: 1px solid rgba(255,255,255,.05);
+            border-radius: 12px; padding: 26px 22px;
+            transition: all .3s;
+        }
+        .pq-card:hover {
+            border-color: rgba(245,158,11,.28);
+            box-shadow: 0 4px 28px rgba(245,158,11,.07);
+        }
+        .pq-card .icon { font-size: 1.9rem; margin-bottom: 12px; }
+        .pq-card h3 {
+            font-size: 1.1rem; font-weight: 800;
+            text-transform: uppercase; color: var(--yellow); margin-bottom: 8px;
+        }
+        .pq-card p { font-size: .88rem; color: var(--gray); line-height: 1.6; }
+
+        /* ── GALERIA ── */
+        .galeria { padding: 80px 0; background: var(--dark); }
+        .gal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .gal-item {
+            position: relative; border-radius: 10px; overflow: hidden;
+            aspect-ratio: 4/3; background: var(--dark3);
+        }
+        .gal-item:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+        .gal-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform .5s;
+            filter: brightness(.8) saturate(.7);
+        }
+        .gal-item:hover img { transform: scale(1.06); filter: brightness(.95) saturate(1); }
+        .gal-item .gal-over {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.55) 0%, transparent 55%);
+        }
+
+        @media (max-width: 600px) {
+            .gal-grid { grid-template-columns: repeat(2, 1fr); }
+            .gal-item:first-child { grid-column: span 2; }
+        }
+
+        /* ── CTA MID ── */
+        .cta-mid {
+            padding: 80px 0; background: var(--yellow);
+            position: relative; overflow: hidden;
+        }
+        .cta-mid::before {
+            content: ''; position: absolute; inset: 0;
+            background: repeating-linear-gradient(
+                45deg, transparent, transparent 12px,
+                rgba(0,0,0,.04) 12px, rgba(0,0,0,.04) 24px
+            );
+        }
+        .cta-mid-inner { position: relative; text-align: center; }
+        .cta-mid h2 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 900; text-transform: uppercase;
+            color: #000; line-height: .95; margin-bottom: 14px;
+        }
+        .cta-mid p { font-size: 1.1rem; color: rgba(0,0,0,.68); margin-bottom: 34px; }
+        .cta-mid .btns { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+        .btn-dark {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #000; color: var(--yellow);
+            padding: 18px 42px; border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: .05em;
+            transition: all .2s;
+        }
+        .btn-dark:hover { background: #111; transform: translateY(-2px); }
+        .btn-wa-dark {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #25d366; color: #fff;
+            padding: 18px 42px; border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: .05em;
+            transition: all .2s;
+        }
+        .btn-wa-dark:hover { background: #22c55e; transform: translateY(-2px); }
+        .btn-dark svg, .btn-wa-dark svg { width: 22px; height: 22px; fill: currentColor; }
+
+        /* ── FAQ ── */
+        .faq { padding: 80px 0; background: var(--dark2); }
+        .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+        .faq-item {
+            background: var(--dark3);
+            border: 1px solid rgba(255,255,255,.06);
+            border-radius: 10px; overflow: hidden;
+            transition: border-color .3s;
+        }
+        .faq-item.open { border-color: rgba(245,158,11,.3); }
+        .faq-q {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 24px; cursor: pointer;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.12rem; font-weight: 700;
+            text-transform: uppercase; gap: 16px; user-select: none;
+        }
+        .faq-arrow {
+            width: 28px; height: 28px; flex-shrink: 0;
+            background: rgba(245,158,11,.1);
+            border: 1px solid rgba(245,158,11,.2);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--yellow); font-size: 1rem;
+            transition: transform .3s, background .3s;
+        }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); background: rgba(245,158,11,.2); }
+        .faq-a {
+            display: none; padding: 0 24px 20px;
+            font-size: .93rem; color: var(--gray); line-height: 1.7;
+            border-top: 1px solid rgba(255,255,255,.04); padding-top: 16px;
+        }
+        .faq-item.open .faq-a { display: block; }
+
+        /* ── CTA FINAL ── */
+        .cta-final {
+            padding: 100px 0; background: var(--dark);
+            position: relative; overflow: hidden; text-align: center;
+        }
+        .cta-final::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(245,158,11,.07) 0%, transparent 70%);
+        }
+        .cta-final-inner { position: relative; }
+        .cta-final h2 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .cta-final h2 span { color: var(--yellow); }
+        .cta-final p {
+            font-size: 1.1rem; color: var(--gray); margin-bottom: 28px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .big-phone {
+            display: block; text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            font-weight: 900; letter-spacing: .03em;
+            color: var(--yellow);
+            text-shadow: 0 0 60px rgba(245,158,11,.4);
+            margin-bottom: 36px; transition: text-shadow .3s;
+        }
+        .big-phone:hover { text-shadow: 0 0 90px rgba(245,158,11,.7); }
+        .cta-final .btns { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+        /* ── FOOTER ── */
+        .footer { background: #000; border-top: 1px solid rgba(255,255,255,.06); padding: 52px 0 30px; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px; margin-bottom: 40px;
+        }
+        .ft-brand h3 {
+            font-size: 1.35rem; font-weight: 900;
+            text-transform: uppercase; margin-bottom: 12px;
+        }
+        .ft-brand h3 span { color: var(--yellow); }
+        .ft-brand p { font-size: .88rem; color: var(--gray); line-height: 1.6; max-width: 280px; }
+        .ft-social { display: flex; gap: 10px; margin-top: 20px; }
+        .soc-link {
+            width: 36px; height: 36px;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all .2s;
+        }
+        .soc-link:hover {
+            background: rgba(245,158,11,.15);
+            border-color: rgba(245,158,11,.4);
+        }
+        .ft-col h4 {
+            font-size: .82rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .1em;
+            color: var(--gray); margin-bottom: 16px;
+        }
+        .ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .ft-col ul li a { font-size: .88rem; color: var(--gray); transition: color .2s; }
+        .ft-col ul li a:hover { color: var(--yellow); }
+        .ft-col .ft-phone {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem; font-weight: 900; color: var(--yellow);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.06); padding-top: 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.28); }
+        .footer-bottom .tpy { font-size: .8rem; color: rgba(255,255,255,.28); }
+        .footer-bottom .tpy a { color: var(--yellow); font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        /* ── FADE UP ── */
+        .fade-up {
+            opacity: 0; transform: translateY(28px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-buttons">
+    <a href="https://wa.me/5491158038753" target="_blank" class="float-btn whatsapp" title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+    <a href="tel:1158038753" class="float-btn call" title="Llamar">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
+</div>
+
+<!-- MOBILE STICKY BAR -->
+<div class="sticky-bar">
+    <a href="tel:1158038753" class="s-call">📞 Llamar ahora</a>
+    <a href="https://wa.me/5491158038753" target="_blank" class="s-wa">💬 WhatsApp</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-logo">Destapaciones <span>con Máquinas</span></div>
+    <a href="tel:1158038753" class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        1158038753
+    </a>
+    <a href="tel:1158038753" class="nav-cta">Llamar ahora</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="hero-grid"></div>
+    <div class="hero-orb1"></div>
+    <div class="hero-orb2"></div>
+
+    <!-- pipe silhouettes -->
+    <div class="hero-pipes">
+        <div class="pipe pipe-h" style="top:28%; opacity:.5;"></div>
+        <div class="pipe pipe-h" style="top:65%; opacity:.3;"></div>
+        <div class="pipe pipe-v" style="left:18%; opacity:.4;"></div>
+        <div class="pipe pipe-v" style="left:82%; opacity:.35;"></div>
+        <div class="pipe pipe-v" style="left:50%; opacity:.2;"></div>
+    </div>
+
+    <canvas id="dropsCanvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Servicio activo — Atención rápida
+        </div>
+
+        <h1 class="hero-title">
+            <span class="t1">Destapaciones</span>
+            <span class="t2">Servicio urgente</span>
+        </h1>
+
+        <p class="hero-sub">Destapaciones rápidas y efectivas con máquinas profesionales.</p>
+        <p class="hero-services">Cloacas &nbsp;·&nbsp; Cocinas &nbsp;·&nbsp; Cámaras sépticas &nbsp;·&nbsp; Rejillas &nbsp;·&nbsp; Desagüe</p>
+
+        <div class="hero-badges">
+            <span class="hbadge y">✓ Garantía</span>
+            <span class="hbadge y">📄 Factura</span>
+            <span class="hbadge">⚡ Atención inmediata</span>
+            <span class="hbadge">🔧 Máquinas profesionales</span>
+        </div>
+
+        <span class="phone-label">Llamá ahora mismo</span>
+        <a href="tel:1158038753" class="hero-phone">11&nbsp;5803&#8209;8753</a>
+
+        <div class="hero-ctas">
+            <a href="tel:1158038753" class="btn-call">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                LLAMAR AHORA
+            </a>
+            <a href="https://wa.me/5491158038753" target="_blank" class="btn-wa">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                WHATSAPP
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <h2 class="section-title">¿Qué <span class="accent">destapamos</span>?</h2>
+            <p>Solucionamos todo tipo de obstrucciones con equipamiento profesional</p>
+        </div>
+        <div class="srv-grid">
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🚽</div>
+                <h3>Cloacas</h3>
+                <p>Destapación de cloaca principal y secundaria con máquinas de alta potencia.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🍽️</div>
+                <h3>Cocinas</h3>
+                <p>Destapación de piletas de cocina y desagüe de fregaderos obstruidos.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🏗️</div>
+                <h3>Cámaras sépticas</h3>
+                <p>Limpieza y destapación de cámaras sépticas domiciliarias e industriales.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🔲</div>
+                <h3>Rejillas de baño</h3>
+                <p>Desobstrucción de rejillas y desagüe de ducha, bañera y bidet.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">💧</div>
+                <h3>Desagüe general</h3>
+                <p>Destapación de desagüe principal en edificios, casas y comercios.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🧺</div>
+                <h3>Lavaderos</h3>
+                <p>Limpieza de piletas de lavar ropa y desagüe de lavaderos.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">🔧</div>
+                <h3>Cañerías</h3>
+                <p>Desobstrucción de cañerías de cualquier diámetro con sonda mecánica.</p>
+            </div>
+            <div class="srv-card fade-up">
+                <div class="srv-icon">⚡</div>
+                <h3>Urgencias</h3>
+                <p>Atendemos emergencias sanitarias con respuesta rápida y equipamiento profesional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- URGENCIAS -->
+<section class="urgencias" id="urgencias">
+    <div class="container">
+        <div class="urg-inner">
+            <div class="urg-text fade-up">
+                <h2>¿Tenés una <span>urgencia</span>?</h2>
+                <p>Vamos rápido y resolvemos el problema con máquinas profesionales. Sin demoras, sin excusas.</p>
+                <div class="feat-list">
+                    <div class="feat-item"><span class="feat-check">✓</span> Atención inmediata en toda la zona</div>
+                    <div class="feat-item"><span class="feat-check">✓</span> Atención urgente cuando la necesitás</div>
+                    <div class="feat-item"><span class="feat-check">✓</span> Trabajo garantizado por escrito</div>
+                    <div class="feat-item"><span class="feat-check">✓</span> Factura por todos los servicios</div>
+                    <div class="feat-item"><span class="feat-check">✓</span> Máquinas especializadas para cada trabajo</div>
+                </div>
+            </div>
+            <div class="urg-stats fade-up">
+                <div class="urg-stat">
+                    <div class="snum">Rápido</div>
+                    <div class="slabel">Respuesta veloz, sin demoras ni excusas</div>
+                </div>
+                <div class="urg-stat r">
+                    <div class="snum" style="font-size:1.8rem">URGENTE</div>
+                    <div class="slabel">Respuesta inmediata ante emergencias sanitarias</div>
+                </div>
+                <div class="urg-stat o">
+                    <div class="snum">+1000</div>
+                    <div class="slabel">Trabajos realizados con éxito y clientes satisfechos</div>
+                </div>
+                <div class="urg-stat">
+                    <div class="snum">100%</div>
+                    <div class="slabel">Trabajos garantizados con factura incluida</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="porque" id="nosotros">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <h2 class="section-title">Por qué <span class="accent">elegirnos</span></h2>
+        </div>
+        <div class="pq-grid">
+            <div class="pq-card fade-up">
+                <div class="icon">⚡</div>
+                <h3>Respuesta rápida</h3>
+                <p>Llegamos lo antes posible. Sabemos que una cloaca tapada no puede esperar.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">🔧</div>
+                <h3>Máquinas especializadas</h3>
+                <p>Sondas mecánicas y equipos de alta presión. Resultados garantizados.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">🏆</div>
+                <h3>Experiencia comprobada</h3>
+                <p>Años en destapaciones domiciliarias, industriales y comerciales.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">🌙</div>
+                <h3>Atención rápida</h3>
+                <p>Respondemos rápido y llegamos a resolver el problema sin demoras.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">📄</div>
+                <h3>Garantía y factura</h3>
+                <p>Todos los trabajos tienen garantía escrita y comprobante de factura.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">🤝</div>
+                <h3>Atención personalizada</h3>
+                <p>Diagnóstico real, solución concreta y precio claro sin sobrecargos.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">📍</div>
+                <h3>Amplia cobertura</h3>
+                <p>GBA, Capital Federal y zonas aledañas. Consultá disponibilidad.</p>
+            </div>
+            <div class="pq-card fade-up">
+                <div class="icon">💰</div>
+                <h3>Precios transparentes</h3>
+                <p>Presupuesto sin cargo. Sin sorpresas al finalizar el trabajo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GALERIA -->
+<section class="galeria" id="galeria">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <h2 class="section-title">Nuestros <span class="accent">trabajos</span></h2>
+            <p>Máquinas, técnicos y resultados reales en cada servicio</p>
+        </div>
+        <div class="gal-grid fade-up">
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80" alt="Cañerías industriales" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80" alt="Trabajo de plomería" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Herramientas sanitarias" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80" alt="Plomero con herramientas" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1581578949510-fa7315c4c350?auto=format&fit=crop&w=800&q=80" alt="Servicio de destapación" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+            <div class="gal-item">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Urgencia sanitaria" loading="lazy">
+                <div class="gal-over"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA INTERMEDIO -->
+<section class="cta-mid">
+    <div class="container">
+        <div class="cta-mid-inner fade-up">
+            <h2>¿Se tapó?<br>Lo resolvemos hoy.</h2>
+            <p>Contactanos ahora y enviamos asistencia rápidamente.</p>
+            <div class="btns">
+                <a href="tel:1158038753" class="btn-dark">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    LLAMAR
+                </a>
+                <a href="https://wa.me/5491158038753" target="_blank" class="btn-wa-dark">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <h2 class="section-title">Preguntas <span class="accent">frecuentes</span></h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item fade-up">
+                <div class="faq-q">¿Atienden urgencias? <span class="faq-arrow">▾</span></div>
+                <div class="faq-a">Sí, atendemos urgencias. Si tenés una emergencia, llamanos al 1158038753 y enviamos asistencia de inmediato.</div>
+            </div>
+            <div class="faq-item fade-up">
+                <div class="faq-q">¿Hacen cloacas y cocinas? <span class="faq-arrow">▾</span></div>
+                <div class="faq-a">Sí, trabajamos con todos los tipos de desagüe: cloacas, piletas de cocina, cámaras sépticas, rejillas de baño, lavaderos y más. Contamos con máquinas para cada tipo de obstrucción.</div>
+            </div>
+            <div class="faq-item fade-up">
+                <div class="faq-q">¿Trabajan con máquinas profesionales? <span class="faq-arrow">▾</span></div>
+                <div class="faq-a">Sí, usamos sondas mecánicas y equipos de alta presión. No improvisamos: venimos con el equipo correcto para resolver el problema de raíz, no de forma temporaria.</div>
+            </div>
+            <div class="faq-item fade-up">
+                <div class="faq-q">¿Entregan factura y garantía? <span class="faq-arrow">▾</span></div>
+                <div class="faq-a">Sí, emitimos factura por todos los servicios y el trabajo tiene garantía escrita. Podés contratar con total tranquilidad y respaldo legal.</div>
+            </div>
+            <div class="faq-item fade-up">
+                <div class="faq-q">¿Cómo los contacto? <span class="faq-arrow">▾</span></div>
+                <div class="faq-a">Por teléfono al 1158038753, por WhatsApp al mismo número, o por Instagram @destapacionesdecloacas. El método más rápido ante una urgencia es siempre la llamada directa.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contacto">
+    <div class="container">
+        <div class="cta-final-inner fade-up">
+            <h2>Destapaciones <span>rápidas</span> y garantizadas</h2>
+            <p>Llamanos ahora y resolvemos el problema. Sin esperas, sin vueltas.</p>
+            <a href="tel:1158038753" class="big-phone">11&nbsp;5803&#8209;8753</a>
+            <div class="btns">
+                <a href="tel:1158038753" class="btn-call">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Llamar ahora
+                </a>
+                <a href="https://wa.me/5491158038753" target="_blank" class="btn-wa">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Enviar WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="ft-brand">
+                <h3>Destapaciones <span>con Máquinas</span></h3>
+                <p>Destapaciones profesionales de cloacas, cocinas, cámaras sépticas y desagüe. Con garantía y factura.</p>
+                <div class="ft-social">
+                    <a href="https://www.instagram.com/destapacionesdecloacas" target="_blank" class="soc-link" title="Instagram">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/5491158038753" target="_blank" class="soc-link" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Cloacas</a></li>
+                    <li><a href="#servicios">Cocinas</a></li>
+                    <li><a href="#servicios">Cámaras sépticas</a></li>
+                    <li><a href="#servicios">Rejillas de baño</a></li>
+                    <li><a href="#servicios">Desagüe general</a></li>
+                    <li><a href="#urgencias">Urgencias</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:1158038753" class="ft-phone">1158038753</a></li>
+                    <li><a href="https://wa.me/5491158038753" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/destapacionesdecloacas" target="_blank">@destapacionesdecloacas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Destapaciones con Máquinas. Todos los derechos reservados.</p>
+            <p class="tpy">Diseñado por <a href="https://tusitiowebya.github.io" target="_blank">TuPaginaYa</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        });
+    });
+
+    // Fade-up observer
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 75);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // Water drops canvas animation
+    const canvas = document.getElementById('dropsCanvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, drops = [], ripples = [];
+
+    function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Drop {
+        constructor() { this.reset(true); }
+        reset(init) {
+            this.x = Math.random() * W;
+            this.y = init ? Math.random() * H : -20;
+            this.len = Math.random() * 16 + 6;
+            this.speed = Math.random() * 2.5 + 1.5;
+            this.alpha = Math.random() * 0.2 + 0.04;
+            this.w = Math.random() * 1.2 + 0.4;
+        }
+        update() {
+            this.y += this.speed;
+            if (this.y > H + 20) {
+                ripples.push(new Ripple(this.x, H * 0.8 + Math.random() * H * 0.2));
+                this.reset(false);
+            }
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(this.x, this.y + this.len);
+            ctx.strokeStyle = `rgba(200,150,30,${this.alpha})`;
+            ctx.lineWidth = this.w;
+            ctx.stroke();
+        }
+    }
+
+    class Ripple {
+        constructor(x, y) {
+            this.x = x; this.y = y;
+            this.r = 0; this.max = Math.random() * 28 + 12;
+            this.alpha = 0.28;
+        }
+        update() { this.r += 0.7; this.alpha -= 0.01; }
+        done()   { return this.alpha <= 0; }
+        draw() {
+            ctx.beginPath();
+            ctx.ellipse(this.x, this.y, this.r, this.r * 0.28, 0, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(245,158,11,${this.alpha})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        }
+    }
+
+    for (let i = 0; i < 70; i++) drops.push(new Drop());
+
+    function animate() {
+        ctx.clearRect(0, 0, W, H);
+        drops.forEach(d => { d.update(); d.draw(); });
+        ripples = ripples.filter(r => !r.done());
+        ripples.forEach(r => { r.update(); r.draw(); });
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script>
+</body>
+</html>

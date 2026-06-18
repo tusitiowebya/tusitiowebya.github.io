@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GIASAN Construcciones - Albañilería, pintura, Durlock, demoliciones y refacciones generales. Calidad, compromiso y confianza en cada obra." />
+  <title>GIASAN Construcciones | Calidad, Compromiso y Confianza</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <img src="images/logo.png" alt="GIASAN Construcciones" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="btn-nav">Solicitar Presupuesto</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn-nav">Solicitar Presupuesto</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop"
+        alt="Obra de construcción"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Empresa de Construcción & Renovaciones</div>
+      <h1>GIASAN <span class="gold">Construcciones</span></h1>
+      <p class="hero-sub">Construimos tus ideas, renovamos tus espacios con la más alta calidad y compromiso.</p>
+      <p class="hero-tagline">
+        Seriedad <span>•</span> Responsabilidad <span>•</span> Cumplimiento
+      </p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-primary">Solicitar Presupuesto</a>
+        <a href="#trabajos" class="btn-outline">Ver Trabajos</a>
+      </div>
+      <p class="hero-disclaimer">Si consulta no molesta, presupuestos sin cargo</p>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <p class="section-label">Nuestros Servicios</p>
+        <h2 class="section-title">Soluciones integrales para su proyecto</h2>
+        <p class="section-desc">Desde albañilería tradicional hasta construcción en seco, cubrimos todas sus necesidades con profesionalismo y garantía.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-up delay-1">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/>
+              <path d="M17.64 15 22 10.64"/>
+              <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/>
+            </svg>
+          </div>
+          <h3>Albañilería</h3>
+          <p>Construcción tradicional, levantamiento de muros, revoques, contrapisos y todo tipo de obra civil con materiales de primera calidad.</p>
+        </div>
+
+        <div class="service-card fade-up delay-2">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
+              <path d="M2 8s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
+              <line x1="12" y1="2" x2="12" y2="22"/>
+            </svg>
+          </div>
+          <h3>Pintura</h3>
+          <p>Pintura interior y exterior, tratamientos de humedad, impermeabilización y acabados premium para espacios residenciales y comerciales.</p>
+        </div>
+
+        <div class="service-card fade-up delay-3">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="9" y1="3" x2="9" y2="21"/>
+              <line x1="15" y1="3" x2="15" y2="21"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+          </div>
+          <h3>Durlock</h3>
+          <p>Tabiques, cielorrasos, muebles y revestimientos en construcción en seco. Soluciones rápidas, limpias y de alta durabilidad.</p>
+        </div>
+
+        <div class="service-card fade-up delay-2">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+              <path d="M10 11v6"/>
+              <path d="M14 11v6"/>
+              <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+            </svg>
+          </div>
+          <h3>Demoliciones</h3>
+          <p>Demoliciones parciales o totales de forma segura, controlada y con disposición responsable de escombros.</p>
+        </div>
+
+        <div class="service-card fade-up delay-3">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Refacciones Generales</h3>
+          <p>Remodelaciones integrales, ampliaciones, renovación de baños y cocinas. Transformamos su espacio completamente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="trabajos">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-title">Trabajos Recientes</h2>
+        <p class="section-desc">Cada obra refleja nuestro compromiso con la calidad y la atención al detalle.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up delay-1">
+          <img src="https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=800&auto=format&fit=crop" alt="Estructura y Albañilería" loading="lazy" />
+          <div class="gallery-overlay"><span>Estructura y Albañilería</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-2">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop" alt="Refacción Interior" loading="lazy" />
+          <div class="gallery-overlay"><span>Refacción Interior</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-3">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Construcción General" loading="lazy" />
+          <div class="gallery-overlay"><span>Construcción General</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-2">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" alt="Renovación de Baño" loading="lazy" />
+          <div class="gallery-overlay"><span>Renovación de Baño</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-3">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Remodelación de Cocina" loading="lazy" />
+          <div class="gallery-overlay"><span>Remodelación de Cocina</span></div>
+        </div>
+        <div class="gallery-item fade-up delay-4">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Obra Residencial" loading="lazy" />
+          <div class="gallery-overlay"><span>Obra Residencial</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us" id="nosotros">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-text fade-up">
+          <p class="section-label">Por qué elegirnos</p>
+          <h2 class="section-title">Seriedad, Responsabilidad y Cumplimiento</h2>
+          <p>Mi nombre es Angel Paez, en este medio voy a mostrar mis trabajos y pueden consultar para realizar o refaccionar lo que deseen, con precios accesibles.</p>
+          <p>Nos destacamos por entregar obras de calidad en los tiempos pactados. Cada proyecto es un compromiso que asumimos con la mayor profesionalidad y dedicación.</p>
+          <div class="author-card">
+            <div class="author-avatar">A</div>
+            <div>
+              <p class="author-name">Angel Paez</p>
+              <p class="author-role">Director General</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid fade-up delay-2">
+          <div class="stat-card">
+            <div class="stat-number" data-count="200" data-suffix="+">0+</div>
+            <div class="stat-label">Trabajos Realizados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="180" data-suffix="+">0+</div>
+            <div class="stat-label">Clientes Satisfechos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="10" data-suffix="+">0+</div>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="100" data-suffix="%">0%</div>
+            <div class="stat-label">Compromiso</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header center fade-up">
+        <p class="section-label">Testimonios</p>
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up delay-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Excelente trabajo de pintura y refacción en mi local comercial. Cumplieron con los plazos y el presupuesto acordado. Muy recomendables."</p>
+          <p class="testimonial-author">Martín G.</p>
+          <p class="testimonial-role">Comerciante</p>
+        </div>
+        <div class="testimonial-card fade-up delay-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Contratamos a GIASAN para hacer el techo de Durlock y divisiones. Quedó impecable. La seriedad de Angel es destacable en todo momento."</p>
+          <p class="testimonial-author">Laura S.</p>
+          <p class="testimonial-role">Propietaria</p>
+        </div>
+        <div class="testimonial-card fade-up delay-3">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Muy responsables desde el primer día. Resolvieron problemas de humedad que arrastraba hace años. Precios muy razonables y gran calidad."</p>
+          <p class="testimonial-author">Carlos M.</p>
+          <p class="testimonial-role">Cliente particular</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <p class="section-label">Contacto</p>
+          <h2 class="section-title">Hablemos de su próximo proyecto</h2>
+          <p>Comuníquese con nosotros para solicitar un presupuesto sin cargo. Le responderemos a la brevedad con la mejor propuesta.</p>
+
+          <div class="contact-links">
+            <a href="https://wa.me/5491181078608" target="_blank" rel="noreferrer" class="contact-link">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp" style="font-size:22px;"></i>
+              </div>
+              <div>
+                <p class="contact-link-label">WhatsApp</p>
+                <p class="contact-link-value">+54 9 11 8107-8608</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/angel.paezok/" target="_blank" rel="noreferrer" class="contact-link">
+              <div class="contact-icon">
+                <i class="fab fa-instagram" style="font-size:22px;"></i>
+              </div>
+              <div>
+                <p class="contact-link-label">Instagram</p>
+                <p class="contact-link-value">@angel.paezok</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form fade-up delay-2">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Consulta / Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntenos sobre su proyecto..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">
+            <img src="images/logo.png" alt="GIASAN Construcciones" />
+          </div>
+          <p class="footer-desc">Construimos tus ideas, renovamos tus espacios. Calidad, compromiso y confianza en cada obra que realizamos.</p>
+        </div>
+
+        <div>
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#trabajos">Portfolio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a href="https://wa.me/5491181078608" target="_blank" rel="noreferrer" class="social-btn" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/angel.paezok/" target="_blank" rel="noreferrer" class="social-btn" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>2026 - TuPaginaYa - Una marca del Grupo JV - Todos los derchos reservados.</p>
+        <a href="https://tupaginaya.com.ar/" target="_blank" rel="noreferrer">TuPaginaYa.com.ar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/5491181078608" target="_blank" rel="noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

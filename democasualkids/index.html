@@ -1,584 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CasualKids - Ropa infantil cómoda, linda y divertida. Prendas para niños y niñas con estilo, calidad y mucho color.">
-    <title>CasualKids | Ropa Infantil con Estilo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Página en espera de activación · TuPaginaYa</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#0f0f2e" />
+<meta property="og:title" content="Página en espera de activación · TuPaginaYa" />
+<meta property="og:description" content="Este sitio fue diseñado por TuPaginaYa y está listo para activarse." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f0f2e;--navy2:#16163f;--violet:#7b2ff7;--blue:#4a6cf7;--ink:#eef0fb;--muted:#a6abcf;--wa:#25d366;--ease:cubic-bezier(.23,1,.32,1)}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh;font-family:"Inter",system-ui,sans-serif;color:var(--ink);
+ background:radial-gradient(110% 80% at 85% 0%,rgba(123,47,247,.28),transparent 55%),
+            radial-gradient(110% 80% at 0% 100%,rgba(74,108,247,.28),transparent 55%),var(--navy);
+ display:grid;place-items:center;padding:28px;overflow-x:hidden}
+.card{position:relative;width:100%;max-width:560px;text-align:center;
+ background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+ border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:48px 36px;
+ box-shadow:0 40px 90px -40px rgba(0,0,0,.7);backdrop-filter:blur(8px);
+ animation:rise .8s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.brand{display:inline-flex;align-items:center;gap:9px;font-family:"Sora";font-weight:800;font-size:18px;letter-spacing:-.02em;margin-bottom:30px}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--violet),var(--blue));display:grid;place-items:center;color:#fff;font-size:16px}
+.brand b{color:#fff}.brand i{color:var(--blue);font-style:normal}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.04em;
+ color:#dbe0ff;background:rgba(123,47,247,.16);border:1px solid rgba(123,47,247,.4);padding:8px 16px;border-radius:50px;margin-bottom:24px}
+.badge .pulse{width:9px;height:9px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 0 rgba(123,47,247,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(123,47,247,0)}100%{box-shadow:0 0 0 0 rgba(123,47,247,0)}}
+h1{font-family:"Sora";font-weight:800;font-size:clamp(26px,5.4vw,38px);line-height:1.12;letter-spacing:-.02em;margin-bottom:14px}
+h1 .g{background:linear-gradient(100deg,var(--violet),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+p.lead{color:var(--muted);font-size:16px;line-height:1.6;max-width:42ch;margin:0 auto 30px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;
+ padding:16px 26px;border-radius:14px;background:var(--wa);color:#04210f;font-family:"Sora";font-weight:700;font-size:16px;
+ text-decoration:none;transition:transform .18s var(--ease),box-shadow .25s;box-shadow:0 16px 36px -12px rgba(37,211,102,.6)}
+.cta:hover{transform:translateY(-3px);box-shadow:0 22px 46px -14px rgba(37,211,102,.7)}
+.cta:active{transform:scale(.97)}
+.cta svg{width:22px;height:22px}
+.steps{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:32px 0 4px}
+.steps div{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.steps b{color:var(--blue)}
+.ref{margin-top:26px;font-size:12px;color:#7e84ad;letter-spacing:.03em}
+.foot{margin-top:22px;font-size:12.5px;color:#8a90b8}
+.foot a{color:#aeb6ff;text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-    <!-- Floating Decorations -->
-    <div class="floating-decorations" aria-hidden="true">
-        <span class="decoration star">★</span>
-        <span class="decoration heart">♥</span>
-        <span class="decoration cloud">☁</span>
-        <span class="decoration star">✦</span>
-        <span class="decoration heart">♥</span>
-        <span class="decoration balloon">🎈</span>
-    </div>
+<main class="card">
+  <span class="brand"><span class="dot">✦</span><span><b>TuPagina</b><i>Ya</i></span></span>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">🧸</span>
-                <span class="logo-text">CasualKids</span>
-            </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#destacados">Destacados</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <a href="https://wa.me/5493773544610?text=Hola!%20Quiero%20consultar%20por%20productos%20de%20CasualKids" class="nav-cta" target="_blank" rel="noopener">
-                <span class="whatsapp-icon">📱</span>
-                WhatsApp
-            </a>
-        </div>
-    </nav>
+  <div><span class="badge"><span class="pulse"></span>En espera de activación</span></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="badge animate-bounce">✨ Nuevo emprendimiento</span>
-                <h1>Ropa infantil cómoda, linda y <span class="highlight">divertida</span></h1>
-                <p>Prendas para niños y niñas con estilo, calidad y mucho color. Hacemos que vestir a tus pequeños sea una experiencia llena de alegría.</p>
-                <div class="hero-buttons">
-                    <a href="#productos" class="btn btn-primary">
-                        <span>👕</span> Ver productos
-                    </a>
-                    <a href="https://wa.me/5493773544610?text=Hola!%20Quiero%20consultar%20por%20productos%20de%20CasualKids" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <span>💬</span> Comprar por WhatsApp
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Productos</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">⭐ 5.0</span>
-                        <span class="stat-label">Calificación</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">❤️</span>
-                        <span class="stat-label">Con amor</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="images/hero-kids.jpg" alt="Niños felices con ropa colorida" loading="eager">
-                    <div class="floating-card card-1">
-                        <span>🎉</span> ¡Nuevos diseños!
-                    </div>
-                    <div class="floating-card card-2">
-                        <span>⭐</span> Calidad premium
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
-            </svg>
-        </div>
-    </section>
+  <h1>Tu página está lista,<br /><span class="g">falta solo activarla.</span></h1>
+  <p class="lead">Este sitio fue diseñado por <strong style="color:#fff">TuPaginaYa</strong> y ya está armado.
+  Activalo y ponelo online hoy mismo para que tus clientes te encuentren.</p>
 
-    <!-- Product Carousel Section -->
-    <section class="products-section" id="productos">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">🛍️ Catálogo</span>
-                <h2>Nuestros Productos</h2>
-                <p>Descubrí las prendas más lindas y cómodas para tus pequeños</p>
-            </div>
-            <div class="carousel-container">
-                <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6"/>
-                    </svg>
-                </button>
-                <div class="carousel" id="carousel">
-                    <div class="product-card" data-product="1">
-                        <div class="product-image" onclick="openModal(1)">
-                            <img src="images/product-1.jpg" alt="Conjuntos infantiles">
-                            <span class="product-badge nuevo">Nuevo</span>
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Conjuntos Infantiles</h3>
-                            <p>Sets completos para niños y niñas</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(1)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-product="2">
-                        <div class="product-image" onclick="openModal(2)">
-                            <img src="images/product-2.jpg" alt="Remeras estampadas">
-                            <span class="product-badge popular">Más vendido</span>
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Remeras Estampadas</h3>
-                            <p>Diseños divertidos y coloridos</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(2)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-product="3">
-                        <div class="product-image" onclick="openModal(3)">
-                            <img src="images/product-3.jpg" alt="Ropa de personajes">
-                            <span class="product-badge nuevo">Nuevo</span>
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Ropa de Personajes</h3>
-                            <p>Con los personajes favoritos</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(3)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-product="4">
-                        <div class="product-image" onclick="openModal(4)">
-                            <img src="images/product-4.jpg" alt="Accesorios para niñas">
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Accesorios para Niñas</h3>
-                            <p>Vinchas, moños y más</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(4)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-product="5">
-                        <div class="product-image" onclick="openModal(5)">
-                            <img src="images/product-5.jpg" alt="Prendas juveniles">
-                            <span class="product-badge popular">Más vendido</span>
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Prendas Juveniles</h3>
-                            <p>Estilo moderno para los más grandes</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(5)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card" data-product="6">
-                        <div class="product-image" onclick="openModal(6)">
-                            <img src="images/product-6.jpg" alt="Silloncitos infantiles">
-                            <span class="product-badge destacado">Destacado</span>
-                            <div class="image-overlay">
-                                <span>Ver detalle</span>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Silloncitos Infantiles</h3>
-                            <p>Artículos especiales para su cuarto</p>
-                            <div class="product-footer">
-                                <span class="availability available">✓ Disponible</span>
-                                <button class="btn-consultar" onclick="openModal(6)">Consultar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="carousel-dots" id="carouselDots"></div>
-        </div>
-    </section>
+  <a class="cta" href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa%21%20Quiero%20activar%20mi%20p%C3%A1gina%20web.%20%28Ref%3A%20democasualkids%29" target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.36.66 4.66 1.92 6.66L4 29l7.5-1.96a12.05 12.05 0 0 0 4.54.88h.01c6.65 0 12.05-5.4 12.05-12.04C28.1 8.4 22.69 3 16.04 3zm0 21.86h-.01c-1.46 0-2.9-.39-4.16-1.13l-.3-.18-4.45 1.17 1.19-4.33-.2-.31a9.92 9.92 0 0 1-1.52-5.29c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 0 1 2.93 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.19-.24-.58-.49-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+    Activar mi página
+  </a>
 
-    <!-- Featured Products Grid -->
-    <section class="featured-section" id="destacados">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">⭐ Lo mejor</span>
-                <h2>Productos Destacados</h2>
-                <p>Los favoritos de nuestros clientes</p>
-            </div>
-            <div class="featured-grid">
-                <div class="featured-card large" onclick="openModal(1)">
-                    <img src="images/product-1.jpg" alt="Conjuntos infantiles">
-                    <div class="featured-overlay">
-                        <span class="featured-badge">⭐ Más vendido</span>
-                        <h3>Conjuntos Infantiles</h3>
-                        <p>La combinación perfecta</p>
-                        <button class="btn btn-small">Ver más</button>
-                    </div>
-                </div>
-                <div class="featured-card" onclick="openModal(2)">
-                    <img src="images/product-2.jpg" alt="Remeras estampadas">
-                    <div class="featured-overlay">
-                        <span class="featured-badge">🆕 Nuevo</span>
-                        <h3>Remeras Estampadas</h3>
-                        <button class="btn btn-small">Ver más</button>
-                    </div>
-                </div>
-                <div class="featured-card" onclick="openModal(3)">
-                    <img src="images/product-3.jpg" alt="Ropa de personajes">
-                    <div class="featured-overlay">
-                        <span class="featured-badge">🔥 Popular</span>
-                        <h3>Ropa de Personajes</h3>
-                        <button class="btn btn-small">Ver más</button>
-                    </div>
-                </div>
-                <div class="featured-card wide" onclick="openModal(4)">
-                    <img src="images/product-4.jpg" alt="Accesorios">
-                    <div class="featured-overlay">
-                        <span class="featured-badge">💖 Favorito</span>
-                        <h3>Accesorios para Niñas</h3>
-                        <p>Detalles que enamoran</p>
-                        <button class="btn btn-small">Ver más</button>
-                    </div>
-                </div>
-                <div class="featured-card" onclick="openModal(5)">
-                    <img src="images/product-5.jpg" alt="Prendas juveniles">
-                    <div class="featured-overlay">
-                        <span class="featured-badge">🌟 Trending</span>
-                        <h3>Prendas Juveniles</h3>
-                        <button class="btn btn-small">Ver más</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="steps">
+    <div><b>1.</b> Escribinos</div>
+    <div><b>2.</b> Confirmás</div>
+    <div><b>3.</b> Online en el día</div>
+  </div>
 
-    <!-- Why Choose Us -->
-    <section class="why-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">💝 Razones</span>
-                <h2>¿Por qué elegir CasualKids?</h2>
-                <p>Nos esforzamos por ofrecerte la mejor experiencia</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">👕</div>
-                    <h3>Calidad y Comodidad</h3>
-                    <p>Prendas confeccionadas con los mejores materiales para que tus hijos estén cómodos todo el día.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🎨</div>
-                    <h3>Diseños Divertidos</h3>
-                    <p>Colores vibrantes y estampados únicos que a los niños les encantan usar.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">💬</div>
-                    <h3>Atención Personalizada</h3>
-                    <p>Te asesoramos y ayudamos a encontrar las prendas perfectas para cada ocasión.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">📱</div>
-                    <h3>Compra Fácil por WhatsApp</h3>
-                    <p>Consultá, elegí y comprá de manera simple y rápida directamente por WhatsApp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="nosotros">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/about-kids.jpg" alt="Sobre CasualKids">
-                    <div class="about-decoration">
-                        <span>🧸</span>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <span class="section-badge">🏠 Sobre nosotros</span>
-                    <h2>Sobre CasualKids</h2>
-                    <p class="about-description">
-                        <strong>CasualKids</strong> es un nuevo emprendimiento de ropa infantil pensado para acompañar a los chicos con prendas cómodas, lindas y llenas de color.
-                    </p>
-                    <p>
-                        Queremos que cada compra sea simple, cercana y segura. Nos apasiona ver a los más pequeños lucir increíbles mientras disfrutan de la comodidad que merecen.
-                    </p>
-                    <ul class="about-list">
-                        <li><span>✓</span> Ropa seleccionada con amor</li>
-                        <li><span>✓</span> Materiales de primera calidad</li>
-                        <li><span>✓</span> Diseños exclusivos y únicos</li>
-                        <li><span>✓</span> Atención cercana y personalizada</li>
-                    </ul>
-                    <a href="https://wa.me/5493773544610?text=Hola!%20Quiero%20conocer%20más%20sobre%20CasualKids" class="btn btn-primary" target="_blank" rel="noopener">
-                        <span>💬</span> Conocenos más
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram Gallery -->
-    <section class="gallery-section" id="galeria">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">📸 Galería</span>
-                <h2>Nuestro Feed</h2>
-                <p>Seguinos en Instagram para ver más</p>
-            </div>
-            <div class="instagram-grid">
-                <div class="gallery-item">
-                    <img src="images/gallery-1.jpg" alt="Niña con vestido de verano">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 124</span>
-                            <span>💬 12</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-2.jpg" alt="Niño con ropa casual">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 98</span>
-                            <span>💬 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-3.jpg" alt="Hermanos con outfits combinados">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 256</span>
-                            <span>💬 24</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-4.jpg" alt="Bebé con body tierno">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 189</span>
-                            <span>💬 16</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-5.jpg" alt="Fiesta de cumpleaños">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 312</span>
-                            <span>💬 28</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-6.jpg" alt="Niña con tutú de princesa">
-                    <div class="gallery-overlay">
-                        <div class="gallery-stats">
-                            <span>❤️ 445</span>
-                            <span>💬 42</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-cta">
-                <a href="#" class="btn btn-outline">
-                    <span>📷</span> Seguinos en Instagram
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contacto">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <span class="section-badge">📞 Contacto</span>
-                    <h2>¿Tenés alguna consulta?</h2>
-                    <p>Estamos para ayudarte. Contactanos por WhatsApp o completá el formulario y te responderemos a la brevedad.</p>
-                    
-                    <div class="contact-card whatsapp-card">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <p>+54 9 3773 54-4610</p>
-                            <small>Respondemos de Lun a Sáb de 9 a 20hs</small>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5493773544610?text=Hola!%20Quiero%20consultar%20por%20productos%20de%20CasualKids" class="btn btn-whatsapp btn-large" target="_blank" rel="noopener">
-                        <span>💬</span> Comprar por WhatsApp
-                    </a>
-
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <span>📷</span>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <span>📘</span>
-                        </a>
-                        <a href="#" class="social-link" aria-label="TikTok">
-                            <span>🎵</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <h3>Envianos tu consulta</h3>
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consulta">Consulta</label>
-                            <textarea id="consulta" name="consulta" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>✉️</span> Enviar consulta
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-icon">🧸</span>
-                        <span class="logo-text">CasualKids</span>
-                    </a>
-                    <p>Ropa infantil cómoda, linda y divertida para los más pequeños de la casa.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="TikTok">🎵</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#destacados">Destacados</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📱 +54 9 3773 54-4610</li>
-                        <li>📧 casualkids@email.com</li>
-                        <li>📍 Argentina</li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Novedades</h4>
-                    <p>Suscribite para recibir ofertas exclusivas</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email" required>
-                        <button type="submit">→</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 CasualKids. Todos los derechos reservados.</p>
-                <p>Hecho con ❤️ para los más pequeños</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5493773544610?text=Hola!%20Quiero%20consultar%20por%20productos%20de%20CasualKids" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-        <span class="whatsapp-icon-float">💬</span>
-        <span class="whatsapp-text">WhatsApp</span>
-    </a>
-
-    <!-- Product Modal -->
-    <div class="modal" id="productModal">
-        <div class="modal-overlay" onclick="closeModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">×</button>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="Producto">
-                </div>
-                <div class="modal-info">
-                    <span class="modal-badge" id="modalBadge">Disponible</span>
-                    <h2 id="modalTitle">Nombre del producto</h2>
-                    <p id="modalDescription" class="modal-description">Descripción del producto</p>
-                    
-                    <div class="modal-options">
-                        <div class="option-group">
-                            <h4>Talles disponibles</h4>
-                            <div class="size-options" id="modalSizes">
-                                <button class="size-btn">2</button>
-                                <button class="size-btn">4</button>
-                                <button class="size-btn active">6</button>
-                                <button class="size-btn">8</button>
-                                <button class="size-btn">10</button>
-                            </div>
-                        </div>
-                        <div class="option-group">
-                            <h4>Colores</h4>
-                            <div class="color-options" id="modalColors">
-                                <button class="color-btn active" style="background-color: #FFB6C1;" aria-label="Rosa"></button>
-                                <button class="color-btn" style="background-color: #87CEEB;" aria-label="Celeste"></button>
-                                <button class="color-btn" style="background-color: #98FB98;" aria-label="Verde"></button>
-                                <button class="color-btn" style="background-color: #DDA0DD;" aria-label="Lila"></button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-stock">
-                        <span class="stock-indicator available"></span>
-                        <span id="modalStock">En stock - Disponible para envío</span>
-                    </div>
-                    
-                    <a href="#" id="modalWhatsApp" class="btn btn-whatsapp btn-large btn-full" target="_blank" rel="noopener">
-                        <span>💬</span> Consultar este producto
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <p class="ref">Ref: democasualkids</p>
+  <p class="foot">© <span id="yr"></span> Diseñado por <a href="https://tusitiowebya.github.io/" target="_blank" rel="noopener">TuPaginaYa</a></p>
+</main>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

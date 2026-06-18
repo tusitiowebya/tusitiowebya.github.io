@@ -1,648 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LTM Store - Productos tecnológicos al alcance de tu mano</title>
-  <meta name="description" content="LTM Store - Venta de iPhones, accesorios Apple y servicio técnico especializado en Buenos Aires, Argentina.">
-  <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Página en espera de activación · TuPaginaYa</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#0f0f2e" />
+<meta property="og:title" content="Página en espera de activación · TuPaginaYa" />
+<meta property="og:description" content="Este sitio fue diseñado por TuPaginaYa y está listo para activarse." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f0f2e;--navy2:#16163f;--violet:#7b2ff7;--blue:#4a6cf7;--ink:#eef0fb;--muted:#a6abcf;--wa:#25d366;--ease:cubic-bezier(.23,1,.32,1)}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh;font-family:"Inter",system-ui,sans-serif;color:var(--ink);
+ background:radial-gradient(110% 80% at 85% 0%,rgba(123,47,247,.28),transparent 55%),
+            radial-gradient(110% 80% at 0% 100%,rgba(74,108,247,.28),transparent 55%),var(--navy);
+ display:grid;place-items:center;padding:28px;overflow-x:hidden}
+.card{position:relative;width:100%;max-width:560px;text-align:center;
+ background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+ border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:48px 36px;
+ box-shadow:0 40px 90px -40px rgba(0,0,0,.7);backdrop-filter:blur(8px);
+ animation:rise .8s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.brand{display:inline-flex;align-items:center;gap:9px;font-family:"Sora";font-weight:800;font-size:18px;letter-spacing:-.02em;margin-bottom:30px}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--violet),var(--blue));display:grid;place-items:center;color:#fff;font-size:16px}
+.brand b{color:#fff}.brand i{color:var(--blue);font-style:normal}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.04em;
+ color:#dbe0ff;background:rgba(123,47,247,.16);border:1px solid rgba(123,47,247,.4);padding:8px 16px;border-radius:50px;margin-bottom:24px}
+.badge .pulse{width:9px;height:9px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 0 rgba(123,47,247,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(123,47,247,0)}100%{box-shadow:0 0 0 0 rgba(123,47,247,0)}}
+h1{font-family:"Sora";font-weight:800;font-size:clamp(26px,5.4vw,38px);line-height:1.12;letter-spacing:-.02em;margin-bottom:14px}
+h1 .g{background:linear-gradient(100deg,var(--violet),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+p.lead{color:var(--muted);font-size:16px;line-height:1.6;max-width:42ch;margin:0 auto 30px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;
+ padding:16px 26px;border-radius:14px;background:var(--wa);color:#04210f;font-family:"Sora";font-weight:700;font-size:16px;
+ text-decoration:none;transition:transform .18s var(--ease),box-shadow .25s;box-shadow:0 16px 36px -12px rgba(37,211,102,.6)}
+.cta:hover{transform:translateY(-3px);box-shadow:0 22px 46px -14px rgba(37,211,102,.7)}
+.cta:active{transform:scale(.97)}
+.cta svg{width:22px;height:22px}
+.steps{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:32px 0 4px}
+.steps div{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.steps b{color:var(--blue)}
+.ref{margin-top:26px;font-size:12px;color:#7e84ad;letter-spacing:.03em}
+.foot{margin-top:22px;font-size:12.5px;color:#8a90b8}
+.foot a{color:#aeb6ff;text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-  <!-- Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
+<main class="card">
+  <span class="brand"><span class="dot">✦</span><span><b>TuPagina</b><i>Ya</i></span></span>
 
-  <!-- Loader -->
-  <div id="loader">
-    <img src="images/logo.png" alt="LTM Store">
-    <div class="loader-spin"></div>
-  </div>
+  <div><span class="badge"><span class="pulse"></span>En espera de activación</span></div>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="nav-logo">
-        <img src="images/logo.png" alt="LTM Store">
-        <div class="nav-logo-text">
-          <strong>LTM STORE</strong>
-          <span>Tecnología Premium</span>
-        </div>
-      </a>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#servicio-tecnico">Servicio Técnico</a>
-        <a href="#plan-canje">Plan Canje</a>
-        <a href="#accesorios">Accesorios</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-      <div class="nav-cta">
-        <a href="https://wa.me/5491112345678" target="_blank" class="btn-wa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span>Contactar</span>
-        </a>
-      </div>
-      <button class="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    <div class="mobile-menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#servicio-tecnico">Servicio Técnico</a>
-      <a href="#plan-canje">Plan Canje</a>
-      <a href="#accesorios">Accesorios</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/5491112345678" target="_blank" class="btn-wa">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span>Contactar</span>
-      </a>
-    </div>
-  </nav>
+  <h1>Tu página está lista,<br /><span class="g">falta solo activarla.</span></h1>
+  <p class="lead">Este sitio fue diseñado por <strong style="color:#fff">TuPaginaYa</strong> y ya está armado.
+  Activalo y ponelo online hoy mismo para que tus clientes te encuentren.</p>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <canvas id="hero-canvas"></canvas>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-badge glass reveal">
-        <span class="dot"></span>
-        <span>Galería Jardín · Florida 537 · CABA</span>
-      </div>
-      <h1 class="hero-h1 reveal d1">
-        Productos<br><span class="shimmer">tecnológicos</span>
-        <span class="sub">al alcance de tu mano.</span>
-      </h1>
-      <p class="hero-sub reveal d2">
-        iPhones nuevos y usados con garantía, servicio técnico especializado y accesorios originales. Tu marca de confianza en CABA.
-      </p>
-      <div class="hero-btns reveal d3">
-        <a href="#productos" class="btn-primary">Ver Productos</a>
-        <a href="https://wa.me/5491112345678" target="_blank" class="btn-ghost">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span>Contactar</span>
-        </a>
-      </div>
-      <div class="hero-stats reveal d4">
-        <div class="stat-card glass">
-          <strong>+500</strong>
-          <span>Clientes</span>
-        </div>
-        <div class="stat-card glass">
-          <strong>+3</strong>
-          <span>Años</span>
-        </div>
-        <div class="stat-card glass">
-          <strong>100%</strong>
-          <span>Garantía</span>
-        </div>
-        <div class="stat-card glass">
-          <strong>24hs</strong>
-          <span>Respuesta</span>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-hint">
-      <div class="scroll-line"></div>
-      <span>SCROLL</span>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="productos" class="section">
-    <div class="container">
-      <p class="section-label reveal">Catálogo</p>
-      <h2 class="section-title reveal d1">Nuestros <span class="dim">Productos.</span></h2>
-      <p class="section-sub reveal d2">Encontrá el iPhone perfecto para vos con garantía y soporte técnico incluido.</p>
-      <div class="products-grid mt-12">
-        <article class="product-card reveal">
-          <div class="product-card-top">
-            <span class="badge-cat">Nuevo</span>
-            <span class="badge-label">Top ventas</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/><line x1="9" y1="4" x2="15" y2="4" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <p class="product-specs">256GB · Titanio Negro</p>
-          <h3 class="product-name">iPhone 16 Pro Max</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20iPhone%2016%20Pro%20Max" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-        <article class="product-card reveal d1">
-          <div class="product-card-top">
-            <span class="badge-cat">Nuevo</span>
-            <span class="badge-label">Popular</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/><line x1="9" y1="4" x2="15" y2="4" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <p class="product-specs">128GB · Titanio Natural</p>
-          <h3 class="product-name">iPhone 15 Pro</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20iPhone%2015%20Pro" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-        <article class="product-card reveal d2">
-          <div class="product-card-top">
-            <span class="badge-cat">Nuevo</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/><line x1="9" y1="4" x2="15" y2="4" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <p class="product-specs">128GB · Negro</p>
-          <h3 class="product-name">iPhone 15</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20iPhone%2015" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-        <article class="product-card reveal d3">
-          <div class="product-card-top">
-            <span class="badge-cat">Reacondicionado</span>
-            <span class="badge-label">Garantía</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/><line x1="9" y1="4" x2="15" y2="4" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <p class="product-specs">128GB · Medianoche</p>
-          <h3 class="product-name">iPhone 14</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20iPhone%2014" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-        <article class="product-card reveal d4">
-          <div class="product-card-top">
-            <span class="badge-cat">Accesorio</span>
-            <span class="badge-label">Original</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6a4 4 0 0 0-4 4v1a3 3 0 0 0 6 0V10a4 4 0 0 0-4-4z"/><path d="M8 14v5"/><path d="M16 6a4 4 0 0 1 4 4v1a3 3 0 0 1-6 0V10a4 4 0 0 1 4-4z"/><path d="M16 14v5"/><rect x="5" y="19" width="6" height="3" rx="1.5"/><rect x="13" y="19" width="6" height="3" rx="1.5"/></svg>
-          </div>
-          <p class="product-specs">Active Noise Cancellation</p>
-          <h3 class="product-name">AirPods Pro 2</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesan%20los%20AirPods%20Pro%202" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-        <article class="product-card reveal d5">
-          <div class="product-card-top">
-            <span class="badge-cat">Accesorio</span>
-            <span class="badge-label">Original</span>
-          </div>
-          <div class="product-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="12" height="14" rx="3"/><path d="M9 2l.5 3"/><path d="M15 2l-.5 3"/><path d="M9 22l.5-3"/><path d="M15 22l-.5-3"/><path d="M12 9v3l2 1.5"/></svg>
-          </div>
-          <p class="product-specs">45mm · Aluminium</p>
-          <h3 class="product-name">Apple Watch S9</h3>
-          <p class="product-price">Consultar precio</p>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20Apple%20Watch%20S9" target="_blank" class="btn-consult">Consultar</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech Service -->
-  <section id="servicio-tecnico" class="section">
-    <div class="container">
-      <div class="service-header">
-        <div>
-          <p class="section-label reveal">Servicio Técnico</p>
-          <h2 class="section-title reveal d1">Reparación <span class="dim">Especializada.</span></h2>
-          <p class="section-sub reveal d2">Técnicos certificados y repuestos originales para devolverle la vida a tu dispositivo Apple.</p>
-        </div>
-        <a href="https://wa.me/5491112345678?text=Hola!%20Necesito%20servicio%20técnico" target="_blank" class="btn-primary reveal d3">Solicitar Turno</a>
-      </div>
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <span class="service-badge">6 meses</span>
-          <h3 class="service-title">Cambio de Pantalla</h3>
-          <p class="service-desc">Pantallas originales y de alta calidad con garantía incluida.</p>
-          <div class="service-line"></div>
-        </article>
-        <article class="service-card reveal d1">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3v4M8 3v4M23 11h-1"/></svg>
-          </div>
-          <span class="service-badge">Certificada</span>
-          <h3 class="service-title">Cambio de Batería</h3>
-          <p class="service-desc">Baterías de alta capacidad que devuelven la autonomía original.</p>
-          <div class="service-line"></div>
-        </article>
-        <article class="service-card reveal d2">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <span class="service-badge">Avanzado</span>
-          <h3 class="service-title">Reparación de Placa</h3>
-          <p class="service-desc">Micro soldadura y diagnóstico avanzado para problemas complejos.</p>
-          <div class="service-line"></div>
-        </article>
-        <article class="service-card reveal d3">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <span class="service-badge">Seguro</span>
-          <h3 class="service-title">Recuperación de Datos</h3>
-          <p class="service-desc">Recuperamos tu información de forma segura y confidencial.</p>
-          <div class="service-line"></div>
-        </article>
-        <article class="service-card reveal d4">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
-          </div>
-          <span class="service-badge">Express</span>
-          <h3 class="service-title">Actualización de Software</h3>
-          <p class="service-desc">Optimización y actualización del sistema operativo.</p>
-          <div class="service-line"></div>
-        </article>
-        <article class="service-card reveal d5">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <span class="service-badge">Gratis</span>
-          <h3 class="service-title">Diagnóstico</h3>
-          <p class="service-desc">Evaluamos tu dispositivo sin cargo antes de cualquier reparación.</p>
-          <div class="service-line"></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Plan Canje -->
-  <section id="plan-canje" class="section">
-    <div class="container">
-      <div class="canje-grid">
-        <div>
-          <p class="section-label reveal">Exclusivo</p>
-          <h2 class="section-title reveal d1">Plan <span class="dim">Canje.</span></h2>
-          <p class="section-sub reveal d2">Traé tu iPhone usado y llevate uno nuevo. Evaluamos tu equipo al instante y te damos el mejor precio del mercado.</p>
-          <div class="badges-row reveal d3">
-            <span class="badge-pill">Tasación inmediata</span>
-            <span class="badge-pill">Mejor precio</span>
-            <span class="badge-pill">Descuento directo</span>
-          </div>
-          <div class="reveal d4">
-            <article class="step-card">
-              <span class="step-num">01</span>
-              <div>
-                <h3 class="step-title">Traé tu iPhone</h3>
-                <p class="step-desc">Acercate a nuestro local con tu dispositivo actual.</p>
-              </div>
-            </article>
-            <article class="step-card">
-              <span class="step-num">02</span>
-              <div>
-                <h3 class="step-title">Tasación Express</h3>
-                <p class="step-desc">Evaluamos el estado y te damos un precio en minutos.</p>
-              </div>
-            </article>
-            <article class="step-card">
-              <span class="step-num">03</span>
-              <div>
-                <h3 class="step-title">Llevate tu nuevo iPhone</h3>
-                <p class="step-desc">Aplicamos el descuento y te vas con tu equipo nuevo.</p>
-              </div>
-            </article>
-          </div>
-          <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20el%20Plan%20Canje" target="_blank" class="btn-primary mt-8 reveal d5">Consultar Plan Canje</a>
-        </div>
-        <div class="canje-visual reveal">
-          <div class="canje-phones">
-            <div class="canje-phone old">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/></svg>
-              <span>Tu iPhone</span>
-            </div>
-            <div class="canje-arrow">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-            <div class="canje-phone new">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="1" width="14" height="22" rx="3" ry="3"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/><line x1="9" y1="4" x2="15" y2="4" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <span>iPhone Nuevo</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accessories -->
-  <section id="accesorios" class="section">
-    <div class="container">
-      <p class="section-label reveal">Accesorios</p>
-      <h2 class="section-title reveal d1">Todo lo que <span class="dim">necesita tu iPhone.</span></h2>
-      <p class="section-sub reveal d2">Accesorios originales y compatibles de primera calidad.</p>
-      <div class="acc-scroll mt-12">
-        <article class="acc-card reveal">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3" ry="3"/><path d="M9 2v2M15 2v2"/></svg>
-          </div>
-          <h3 class="acc-name">Fundas Premium</h3>
-          <p class="acc-desc">Silicona, cuero y MagSafe</p>
-        </article>
-        <article class="acc-card reveal d1">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.09 12.11a1 1 0 0 0 .77 1.63L11 14l-2 8 8.91-10.11a1 1 0 0 0-.77-1.63L11 10l2-8z"/></svg>
-          </div>
-          <h3 class="acc-name">Cargadores</h3>
-          <p class="acc-desc">USB-C, MagSafe y wireless</p>
-        </article>
-        <article class="acc-card reveal d2">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 7h20"/><path d="M9 21V7"/></svg>
-          </div>
-          <h3 class="acc-name">Vidrios Templados</h3>
-          <p class="acc-desc">Protección máxima de pantalla</p>
-        </article>
-        <article class="acc-card reveal d3">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 0 0-3 3v1a3 3 0 0 0 6 0V9a3 3 0 0 0-3-3z"/><path d="M9 13v6"/><path d="M15 6a3 3 0 0 1 3 3v1a3 3 0 0 1-6 0V9a3 3 0 0 1 3-3z"/><path d="M15 13v6"/></svg>
-          </div>
-          <h3 class="acc-name">AirPods</h3>
-          <p class="acc-desc">Originales con garantía Apple</p>
-        </article>
-        <article class="acc-card reveal d4">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4"/><path d="M12 9v3l2 2"/></svg>
-          </div>
-          <h3 class="acc-name">Apple Watch</h3>
-          <p class="acc-desc">Smartwatches y correas</p>
-        </article>
-        <article class="acc-card reveal d5">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h6V5H4v4zM14 19h6v-4h-6v4z"/><path d="M7 9v3a5 5 0 0 0 5 5h2"/></svg>
-          </div>
-          <h3 class="acc-name">Cables Premium</h3>
-          <p class="acc-desc">USB-C Lightning y adaptadores</p>
-        </article>
-        <article class="acc-card reveal">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          </div>
-          <h3 class="acc-name">MagSafe</h3>
-          <p class="acc-desc">Accesorios magnéticos originales</p>
-        </article>
-        <article class="acc-card reveal d1">
-          <div class="acc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2"/><path d="M7 11h4M13 11h2"/></svg>
-          </div>
-          <h3 class="acc-name">Power Banks</h3>
-          <p class="acc-desc">Carga rápida y portátil</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section class="section">
-    <div class="container text-center">
-      <p class="section-label reveal">Por qué elegirnos</p>
-      <h2 class="section-title reveal d1">La diferencia <span class="dim">LTM.</span></h2>
-      <div class="why-grid mt-12">
-        <article class="why-card reveal">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          </div>
-          <h3 class="why-title">Garantía Real</h3>
-          <p class="why-desc">Todos nuestros productos cuentan con garantía escrita y soporte post-venta.</p>
-        </article>
-        <article class="why-card reveal d1">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="why-title">Atención Rápida</h3>
-          <p class="why-desc">Respondemos en minutos y coordinamos entregas en el día.</p>
-        </article>
-        <article class="why-card reveal d2">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="why-title">Experiencia</h3>
-          <p class="why-desc">Más de 3 años en el mercado con cientos de clientes satisfechos.</p>
-        </article>
-        <article class="why-card reveal d3">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h3 class="why-title">Productos Originales</h3>
-          <p class="why-desc">Trabajamos solo con productos verificados y de calidad.</p>
-        </article>
-        <article class="why-card reveal d4">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          </div>
-          <h3 class="why-title">Financiación</h3>
-          <p class="why-desc">Pagá en cuotas sin interés con todas las tarjetas.</p>
-        </article>
-        <article class="why-card reveal d5">
-          <div class="why-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 class="why-title">Mejores Precios</h3>
-          <p class="why-desc">Precios competitivos y ofertas exclusivas.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section">
-    <div class="container text-center">
-      <p class="section-label reveal">Testimonios</p>
-      <h2 class="section-title reveal d1">Lo que dicen <span class="dim">nuestros clientes.</span></h2>
-      <div class="testimonials-grid mt-12">
-        <article class="review-card reveal">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Excelente atención y el iPhone llegó impecable. Super recomendado! Volvería a comprar sin dudarlo."</p>
-          <div class="review-author">
-            <div>
-              <span class="review-name">María L.</span>
-              <span class="review-handle">Buenos Aires</span>
-            </div>
-            <span class="review-product">iPhone 15 Pro</span>
-          </div>
-        </article>
-        <article class="review-card reveal d1">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Me cambiaron la pantalla en el día y quedó perfecta. Muy profesionales y precios justos."</p>
-          <div class="review-author">
-            <div>
-              <span class="review-name">Juan G.</span>
-              <span class="review-handle">CABA</span>
-            </div>
-            <span class="review-product">Servicio Técnico</span>
-          </div>
-        </article>
-        <article class="review-card reveal d2">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Usé el plan canje y me dieron muy buen precio por mi iPhone viejo. Genios total!"</p>
-          <div class="review-author">
-            <div>
-              <span class="review-name">Carolina P.</span>
-              <span class="review-handle">Zona Norte</span>
-            </div>
-            <span class="review-product">Plan Canje</span>
-          </div>
-        </article>
-        <article class="review-card reveal d3">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Compré AirPods Pro y llegaron al día siguiente. Originales y sellados. 100% confiable."</p>
-          <div class="review-author">
-            <div>
-              <span class="review-name">Martín R.</span>
-              <span class="review-handle">La Plata</span>
-            </div>
-            <span class="review-product">AirPods Pro 2</span>
-          </div>
-        </article>
-        <article class="review-card reveal d4">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"La batería de mi iPhone 12 ya no daba más. Me la cambiaron rápido y ahora dura como nueva."</p>
-          <div class="review-author">
-            <div>
-              <span class="review-name">Lucía M.</span>
-              <span class="review-handle">Belgrano</span>
-            </div>
-            <span class="review-product">Cambio Batería</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="contacto" class="section cta-section">
-    <div class="container text-center">
-      <h2 class="cta-h2 reveal">¿Listo para<br><span class="shimmer">actualizar</span>?</h2>
-      <p class="cta-sub reveal d1">Contactanos ahora y recibí asesoramiento personalizado sin compromiso.</p>
-      <div class="cta-btns reveal d2">
-        <a href="https://wa.me/5491112345678" target="_blank" class="btn-wa-lg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span>Escribinos por WhatsApp</span>
-        </a>
-        <a href="mailto:hola@ltmstore.com.ar" class="btn-mail">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Envianos un Email</span>
-        </a>
-      </div>
-      <div class="cta-info reveal d3">
-        <div class="cta-info-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Buenos Aires, Argentina</span>
-        </div>
-        <div class="cta-divider"></div>
-        <div class="cta-info-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Lun - Sáb: 10:00 - 19:00</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-main">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <img src="images/logo.png" alt="LTM Store">
-              <div>
-                <strong>LTM STORE</strong>
-                <span>Tecnología Premium</span>
-              </div>
-            </div>
-            <p class="footer-bio">Productos tecnológicos al alcance de tu mano. Tu tienda de confianza en Buenos Aires.</p>
-            <div class="footer-socials">
-              <a href="https://instagram.com/ltmstore" target="_blank" class="social-btn" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              </a>
-              <a href="https://wa.me/5491112345678" target="_blank" class="social-btn" aria-label="WhatsApp">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div>
-            <p class="footer-col-title">Navegación</p>
-            <div class="footer-links">
-              <a href="#inicio">Inicio</a>
-              <a href="#productos">Productos</a>
-              <a href="#servicio-tecnico">Servicio Técnico</a>
-              <a href="#plan-canje">Plan Canje</a>
-              <a href="#accesorios">Accesorios</a>
-            </div>
-          </div>
-          <div>
-            <p class="footer-col-title">Contacto</p>
-            <div class="footer-contact-list">
-              <div class="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Buenos Aires, Argentina</span>
-              </div>
-              <div class="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+54 9 11 1234-5678</span>
-              </div>
-              <div class="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span>Lun - Sáb: 10:00 - 19:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>2026 - TuPaginaYa - Una marca del Grupo JV - Todos los derchos reservados.</p>
-        <a href="https://tupaginaya.com.ar/" target="_blank" rel="noreferrer">TuPaginaYa.com.ar</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/5491112345678" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="#000"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a class="cta" href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa%21%20Quiero%20activar%20mi%20p%C3%A1gina%20web.%20%28Ref%3A%20demoltm%29" target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.36.66 4.66 1.92 6.66L4 29l7.5-1.96a12.05 12.05 0 0 0 4.54.88h.01c6.65 0 12.05-5.4 12.05-12.04C28.1 8.4 22.69 3 16.04 3zm0 21.86h-.01c-1.46 0-2.9-.39-4.16-1.13l-.3-.18-4.45 1.17 1.19-4.33-.2-.31a9.92 9.92 0 0 1-1.52-5.29c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 0 1 2.93 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.19-.24-.58-.49-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+    Activar mi página
   </a>
 
-  <!-- Back to Top -->
-  <button class="back-top" aria-label="Volver arriba">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
-  </button>
+  <div class="steps">
+    <div><b>1.</b> Escribinos</div>
+    <div><b>2.</b> Confirmás</div>
+    <div><b>3.</b> Online en el día</div>
+  </div>
 
-  <script src="script.js"></script>
+  <p class="ref">Ref: demoltm</p>
+  <p class="foot">© <span id="yr"></span> Diseñado por <a href="https://tusitiowebya.github.io/" target="_blank" rel="noopener">TuPaginaYa</a></p>
+</main>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

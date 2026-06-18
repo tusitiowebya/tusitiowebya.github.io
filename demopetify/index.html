@@ -1,444 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PETIFY — Todo lo que tu mascota necesita, en un solo lugar</title>
-  <meta name="description" content="Alimentos balanceados, snacks, juguetes, accesorios y más para tu perro o gato. Atención personalizada y calidad garantizada. Consultá por WhatsApp." />
-  <meta name="keywords" content="petify, alimentos mascotas, accesorios perros, accesorios gatos, pet shop, balanceados, juguetes mascotas, Argentina" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://tusitiowebya.github.io/demopetify/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="PETIFY — Todo lo que tu mascota necesita" />
-  <meta property="og:description" content="Alimentos, accesorios y productos seleccionados para cuidar a quienes más querés." />
-  <meta property="og:url" content="https://tusitiowebya.github.io/demopetify/" />
-  <meta property="og:image" content="https://tusitiowebya.github.io/demopetify/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PETIFY — Todo lo que tu mascota necesita" />
-  <meta name="twitter:description" content="Alimentos, accesorios y productos seleccionados para cuidar a quienes más querés." />
-  <meta name="theme-color" content="#4F46E5" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PetStore",
-    "name": "PETIFY",
-    "description": "Todo lo que tu mascota necesita: alimentos balanceados, snacks, juguetes y accesorios de calidad.",
-    "url": "https://tusitiowebya.github.io/demopetify/"
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Página en espera de activación · TuPaginaYa</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#0f0f2e" />
+<meta property="og:title" content="Página en espera de activación · TuPaginaYa" />
+<meta property="og:description" content="Este sitio fue diseñado por TuPaginaYa y está listo para activarse." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f0f2e;--navy2:#16163f;--violet:#7b2ff7;--blue:#4a6cf7;--ink:#eef0fb;--muted:#a6abcf;--wa:#25d366;--ease:cubic-bezier(.23,1,.32,1)}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh;font-family:"Inter",system-ui,sans-serif;color:var(--ink);
+ background:radial-gradient(110% 80% at 85% 0%,rgba(123,47,247,.28),transparent 55%),
+            radial-gradient(110% 80% at 0% 100%,rgba(74,108,247,.28),transparent 55%),var(--navy);
+ display:grid;place-items:center;padding:28px;overflow-x:hidden}
+.card{position:relative;width:100%;max-width:560px;text-align:center;
+ background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+ border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:48px 36px;
+ box-shadow:0 40px 90px -40px rgba(0,0,0,.7);backdrop-filter:blur(8px);
+ animation:rise .8s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.brand{display:inline-flex;align-items:center;gap:9px;font-family:"Sora";font-weight:800;font-size:18px;letter-spacing:-.02em;margin-bottom:30px}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--violet),var(--blue));display:grid;place-items:center;color:#fff;font-size:16px}
+.brand b{color:#fff}.brand i{color:var(--blue);font-style:normal}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.04em;
+ color:#dbe0ff;background:rgba(123,47,247,.16);border:1px solid rgba(123,47,247,.4);padding:8px 16px;border-radius:50px;margin-bottom:24px}
+.badge .pulse{width:9px;height:9px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 0 rgba(123,47,247,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(123,47,247,0)}100%{box-shadow:0 0 0 0 rgba(123,47,247,0)}}
+h1{font-family:"Sora";font-weight:800;font-size:clamp(26px,5.4vw,38px);line-height:1.12;letter-spacing:-.02em;margin-bottom:14px}
+h1 .g{background:linear-gradient(100deg,var(--violet),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+p.lead{color:var(--muted);font-size:16px;line-height:1.6;max-width:42ch;margin:0 auto 30px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;
+ padding:16px 26px;border-radius:14px;background:var(--wa);color:#04210f;font-family:"Sora";font-weight:700;font-size:16px;
+ text-decoration:none;transition:transform .18s var(--ease),box-shadow .25s;box-shadow:0 16px 36px -12px rgba(37,211,102,.6)}
+.cta:hover{transform:translateY(-3px);box-shadow:0 22px 46px -14px rgba(37,211,102,.7)}
+.cta:active{transform:scale(.97)}
+.cta svg{width:22px;height:22px}
+.steps{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:32px 0 4px}
+.steps div{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.steps b{color:var(--blue)}
+.ref{margin-top:26px;font-size:12px;color:#7e84ad;letter-spacing:.03em}
+.foot{margin-top:22px;font-size:12.5px;color:#8a90b8}
+.foot a{color:#aeb6ff;text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
+<main class="card">
+  <span class="brand"><span class="dot">✦</span><span><b>TuPagina</b><i>Ya</i></span></span>
 
-<!-- ========== NAVBAR ========== -->
-<header id="nav">
-  <div class="nav-inner">
-    <a href="#inicio" class="nav-logo">
-      <span class="logo-paw">🐾</span>
-      <span class="logo-name">PETIFY</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#productos">Productos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#galeria">Galería</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20productos%20de%20PETIFY." target="_blank" class="nav-cta">Consultar</a>
-    <button id="navToggle" class="nav-toggle" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
+  <div><span class="badge"><span class="pulse"></span>En espera de activación</span></div>
+
+  <h1>Tu página está lista,<br /><span class="g">falta solo activarla.</span></h1>
+  <p class="lead">Este sitio fue diseñado por <strong style="color:#fff">TuPaginaYa</strong> y ya está armado.
+  Activalo y ponelo online hoy mismo para que tus clientes te encuentren.</p>
+
+  <a class="cta" href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa%21%20Quiero%20activar%20mi%20p%C3%A1gina%20web.%20%28Ref%3A%20demopetify%29" target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.36.66 4.66 1.92 6.66L4 29l7.5-1.96a12.05 12.05 0 0 0 4.54.88h.01c6.65 0 12.05-5.4 12.05-12.04C28.1 8.4 22.69 3 16.04 3zm0 21.86h-.01c-1.46 0-2.9-.39-4.16-1.13l-.3-.18-4.45 1.17 1.19-4.33-.2-.31a9.92 9.92 0 0 1-1.52-5.29c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 0 1 2.93 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.19-.24-.58-.49-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+    Activar mi página
+  </a>
+
+  <div class="steps">
+    <div><b>1.</b> Escribinos</div>
+    <div><b>2.</b> Confirmás</div>
+    <div><b>3.</b> Online en el día</div>
   </div>
-  <nav id="navMobile" class="nav-mobile">
-    <a href="#productos">Productos</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#galeria">Galería</a>
-    <a href="#faq">FAQ</a>
-    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20productos%20de%20PETIFY." target="_blank" class="mob-cta">Consultar ahora</a>
-  </nav>
-</header>
 
-<!-- ========== HERO ========== -->
-<section id="inicio" class="hero">
-  <div class="hero-overlay"></div>
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="hero.mp4" type="video/mp4" />
-  </video>
-  <div class="paw-deco paw-1">🐾</div>
-  <div class="paw-deco paw-2">🐾</div>
-  <div class="paw-deco paw-3">🐾</div>
-  <div class="hero-content">
-    <div class="hero-badges">
-      <span class="hero-badge">🐶 Productos para perros</span>
-      <span class="hero-badge">🐱 Productos para gatos</span>
-      <span class="hero-badge">🚚 Atención personalizada</span>
-      <span class="hero-badge">⭐ Calidad garantizada</span>
-    </div>
-    <h1 class="hero-title">Todo lo que tu mascota<br><em>necesita,</em> en un solo lugar.</h1>
-    <p class="hero-sub">Alimentos, accesorios y productos seleccionados<br>para cuidar a quienes más querés.</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20productos%20de%20PETIFY." target="_blank" class="btn-primary">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 2.006.578 3.874 1.582 5.45L2 22l4.724-1.557A9.97 9.97 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.26a8.24 8.24 0 01-4.264-1.19l-.305-.18-3.17 1.044 1.058-3.09-.2-.313A8.218 8.218 0 013.849 12C3.849 7.46 7.542 3.767 12 3.767S20.23 7.46 20.23 12c0 4.54-3.692 8.26-8.23 8.26z"/></svg>
-        Consultar productos
-      </a>
-      <a href="#productos" class="btn-outline-white">Ver catálogo ↓</a>
-    </div>
-  </div>
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-    </svg>
-  </div>
-</section>
-
-<!-- ========== BENEFICIOS ========== -->
-<section class="beneficios">
-  <div class="section-inner">
-    <div class="section-head fu">
-      <p class="section-label">¿Por qué PETIFY?</p>
-      <h2>Pensado para <em>tu mascota</em></h2>
-      <p class="section-sub">Cada producto que elegimos pasa por un criterio de calidad, porque sabemos que son parte de tu familia.</p>
-    </div>
-    <div class="ben-grid">
-      <div class="ben-card fu">
-        <div class="ben-icon">🐾</div>
-        <h3>Productos seleccionados</h3>
-        <p>Elegimos cada producto con criterio de calidad y bienestar animal como prioridad.</p>
-      </div>
-      <div class="ben-card fu">
-        <div class="ben-icon">🥩</div>
-        <h3>Alimentos de calidad</h3>
-        <p>Nutrición premium y balanceada para acompañar cada etapa de vida de tu mascota.</p>
-      </div>
-      <div class="ben-card fu">
-        <div class="ben-icon">🎾</div>
-        <h3>Para todas las etapas</h3>
-        <p>Desde cachorros hasta adultos mayores, tenemos todo lo que necesitan.</p>
-      </div>
-      <div class="ben-card fu">
-        <div class="ben-icon">💬</div>
-        <h3>Atención personalizada</h3>
-        <p>Te asesoramos para encontrar la mejor opción según las necesidades de tu mascota.</p>
-      </div>
-      <div class="ben-card fu">
-        <div class="ben-icon">🚀</div>
-        <h3>Compra simple y rápida</h3>
-        <p>Consultá por WhatsApp y coordinamos todo en minutos, sin complicaciones.</p>
-      </div>
-      <div class="ben-card fu">
-        <div class="ben-icon">❤️</div>
-        <h3>Bienestar animal</h3>
-        <p>Amamos a los animales tanto como vos. Eso se nota en cada detalle.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PRODUCTOS ========== -->
-<section id="productos" class="productos">
-  <div class="section-inner">
-    <div class="section-head fu">
-      <p class="section-label">Nuestros productos</p>
-      <h2>Todo para <em>tu compañero</em></h2>
-      <p class="section-sub">Encontrá todo lo que necesitás en un solo lugar. Consultá disponibilidad por WhatsApp.</p>
-    </div>
-    <div class="prod-grid">
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Alimentos%20Balanceados." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500&q=80" alt="Alimentos balanceados para mascotas" loading="lazy" />
-          <span class="prod-tag">🥩 Alimentos</span>
-        </div>
-        <div class="prod-body">
-          <h3>Alimentos Balanceados</h3>
-          <p>Nutrición completa para perros y gatos de todas las edades y tamaños.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Snacks%20y%20Premios." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?w=500&q=80" alt="Snacks y premios para mascotas" loading="lazy" />
-          <span class="prod-tag">🦴 Snacks</span>
-        </div>
-        <div class="prod-body">
-          <h3>Snacks y Premios</h3>
-          <p>Refuerzos positivos y premios saludables para el entrenamiento y el mimo diario.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Juguetes." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Juguetes para mascotas" loading="lazy" />
-          <span class="prod-tag">🎾 Juguetes</span>
-        </div>
-        <div class="prod-body">
-          <h3>Juguetes</h3>
-          <p>Juguetes seguros y duraderos para mantener activa y entretenida a tu mascota.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Comederos%20y%20Bebederos." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80" alt="Comederos y bebederos" loading="lazy" />
-          <span class="prod-tag">🥣 Comederos</span>
-        </div>
-        <div class="prod-body">
-          <h3>Comederos y Bebederos</h3>
-          <p>Diseños modernos y prácticos para una alimentación e hidratación perfecta.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Correas%20y%20Paseadores." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80" alt="Correas y paseadores" loading="lazy" />
-          <span class="prod-tag">🦮 Paseos</span>
-        </div>
-        <div class="prod-body">
-          <h3>Correas y Paseadores</h3>
-          <p>Correas cómodas y seguras para disfrutar cada salida con tu perro.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Higiene%20y%20Cuidado." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=500&q=80" alt="Higiene y cuidado de mascotas" loading="lazy" />
-          <span class="prod-tag">✨ Higiene</span>
-        </div>
-        <div class="prod-body">
-          <h3>Higiene y Cuidado</h3>
-          <p>Shampoos, cepillos y productos de grooming para que luzcan siempre perfectos.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Accesorios%20para%20perros." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80" alt="Accesorios para perros" loading="lazy" />
-          <span class="prod-tag">🐶 Perros</span>
-        </div>
-        <div class="prod-body">
-          <h3>Accesorios para Perros</h3>
-          <p>Collares, arneses, camas, ropa y mucho más para tu mejor amigo.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20Accesorios%20para%20gatos." target="_blank" class="prod-card fu">
-        <div class="prod-img">
-          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500&q=80" alt="Accesorios para gatos" loading="lazy" />
-          <span class="prod-tag">🐱 Gatos</span>
-        </div>
-        <div class="prod-body">
-          <h3>Accesorios para Gatos</h3>
-          <p>Rascadores, juguetes, camas y todo lo que tu gato necesita para ser feliz.</p>
-          <span class="prod-link">Consultar →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ========== POR QUÉ ELEGIRNOS ========== -->
-<section id="nosotros" class="porq">
-  <div class="porq-inner">
-    <div class="porq-content fu">
-      <p class="section-label label-light">Nuestra diferencia</p>
-      <h2>¿Por qué elegir <em>PETIFY?</em></h2>
-      <ul class="porq-list">
-        <li><span class="porq-check">✓</span>Productos cuidadosamente seleccionados</li>
-        <li><span class="porq-check">✓</span>Atención personalizada y asesoramiento real</li>
-        <li><span class="porq-check">✓</span>Excelente relación precio / calidad</li>
-        <li><span class="porq-check">✓</span>Amor genuino por los animales</li>
-        <li><span class="porq-check">✓</span>Gran variedad de opciones</li>
-        <li><span class="porq-check">✓</span>Asesoramiento para cada mascota y etapa</li>
-      </ul>
-      <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20PETIFY." target="_blank" class="btn-white">Hablar con nosotros</a>
-    </div>
-    <div class="porq-cards fu">
-      <div class="porq-card">
-        <span class="porq-emoji">🐶</span>
-        <p>Productos<br>para perros</p>
-      </div>
-      <div class="porq-card">
-        <span class="porq-emoji">🐱</span>
-        <p>Productos<br>para gatos</p>
-      </div>
-      <div class="porq-card">
-        <span class="porq-emoji">💬</span>
-        <p>Atención<br>personalizada</p>
-      </div>
-      <div class="porq-card">
-        <span class="porq-emoji">⭐</span>
-        <p>Calidad<br>garantizada</p>
-      </div>
-      <div class="porq-card">
-        <span class="porq-emoji">🚀</span>
-        <p>Compra por<br>WhatsApp</p>
-      </div>
-      <div class="porq-card">
-        <span class="porq-emoji">❤️</span>
-        <p>Amamos<br>las mascotas</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== GALERÍA ========== -->
-<section id="galeria" class="galeria">
-  <div class="section-inner">
-    <div class="section-head fu">
-      <p class="section-label">Galería</p>
-      <h2>Momentos que <em>inspiran</em></h2>
-    </div>
-    <div class="gal-grid">
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=700&q=80" alt="Golden retriever feliz" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=700&q=80" alt="Perro adorable" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=700&q=80" alt="Gato esponjoso" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=700&q=80" alt="Perro con pelota" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&q=80" alt="Labrador" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=700&q=80" alt="Gato jugando" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80" alt="Perros corriendo" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-      <div class="gi fu" data-src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Juguetes coloridos" loading="lazy" />
-        <div class="gi-over">🐾 Ver</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-  <button id="lbClose" class="lb-close">✕</button>
-  <button id="lbPrev" class="lb-prev">‹</button>
-  <button id="lbNext" class="lb-next">›</button>
-  <img id="lbImg" src="" alt="Galería PETIFY" />
-</div>
-
-<!-- ========== CTA MID ========== -->
-<section class="cta-mid">
-  <div class="cta-mid-inner">
-    <div class="cta-mid-emoji fu">🐾</div>
-    <h2 class="fu">Tu mascota merece lo mejor</h2>
-    <p class="fu">Descubrí productos seleccionados para acompañar cada etapa de su vida.</p>
-    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20productos%20para%20mi%20mascota." target="_blank" class="btn-white fu">Consultar ahora</a>
-  </div>
-</section>
-
-<!-- ========== FAQ ========== -->
-<section id="faq" class="faq">
-  <div class="section-inner">
-    <div class="section-head fu">
-      <p class="section-label">Preguntas frecuentes</p>
-      <h2>Todo lo que <em>querés saber</em></h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item fu">
-        <button class="faq-q">¿Trabajan productos para perros?<span class="faq-ico">↓</span></button>
-        <div class="faq-a"><p>Sí. Contamos con una amplia variedad de alimentos, juguetes, accesorios y productos de cuidado especialmente seleccionados para perros de todas las razas y tamaños.</p></div>
-      </div>
-      <div class="faq-item fu">
-        <button class="faq-q">¿Trabajan productos para gatos?<span class="faq-ico">↓</span></button>
-        <div class="faq-a"><p>Sí. Tenemos todo lo que tu gato necesita: alimentos balanceados, snacks, juguetes, camas, rascadores y accesorios de calidad.</p></div>
-      </div>
-      <div class="faq-item fu">
-        <button class="faq-q">¿Puedo consultar stock?<span class="faq-ico">↓</span></button>
-        <div class="faq-a"><p>Sí. Escribinos por WhatsApp y te confirmamos disponibilidad al instante. Siempre tratamos de tener los productos más buscados disponibles.</p></div>
-      </div>
-      <div class="faq-item fu">
-        <button class="faq-q">¿Realizan asesoramiento?<span class="faq-ico">↓</span></button>
-        <div class="faq-a"><p>Sí. Nuestro equipo te ayuda a elegir el mejor alimento o accesorio según la raza, edad, peso y necesidades específicas de tu mascota.</p></div>
-      </div>
-      <div class="faq-item fu">
-        <button class="faq-q">¿Cómo realizo una compra?<span class="faq-ico">↓</span></button>
-        <div class="faq-a"><p>La compra se realiza directamente por WhatsApp. Te acompañamos en todo el proceso, desde la elección del producto hasta la coordinación del envío o retiro.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FINAL CTA ========== -->
-<section class="cta-final">
-  <div class="cta-final-inner">
-    <div class="cta-final-emoji fu">💬</div>
-    <h2 class="fu">Consultanos por el producto<br>que <em>estás buscando</em></h2>
-    <p class="fu">Estamos para ayudarte a encontrar la mejor opción para tu mascota.</p>
-    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20productos%20PETIFY." target="_blank" class="btn-primary btn-xl fu">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 2.006.578 3.874 1.582 5.45L2 22l4.724-1.557A9.97 9.97 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.26a8.24 8.24 0 01-4.264-1.19l-.305-.18-3.17 1.044 1.058-3.09-.2-.313A8.218 8.218 0 013.849 12C3.849 7.46 7.542 3.767 12 3.767S20.23 7.46 20.23 12c0 4.54-3.692 8.26-8.23 8.26z"/></svg>
-      Hablar por WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <span class="logo-paw">🐾</span>
-        <span class="logo-name">PETIFY</span>
-      </div>
-      <p>Todo lo que tu mascota necesita,<br>en un solo lugar.</p>
-    </div>
-    <div class="footer-links">
-      <h5>Productos</h5>
-      <a href="#productos">Alimentos balanceados</a>
-      <a href="#productos">Snacks y premios</a>
-      <a href="#productos">Juguetes</a>
-      <a href="#productos">Accesorios</a>
-    </div>
-    <div class="footer-links">
-      <h5>PETIFY</h5>
-      <a href="#nosotros">¿Por qué elegirnos?</a>
-      <a href="#galeria">Galería</a>
-      <a href="#faq">Preguntas frecuentes</a>
-    </div>
-    <div class="footer-links">
-      <h5>Contacto</h5>
-      <a href="https://wa.me/5491100000000" target="_blank">WhatsApp</a>
-      <a href="#inicio">Inicio</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 PETIFY · Todos los derechos reservados.</p>
-    <p>Diseñado por <a href="https://tupaginaya.com" target="_blank">TuPaginaYa</a></p>
-  </div>
-</footer>
-
-<!-- WA FLOAT -->
-<a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20sobre%20productos%20PETIFY." target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 2.006.578 3.874 1.582 5.45L2 22l4.724-1.557A9.97 9.97 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.26a8.24 8.24 0 01-4.264-1.19l-.305-.18-3.17 1.044 1.058-3.09-.2-.313A8.218 8.218 0 013.849 12C3.849 7.46 7.542 3.767 12 3.767S20.23 7.46 20.23 12c0 4.54-3.692 8.26-8.23 8.26z"/></svg>
-</a>
-
-<script src="script.js"></script>
+  <p class="ref">Ref: demopetify</p>
+  <p class="foot">© <span id="yr"></span> Diseñado por <a href="https://tusitiowebya.github.io/" target="_blank" rel="noopener">TuPaginaYa</a></p>
+</main>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
