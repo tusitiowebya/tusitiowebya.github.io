@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Radio Confidencias · Noticias las 24 horas · Salta | Somos tu confidente</title>
+<meta name="description" content="Radio Confidencias: radio online y portal informativo de noticias las 24 horas desde Salta. Política, policiales, deportes y espectáculos. Somos tu confidente. Escuchá en vivo." />
+<meta name="theme-color" content="#0B0B0D" />
+<meta name="author" content="Radio Confidencias" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://radioconfidencias.com.ar/" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Radio Confidencias · Noticias las 24 horas" />
+<meta property="og:description" content="Radio online y portal informativo desde Salta. Somos tu confidente. Escuchá en vivo, las 24 horas." />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:site_name" content="Radio Confidencias" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Radio Confidencias inicio">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="30" r="22" fill="#E8202A"/>
+        <g fill="#0B0B0D"><rect x="26" y="12" width="12" height="22" rx="6"/>
+        <path d="M20 30a12 12 0 0 0 24 0h-3.4a8.6 8.6 0 0 1-17.2 0z"/>
+        <rect x="30" y="41" width="4" height="8" rx="2"/><rect x="24" y="48" width="16" height="4" rx="2"/></g>
+      </svg>
+      <span class="brand-txt">Confidencias<span>Radio · 24 hs</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#programacion">Programación</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#somos">Somos</a>
+      <a href="#seguinos">Seguinos</a>
+      <a href="#vivo" class="nav-live"><span class="live-dot"></span> En vivo</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#programacion">Programación</a>
+  <a href="#noticias">Noticias</a>
+  <a href="#somos">Somos</a>
+  <a href="#seguinos">Seguinos</a>
+  <a href="#vivo">Escuchar en vivo</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="vivo">
+  <img class="hero-bg" src="img/studio.jpg" alt="" aria-hidden="true" />
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-onair"><span class="rec"></span> Al aire · en este momento</span>
+      <h1>Somos tu <em>confidente</em>.</h1>
+      <p class="hero-sub">Radio online y portal de noticias <b>las 24 horas</b>, desde Salta para todo el país. La información de hoy, contada cerca tuyo.</p>
+      <div class="hero-tags">
+        <span>Política</span><span>Policiales</span><span>Deportes</span><span>Espectáculos</span><span>Salta</span>
+      </div>
+    </div>
+
+    <!-- live player -->
+    <div class="player" id="player">
+      <div class="player-top">
+        <span class="player-tag">● Ahora suena</span>
+        <span class="player-listeners"><span class="pulse"></span> <span id="listeners">312</span> escuchando</span>
+      </div>
+      <div class="disc-wrap">
+        <div class="disc" id="disc" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M5 11a7 7 0 0 0 14 0h-2a5 5 0 0 1-10 0z"/><rect x="11" y="19" width="2" height="3" rx="1"/></svg>
+        </div>
+        <div class="now">
+          <small>Programa en vivo</small>
+          <b id="nowName">La Mañana Confidente</b>
+          <span id="nowHost">con el equipo de redacción</span>
+        </div>
+      </div>
+      <div class="eq" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <button class="player-play" id="playBtn" aria-pressed="false">
+        <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="ico-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        <span id="playLabel">Escuchar en vivo</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TICKER ===================== -->
+<div class="ticker" aria-label="Último momento">
+  <div class="ticker-label">Último momento</div>
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<!-- ===================== PROGRAMACIÓN ===================== -->
+<section class="section" id="programacion">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Grilla · 24 horas</span>
+      <h2>Nuestra <em>programación</em></h2>
+      <p>Acompañamos todo el día. El programa al aire se marca solo según la hora.</p>
+    </div>
+    <div class="prog-grid" id="progGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== NOTICIAS ===================== -->
+<section class="section section-alt" id="noticias">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Portal informativo</span>
+      <h2>Últimas <em>noticias</em></h2>
+      <p>Lo que está pasando, al instante. Tocá una nota para leerla completa.</p>
+    </div>
+    <div class="filters reveal" id="filters" role="group" aria-label="Filtrar por sección">
+      <button class="chip active" data-filter="all">Todas</button>
+      <button class="chip" data-filter="politica">Política</button>
+      <button class="chip" data-filter="policiales">Policiales</button>
+      <button class="chip" data-filter="deportes">Deportes</button>
+      <button class="chip" data-filter="espectaculos">Espectáculos</button>
+      <button class="chip" data-filter="local">Salta</button>
+      <button class="chip" data-filter="economia">Economía</button>
+    </div>
+    <div class="news-grid" id="newsGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-back" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal-shot"><img id="mImg" src="" alt="" /></div>
+    <div class="modal-body">
+      <span class="modal-cat" id="mCat"></span>
+      <h3 class="modal-title" id="mTitle"></h3>
+      <p class="modal-time" id="mTime"></p>
+      <p class="modal-text" id="mLead"></p>
+      <p class="modal-text" id="mBody"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SOMOS ===================== -->
+<section class="section" id="somos">
+  <div class="wrap about">
+    <div class="reveal">
+      <span class="eyebrow">Quiénes somos</span>
+      <p class="about-quote">La radio que te habla <em>al oído</em>, no de arriba.</p>
+      <p>Radio Confidencias nació para contar lo que pasa en Salta y en el país con cercanía y sin vueltas. Información seria, compañía las 24 horas y la confianza de una voz amiga. Porque las noticias también se pueden contar como entre confidentes.</p>
+      <div class="about-stats">
+        <div class="about-stat"><b>24/7</b><span>Al aire</span></div>
+        <div class="about-stat"><b>100%</b><span>Online</span></div>
+        <div class="about-stat"><b>Salta</b><span>y todo el país</span></div>
+      </div>
+    </div>
+    <div class="about-media reveal">
+      <img src="img/mic.jpg" alt="Micrófono en el estudio de Radio Confidencias" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SEGUINOS ===================== -->
+<section class="section" id="seguinos">
+  <div class="wrap">
+    <div class="follow reveal">
+      <h2>No te pierdas nada</h2>
+      <p>Seguinos en Facebook para las últimas noticias y escribinos cuando quieras. Estamos del otro lado, las 24 horas.</p>
+      <div class="follow-actions">
+        <a class="fbtn fbtn-fb" href="https://www.facebook.com/share/1E9nwPvGLx/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07z"/></svg>
+          Seguir en Facebook
+        </a>
+        <a class="fbtn fbtn-wa" href="https://wa.me/5493876837017" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+          387 6 837017
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="Radio Confidencias">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="30" r="22" fill="#E8202A"/>
+            <g fill="#0B0B0D"><rect x="26" y="12" width="12" height="22" rx="6"/>
+            <path d="M20 30a12 12 0 0 0 24 0h-3.4a8.6 8.6 0 0 1-17.2 0z"/>
+            <rect x="30" y="41" width="4" height="8" rx="2"/><rect x="24" y="48" width="16" height="4" rx="2"/></g>
+          </svg>
+          <span class="brand-txt">Confidencias<span>Radio · 24 hs</span></span>
+        </a>
+        <p>Radio online y portal informativo de noticias, las 24 horas. Somos tu confidente.</p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <a href="#programacion">Programación</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#somos">Somos</a>
+      </div>
+      <div>
+        <h4>Escuchá</h4>
+        <a href="#vivo">En vivo 24 hs</a>
+        <a href="#seguinos">Seguinos</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5493876837017" target="_blank" rel="noopener">387 6 837017</a>
+        <a href="https://www.facebook.com/share/1E9nwPvGLx/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Radio Confidencias · Salta</span>
+      <span>Sitio diseñado por TuPaginaYa</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MINI PLAYER ===================== -->
+<div class="mini" id="mini">
+  <div class="mini-inner">
+    <button class="mini-play" id="miniPlay" aria-label="Reproducir / pausar">
+      <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="mini-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="mini-info">
+      <b id="miniName">La Mañana Confidente</b>
+      <span>Radio Confidencias · En vivo</span>
+    </div>
+    <span class="mini-live">En vivo</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
