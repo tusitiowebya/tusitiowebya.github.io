@@ -51,6 +51,21 @@
     });
   }
 
+  /* ---- Hero video: asegurar autoplay/loop ---- */
+  var hv = document.querySelector("video.hero__bear");
+  if (hv) {
+    var tryPlay = function () {
+      var p = hv.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    hv.addEventListener("loadeddata", tryPlay);
+    hv.addEventListener("ended", tryPlay); // respaldo por si loop no dispara
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) tryPlay();
+    });
+    tryPlay();
+  }
+
   /* ---- Mobile menu ---- */
   var burger = document.getElementById("burger");
   var mobile = document.getElementById("mobile");
