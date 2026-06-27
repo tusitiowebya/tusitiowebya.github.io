@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+
+<title>Catálogo · Patitas que Aman — Pet Shop Córdoba</title>
+<meta name="description" content="Catálogo completo de alimentos y accesorios para perros y gatos. Armá tu pedido y enviánoslo por WhatsApp. Envíos a domicilio en Córdoba."/>
+<meta name="robots" content="index,follow"/>
+<meta name="theme-color" content="#1E7FC2"/>
+<link rel="canonical" href="https://tusitiowebya.github.io/demopatitas/catalogo/"/>
+<meta property="og:title" content="Catálogo · Patitas que Aman"/>
+<meta property="og:description" content="Armá tu pedido de alimento para perros y gatos y enviálo por WhatsApp."/>
+<meta property="og:type" content="website"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"/>
+<link rel="stylesheet" href="catalogo.css"/>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<header class="nav scrolled" id="nav">
+  <div class="nav-in">
+    <a href="../" class="brand" aria-label="Patitas que Aman inicio">
+      <img class="brand-logo" src="../logo.png" alt="Patitas que Aman — Pet Shop"/>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="../">Inicio</a>
+      <a href="#PERROS">Perros</a>
+      <a href="#GATOS">Gatos</a>
+    </nav>
+    <button class="nav-cta cart-open" id="cartOpen">🛒 Mi pedido <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<!-- ENCABEZADO CATÁLOGO -->
+<section class="cat-hero">
+  <div class="wrap">
+    <a class="back" href="../">← Volver al inicio</a>
+    <h1>Nuestro catálogo 🐾</h1>
+    <p>Tocá <b>Agregar</b> en los productos que quieras, armá tu pedido y enviánoslo por WhatsApp. Coordinamos pago y envío al toque.</p>
+    <div class="tools">
+      <div class="search"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"/></svg>
+        <input type="search" id="search" placeholder="Buscar producto o marca…" aria-label="Buscar"/>
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="filter-row" id="brandsRow" hidden>
+      <span class="filter-label">Marcas:</span>
+      <div class="filters" id="brands"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTA -->
+<main class="wrap catalogo" id="catalogo">
+  <div class="cat-loading" id="loading">Cargando catálogo…</div>
+</main>
+
+<!-- CARRITO DRAWER -->
+<div class="cart-backdrop" id="cartBackdrop"></div>
+<aside class="cart" id="cart" aria-label="Tu pedido">
+  <div class="cart-head">
+    <h2>Tu pedido</h2>
+    <button class="cart-close" id="cartClose" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty">
+    <span>🛒</span>
+    <p>Todavía no agregaste productos.</p>
+  </div>
+  <div class="cart-foot" id="cartFoot">
+    <div class="cart-total"><span>Total</span><b id="cartTotal">$0</b></div>
+    <form class="cart-form" id="cartForm">
+      <input type="text" id="fNombre" placeholder="Tu nombre *" required/>
+      <input type="tel" id="fTel" placeholder="Tu WhatsApp *" required/>
+      <textarea id="fNota" placeholder="Nota / dirección de envío (opcional)" rows="2"></textarea>
+      <button type="submit" class="btn btn-orange cart-submit" id="cartSubmit">Enviar pedido por WhatsApp</button>
+      <p class="cart-legal">Te confirmamos stock, pago y envío por WhatsApp.</p>
+    </form>
+  </div>
+</aside>
+
+<!-- ÉXITO -->
+<div class="ok-modal" id="okModal">
+  <div class="ok-card">
+    <span class="ok-emoji">🎉</span>
+    <h2>¡Pedido enviado!</h2>
+    <p>Te abrimos WhatsApp para confirmar. Si no se abrió, tocá el botón.</p>
+    <a class="btn btn-orange" id="okWa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <button class="ok-close btn btn-ghost" id="okClose">Seguir mirando</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap ft-bottom" style="border:none">
+    <span>© <span id="yr"></span> Patitas que Aman · 25 de Mayo 350, Córdoba</span>
+    <span>Sitio diseñado por <a href="https://tupaginaya.com.ar/" target="_blank" rel="noopener">TuPaginaYa</a></span>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="catalogo.js"></script>
+</body>
+</html>
