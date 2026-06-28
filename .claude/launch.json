@@ -24,6 +24,18 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8768", "--directory", "demotf"],
       "port": 8768
+    },
+    {
+      "name": "demootsoblack",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8769", "--directory", "demootsoblack"],
+      "port": 8769
+    },
+    {
+      "name": "demoferchu",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8770", "--directory", "demoferchu"],
+      "port": 8770
     }
   ]
 }
