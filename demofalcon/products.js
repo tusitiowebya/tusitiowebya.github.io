@@ -10,7 +10,10 @@
    { id, name, cat, img, price, unit, desc }
    ============================================================ */
 
-const API_URL = ""; // <-- poné acá la URL de tu API cuando la tengas
+// Catálogo conectado a la app CobrOS (cuenta info@falconferreteria.com.ar).
+// El ferretero carga los productos en CobrOS y aparecen acá solos.
+const API_URL = "https://vps-5905394-x.dattaweb.com/cobros/api/cobros-publico/catalogo-api?key=cob_ac37b138ba4337f4f3f4b6ecb2433e10f34fd3cfe9a6e4d9";
+const IMG_FALLBACK = "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=600";
 
 const CATEGORIAS = [
   "Herramientas eléctricas",
@@ -50,18 +53,32 @@ const PRODUCTS = [
   { id:"candado-60",    name:"Candado seguridad 60mm",         cat:"Seguridad",               img:IMG(4808267),  price:4200,  unit:"x unidad",        desc:"Arco endurecido reforzado." }
 ];
 
-/* Carga de productos — API-ready.
-   Cuando tengas el panel, completá API_URL arriba y listo. */
+/* Carga de productos desde CobrOS.
+   Devuelve el catálogo real del negocio; si CobrOS está vacío o no responde,
+   usa los productos de ejemplo de arriba para que la web nunca quede vacía. */
 async function loadProducts(){
   if (API_URL) {
     try {
-      const r = await fetch(API_URL);
+      const r = await fetch(API_URL, { headers: { "Accept": "application/json" } });
       if (r.ok) {
         const data = await r.json();
-        if (Array.isArray(data) && data.length) return data;
+        const arr = Array.isArray(data) ? data : (data && Array.isArray(data.productos) ? data.productos : []);
+        if (arr.length) {
+          return arr.map(function(p){
+            return {
+              id:    String(p.id || p._id || p.nombre),
+              name:  p.name  || p.nombre     || "Producto",
+              cat:   p.cat   || p.categoria  || "Productos",
+              img:   p.img   || p.foto       || IMG_FALLBACK,
+              price: (p.price != null ? p.price : p.precio) || 0,
+              unit:  p.unit  || p.unidad     || "",
+              desc:  p.desc  || p.descripcion || ""
+            };
+          });
+        }
       }
     } catch (e) {
-      console.warn("API no disponible, uso productos de ejemplo:", e);
+      console.warn("CobrOS no disponible, uso productos de ejemplo:", e);
     }
   }
   return PRODUCTS;
