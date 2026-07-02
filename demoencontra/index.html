@@ -143,8 +143,49 @@
   </div>
 </section>
 
-<!-- ===================== CATÁLOGO / NOVEDADES ===================== -->
-<section class="section s-cream" id="catalogo">
+<!-- ===================== CATÁLOGO (dinámico · CobrOS) ===================== -->
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Catálogo mayorista</span>
+      <h2>Elegí y armá tu <em>pedido</em></h2>
+      <p>Productos y precios siempre al día. Sumá lo que quieras al pedido y lo confirmás por WhatsApp.</p>
+    </div>
+    <div class="e-tools reveal">
+      <div class="e-search"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"/></svg><input type="search" id="cobrosSearch" placeholder="Buscar producto…" aria-label="Buscar"/></div>
+      <div class="e-chips" id="cobrosChips"></div>
+    </div>
+    <div class="e-grid reveal" id="cobrosGrid"></div>
+    <p class="e-empty" id="cobrosEmpty" hidden></p>
+  </div>
+</section>
+
+<!-- barra de pedido -->
+<div class="e-bar" id="cobrosBar">
+  <div class="wrap e-bar-in">
+    <div class="e-bar-info"><b id="cobrosBarCount">0 productos</b><span id="cobrosBarTotal">$0</span></div>
+    <button class="btn btn-rosa" id="cobrosBarBtn">Ver mi pedido</button>
+  </div>
+</div>
+<!-- drawer pedido -->
+<div class="e-back" id="cobrosBack"></div>
+<aside class="e-drawer" id="cobrosDrawer" aria-label="Tu pedido">
+  <div class="e-drawer-head"><h3>Tu pedido</h3><button id="cobrosClose" aria-label="Cerrar">✕</button></div>
+  <div class="e-drawer-items" id="cobrosCartItems"></div>
+  <div class="e-drawer-foot">
+    <div class="e-drawer-total"><span>Total estimado</span><b id="cobrosCartTotal">$0</b></div>
+    <form id="cobrosForm">
+      <input type="text" id="eNombre" placeholder="Tu nombre / negocio *" required/>
+      <input type="tel" id="eTel" placeholder="Tu WhatsApp *" required/>
+      <textarea id="eNota" rows="2" placeholder="Nota / localidad de envío (opcional)"></textarea>
+      <button type="submit" class="btn btn-rosa" id="cobrosSubmit" style="width:100%">Enviar pedido por WhatsApp</button>
+      <p class="e-legal">Te confirmamos precios, mínimo y envío por WhatsApp.</p>
+    </form>
+  </div>
+</aside>
+
+<!-- ===================== SHOWROOM (galería) ===================== -->
+<section class="section s-cream" id="showroom">
   <div class="wrap">
     <div class="s-head reveal">
       <span class="eyebrow">Novedades</span>
@@ -218,5 +259,6 @@
 </a>
 
 <script src="script.js"></script>
+<script src="catalogo.js"></script>
 </body>
 </html>

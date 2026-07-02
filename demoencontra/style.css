@@ -209,3 +209,65 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .ben-grid{grid-template-columns:repeat(4,1fr)}
   .footer-grid{grid-template-columns:2.2fr 1fr 1fr 1fr}
 }
+
+/* ===================== CATÁLOGO DINÁMICO (CobrOS) ===================== */
+.e-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:26px}
+.e-search{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;flex:1;min-width:220px;max-width:380px}
+.e-search svg{width:18px;height:18px;color:var(--muted-l);flex:none}
+.e-search input{border:none;outline:none;background:none;font-family:var(--body);font-size:1rem;width:100%;color:var(--ink)}
+.e-chips{display:flex;gap:8px;flex-wrap:wrap}
+.e-chip{font-family:var(--body);font-weight:600;font-size:.9rem;background:#fff;border:1.5px solid var(--line);color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer;transition:.2s}
+.e-chip:hover{border-color:var(--rosa-s)}
+.e-chip.active{background:var(--rosa);color:#fff;border-color:var(--rosa)}
+.e-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.e-empty{text-align:center;padding:60px 20px;color:var(--muted);font-family:var(--body)}
+.e-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease),box-shadow .25s}
+.e-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.e-card-img{position:relative;aspect-ratio:1/1;background:var(--blush);display:grid;place-items:center;overflow:hidden}
+.e-card-img img{width:100%;height:100%;object-fit:cover}
+.e-noimg{font-size:52px}
+.e-card-cat{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);color:var(--rosa-d);font-size:.68rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.e-card-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
+.e-card-body h3{font-family:var(--body);font-weight:700;font-size:1.02rem;line-height:1.2;color:var(--ink)}
+.e-card-desc{font-size:.84rem;color:var(--muted);flex:1}
+.e-card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.e-price{font-weight:800;font-size:1.1rem;color:var(--plum)}
+.e-price small{font-weight:600;font-size:.72rem;color:var(--muted)}
+.e-add{font-family:var(--body);font-weight:700;font-size:.84rem;background:var(--rosa);color:#fff;border:none;padding:9px 15px;border-radius:999px;cursor:pointer;transition:.2s}
+.e-add:hover{background:var(--rosa-d)}
+.e-step{display:flex;align-items:center;gap:8px}
+.e-step button{width:28px;height:28px;border-radius:8px;border:1.5px solid var(--line);background:#fff;font-weight:700;font-size:1rem;line-height:1;color:var(--rosa-d);cursor:pointer}
+.e-step b{min-width:18px;text-align:center;font-family:var(--body)}
+.e-step.sm button{width:26px;height:26px}
+
+/* barra de pedido */
+.e-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:#fff;box-shadow:0 -14px 40px -22px rgba(197,46,110,.55);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s var(--ease)}
+.e-bar.show{transform:translateY(0)}
+.e-bar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.e-bar-info{display:flex;flex-direction:column;line-height:1.15}
+.e-bar-info b{font-family:var(--body);color:var(--ink)}
+.e-bar-info span{font-weight:800;color:var(--rosa-d);font-size:1.15rem}
+
+/* drawer */
+.e-back{position:fixed;inset:0;background:rgba(58,30,46,.5);opacity:0;visibility:hidden;transition:.3s;z-index:130}
+.e-back.open{opacity:1;visibility:visible}
+.e-drawer{position:fixed;top:0;right:0;height:100dvh;width:min(92vw,400px);background:var(--cream);z-index:140;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:-30px 0 60px -30px rgba(58,30,46,.5)}
+.e-drawer.open{transform:translateX(0)}
+.e-drawer-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}
+.e-drawer-head h3{font-family:var(--disp);font-size:1.4rem;color:var(--plum)}
+.e-drawer-head button{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--muted)}
+.e-drawer-items{flex:1;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;gap:10px}
+.e-ci{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 13px}
+.e-ci-info strong{display:block;font-family:var(--body);font-weight:700;font-size:.92rem;color:var(--ink)}
+.e-ci-info span{font-size:.82rem;color:var(--muted)}
+.e-ci-empty{color:var(--muted-l);text-align:center;padding:30px 0}
+.e-drawer-foot{border-top:1px solid var(--line);padding:16px 18px 20px}
+.e-drawer-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.e-drawer-total span{color:var(--muted)} .e-drawer-total b{font-size:1.4rem;color:var(--plum)}
+#cobrosForm{display:flex;flex-direction:column;gap:9px}
+#cobrosForm input,#cobrosForm textarea{font-family:var(--body);font-size:.95rem;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;outline:none;resize:none;color:var(--ink)}
+#cobrosForm input:focus,#cobrosForm textarea:focus{border-color:var(--rosa-s)}
+.e-legal{font-size:.76rem;color:var(--muted-l);text-align:center}
+
+@media (max-width:900px){ .e-grid{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:640px){ .e-grid{grid-template-columns:repeat(2,1fr);gap:12px} .e-search{max-width:none} }
