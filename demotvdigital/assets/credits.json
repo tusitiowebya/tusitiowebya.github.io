@@ -1,0 +1,46 @@
+{
+  "category-sports": {
+    "src": "assets/img/category-sports.webp",
+    "title": "Stadio Olimpico",
+    "creator": "sidewalk flying",
+    "creator_url": "https://www.flickr.com/photos/76994867@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/76994867@N00/3970901666",
+    "source": "flickr"
+  },
+  "category-movies": {
+    "src": "assets/img/category-movies.webp",
+    "title": "Theatre stage with red curtains",
+    "creator": "Steve Bowbrick",
+    "creator_url": "https://www.flickr.com/photos/49968232@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/49968232@N00",
+    "source": "flickr"
+  },
+  "cta-bg": {
+    "src": "assets/img/cta-bg.webp",
+    "title": "City night lights bokeh",
+    "creator": "swimparallel",
+    "creator_url": "https://www.flickr.com/photos/31677782@N03",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/31677782@N03/3455026124",
+    "source": "flickr"
+  },
+  "hero": {
+    "src": "assets/img/hero.webp",
+    "title": "Multi-screen desk setup at night",
+    "creator": "Mark Bonica",
+    "creator_url": "https://www.flickr.com/photos/23119666@N03",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/23119666@N03/5728449223",
+    "source": "flickr"
+  }
+}
