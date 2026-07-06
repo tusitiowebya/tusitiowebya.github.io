@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "src": "assets/img/hero.jpg",
+    "title": "Robosapiens (neuron microscopy detail)",
+    "creator": "jurvetson",
+    "creator_url": "https://www.flickr.com/photos/44124348109@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/44124348109@N01/35367331",
+    "source": "flickr"
+  },
+  "about": {
+    "src": "assets/img/about.jpg",
+    "title": "Rhapsody",
+    "creator": "ghostedout",
+    "creator_url": "https://www.flickr.com/photos/128358780@N02",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/128358780@N02/29687223031",
+    "source": "flickr"
+  },
+  "neurocoaching": {
+    "src": "assets/img/neurocoaching.jpg",
+    "title": "coffee talk",
+    "creator": "AnyaLogic",
+    "creator_url": "https://www.flickr.com/photos/7387371@N06",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/7387371@N06/2315310261",
+    "source": "flickr"
+  },
+  "numerologia": {
+    "src": "assets/img/numerologia.jpg",
+    "title": "Mandala Goddess (18th century) Tibetan",
+    "creator": "Unknown",
+    "creator_url": "",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/10139789/mandala-goddess-18th-century-tibetan",
+    "source": "rawpixel"
+  },
+  "cursos": {
+    "src": "assets/img/cursos.jpg",
+    "title": "Centre for Adult Education Flipped Learning Design in VET Workshop",
+    "creator": "Vanguard Visions",
+    "creator_url": "https://www.flickr.com/photos/77018488@N03",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/77018488@N03/12420377915",
+    "source": "flickr"
+  },
+  "contacto": {
+    "src": "assets/img/contacto.jpg",
+    "title": "Calatrava",
+    "creator": "Horacho07",
+    "creator_url": "https://www.flickr.com/photos/21918219@N02",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/21918219@N02/5933498429",
+    "source": "flickr"
+  }
+}
