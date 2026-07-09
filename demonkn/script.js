@@ -38,6 +38,33 @@
     });
   }
 
+  /* ---- formulario "lista de precios" -> WhatsApp ---- */
+  var WA_NUM = '5491150620365';
+  var listaForm = document.getElementById('listaForm');
+  if (listaForm) {
+    listaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nombre = document.getElementById('lfNombre').value.trim();
+      var tel = document.getElementById('lfTel').value.trim();
+      var zona = document.getElementById('lfZona').value.trim();
+      var checks = Array.prototype.slice.call(listaForm.querySelectorAll('input[name="lista"]:checked')).map(function (c) { return c.value; });
+
+      var lines = ['Hola! Quiero pedir la lista de precios de maderas.', ''];
+      lines.push('Nombre: ' + nombre);
+      lines.push('WhatsApp: ' + tel);
+      if (zona) lines.push('Zona: ' + zona);
+      if (checks.length) {
+        lines.push('', 'Me interesa la lista de:');
+        checks.forEach(function (c) { lines.push('• ' + c); });
+      } else {
+        lines.push('', 'Quiero la lista de precios completa.');
+      }
+
+      var url = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank');
+    });
+  }
+
   /* ---- reveal on scroll ---- */
   var reveals = document.querySelectorAll('section > .wrap, section > .manifiesto-in, section > .hero-in');
   if ('IntersectionObserver' in window) {
