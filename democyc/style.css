@@ -98,8 +98,8 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.02;letter-spacing
 .orden{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.05em;color:var(--ink-faint);
   display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .9rem;border:1px dashed var(--line);
   border-radius:7px;margin-bottom:1.4rem}
-.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.9rem,6.6vw,4.8rem);letter-spacing:-.035em;
-  line-height:.96;margin-bottom:1.2rem}
+.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(3.2rem,7.6vw,5.7rem);letter-spacing:-.038em;
+  line-height:.95;margin-bottom:1.2rem}
 .w-roto{color:var(--coral);position:relative}
 .w-roto::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:2px;background:var(--coral);
   transform:scaleX(0);transform-origin:left;animation:strike 1s var(--ease) .5s forwards}
@@ -231,6 +231,11 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.02;letter-spacing
 /* ===================== EL LOCAL ===================== */
 .local-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,4vw,3.6rem);align-items:center}
 .local-text h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+.local-retiro{display:flex;gap:.7rem;align-items:flex-start;margin-top:1.2rem;padding:.9rem 1.1rem;
+  background:var(--paper-2);border:1px solid var(--line-2);border-radius:12px;font-size:.95rem;color:var(--ink-soft)}
+.local-retiro b{color:var(--ink);font-weight:600}
+.lr-ic{width:22px;height:22px;color:var(--blue);flex-shrink:0;margin-top:.05rem}
+.lr-ic svg{width:100%;height:100%}
 .local-text .btn{margin-top:1.6rem}
 .local-card{font-style:normal;background:var(--ink);color:var(--paper);border-radius:18px;
   padding:2.2rem 2rem;display:flex;flex-direction:column;gap:.25rem;position:relative;overflow:hidden}
