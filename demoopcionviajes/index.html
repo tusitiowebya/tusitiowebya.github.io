@@ -83,6 +83,12 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-veil"></div>
+  </div>
   <div class="wrap hero-in">
     <div class="hero-copy">
       <p class="coord"><span></span>34°55′ S · 57°57′ O — La Plata, Buenos Aires</p>
@@ -99,43 +105,6 @@
         <li>Traslados</li><li>Excursiones</li><li>Turismo receptivo</li>
       </ul>
     </div>
-
-    <!-- SIGNATURE: la traza de La Plata con sus diagonales -->
-    <figure class="plano" aria-label="Traza urbana de La Plata: cuadrícula, diagonales y plazas">
-      <svg viewBox="0 0 420 420" role="img">
-        <g transform="rotate(-16 210 210)">
-          <!-- grilla -->
-          <g stroke="rgba(245,240,230,.16)" stroke-width="1.4">
-            <rect x="70" y="70" width="280" height="280" fill="none" stroke="rgba(245,240,230,.3)" stroke-width="2"/>
-            <line x1="117" y1="70" x2="117" y2="350"/><line x1="163" y1="70" x2="163" y2="350"/>
-            <line x1="210" y1="70" x2="210" y2="350"/><line x1="257" y1="70" x2="257" y2="350"/>
-            <line x1="303" y1="70" x2="303" y2="350"/>
-            <line x1="70" y1="117" x2="350" y2="117"/><line x1="70" y1="163" x2="350" y2="163"/>
-            <line x1="70" y1="210" x2="350" y2="210"/><line x1="70" y1="257" x2="350" y2="257"/>
-            <line x1="70" y1="303" x2="350" y2="303"/>
-          </g>
-          <!-- diagonales características -->
-          <g stroke="rgba(233,162,59,.4)" stroke-width="1.6">
-            <line x1="70" y1="70" x2="350" y2="350"/><line x1="350" y1="70" x2="70" y2="350"/>
-            <line x1="210" y1="70" x2="350" y2="210"/><line x1="70" y1="210" x2="210" y2="350"/>
-            <line x1="210" y1="70" x2="70" y2="210"/><line x1="350" y1="210" x2="210" y2="350"/>
-          </g>
-          <!-- plazas -->
-          <g fill="#F5F0E6">
-            <circle cx="117" cy="117" r="3.2"/><circle cx="303" cy="117" r="3.2"/>
-            <circle cx="117" cy="303" r="3.2"/><circle cx="303" cy="303" r="3.2"/>
-            <circle cx="210" cy="117" r="2.6"/><circle cx="117" cy="210" r="2.6"/>
-            <circle cx="303" cy="210" r="2.6"/><circle cx="210" cy="303" r="2.6"/>
-          </g>
-          <!-- ruta animada hacia Plaza Moreno -->
-          <path class="ruta" d="M350 70 L210 210" fill="none" stroke="#E9A23B" stroke-width="3" stroke-linecap="round"/>
-          <!-- Plaza Moreno + Catedral -->
-          <circle class="moreno" cx="210" cy="210" r="7" fill="#E9A23B"/>
-          <path d="M210 198 v-14 M204 189 h12" stroke="#C4573C" stroke-width="2.4" stroke-linecap="round"/>
-        </g>
-      </svg>
-      <figcaption>La Plata, la ciudad de las diagonales.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -169,10 +138,42 @@
 <!-- ===================== LA PLATA ===================== -->
 <section class="section laplata" id="laplata">
   <div class="wrap">
-    <div class="head">
-      <p class="eyebrow light"><span></span>Turismo receptivo</p>
-      <h2>Conocé La Plata<br>con nosotros</h2>
-      <p class="head-lead">Estos son algunos de los recorridos que armamos. Contanos qué te interesa y lo adaptamos a tu grupo y tus tiempos.</p>
+    <div class="lp-top">
+      <div class="head lp-head">
+        <p class="eyebrow light"><span></span>Turismo receptivo</p>
+        <h2>Conocé La Plata<br>con nosotros</h2>
+        <p class="head-lead">La ciudad de las diagonales, con su casco fundacional perfectamente planificado. Estos son algunos de los recorridos que armamos — y los adaptamos a tu grupo y tus tiempos.</p>
+      </div>
+      <figure class="plano" aria-label="Traza urbana de La Plata: cuadrícula, diagonales y plazas">
+        <svg viewBox="0 0 420 420" role="img">
+          <g transform="rotate(-16 210 210)">
+            <g stroke="rgba(245,240,230,.16)" stroke-width="1.4">
+              <rect x="70" y="70" width="280" height="280" fill="none" stroke="rgba(245,240,230,.3)" stroke-width="2"/>
+              <line x1="117" y1="70" x2="117" y2="350"/><line x1="163" y1="70" x2="163" y2="350"/>
+              <line x1="210" y1="70" x2="210" y2="350"/><line x1="257" y1="70" x2="257" y2="350"/>
+              <line x1="303" y1="70" x2="303" y2="350"/>
+              <line x1="70" y1="117" x2="350" y2="117"/><line x1="70" y1="163" x2="350" y2="163"/>
+              <line x1="70" y1="210" x2="350" y2="210"/><line x1="70" y1="257" x2="350" y2="257"/>
+              <line x1="70" y1="303" x2="350" y2="303"/>
+            </g>
+            <g stroke="rgba(233,162,59,.4)" stroke-width="1.6">
+              <line x1="70" y1="70" x2="350" y2="350"/><line x1="350" y1="70" x2="70" y2="350"/>
+              <line x1="210" y1="70" x2="350" y2="210"/><line x1="70" y1="210" x2="210" y2="350"/>
+              <line x1="210" y1="70" x2="70" y2="210"/><line x1="350" y1="210" x2="210" y2="350"/>
+            </g>
+            <g fill="#F5F0E6">
+              <circle cx="117" cy="117" r="3.2"/><circle cx="303" cy="117" r="3.2"/>
+              <circle cx="117" cy="303" r="3.2"/><circle cx="303" cy="303" r="3.2"/>
+              <circle cx="210" cy="117" r="2.6"/><circle cx="117" cy="210" r="2.6"/>
+              <circle cx="303" cy="210" r="2.6"/><circle cx="210" cy="303" r="2.6"/>
+            </g>
+            <path class="ruta" d="M350 70 L210 210" fill="none" stroke="#E9A23B" stroke-width="3" stroke-linecap="round"/>
+            <circle class="moreno" cx="210" cy="210" r="7" fill="#E9A23B"/>
+            <path d="M210 198 v-14 M204 189 h12" stroke="#C4573C" stroke-width="2.4" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <figcaption>Plaza Moreno y la Catedral, en el centro exacto de la traza.</figcaption>
+      </figure>
     </div>
     <div class="dest-grid">
       <article class="dest"><span class="dest-k">Casco urbano</span><h3>City tour &amp; diagonales</h3><p>Un recorrido por el corazón de la ciudad planificada y sus avenidas en diagonal.</p></article>
