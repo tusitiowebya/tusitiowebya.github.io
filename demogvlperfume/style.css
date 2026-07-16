@@ -46,12 +46,23 @@ h3{font-size:1.15rem}
 .pill{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.78rem;
   letter-spacing:.04em;color:var(--gold-soft);background:rgba(201,161,90,.12);
   border:1px solid rgba(201,161,90,.35);padding:.5rem 1rem;border-radius:100px;margin-bottom:1.2rem}
-.pill-d{color:var(--plum);background:rgba(92,22,56,.08);border-color:rgba(92,22,56,.28)}
-.pill-l{color:var(--gold);background:rgba(201,161,90,.14);border-color:rgba(201,161,90,.4)}
 .dot{width:7px;height:7px;border-radius:50%;background:currentColor;position:relative}
 .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid currentColor;
   animation:pulse 2s ease-out infinite}
 @keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+
+/* ---- eyebrows alternativos (sin repetir el mismo componente por sección) ---- */
+.kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
+.kicker::before{content:"";width:26px;height:1.5px;background:currentColor;display:inline-block}
+.kicker-gold{color:var(--gold-soft)}
+.sec-num{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.03em;
+  color:var(--plum);margin-bottom:1.2rem}
+.kicker-icon{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);
+  font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--plum);margin-bottom:1.2rem}
+.kicker-icon svg{width:18px;height:18px;fill:var(--plum)}
+.kicker-plain{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--plum);opacity:.8;margin-bottom:1.2rem}
 
 /* ===================== NAV ===================== */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(21,10,18,.72);backdrop-filter:blur(14px);
