@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+
+<!-- Decisión de modo (full 3D vs LITE) antes del render, para evitar flash -->
+<script>
+(function(){var r=document.documentElement,q=location.search;
+var lite=/[?&]lite\b/.test(q),full=/[?&]full\b/.test(q);
+var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var weak=false;
+try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');
+if(!g){weak=true;}else{var e=g.getExtension('WEBGL_debug_renderer_info');
+if(e){var s=(g.getParameter(e.UNMASKED_RENDERER_WEBGL)||'').toLowerCase();
+if(/swiftshader|llvmpipe|software|basic render|paravirtual/.test(s))weak=true;}}}catch(_){weak=true;}
+var isFull=full||(!lite&&!red&&!weak);
+r.className+=(isFull?' fx mode-full':' mode-lite')+(red?'':' anim');})();
+</script>
+
+<!-- ===== SEO ===== -->
+<title>SITRAF | Sindicato de Trabajadores Fintech de la República Argentina</title>
+<meta name="description" content="SITRAF — primer sindicato argentino de trabajadores fintech. Representamos, defendemos y potenciamos a quienes hacen posible la innovación en el ecosistema fintech y la economía digital. Tecnología con derechos."/>
+<meta name="keywords" content="sindicato fintech, SITRAF, trabajadores fintech argentina, derechos laborales fintech, economía digital, sindicato tecnología, afiliación fintech, escala salarial fintech"/>
+<meta name="author" content="TuPaginaYa"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="theme-color" content="#0a1628"/>
+<link rel="canonical" href="https://tusitiowebya.github.io/demositraf/"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="SITRAF · Sindicato de Trabajadores Fintech de la República Argentina"/>
+<meta property="og:description" content="Tecnología con derechos. Representamos, defendemos y potenciamos a los trabajadores del ecosistema fintech."/>
+<meta property="og:url" content="https://tusitiowebya.github.io/demositraf/"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:site_name" content="SITRAF"/>
+<meta property="og:image" content="https://tusitiowebya.github.io/demositraf/logo.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demositraf/logo.png"/>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"SITRAF — Sindicato de Trabajadores Fintech de la República Argentina",
+  "alternateName":"SITRAF",
+  "description":"Primer sindicato argentino creado específicamente para los trabajadores del ecosistema fintech.",
+  "url":"https://tusitiowebya.github.io/demositraf/",
+  "logo":"https://tusitiowebya.github.io/demositraf/logo.png",
+  "slogan":"Tecnología con derechos.",
+  "areaServed":{"@type":"Country","name":"Argentina"},
+  "email":"info@sitraf.org",
+  "telephone":"+541121884946"
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a1628'/><circle cx='50' cy='50' r='34' fill='none' stroke='%23f5a623' stroke-width='4'/><path d='M62 38 q-18 -4 -18 8 q0 10 12 8 q12 -2 12 8 q0 12 -18 8' fill='none' stroke='%232196f3' stroke-width='5' stroke-linecap='round'/></svg>"/>
+<link rel="apple-touch-icon" href="logo.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body id="inicio">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand" aria-label="SITRAF inicio">
+      <img class="brand-logo" src="logo.png" alt="SITRAF"/>
+      <span class="brand-text">
+        <span class="brand-name">SITRAF</span>
+        <span class="brand-sub">Trabajadores Fintech · Argentina</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#afiliacion">Afiliación</a>
+      <a href="#escala">Escala Salarial</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#capacitacion">Capacitación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#afiliacion" class="btn btn-ghost-gold nav-cta">Área Afiliados</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#afiliacion">Afiliación</a>
+  <a href="#escala">Escala Salarial</a>
+  <a href="#noticias">Noticias</a>
+  <a href="#capacitacion">Capacitación</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#afiliacion" class="btn btn-green m-cta">Afiliate a SITRAF</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <canvas class="hero-net" id="net" aria-hidden="true"></canvas>
+  <div class="hero-fade" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <figure class="hero-logo" id="heroLogo">
+      <span class="hl-glow" aria-hidden="true"></span>
+      <img src="logo.png" alt="Emblema de SITRAF"/>
+    </figure>
+    <p class="hero-kicker">Sindicato de Trabajadores Fintech de la República Argentina</p>
+    <h1 class="hero-title">SITRAF</h1>
+    <p class="hero-tagline">Tecnología con derechos.</p>
+    <p class="hero-sub">Representamos, defendemos y potenciamos a los trabajadores del ecosistema fintech y de la economía digital.</p>
+    <div class="hero-cta">
+      <a class="btn btn-green btn-lg" href="#afiliacion">Afiliate a SITRAF</a>
+      <a class="btn btn-ghost btn-lg" href="#nosotros">Conocé SITRAF</a>
+    </div>
+  </div>
+  <a href="#pilares" class="hero-scroll" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ===================== PILARES ===================== -->
+<section class="pilares" id="pilares">
+  <div class="wrap">
+    <div class="pil-grid">
+      <article class="pil" data-reveal="pil">
+        <span class="pil-ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v24M6 12l10-6 10 6M8 14v9a2 2 0 002 2h12a2 2 0 002-2v-9"/></svg></span>
+        <h3>Representación</h3>
+        <p>Voz colectiva del sector ante empresas y organismos.</p>
+      </article>
+      <article class="pil" data-reveal="pil">
+        <span class="pil-ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="12" r="4"/><circle cx="21" cy="12" r="4"/><path d="M4 26c0-4 3.5-6 7-6s7 2 7 6M18 20c3.5 0 7 2 7 6"/></svg></span>
+        <h3>Unidad</h3>
+        <p>Un colectivo fuerte y organizado detrás de cada trabajador.</p>
+      </article>
+      <article class="pil" data-reveal="pil">
+        <span class="pil-ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4a8 8 0 00-5 14v3h10v-3a8 8 0 00-5-14zM12 27h8M13 30h6"/></svg></span>
+        <h3>Innovación</h3>
+        <p>Acompañamos el cambio tecnológico con responsabilidad.</p>
+      </article>
+      <article class="pil" data-reveal="pil">
+        <span class="pil-ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l12-5 12 5-12 5z"/><path d="M9 13v6c0 2 3.5 4 7 4s7-2 7-4v-6M28 10v7"/></svg></span>
+        <h3>Capacitación</h3>
+        <p>Formación permanente en las tecnologías del sector.</p>
+      </article>
+      <article class="pil" data-reveal="pil">
+        <span class="pil-ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20l6-6 5 5 10-11M20 8h6v6"/></svg></span>
+        <h3>Futuro</h3>
+        <p>Construimos el trabajo financiero-tecnológico que viene.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NOSOTROS ===================== -->
+<section class="section nosotros" id="nosotros">
+  <div class="wrap">
+    <div class="nos-head" data-reveal="up">
+      <span class="kicker">Bienvenidos</span>
+      <h2>El primer sindicato argentino<br>del ecosistema <span class="grad">fintech</span></h2>
+      <p class="nos-lead">SITRAF es el primer sindicato argentino creado específicamente para los trabajadores del ecosistema fintech. Nuestra misión es garantizar condiciones dignas, impulsar el desarrollo profesional y construir un sector más justo, innovador y humano.</p>
+    </div>
+    <div class="nos-cols">
+      <div class="nos-text" data-reveal="up">
+        <p>La revolución tecnológica transformó la manera en que el mundo entiende las finanzas. Nuevos modelos de negocio, plataformas digitales, inteligencia artificial, blockchain, pagos electrónicos y servicios financieros innovadores generan oportunidades sin precedentes. Detrás de cada avance existe un recurso fundamental: <b>las personas que hacen posible la innovación.</b></p>
+        <p>SITRAF nace con la misión de representar, proteger y fortalecer a los trabajadores del ecosistema fintech argentino, promoviendo condiciones laborales justas, capacitación permanente, desarrollo profesional y una verdadera participación en la construcción del futuro financiero del país.</p>
+        <p>Somos una organización moderna, independiente e innovadora, preparada para acompañar a quienes trabajan en empresas fintech, billeteras virtuales, plataformas de pago, blockchain, criptomonedas, inteligencia artificial aplicada a las finanzas, insurtech, regtech, lending, wealthtech y todas las nuevas tecnologías vinculadas al sistema financiero.</p>
+      </div>
+      <aside class="nos-aside" data-reveal="up">
+        <figure class="nos-photo">
+          <img src="fotos/equipo.jpg" alt="Equipo diverso de trabajadores fintech frente a pantallas con datos financieros" loading="lazy"/>
+          <figcaption>
+            <span class="qc-mark" aria-hidden="true">“</span>
+            El verdadero motor del cambio son las personas.
+            <span class="qc-by">SITRAF · Compromiso institucional</span>
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MISIÓN / VISIÓN / VALORES ===================== -->
+<section class="section mvv" id="mvv">
+  <div class="wrap">
+    <div class="mvv-grid">
+      <article class="mvv-card glass big" data-reveal="tilt">
+        <span class="mvv-tag">Misión</span>
+        <p>Defender los derechos de los trabajadores fintech, impulsando la innovación con responsabilidad, promoviendo el crecimiento profesional y generando oportunidades para todos nuestros afiliados.</p>
+      </article>
+      <article class="mvv-card glass big" data-reveal="tilt">
+        <span class="mvv-tag">Visión</span>
+        <p>Ser el sindicato referente de la economía digital en América Latina, liderando la transformación laboral del sector financiero tecnológico mediante el diálogo, la capacitación y la innovación.</p>
+      </article>
+      <article class="mvv-card glass values" data-reveal="tilt">
+        <span class="mvv-tag">Valores</span>
+        <ul class="val-list">
+          <li>Innovación</li><li>Transparencia</li><li>Integridad</li><li>Profesionalismo</li>
+          <li>Inclusión</li><li>Capacitación continua</li><li>Defensa de los derechos laborales</li><li>Desarrollo tecnológico responsable</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUÉ OFRECEMOS (Capacitación) ===================== -->
+<section class="section ofrecemos" id="capacitacion">
+  <div class="wrap">
+    <div class="of-head" data-reveal="up">
+      <span class="kicker">Qué ofrecemos</span>
+      <h2>Beneficios y servicios<br>para nuestros afiliados</h2>
+    </div>
+    <div class="of-grid">
+      <div class="of-item" data-reveal="stagger"><i></i>Asesoramiento legal y laboral</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Defensa gremial</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Capacitación en nuevas tecnologías financieras</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Convenios y beneficios exclusivos</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Programas de salud y bienestar</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Formación en liderazgo</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Educación financiera</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Certificaciones profesionales</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Redes de empleo y desarrollo de carrera</div>
+      <div class="of-item" data-reveal="stagger"><i></i>Representación institucional del sector</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESCALA SALARIAL ===================== -->
+<section class="section escala" id="escala">
+  <div class="wrap">
+    <div class="esc-head" data-reveal="up">
+      <span class="kicker">Escala salarial referencial</span>
+      <h2>Valores de referencia<br>para el sector</h2>
+      <p class="esc-note">Valores sugeridos de referencia para el sector, expresados en pesos argentinos. No constituyen un convenio homologado.</p>
+    </div>
+    <div class="esc-list">
+      <div class="esc-row" data-reveal="bar" style="--pct:100%"><span class="esc-rol">Tecnología / IT</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$2.500.000</span></div>
+      <div class="esc-row" data-reveal="bar" style="--pct:96%"><span class="esc-rol">Finanzas / Riesgos</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$2.400.000</span></div>
+      <div class="esc-row" data-reveal="bar" style="--pct:92%"><span class="esc-rol">Análisis de Datos</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$2.300.000</span></div>
+      <div class="esc-row" data-reveal="bar" style="--pct:88%"><span class="esc-rol">Producto / UX-UI</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$2.200.000</span></div>
+      <div class="esc-row" data-reveal="bar" style="--pct:72%"><span class="esc-rol">Operaciones</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$1.800.000</span></div>
+      <div class="esc-row" data-reveal="bar" style="--pct:56%"><span class="esc-rol">Atención al Cliente</span><div class="esc-track"><span class="esc-fill"></span></div><span class="esc-val">$1.400.000</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECTORES ===================== -->
+<section class="section sectores" id="sectores">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="up">
+      <span class="kicker">A quiénes representamos</span>
+      <h2>Todo el ecosistema<br>fintech, en un solo lugar</h2>
+    </div>
+    <div class="sec-marquee" aria-hidden="true">
+      <div class="sec-track" id="secTrack">
+        <span>Medios de Pago</span><span>Fintech &amp; Banca Digital</span><span>Cripto &amp; Blockchain</span><span>Insurtech</span><span>Legaltech</span><span>Infraestructura &amp; Tecnología</span><span>Servicios para Empresas</span>
+      </div>
+    </div>
+    <ul class="sec-list">
+      <li data-reveal="stagger">Medios de Pago</li>
+      <li data-reveal="stagger">Fintech &amp; Banca Digital</li>
+      <li data-reveal="stagger">Cripto &amp; Blockchain</li>
+      <li data-reveal="stagger">Insurtech</li>
+      <li data-reveal="stagger">Legaltech</li>
+      <li data-reveal="stagger">Infraestructura &amp; Tecnología</li>
+      <li data-reveal="stagger">Servicios para Empresas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== COMPROMISO ===================== -->
+<section class="compromiso" id="compromiso">
+  <img class="comp-bg" src="fotos/personas.jpg" alt="" aria-hidden="true" loading="lazy"/>
+  <div class="comp-veil" aria-hidden="true"></div>
+  <div class="comp-glow" aria-hidden="true"></div>
+  <div class="wrap comp-in">
+    <span class="kicker light" data-reveal="up">Nuestro compromiso</span>
+    <p class="comp-big" data-reveal="lines">En un mundo donde la tecnología evoluciona cada día, creemos que el verdadero motor del cambio son <span class="grad">las personas.</span> Trabajamos para construir un ecosistema fintech más humano, competitivo y sostenible, donde el talento argentino sea reconocido, protegido y protagonista del futuro.</p>
+    <p class="comp-sign" data-reveal="up">SITRAF — Innovando el trabajo. Protegiendo el talento. Construyendo el futuro.</p>
+  </div>
+</section>
+
+<!-- ===================== NOTICIAS ===================== -->
+<section class="section noticias" id="noticias">
+  <div class="wrap">
+    <div class="not-head" data-reveal="up">
+      <span class="kicker">Noticias &amp; novedades</span>
+      <h2>Lo último de SITRAF</h2>
+      <p class="esc-note">Sección lista para publicar novedades del sindicato. <!-- TODO: reemplazar por notas reales; no publicar noticias inventadas --></p>
+    </div>
+    <div class="not-grid">
+      <!-- TODO: cargar noticias reales del sindicato. Estas tarjetas son marcadores de estructura. -->
+      <article class="not-card placeholder" data-reveal="stagger">
+        <span class="not-tag">Próximamente</span>
+        <h3>Espacio para novedades institucionales</h3>
+        <p>Comunicados, acuerdos y actividades del sindicato aparecerán acá.</p>
+      </article>
+      <article class="not-card placeholder" data-reveal="stagger">
+        <span class="not-tag">Próximamente</span>
+        <h3>Capacitaciones y eventos</h3>
+        <p>Fechas de formaciones, webinars y encuentros del sector.</p>
+      </article>
+      <article class="not-card placeholder" data-reveal="stagger">
+        <span class="not-tag">Próximamente</span>
+        <h3>Convenios y beneficios</h3>
+        <p>Nuevos acuerdos y beneficios exclusivos para afiliados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA AFILIACIÓN ===================== -->
+<section class="afiliacion" id="afiliacion">
+  <div class="afi-glow" aria-hidden="true"></div>
+  <div class="wrap afi-in">
+    <div class="afi-copy" data-reveal="up">
+      <span class="kicker light">Sumate a SITRAF</span>
+      <h2>Tu talento merece<br>estar <span class="grad">protegido.</span></h2>
+      <p>Afiliándote sumás asesoramiento legal, defensa gremial, capacitación, convenios y una red que representa a todo el ecosistema fintech argentino.</p>
+      <div class="hero-cta">
+        <a class="btn btn-green btn-lg" href="https://wa.me/5491121884946?text=Hola%20SITRAF!%20Quiero%20afiliarme" target="_blank" rel="noopener">Quiero afiliarme</a>
+        <a class="btn btn-ghost btn-lg" href="https://wa.me/5491121884946?text=Hola%20SITRAF!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 003.4 19l-1.4 5 5.2-1.4A11.5 11.5 0 1020.5 3.5z"/></svg>
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+    <ul class="afi-benes" data-reveal="up">
+      <li><i></i>Asesoramiento legal y laboral</li>
+      <li><i></i>Defensa gremial del sector</li>
+      <li><i></i>Capacitación y certificaciones</li>
+      <li><i></i>Convenios y beneficios exclusivos</li>
+      <li><i></i>Salud, bienestar y educación financiera</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="contacto">
+  <div class="wrap ft-grid">
+    <div class="ft-brand">
+      <div class="ft-seal" aria-hidden="true">
+        <img src="logo.png" alt=""/>
+      </div>
+      <p class="ft-slogan">Tecnología con derechos.</p>
+      <p class="ft-desc">Sindicato de Trabajadores Fintech de la República Argentina.</p>
+    </div>
+    <div class="ft-col">
+      <h5>Sindicato</h5>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#capacitacion">Qué ofrecemos</a>
+      <a href="#escala">Escala salarial</a>
+      <a href="#afiliacion">Afiliación</a>
+    </div>
+    <div class="ft-col">
+      <h5>Sectores</h5>
+      <a href="#sectores">Medios de Pago</a>
+      <a href="#sectores">Fintech &amp; Banca Digital</a>
+      <a href="#sectores">Cripto &amp; Blockchain</a>
+      <a href="#sectores">Insurtech · Legaltech</a>
+    </div>
+    <div class="ft-col ft-contact">
+      <h5>Contacto</h5>
+      <!-- TODO: confirmar teléfono real. Dato crudo del cliente: 1121884946 → +54 11 2188 4946 -->
+      <a href="https://wa.me/5491121884946" target="_blank" rel="noopener">WhatsApp · +54 11 2188 4946</a>
+      <!-- TODO: confirmar email real -->
+      <a href="mailto:info@sitraf.org">info@sitraf.org</a>
+      <span class="ft-loc">Buenos Aires, Argentina</span>
+      <div class="ft-social">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 105 0 2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.65 4.75 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L7.5 21H4.5l7.5-8.6L4 3h6.5l4.5 5.6zm-1 16h1.7L8 4.9H6.2z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 001.8-1.8C23 15.2 23 12 23 12zm-13 3V9l5.2 3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom wrap">
+    <span>© <span id="yr"></span> SITRAF — Sindicato de Trabajadores Fintech de la República Argentina</span>
+    <span>Sitio diseñado por <a href="https://tusitiowebya.github.io/" target="_blank" rel="noopener">TuPaginaYa</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491121884946?text=Hola%20SITRAF!%20Quiero%20consultar" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.36.66 4.66 1.92 6.66L4 29l7.5-1.96a12.05 12.05 0 004.54.88h.01c6.65 0 12.05-5.4 12.05-12.04C28.1 8.4 22.69 3 16.04 3zm0 21.86h-.01c-1.46 0-2.9-.39-4.16-1.13l-.3-.18-4.45 1.17 1.19-4.33-.2-.31a9.92 9.92 0 01-1.52-5.29c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.92a9.9 9.9 0 012.93 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.19-.24-.58-.49-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script src="vendor/three.min.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
