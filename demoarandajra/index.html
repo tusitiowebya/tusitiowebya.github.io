@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+
+<!-- Decisión de modo (full 3D vs LITE) antes del render, para evitar flash -->
+<script>
+(function(){var r=document.documentElement,q=location.search;
+var lite=/[?&]lite\b/.test(q),full=/[?&]full\b/.test(q);
+var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var weak=false;
+try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');
+if(!g){weak=true;}else{var e=g.getExtension('WEBGL_debug_renderer_info');
+if(e){var s=(g.getParameter(e.UNMASKED_RENDERER_WEBGL)||'').toLowerCase();
+if(/swiftshader|llvmpipe|software|basic render|paravirtual/.test(s))weak=true;}}}catch(_){weak=true;}
+var isFull=full||(!lite&&!red&&!weak);
+r.className+=(isFull?' fx mode-full':' mode-lite')+(red?'':' anim');})();
+</script>
+
+<!-- ===== SEO ===== -->
+<title>Aranda JRA | Gasista Matriculado y Servicio Técnico · Zona Sur</title>
+<meta name="description" content="Aranda JRA — Gasista matriculado en Buenos Aires. Instalaciones de gas, planos, estufas y calefones. Además: aire acondicionado, cámaras de frío, heladeras comerciales, electricidad y lavarropas. WhatsApp (11) 7600-7079."/>
+<meta name="keywords" content="gasista matriculado, instalacion de gas, planos de gas, calefones, estufas, aire acondicionado, split, camaras de frio, heladeras comerciales, electricidad, lavarropas, servicio tecnico, Buenos Aires, Aranda JRA"/>
+<meta name="author" content="TuPaginaYa"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="theme-color" content="#0a1f44"/>
+<link rel="canonical" href="https://tusitiowebya.github.io/demoarandajra/"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Aranda JRA · Gasista Matriculado y Servicio Técnico"/>
+<meta property="og:description" content="Gas matriculado (instalaciones, planos, calefones) + servicio técnico integral: aire, frío, electricidad y lavarropas. WhatsApp (11) 7600-7079."/>
+<meta property="og:url" content="https://tusitiowebya.github.io/demoarandajra/"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:site_name" content="Aranda JRA"/>
+<meta property="og:image" content="https://tusitiowebya.github.io/demoarandajra/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demoarandajra/og-image.jpg"/>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HVACBusiness",
+  "name":"Aranda JRA — Gasista Matriculado y Servicio Técnico",
+  "description":"Gasista matriculado y servicio técnico integral: gas, aire acondicionado, refrigeración, electricidad y lavarropas.",
+  "url":"https://tusitiowebya.github.io/demoarandajra/",
+  "telephone":"+541176007079",
+  "areaServed":{"@type":"City","name":"Buenos Aires"},
+  "priceRange":"$$",
+  "paymentAccepted":"Efectivo, Tarjetas de crédito y débito, Mercado Pago",
+  "knowsAbout":["Instalación de gas","Planos de gas","Calefones","Estufas","Aire acondicionado","Cámaras de frío","Heladeras comerciales","Electricidad","Lavarropas"],
+  "sameAs":["https://www.facebook.com/Refrigeración Jra Aranda"]
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a1f44'/><circle cx='68' cy='34' r='11' fill='%23f6a821'/><g stroke='%23f6a821' stroke-width='3' stroke-linecap='round'><path d='M68 16v6M68 46v6M50 34h6M80 34h6M56 22l4 4M80 22l-4 4'/></g><g stroke='%234aa3e0' stroke-width='5' fill='none' stroke-linecap='round'><path d='M20 60q10-8 20 0t20 0 20 0'/><path d='M20 74q10-8 20 0t20 0 20 0'/></g></svg>"/>
+<link rel="apple-touch-icon" href="poster.jpg"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body id="inicio">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand" aria-label="Aranda JRA inicio">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" class="bl-ring"/>
+          <circle cx="66" cy="36" r="10" class="bl-sun"/>
+          <g class="bl-rays"><path d="M66 20v6M66 46v5M48 36h6M78 36h6M54 24l4 4M78 24l-4 4"/></g>
+          <g class="bl-wave"><path d="M22 58q9-7 18 0t18 0 18 0"/><path d="M22 70q9-7 18 0t18 0 18 0"/></g>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Aranda JRA</span>
+        <span class="brand-sub">Gasista Matriculado · Refrigeración</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#gas">Gas Matriculado</a>
+      <a href="#servicio">Servicio Técnico</a>
+      <a href="#porque">Por qué elegirnos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Necesito%20un%20presupuesto." target="_blank" rel="noopener" class="btn btn-flame nav-cta">Pedir presupuesto</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#gas">Gas Matriculado</a>
+  <a href="#servicio">Servicio Técnico</a>
+  <a href="#porque">Por qué elegirnos</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Necesito%20un%20presupuesto." target="_blank" rel="noopener" class="btn btn-flame m-cta">WhatsApp (11) 7600-7079</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="hero.mp4" type="video/mp4"/>
+    </video>
+    <canvas class="hero-embers" id="embers"></canvas>
+    <div class="hero-veil"></div>
+  </div>
+  <div class="wrap hero-in">
+    <p class="hero-seal">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V5l7-3z"/><path d="M9.2 11.8l1.9 1.9 3.9-4" fill="none" stroke="#0a1f44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Gasista Matriculado · Matrícula habilitada
+    </p>
+    <h1 class="hero-title"><span class="flame-text">Gasista Matriculado</span></h1>
+    <p class="hero-tagline">y Servicio Técnico Integral</p>
+    <p class="hero-sub">Instalaciones de gas, planos, estufas y calefones con matrícula habilitada. Y además: aire acondicionado, cámaras de frío, heladeras comerciales, electricidad y lavarropas. Un solo técnico para toda tu casa o comercio.</p>
+    <div class="hero-cta">
+      <a class="btn btn-flame btn-lg" href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Necesito%20un%20presupuesto." target="_blank" rel="noopener">Pedir presupuesto</a>
+      <a class="btn btn-outline btn-lg" href="#gas">Ver servicios de gas</a>
+    </div>
+    <ul class="hero-chips">
+      <li>✓ Planos y habilitaciones</li>
+      <li>✓ Obras nuevas y reparaciones</li>
+      <li>✓ Mercado Pago · Tarjetas</li>
+    </ul>
+  </div>
+  <a href="#gas" class="hero-scroll" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ===================== GAS (DESTACADO) ===================== -->
+<section class="gas" id="gas">
+  <div class="wrap">
+    <div class="gas-head" data-reveal="up">
+      <span class="gas-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V5l7-3z"/></svg>
+        Matriculado
+      </span>
+      <h2 class="gas-title">Gas <span>con matrícula habilitada</span></h2>
+      <p class="gas-desc">Trabajos de gas hechos como corresponde: con matrícula, planos aprobados y garantía. Instalaciones nuevas, cambios y reparaciones, para tu casa o tu comercio.</p>
+    </div>
+
+    <div class="gas-grid">
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">🔧</span>
+        <h3>Instalaciones de gas</h3>
+        <p>Instalación completa de cañerías, artefactos y conexiones, según reglamento.</p>
+      </article>
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">📐</span>
+        <h3>Planos y habilitaciones</h3>
+        <p>Confección y presentación de planos aprobados. Trámites de habilitación.</p>
+      </article>
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">🔥</span>
+        <h3>Estufas</h3>
+        <p>Colocación y reparación de estufas y calefactores. Tiraje seguro.</p>
+      </article>
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">🚿</span>
+        <h3>Calefones y termotanques</h3>
+        <p>Instalación y service de calefones y termotanques. Solución al agua caliente.</p>
+      </article>
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">🏗️</span>
+        <h3>Obras nuevas</h3>
+        <p>Instalación de gas para obras y ampliaciones desde cero, lista para habilitar.</p>
+      </article>
+      <article class="gcard" data-reveal="stagger">
+        <span class="gicon">🛠️</span>
+        <h3>Reparaciones</h3>
+        <p>Detección de pérdidas, arreglos y puesta en regla de instalaciones existentes.</p>
+      </article>
+    </div>
+
+    <div class="gas-cta" data-reveal="up">
+      <div class="gas-cta-img"><img src="fotos/gas2.jpg" alt="Instalación de calefón por gasista matriculado" loading="lazy"/></div>
+      <div class="gas-cta-in">
+        <h3>¿Necesitás un gasista matriculado?</h3>
+        <p>Presupuesto sin cargo y trabajo garantizado. Escribinos y coordinamos una visita.</p>
+        <a class="btn btn-flame btn-lg" href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Necesito%20un%20gasista%20matriculado." target="_blank" rel="noopener">WhatsApp (11) 7600-7079</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIO TÉCNICO ===================== -->
+<section class="section servicio" id="servicio">
+  <div class="wrap">
+    <header class="sec-head" data-reveal="up">
+      <p class="eyebrow">Además, hacemos todo</p>
+      <h2 class="sec-title">Servicio técnico integral</h2>
+      <p class="sec-desc">Frío, calor, electricidad y línea blanca. Reparación, instalación y mantenimiento para el hogar y el comercio.</p>
+    </header>
+
+    <div class="serv-grid">
+      <article class="scard" data-reveal="stagger">
+        <div class="scard-img"><img src="fotos/aire.jpg" alt="Instalación de aire acondicionado split" loading="lazy"/></div>
+        <div class="scard-in"><h3>Aire acondicionado y Split</h3><p>Instalación, carga de gas, service y reparación de equipos split y centrales.</p></div>
+      </article>
+      <article class="scard" data-reveal="stagger">
+        <div class="scard-img"><img src="fotos/camara.jpg" alt="Cámara de frío comercial" loading="lazy"/></div>
+        <div class="scard-in"><h3>Cámaras de frío y centrales</h3><p>Instalación y mantenimiento de cámaras y equipos de refrigeración comercial.</p></div>
+      </article>
+      <article class="scard" data-reveal="stagger">
+        <div class="scard-img"><img src="fotos/heladera.jpg" alt="Heladera comercial exhibidora" loading="lazy"/></div>
+        <div class="scard-in"><h3>Heladeras comerciales</h3><p>Reparación y service de exhibidoras, mostradores y equipos de tu comercio.</p></div>
+      </article>
+      <article class="scard" data-reveal="stagger">
+        <div class="scard-img"><img src="fotos/electri.jpg" alt="Electricista trabajando en tablero" loading="lazy"/></div>
+        <div class="scard-in"><h3>Electricidad y automatismo</h3><p>Tableros, instalaciones eléctricas y automatismos para portones y equipos.</p></div>
+      </article>
+      <article class="scard" data-reveal="stagger">
+        <div class="scard-img"><img src="fotos/lavarropa.jpg" alt="Reparación de lavarropas" loading="lazy"/></div>
+        <div class="scard-in"><h3>Lavarropas</h3><p>Diagnóstico y reparación de lavarropas de todas las marcas.</p></div>
+      </article>
+      <article class="scard scard-cta" data-reveal="stagger">
+        <div class="scard-in">
+          <h3>¿No ves tu equipo?</h3>
+          <p>Consultanos igual — trabajamos con casi todo el frío y la línea blanca.</p>
+          <a class="btn btn-outline" href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Tengo%20una%20consulta%20de%20servicio%20t%C3%A9cnico." target="_blank" rel="noopener">Consultar</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
+<section class="section porque" id="porque">
+  <div class="wrap">
+    <header class="sec-head center" data-reveal="up">
+      <p class="eyebrow center">Confianza</p>
+      <h2 class="sec-title">Por qué elegirnos</h2>
+    </header>
+    <div class="why-grid">
+      <div class="why" data-reveal="stagger"><span class="why-ic">🛡️</span><h3>Matriculado</h3><p>Gasista con matrícula habilitada. Trabajos en regla y con garantía.</p></div>
+      <div class="why" data-reveal="stagger"><span class="why-ic">⚡</span><h3>Respuesta rápida</h3><p>Coordinamos la visita y te damos presupuesto sin vueltas.</p></div>
+      <div class="why" data-reveal="stagger"><span class="why-ic">🏠</span><h3>Hogar y comercio</h3><p>Desde una estufa hasta una cámara de frío o una obra nueva.</p></div>
+      <div class="why" data-reveal="stagger"><span class="why-ic">💳</span><h3>Mercado Pago y tarjetas</h3><p>Aceptamos crédito, débito y Mercado Pago. Pagás como te queda cómodo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section class="section contacto" id="contacto">
+  <div class="wrap contacto-in">
+    <div class="contacto-copy" data-reveal="up">
+      <p class="eyebrow">Contacto directo</p>
+      <h2 class="sec-title">Pedí tu presupuesto</h2>
+      <p class="sec-desc">Contanos qué necesitás y te respondemos por WhatsApp. Presupuesto sin cargo.</p>
+      <a class="phone-cta" href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!%20Necesito%20un%20presupuesto." target="_blank" rel="noopener">
+        <span class="phone-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.8 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3z"/></svg></span>
+        <span><small>WhatsApp</small><strong>(11) 7600-7079</strong></span>
+      </a>
+      <a class="fb-link" href="https://www.facebook.com/people/Refrigeraci%C3%B3n-Jra-Aranda/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9H16l-.4 2.9h-2.1v7A10 10 0 0022 12z"/></svg>
+        Refrigeración Jra Aranda
+      </a>
+    </div>
+    <ul class="contacto-facts" data-reveal="up">
+      <li><span>Gas</span><strong>Matriculado y habilitado</strong></li>
+      <li><span>Servicio técnico</span><strong>Frío · Calor · Electricidad</strong></li>
+      <li><span>Zona</span><strong>Buenos Aires y GBA</strong></li>
+      <li><span>Pagos</span><strong>Mercado Pago · Tarjetas</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" class="bl-ring"/>
+          <circle cx="66" cy="36" r="10" class="bl-sun"/>
+          <g class="bl-rays"><path d="M66 20v6M66 46v5M48 36h6M78 36h6M54 24l4 4M78 24l-4 4"/></g>
+          <g class="bl-wave"><path d="M22 58q9-7 18 0t18 0 18 0"/><path d="M22 70q9-7 18 0t18 0 18 0"/></g>
+        </svg>
+      </span>
+      <div>
+        <strong>Aranda JRA</strong>
+        <p>Gasista matriculado y servicio técnico integral. Buenos Aires y GBA.</p>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Pie">
+      <a href="#gas">Gas Matriculado</a>
+      <a href="#servicio">Servicio Técnico</a>
+      <a href="#porque">Por qué elegirnos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© <span id="yr"></span> Aranda JRA · (11) 7600-7079</span>
+    <span class="foot-by">Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491176007079?text=Hola%20Aranda%20JRA!" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.8 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.3C5.5 9.9 10.2 5.5 16 5.5s10.5 4.4 10.5 10c0 5.6-4.7 10.2-10.5 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-1.7-.9-2.8-1.5-3.9-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.9.9-1.2 2.1-1.2 3.6 0 2.1 1.5 4.1 1.7 4.4.2.3 3 4.6 7.3 6.2 2.7 1 3.4.8 4 .8.9-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="vendor/three.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
