@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+
+<!-- Decisión de modo (full 3D vs LITE) antes del render, para evitar flash -->
+<script>
+(function(){var r=document.documentElement,q=location.search;
+var lite=/[?&]lite\b/.test(q),full=/[?&]full\b/.test(q);
+var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var weak=false;
+try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');
+if(!g){weak=true;}else{var e=g.getExtension('WEBGL_debug_renderer_info');
+if(e){var s=(g.getParameter(e.UNMASKED_RENDERER_WEBGL)||'').toLowerCase();
+if(/swiftshader|llvmpipe|software|basic render|paravirtual/.test(s))weak=true;}}}catch(_){weak=true;}
+var isFull=full||(!lite&&!red&&!weak);
+r.className+=(isFull?' fx mode-full':' mode-lite')+(red?'':' anim');})();
+</script>
+
+<!-- ===== SEO ===== -->
+<title>Sale Resto | Gastronomía, vinos y recomendaciones de restaurantes</title>
+<meta name="description" content="Sale Resto — notas de gastronomía, catas de vinos y las mejores recomendaciones de restaurantes. Comé mejor, tomá mejor. Muy pronto, nuestra tienda de vinos."/>
+<meta name="keywords" content="gastronomía, vinos, cata de vinos, recomendaciones de restaurantes, notas gastronómicas, maridaje, vinoteca, comer bien, dónde comer, Sale Resto"/>
+<meta name="author" content="TuPaginaYa"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="theme-color" content="#170a10"/>
+<link rel="canonical" href="https://tusitiowebya.github.io/demosaleresto/"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Sale Resto · Gastronomía, vinos y recomendaciones"/>
+<meta property="og:description" content="Notas, catas y las mejores recomendaciones de restaurantes. Comé mejor, tomá mejor."/>
+<meta property="og:url" content="https://tusitiowebya.github.io/demosaleresto/"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:site_name" content="Sale Resto"/>
+<meta property="og:image" content="https://tusitiowebya.github.io/demosaleresto/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demosaleresto/og-image.jpg"/>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Sale Resto",
+  "description":"Revista de gastronomía y vinos: notas, catas y recomendaciones de restaurantes.",
+  "url":"https://tusitiowebya.github.io/demosaleresto/",
+  "inLanguage":"es-AR",
+  "publisher":{
+    "@type":"Organization",
+    "name":"Sale Resto",
+    "areaServed":{"@type":"Country","name":"Argentina"}
+  }
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23170a10'/><path d='M35 22 h30 a4 4 0 0 1 4 4 c0 12 -8 16 -8 24 s8 12 8 24 a4 4 0 0 1 -4 4 h-30 a4 4 0 0 1 -4 -4 c0 -12 8 -12 8 -24 s-8 -12 -8 -24 a4 4 0 0 1 4 -4 z' fill='none' stroke='%23c9a24b' stroke-width='4'/><circle cx='50' cy='58' r='6' fill='%239e2a46'/></svg>"/>
+<link rel="apple-touch-icon" href="poster.jpg"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body id="inicio">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand" aria-label="Sale Resto inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M17 8 h14 a3 3 0 0 1 3 3 c0 7-4 9-4 13 s4 6 4 13 a3 3 0 0 1-3 3 h-14 a3 3 0 0 1-3-3 c0-7 4-6 4-13 s-4-6-4-13 a3 3 0 0 1 3-3 z"/><circle cx="24" cy="28" r="3.4" class="mk-drop"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Sale Resto</span>
+        <span class="brand-sub">Gastronomía &amp; Vinos</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <a href="#notas">Notas</a>
+      <a href="#vinos">Vinos</a>
+      <a href="#restos">Restaurantes</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#club">El Club</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/5491132749916?text=Hola%20Sale%20Resto!%20Quiero%20sumarme%20a%20la%20comunidad." target="_blank" rel="noopener" class="btn btn-gold nav-cta">Sumate</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#notas">Notas</a>
+  <a href="#vinos">Vinos</a>
+  <a href="#restos">Restaurantes</a>
+  <a href="#tienda">Tienda</a>
+  <a href="#club">El Club</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://wa.me/5491132749916?text=Hola%20Sale%20Resto!%20Quiero%20sumarme%20a%20la%20comunidad." target="_blank" rel="noopener" class="btn btn-gold m-cta">Sumate por WhatsApp</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="hero.mp4" type="video/mp4"/>
+    </video>
+    <canvas class="hero-dust" id="dust"></canvas>
+    <div class="hero-veil"></div>
+  </div>
+  <div class="wrap hero-in">
+    <p class="hero-kicker"><span></span>Revista de gastronomía y vinos</p>
+    <h1 class="hero-title">Sale<span>Resto</span></h1>
+    <p class="hero-tagline">Comé mejor. Tomá mejor.</p>
+    <p class="hero-sub">Notas de cocina, catas de vinos y las recomendaciones de restaurantes que sí valen la pena. Un solo lugar para descubrir tu próxima mesa y tu próxima botella.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold btn-lg" href="#notas">Leer las notas</a>
+      <a class="btn btn-outline btn-lg" href="#restos">Ver recomendaciones</a>
+    </div>
+    <ul class="hero-stats">
+      <li><strong>+120</strong><span>notas publicadas</span></li>
+      <li><strong>+60</strong><span>restos recomendados</span></li>
+      <li><strong>Semanal</strong><span>catas y maridajes</span></li>
+    </ul>
+  </div>
+  <a href="#notas" class="hero-scroll" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ===================== BANNER PUBLICIDAD 1 ===================== -->
+<section class="ad ad-lead wrap" aria-label="Espacio publicitario">
+  <div class="ad-slot" data-reveal="up">
+    <span class="ad-tag">Espacio publicitario</span>
+    <div class="ad-body">
+      <h3>Tu marca, frente a los que aman comer y tomar bien</h3>
+      <p>Bodegas, restaurantes y productos gourmet: este espacio puede ser tuyo.</p>
+    </div>
+    <a class="btn btn-gold" href="https://wa.me/5491132749916?text=Hola!%20Quiero%20informaci%C3%B3n%20para%20anunciar%20en%20Sale%20Resto." target="_blank" rel="noopener">Anunciá acá</a>
+  </div>
+</section>
+
+<!-- ===================== NOTAS ===================== -->
+<section class="section notas" id="notas">
+  <div class="wrap">
+    <header class="sec-head" data-reveal="up">
+      <p class="eyebrow">Editorial</p>
+      <h2 class="sec-title">Notas de gastronomía</h2>
+      <p class="sec-desc">Historias, tendencias y secretos de cocina contados sin vueltas. Para leer con una copa al lado.</p>
+    </header>
+
+    <div class="notas-grid">
+      <article class="nota nota-feat" data-reveal="up">
+        <div class="nota-img"><img src="fotos/nota2.jpg" alt="Plato de alta cocina emplatado" loading="lazy"/></div>
+        <div class="nota-in">
+          <span class="pill">Destacada · Cocina de autor</span>
+          <h3>La nueva ola de la cocina de producto argentino</h3>
+          <p>De la huerta a la mesa: cómo los cocineros más interesantes del país están reescribiendo el menú con ingredientes de estación.</p>
+          <span class="nota-meta">8 min de lectura · Tendencias</span>
+        </div>
+      </article>
+
+      <article class="nota" data-reveal="stagger">
+        <div class="nota-img"><img src="fotos/nota1.jpg" alt="Copa de vino en cata" loading="lazy"/></div>
+        <div class="nota-in">
+          <span class="pill">Cata</span>
+          <h3>Cómo entrenar la nariz para catar vino</h3>
+          <p>Cinco ejercicios simples para reconocer aromas y disfrutar cada copa un poco más.</p>
+          <span class="nota-meta">5 min · Vinos</span>
+        </div>
+      </article>
+
+      <article class="nota" data-reveal="stagger">
+        <div class="nota-img"><img src="fotos/nota3.jpg" alt="Viñedo con racimos de uva" loading="lazy"/></div>
+        <div class="nota-in">
+          <span class="pill">Ruta</span>
+          <h3>Mendoza en 3 días: bodegas imperdibles</h3>
+          <p>Un itinerario para vivir la vendimia, comer entre viñedos y volver con la valija llena.</p>
+          <span class="nota-meta">6 min · Viajes</span>
+        </div>
+      </article>
+
+      <article class="nota" data-reveal="stagger">
+        <div class="nota-img"><img src="fotos/vino1.jpg" alt="Tabla de quesos y fiambres" loading="lazy"/></div>
+        <div class="nota-in">
+          <span class="pill">Maridaje</span>
+          <h3>Picada perfecta: qué tomar con cada queso</h3>
+          <p>La guía definitiva para armar una tabla que combine con lo que tenés en la heladera.</p>
+          <span class="nota-meta">4 min · Maridaje</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VINOS ===================== -->
+<section class="section vinos" id="vinos">
+  <div class="wrap">
+    <header class="sec-head" data-reveal="up">
+      <p class="eyebrow">Catas &amp; maridajes</p>
+      <h2 class="sec-title">El mundo del vino, sin snobismo</h2>
+      <p class="sec-desc">Recomendaciones honestas por rango de precio, cepa y ocasión. Del vino de todos los días al que guardás para festejar.</p>
+    </header>
+
+    <div class="vino-grid">
+      <article class="vcard" data-reveal="stagger">
+        <div class="vcard-img"><img src="fotos/vino2.jpg" alt="Botella de vino tinto" loading="lazy"/><span class="vcard-badge">Tinto</span></div>
+        <div class="vcard-in">
+          <h3>Malbec para arrancar</h3>
+          <p>Tres botellas debajo de lo que pensás que cuesta un buen Malbec.</p>
+          <span class="vscore"><em>★★★★☆</em> Relación precio-calidad</span>
+        </div>
+      </article>
+      <article class="vcard" data-reveal="stagger">
+        <div class="vcard-img"><img src="fotos/vino3.jpg" alt="Copa de vino blanco" loading="lazy"/><span class="vcard-badge">Blanco</span></div>
+        <div class="vcard-in">
+          <h3>Blancos frescos para el verano</h3>
+          <p>Torrontés, Chardonnay y Sauvignon Blanc para tomar bien frío.</p>
+          <span class="vscore"><em>★★★★★</em> Ideal aperitivo</span>
+        </div>
+      </article>
+      <article class="vcard" data-reveal="stagger">
+        <div class="vcard-img"><img src="fotos/nota1.jpg" alt="Copa de vino en degustación" loading="lazy"/><span class="vcard-badge">Cata</span></div>
+        <div class="vcard-in">
+          <h3>Guía del principiante</h3>
+          <p>Cómo leer una etiqueta, servir a temperatura y no equivocarte.</p>
+          <span class="vscore"><em>★★★★☆</em> Para empezar</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESTAURANTES ===================== -->
+<section class="section restos" id="restos">
+  <div class="wrap">
+    <header class="sec-head" data-reveal="up">
+      <p class="eyebrow">Dónde comer</p>
+      <h2 class="sec-title">Restaurantes recomendados</h2>
+      <p class="sec-desc">Probamos, pagamos la cuenta y te contamos la verdad. Sin canje, sin filtro.</p>
+    </header>
+
+    <div class="resto-grid">
+      <article class="rcard" data-reveal="stagger">
+        <div class="rcard-img"><img src="fotos/resto1.jpg" alt="Interior de restaurante cálido" loading="lazy"/>
+          <span class="rscore">4.8 ★</span>
+        </div>
+        <div class="rcard-in">
+          <h3>La Vinería de Palermo</h3>
+          <p class="rmeta">Palermo · Cocina de autor · $$$</p>
+          <p>Carta de vinos enorme y platos pensados para maridar. La reserva vuela.</p>
+        </div>
+      </article>
+      <article class="rcard" data-reveal="stagger">
+        <div class="rcard-img"><img src="fotos/resto2.jpg" alt="Mesa servida en bistró" loading="lazy"/>
+          <span class="rscore">4.6 ★</span>
+        </div>
+        <div class="rcard-in">
+          <h3>Bodegón El Federal</h3>
+          <p class="rmeta">San Telmo · Cocina porteña · $$</p>
+          <p>Milanesa, vino de la casa y sobremesa larga. Un clásico que nunca falla.</p>
+        </div>
+      </article>
+      <article class="rcard" data-reveal="stagger">
+        <div class="rcard-img"><img src="fotos/resto3.jpg" alt="Cena en restaurante acogedor" loading="lazy"/>
+          <span class="rscore">4.9 ★</span>
+        </div>
+        <div class="rcard-in">
+          <h3>Sobremesa Bistró</h3>
+          <p class="rmeta">Villa Crespo · Fusión · $$$</p>
+          <p>Ambiente íntimo, cocina de estación y una carta de tragos de autor imperdible.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANNER PUBLICIDAD 2 ===================== -->
+<section class="wrap" aria-label="Espacio publicitario">
+  <div class="ad-slot ad-wide" data-reveal="up">
+    <span class="ad-tag">Espacio publicitario</span>
+    <div class="ad-body">
+      <h3>¿Tenés una bodega, un vino o un restaurante?</h3>
+      <p>Llegá a una audiencia que ya está buscando qué comer y qué tomar. Banner disponible.</p>
+    </div>
+    <a class="btn btn-outline" href="https://wa.me/5491132749916?text=Hola!%20Quiero%20anunciar%20mi%20negocio%20en%20Sale%20Resto." target="_blank" rel="noopener">Quiero mi banner</a>
+  </div>
+</section>
+
+<!-- ===================== TIENDA (fase 2) ===================== -->
+<section class="section tienda" id="tienda">
+  <div class="wrap">
+    <div class="tienda-in">
+      <div class="tienda-copy" data-reveal="up">
+        <p class="eyebrow">Muy pronto</p>
+        <h2 class="sec-title">Nuestra tienda de vinos</h2>
+        <p class="sec-desc">Estamos armando una vinoteca online con selección propia, precios de bodega y envíos a todo el país. Sumate a la lista y enterate antes que nadie cuando abramos.</p>
+        <ul class="tienda-list">
+          <li>Selección curada por nuestro equipo de cata</li>
+          <li>Cajas temáticas y suscripción mensual</li>
+          <li>Precios de bodega, sin intermediarios</li>
+        </ul>
+        <a class="btn btn-gold btn-lg" href="https://wa.me/5491132749916?text=Hola!%20Quiero%20avisos%20de%20la%20tienda%20de%20vinos%20de%20Sale%20Resto." target="_blank" rel="noopener">Avisame cuando abra</a>
+      </div>
+      <div class="tienda-cards" data-reveal="up">
+        <div class="tcard"><span class="tcard-badge">Reserva</span><strong>Malbec Reserva</strong><span class="tcard-price">Próximamente</span></div>
+        <div class="tcard tcard-2"><span class="tcard-badge">Blanco</span><strong>Torrontés de altura</strong><span class="tcard-price">Próximamente</span></div>
+        <div class="tcard tcard-3"><span class="tcard-badge">Caja</span><strong>Box degustación x6</strong><span class="tcard-price">Próximamente</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLUB / NEWSLETTER ===================== -->
+<section class="section club" id="club">
+  <div class="wrap club-in" data-reveal="up">
+    <p class="eyebrow center">El Club Sale Resto</p>
+    <h2 class="sec-title center">Sumate a la comunidad</h2>
+    <p class="sec-desc center">Cada semana, las mejores notas, una recomendación de resto y un vino elegido, directo a tu WhatsApp. Gratis.</p>
+    <a class="btn btn-gold btn-lg" href="https://wa.me/5491132749916?text=Hola%20Sale%20Resto!%20Quiero%20sumarme%20al%20Club%20y%20recibir%20las%20recomendaciones." target="_blank" rel="noopener">Unirme al Club</a>
+    <p class="club-mini">Sin spam. Te podés dar de baja cuando quieras.</p>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section class="section contacto" id="contacto">
+  <div class="wrap contacto-in">
+    <div class="contacto-copy" data-reveal="up">
+      <p class="eyebrow">Contacto</p>
+      <h2 class="sec-title">Hablemos</h2>
+      <p class="sec-desc">¿Querés recomendar un resto, proponernos una nota o anunciar tu marca? Escribinos, contestamos rápido.</p>
+      <div class="contacto-actions">
+        <a class="btn btn-gold btn-lg" href="https://wa.me/5491132749916?text=Hola%20Sale%20Resto!" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-outline btn-lg" href="mailto:hola@saleresto.com.ar">hola@saleresto.com.ar</a>
+      </div>
+    </div>
+    <ul class="contacto-facts" data-reveal="up">
+      <li><span>WhatsApp</span><strong>+54 9 11 3274-9916</strong></li>
+      <li><span>Zona</span><strong>Buenos Aires · Argentina</strong></li>
+      <li><span>Colaboraciones</span><strong>Notas, catas y prensa</strong></li>
+      <li><span>Publicidad</span><strong>Banners y contenido</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M17 8 h14 a3 3 0 0 1 3 3 c0 7-4 9-4 13 s4 6 4 13 a3 3 0 0 1-3 3 h-14 a3 3 0 0 1-3-3 c0-7 4-6 4-13 s-4-6-4-13 a3 3 0 0 1 3-3 z"/><circle cx="24" cy="28" r="3.4" class="mk-drop"/></svg>
+      </span>
+      <div>
+        <strong>Sale Resto</strong>
+        <p>Gastronomía, vinos y recomendaciones. Comé mejor, tomá mejor.</p>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Pie">
+      <a href="#notas">Notas</a>
+      <a href="#vinos">Vinos</a>
+      <a href="#restos">Restaurantes</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© <span id="yr"></span> Sale Resto · Buenos Aires</span>
+    <span class="foot-by">Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491132749916?text=Hola%20Sale%20Resto!" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.8 1.5 5.7 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.7 0-3.4-.5-4.9-1.4l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.3C5.5 9.9 10.2 5.5 16 5.5s10.5 4.4 10.5 10c0 5.6-4.7 10.2-10.5 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-1.7-.9-2.8-1.5-3.9-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.9.9-1.2 2.1-1.2 3.6 0 2.1 1.5 4.1 1.7 4.4.2.3 3 4.6 7.3 6.2 2.7 1 3.4.8 4 .8.9-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="vendor/three.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
