@@ -1,0 +1,229 @@
+/* ============================================================
+   Rutas Antofagasteñas — Excursiones · Puna Catamarqueña
+   Identidad: noche altiplano dominante + terracota/ochre de los
+   cerros. Signature: mapa de ruta con curvas de nivel y los
+   hitos reales de Antofagasta de la Sierra.
+   ============================================================ */
+:root{
+  --night:#16232B;
+  --night-2:#1E323C;
+  --panel:#243B45;
+  --line-d:rgba(244,240,230,.14);
+  --line:rgba(22,35,43,.12);
+  --terra:#C1572E;
+  --terra-deep:#9C4322;
+  --ochre:#E3A63D;
+  --sky:#5FA8C7;
+  --salt:#F4F0E6;
+  --salt-2:#EAE4D2;
+  --ink:#20302F;
+  --ink-soft:#4E5D5C;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--night);
+  color:rgba(244,240,230,.78);
+  font-family:"Karla",system-ui,sans-serif;
+  font-size:clamp(15px,1.05vw,17px);
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.2rem)}
+
+h1,h2,h3,.brand-name{font-family:"Unbounded",system-ui,sans-serif;font-weight:700;line-height:1.12;
+  letter-spacing:-.01em;color:var(--salt)}
+h1 em,h2 em,.brand-name em{font-style:normal;color:var(--ochre)}
+.kicker{display:flex;align-items:center;gap:.6rem;font-family:"Karla",sans-serif;font-weight:700;
+  font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ochre);margin-bottom:1.1rem}
+.kicker i{width:22px;height:2px;background:var(--terra);display:inline-block}
+.kicker.light{color:var(--sky)}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:"Unbounded",sans-serif;font-weight:600;font-size:.92rem;letter-spacing:.01em;
+  padding:.85rem 1.6rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s,border-color .25s}
+.btn svg{width:18px;height:18px}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 14px 32px -14px rgba(193,87,46,.65)}
+.btn-terra:hover{background:var(--terra-deep);transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(156,67,34,.75)}
+.btn-line{background:transparent;color:var(--salt);border-color:rgba(244,240,230,.28)}
+.btn-line:hover{border-color:var(--ochre);color:var(--ochre);transform:translateY(-2px)}
+.btn-dark{background:var(--night);color:var(--salt)}
+.btn-dark:hover{background:var(--terra);color:#fff;transform:translateY(-2px)}
+.btn-lg{padding:1.02rem 2rem;font-size:.98rem}
+
+/* ===================== NAV ===================== */
+.nav{position:sticky;top:0;z-index:40;background:rgba(22,35,43,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-d)}
+.nav-in{display:flex;align-items:center;gap:1.4rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.65rem;flex-shrink:0}
+.brand-mark{width:30px;height:30px;color:var(--ochre);flex-shrink:0}
+.brand-mark svg{width:100%;height:100%}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.nav .brand-name{font-size:1.06rem;color:var(--salt)}
+.nav .brand-name em{color:var(--ochre)}
+.brand-sub{font-family:"Karla",sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(244,240,230,.5);margin-top:.3rem}
+.nav-links{display:flex;gap:1.6rem;margin-left:auto}
+.nav-links a{font-size:.9rem;font-weight:600;color:rgba(244,240,230,.72);position:relative;padding:.3rem 0;transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--terra);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links a:hover{color:var(--salt)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{margin-left:.4rem;padding:.58rem 1.15rem;font-size:.86rem}
+.burger{display:none;margin-left:auto;width:42px;height:42px;background:none;border:1px solid var(--line-d);
+  border-radius:10px;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.burger span{width:19px;height:2px;background:var(--salt);transition:.3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-mobile{position:fixed;inset:58px 0 auto 0;z-index:35;background:var(--night-2);
+  border-bottom:1px solid var(--line-d);display:flex;flex-direction:column;
+  padding:1rem clamp(1.1rem,4vw,2.2rem) 1.4rem;gap:.2rem;
+  transform:translateY(-140%);transition:transform .4s var(--ease)}
+.nav-mobile.open{transform:translateY(0)}
+.nav-mobile a{padding:.75rem .2rem;font-weight:600;color:var(--salt);border-bottom:1px solid var(--line-d)}
+.nav-mobile .m-cta{margin-top:.8rem;border:none}
+
+/* ===================== HERO ===================== */
+.hero{position:relative;min-height:88svh;display:flex;align-items:center;overflow:hidden;background:var(--night)}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-vid{width:100%;height:100%;object-fit:cover}
+.hero-veil{position:absolute;inset:0;
+  background:
+    linear-gradient(92deg,rgba(22,35,43,.94) 0%,rgba(22,35,43,.68) 42%,rgba(22,35,43,.24) 72%,rgba(22,35,43,.55) 100%),
+    linear-gradient(0deg,rgba(22,35,43,.85),transparent 32%,transparent 78%,rgba(22,35,43,.5))}
+.hero-in{position:relative;z-index:1;padding:clamp(5rem,10vw,7rem) 0 clamp(3.5rem,7vw,5rem);max-width:38rem}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:1.3rem}
+.hero-sub{font-size:1.08rem;color:rgba(244,240,230,.72);max-width:29rem;margin-bottom:2rem}
+.hero-cta{display:flex;gap:.85rem;flex-wrap:wrap}
+.hero-cta.center{justify-content:center}
+
+/* ===================== TRUST STRIP ===================== */
+.strip{background:var(--terra)}
+.strip-in{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem 2.2rem;padding:1rem 0;
+  font-family:"Unbounded",sans-serif;font-weight:600;color:#fff;font-size:.9rem}
+
+/* ===================== SECTIONS ===================== */
+.section{padding:clamp(3.4rem,6vw,5.6rem) 0}
+.head{max-width:34rem;margin-bottom:clamp(2rem,4vw,3rem)}
+.head h2{font-size:clamp(2rem,4vw,3rem)}
+.head-lead{color:rgba(244,240,230,.68);margin-top:1rem;font-size:1.02rem}
+.lead{font-size:1.04rem;color:var(--ink-soft);margin-bottom:1.5rem}
+
+/* excursiones */
+.excursiones{background:var(--night)}
+.exc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.exc-card{background:var(--panel);border:1px solid var(--line-d);border-radius:16px;padding:1.7rem 1.5rem;
+  transition:transform .3s var(--ease),border-color .3s}
+.exc-card:hover{transform:translateY(-5px);border-color:var(--ochre)}
+.exc-ic{display:inline-grid;place-items:center;width:46px;height:46px;color:var(--ochre);margin-bottom:1.1rem}
+.exc-ic svg{width:100%;height:100%}
+.exc-card h3{font-size:1.14rem;margin-bottom:.5rem}
+.exc-card p{font-size:.9rem;color:rgba(244,240,230,.62)}
+.exc-cta{background:var(--terra);border-color:var(--terra)}
+.exc-cta h3{color:#fff}
+.exc-cta p{color:rgba(255,255,255,.82);margin-bottom:1rem}
+.link-arrow{display:inline-flex;align-items:center;gap:.4rem;font-family:"Unbounded",sans-serif;
+  font-weight:600;font-size:.88rem;color:#fff;transition:gap .3s}
+.link-arrow:hover{gap:.65rem}
+
+/* la puna — mapa de ruta */
+.puna{background:var(--night-2)}
+.puna-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.4rem);align-items:center}
+.puna-head{margin-bottom:0}
+.route-map{max-width:460px;margin:0 auto;text-align:center}
+.route-map svg{width:100%;height:auto;overflow:visible}
+.route-map figcaption{margin-top:.8rem;font-size:.82rem;color:rgba(244,240,230,.48)}
+.rt-label{font-family:"Karla",sans-serif;font-size:11px;font-weight:600;fill:var(--salt)}
+.route{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s var(--ease) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.stop{opacity:0;animation:popIn .5s var(--ease) forwards}
+.stop:nth-child(3){animation-delay:.5s}.stop:nth-child(4){animation-delay:1.1s}
+.stop:nth-child(5){animation-delay:1.6s}.stop:nth-child(6){animation-delay:2.1s}
+@keyframes popIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+
+/* band */
+.band{position:relative;overflow:hidden;padding:clamp(3.6rem,7vw,6rem) 0}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.band-veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,var(--night) 22%,rgba(22,35,43,.8) 52%,rgba(22,35,43,.35) 100%)}
+.band-in{position:relative;z-index:2;max-width:32rem}
+.band-in h2{font-size:clamp(1.9rem,3.6vw,2.7rem)}
+.band-lead{margin:1rem 0 1.6rem;color:rgba(244,240,230,.78);font-size:1.02rem}
+
+/* nosotros */
+.nosotros{background:var(--salt)}
+.nos-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.4rem);align-items:center}
+.nosotros h2,.nosotros .kicker{color:var(--ink)}
+.nosotros .kicker{color:var(--terra-deep)}
+.nos-media{border-radius:16px;overflow:hidden}
+.nos-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.nos-text h2{margin-bottom:1.1rem}
+.nos-list{list-style:none;display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.7rem}
+.nos-list li{position:relative;padding-left:1.5rem;font-size:.98rem;color:var(--ink-soft)}
+.nos-list li::before{content:"";position:absolute;left:0;top:.5rem;width:8px;height:8px;border-radius:50%;background:var(--terra)}
+.nos-list b{color:var(--ink);font-weight:700}
+
+/* ===================== CTA FINAL ===================== */
+.cta-final{background:var(--night);text-align:center;padding:clamp(3.6rem,6vw,5.6rem) 0}
+.cta-final .kicker{justify-content:center}
+.cta-final h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:1rem}
+.cta-final p{color:rgba(244,240,230,.68);max-width:30rem;margin:0 auto 1.8rem;font-size:1.02rem}
+.socials{display:flex;justify-content:center;gap:.7rem;margin-top:1.8rem}
+.socials a{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;
+  border:1px solid var(--line-d);color:var(--salt);transition:.3s var(--ease)}
+.socials a:hover{background:var(--ochre);color:var(--night);border-color:var(--ochre);transform:translateY(-3px)}
+.socials svg{width:19px;height:19px}
+
+/* ===================== FOOTER ===================== */
+.footer{background:#111C22;color:rgba(244,240,230,.6);padding:clamp(2.4rem,5vw,3.4rem) 0 1.5rem}
+.ft-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:2rem}
+.ft-brand{display:flex;gap:.9rem;align-items:flex-start}
+.ft-brand .brand-mark{width:30px;height:30px;color:var(--ochre);flex-shrink:0}
+.ft-brand .brand-name{font-size:1.06rem;color:var(--salt);display:block}
+.ft-brand p{color:rgba(244,240,230,.5);font-size:.9rem;margin-top:.5rem;max-width:22rem}
+.ft-col h5{font-family:"Karla",sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ochre);margin-bottom:.9rem;font-weight:700}
+.ft-col a{display:block;font-size:.9rem;padding:.26rem 0;color:rgba(244,240,230,.6);transition:color .3s}
+.ft-col a:hover{color:var(--salt)}
+.ft-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;
+  margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--line-d);font-size:.8rem}
+.ft-bottom a{color:var(--ochre);font-weight:500}
+
+/* ===================== WHATSAPP FLOAT ===================== */
+.wa-float{position:fixed;right:1.1rem;bottom:1.1rem;z-index:50;width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;
+  box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .3s var(--ease)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:980px){
+  .nav-links,.nav-cta.btn{display:none}
+  .burger{display:flex}
+  .exc-grid{grid-template-columns:1fr 1fr}
+  .puna-top,.nos-grid{grid-template-columns:1fr}
+  .route-map{order:-1}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-brand{grid-column:1/-1}
+}
+@media (max-width:620px){
+  .exc-grid{grid-template-columns:1fr}
+  .strip-in{gap:.6rem 1.2rem;font-size:.82rem}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .ft-grid{grid-template-columns:1fr}
+  .ft-bottom{justify-content:center;text-align:center}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .route{stroke-dashoffset:0}
+  .stop{opacity:1;transform:none}
+}
