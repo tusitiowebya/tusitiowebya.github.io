@@ -1,8 +1,13 @@
 /* =====================================================================
    MD Podas — Cinematic Premium · app
    Three.js (hojas cayendo sobre el video) · GSAP + ScrollTrigger · Lenis
+
+   NOTA: Three.js se carga con import() DINÁMICO dentro de initLeaves, no
+   como import estático arriba. Así, si /vendor/three.module.js falla (404,
+   importmap no soportado, dominio sin /vendor), el resto del módulo — nav,
+   contadores, galería, formulario — sigue funcionando igual.
    ===================================================================== */
-import * as THREE from "three";
+let THREE; // se asigna dinámicamente sólo si corresponde (no LITE)
 
 const gsap = window.gsap;
 const ScrollTrigger = window.ScrollTrigger;
@@ -82,15 +87,24 @@ function leafTexture() {
   return tex;
 }
 
-function initLeaves() {
+async function initLeaves() {
   const canvas = $("#gl");
   const hero = $("#inicio");
   if (!canvas || !hero || reduce || LITE) return;
 
+  // carga diferida de Three.js: si falla, se cae a LITE sin romper la página
+  try {
+    THREE = await import("three");
+  } catch (e) {
+    document.documentElement.classList.add("lite");
+    canvas.style.display = "none";
+    return;
+  }
+
   let renderer;
   try {
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "high-performance" });
-  } catch (e) { return; }
+  } catch (e) { canvas.style.display = "none"; return; }
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
