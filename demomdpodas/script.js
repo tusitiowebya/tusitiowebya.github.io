@@ -354,7 +354,7 @@ function initUI() {
     const msg = $("#f-msg").value.trim();
     let text = `Hola MD Podas! Quiero un presupuesto.%0ANombre: ${enc(nombre.value)}%0ATeléfono: ${enc(tel.value)}%0AServicio: ${enc(serv)}`;
     if (msg) text += `%0AMensaje: ${enc(msg)}`;
-    window.open(`https://wa.me/5491166164656?text=${text}`, "_blank", "noopener");
+    window.open(`https://wa.me/5491161022884?text=${text}`, "_blank", "noopener");
   });
 }
 
