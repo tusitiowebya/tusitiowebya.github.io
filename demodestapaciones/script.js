@@ -17,9 +17,33 @@
   if (hasGsap) gsap.registerPlugin(ScrollTrigger);
   if (!hasGsap) document.documentElement.classList.add("no-anim");
 
+  /* Detecta equipos sin aceleración por hardware (render por software),
+     gama muy baja o sin WebGL → modo LITE: sin burbujas, sin Lenis, sin
+     backdrop-filter (glass sólido). Evita que se tilde en máquinas flojas.
+     Overrides manuales: ?lite fuerza liviano · ?full fuerza completo. */
+  function detectLite() {
+    try {
+      if (/[?&]lite/.test(location.search)) return true;
+      if (/[?&]full/.test(location.search)) return false;
+      if (navigator.deviceMemory && navigator.deviceMemory <= 2) return true;
+      if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) return true;
+      var c = document.createElement("canvas");
+      var gl = c.getContext("webgl") || c.getContext("experimental-webgl");
+      if (!gl) return true;
+      var ext = gl.getExtension("WEBGL_debug_renderer_info");
+      if (ext) {
+        var r = String(gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || "").toLowerCase();
+        if (/swiftshader|llvmpipe|software|basic render|microsoft basic|mesa offscreen|softpipe/.test(r)) return true;
+      }
+    } catch (e) { return true; }
+    return false;
+  }
+  var LITE = detectLite();
+  if (LITE) document.documentElement.classList.add("lite");
+
   /* ---------- 1 · Lenis smooth scroll ---------- */
   var lenis = null;
-  if (hasGsap && Lenis && !reduce) {
+  if (hasGsap && Lenis && !reduce && !LITE) {
     try {
       lenis = new Lenis({ duration: 1.1, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
       lenis.on("scroll", ScrollTrigger.update);
@@ -42,7 +66,7 @@
   /* ---------- 2 · Burbujas (canvas 2D) sobre el video ---------- */
   function initBubbles() {
     var canvas = $("#bubbles"), hero = $("#inicio");
-    if (!canvas || !hero || reduce) return;
+    if (!canvas || !hero || reduce || LITE) return;
     var ctx = canvas.getContext("2d");
     if (!ctx) return;
     var dpr = Math.min(window.devicePixelRatio || 1, 2), W = 0, H = 0, bubbles = [];
