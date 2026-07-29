@@ -1,5 +1,5 @@
 /* ===== PRODUCTS DATA ===== */
-const WA_NUMBER = '5491133840419';
+const WA_NUMBER = '5493885070534';
 
 function waLink(productName) {
   const msg = encodeURIComponent(
@@ -44,15 +44,6 @@ const products = [
     badge: null,
     desc: 'Línea completa de productos capilares para nutrición, hidratación y reparación de todo tipo de cabello.',
     specs: ['Variedad de productos', 'Fórmulas sin parabenos', 'Resultados visibles', 'Uso profesional y domiciliario']
-  },
-  {
-    img: 'https://afaar.vtexassets.com/arquivos/ids/158644-800-auto?v=638979860679030000&width=800&height=auto&aspect=true',
-    fallbackIcon: 'fa-futbol',
-    name: 'Camiseta Argentina 2026',
-    category: 'Moda',
-    badge: '¡Nueva!',
-    desc: 'Camiseta oficial de la Selección Argentina para la temporada 2026. Viví la pasión del fútbol con estilo.',
-    specs: ['Temporada: 2026', 'Talles: XS al XXL', 'Material: Dry-fit', 'Diseño oficial']
   },
   {
     img: 'images/importbrasil.jpg',
@@ -304,8 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const showcaseProducts = [
       { img: 'images/perfumarab.png',  name: 'Perfume Árabe Premium',   sub: 'Fragancias exclusivas 100ml' },
       { img: 'https://ladelfina.uy/wp-content/uploads/2025/05/Perfume-GD-Amakha-paris-15ml.png', name: 'Amakha Paris Collection',  sub: 'Collection 15ml' },
-      { img: 'https://afaar.vtexassets.com/arquivos/ids/158644-800-auto?v=638979860679030000&width=800&height=auto&aspect=true', name: 'Camiseta Argentina 2026',  sub: 'Edición especial' },
       { img: 'https://www.karseell.com/wp-content/uploads/2024/08/%E8%AF%A6%E6%83%85%E9%A1%B5-21-768x768.png', name: 'Cremas Karseell',          sub: 'Cuidado capilar premium' },
+      { img: 'images/importbrasil.jpg', name: 'Perfumes Importados Brasil', sub: 'Fragancias tropicales' },
     ];
     let idx = 0;
     heroTitle.style.transition = 'opacity 0.35s ease';

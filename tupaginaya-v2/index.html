@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>TuPaginaYa · Estudio de diseño web premium + CobrOS · Argentina</title>
+<meta name="description" content="Diseñamos tu página web como una producción cinematográfica y la ponemos online en 48 horas, con la app de catálogo y cobros CobrOS. 27 negocios ya están en vivo con nosotros."/>
+<meta name="theme-color" content="#0A0820"/>
+<meta name="author" content="TuPaginaYa"/>
+<meta property="og:title" content="TuPaginaYa · Tu negocio online en 48 horas"/>
+<meta property="og:description" content="Diseño web premium + app de cobros CobrOS. 27 marcas ya están online."/>
+<meta property="og:locale" content="es_AR"/>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%233D6DFF'/><stop offset='.5' stop-color='%237C5CFF'/><stop offset='1' stop-color='%23FF7A18'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230A0820'/><text x='50' y='72' font-family='Georgia,serif' font-size='64' font-weight='700' text-anchor='middle' fill='url(%23g)'>T</text></svg>"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+
+<!-- librerías auto-alojadas (sin dependencia de CDN externo) -->
+<script type="importmap">
+{ "imports": { "three": "/vendor/three.module.js" } }
+</script>
+<script src="/vendor/gsap.min.js" defer></script>
+<script src="/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/vendor/lenis.min.js" defer></script>
+</head>
+<body id="top">
+
+<!-- ambient background layers (global) -->
+<div class="ambient" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- progress + custom cursor -->
+<div class="scroll-progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" data-cursor="hover" aria-label="TuPaginaYa inicio">
+      <span class="seal">T</span><span class="brand-txt">Tu<i>Pagina</i>Ya</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#proceso" data-cursor="hover">Cómo funciona</a>
+      <a href="#cobros" data-cursor="hover">CobrOS</a>
+      <a href="#planes" data-cursor="hover">Planes</a>
+      <a href="#trabajos" data-cursor="hover">Trabajos</a>
+    </nav>
+    <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20mi%20demo" target="_blank" rel="noopener" class="btn btn-primary nav-cta magnetic" data-cursor="hover">
+      <span>Pedir mi demo</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#proceso">Cómo funciona</a>
+  <a href="#cobros">CobrOS</a>
+  <a href="#planes">Planes</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="https://wa.me/5491126966153" target="_blank" rel="noopener" class="btn btn-primary">Pedir mi demo</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <canvas class="hero-gl" id="gl" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="eyebrow reveal-line"><span class="pip"></span>Estudio de diseño web · Argentina</span>
+    <h1 class="hero-title">
+      <span class="line"><span class="w">Tu</span> <span class="w">negocio</span></span>
+      <span class="line"><span class="w grad">online</span> <span class="w">en</span> <span class="w">48</span> <span class="w">horas.</span></span>
+      <span class="line serif"><span class="w">Y</span> <span class="w"><em>cobrando</em></span> <span class="w">desde</span> <span class="w">el</span> <span class="w">día</span> <span class="w">uno.</span></span>
+    </h1>
+    <p class="hero-lead reveal-line">Diseñamos tu página como una producción de marca premium, la publicamos con dominio propio y le sumamos <strong>CobrOS</strong>: la app donde mostrás tu catálogo y cobrás.</p>
+    <div class="hero-actions reveal-line">
+      <a href="#planes" class="btn btn-primary btn-lg magnetic" data-cursor="hover"><span>Ver planes y precios</span></a>
+      <a href="#trabajos" class="btn btn-glass btn-lg magnetic" data-cursor="hover"><span>Ver los trabajos</span></a>
+    </div>
+    <p class="hero-mini reveal-line"><span class="live-dot"></span> 27 negocios online ahora mismo</p>
+  </div>
+  <a href="#stats" class="scroll-cue" aria-label="Bajar"><span class="mouse"><span></span></span></a>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats" id="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><span class="stat-num" data-count="27">0</span><span class="stat-label">Negocios online</span></div>
+    <div class="stat"><span class="stat-num" data-count="48" data-suffix=" h">0</span><span class="stat-label">Promedio de entrega</span></div>
+    <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0</span><span class="stat-label">Adaptado a celular</span></div>
+    <div class="stat"><span class="stat-num nocount">24/7</span><span class="stat-label">Soporte y hosting</span></div>
+  </div>
+</section>
+
+<!-- ===================== PROCESO ===================== -->
+<section class="section proceso" id="proceso">
+  <div class="wrap">
+    <div class="s-head">
+      <span class="eyebrow reveal"><span class="pip"></span>Cómo funciona</span>
+      <h2 class="reveal">De la idea a estar <span class="grad">online</span>,<br>en cuatro pasos.</h2>
+      <p class="reveal">Sin vueltas técnicas ni reuniones eternas. Nos contás de tu negocio y nosotros nos encargamos del resto.</p>
+    </div>
+    <div class="steps">
+      <article class="step glass tilt">
+        <span class="step-num">01</span>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Contanos tu negocio</h3>
+        <p>Por WhatsApp nos pasás qué hacés, tus productos y tu logo. Diez minutos y listo.</p>
+      </article>
+      <article class="step glass tilt">
+        <span class="step-num">02</span>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Armamos tu demo</h3>
+        <p>Diseñamos una página a medida de tu rubro y te la mostramos antes de pagar nada.</p>
+      </article>
+      <article class="step glass tilt">
+        <span class="step-num">03</span>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Sale online en 48 hs</h3>
+        <p>Aprobás, activamos tu dominio y publicamos. Tu negocio empieza a aparecer en Google.</p>
+      </article>
+      <article class="step glass tilt">
+        <span class="step-num">04</span>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <h3>Empezás a cobrar</h3>
+        <p>Sumás CobrOS y mostrás tu catálogo con cobros incluidos. Todo en un mismo lugar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COBROS ===================== -->
+<section class="section cobros" id="cobros">
+  <div class="wrap cobros-grid">
+    <div class="cobros-copy">
+      <span class="eyebrow reveal"><span class="pip"></span>App de catálogo y cobros</span>
+      <h2 class="reveal">CobrOS: tu catálogo y tus cobros,<br>en una <span class="grad">sola app</span>.</h2>
+      <p class="reveal">El complemento ideal de tu web. Cargás tus productos, los compartís por un link y recibís los pagos sin papeles ni planillas.</p>
+      <div class="feat-list">
+        <div class="feat reveal glass"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><div><b>Catálogo digital</b><span>Productos y precios siempre al día, listos para compartir.</span></div></div>
+        <div class="feat reveal glass"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><div><b>Cobros integrados</b><span>Generás el cobro y tu cliente paga desde el mismo link.</span></div></div>
+        <div class="feat reveal glass"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><div><b>Ventas a la vista</b><span>Qué se vendió y qué falta cobrar, sin abrir una planilla.</span></div></div>
+        <div class="feat reveal glass"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></span><div><b>Pedidos por WhatsApp</b><span>Tu cliente arma el pedido y te llega directo al chat.</span></div></div>
+      </div>
+      <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20saber%20m%C3%A1s%20sobre%20CobrOS" target="_blank" rel="noopener" class="btn btn-primary magnetic reveal" data-cursor="hover"><span>Quiero CobrOS</span></a>
+    </div>
+
+    <div class="phone-stage">
+      <div class="phone tilt" id="phone">
+        <div class="phone-glow"></div>
+        <div class="phone-screen">
+          <div class="ph-top"><b>Mi Catálogo</b><span class="ph-bal">CobrOS</span></div>
+          <div class="ph-items">
+            <div class="ph-item"><span class="ph-thumb">🧁</span><span class="n">Docena pastelitos</span><span class="p">$6.500</span></div>
+            <div class="ph-item"><span class="ph-thumb">☕</span><span class="n">Café + medialuna</span><span class="p">$2.300</span></div>
+            <div class="ph-item"><span class="ph-thumb">🎂</span><span class="n">Torta a pedido</span><span class="p">$18.000</span></div>
+            <div class="ph-item"><span class="ph-thumb">📦</span><span class="n">Combo desayuno</span><span class="p">$9.900</span></div>
+          </div>
+          <div class="ph-pay">Cobrar pedido · $36.700</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLANES ===================== -->
+<section class="section planes" id="planes">
+  <div class="wrap">
+    <div class="s-head center">
+      <span class="eyebrow reveal"><span class="pip"></span>Planes y precios</span>
+      <h2 class="reveal">Elegí cómo querés <span class="grad">arrancar</span>.</h2>
+      <p class="reveal">Web profesional con dominio y soporte. Sumá CobrOS y agregale catálogo + cobros. Precio claro, sin permanencia.</p>
+    </div>
+    <div class="plans">
+      <article class="plan glass tilt reveal">
+        <h3 class="plan-name">Plan Profesional</h3>
+        <p class="plan-desc">Tu página lista para vender.</p>
+        <div class="plan-price"><span class="amt">$17.000</span><span class="per">/ mes</span></div>
+        <ul class="plan-feats">
+          <li>Dominio .com.ar + hosting</li>
+          <li>Diseño a medida de tu rubro</li>
+          <li>WhatsApp y redes integrados</li>
+          <li>Soporte 24/7</li>
+          <li>5 actualizaciones mensuales</li>
+          <li>2 correos corporativos</li>
+        </ul>
+        <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20el%20Plan%20Profesional%20(%2417.000%2Fmes)" target="_blank" rel="noopener" class="btn btn-glass magnetic" data-cursor="hover"><span>Elegir plan</span></a>
+      </article>
+      <article class="plan plan-pop glass tilt reveal">
+        <span class="plan-badge">★ Más elegido</span>
+        <h3 class="plan-name">Web + Catálogo</h3>
+        <p class="plan-desc">Todo lo del Profesional, más la app CobrOS.</p>
+        <div class="plan-price"><span class="amt">$35.000</span><span class="per">/ mes</span></div>
+        <ul class="plan-feats">
+          <li>Todo lo del <b>Plan Profesional</b></li>
+          <li><b>App CobrOS</b>: catálogo digital</li>
+          <li>Cobros integrados desde el link</li>
+          <li>Pedidos directos por WhatsApp</li>
+          <li>Ventas y pendientes a la vista</li>
+          <li>Catálogo siempre actualizado</li>
+        </ul>
+        <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20el%20plan%20Web%20%2B%20Cat%C3%A1logo%20CobrOS%20(%2435.000%2Fmes)" target="_blank" rel="noopener" class="btn btn-primary magnetic" data-cursor="hover"><span>Elegir plan</span></a>
+      </article>
+    </div>
+    <p class="plan-activation reveal glass"><span class="big">Activación única $50.000</span> — se paga una sola vez, al publicar. Incluye dominio, hosting, soporte y actualizaciones. <b>Sin permanencia.</b></p>
+  </div>
+</section>
+
+<!-- ===================== TRABAJOS ===================== -->
+<section class="section trabajos" id="trabajos">
+  <div class="wrap">
+    <div class="s-head">
+      <span class="eyebrow reveal"><span class="pip"></span>Trabajos reales</span>
+      <h2 class="reveal">27 negocios ya están <span class="grad">online</span><br>con nosotros.</h2>
+      <p class="reveal">Sitios reales, en vivo hoy mismo. Tocá cualquiera para ver el detalle y entrar al sitio.</p>
+    </div>
+    <div class="filters reveal" id="filters" role="group" aria-label="Filtrar por rubro">
+      <button class="chip active" data-filter="all" data-cursor="hover">Todos</button>
+      <button class="chip" data-filter="servicios" data-cursor="hover">Servicios</button>
+      <button class="chip" data-filter="comercio" data-cursor="hover">Comercio</button>
+      <button class="chip" data-filter="eventos" data-cursor="hover">Eventos &amp; Turismo</button>
+      <button class="chip" data-filter="salud" data-cursor="hover">Salud &amp; Coaching</button>
+      <button class="chip" data-filter="instituciones" data-cursor="hover">Instituciones</button>
+    </div>
+    <div class="work-grid" id="workGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-back" data-close></div>
+  <div class="modal-card glass">
+    <button class="modal-close" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal-shot"><img id="mImg" src="" alt=""/></div>
+    <div class="modal-body">
+      <span class="modal-cat" id="mCat"></span>
+      <h3 class="modal-title" id="mTitle"></h3>
+      <p class="modal-domain" id="mDomain"></p>
+      <p class="modal-text" id="mText"></p>
+      <ul class="modal-feats" id="mFeats"></ul>
+      <div class="modal-actions">
+        <a id="mLink" href="#" target="_blank" rel="noopener" class="btn btn-primary magnetic"><span>Visitar el sitio →</span></a>
+        <a href="https://wa.me/5491126966153?text=Hola!%20Quiero%20una%20web%20como%20esta" target="_blank" rel="noopener" class="btn btn-glass"><span>Quiero una así</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DEMO ===================== -->
+<section class="section demo" id="demo">
+  <div class="wrap demo-grid glass">
+    <div class="demo-copy">
+      <span class="eyebrow reveal"><span class="pip"></span>Demo gratis</span>
+      <h2 class="reveal">Pedí tu demo.<br>La hacemos <span class="grad">antes</span> de que pagues nada.</h2>
+      <p class="reveal">Contanos lo básico de tu negocio y te armamos una primera versión de tu sitio para que la veas.</p>
+      <p class="hint reveal">→ Respondemos por WhatsApp en el día</p>
+    </div>
+    <form class="demo-form reveal" id="demoForm" novalidate>
+      <div class="field"><label for="nombre">Nombre del negocio</label><input type="text" id="nombre" placeholder="Ej: Panadería La Esquina"/><p class="err"></p></div>
+      <div class="field"><label for="rubro">¿A qué se dedica?</label><input type="text" id="rubro" placeholder="Ej: Panadería y cafetería"/><p class="err"></p></div>
+      <div class="field"><label for="productos">Productos o servicios</label><textarea id="productos" rows="3" placeholder="Contanos qué ofrecés..."></textarea><p class="err"></p></div>
+      <div class="field"><label for="whatsapp">Tu WhatsApp</label><input type="tel" id="whatsapp" placeholder="Ej: +54 9 11 2696-6153"/><p class="err"></p></div>
+      <button type="submit" class="btn btn-primary btn-lg magnetic"><span>Enviar y pedir mi demo</span></button>
+    </form>
+    <div class="demo-form demo-success" id="demoOk" style="display:none">
+      <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>¡Solicitud enviada!</h3>
+      <p>Te escribimos por WhatsApp en las próximas horas para mostrarte tu demo. Gracias por elegir TuPaginaYa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="seal">T</span><span class="brand-txt">Tu<i>Pagina</i>Ya</span></a>
+        <p>Estudio de diseño web argentino. Ponemos tu negocio online y te damos las herramientas para cobrar.</p>
+      </div>
+      <div><h4>Producto</h4><a href="#proceso">Cómo funciona</a><a href="#cobros">App CobrOS</a><a href="#planes">Planes</a></div>
+      <div><h4>Mirá</h4><a href="#trabajos">Trabajos</a><a href="#demo">Pedir demo</a></div>
+      <div><h4>Contacto</h4><a href="https://wa.me/5491126966153" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+5491126966153">11 2696-6153</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> TuPaginaYa</span>
+      <span>Hecho en Argentina ✦ con dedicación</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5491126966153" target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+</a>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

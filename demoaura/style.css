@@ -389,6 +389,19 @@ img {
   background-clip: text;
 }
 
+.hero-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--gold-light);
+  letter-spacing: 0.2px;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 18px;
+  border-left: 2px solid var(--gold-dark);
+}
+
 .hero-subtitle {
   font-size: 17px;
   line-height: 1.7;
@@ -535,6 +548,39 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+/* Sunburst — radiant "aura" behind the featured product, echoing a light-burst motif in restrained gold tones */
+.hero-sunburst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.sunburst-1 {
+  background: repeating-conic-gradient(rgba(226,199,143,0.16) 0deg 1deg, transparent 1deg 9deg);
+  -webkit-mask-image: radial-gradient(circle, transparent 0%, black 20%, black 52%, transparent 76%);
+  mask-image: radial-gradient(circle, transparent 0%, black 20%, black 52%, transparent 76%);
+  animation: sunburst-spin 70s linear infinite;
+}
+.sunburst-2 {
+  width: 620px;
+  height: 620px;
+  background: repeating-conic-gradient(rgba(201,169,110,0.13) 0deg 1.4deg, transparent 1.4deg 13deg);
+  -webkit-mask-image: radial-gradient(circle, transparent 0%, black 16%, black 46%, transparent 68%);
+  mask-image: radial-gradient(circle, transparent 0%, black 16%, black 46%, transparent 68%);
+  animation: sunburst-spin 50s linear infinite reverse;
+}
+@keyframes sunburst-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-sunburst { animation: none; }
 }
 
 .scroll-indicator {
@@ -827,7 +873,7 @@ img {
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 48px;
 }
@@ -1506,10 +1552,15 @@ footer {
     text-align: center;
     gap: 40px;
   }
+  .hero-quote { margin-left: auto; margin-right: auto; text-align: left; max-width: 400px; }
   .hero-subtitle { margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .hero-visual { display: none; }
+  .hero-visual { margin-top: 8px; }
+  .hero-card-stack { max-width: 320px; }
+  .hero-float-card { display: none; }
+  .hero-sunburst, .sunburst-1 { width: 480px; height: 480px; }
+  .sunburst-2 { width: 380px; height: 380px; }
   .scroll-indicator { display: none; }
 
   .section-header { flex-direction: column; align-items: flex-start; }

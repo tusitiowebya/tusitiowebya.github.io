@@ -1,469 +1,346 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Digitaliza tu negocio hoy mismo. Creamos paginas web profesionales por suscripcion mensual con dominio, soporte y actualizaciones incluidas.">
-  <meta name="theme-color" content="#0f0f2e">
-  <title>TuPaginaYa - Hacemos tu pagina web desde $10.000/mes</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>TuPaginaYa · Estudio de diseño web + app de cobros CobrOS · Argentina</title>
+<meta name="description" content="Hacemos tu página web profesional y la ponemos online en 48 horas, con app de catálogo y cobros CobrOS. Dominio, hosting, soporte y actualizaciones incluidas. Plan web + catálogo $27.000/mes." />
+<meta name="theme-color" content="#1B1A18" />
+<meta name="author" content="TuPaginaYa" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://tupaginaya.com.ar/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TuPaginaYa · Tu negocio online en 48 horas, y cobrando desde el día uno" />
+<meta property="og:description" content="Diseño web profesional + app de catálogo y cobros CobrOS. 27 negocios ya están online con nosotros." />
+<meta property="og:url" content="https://tupaginaya.com.ar/" />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:site_name" content="TuPaginaYa" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TuPaginaYa · Diseño web + cobros CobrOS" />
+<meta name="twitter:description" content="Tu negocio online en 48 horas. 27 marcas ya confían en nosotros." />
+
+<link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body id="top">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <button class="navbar-logo" aria-label="Ir al inicio">
-        Tu<span>Pagina</span>Ya
-      </button>
-
-      <!-- Desktop Links -->
-      <div class="navbar-links">
-        <a href="#planes">Planes</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#demo">Demo</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="navbar-cta">WhatsApp</a>
-      </div>
-
-      <!-- Hamburger -->
-      <button class="hamburger" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="TuPaginaYa inicio">
+      <span class="seal">T</span><span>Tu<i>Pagina</i>Ya</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#cobros">CobrOS</a>
       <a href="#planes">Planes</a>
-      <a href="#beneficios">Beneficios</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#demo">Demo</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="navbar-cta" style="text-align:center;">WhatsApp</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="https://wa.me/5491126966153" target="_blank" rel="noopener" class="nav-cta">Pedir mi demo</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+  <a href="#proceso">Cómo funciona</a>
+  <a href="#cobros">CobrOS</a>
+  <a href="#planes">Planes</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="https://wa.me/5491126966153" target="_blank" rel="noopener">Pedir mi demo</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto"
+         poster="https://images.pexels.com/videos/11274341/code-css-html-javascript-11274341.jpeg?auto=compress&cs=tinysrgb&w=1280">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <div class="hero-grid">
+    <span class="eyebrow on-dark hero-eyebrow">Estudio de diseño web · Argentina</span>
+    <h1 class="hero-title">Tu negocio <span class="ul">online</span> en 48 horas. Y <em>cobrando</em> desde el día uno.</h1>
+    <p class="hero-lead">Diseñamos tu página, la publicamos con dominio propio y le sumamos <strong>CobrOS</strong>: la app donde mostrás tu catálogo y cobrás. Vos atendés; de lo técnico nos ocupamos nosotros.</p>
+    <div class="hero-actions">
+      <a href="#planes" class="btn btn-primary">Ver planes y precios</a>
+      <a href="#trabajos" class="btn btn-ghost">Ver los trabajos</a>
     </div>
-  </nav>
+    <p class="hero-mini"><span class="dot"></span> 27 negocios online ahora mismo · actualizado hoy</p>
+  </div>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section id="hero" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-glow-1"></div>
-    <div class="hero-glow-2"></div>
-    <div class="hero-glow-3"></div>
+  <!-- vidriera: muro de sitios reales -->
+  <div class="showroom" aria-label="Sitios reales que diseñamos">
+    <div class="track" id="track1"></div>
+    <div class="track rev" id="track2"></div>
+  </div>
+</section>
 
-    <div class="hero-content">
-      <div class="hero-badge">Desarrollo web profesional</div>
+<!-- ===================== STATS BAND ===================== -->
+<div class="band">
+  <div class="band-inner">
+    <div class="band-item"><span class="band-num">27</span><span class="band-label">Negocios online</span></div>
+    <div class="band-item"><span class="band-num">48 h</span><span class="band-label">Promedio de entrega</span></div>
+    <div class="band-item"><span class="band-num">100%</span><span class="band-label">Adaptado a celular</span></div>
+    <div class="band-item"><span class="band-num">24/7</span><span class="band-label">Soporte y hosting</span></div>
+  </div>
+</div>
 
-      <h1>
-        Hacemos tu pagina web <span class="gradient-text">desde $10.000</span> por mes
-      </h1>
-
-      <p>Digitaliza tu negocio hoy mismo. Paginas web profesionales con dominio, soporte y actualizaciones incluidas.</p>
-
-      <div class="hero-buttons">
-        <a href="#planes" class="btn-primary">Ver Planes</a>
-        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:#25d366">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Contactar por WhatsApp
-        </a>
-      </div>
-
-      <div class="scroll-indicator">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a0a0c0" stroke-width="2">
-          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-        </svg>
-      </div>
+<!-- ===================== PROCESO ===================== -->
+<section class="section section-sand" id="proceso">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>De la idea a estar online, en tres pasos.</h2>
+      <p>Sin vueltas técnicas ni reuniones eternas. Nos contás de tu negocio y nosotros nos encargamos del resto.</p>
     </div>
-  </section>
-
-  <!-- ========== PLANES SECTION ========== -->
-  <section id="planes" class="section">
-    <div class="section-bg section-bg-gradient"></div>
-    <div class="section-inner section-inner-md reveal">
-      <div class="section-header">
-        <h2>Nuestros <span class="gradient-blue">Planes</span></h2>
-        <p>Elegi el plan que mejor se adapte a tu negocio. Todos incluyen hosting y mantenimiento.</p>
-      </div>
-
-      <div class="plans-grid">
-        <!-- Plan Basico -->
-        <div class="plan-card">
-          <h3>Plan Basico</h3>
-          <div class="plan-price">
-            <span class="amount">$10.000</span>
-            <span class="period"> / mes</span>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Dominio .com.ar
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Diseno basico
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              WhatsApp integrado
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              1 actualizacion mensual
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Soporte por mail
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              1 correo corporativo
-            </li>
-          </ul>
-          <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="plan-btn plan-btn-outline">Elegir Plan</a>
-        </div>
-
-        <!-- Plan Profesional (Highlighted) -->
-        <div class="plan-card highlighted">
-          <div class="plan-badge">Mas elegido</div>
-          <h3>Plan Profesional</h3>
-          <div class="plan-price">
-            <span class="amount">$15.000</span>
-            <span class="period"> / mes</span>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Dominio .com.ar
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Diseno optimizado
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              WhatsApp integrado
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Soporte 24/7
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              5 actualizaciones mensuales
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              2 correos corporativos
-            </li>
-          </ul>
-          <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="plan-btn plan-btn-filled">Elegir Plan</a>
-        </div>
-
-        <!-- Plan Empresarial -->
-        <div class="plan-card">
-          <h3>Plan Empresarial</h3>
-          <div class="plan-price">
-            <span class="amount">$25.000</span>
-            <span class="period"> / mes</span>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Dominio .com
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Diseno optimizado
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              WhatsApp integrado
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              Soporte dedicado 24/7
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              10 actualizaciones mensuales
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-              3 correos corporativos
-            </li>
-          </ul>
-          <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="plan-btn plan-btn-outline">Elegir Plan</a>
-        </div>
-      </div>
-
-      <!-- Extra info -->
-      <div class="plans-extra">
-        <div class="plans-extra-item">
-          <span class="price">$50.000</span>
-          <p>Activacion unica</p>
-        </div>
-        <div class="plans-extra-divider"></div>
-        <div class="plans-extra-item">
-          <span class="price">$75.000</span>
-          <p>Con tienda online</p>
-        </div>
-      </div>
+    <div class="steps">
+      <article class="step reveal">
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <span class="step-num">PASO 01</span>
+        <h3>Contanos tu negocio</h3>
+        <p>Por WhatsApp nos pasás qué hacés, tus productos y tu logo. Diez minutos y listo.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <span class="step-num">PASO 02</span>
+        <h3>Armamos tu demo</h3>
+        <p>Diseñamos una página a medida de tu rubro y te la mostramos antes de pagar nada.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <span class="step-num">PASO 03</span>
+        <h3>Sale online en 48 hs</h3>
+        <p>Aprobás, activamos tu dominio y publicamos. Tu negocio empieza a aparecer en Google.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <span class="step-num">PASO 04</span>
+        <h3>Empezás a cobrar</h3>
+        <p>Sumás CobrOS y mostrás tu catálogo con cobros incluidos. Todo en un mismo lugar.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== BENEFICIOS SECTION ========== -->
-  <section id="beneficios" class="section">
-    <div class="section-bg section-bg-solid"></div>
-    <div class="section-divider"></div>
-    <div class="section-inner section-inner-md reveal">
-      <div class="section-header">
-        <h2>Por que <span class="gradient-orange">elegirnos</span></h2>
-        <p>Nos destacamos por la velocidad, calidad y compromiso con cada proyecto.</p>
+<!-- ===================== COBROS ===================== -->
+<section class="section section-dark" id="cobros">
+  <div class="wrap">
+    <div class="cobros-grid">
+      <div class="cobros-copy reveal">
+        <span class="eyebrow">App de catálogo y cobros</span>
+        <h2>CobrOS: tu catálogo y tus cobros, en una sola app.</h2>
+        <p>El complemento ideal de tu web. Cargás tus productos o servicios, los compartís por un link y recibís los pagos sin papeles ni planillas.</p>
+        <div class="feat-list">
+          <div class="feat">
+            <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <div><b>Catálogo digital</b><span>Productos y precios siempre al día, listos para compartir.</span></div>
+          </div>
+          <div class="feat">
+            <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+            <div><b>Cobros integrados</b><span>Generás el cobro y tu cliente paga desde el mismo link.</span></div>
+          </div>
+          <div class="feat">
+            <span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+            <div><b>Ventas a la vista</b><span>Qué se vendió y qué falta cobrar, sin abrir una planilla.</span></div>
+          </div>
+          <div class="feat">
+            <span class="feat-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></span>
+            <div><b>Pedidos por WhatsApp</b><span>Tu cliente arma el pedido y te llega directo al chat.</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20saber%20m%C3%A1s%20sobre%20CobrOS" target="_blank" rel="noopener" class="btn btn-primary">Quiero CobrOS</a>
       </div>
 
-      <div class="benefits-grid">
-        <!-- Entrega en 48hs -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3>Entrega en 48 horas</h3>
-          <p>Tu sitio web listo en tiempo record. Nos comprometemos a entregarte tu pagina en 48 horas.</p>
-        </div>
-
-        <!-- Diseno profesional -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-          </div>
-          <h3>Diseno profesional</h3>
-          <p>Sitios web modernos y atractivos que representan la calidad de tu negocio.</p>
-        </div>
-
-        <!-- Soporte continuo -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <h3>Soporte continuo</h3>
-          <p>Estamos siempre disponibles para ayudarte con lo que necesites.</p>
-        </div>
-
-        <!-- Adaptable a celular -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-              <line x1="12" y1="18" x2="12.01" y2="18"/>
-            </svg>
-          </div>
-          <h3>Adaptable a celular</h3>
-          <p>Tu pagina se vera perfecta en cualquier dispositivo, desde celulares hasta computadoras.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PORTFOLIO SECTION ========== -->
-  <section id="portfolio" class="section">
-    <div class="section-bg section-bg-gradient"></div>
-    <div class="section-divider section-divider-violet"></div>
-    <div class="section-inner section-inner-md reveal">
-      <div class="section-header">
-        <h2>Nuestros <span class="gradient-violet">Trabajos</span></h2>
-        <p>Algunos de los proyectos que realizamos para nuestros clientes.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <!-- Estudio Juridico -->
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="images/grupojv.png" alt="FOTO DE PAGINA WEB GRUPO JV">
-            <div class="portfolio-image-overlay"></div>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-category">Sitio corporativo</span>
-            <h3>Grupo JV</h3>
-            <button class="portfolio-btn">Ver demo</button>
+      <!-- phone mock -->
+      <div class="reveal">
+        <div class="phone" role="img" aria-label="Pantalla de la app CobrOS mostrando un catálogo con botón de cobro">
+          <div class="phone-screen">
+            <div class="ph-top">
+              <div><b>Mi Catálogo</b></div>
+              <span class="ph-bal">CobrOS</span>
+            </div>
+            <div class="ph-items">
+              <div class="ph-item"><span class="ph-thumb">🧁</span><span class="n">Docena pastelitos</span><span class="p">$6.500</span></div>
+              <div class="ph-item"><span class="ph-thumb">☕</span><span class="n">Café + medialuna</span><span class="p">$2.300</span></div>
+              <div class="ph-item"><span class="ph-thumb">🎂</span><span class="n">Torta a pedido</span><span class="p">$18.000</span></div>
+              <div class="ph-item"><span class="ph-thumb">📦</span><span class="n">Combo desayuno</span><span class="p">$9.900</span></div>
+            </div>
+            <div class="ph-pay">Cobrar pedido · $36.700</div>
           </div>
         </div>
-
-        <!-- Gym PowerFit -->
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="images/alarmasargentinas.png" alt="Mockup de Gym PowerFit">
-            <div class="portfolio-image-overlay"></div>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-category">Sitio de servicios de alarmas</span>
-            <h3>AlarmasArgentinas</h3>
-            <button class="portfolio-btn">Ver demo</button>
-          </div>
-        </div>
-
-        <!-- Tienda Urbana Store -->
-        <div class="portfolio-card">
-          <div class="portfolio-image">
-            <img src="images/mockup-tienda.jpg" alt="Mockup de Tienda Urbana Store">
-            <div class="portfolio-image-overlay"></div>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-category">E-commerce</span>
-            <h3>Tienda Urbana Store</h3>
-            <button class="portfolio-btn">Ver demo</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== MODAL ========== -->
-  <div id="modal-overlay" class="modal-overlay">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Cerrar modal">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-      <div class="modal-image">
-        <img id="modal-image" src="" alt="">
-      </div>
-      <div class="modal-body">
-        <span class="portfolio-category" id="modal-category"></span>
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="modal-cta">Quiero algo similar</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ========== DEMO FORM SECTION ========== -->
-  <section id="demo" class="section">
-    <div class="section-bg section-bg-solid"></div>
-    <div class="section-divider"></div>
-    <div class="section-inner section-inner-sm reveal">
-      <div class="section-header">
-        <h2>Pedi tu <span class="gradient-orange">demo personalizada</span></h2>
-        <p>Completa el formulario y te armamos una demo gratuita de tu sitio web.</p>
+<!-- ===================== PLANES / RECIBO ===================== -->
+<section class="section section-paper" id="planes">
+  <div class="wrap">
+    <div class="planes-head reveal">
+      <span class="eyebrow">Planes y precios</span>
+      <h2>Elegí cómo querés arrancar.</h2>
+      <p>Web profesional con dominio y soporte. Sumá CobrOS y agregale catálogo + cobros. Precio claro, sin permanencia.</p>
+    </div>
+
+    <div class="plans reveal">
+      <!-- Plan Profesional -->
+      <article class="plan">
+        <h3 class="plan-name">Plan Profesional</h3>
+        <p class="plan-desc">Tu página lista para vender.</p>
+        <div class="plan-price"><span class="amt">$17.000</span><span class="per">/ mes</span></div>
+        <ul class="plan-feats">
+          <li>Dominio .com.ar + hosting</li>
+          <li>Diseño a medida de tu rubro</li>
+          <li>WhatsApp y redes integrados</li>
+          <li>Soporte 24/7</li>
+          <li>5 actualizaciones mensuales</li>
+          <li>2 correos corporativos</li>
+        </ul>
+        <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20el%20Plan%20Profesional%20(%2417.000%2Fmes)" target="_blank" rel="noopener" class="plan-cta">Elegir plan</a>
+      </article>
+
+      <!-- Plan Web + Catálogo (recomendado) -->
+      <article class="plan plan-pop">
+        <span class="plan-badge">★ Más elegido</span>
+        <h3 class="plan-name">Web + Catálogo</h3>
+        <p class="plan-desc">Todo lo del Profesional, más la app CobrOS.</p>
+        <div class="plan-price"><span class="amt">$27.000</span><span class="per">/ mes</span></div>
+        <ul class="plan-feats">
+          <li>Todo lo del <b>Plan Profesional</b></li>
+          <li><b>App CobrOS</b>: catálogo digital</li>
+          <li>Cobros integrados desde el link</li>
+          <li>Pedidos directos por WhatsApp</li>
+          <li>Ventas y pendientes a la vista</li>
+          <li>Catálogo siempre actualizado</li>
+        </ul>
+        <a href="https://wa.me/5491126966153?text=Hola%20TuPaginaYa!%20Quiero%20el%20plan%20Web%20%2B%20Cat%C3%A1logo%20CobrOS%20(%2427.000%2Fmes)" target="_blank" rel="noopener" class="plan-cta plan-cta-grad">Elegir plan</a>
+        <div class="plan-split"><b>Web $15.000</b> + <b>CobrOS $12.000</b></div>
+      </article>
+    </div>
+
+    <p class="plan-activation reveal"><span class="big">Activación única $50.000</span> — se paga una sola vez, al publicar. Incluye dominio, hosting, soporte y actualizaciones. <b>Sin permanencia.</b></p>
+  </div>
+</section>
+
+<!-- ===================== TRABAJOS ===================== -->
+<section class="section section-sand" id="trabajos">
+  <div class="wrap">
+    <div class="work-head reveal">
+      <div class="s-head" style="margin-bottom:0">
+        <span class="eyebrow">Trabajos reales</span>
+        <h2>27 negocios ya están online con nosotros.</h2>
+        <p>Sitios reales, en vivo hoy mismo. Tocá cualquiera para ver el detalle y entrar al sitio.</p>
       </div>
+    </div>
+    <div class="filters reveal" id="filters" role="group" aria-label="Filtrar por rubro">
+      <button class="chip active" data-filter="all">Todos</button>
+      <button class="chip" data-filter="servicios">Servicios</button>
+      <button class="chip" data-filter="comercio">Comercio</button>
+      <button class="chip" data-filter="eventos">Eventos &amp; Turismo</button>
+      <button class="chip" data-filter="salud">Salud &amp; Coaching</button>
+      <button class="chip" data-filter="instituciones">Instituciones</button>
+    </div>
+    <div class="work-grid" id="workGrid"></div>
+  </div>
+</section>
 
-      <form id="demo-form" class="demo-form" novalidate>
-        <div class="form-group">
-          <label for="nombre">Nombre y Logo</label>
-          <input type="text" id="nombre" placeholder="Ej: Mi Empresa S.A.">
-          <p class="form-error"></p>
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-back" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal-shot"><img id="mImg" src="" alt="" /></div>
+    <div class="modal-body">
+      <span class="modal-cat" id="mCat"></span>
+      <h3 class="modal-title" id="mTitle"></h3>
+      <p class="modal-domain" id="mDomain"></p>
+      <p class="modal-text" id="mText"></p>
+      <ul class="modal-feats" id="mFeats"></ul>
+      <div class="modal-actions">
+        <a id="mLink" href="#" target="_blank" rel="noopener" class="btn btn-pine">Visitar el sitio →</a>
+        <a href="https://wa.me/5491126966153?text=Hola!%20Quiero%20una%20web%20como%20esta" target="_blank" rel="noopener" class="btn btn-ghost" style="color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)">Quiero una así</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DEMO FORM ===================== -->
+<section class="section section-dark" id="demo">
+  <div class="wrap">
+    <div class="demo-grid">
+      <div class="demo-copy reveal">
+        <span class="eyebrow">Demo gratis</span>
+        <h2>Pedí tu demo. La hacemos antes de que pagues nada.</h2>
+        <p>Contanos lo básico de tu negocio y te armamos una primera versión de tu sitio para que la veas.</p>
+        <p class="hint">→ Respondemos por WhatsApp en el día</p>
+      </div>
+      <form class="demo-form reveal" id="demoForm" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre del negocio</label>
+          <input type="text" id="nombre" placeholder="Ej: Panadería La Esquina" />
+          <p class="err"></p>
         </div>
-
-        <div class="form-group">
-          <label for="descripcion">Descripcion de la empresa</label>
-          <textarea id="descripcion" rows="3" placeholder="Contanos sobre tu negocio..."></textarea>
-          <p class="form-error"></p>
+        <div class="field">
+          <label for="rubro">¿A qué se dedica?</label>
+          <input type="text" id="rubro" placeholder="Ej: Panadería y cafetería" />
+          <p class="err"></p>
         </div>
-
-        <div class="form-group">
+        <div class="field">
           <label for="productos">Productos o servicios</label>
-          <textarea id="productos" rows="3" placeholder="Que productos o servicios ofreces?"></textarea>
-          <p class="form-error"></p>
+          <textarea id="productos" rows="3" placeholder="Contanos qué ofrecés..."></textarea>
+          <p class="err"></p>
         </div>
-
-        <div class="form-group">
-          <label for="whatsapp">Numero de WhatsApp</label>
-          <input type="tel" id="whatsapp" placeholder="Ej: +54 9 11 2696-6153">
-          <p class="form-error"></p>
+        <div class="field">
+          <label for="whatsapp">Tu WhatsApp</label>
+          <input type="tel" id="whatsapp" placeholder="Ej: +54 9 11 2696-6153" />
+          <p class="err"></p>
         </div>
-
-        <div class="form-group">
-          <label for="redes">Redes sociales</label>
-          <input type="text" id="redes" placeholder="Ej: @miempresa en Instagram">
-          <p class="form-error"></p>
-        </div>
-
-        <button type="submit" class="form-submit">Enviar Solicitud</button>
+        <button type="submit" class="btn">Enviar y pedir mi demo</button>
       </form>
-
-      <!-- Success Message (hidden by default) -->
-      <div id="success-message" class="success-message" style="display:none;">
-        <div class="success-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="2">
-            <path d="M20 6L9 17l-5-5"/>
-          </svg>
-        </div>
-        <h3>Solicitud enviada</h3>
-        <p>Nos pondremos en contacto con vos por WhatsApp en las proximas horas. Gracias por confiar en TuPaginaYa.</p>
+      <div class="demo-form demo-success reveal" id="demoOk" style="display:none">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>¡Solicitud enviada!</h3>
+        <p>Te escribimos por WhatsApp en las próximas horas para mostrarte tu demo. Gracias por elegir TuPaginaYa.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== CONTACTO SECTION ========== -->
-  <section id="contacto" class="section">
-    <div class="section-bg section-bg-gradient"></div>
-    <div class="section-divider section-divider-violet"></div>
-    <div class="section-inner section-inner-sm reveal" style="text-align:center;">
-      <div class="section-header">
-        <h2>Contacto <span class="gradient-blue">rapido</span></h2>
-        <p>Estamos listos para ayudarte a digitalizar tu negocio.</p>
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="seal">T</span><span>Tu<i>Pagina</i>Ya</span></a>
+        <p>Estudio de diseño web argentino. Ponemos tu negocio online y te damos las herramientas para cobrar.</p>
       </div>
-
-      <div style="display:flex;justify-content:center;">
-        <div class="contact-phone">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          <span>1126966153</span>
-        </div>
-      </div>
-
-      <div class="contact-buttons">
-        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          WhatsApp
-        </a>
-        <a href="https://wa.me/5491126966153?text=Hola%2C%20quiero%20agendar%20una%20llamada" target="_blank" rel="noopener noreferrer" class="btn-schedule">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a6cf7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-            <line x1="16" y1="2" x2="16" y2="6"/>
-            <line x1="8" y1="2" x2="8" y2="6"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-          Agendar llamada
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>2026 TuPaginaYa. Todos los derechos reservados.</p>
-      <div class="footer-links">
-        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <div>
+        <h4>Producto</h4>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#cobros">App CobrOS</a>
         <a href="#planes">Planes</a>
-        <a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Mirá</h4>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#demo">Pedir demo</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491126966153" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+5491126966153">11 2696-6153</a>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> TuPaginaYa</span>
+      <span>Hecho en Argentina ✦ con dedicación</span>
+    </div>
+  </div>
+</footer>
 
-  <!-- ========== WHATSAPP FLOTANTE ========== -->
-  <a href="https://wa.me/5491126966153" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
+<a href="https://wa.me/5491126966153" target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
