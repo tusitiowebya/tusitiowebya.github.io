@@ -21,7 +21,7 @@
     });
   }
 
-  var targets = document.querySelectorAll('.head, .serv-card, .gal-i, .compromiso-photo, .compromiso-text, .why, .cta-in');
+  var targets = document.querySelectorAll('.head, .serv-card, .video-text, .video-frame, .gal-i, .compromiso-photo, .compromiso-text, .why, .cta-in');
   targets.forEach(function (el) { el.classList.add('rev'); });
 
   if ('IntersectionObserver' in window) {
