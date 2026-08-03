@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "demorecymack",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8772", "--directory", "demorecymack"],
+      "port": 8772
+    },
+    {
       "name": "demotet",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8787", "--directory", "demotet"],

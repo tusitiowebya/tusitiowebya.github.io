@@ -208,52 +208,84 @@
     <div class="head">
       <p class="kicker light"><i></i>Nuestros viajes</p>
       <h2>Así se ve la Puna<br>desde nuestros vehículos</h2>
-      <p class="head-lead">Videos reales de nuestros circuitos. Tocá cualquiera para reproducirlo.</p>
+      <p class="head-lead">Videos reales de nuestros circuitos. Tocá cualquiera para verlo en pantalla completa.</p>
     </div>
-    <div class="vid-grid">
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/campo-piedra-pomez.jpg"><source src="videos/campo-piedra-pomez.mp4" type="video/mp4"></video>
-        <figcaption>Campo de Piedra Pómez <span>Circuito completo</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/salar-antofalla.jpg"><source src="videos/salar-antofalla.mp4" type="video/mp4"></video>
-        <figcaption>Salar de Antofalla <span>Excursión</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/volcan-galan.jpg"><source src="videos/volcan-galan.mp4" type="video/mp4"></video>
-        <figcaption>Volcán Galán <span>Fumarolas y caldera</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/lagunas-altoandinas.jpg"><source src="videos/lagunas-altoandinas.mp4" type="video/mp4"></video>
-        <figcaption>Lagunas altoandinas <span>Celeste, Negra y Los Aparejos</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/mirador-miruhuaca.jpg"><source src="videos/mirador-miruhuaca.mp4" type="video/mp4"></video>
-        <figcaption>Mirador Miruhuaca <span>Antofagasta de la Sierra</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/canon-real-grande.jpg"><source src="videos/canon-real-grande.mp4" type="video/mp4"></video>
-        <figcaption>Cañón de Real Grande <span>Antofagasta de la Sierra</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/duna-magica.jpg"><source src="videos/duna-magica.mp4" type="video/mp4"></video>
-        <figcaption>Duna Mágica <span>Circuito de dunas</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/dunas-negras.jpg"><source src="videos/dunas-negras.mp4" type="video/mp4"></video>
-        <figcaption>Dunas Negras <span>Circuito de dunas</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/dunas-taton.jpg"><source src="videos/dunas-taton.mp4" type="video/mp4"></video>
-        <figcaption>Dunas de Tatón <span>Fiambalá, Catamarca</span></figcaption>
-      </figure>
-      <figure class="vid-card">
-        <video controls preload="none" playsinline poster="videos/portadas/guias-primeros-auxilios.jpg"><source src="videos/guias-primeros-auxilios.mp4" type="video/mp4"></video>
-        <figcaption>Guías expertos <span>Primeros auxilios en ruta</span></figcaption>
-      </figure>
+    <div class="gal" id="gal">
+      <button class="gal-item is-wide" type="button" data-src="videos/campo-piedra-pomez.mp4" data-poster="videos/portadas/campo-piedra-pomez.jpg" data-titulo="Campo de Piedra Pómez" data-sub="Circuito completo">
+        <img src="videos/portadas/campo-piedra-pomez.jpg" alt="Campo de Piedra Pómez, circuito completo" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Campo de Piedra Pómez</b><i>Circuito completo</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/salar-antofalla.mp4" data-poster="videos/portadas/salar-antofalla.jpg" data-titulo="Salar de Antofalla" data-sub="Excursión">
+        <img src="videos/portadas/salar-antofalla.jpg" alt="Excursión al Salar de Antofalla" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Salar de Antofalla</b><i>Excursión</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/volcan-galan.mp4" data-poster="videos/portadas/volcan-galan.jpg" data-titulo="Volcán Galán" data-sub="Fumarolas y caldera">
+        <img src="videos/portadas/volcan-galan.jpg" alt="Fumarolas y caldera del Volcán Galán" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Volcán Galán</b><i>Fumarolas y caldera</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/lagunas-altoandinas.mp4" data-poster="videos/portadas/lagunas-altoandinas.jpg" data-titulo="Lagunas altoandinas" data-sub="Celeste, Negra y Los Aparejos">
+        <img src="videos/portadas/lagunas-altoandinas.jpg" alt="Lagunas altoandinas: Celeste, Negra y Los Aparejos" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Lagunas altoandinas</b><i>Celeste, Negra y Los Aparejos</i></span>
+      </button>
+      <button class="gal-item is-tall" type="button" data-src="videos/mirador-miruhuaca.mp4" data-poster="videos/portadas/mirador-miruhuaca.jpg" data-titulo="Mirador Miruhuaca" data-sub="Antofagasta de la Sierra">
+        <img src="videos/portadas/mirador-miruhuaca.jpg" alt="Mirador Miruhuaca, Antofagasta de la Sierra" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Mirador Miruhuaca</b><i>Antofagasta de la Sierra</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/canon-real-grande.mp4" data-poster="videos/portadas/canon-real-grande.jpg" data-titulo="Cañón de Real Grande" data-sub="Antofagasta de la Sierra">
+        <img src="videos/portadas/canon-real-grande.jpg" alt="Cañón de Real Grande en 4x4" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Cañón de Real Grande</b><i>Antofagasta de la Sierra</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/duna-magica.mp4" data-poster="videos/portadas/duna-magica.jpg" data-titulo="Duna Mágica" data-sub="Circuito de dunas">
+        <img src="videos/portadas/duna-magica.jpg" alt="Duna Mágica, circuito de dunas" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Duna Mágica</b><i>Circuito de dunas</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/dunas-negras.mp4" data-poster="videos/portadas/dunas-negras.jpg" data-titulo="Dunas Negras" data-sub="Circuito de dunas">
+        <img src="videos/portadas/dunas-negras.jpg" alt="Dunas Negras, circuito de dunas" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Dunas Negras</b><i>Circuito de dunas</i></span>
+      </button>
+      <button class="gal-item" type="button" data-src="videos/dunas-taton.mp4" data-poster="videos/portadas/dunas-taton.jpg" data-titulo="Dunas de Tatón" data-sub="Fiambalá, Catamarca">
+        <img src="videos/portadas/dunas-taton.jpg" alt="Dunas de Tatón, Fiambalá, Catamarca" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Dunas de Tatón</b><i>Fiambalá, Catamarca</i></span>
+      </button>
+      <button class="gal-item is-wide" type="button" data-src="videos/guias-primeros-auxilios.mp4" data-poster="videos/portadas/guias-primeros-auxilios.jpg" data-titulo="Guías expertos" data-sub="Primeros auxilios en ruta">
+        <img src="videos/portadas/guias-primeros-auxilios.jpg" alt="Guías expertos asistiendo en ruta, camino al Volcán Galán" loading="lazy"/>
+        <span class="gal-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg></span>
+        <span class="gal-cap"><b>Guías expertos</b><i>Primeros auxilios en ruta</i></span>
+      </button>
     </div>
   </div>
 </section>
+
+<!-- ===================== VISOR DE VIDEO ===================== -->
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Reproductor de video" hidden>
+  <div class="visor-fondo" data-cerrar></div>
+  <button class="visor-x" type="button" aria-label="Cerrar" data-cerrar>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="visor-nav visor-prev" type="button" aria-label="Video anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <figure class="visor-in">
+    <video id="visorVid" controls playsinline preload="auto"></video>
+    <figcaption>
+      <b id="visorTitulo"></b>
+      <i id="visorSub"></i>
+      <span class="visor-n" id="visorN"></span>
+    </figcaption>
+  </figure>
+  <button class="visor-nav visor-next" type="button" aria-label="Video siguiente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
 
 <!-- ===================== BAND (laguna) ===================== -->
 <section class="band">
