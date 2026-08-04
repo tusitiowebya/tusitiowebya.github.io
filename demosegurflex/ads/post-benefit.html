@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{width:1080px;height:1080px;overflow:hidden;font-family:'Manrope',sans-serif;position:relative;background:#F7F4EC;}
+.bg{position:absolute;inset:0;background:
+  radial-gradient(620px 500px at 100% 0%, rgba(30,122,98,.14), transparent 60%),
+  radial-gradient(600px 460px at 0% 100%, rgba(232,163,61,.16), transparent 60%);}
+.brand{position:absolute;top:56px;left:64px;display:flex;align-items:center;gap:10px;}
+.brand span{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:#0E3B34;}
+.content{position:relative;z-index:2;padding:200px 64px 64px;}
+.eyebrow{display:inline-block;font-weight:800;font-size:16px;letter-spacing:.14em;color:#1E7A62;margin-bottom:22px;}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:58px;line-height:1.1;color:#0E3B34;margin-bottom:44px;max-width:880px;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:50px;}
+.card{background:#fff;border:1px solid rgba(16,32,28,.1);border-radius:20px;padding:28px 30px;}
+.card .n{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#E8A33D;font-size:17px;}
+.card h3{font-family:'Space Grotesk',sans-serif;font-size:23px;color:#0E3B34;margin:8px 0 6px;}
+.card p{font-size:16px;color:#3C4A45;line-height:1.4;}
+.cta{display:inline-flex;align-items:center;gap:10px;background:#0E3B34;color:#fff;font-weight:800;font-size:24px;
+  padding:22px 42px;border-radius:100px;font-family:'Manrope',sans-serif;}
+</style></head>
+<body>
+<div class="bg"></div>
+<div class="brand">
+  <svg width="34" height="38" viewBox="0 0 44 50"><path d="M22 1 L42 9 V23 C42 37 33 46 22 49 C11 46 2 37 2 23 V9 Z" fill="none" stroke="#E8A33D" stroke-width="2.6"/><path d="M14 25 L20 31 L31 18" fill="none" stroke="#E8A33D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span>Segurflex</span>
+</div>
+<div class="content">
+  <span class="eyebrow">— POR QUÉ ELEGIRNOS —</span>
+  <h1>Seguros, sin la letra chica del mal asesoramiento.</h1>
+  <div class="grid">
+    <div class="card"><span class="n">01</span><h3>Comparación real</h3><p>Cotizamos entre varias aseguradoras, no vendemos una sola marca.</p></div>
+    <div class="card"><span class="n">02</span><h3>Respuesta rápida</h3><p>Te contactamos el mismo día que llega tu cotización.</p></div>
+    <div class="card"><span class="n">03</span><h3>Trato personal</h3><p>Nada de bots: te asesora una persona, por WhatsApp.</p></div>
+    <div class="card"><span class="n">04</span><h3>Sin costo de cotizar</h3><p>Pedir tu cotización no tiene cargo ni compromiso.</p></div>
+  </div>
+  <div class="cta">Quiero mi cotización →</div>
+</div>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{width:1080px;height:1920px;overflow:hidden;font-family:'Manrope',sans-serif;position:relative;background:#0A2B26;}
+.photo{position:absolute;inset:0;background:url('../images/moto.jpg') center 30%/cover;}
+.overlay{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(10,43,38,.5) 0%, rgba(10,43,38,.35) 30%, rgba(10,43,38,.96) 70%, #0A2B26 100%);}
+.noise{position:absolute;inset:0;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.brand{position:absolute;top:96px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:12px;z-index:3;}
+.brand span{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:38px;color:#fff;}
+.content{position:absolute;left:0;right:0;bottom:220px;padding:0 74px;z-index:2;text-align:center;}
+.eyebrow{display:inline-block;font-weight:800;font-size:19px;letter-spacing:.14em;color:#F4C77A;margin-bottom:30px;}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:78px;line-height:1.08;color:#fff;margin-bottom:28px;}
+h1 span{color:#F4C77A;}
+p{font-size:28px;color:rgba(255,255,255,.85);line-height:1.5;margin-bottom:50px;}
+.cta{display:inline-flex;align-items:center;gap:12px;background:#E8A33D;color:#0A2B26;font-weight:800;font-size:30px;
+  padding:28px 56px;border-radius:100px;font-family:'Manrope',sans-serif;}
+.swipe{position:absolute;bottom:80px;left:0;right:0;text-align:center;z-index:3;color:rgba(255,255,255,.75);font-size:20px;font-weight:700;letter-spacing:.04em;}
+.tags{display:flex;gap:14px;justify-content:center;margin-top:34px;}
+.tags span{font-size:19px;font-weight:700;color:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.35);padding:12px 24px;border-radius:100px;}
+</style></head>
+<body>
+<div class="photo"></div>
+<div class="overlay"></div>
+<div class="noise"></div>
+<div class="brand">
+  <svg width="42" height="47" viewBox="0 0 44 50"><path d="M22 1 L42 9 V23 C42 37 33 46 22 49 C11 46 2 37 2 23 V9 Z" fill="none" stroke="#E8A33D" stroke-width="2.6"/><path d="M14 25 L20 31 L31 18" fill="none" stroke="#E8A33D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span>Segurflex</span>
+</div>
+<div class="content">
+  <span class="eyebrow">— PROTECCIÓN 100% ONLINE —</span>
+  <h1>Tu seguro,<br>cotizado en<br><span>minutos</span>.</h1>
+  <p>Auto · Moto · Hogar · Comercio.<br>Sin filas ni vueltas.</p>
+  <div class="cta">Cotizar ahora</div>
+  <div class="tags"><span>Auto</span><span>Moto</span><span>Hogar</span></div>
+</div>
+<div class="swipe">↑ DESLIZÁ PARA COTIZAR</div>
+</body></html>
