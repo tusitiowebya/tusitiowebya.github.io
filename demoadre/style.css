@@ -115,7 +115,8 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 /* ═══════════ HERO ═══════════ */
 .hero{
   position:relative;min-height:100dvh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding-top:120px;padding-bottom:0;overflow:hidden;background:var(--green-deep);
+  justify-content:flex-end;padding-top:120px;padding-bottom:clamp(26px,4vh,52px);
+  overflow:hidden;background:var(--green-deep);
 }
 .hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero__veil{
@@ -141,7 +142,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 /* ── buscador (signature) ── */
 .finder{
   position:relative;z-index:3;width:min(1220px,100% - var(--pad)*2);
-  margin:0 auto;transform:translateY(38px);
+  margin:0 auto;
   background:var(--white);border-radius:var(--r);
   box-shadow:0 40px 80px -40px rgba(7,43,27,.6),0 2px 0 rgba(255,255,255,.6) inset;
   overflow:hidden;
@@ -179,7 +180,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 .finder__hint b{color:var(--ink);font-weight:600}
 
 /* ═══════════ NÚMEROS ═══════════ */
-.facts{background:var(--paper);padding:clamp(74px,9vw,110px) 0 clamp(40px,5vw,60px)}
+.facts{background:var(--paper);padding:clamp(52px,6.5vw,84px) 0 clamp(40px,5vw,60px)}
 .facts__in{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,40px)}
 .fact{border-top:3px solid var(--green);padding-top:1rem}
 .fact strong{
@@ -343,7 +344,6 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
   .burger{display:flex}
   .nav__mobile{display:flex}
   .hero{min-height:auto;padding-top:104px}
-  .finder{transform:translateY(28px)}
 }
 @media (max-width:640px){
   .finder__tabs button{font-size:.82rem;padding:.85rem .4rem}
