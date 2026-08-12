@@ -51,9 +51,8 @@ h3{font-size:1.36rem;font-weight:600}
 /* nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .35s,box-shadow .35s;border-bottom:1px solid transparent}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
-.brand{display:flex;align-items:center;gap:.7rem;color:#fff}
-.brand-mark{width:24px;height:24px;flex:0 0 auto;color:var(--red)}
-.brand-mark svg{width:100%;height:100%}
+.brand{display:flex;align-items:center;gap:.75rem;color:#fff}
+.brand-iso{width:auto;height:46px;flex:0 0 auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
 .brand-text{display:flex;flex-direction:column;line-height:1.05}
 .brand-name{font-family:var(--disp);font-size:1.32rem;font-weight:600}
 .brand-name em{color:var(--red-light)}
@@ -81,21 +80,62 @@ h3{font-size:1.36rem;font-weight:600}
 .hero-veil{position:absolute;inset:0;z-index:1;background:
   linear-gradient(90deg,rgba(14,14,16,.92) 0%,rgba(14,14,16,.68) 46%,rgba(14,14,16,.28) 100%),
   linear-gradient(0deg,rgba(14,14,16,.88),transparent 55%)}
-.hero-in{position:relative;z-index:2;padding-top:96px;padding-bottom:60px;max-width:780px}
-.hero h1{color:#fff;margin:.5rem 0 1.3rem;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero-in{position:relative;z-index:2;padding-top:104px;padding-bottom:60px;max-width:780px}
+.hero-logo{
+  width:clamp(196px,20vw,268px);height:auto;margin-bottom:1.5rem;
+  filter:drop-shadow(0 10px 34px rgba(0,0,0,.55));
+  animation:logoIn 1s var(--ease) both;
+}
+@keyframes logoIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.hero h1{color:#fff;margin:.5rem 0 1.3rem;text-shadow:0 2px 24px rgba(0,0,0,.35);font-size:clamp(2.3rem,5.2vw,4rem)}
 .hero-sub{color:rgba(255,255,255,.88);font-size:clamp(1.02rem,1.7vw,1.2rem);max-width:580px;font-weight:300}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0 2.1rem}
 .hero-cta.center{justify-content:center;margin-bottom:0}
 .chips{display:flex;gap:.6rem;flex-wrap:wrap;list-style:none}
 .chips li{font-size:.84rem;color:#fff;padding:.44rem 1rem;border:1px solid rgba(255,255,255,.32);border-radius:100px;background:rgba(255,255,255,.06);backdrop-filter:blur(4px)}
 
-/* credenciales */
-.cred{background:var(--ink-2);border-bottom:2px solid var(--red)}
-.cred-in{display:flex;justify-content:center;align-items:center;gap:2.2rem;padding:1.4rem 0;flex-wrap:wrap}
+/* credenciales + valores (tomado de los flyers de la marca) */
+.cred{background:var(--ink-2);border-bottom:2px solid var(--red);position:relative;overflow:hidden}
+/* curva roja/negra: mismo recurso gráfico que usa la marca en sus piezas */
+.cred-swoosh{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;opacity:.9;
+}
+.cred-in{position:relative;z-index:1;padding:clamp(34px,4.4vw,54px) 0 clamp(26px,3vw,36px);text-align:center}
+
+.cred-motto{
+  font-family:var(--disp);font-size:clamp(1.35rem,2.9vw,2.05rem);color:#fff;
+  line-height:1.15;margin-bottom:clamp(24px,3vw,36px);
+}
+.cred-motto em{color:var(--red-light);font-style:italic}
+
+.values{
+  list-style:none;display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:3px;
+  margin-bottom:clamp(26px,3vw,38px);
+}
+.values li{
+  background:var(--ink-2);display:flex;flex-direction:column;align-items:center;gap:.7rem;
+  padding:1.5rem .9rem;transition:background .3s var(--ease);
+}
+.values li:hover{background:var(--panel)}
+.values-ic{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid rgba(200,30,44,.55);color:var(--red-light);flex:0 0 auto;
+}
+.values-ic svg{width:23px;height:23px}
+.values-t{
+  font-size:.86rem;font-weight:500;color:#fff;letter-spacing:.02em;line-height:1.35;
+}
+
+.cred-row{
+  display:flex;justify-content:center;align-items:center;gap:clamp(1rem,2.4vw,2.2rem);
+  flex-wrap:wrap;padding-top:clamp(18px,2vw,24px);border-top:1px solid var(--line-d);
+}
 .cred-i{display:flex;flex-direction:column;align-items:center;text-align:center}
-.cred-label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.cred-n{font-family:var(--disp);font-weight:600;font-size:1.15rem;color:#fff;margin-top:.15rem}
-.cred-div{width:1px;height:38px;background:var(--line-d)}
+.cred-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.cred-n{font-family:var(--disp);font-weight:600;font-size:1.08rem;color:#fff;margin-top:.15rem}
+.cred-div{width:1px;height:34px;background:var(--line-d)}
 
 /* sections */
 .section{padding:clamp(68px,9vw,116px) 0}
@@ -151,12 +191,9 @@ h3{font-size:1.36rem;font-weight:600}
 /* footer */
 .footer{background:var(--ink-2);color:rgba(255,255,255,.72);padding:clamp(48px,6vw,72px) 0 0}
 .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.2rem;padding-bottom:2.6rem}
-.ft-brand{display:flex;gap:1rem}
-.ft-brand .brand-mark{width:26px;height:26px;color:var(--red)}
-.ft-brand .brand-name{font-family:var(--disp);font-size:1.4rem;font-weight:600;color:#fff;display:block;margin-bottom:.4rem}
-.ft-brand .brand-name em{color:var(--red-light)}
-.ft-brand .brand-name .lite{font-size:.85rem;font-style:normal;color:rgba(255,255,255,.55);font-family:var(--body)}
-.ft-brand p{font-size:.9rem;max-width:320px}
+.ft-brand{display:flex;flex-direction:column;gap:1.1rem;align-items:flex-start}
+.ft-logo{width:186px;height:auto}
+.ft-brand p{font-size:.9rem;max-width:340px}
 .ft-col h5{font-family:var(--disp);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red-light);margin-bottom:.9rem;font-weight:600}
 .ft-col a{display:block;font-size:.94rem;padding:.3rem 0;transition:color .2s,padding-left .2s}
 .ft-col a:hover{color:#fff;padding-left:4px}
@@ -176,6 +213,7 @@ h3{font-size:1.36rem;font-weight:600}
 
 /* responsive */
 @media(max-width:960px){
+  .values{grid-template-columns:repeat(2,1fr)}
   .serv-grid{grid-template-columns:1fr}
   .sobre-grid{grid-template-columns:1fr;gap:2.2rem}
   .sobre-photo{max-width:420px;order:-1;margin:0 auto}
@@ -186,8 +224,14 @@ h3{font-size:1.36rem;font-weight:600}
   .burger{display:flex}
 }
 @media(max-width:680px){
-  .cred-in{gap:1.4rem}
+  .cred-row{gap:1.1rem 1.4rem}
   .cred-div{display:none}
+  .cred-swoosh{opacity:.4}
+  .values li{padding:1.15rem .7rem}
+  .values-ic{width:40px;height:40px}
+  .values-ic svg{width:20px;height:20px}
+  .values-t{font-size:.79rem}
+  .brand-iso{height:38px}
   .gal{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr;gap:1.8rem}
 }
