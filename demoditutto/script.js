@@ -1,116 +1,115 @@
 /* ═══════════════════════════════════════════════
-   DI TUTTO — Fiambrería & Almacén
-   Mostrador dinámico + armador de picadas
+   DI TUTTO — Sanguchería & Casa de Comidas
+   Menú (sin precios, se pide por WhatsApp) + armador de bandejas
    ═══════════════════════════════════════════════ */
 
 const WA = '5491144440620';
 
-/* ── Catálogo (fuente única: alimenta el mostrador y la picada) ── */
+/* ── Categorías: cuánto se calcula por persona y en qué unidad ── */
 const CATS = {
-  fiambres:    { label:'Fiambres',    gramos:90 },
-  quesos:      { label:'Quesos',      gramos:80 },
-  conservas:   { label:'Conservas',   gramos:60 },
-  panificados: { label:'Panificados', gramos:50 },
-  bebidas:     { label:'Bebidas',     gramos:0  }
+  sanguches: { label:'Sanguches de miga', nota:'Se cortan en el momento · se venden por docena',
+               porPersona:3, step:6, min:6, unidad:'sanguchitos', docena:true, rol:'picar' },
+  empanadas: { label:'Empanadas', nota:'Masa casera, horneadas · por docena o media',
+               porPersona:3, step:6, min:6, unidad:'empanadas', docena:true, rol:'picar' },
+  tartas:    { label:'Tartas', nota:'Por porción o enteras (8 porciones)',
+               porPersona:1, step:1, min:2, unidad:'porciones', rol:'fuerte' },
+  porciones: { label:'Del día, al plato', nota:'Comida casera lista para calentar',
+               porPersona:1, step:1, min:1, unidad:'porciones', rol:'fuerte' },
+  alpaso:    { label:'Sanguches al paso', nota:'Para comer ahí o llevar',
+               porPersona:1, step:1, min:1, unidad:'sándwiches', rol:'fuerte' },
+  ensaladas: { label:'Ensaladas', nota:'Armadas al momento · chica, mediana o grande',
+               porPersona:.5, step:1, min:1, unidad:'porciones', rol:'verde' },
+  dulces:    { label:'Para el postre', nota:'Lo que salió del horno esa mañana',
+               porPersona:1, step:1, min:2, unidad:'porciones', rol:'dulce' }
 };
 
 const PRODUCTOS = [
-  // fiambres
-  { id:'crudo',      cat:'fiambres', n:'Jamón crudo estacionado', d:'12 meses · feteado fino', p:41900, u:'kg', tag:'El más pedido' },
-  { id:'cocido',     cat:'fiambres', n:'Jamón cocido natural',    d:'Sin fécula, corte a cuchillo', p:14800, u:'kg' },
-  { id:'salame',     cat:'fiambres', n:'Salame de Tandil',        d:'Con denominación de origen', p:23500, u:'kg' },
-  { id:'bondiola',   cat:'fiambres', n:'Bondiola ahumada',        d:'Ahumada en la casa', p:29900, u:'kg' },
-  { id:'mortadela',  cat:'fiambres', n:'Mortadela con pistachos', d:'Italiana, tajada gruesa', p:12400, u:'kg' },
-  { id:'lomito',     cat:'fiambres', n:'Lomito ahumado',          d:'Magro, ideal para tabla', p:33500, u:'kg' },
-  { id:'salamin',    cat:'fiambres', n:'Salamín picado fino',     d:'Estacionado 60 días', p:21800, u:'kg' },
-  { id:'panceta',    cat:'fiambres', n:'Panceta ahumada',         d:'En bloque o feteada', p:18600, u:'kg' },
-  // quesos
-  { id:'provolone',  cat:'quesos', n:'Provolone estacionado',  d:'Estacionado en nuestra cámara', p:26900, u:'kg', tag:'De la casa' },
-  { id:'azul',       cat:'quesos', n:'Queso azul',             d:'Cremoso, veta pareja', p:31500, u:'kg' },
-  { id:'gruyere',    cat:'quesos', n:'Gruyère',                d:'Importado, horma entera', p:34900, u:'kg' },
-  { id:'sardo',      cat:'quesos', n:'Sardo estacionado',      d:'Para rallar o cortar en cubos', p:24500, u:'kg' },
-  { id:'cremoso',    cat:'quesos', n:'Cremoso artesanal',      d:'De tambo de Suipacha', p:13900, u:'kg' },
-  { id:'brie',       cat:'quesos', n:'Brie',                   d:'Corteza blanca, bien maduro', p:38000, u:'kg' },
-  { id:'pategras',   cat:'quesos', n:'Pategrás',               d:'Semiduro clásico', p:22400, u:'kg' },
-  { id:'reggianito', cat:'quesos', n:'Reggianito',             d:'Estacionado 9 meses', p:33800, u:'kg' },
-  // conservas
-  { id:'aceitunas',  cat:'conservas', n:'Aceitunas griegas',      d:'En salmuera con hierbas', p:9800,  u:'kg' },
-  { id:'berenjenas', cat:'conservas', n:'Berenjenas en aceite',   d:'Receta de la casa', p:12900, u:'kg' },
-  { id:'pickles',    cat:'conservas', n:'Pickles caseros',        d:'Agridulces, bien crocantes', p:8400,  u:'kg' },
-  { id:'tomates',    cat:'conservas', n:'Tomates secos',          d:'En aceite de oliva y albahaca', p:24500, u:'kg' },
-  { id:'frutos',     cat:'conservas', n:'Frutos secos mixtos',    d:'Almendra, castaña y nuez', p:21000, u:'kg' },
-  { id:'antipasto',  cat:'conservas', n:'Antipasto de la casa',   d:'Morrón, cebollita y champiñón', p:11600, u:'kg' },
-  // panificados
-  { id:'pancampo',   cat:'panificados', n:'Pan de campo',           d:'Masa madre, horneado a la mañana', p:6900,  u:'kg' },
-  { id:'grisines',   cat:'panificados', n:'Grisines artesanales',   d:'Con semillas de sésamo', p:9200,  u:'kg' },
-  { id:'focaccia',   cat:'panificados', n:'Focaccia con romero',    d:'Aceite de oliva y sal gruesa', p:11400, u:'kg' },
-  { id:'tostaditas', cat:'panificados', n:'Tostaditas de masa madre', d:'Finitas, para untar', p:10800, u:'kg' },
-  // bebidas
-  { id:'malbec',     cat:'bebidas', n:'Malbec de bodega chica', d:'Valle de Uco · 750 ml', p:12500, u:'u' },
-  { id:'vermut',     cat:'bebidas', n:'Vermut rosso',           d:'Argentino · 1 litro', p:9800,  u:'u' },
-  { id:'ipa',        cat:'bebidas', n:'Cerveza artesanal IPA',  d:'Botella 500 ml', p:3900,  u:'u' },
-  { id:'tonica',     cat:'bebidas', n:'Agua tónica premium',    d:'Botella 500 ml', p:2400,  u:'u' }
+  // sanguches de miga
+  { id:'miga_jq',    cat:'sanguches', n:'Miga de jamón y queso',        d:'El clásico, pan blanco o negro' },
+  { id:'miga_esp',   cat:'sanguches', n:'Miga especial surtida',        d:'Crudo, roquefort, morrón y palmito' },
+  { id:'miga_triple',cat:'sanguches', n:'Triple de jamón, queso y tomate', d:'Tres pisos, bien cargado' },
+  { id:'miga_ave',   cat:'sanguches', n:'Miga de ave con salsa golf',   d:'Pollo desmenuzado, hecho en casa' },
+  { id:'miga_huevo', cat:'sanguches', n:'Miga de huevo y morrón',       d:'Con aceitunas, sin carne' },
+  { id:'miga_crudo', cat:'sanguches', n:'Pan negro con crudo y rúcula', d:'Con queso crema y nueces' },
+  // empanadas
+  { id:'emp_carne',  cat:'empanadas', n:'Carne cortada a cuchillo', d:'Suave o picante' },
+  { id:'emp_jq',     cat:'empanadas', n:'Jamón y queso',            d:'Bien gratinada' },
+  { id:'emp_pollo',  cat:'empanadas', n:'Pollo',                    d:'Con cebolla de verdeo' },
+  { id:'emp_humita', cat:'empanadas', n:'Humita',                   d:'Cremosa, con choclo fresco' },
+  { id:'emp_verd',   cat:'empanadas', n:'Verdura y salsa blanca',   d:'Espinaca y ricota' },
+  { id:'emp_caprese',cat:'empanadas', n:'Caprese',                  d:'Tomate, muzzarella y albahaca' },
+  // tartas
+  { id:'tar_jq',     cat:'tartas', n:'Tarta de jamón y queso',   d:'Masa casera, bien alta' },
+  { id:'tar_verd',   cat:'tartas', n:'Tarta de verdura',         d:'Acelga, cebolla y huevo' },
+  { id:'tar_cal',    cat:'tartas', n:'Tarta de calabaza y puerro', d:'Con un toque de queso azul' },
+  { id:'tar_choclo', cat:'tartas', n:'Tarta de choclo',          d:'Cremosa, con muzzarella' },
+  { id:'tar_pascual',cat:'tartas', n:'Pascualina',               d:'La de siempre, con huevo entero' },
+  { id:'tar_zap',    cat:'tartas', n:'Tarta de zapallitos',      d:'Con cebolla y queso rallado' },
+  // del día
+  { id:'por_mila',   cat:'porciones', n:'Milanesa con puré',       d:'De carne o de pollo' },
+  { id:'por_lasa',   cat:'porciones', n:'Lasaña',                  d:'De carne o de verdura' },
+  { id:'por_cane',   cat:'porciones', n:'Canelones de verdura',    d:'Con salsa mixta' },
+  { id:'por_pastel', cat:'porciones', n:'Pastel de papa',          d:'Gratinado arriba' },
+  { id:'por_matam',  cat:'porciones', n:'Matambre a la pizza',     d:'Para compartir' },
+  { id:'por_tortilla',cat:'porciones', n:'Tortilla de papas',      d:'Jugosa, con o sin cebolla' },
+  { id:'por_pollo',  cat:'porciones', n:'Pollo al horno con papas', d:'Con romero y limón' },
+  // al paso
+  { id:'paso_mila',  cat:'alpaso', n:'Sándwich de milanesa', d:'En pan francés o árabe' },
+  { id:'paso_tost',  cat:'alpaso', n:'Tostado de jamón y queso', d:'De miga o en pan de molde' },
+  { id:'paso_pebete',cat:'alpaso', n:'Pebete de jamón y queso', d:'Con tomate y mayonesa' },
+  { id:'paso_lomito',cat:'alpaso', n:'Lomito completo', d:'Con huevo, lechuga y tomate' },
+  // ensaladas
+  { id:'ens_cesar',  cat:'ensaladas', n:'César',           d:'Pollo, croutones y parmesano' },
+  { id:'ens_mixta',  cat:'ensaladas', n:'Mixta',           d:'Lechuga, tomate y cebolla' },
+  { id:'ens_rusa',   cat:'ensaladas', n:'Rusa',            d:'Con mayonesa hecha en casa' },
+  { id:'ens_caprese',cat:'ensaladas', n:'Caprese',         d:'Tomate, muzzarella y albahaca' },
+  { id:'ens_waldorf',cat:'ensaladas', n:'Waldorf',         d:'Manzana, apio y nueces' },
+  { id:'ens_quinoa', cat:'ensaladas', n:'Quinoa y vegetales', d:'Fresca, sin carne' },
+  // postre
+  { id:'dul_lemon',  cat:'dulces', n:'Lemon pie',        d:'Merengue quemado arriba' },
+  { id:'dul_pasta',  cat:'dulces', n:'Pastafrola',       d:'De membrillo o batata' },
+  { id:'dul_manzana',cat:'dulces', n:'Tarta de manzana', d:'Con canela' },
+  { id:'dul_budin',  cat:'dulces', n:'Budín de limón',   d:'Con glaseado' },
+  { id:'dul_brownie',cat:'dulces', n:'Brownie con nueces', d:'Húmedo, por porción' }
 ];
 
 const PRESETS = {
-  clasica: ['cocido','salame','mortadela','cremoso','pategras','aceitunas','grisines'],
-  premium: ['crudo','bondiola','lomito','provolone','azul','tomates','focaccia','malbec'],
-  quesos:  ['provolone','azul','gruyere','sardo','brie','reggianito','tostaditas']
+  copetin: ['miga_jq','miga_esp','emp_carne','emp_jq','ens_caprese'],
+  oficina: ['miga_triple','tar_verd','por_mila','ens_cesar','dul_brownie'],
+  cumple:  ['miga_jq','miga_esp','miga_crudo','emp_carne','emp_humita','ens_rusa','dul_lemon']
 };
 
-const money = n => '$' + Math.round(n).toLocaleString('es-AR');
+/* ═══════════ QUÉ HACEMOS (menú sin precios) ═══════════ */
+(function menu(){
+  const grid = document.getElementById('menuGrid');
+  if(!grid) return;
 
-/* ═══════════ MOSTRADOR ═══════════ */
-(function mostrador(){
-  const tabs = document.getElementById('tabs');
-  const grid = document.getElementById('counterGrid');
-  if(!tabs || !grid) return;
-
-  const cats = ['todo', ...Object.keys(CATS)];
-  let activa = 'todo';
-
-  cats.forEach(c => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.textContent = c === 'todo' ? 'Ver todo' : CATS[c].label;
-    b.dataset.cat = c;
-    if(c === activa) b.classList.add('is-on');
-    b.addEventListener('click', () => {
-      activa = c;
-      [...tabs.children].forEach(x => x.classList.toggle('is-on', x.dataset.cat === c));
-      pintar();
-    });
-    tabs.appendChild(b);
-  });
-
-  function pintar(){
-    const lista = activa === 'todo' ? PRODUCTOS : PRODUCTOS.filter(p => p.cat === activa);
-    grid.innerHTML = lista.map((p,i) => `
-      <article class="prod" style="animation-delay:${Math.min(i*25,400)}ms">
-        <div class="prod__name">${p.n}<small>${p.d}</small></div>
-        ${p.tag ? `<span class="prod__tag">${p.tag}</span>` : ''}
-        <span class="prod__dots"></span>
-        <span class="prod__price">${money(p.p)} <small>/ ${p.u}</small></span>
-      </article>`).join('');
-  }
-  pintar();
+  grid.innerHTML = Object.keys(CATS).map(cat => {
+    const items = PRODUCTOS.filter(p => p.cat === cat);
+    return `<article class="menu__card reveal">
+      <header>
+        <h3>${CATS[cat].label}</h3>
+        <p class="menu__nota">${CATS[cat].nota}</p>
+      </header>
+      <ul>${items.map(p => `<li><span>${p.n}</span><small>${p.d}</small></li>`).join('')}</ul>
+    </article>`;
+  }).join('');
 })();
 
-/* ═══════════ ARMÁ TU PICADA ═══════════ */
-(function picada(){
+/* ═══════════ ARMÁ TU BANDEJA ═══════════ */
+(function bandeja(){
   const picker = document.getElementById('picker');
   if(!picker) return;
 
   const $ = id => document.getElementById(id);
   const peopleBox = $('people'), boardList = $('boardList'), boardEmpty = $('boardEmpty');
-  const scaleWeight = $('scaleWeight'), scaleBar = $('scaleBar'),
+  const scaleWeight = $('scaleWeight'), balance = $('balance'),
         scalePerson = $('scalePerson'), scaleItems = $('scaleItems');
-  const totalVal = $('totalVal'), totalPer = $('totalPer'), waBtn = $('waPicada');
+  const waBtn = $('waPicada');
 
-  let personas = 4;
+  let personas = 8;
   const elegidos = new Set();
 
-  /* chips por categoría */
   Object.keys(CATS).forEach(cat => {
     const items = PRODUCTOS.filter(p => p.cat === cat);
     const g = document.createElement('div');
@@ -147,7 +146,15 @@ const money = n => '$' + Math.round(n).toLocaleString('es-AR');
     });
   });
 
-  /* reparte el gramaje de cada categoría entre los productos elegidos */
+  /* "24 (2 docenas)" / "18 (docena y media)" */
+  const enDocenas = q => {
+    const d = q / 12;
+    if(d === .5) return 'media docena';
+    if(Number.isInteger(d)) return d === 1 ? '1 docena' : d + ' docenas';
+    return Math.floor(d) + (Math.floor(d) === 1 ? ' docena y media' : ' docenas y media');
+  };
+
+  /* reparte la cantidad de cada categoría entre los productos elegidos */
   function calcular(){
     const porCat = {};
     elegidos.forEach(id => {
@@ -156,56 +163,49 @@ const money = n => '$' + Math.round(n).toLocaleString('es-AR');
     });
 
     const filas = [];
-    Object.keys(porCat).forEach(cat => {
+    Object.keys(CATS).forEach(cat => {
       const items = porCat[cat];
-      if(cat === 'bebidas'){
-        const unidades = Math.max(1, Math.ceil(personas / 4));
-        items.forEach(p => filas.push({ p, cant:unidades, gramos:0, sub:unidades * p.p, detalle:`${unidades} ${unidades===1?'botella':'botellas'}` }));
-        return;
-      }
-      const total = CATS[cat].gramos * personas;
+      if(!items) return;
+      const c = CATS[cat];
+      const total = c.porPersona * personas;
       items.forEach(p => {
-        const g = Math.max(50, Math.round(total / items.length / 25) * 25);
-        filas.push({ p, gramos:g, sub:g / 1000 * p.p, detalle:`${g} g` });
+        let q = total / items.length;
+        q = Math.max(c.min, Math.round(q / c.step) * c.step);
+        const detalle = c.docena
+          ? `${q} ${c.unidad} · ${enDocenas(q)}`
+          : `${q} ${q === 1 ? c.unidad.replace(/es$/,'').replace(/s$/,'') : c.unidad}`;
+        filas.push({ p, cat, q, detalle, rol:c.rol });
       });
     });
-
-    return filas.sort((a,b) => Object.keys(CATS).indexOf(a.p.cat) - Object.keys(CATS).indexOf(b.p.cat));
+    return filas;
   }
 
   function sync(){
     document.querySelectorAll('.chip').forEach(c => c.classList.toggle('is-on', elegidos.has(c.dataset.id)));
 
     const filas = calcular();
-    const gramos = filas.reduce((a,f) => a + f.gramos, 0);
-    const total  = filas.reduce((a,f) => a + f.sub, 0);
+    const unidades = filas.reduce((a,f) => a + f.q, 0);
+    const roles = new Set(filas.map(f => f.rol));
 
-    /* balanza */
-    scaleWeight.innerHTML = gramos >= 1000
-      ? (gramos/1000).toFixed(2).replace('.', ',') + '<small>kg</small>'
-      : gramos + '<small>g</small>';
-    const ideal = 280 * personas;
-    scaleBar.style.width = Math.min(100, gramos / ideal * 100) + '%';
-    scalePerson.textContent = gramos ? Math.round(gramos / personas) + ' g por persona' : '— por persona';
+    scaleWeight.innerHTML = unidades + '<small>unidades</small>';
+    [...balance.children].forEach(li => li.classList.toggle('is-on', roles.has(li.dataset.k)));
+    scalePerson.textContent = unidades
+      ? '≈ ' + (Math.round(unidades / personas * 10) / 10).toString().replace('.', ',') + ' por persona'
+      : '— por persona';
     scaleItems.textContent = filas.length + (filas.length === 1 ? ' producto' : ' productos');
 
-    /* tabla */
     boardEmpty.style.display = filas.length ? 'none' : 'block';
     boardList.innerHTML = filas.map(f => `
       <li>
         <span class="board__i-name">${f.p.n}<small>${f.detalle}</small></span>
-        <span class="board__i-price">${money(f.sub)}</span>
         <button class="board__i-del" type="button" data-del="${f.p.id}" aria-label="Quitar ${f.p.n}">×</button>
       </li>`).join('');
 
-    totalVal.textContent = money(total);
-    totalPer.textContent = filas.length ? money(total / personas) + ' por persona' : 'Elegí productos para ver el total';
-
-    /* whatsapp */
-    let txt = `Hola Di Tutto! Quería encargar una picada para ${personas} personas:\n\n`;
+    let txt = `Hola Di Tutto! Quería encargar para ${personas} personas:\n\n`;
     txt += filas.length
-      ? filas.map(f => `• ${f.p.n} — ${f.detalle}`).join('\n') + `\n\nEstimado: ${money(total)}\n\n¿Me confirman precio y cuándo la puedo retirar?`
-      : 'Quería que me recomienden qué llevar.';
+      ? filas.map(f => `• ${f.p.n} — ${f.detalle}`).join('\n') +
+        '\n\n¿Me confirman si está todo disponible, el precio y para cuándo lo puedo tener?'
+      : '¿Me pasan el menú de hoy y me recomiendan qué llevar?';
     waBtn.href = `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
   }
 
@@ -216,8 +216,7 @@ const money = n => '$' + Math.round(n).toLocaleString('es-AR');
     sync();
   });
 
-  /* arranca con la picada clásica cargada */
-  PRESETS.clasica.forEach(id => elegidos.add(id));
+  PRESETS.copetin.forEach(id => elegidos.add(id));
   sync();
 })();
 
