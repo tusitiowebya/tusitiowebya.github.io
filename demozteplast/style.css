@@ -309,17 +309,19 @@ button{ font:inherit; color:inherit; }
   margin-top:2rem;
 }
 
-/* riel de rubros */
+/* riel de rubros: barra flotante, nunca pegada al borde inferior del hero */
 .hero__rail{
   display:flex;
   gap:.6rem;
   overflow-x:auto;
-  padding:14px min(20px, 4vw) 20px;
-  border-top:1px solid rgba(255,255,255,.14);
-  background:linear-gradient(to top, rgba(3,18,30,.85), rgba(3,18,30,.25));
+  padding:11px 13px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:999px;
+  background:rgba(3,18,30,.5);
+  backdrop-filter:blur(12px);
   scrollbar-width:none;
-  width:min(100%, calc(var(--wrap) + 40px));
-  margin-inline:auto;
+  width:min(100% - 40px, var(--wrap));
+  margin:0 auto clamp(22px, 3.5vh, 40px);
 }
 .hero__rail::-webkit-scrollbar{ display:none; }
 .hero__rail a{
@@ -1021,7 +1023,8 @@ button{ font:inherit; color:inherit; }
 .foot__bar a{ color:var(--mint); }
 .foot__bar a:hover{ text-decoration:underline; }
 
-/* WhatsApp flotante */
+/* WhatsApp flotante: aparece recién al salir del hero — sobre el hero taparía
+   el riel de rubros y además el hero ya tiene su propio CTA de WhatsApp */
 .wafloat{
   position:fixed;
   right:20px; bottom:20px;
@@ -1032,9 +1035,13 @@ button{ font:inherit; color:inherit; }
   background:#25D366;
   color:#fff;
   box-shadow:0 14px 30px -12px rgba(37,211,102,.85);
-  transition:transform .25s;
+  opacity:0;
+  transform:scale(.6);
+  pointer-events:none;
+  transition:transform .3s cubic-bezier(.2,.8,.3,1), opacity .3s;
 }
-.wafloat:hover{ transform:scale(1.08); }
+.wafloat.is-on{ opacity:1; transform:none; pointer-events:auto; }
+.wafloat.is-on:hover{ transform:scale(1.08); }
 
 /* =========================================================
    REVEAL
@@ -1125,6 +1132,7 @@ button{ font:inherit; color:inherit; }
 
 @media (max-width:480px){
   .wrap, .nav__in{ width:calc(100% - 28px); }
+  .hero__rail{ width:calc(100% - 28px); }
   .rubros__grid{ grid-template-columns:1fr; grid-auto-rows:auto; }
   .rub{ min-height:250px; }
   .rub--wide{ grid-column:span 1; }

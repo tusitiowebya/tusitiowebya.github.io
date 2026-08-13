@@ -13,9 +13,12 @@
   /* ---------- nav: sticky + menú mobile ---------- */
   var nav = document.getElementById('nav');
   var burger = document.getElementById('burger');
+  var wafloat = document.querySelector('.wafloat');
 
   function onScroll() {
     nav.classList.toggle('is-stuck', window.scrollY > 40);
+    // el flotante entra al salir del hero, para no tapar el riel de rubros
+    if (wafloat) wafloat.classList.toggle('is-on', window.scrollY > window.innerHeight * 0.6);
   }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
