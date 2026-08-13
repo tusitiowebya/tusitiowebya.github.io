@@ -113,9 +113,11 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 .nav__mobile .btn{margin-top:1rem;border-bottom:0}
 
 /* ═══════════ HERO ═══════════ */
+/* el aire bajo el buscador tiene que equilibrar el gutter lateral del hero
+   (110px en desktop): con 36px el box se leia pegado al borde inferior */
 .hero{
   position:relative;min-height:100dvh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding-top:120px;padding-bottom:clamp(26px,4vh,52px);
+  justify-content:flex-end;padding-top:120px;padding-bottom:clamp(30px,7.5vh,78px);
   overflow:hidden;background:var(--green-deep);
 }
 .hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -346,6 +348,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
   .hero{min-height:auto;padding-top:104px}
 }
 @media (max-width:640px){
+  .hero{padding-bottom:clamp(24px,4vh,40px)}
   .finder__tabs button{font-size:.82rem;padding:.85rem .4rem}
   .finder__grid{grid-template-columns:1fr}
   .fld{border-right:0}
