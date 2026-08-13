@@ -309,19 +309,20 @@ button{ font:inherit; color:inherit; }
   margin-top:2rem;
 }
 
-/* riel de rubros: barra flotante, nunca pegada al borde inferior del hero */
+/* riel de rubros: barra flotante. El aire de abajo tiene que ser comparable al
+   margen lateral del hero — con 30px se lee pegada al borde. */
 .hero__rail{
   display:flex;
   gap:.6rem;
   overflow-x:auto;
-  padding:11px 13px;
+  padding:15px 17px;
   border:1px solid rgba(255,255,255,.17);
   border-radius:999px;
   background:rgba(3,18,30,.5);
   backdrop-filter:blur(12px);
   scrollbar-width:none;
   width:min(100% - 40px, var(--wrap));
-  margin:0 auto clamp(22px, 3.5vh, 40px);
+  margin:0 auto clamp(30px, 7.5vh, 78px);
 }
 .hero__rail::-webkit-scrollbar{ display:none; }
 .hero__rail a{
@@ -1115,7 +1116,8 @@ button{ font:inherit; color:inherit; }
 
 @media (max-width:768px){
   body{ font-size:16px; }
-  .hero__in{ padding:130px 0 32px; }
+  .hero__in{ padding:130px 0 28px; }
+  .hero__rail{ margin-bottom:clamp(24px, 4vh, 40px); padding:13px 14px; }
   .hero__cta .btn{ flex:1 1 100%; }
   .crow{ grid-template-columns:auto 1fr; row-gap:.75rem; }
   .crow__stepper{ grid-column:1 / -1; justify-content:space-between; width:100%; }
