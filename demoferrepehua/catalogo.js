@@ -14,9 +14,19 @@
   var POR_PAGINA = 12;
 
   // Marcas oficiales de la ferretería: la barra las muestra siempre, aunque
-  // todavía no haya productos de esa marca cargados en el panel.
+  // todavía no haya productos de esa marca cargados en el panel. Las que el
+  // panel cargue además de estas se suman con un color propio.
   var MARCAS = ['INGCO', 'TOTAL', 'EMTOP', 'WADFOW'];
   var COLOR_MARCA = { INGCO:'#F0A400', TOTAL:'#00A19A', EMTOP:'#E11B22', WADFOW:'#0F4C9B' };
+  var PALETA = ['#0F4C9B', '#B0431E', '#00726B', '#6B3FA0', '#A3121B', '#1F6F3F'];
+
+  // Color estable para una marca nueva: mismo nombre → siempre el mismo color.
+  function colorMarca(m) {
+    if (COLOR_MARCA[m]) return COLOR_MARCA[m];
+    var h = 0;
+    for (var i = 0; i < m.length; i++) h = (h * 31 + m.charCodeAt(i)) % 9973;
+    return PALETA[h % PALETA.length];
+  }
 
   var ICONO = {
     electricas:   '<path d="M13 2L4 14h6l-1 8 9-12h-6z"/>',
@@ -32,7 +42,7 @@
   };
   var ICONO_DEFAULT = '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/>';
 
-  var estado = { cat: 'all', marca: 'all', q: '', orden: 'rel', page: 1, vista: 'grid' };
+  var estado = { cat: 'all', marca: 'all', medio: 'all', q: '', orden: 'rel', page: 1, vista: 'grid' };
 
   var favoritos = {};
   try { favoritos = JSON.parse(localStorage.getItem('fp_fav') || '{}'); } catch (e) { favoritos = {}; }
@@ -50,6 +60,7 @@
     var p = new URLSearchParams(location.search);
     estado.cat   = p.get('cat')   || 'all';
     estado.marca = p.get('marca') || 'all';
+    estado.medio = p.get('pago')  || 'all';
     estado.q     = p.get('q')     || '';
     estado.orden = p.get('orden') || 'rel';
     estado.page  = Math.max(1, parseInt(p.get('pag'), 10) || 1);
@@ -58,6 +69,7 @@
     var p = new URLSearchParams();
     if (estado.cat !== 'all')   p.set('cat', estado.cat);
     if (estado.marca !== 'all') p.set('marca', estado.marca);
+    if (estado.medio !== 'all') p.set('pago', estado.medio);
     if (estado.q)               p.set('q', estado.q);
     if (estado.orden !== 'rel') p.set('orden', estado.orden);
     if (estado.page > 1)        p.set('pag', estado.page);
@@ -71,6 +83,8 @@
   function pasa(p, omitir) {
     if (omitir !== 'cat' && estado.cat !== 'all' && p.cat !== estado.cat) return false;
     if (omitir !== 'marca' && estado.marca !== 'all' && p.marca !== estado.marca) return false;
+    if (omitir !== 'medio' && estado.medio !== 'all' &&
+        !(p.medios || []).some(function (m) { return m.medio === estado.medio; })) return false;
     var q = estado.q.trim().toLowerCase();
     if (q) {
       var heno = (p.nombre + ' ' + (p.cod || '') + ' ' + p.marca + ' ' + p.catNom + ' ' +
@@ -100,14 +114,46 @@
                 '" data-brand="all">Todas las marcas</button>'];
     marcas.forEach(function (m) {
         html.push('<button class="brandtab' + (estado.marca === m ? ' is-on' : '') +
-          '" data-brand="' + esc(m) + '" style="color:' + (COLOR_MARCA[m] || '#071522') + '">' +
+          '" data-brand="' + esc(m) + '" style="color:' + colorMarca(m) + '">' +
           esc(m) + '</button>');
       });
     $$('[data-brands]').forEach(function (n) { n.innerHTML = html.join(''); });
 
     var mark = $('#sideMark');
     mark.textContent = estado.marca === 'all' ? 'Catálogo' : estado.marca;
-    mark.style.color = estado.marca === 'all' ? '' : (COLOR_MARCA[estado.marca] || '#071522');
+    mark.style.color = estado.marca === 'all' ? '' : colorMarca(estado.marca);
+  }
+
+  /* ══ Formas de pago ══════════════════════════════════════
+     Solo aparece si el panel tiene cargada alguna forma de pago; el
+     descuento que se muestra es el mejor de los productos que la aceptan. */
+  function pintarMedios() {
+    var caja = $('#payBox');
+    if (!caja) return;
+    var medios = FP.mediosCatalogo();
+    if (!medios.length) { caja.hidden = true; return; }
+    caja.hidden = false;
+
+    var conteo = {};
+    FP.productos().forEach(function (p) {
+      if (!pasa(p, 'medio')) return;
+      (p.medios || []).forEach(function (m) {
+        var c = conteo[m.medio] || (conteo[m.medio] = { n: 0, pct: 0 });
+        c.n++;
+        if (m.pct > c.pct) c.pct = m.pct;
+      });
+    });
+
+    var html = ['<li><button data-medio="all" class="' + (estado.medio === 'all' ? 'is-on' : '') + '">' +
+                '<span>Todas las formas de pago</span></button></li>'];
+    medios.forEach(function (m) {
+      var c = conteo[m] || { n: 0, pct: 0 };
+      html.push('<li><button data-medio="' + esc(m) + '" class="' + (estado.medio === m ? 'is-on' : '') + '">' +
+        '<span>' + esc(m) + '</span>' +
+        (c.pct > 0 ? '<em>−' + c.pct + '%</em>' : '') +
+        '<b>' + c.n + '</b></button></li>');
+    });
+    $$('[data-medios]').forEach(function (n) { n.innerHTML = html.join(''); });
   }
 
   /* ══ Rubros ══════════════════════════════════════════════ */
@@ -135,6 +181,27 @@
     $$('[data-cats]').forEach(function (n) { n.innerHTML = html.join(''); });
   }
 
+  /* ══ Precio: lista + mejor forma de pago + cuotas ════════ */
+  function bloquePrecio(p) {
+    // Si hay un filtro de forma de pago activo, la tarjeta muestra el precio de
+    // ESA forma; si no, el mejor precio del producto.
+    var mejor = FP.mejorMedio(p);
+    if (estado.medio !== 'all') {
+      var m = (p.medios || []).filter(function (x) { return x.medio === estado.medio; })[0];
+      mejor = (m && m.pct > 0) ? { medio: m.medio, pct: m.pct, precioFinal: FP.precioCon(p.precio, m.pct) } : null;
+    }
+    var cuotas = p.cuotas || 0;
+    return '<div class="pcard-price">' + money(p.precio) + '</div>' +
+      (mejor
+        ? '<p class="pcard-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + esc(mejor.medio) +
+          '<i>−' + mejor.pct + '%</i></p>'
+        : '<p class="pcard-note">Precio final en ARS</p>') +
+      (cuotas > 1
+        ? '<p class="pcard-cuotas">' + cuotas + ' cuotas sin interés de <b>' +
+          money(p.precio / cuotas) + '</b></p>'
+        : '');
+  }
+
   /* ══ Tarjetas ════════════════════════════════════════════ */
   function tarjeta(p) {
     var n = FP.cant(p.id);
@@ -153,8 +220,7 @@
         '<div class="pcard-body">' +
           (p.cod ? '<span class="pcard-sku">' + esc(p.cod) + '</span>' : '') +
           '<h3 class="pcard-name"><button data-ficha="' + esc(p.id) + '">' + esc(p.nombre) + '</button></h3>' +
-          '<div class="pcard-price">' + money(p.precio) + '</div>' +
-          '<p class="pcard-note">Precio final en ARS</p>' +
+          bloquePrecio(p) +
           '<p class="pcard-stock"><i></i>Disponible</p>' +
           (n
             ? '<div class="pcard-btn"><div class="pcard-qty">' +
@@ -185,7 +251,8 @@
       requestAnimationFrame(function () { el.classList.add('in'); });
     });
 
-    var de = estado.marca !== 'all' ? ' de <b>' + esc(estado.marca) + '</b>' : '';
+    var de = (estado.marca !== 'all' ? ' de <b>' + esc(estado.marca) + '</b>' : '') +
+             (estado.medio !== 'all' ? ' con <b>' + esc(estado.medio) + '</b>' : '');
     $('#resCount').innerHTML = lista.length
       ? 'Mostrando <b>' + lista.length + '</b> producto' + (lista.length === 1 ? '' : 's') + de +
         (lista.length > POR_PAGINA ? ' · página ' + estado.page + ' de ' + paginas : '')
@@ -209,6 +276,7 @@
     pintarPager(paginas);
     pintarCategorias();
     pintarMarcas();
+    pintarMedios();
   }
 
   function pintarPager(paginas) {
@@ -223,6 +291,23 @@
     b.push('<button class="pg pg-nav" data-page="' + (estado.page + 1) + '"' +
            (estado.page === paginas ? ' disabled' : '') + ' aria-label="Siguiente">→</button>');
     pager.innerHTML = b.join('');
+  }
+
+  /* ══ Ficha: formas de pago del producto ══════════════════ */
+  function bloquePago(p) {
+    var medios = p.medios || [], cuotas = p.cuotas || 0;
+    if (!medios.length && cuotas < 2) return '';
+    var filas = medios.map(function (m) {
+      return '<li><span>' + esc(m.medio) + '</span>' +
+        (m.pct > 0
+          ? '<b>' + money(FP.precioCon(p.precio, m.pct)) + '</b><em>−' + m.pct + '%</em>'
+          : '<b>' + money(p.precio) + '</b>') + '</li>';
+    });
+    if (cuotas > 1) {
+      filas.push('<li><span>' + cuotas + ' cuotas sin interés</span><b>' +
+        money(p.precio / cuotas) + '</b><em>por mes</em></li>');
+    }
+    return '<div class="sheet-pay"><h3>Formas de pago</h3><ul>' + filas.join('') + '</ul></div>';
   }
 
   /* ══ Ficha de producto ═══════════════════════════════════ */
@@ -266,6 +351,7 @@
           : '') +
         '<div class="sheet-price"><b>' + money(p.precio) + '</b><small>Precio final en ARS' +
           (p.unidad ? ' · por ' + esc(p.unidad) : '') + '</small></div>' +
+        bloquePago(p) +
         '<p class="sheet-stock"><i></i>Disponible · garantía oficial de fábrica</p>' +
         (n
           ? '<div class="sheet-stepper"><button data-minus="' + esc(p.id) + '" aria-label="Quitar uno">−</button>' +
@@ -280,11 +366,23 @@
   }
 
   /* ══ Panel de categorías (mobile) ════════════════════════ */
+  // El panel es un cajón deslizable solo hasta 900px; más ancho que eso vive
+  // fijo en la columna izquierda.
+  function esCajon() { return window.matchMedia('(max-width:900px)').matches; }
+
   function abrirLateral(open) {
+    // En desktop no hay nada que abrir: hacerlo solo dejaba el fondo oscuro
+    // encima de todo y la página trabada sin scroll.
+    if (open && !esCajon()) return;
     $('#filters').classList.toggle('open', open);
     $('#sideBackdrop').hidden = !open;
     document.body.classList.toggle('no-scroll', open);
   }
+
+  // Si se agranda la ventana con el cajón abierto, hay que soltar el scroll.
+  window.addEventListener('resize', function () {
+    if (!esCajon() && $('#filters').classList.contains('open')) abrirLateral(false);
+  });
 
   /* ══ Eventos ═════════════════════════════════════════════ */
   function aplicar() {
@@ -321,6 +419,9 @@
     var brand = e.target.closest('[data-brand]');
     if (brand) { estado.marca = brand.dataset.brand; aplicar(); abrirLateral(false); return; }
 
+    var medio = e.target.closest('[data-medio]');
+    if (medio) { estado.medio = medio.dataset.medio; aplicar(); abrirLateral(false); return; }
+
     var pg = e.target.closest('[data-page]');
     if (pg && !pg.disabled) {
       estado.page = parseInt(pg.dataset.page, 10);
@@ -332,7 +433,7 @@
 
     var clear = e.target.closest('[data-clear]');
     if (clear) {
-      estado.cat = 'all'; estado.marca = 'all'; estado.q = '';
+      estado.cat = 'all'; estado.marca = 'all'; estado.medio = 'all'; estado.q = '';
       $('#q').value = '';
       aplicar();
       return;
@@ -366,7 +467,14 @@
     render();
   });
 
-  $('#filtersOpen').addEventListener('click', function () { abrirLateral(true); });
+  // En mobile abre el cajón; en desktop hace lo que dice el botón: mostrar
+  // todas las categorías y llevar la vista a la grilla.
+  $('#filtersOpen').addEventListener('click', function () {
+    if (esCajon()) { abrirLateral(true); return; }
+    estado.cat = 'all';
+    aplicar();
+    $('.shop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   $('#filtersClose').addEventListener('click', function () { abrirLateral(false); });
   $('#sideBackdrop').addEventListener('click', function () { abrirLateral(false); });
 

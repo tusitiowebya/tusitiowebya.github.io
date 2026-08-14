@@ -17,6 +17,19 @@
   /* ══ Destacados ══════════════════════════════════════════ */
   var grid = $('#grid');
 
+  // Mejor forma de pago y cuotas, tal como vienen del panel.
+  function pago(p) {
+    var mejor = FP.mejorMedio(p), cuotas = p.cuotas || 0;
+    return (mejor
+        ? '<p class="card-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + mejor.medio +
+          ' <i>−' + mejor.pct + '%</i></p>'
+        : '') +
+      (cuotas > 1
+        ? '<p class="card-cuotas">' + cuotas + ' cuotas sin interés de <b>' +
+          money(p.precio / cuotas) + '</b></p>'
+        : '');
+  }
+
   function tarjeta(p) {
     var n = FP.cant(p.id);
     return '' +
@@ -36,6 +49,7 @@
             '<div class="card-price"><b>' + money(p.precio) + '</b><small>Precio final en ARS</small></div>' +
             '<span class="card-stock"><i></i>Disponible</span>' +
           '</div>' +
+          pago(p) +
           (n
             ? '<div class="card-stepper"><button data-minus="' + p.id + '" aria-label="Quitar uno">−</button>' +
               '<span>' + n + ' en el pedido</span>' +

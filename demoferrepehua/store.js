@@ -55,6 +55,38 @@
 
   function money(n) { return '$' + Math.round(n).toLocaleString('es-AR'); }
 
+  /* ── Formas de pago del producto ─────────────────────────
+     El panel guarda `mediosPago: [{ medio, descuentoPct }]` y
+     `cuotasSinInteres`. El descuento se aplica sobre el precio de lista.  */
+  function normalizarMedios(arr) {
+    if (!Array.isArray(arr)) return [];
+    return arr.map(function (m) {
+      return { medio: String((m && m.medio) || '').trim(), pct: Number((m && m.descuentoPct) || 0) };
+    }).filter(function (m) { return !!m.medio; });
+  }
+  // Mismo redondeo que usa CobrOS para el precio con descuento.
+  function precioCon(precio, pct) {
+    return Math.round((precio || 0) * (1 - (pct || 0) / 100) * 100) / 100;
+  }
+  // Forma de pago más conveniente de un producto (la de mayor descuento), o null.
+  function mejorMedio(p) {
+    var conDto = (p.medios || []).filter(function (m) { return m.pct > 0; });
+    if (!conDto.length) return null;
+    var best = conDto.reduce(function (a, b) { return b.pct > a.pct ? b : a; });
+    return { medio: best.medio, pct: best.pct, precioFinal: precioCon(p.precio, best.pct) };
+  }
+  // Todas las formas de pago que aparecen en el catálogo (para el filtro).
+  function mediosCatalogo() {
+    var vistos = {}, out = [];
+    productos.forEach(function (p) {
+      (p.medios || []).forEach(function (m) {
+        if (vistos[m.medio]) return;
+        vistos[m.medio] = 1; out.push(m.medio);
+      });
+    });
+    return out.sort(function (a, b) { return a.localeCompare(b, 'es'); });
+  }
+
   // Las categorías del panel vienen con acento ("Eléctricas"); los filtros
   // usan el slug sin acentos ("electricas").
   function slugCat(s) {
@@ -79,17 +111,26 @@
         clearTimeout(t);
         if (!d || !d.productos || !d.productos.length) return null;
         return d.productos.map(function (p) {
-          // El nombre en el panel se carga como "MARCA - Producto".
+          // La marca es un campo propio del panel (`marca`). Los productos
+          // cargados antes de que existiera venían como "MARCA - Producto" en
+          // el nombre, así que ese formato se sigue leyendo como respaldo.
           var m = /^([A-Za-z0-9]+)\s*[-–]\s*(.+)$/.exec(p.nombre || '');
+          var marcaApi = String(p.marca || '').trim().toUpperCase();
+          var marca = marcaApi || (m ? m[1].toUpperCase() : '');
+          // El prefijo se saca del nombre solo si es efectivamente la marca:
+          // así "INGCO - Taladro" queda "Taladro" y "Kit 3 - piezas" no se rompe.
+          var nombre = (m && m[1].toUpperCase() === marca) ? m[2] : (p.nombre || '');
           return {
             id: p._id || '',
             cod: p.codigo || '',
             cat: slugCat(p.categoria),
             catNom: p.categoria || 'General',
-            marca: m ? m[1].toUpperCase() : '',
-            nombre: m ? m[2] : (p.nombre || ''),
+            marca: marca,
+            nombre: nombre,
             specs: (p.descripcion || '').split('·').map(function (s) { return s.trim(); }).filter(Boolean),
             precio: p.precio || 0,
+            medios: normalizarMedios(p.mediosPago),
+            cuotas: Math.max(0, parseInt(p.cuotasSinInteres, 10) || 0),
             img: imagen(p.foto),
             stock: p.stock,
             unidad: p.unidad || ''
@@ -126,14 +167,40 @@
   function cant(id) { return carrito[id] || 0; }
   function vaciar() { carrito = {}; guardar(); avisar(); }
 
+  // Total del pedido con cada forma de pago que dé descuento: cada ítem aplica
+  // el suyo y los que no aceptan ese medio quedan al precio de lista.
+  function totalesPorMedio() {
+    var total = totalPesos();
+    var medios = {}, orden = [];
+    itemsCarrito().forEach(function (k) {
+      (buscar(k).medios || []).forEach(function (m) {
+        if (m.pct > 0 && !medios[m.medio]) { medios[m.medio] = 1; orden.push(m.medio); }
+      });
+    });
+    return orden.map(function (medio) {
+      return {
+        medio: medio,
+        total: itemsCarrito().reduce(function (a, k) {
+          var p = buscar(k);
+          var m = (p.medios || []).filter(function (x) { return x.medio === medio; })[0];
+          return a + precioCon(p.precio, m ? m.pct : 0) * carrito[k];
+        }, 0)
+      };
+    }).filter(function (t) { return t.total < total - 0.01; })
+      .sort(function (a, b) { return a.total - b.total; });
+  }
+
   function mensajeWA() {
     var lineas = itemsCarrito().map(function (k) {
       var p = buscar(k);
       return '• ' + carrito[k] + 'x ' + p.nombre + (p.cod ? ' (' + p.cod + ')' : '') +
              ' — ' + money(p.precio * carrito[k]);
     }).join('\n');
+    var alt = totalesPorMedio().map(function (t) {
+      return '\nPagando con ' + t.medio + ': ' + money(t.total);
+    }).join('');
     return (CFG.WA_TEXTO || 'Hola, quiero hacer un pedido:') + '\n\n' + lineas +
-           '\n\nTotal estimado: ' + money(totalPesos()) +
+           '\n\nTotal estimado: ' + money(totalPesos()) + alt +
            '\n\n¿Me confirmás stock y forma de envío?';
   }
   function linkWA(texto) {
@@ -161,6 +228,16 @@
       if (badge) badge.textContent = totalItems();
       if (navCart) navCart.classList.toggle('has', keys.length > 0);
       var tot = $('#cartTotal'); if (tot) tot.textContent = money(totalPesos());
+
+      // Precio del pedido con las formas de pago que dan descuento.
+      var alt = $('#cartAlt');
+      if (alt) {
+        var tarifas = keys.length ? totalesPorMedio() : [];
+        alt.hidden = !tarifas.length;
+        alt.innerHTML = tarifas.map(function (t) {
+          return '<span><i>' + t.medio + '</i><b>' + money(t.total) + '</b></span>';
+        }).join('');
+      }
 
       if (!keys.length) {
         body.innerHTML = '<div class="cart-empty"><p>Todavía no agregaste nada.</p>' +
@@ -226,7 +303,9 @@
     money: money,
     slugCat: slugCat,
     cant: cant, agregar: agregar, setCant: setCant, vaciar: vaciar,
+    precioCon: precioCon, mejorMedio: mejorMedio, mediosCatalogo: mediosCatalogo,
     itemsCarrito: itemsCarrito, totalItems: totalItems, totalPesos: totalPesos,
+    totalesPorMedio: totalesPorMedio,
     mensajeWA: mensajeWA, linkWA: linkWA,
     alCambiar: function (fn) { oyentes.push(fn); },
     montarCarrito: montarCarrito,

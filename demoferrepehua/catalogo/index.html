@@ -113,6 +113,12 @@
       <h2 class="side-title">Categorías</h2>
       <ul class="catlist" data-cats></ul>
 
+      <!-- Formas de pago cargadas en el panel (se oculta si no hay ninguna) -->
+      <div id="payBox" hidden>
+        <h2 class="side-title side-title-sep">Forma de pago</h2>
+        <ul class="paylist" data-medios></ul>
+      </div>
+
       <div class="side-help">
         <h3>¿Necesitás ayuda?</h3>
         <p>Escribinos por WhatsApp y te asesoramos.</p>
@@ -208,6 +214,7 @@
   <div class="cart-body" id="cartBody"></div>
   <footer class="cart-foot">
     <div class="cart-total"><span>Total estimado</span><b id="cartTotal">$0</b></div>
+    <div class="cart-alt" id="cartAlt" hidden></div>
     <a class="btn btn-amber btn-block" id="cartSend" href="#">Enviar pedido por WhatsApp</a>
     <p class="cart-note">Te respondemos con stock, forma de pago y costo de envío.</p>
   </footer>

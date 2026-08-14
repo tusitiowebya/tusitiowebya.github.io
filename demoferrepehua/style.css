@@ -25,6 +25,9 @@
 }
 
 *{box-sizing:border-box}
+/* `hidden` tiene que ganarle a los display: de los componentes (el paginador
+   es flex y seguía a la vista con catálogos de una sola página). */
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   margin:0;background:var(--bg);color:var(--txt);
@@ -307,6 +310,18 @@ code{font-family:'IBM Plex Mono',ui-monospace,monospace}
 .card-price small{display:block;font-size:.68rem;color:#8B98A6;margin-top:1px}
 .card-stock{display:flex;align-items:center;gap:6px;font-size:.73rem;color:#1F9E63;white-space:nowrap}
 .card-stock i{width:6px;height:6px;border-radius:50%;background:#25B372}
+/* Mejor forma de pago y cuotas (vienen del panel de CobrOS) */
+.card-pay{
+  display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:9px;
+  font-size:.8rem;font-weight:600;color:#1F9E63;line-height:1.3;
+}
+.card-pay b{font-weight:800;font-feature-settings:'tnum'}
+.card-pay i{
+  font-style:normal;font-size:.64rem;font-weight:800;letter-spacing:.05em;
+  background:#E4F6EC;color:#127A46;border-radius:3px;padding:2px 5px;
+}
+.card-cuotas{margin-top:4px;font-size:.74rem;color:#5C6A78;line-height:1.3}
+.card-cuotas b{color:var(--ink-txt);font-weight:700;font-feature-settings:'tnum'}
 .card-add{
   margin-top:14px;width:100%;padding:12px;border-radius:8px;background:var(--ink);color:#fff;
   font-size:.88rem;font-weight:700;transition:.22s var(--ease);
@@ -442,6 +457,11 @@ code{font-family:'IBM Plex Mono',ui-monospace,monospace}
 .cart-total{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
 .cart-total span{font-size:.86rem;color:var(--muted)}
 .cart-total b{font-size:1.6rem;color:#fff;letter-spacing:-.03em;font-feature-settings:'tnum'}
+/* Total del pedido con las formas de pago con descuento */
+.cart-alt{display:flex;flex-direction:column;gap:5px;margin:-8px 0 16px}
+.cart-alt span{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:.8rem}
+.cart-alt i{font-style:normal;color:var(--muted)}
+.cart-alt b{color:var(--ok);font-weight:700;font-feature-settings:'tnum'}
 .cart-note{margin-top:12px;font-size:.76rem;color:var(--muted);text-align:center}
 #cartSend.is-off{opacity:.4;pointer-events:none}
 
