@@ -93,20 +93,11 @@ h1,h2,h3,.stnum,.numlabel,.hfoot__i b,.scard__title,.why__tel,.zcard__n{
   border-bottom-color:var(--line);
 }
 .nav__in{
-  max-width:var(--wrap);margin-inline:auto;padding:14px var(--gut);
+  max-width:var(--wrap);margin-inline:auto;padding:10px var(--gut);
   display:flex;align-items:center;gap:26px;
 }
-.brand{display:flex;align-items:center;gap:11px;color:var(--lime);flex:none}
-.brand__mark{width:40px;height:29px}
-.brand__txt{display:flex;flex-direction:column;line-height:1;color:var(--conc)}
-.brand__txt b{
-  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
-  font-size:1.32rem;letter-spacing:.01em;
-}
-.brand__txt i{
-  font-style:normal;font-size:.6rem;font-weight:600;
-  letter-spacing:.42em;color:var(--lime);margin-top:2px;
-}
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:clamp(52px,5.6vw,68px);width:auto;flex:none}
 .nav__links{display:flex;gap:26px;margin-left:auto}
 .nav__links a{
   font-size:.9rem;font-weight:500;color:var(--conc);opacity:.82;
@@ -137,7 +128,7 @@ h1,h2,h3,.stnum,.numlabel,.hfoot__i b,.scard__title,.why__tel,.zcard__n{
 .hero{
   position:relative;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
-  padding-top:clamp(96px,13vh,132px);
+  padding-top:clamp(100px,13.5vh,140px);
   overflow:hidden;
 }
 .only-m{display:none}
@@ -415,7 +406,9 @@ h1,h2,h3,.stnum,.numlabel,.hfoot__i b,.scard__title,.why__tel,.zcard__n{
    ========================================================= */
 .foot{background:var(--ink);border-top:1px solid var(--line);padding-top:clamp(48px,6vw,74px)}
 .foot__in{display:grid;grid-template-columns:1fr 2fr;gap:clamp(30px,4vw,60px);padding-bottom:44px}
-.foot__brand{display:flex;align-items:center;gap:11px;color:var(--lime);align-self:start}
+.foot__brand{align-self:start}
+.foot__brand img{height:104px;width:auto;margin-bottom:16px}
+.foot__brand p{font-size:.9rem;color:#A8A6A0;max-width:34ch}
 .foot__cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .foot__cols h4{
   font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);
@@ -492,13 +485,12 @@ h1,h2,h3,.stnum,.numlabel,.hfoot__i b,.scard__title,.why__tel,.zcard__n{
 
 @media (max-width:768px){
   body{font-size:16px}
-  .nav__in{padding:11px var(--gut);gap:12px}
-  .brand__mark{width:34px;height:25px}
-  .brand__txt b{font-size:1.14rem}
-  .brand__txt i{font-size:.53rem;letter-spacing:.34em}
+  .nav__in{padding:8px var(--gut);gap:12px}
+  .brand img{height:40px}
+  .foot__brand img{height:84px}
   .nav__cta{padding:9px 13px;font-size:.82rem}
 
-  .hero{padding-top:84px}
+  .hero{padding-top:80px}
   .hero__h1{font-size:min(clamp(42px,11vw,58px),9.4vh)}
   .hero__lead{font-size:15.5px;margin-top:16px}
   .hero__cta{margin-top:22px;gap:9px;flex-wrap:nowrap}
