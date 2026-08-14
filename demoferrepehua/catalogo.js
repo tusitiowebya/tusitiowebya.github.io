@@ -42,6 +42,9 @@
 
   var estado = { cat: 'all', marca: 'all', medio: 'all', q: '', orden: 'rel', page: 1, vista: 'grid' };
 
+  // Cajón del pedido: se monta en el init y desde la ficha se abre por acá.
+  var carro = null;
+
   var favoritos = {};
   try { favoritos = JSON.parse(localStorage.getItem('fp_fav') || '{}'); } catch (e) { favoritos = {}; }
 
@@ -369,9 +372,7 @@
             '<span>' + n + ' en el pedido</span>' +
             '<button data-plus="' + esc(p.id) + '" aria-label="Agregar uno">+</button></div>'
           : '<button class="btn btn-amber btn-block" data-add="' + esc(p.id) + '">Agregar al pedido</button>') +
-        '<a class="btn btn-dark btn-block" target="_blank" rel="noopener" href="' +
-          FP.linkWA('Hola Ferrepehua, quiero consultar por: ' + p.nombre + (p.cod ? ' (' + p.cod + ')' : '')) +
-        '">Consultar este producto</a>' +
+        '<button class="btn btn-dark btn-block" data-ircarrito>Ir al carrito</button>' +
         '<p class="sheet-note">Precio final en pesos. El envío se cotiza aparte según destino.</p>' +
       '</div>';
   }
@@ -413,6 +414,13 @@
       try { localStorage.setItem('fp_fav', JSON.stringify(favoritos)); } catch (err) {}
       fav.classList.toggle('is-on', !!favoritos[fid]);
       fav.setAttribute('aria-pressed', favoritos[fid] ? 'true' : 'false');
+      return;
+    }
+
+    // Desde la ficha: cerrarla y abrir el pedido.
+    if (e.target.closest('[data-ircarrito]')) {
+      cerrarFicha();
+      if (carro) carro.abrir(true); else { var nc = $('#navCart'); if (nc) nc.click(); }
       return;
     }
 
@@ -513,7 +521,7 @@
   $('#q').value = estado.q;
   $('#orden').value = estado.orden;
 
-  FP.montarCarrito();
+  carro = FP.montarCarrito();
   FP.alCambiar(function () { render(); pintarFicha(); });
 
   render();
