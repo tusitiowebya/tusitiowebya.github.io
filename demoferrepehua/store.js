@@ -45,6 +45,8 @@
   // Prefijo para resolver las imágenes de respaldo desde una subpágina.
   var BASE = /\/catalogo\/?$/.test(location.pathname) ? '../' : '';
 
+  FALLBACK.forEach(function (p) { p.img = imagen(p.img); });
+
   var productos = FALLBACK.slice();
   var carrito = {};
   try { carrito = JSON.parse(localStorage.getItem('fp_cart') || '{}'); } catch (e) { carrito = {}; }
