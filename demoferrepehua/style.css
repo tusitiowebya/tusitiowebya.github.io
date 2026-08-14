@@ -446,16 +446,75 @@ code{font-family:'IBM Plex Mono',ui-monospace,monospace}
 .ci-qty button:hover{background:var(--bg3);color:var(--amber)}
 .ci-qty span{min-width:24px;text-align:center;font-size:.86rem;font-family:'IBM Plex Mono',monospace}
 .cart-foot{padding:20px 24px 24px;border-top:1px solid var(--line);background:var(--bg)}
-.cart-total{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
-.cart-total span{font-size:.86rem;color:var(--muted)}
-.cart-total b{font-size:1.6rem;color:#fff;letter-spacing:-.03em;font-feature-settings:'tnum'}
-/* Total del pedido con las formas de pago con descuento */
-.cart-alt{display:flex;flex-direction:column;gap:4px;margin:-10px 0 16px}
-.cart-alt span{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:.76rem}
-.cart-alt i{font-style:normal;color:var(--muted)}
-.cart-alt b{color:var(--ok);font-weight:600;font-feature-settings:'tnum'}
 .cart-note{margin-top:12px;font-size:.76rem;color:var(--muted);text-align:center}
-#cartSend.is-off{opacity:.4;pointer-events:none}
+#cartNext:disabled{opacity:.35;pointer-events:none}
+
+/* ── Resumen: total y precio con cada forma de pago ── */
+.cart-sum{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.cs-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.cs-row span{font-size:.84rem;color:var(--muted)}
+.cs-row b{font-feature-settings:'tnum';letter-spacing:-.02em}
+.cs-total b{font-size:1.5rem;color:#fff}
+.cs-off span,.cs-off b{color:var(--ok)}
+.cs-off span{font-size:.8rem}
+.cs-off b{font-size:1.02rem;font-weight:700}
+
+/* ── Pasos del checkout (datos y confirmación) ── */
+/* Cubre el cajón dejando a la vista la cabecera con la ✕; el `top` exacto lo
+   fija el JS con la altura real de esa cabecera. */
+.cart-step{
+  position:absolute;left:0;right:0;bottom:0;top:64px;z-index:2;
+  display:flex;flex-direction:column;background:var(--bg2);
+}
+.cs-head{display:flex;align-items:flex-start;gap:12px;padding:18px 24px 14px;border-bottom:1px solid var(--line)}
+.cs-back{
+  width:32px;height:32px;flex:none;border-radius:8px;background:var(--bg3);color:var(--txt);
+  font-size:1rem;line-height:1;transition:background .2s;
+}
+.cs-back:hover{background:var(--line2)}
+.cs-head h3{font-size:1.02rem;color:#fff}
+.cs-head p{margin-top:3px;font-size:.78rem;color:var(--muted);line-height:1.4}
+.cs-body{flex:1;overflow-y:auto;padding:18px 24px}
+.cs-field{display:block;margin-bottom:13px}
+.cs-field>span{display:block;margin-bottom:6px;font-size:.76rem;font-weight:600;color:#B7C4D2}
+.cs-field>span i{font-style:normal;font-weight:400;color:var(--muted)}
+.cs-field input,.cs-field select,.cs-field textarea{
+  width:100%;padding:11px 13px;border-radius:8px;border:1px solid var(--line2);
+  background:var(--bg);color:var(--txt);font:inherit;font-size:.9rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.cs-field textarea{resize:vertical;min-height:56px;line-height:1.45}
+.cs-field input::placeholder,.cs-field textarea::placeholder{color:#5D6E7F}
+.cs-field input:focus,.cs-field select:focus,.cs-field textarea:focus{
+  outline:0;border-color:var(--amber);box-shadow:0 0 0 3px rgba(234,170,27,.16);
+}
+.cs-error{
+  margin-bottom:13px;padding:10px 12px;border-radius:8px;font-size:.8rem;
+  background:rgba(226,84,84,.12);border:1px solid rgba(226,84,84,.35);color:#FFB3B3;
+}
+.cs-resume{margin-top:6px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.cs-foot{padding:16px 24px 24px;border-top:1px solid var(--line);background:var(--bg)}
+
+/* ── Confirmación ── */
+.cs-done{flex:1;overflow-y:auto;padding:32px 24px 26px;text-align:center}
+.cs-mark{
+  width:52px;height:52px;margin:0 auto 16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(63,217,138,.14);color:var(--ok);font-size:1.5rem;font-weight:800;
+}
+.cs-mark.is-warn{background:rgba(234,170,27,.14);color:var(--amber)}
+.cs-done h3{font-size:1.18rem;color:#fff}
+.cs-done p{margin-top:9px;font-size:.86rem;line-height:1.55;color:#A9B8C6}
+.cs-done p b{color:#fff;font-weight:700}
+.cs-done .cs-resume{margin:20px 0 20px;text-align:left;border-top:1px solid var(--line);padding-top:16px}
+.cs-done .btn{margin-bottom:10px}
+.btn-wa{background:#22B455;color:#fff}
+.btn-wa:hover{background:#1B9648}
+.cs-later{
+  display:block;width:100%;margin-top:4px;padding:10px;
+  font-size:.82rem;color:var(--muted);transition:color .2s;
+}
+.cs-later:hover{color:var(--txt)}
 
 /* ═══════ WHATSAPP FLOTANTE ═══════════════════════════════ */
 .wa-float{
