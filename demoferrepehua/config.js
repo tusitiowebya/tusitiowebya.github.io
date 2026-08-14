@@ -15,6 +15,6 @@ window.NEGOCIO = {
   WA: "5492396616927",
   WA_TEXTO: "Hola Ferrepehua, quiero hacer un pedido:",
   API: "https://vps-5905394-x.dattaweb.com/cobros/api/cobros-publico",
-  SLUG: "",          // ej: "ferrepehua"  ← activa el catálogo en vivo
+  SLUG: "ferrepehua",
   TIMEOUT_MS: 8000
 };

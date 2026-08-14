@@ -28,6 +28,7 @@
     { id:'EFLL3001',    cat:'iluminacion',  catNom:'Iluminación',   marca:'EMTOP',  nombre:'Reflector LED recargable 30W con trípode',   specs:['30W','Recargable','IP65'],            precio:24900,  img:'img/p-reflector.jpg' },
     { id:'HSKSPK01',    cat:'seguridad',    catNom:'Seguridad',     marca:'INGCO',  nombre:'Kit de seguridad: casco, guantes y antiparras', specs:['Casco','Guantes','Antiparras'],     precio:18500,  img:'img/p-seguridad.jpg' }
   ];
+  CATALOGO.forEach(function (p) { p.cod = p.id; });
 
   var CAT_NOMBRES = {
     electricas:'Herramientas eléctricas', inalambricas:'Herramientas inalámbricas',
@@ -42,6 +43,14 @@
   var money = function (n) { return '$' + n.toLocaleString('es-AR'); };
 
   /* ══ Catálogo en vivo desde CobrOS (opcional) ══════════════ */
+  // Las categorías del panel vienen con acentos ("Eléctricas"); los chips del
+  // catálogo usan el slug sin acentos ("electricas").
+  function slugCat(s) {
+    return (s || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '');
+  }
+
   function cargarCobrOS() {
     if (!CFG.SLUG) return Promise.resolve(null);
     var ctrl = new AbortController();
@@ -52,11 +61,15 @@
         clearTimeout(t);
         if (!d || !d.productos || !d.productos.length) return null;
         return d.productos.map(function (p) {
-          var slug = (p.categoria || '').toLowerCase();
+          // El nombre en el panel se carga como "MARCA - Producto".
+          var m = /^([A-Za-z0-9]+)\s*[-–]\s*(.+)$/.exec(p.nombre || '');
+          var marca = m ? m[1].toUpperCase() : '';
+          var nombre = m ? m[2] : (p.nombre || '');
           return {
-            id: p._id || p.codigo || '', cat: slug, catNom: p.categoria || 'General',
-            marca: (p.marca || '').toUpperCase(), nombre: p.nombre,
-            specs: [], precio: p.precio || 0, img: p.foto || 'img/p-mechas.jpg'
+            id: p._id || '', cod: p.codigo || '', cat: slugCat(p.categoria),
+            catNom: p.categoria || 'General', marca: marca, nombre: nombre,
+            specs: (p.descripcion || '').split('·').map(function (s) { return s.trim(); }).filter(Boolean),
+            precio: p.precio || 0, img: p.foto || 'img/p-mechas.jpg'
           };
         });
       })
@@ -75,7 +88,7 @@
     return CATALOGO.filter(function (p) {
       if (estado.cat !== 'all' && p.cat !== estado.cat) return false;
       if (estado.marca !== 'all' && p.marca !== estado.marca) return false;
-      if (q && (p.nombre + ' ' + p.id + ' ' + p.marca + ' ' + p.catNom).toLowerCase().indexOf(q) === -1) return false;
+      if (q && (p.nombre + ' ' + (p.cod || '') + ' ' + p.marca + ' ' + p.catNom).toLowerCase().indexOf(q) === -1) return false;
       return true;
     });
   }
@@ -90,7 +103,7 @@
           '<span class="card-brand">' + p.marca + '</span>' +
         '</div>' +
         '<div class="card-body">' +
-          '<code class="card-sku">' + p.id + '</code>' +
+          (p.cod ? '<code class="card-sku">' + p.cod + '</code>' : '') +
           '<h3>' + p.nombre + '</h3>' +
           '<div class="card-specs">' + p.specs.map(function (s) { return '<span>' + s + '</span>'; }).join('') + '</div>' +
           '<div class="card-foot">' +
@@ -194,18 +207,26 @@
 
   function guardar() { try { localStorage.setItem('fp_cart', JSON.stringify(carrito)); } catch (e) {} }
 
+  function buscar(id) {
+    return CATALOGO.filter(function (x) { return x.id === id; })[0];
+  }
   function totalItems() {
-    return Object.keys(carrito).reduce(function (a, k) { return a + carrito[k]; }, 0);
+    return Object.keys(carrito).reduce(function (a, k) {
+      return a + (buscar(k) ? carrito[k] : 0);
+    }, 0);
   }
   function totalPesos() {
     return Object.keys(carrito).reduce(function (a, k) {
-      var p = CATALOGO.filter(function (x) { return x.id === k; })[0];
+      var p = buscar(k);
       return a + (p ? p.precio * carrito[k] : 0);
     }, 0);
   }
 
   function pintarCarrito() {
-    var keys = Object.keys(carrito);
+    // Solo ítems que existan en el catálogo actual: un carrito guardado de una
+    // visita anterior puede tener IDs que ya no están (catálogo actualizado, o
+    // el local todavía no llegó y está el de respaldo).
+    var keys = Object.keys(carrito).filter(function (k) { return !!buscar(k); });
     $('#cartCount').textContent = totalItems();
     $('#navCart').classList.toggle('has', keys.length > 0);
     $('#cartTotal').textContent = money(totalPesos());
@@ -217,11 +238,10 @@
     }
     $('#cartSend').classList.remove('is-off');
     cartBody.innerHTML = keys.map(function (k) {
-      var p = CATALOGO.filter(function (x) { return x.id === k; })[0];
-      if (!p) return '';
+      var p = buscar(k);
       return '<div class="cart-item">' +
         '<img src="' + p.img + '" alt="" width="80" height="60" loading="lazy">' +
-        '<div class="ci-txt"><code>' + p.id + '</code><h4>' + p.nombre + '</h4>' +
+        '<div class="ci-txt">' + (p.cod ? '<code>' + p.cod + '</code>' : '') + '<h4>' + p.nombre + '</h4>' +
         '<b>' + money(p.precio * carrito[k]) + '</b></div>' +
         '<div class="ci-qty"><button data-minus="' + k + '" aria-label="Quitar uno">−</button>' +
         '<span>' + carrito[k] + '</span>' +
@@ -230,8 +250,8 @@
     }).join('');
 
     var lineas = keys.map(function (k) {
-      var p = CATALOGO.filter(function (x) { return x.id === k; })[0];
-      return '• ' + carrito[k] + 'x ' + p.nombre + ' (' + p.id + ') — ' + money(p.precio * carrito[k]);
+      var p = buscar(k);
+      return '• ' + carrito[k] + 'x ' + p.nombre + (p.cod ? ' (' + p.cod + ')' : '') + ' — ' + money(p.precio * carrito[k]);
     }).join('\n');
     var texto = (CFG.WA_TEXTO || 'Hola, quiero hacer un pedido:') + '\n\n' + lineas +
       '\n\nTotal estimado: ' + money(totalPesos()) + '\n\n¿Me confirmás stock y forma de envío?';
