@@ -214,7 +214,10 @@
   /* ══ Tarjetas ════════════════════════════════════════════ */
   function tarjeta(p) {
     var n = FP.cant(p.id);
+    // El badge es la primera spec ("800W", "13mm"). Si en el panel cargaron una
+    // descripción larga en vez de specs separadas por ·, no entra: se omite.
     var badge = (p.specs || [])[0];
+    if (badge && badge.length > 22) badge = '';
     return '' +
       '<article class="pcard" data-id="' + esc(p.id) + '">' +
         (badge ? '<span class="pcard-badge">' + esc(badge) + '</span>' : '') +

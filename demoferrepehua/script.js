@@ -40,7 +40,11 @@
         '<div class="card-body">' +
           (p.cod ? '<code class="card-sku">' + p.cod + '</code>' : '') +
           '<h3>' + p.nombre + '</h3>' +
-          '<div class="card-specs">' + (p.specs || []).slice(0, 3).map(function (s) {
+          // Solo specs cortas ("800W", "13mm"): una descripción larga cargada en
+          // el panel no entra como chip.
+          '<div class="card-specs">' + (p.specs || []).filter(function (s) {
+            return s.length <= 22;
+          }).slice(0, 3).map(function (s) {
             return '<span>' + s + '</span>';
           }).join('') + '</div>' +
           '<div class="card-foot">' +
