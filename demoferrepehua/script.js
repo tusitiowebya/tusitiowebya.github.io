@@ -21,12 +21,10 @@
   function pago(p) {
     var mejor = FP.mejorMedio(p), cuotas = p.cuotas || 0;
     return (mejor
-        ? '<p class="card-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + mejor.medio +
-          ' <i>−' + mejor.pct + '%</i></p>'
+        ? '<p class="card-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + mejor.medio + '</p>'
         : '') +
       (cuotas > 1
-        ? '<p class="card-cuotas">' + cuotas + ' cuotas sin interés de <b>' +
-          money(p.precio / cuotas) + '</b></p>'
+        ? '<p class="card-cuotas">' + cuotas + 'x ' + money(p.precio / cuotas) + ' sin interés</p>'
         : '');
   }
 

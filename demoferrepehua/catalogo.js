@@ -13,10 +13,8 @@
 
   var POR_PAGINA = 12;
 
-  // Marcas oficiales de la ferretería: la barra las muestra siempre, aunque
-  // todavía no haya productos de esa marca cargados en el panel. Las que el
-  // panel cargue además de estas se suman con un color propio.
-  var MARCAS = ['INGCO', 'TOTAL', 'EMTOP', 'WADFOW'];
+  // Color de las marcas que trabaja la ferretería; cualquier otra que se cargue
+  // en el panel recibe uno propio.
   var COLOR_MARCA = { INGCO:'#F0A400', TOTAL:'#00A19A', EMTOP:'#E11B22', WADFOW:'#0F4C9B' };
   var PALETA = ['#0F4C9B', '#B0431E', '#00726B', '#6B3FA0', '#A3121B', '#1F6F3F'];
 
@@ -104,12 +102,25 @@
     return lista;
   }
 
-  /* ══ Solapas de marca ════════════════════════════════════ */
+  /* ══ Solapas de marca ════════════════════════════════════
+     Las marcas salen de los productos cargados en el panel: si una marca no
+     tiene productos no se muestra, y una marca nueva aparece sola. */
   function pintarMarcas() {
-    var marcas = MARCAS.slice();
+    var marcas = [];
     FP.productos().forEach(function (p) {
       if (p.marca && marcas.indexOf(p.marca) < 0) marcas.push(p.marca);
     });
+    marcas.sort(function (a, b) { return a.localeCompare(b, 'es'); });
+
+    // Sin marcas cargadas no hay nada que filtrar: la barra queda solo con el
+    // botón de categorías en vez de mostrar solapas vacías.
+    if (!marcas.length) {
+      $$('[data-brands]').forEach(function (n) { n.innerHTML = ''; });
+      $('#sideMark').textContent = 'Catálogo';
+      $('#sideMark').style.color = '';
+      return;
+    }
+
     var html = ['<button class="brandtab brandtab-all' + (estado.marca === 'all' ? ' is-on' : '') +
                 '" data-brand="all">Todas las marcas</button>'];
     marcas.forEach(function (m) {
@@ -193,12 +204,10 @@
     var cuotas = p.cuotas || 0;
     return '<div class="pcard-price">' + money(p.precio) + '</div>' +
       (mejor
-        ? '<p class="pcard-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + esc(mejor.medio) +
-          '<i>−' + mejor.pct + '%</i></p>'
+        ? '<p class="pcard-pay"><b>' + money(mejor.precioFinal) + '</b> con ' + esc(mejor.medio) + '</p>'
         : '<p class="pcard-note">Precio final en ARS</p>') +
       (cuotas > 1
-        ? '<p class="pcard-cuotas">' + cuotas + ' cuotas sin interés de <b>' +
-          money(p.precio / cuotas) + '</b></p>'
+        ? '<p class="pcard-cuotas">' + cuotas + 'x ' + money(p.precio / cuotas) + ' sin interés</p>'
         : '');
   }
 
@@ -299,13 +308,12 @@
     if (!medios.length && cuotas < 2) return '';
     var filas = medios.map(function (m) {
       return '<li><span>' + esc(m.medio) + '</span>' +
-        (m.pct > 0
-          ? '<b>' + money(FP.precioCon(p.precio, m.pct)) + '</b><em>−' + m.pct + '%</em>'
-          : '<b>' + money(p.precio) + '</b>') + '</li>';
+        (m.pct > 0 ? '<em>−' + m.pct + '%</em>' : '') +
+        '<b>' + money(FP.precioCon(p.precio, m.pct)) + '</b></li>';
     });
     if (cuotas > 1) {
-      filas.push('<li><span>' + cuotas + ' cuotas sin interés</span><b>' +
-        money(p.precio / cuotas) + '</b><em>por mes</em></li>');
+      filas.push('<li><span>' + cuotas + ' cuotas sin interés</span><em>por mes</em><b>' +
+        money(p.precio / cuotas) + '</b></li>');
     }
     return '<div class="sheet-pay"><h3>Formas de pago</h3><ul>' + filas.join('') + '</ul></div>';
   }
