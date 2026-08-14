@@ -547,3 +547,33 @@ code{font-family:'IBM Plex Mono',ui-monospace,monospace}
   .cta-box{padding:22px}
   .ticker span{font-size:.66rem;letter-spacing:.16em}
 }
+
+/* ═══════ DESTACADOS DEL HOME (v2) ════════════════════════ */
+.cat-head-link{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:8px;
+  background:var(--ink);color:#fff;font-size:.92rem;font-weight:700;white-space:nowrap;
+  transition:transform .25s var(--ease),background .2s;
+}
+.cat-head-link:hover{background:#16293C;transform:translateY(-2px)}
+.cat-foot-cta{display:flex;flex-wrap:wrap;gap:10px}
+
+/* Stepper de cantidad en la tarjeta (compartido con /catalogo/) */
+.card-stepper{
+  margin-top:14px;display:flex;align-items:center;justify-content:space-between;
+  background:var(--amber);border-radius:8px;padding:4px;
+}
+.card-stepper button{
+  width:34px;height:32px;border-radius:6px;background:rgba(7,21,34,.1);color:var(--ink);
+  font-size:1.05rem;font-weight:800;line-height:1;transition:background .2s;
+}
+.card-stepper button:hover{background:rgba(7,21,34,.22)}
+.card-stepper span{font-size:.8rem;font-weight:700;color:var(--ink)}
+
+.rubro-list li.is-empty{opacity:.42}
+.rubro-list li.is-empty .rc{opacity:.6}
+
+@media (max-width:640px){
+  .cat-head-link{width:100%;justify-content:center}
+  .cat-foot-cta{width:100%}
+  .cat-foot-cta .btn{flex:1 1 100%;justify-content:center}
+}
