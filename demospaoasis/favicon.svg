@@ -1,0 +1,156 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="disc" cx="42%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#4A1552"></stop>
+      <stop offset="55%" stop-color="#33093B"></stop>
+      <stop offset="100%" stop-color="#22052A"></stop>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8BD8"></stop>
+      <stop offset="45%" stop-color="#FF3DAF"></stop>
+      <stop offset="100%" stop-color="#E5169A"></stop>
+    </linearGradient>
+    <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A6B2E"></stop>
+      <stop offset="60%" stop-color="#6E5322"></stop>
+      <stop offset="100%" stop-color="#57411A"></stop>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="b"></feGaussianBlur>
+      <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+  </defs>
+
+  <!-- halo neon -->
+  <circle cx="512" cy="512" r="462" fill="none" stroke="#FF3DAF" stroke-width="26" opacity=".33" filter="url(#glow)"></circle>
+  <!-- disco -->
+  <circle cx="512" cy="512" r="452" fill="url(#disc)"></circle>
+  <!-- aro neon -->
+  <circle cx="512" cy="512" r="462" fill="none" stroke="url(#ring)" stroke-width="20"></circle>
+  <circle cx="512" cy="512" r="462" fill="none" stroke="#FFD9F2" stroke-width="6" opacity=".85"></circle>
+
+  <g id="palm" transform="translate(512,600) scale(1.42) translate(-512,-470)">
+    <!-- tronco -->
+    <path d="M 494 424 C 486 500 470 556 434 604 C 452 612 468 610 480 600 C 508 556 520 494 526 428 Z" fill="url(#trunk)"></path>
+    <g stroke="#3F2F12" stroke-width="3" opacity=".55" fill="none">
+      <path d="M 489 462 L 519 464"></path><path d="M 483 492 L 513 495"></path>
+      <path d="M 475 522 L 504 527"></path><path d="M 464 552 L 492 559"></path>
+      <path d="M 450 580 L 477 590"></path>
+    </g>
+    <path d="M 512.0 430.0 Q 492.6 397.0 470.1 391.0 L 468.6 414.2 Q 445.9 384.8 421.4 387.9 L 422.6 414.0 Q 395.5 393.0 371.5 406.8 L 376.5 427.8 Q 348.4 425.4 329.3 449.0 L 334.9 459.4 Q 315.3 479.5 304.7 509.6 L 304.7 509.6 L 304.7 509.6 L 304.7 509.6 Q 327.3 494.8 346.4 480.5 L 340.7 470.1 Q 368.5 478.0 386.7 470.5 L 381.7 449.5 Q 406.8 473.1 425.1 466.9 L 423.9 440.8 Q 445.1 468.8 465.4 461.4 L 467.0 438.2 Q 487.2 459.2 509.9 449.9 Z" fill="#3F9526"></path><path d="M 512.0 430.0 Q 536.2 459.2 557.4 461.5 L 555.8 438.3 Q 577.1 468.9 596.5 467.0 L 597.7 440.9 Q 614.2 473.0 633.7 470.3 L 638.7 449.2 Q 651.3 477.4 672.9 479.5 L 678.5 469.2 Q 691.5 493.2 713.7 507.4 L 713.7 507.4 L 713.7 507.4 L 713.7 507.4 Q 703.6 478.0 690.0 448.1 L 684.4 458.4 Q 671.5 424.8 648.9 406.5 L 643.9 427.6 Q 625.5 392.9 600.2 387.9 L 599.0 414.0 Q 576.3 384.9 552.7 391.1 L 554.2 414.3 Q 530.8 397.1 509.9 410.1 Z" fill="#3F9526"></path><path d="M 512.0 430.0 Q 509.2 396.1 493.9 383.5 L 484.1 402.2 Q 476.9 370.1 456.2 364.4 L 448.1 386.7 Q 433.4 360.2 409.2 364.0 L 406.6 383.5 Q 384.2 372.9 361.2 387.4 L 363.0 398.0 Q 340.9 410.1 324.0 433.3 L 324.0 433.3 L 324.0 433.3 L 324.0 433.3 Q 347.1 426.6 366.7 419.5 L 364.9 408.9 Q 385.0 424.1 401.3 423.1 L 403.9 403.6 Q 415.7 431.6 431.5 432.0 L 439.7 409.7 Q 446.0 440.0 464.2 440.4 L 474.0 421.6 Q 481.9 445.8 502.9 445.7 Z" fill="#57B532"></path><path d="M 512.0 430.0 Q 541.8 446.0 559.1 440.7 L 549.3 422.0 Q 576.9 440.5 591.0 432.6 L 582.9 410.3 Q 606.4 432.3 620.5 423.9 L 617.8 404.4 Q 636.2 424.8 654.2 420.1 L 656.0 409.5 Q 673.3 426.9 696.0 433.2 L 696.0 433.2 L 696.0 433.2 L 696.0 433.2 Q 679.6 410.4 659.6 388.0 L 657.8 398.6 Q 637.1 373.6 612.5 364.8 L 615.1 384.3 Q 588.8 360.9 566.3 365.1 L 574.5 387.4 Q 546.1 370.6 529.4 383.8 L 539.2 402.6 Q 514.5 396.3 502.9 414.3 Z" fill="#57B532"></path><path d="M 512.0 430.0 Q 523.4 398.4 514.6 379.2 L 498.3 391.1 Q 501.3 359.9 481.3 346.8 L 467.9 361.9 Q 455.0 338.6 426.9 337.8 L 422.7 349.0 Q 395.8 349.1 368.8 363.2 L 368.8 363.2 L 368.8 363.2 L 368.8 363.2 Q 393.5 368.9 414.0 371.6 L 418.3 360.5 Q 426.4 385.9 440.7 392.6 L 454.1 377.5 Q 449.5 407.1 465.1 415.3 L 481.5 403.4 Q 478.4 428.8 498.1 438.7 Z" fill="#3F9526"></path><path d="M 512.0 430.0 Q 545.4 429.1 558.6 415.8 L 542.3 403.8 Q 574.1 407.7 582.7 393.4 L 569.3 378.3 Q 596.7 386.7 608.8 372.6 L 604.6 361.4 Q 629.0 369.8 653.4 364.1 L 653.4 364.1 L 653.4 364.1 L 653.4 364.1 Q 626.8 350.0 595.9 338.8 L 600.2 349.9 Q 568.1 339.4 542.1 347.5 L 555.5 362.7 Q 522.2 360.5 509.1 379.6 L 525.4 391.5 Q 500.4 398.6 498.1 421.3 Z" fill="#3F9526"></path><path d="M 512.0 430.0 Q 534.6 412.1 536.2 395.5 L 518.3 397.6 Q 536.3 377.7 528.6 361.2 L 511.1 365.5 Q 517.7 344.8 501.5 331.6 L 492.0 336.4 Q 481.2 321.8 460.8 314.9 L 460.8 314.9 L 460.8 314.9 L 460.8 314.9 Q 466.7 332.0 472.7 346.0 L 482.2 341.3 Q 471.6 361.8 475.7 374.4 L 493.2 370.0 Q 475.0 388.8 482.0 401.7 L 499.9 399.7 Q 486.5 416.5 497.5 431.0 Z" fill="#57B532"></path><path d="M 512.0 430.0 Q 537.5 416.8 541.9 402.2 L 524.0 400.2 Q 548.9 389.5 548.1 375.3 L 530.7 371.0 Q 552.1 363.0 550.9 347.5 L 541.4 342.7 Q 556.7 333.6 562.4 316.7 L 562.4 316.7 L 562.4 316.7 L 562.4 316.7 Q 542.2 323.4 522.1 333.1 L 531.6 337.8 Q 506.0 346.0 495.3 362.2 L 512.7 366.5 Q 487.6 378.4 487.8 396.0 L 505.6 398.1 Q 489.4 412.4 497.5 429.0 Z" fill="#57B532"></path>
+    <circle cx="512" cy="428" r="16" fill="#3F9526"></circle>
+  </g>
+
+  
+</svg></div>
+<script>
+// ---- frond generator: espina curva + lobulos serrados ----
+function frond(x0, y0, ang, len, width, lobes, curve){
+  const rad = a => a*Math.PI/180;
+  // spine points
+  const pts=[];
+  for(let i=0;i<=lobes;i++){
+    const t=i/lobes;
+    const a=rad(ang + curve*t*t);
+    // integrate roughly: use quadratic-ish position
+    const aa=rad(ang + curve*t*t*0.5);
+    pts.push([x0+Math.cos(aa)*len*t, y0+Math.sin(aa)*len*t, a, t]);
+  }
+  const off=(p,s)=>[p[0]+Math.cos(p[2]+Math.PI/2)*s, p[1]+Math.sin(p[2]+Math.PI/2)*s];
+  const w=t=>width*Math.sin(Math.PI*Math.min(1,0.15+t*0.85))*(1-0.25*t);
+  let d='';
+  // lado A (de base a punta) con lobulos
+  for(let i=0;i<pts.length;i++){
+    const p=pts[i], t=p[3];
+    const tip=off(p, w(t));
+    if(i===0){ d+=`M ${p[0].toFixed(1)} ${p[1].toFixed(1)} `; continue; }
+    const prev=pts[i-1];
+    const mid=[(prev[0]+p[0])/2,(prev[1]+p[1])/2,(prev[2]+p[2])/2,(prev[3]+p[3])/2];
+    const midOut=off(mid, w(mid[3])*1.08);
+    d+=`Q ${midOut[0].toFixed(1)} ${midOut[1].toFixed(1)} ${tip[0].toFixed(1)} ${tip[1].toFixed(1)} `;
+    // muesca parcial (no llega a la espina: la fronda queda entera)
+    const notch=off(p, w(t)*0.34);
+    d+=`L ${notch[0].toFixed(1)} ${notch[1].toFixed(1)} `;
+  }
+  // punta
+  const last=pts[pts.length-1];
+  d+=`L ${last[0].toFixed(1)} ${last[1].toFixed(1)} `;
+  // lado B (de punta a base)
+  for(let i=pts.length-1;i>0;i--){
+    const p=pts[i], prev=pts[i-1];
+    const tip=off(prev, -w(prev[3]));
+    const mid=[(prev[0]+p[0])/2,(prev[1]+p[1])/2,(prev[2]+p[2])/2,(prev[3]+p[3])/2];
+    const midOut=off(mid, -w(mid[3])*1.08);
+    const notch=off(p, -w(p[3])*0.34);
+    d+=`L ${notch[0].toFixed(1)} ${notch[1].toFixed(1)} `;
+    d+=`Q ${midOut[0].toFixed(1)} ${midOut[1].toFixed(1)} ${tip[0].toFixed(1)} ${tip[1].toFixed(1)} `;
+  }
+  d+='Z';
+  return d;
+}
+
+const G1='#57B532', G2='#3F9526';
+// fronds: [angulo, largo, ancho, lobulos, curvatura, color]
+const F=[
+  [186, 222, 44, 5, -54, G2],
+  [-6,  216, 44, 5,  54, G2],
+  [210, 188, 40, 5, -62, G1],
+  [-30, 184, 40, 5,  62, G1],
+  [238, 158, 36, 4, -66, G2],
+  [-58, 156, 36, 4,  66, G2],
+  [266, 126, 32, 4, -40, G1],
+  [-86, 124, 32, 4,  40, G1]
+];
+const px=512, py=430;
+let fr='';
+F.forEach(f=>{ fr+=`<path d="${frond(px,py,f[0],f[1],f[2],f[3],f[4])}" fill="${f[5]}"/>`; });
+
+const svg=`
+<svg id="svg" width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="disc" cx="42%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#4A1552"/>
+      <stop offset="55%" stop-color="#33093B"/>
+      <stop offset="100%" stop-color="#22052A"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF8BD8"/>
+      <stop offset="45%" stop-color="#FF3DAF"/>
+      <stop offset="100%" stop-color="#E5169A"/>
+    </linearGradient>
+    <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A6B2E"/>
+      <stop offset="60%" stop-color="#6E5322"/>
+      <stop offset="100%" stop-color="#57411A"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- halo neon -->
+  <circle cx="512" cy="512" r="462" fill="none" stroke="#FF3DAF" stroke-width="26" opacity=".33" filter="url(#glow)"/>
+  <!-- disco -->
+  <circle cx="512" cy="512" r="452" fill="url(#disc)"/>
+  <!-- aro neon -->
+  <circle cx="512" cy="512" r="462" fill="none" stroke="url(#ring)" stroke-width="20"/>
+  <circle cx="512" cy="512" r="462" fill="none" stroke="#FFD9F2" stroke-width="6" opacity=".85"/>
+
+  <g id="palm">
+    <!-- tronco -->
+    <path d="M 494 424 C 486 500 470 556 434 604 C 452 612 468 610 480 600 C 508 556 520 494 526 428 Z" fill="url(#trunk)"/>
+    <g stroke="#3F2F12" stroke-width="3" opacity=".55" fill="none">
+      <path d="M 489 462 L 519 464"/><path d="M 483 492 L 513 495"/>
+      <path d="M 475 522 L 504 527"/><path d="M 464 552 L 492 559"/>
+      <path d="M 450 580 L 477 590"/>
+    </g>
+    ${fr}
+    <circle cx="512" cy="428" r="16" fill="${G2}"/>
+  </g>
+
+  <g id="txt" fill="#C93A6B" text-anchor="middle" font-family="'Alfa Slab One', serif">
+    <text x="512" y="736" font-size="150">Spa</text>
+    <text x="512" y="874" font-size="150">Oasis</text>
+  </g>
+</svg>
