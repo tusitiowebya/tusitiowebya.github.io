@@ -5,7 +5,20 @@
   'use strict';
 
   var WA = '5493424095987';
+  var html = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* lite.js ya decidió antes del primer render; acá solo lo leemos */
+  var isLite = html.classList.contains('lite');
+
+  /* ── VIDEO DEL HERO ─────────────────────── */
+  /* En LITE nunca se pide el mp4: queda el poster.jpg como fondo fijo. */
+  var heroVideo = document.getElementById('heroVideo');
+  if (heroVideo && !isLite) {
+    heroVideo.src = heroVideo.dataset.src;
+    heroVideo.load();
+    var p = heroVideo.play();
+    if (p && p.catch) p.catch(function () { /* autoplay bloqueado: queda el poster */ });
+  }
 
   /* ── NAV ────────────────────────────────── */
   var nav = document.getElementById('nav');
@@ -53,8 +66,9 @@
   });
 
   /* ── STARFIELD DEL HERO (canvas 2D liviano) ─ */
+  var stopStars = null;
   var cv = document.getElementById('stars');
-  if (cv && !reduce) {
+  if (cv && !reduce && !isLite) {
     var ctx = cv.getContext('2d');
     var stars = [], w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
     var mx = 0, my = 0, cx = 0, cy = 0;
@@ -77,7 +91,11 @@
       }
     }
 
+    var alive = true;
+    stopStars = function () { alive = false; ctx.clearRect(0, 0, w, h); };
+
     function draw() {
+      if (!alive) return;
       cx += (mx - cx) * 0.045;
       cy += (my - cy) * 0.045;
       ctx.clearRect(0, 0, w, h);
@@ -107,7 +125,7 @@
 
   /* ── TILT DEL LIBRO ─────────────────────── */
   var book = document.getElementById('book');
-  if (book && !reduce && window.matchMedia('(pointer:fine)').matches) {
+  if (book && !reduce && !isLite && window.matchMedia('(pointer:fine)').matches) {
     var host = book.parentElement;
     host.addEventListener('mousemove', function (e) {
       var r = host.getBoundingClientRect();
@@ -178,7 +196,8 @@
     }
 
     // polvo estelar sobre los brazos
-    for (var i = 0; i < 260; i++) {
+    var DUST = isLite ? 90 : 260;
+    for (var i = 0; i < DUST; i++) {
       var arm = Math.floor(Math.random() * ARMS);
       var th2 = Math.random() * 11.2;
       var pt = spiralPoint(th2, (arm * 2 * Math.PI) / ARMS, A, B);
@@ -370,5 +389,27 @@
     update();
   }
 
-  /* ── AÑO / NADA MÁS ─────────────────────── */
+  /* ── WATCHDOG DE FPS ────────────────────────
+     lite.js atrapa el caso obvio (render por software). Esto atrapa
+     el resto: si los primeros 2 segundos no llegan a ~28 fps, pasamos
+     a LITE en caliente y lo dejamos anotado para la próxima carga. */
+  if (!isLite && !reduce) {
+    var frames = 0, t0 = performance.now(), corte = t0 + 2000;
+
+    (function medir(t) {
+      frames++;
+      if (t < corte) return requestAnimationFrame(medir);
+
+      var fps = (frames * 1000) / (t - t0);
+      if (fps < 28) {
+        isLite = true;
+        html.classList.add('lite');
+        html.setAttribute('data-lite', 'watchdog:' + Math.round(fps) + 'fps');
+        if (stopStars) stopStars();
+        if (heroVideo) { heroVideo.pause(); heroVideo.removeAttribute('src'); heroVideo.load(); }
+        if (book) book.style.transform = '';
+        try { sessionStorage.setItem('sg-lite', '1'); } catch (e) {}
+      }
+    })(t0);
+  }
 })();

@@ -525,6 +525,52 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .frag__text{min-height:0}
 }
 
+/* ════════════════════════════════════════════
+   MODO LITE — equipos sin aceleración por hardware
+   (lo activa lite.js o el watchdog de FPS de script.js)
+   Fuera: canvas, backdrop-filter, blur pesado y loops.
+   Queda: la misma paleta, tipografía y estructura.
+   ════════════════════════════════════════════ */
+.lite .hero__stars{display:none}
+
+.lite .nav.is-stuck{background:#070B18;backdrop-filter:none}
+.lite .btn--ghost,.lite .rep__play{backdrop-filter:none;background:rgba(14,22,48,.72)}
+
+.lite .nav__mark,
+.lite #spiralRot,
+.lite .book__body,
+.lite .book__glow,
+.lite .hero__scrollrail i{animation:none}
+
+.lite .hero__scrollrail{
+  background:linear-gradient(180deg,var(--cian),transparent);
+}
+
+/* Sin blur, el halo radial bandea sobre el fondo oscuro: lo sacamos y
+   el libro se despega con un box-shadow teñido, que no banda. */
+.lite .book__glow{display:none}
+.lite .book__body{
+  box-shadow:0 30px 70px -24px rgba(0,0,0,.95),
+             0 0 46px -6px rgba(95,214,232,.22),
+             0 0 0 1px rgba(255,255,255,.08);
+}
+.lite .book__shadow{filter:none;opacity:.55}
+.lite .book__gloss{display:none}
+.lite .book{transform:none!important}
+
+/* el fondo del hero pasa a ser el poster + degradado, sin video */
+.lite .hero__video{object-position:center}
+.lite .relato__sky{display:none}
+.lite .relato{background:linear-gradient(180deg,var(--void),#060A16 50%,var(--void))}
+
+/* la espiral queda quieta; el polvo lo achica script.js */
+.lite .node circle.halo{transition:none}
+
+/* transiciones cortas: se sigue sintiendo vivo pero sin trabajo de compositor */
+.lite .reveal{transition-duration:.35s}
+.lite .rep img,.lite .autor__media img{transition:none}
+.lite .rep:hover img{transform:none}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
