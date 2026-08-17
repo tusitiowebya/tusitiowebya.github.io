@@ -4,50 +4,110 @@
     {
       "name": "demorecymack",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8772", "--directory", "demorecymack"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8772",
+        "--directory",
+        "demorecymack"
+      ],
       "port": 8772
     },
     {
       "name": "demotet",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "demotet"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8787",
+        "--directory",
+        "demotet"
+      ],
       "port": 8787
     },
     {
       "name": "demofnc",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8766", "--directory", "demofnc"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8766",
+        "--directory",
+        "demofnc"
+      ],
       "port": 8766
     },
     {
       "name": "demobyl",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "demobyl"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765",
+        "--directory",
+        "demobyl"
+      ],
       "port": 8765
     },
     {
       "name": "demotf",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8768", "--directory", "demotf"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8768",
+        "--directory",
+        "demotf"
+      ],
       "port": 8768
     },
     {
       "name": "demootsoblack",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8769", "--directory", "demootsoblack"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8769",
+        "--directory",
+        "demootsoblack"
+      ],
       "port": 8769
     },
     {
       "name": "demoferchu",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8770", "--directory", "demoferchu"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8770",
+        "--directory",
+        "demoferchu"
+      ],
       "port": 8770
     },
     {
       "name": "demosaleresto",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8771", "--directory", "demosaleresto"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8771",
+        "--directory",
+        "demosaleresto"
+      ],
       "port": 8771
+    },
+    {
+      "name": "demosolosenlagalaxia",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--directory",
+        "demosolosenlagalaxia"
+      ],
+      "port": 8791
     }
   ]
 }
