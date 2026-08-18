@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <rect width="60" height="60" fill="#0B0A08"/>
+  <path d="M30 5 L52 13 V29 C52 43 43 51 30 55 C17 51 8 43 8 29 V13 Z" fill="rgba(234,208,138,.10)" stroke="#EAD08A" stroke-width="2.2"/>
+  <text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="21" fill="#EAD08A">LC</text>
+</svg>
