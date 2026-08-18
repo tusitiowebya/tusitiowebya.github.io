@@ -96,11 +96,11 @@ function updateResult() {
 
   const waLink = document.getElementById('resultWa');
   if (state.terreno && state.nivel && state.grupo && state.noches) {
-    const msg = `Hola Demi! Quiero coordinar: ${TERRENO_LABEL[state.terreno]}, ${NIVEL_LABEL[state.nivel]}, ${GRUPO_LABEL[state.grupo]}, ${NOCHES_LABEL[state.noches]}.`;
+    const msg = `Hola! Quiero coordinar: ${TERRENO_LABEL[state.terreno]}, ${NIVEL_LABEL[state.nivel]}, ${GRUPO_LABEL[state.grupo]}, ${NOCHES_LABEL[state.noches]}.`;
     waLink.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
     waLink.textContent = 'Coordinar por WhatsApp';
   } else {
-    waLink.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hola Demi! Quiero consultar por una travesía 4x4 con alojamiento')}`;
+    waLink.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hola! Quiero consultar por una travesía 4x4 con alojamiento')}`;
     waLink.textContent = 'Elegí las 4 opciones y coordiná';
   }
 }
