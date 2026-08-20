@@ -314,6 +314,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .autor__social a:hover{border-color:var(--violeta);color:var(--violeta);transform:translateY(-2px)}
 
+.autor__timeline{list-style:none;margin:1.8rem 0 0;padding:0 0 0 1.1rem;border-left:1px solid var(--line-2)}
+.autor__timeline li{position:relative;padding:0 0 1.3rem 1.3rem}
+.autor__timeline li:last-child{padding-bottom:0}
+.autor__timeline li::before{
+  content:"";position:absolute;left:-1.5rem;top:.35rem;width:9px;height:9px;border-radius:50%;
+  background:var(--cian);box-shadow:0 0 0 3px rgba(95,214,232,.18);
+}
+.autor__tYear{
+  display:block;font-family:var(--serif);font-size:1rem;color:var(--oro);
+  letter-spacing:.02em;margin-bottom:.15rem;
+}
+.autor__timeline p{margin:0;font-size:.9rem;color:var(--texto-2)}
+.autor__timeline p b{color:var(--texto);font-weight:500}
+
+.autor__full{margin-top:1.6rem;border-top:1px solid var(--line);padding-top:1.1rem}
+.autor__full summary{
+  cursor:pointer;font-size:.85rem;color:var(--cian);list-style:none;
+  display:inline-flex;align-items:center;gap:.4rem;
+}
+.autor__full summary::-webkit-details-marker{display:none}
+.autor__full summary::after{content:"↓";transition:transform .3s}
+.autor__full[open] summary::after{transform:rotate(180deg)}
+.autor__full p{margin-top:1rem;font-size:.85rem;color:var(--texto-2);line-height:1.75}
+
 /* ════════ LIBRERÍAS ════════ */
 .libs{padding:clamp(5rem,11vh,8rem) 0;background:var(--deep);border-top:1px solid var(--line)}
 .libs__head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
@@ -345,6 +369,43 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .libs__cta h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2.6vw,1.8rem);margin:0 0 .3rem}
 .libs__cta p{margin:0;color:var(--texto-2);font-size:.92rem}
+
+.libs__gallery{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;margin-bottom:2.6rem;
+}
+.libs__gallery img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid var(--line);
+  filter:grayscale(.25) contrast(1.05);transition:filter .4s,transform .4s;
+}
+.libs__gallery img:hover{filter:grayscale(0) contrast(1);transform:translateY(-3px)}
+
+.libs__sub{
+  font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--texto-2);
+  margin:2.6rem 0 1rem;
+}
+.libs__grid + .libs__sub{margin-top:2.6rem}
+
+.libs__intl{margin-top:2.6rem;border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.5rem}
+.libs__intl summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;
+  font-family:var(--serif);font-size:1.1rem;color:var(--texto);
+}
+.libs__intl summary::-webkit-details-marker{display:none}
+.libs__intl summary span{font-size:.78rem;color:var(--texto-3);font-family:var(--sans)}
+.libs__intl summary::before{content:"+";margin-right:.2rem;color:var(--cian);font-size:1.3rem;transition:transform .3s}
+.libs__intl[open] summary::before{content:"–"}
+.libs__intl-body{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:1.4rem;padding-top:1.4rem;
+  border-top:1px solid var(--line);
+}
+.libs__intl-group h4{
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-3);
+  margin:0 0 .7rem;font-weight:400;
+}
+.libs__intl-group{display:flex;flex-direction:column;gap:.55rem}
+.libs__intl-group a{font-size:.86rem;color:var(--texto-2);transition:.2s}
+.libs__intl-group a:hover{color:var(--cian)}
+.libs__intl-more{margin:1.2rem 0 0;font-size:.78rem;color:var(--texto-3);font-style:italic}
 
 /* ════════ REPORTAJES ════════ */
 .reps{padding:clamp(5rem,11vh,8rem) 0;background:var(--void)}
@@ -505,6 +566,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero__copy{text-align:left}
   .libs__head{flex-direction:column;align-items:flex-start}
   .lede--right{text-align:left;margin-left:0}
+  .libs__gallery{grid-template-columns:repeat(3,1fr)}
+  .libs__intl-body{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:768px){
   .hero{min-height:auto;padding-bottom:7.5rem}
@@ -515,6 +578,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .foot__grid{grid-template-columns:1fr;gap:2rem}
   .libs__cta{flex-direction:column;align-items:flex-start}
   .libs__cta .btn{width:100%}
+  .libs__gallery{grid-template-columns:repeat(2,1fr)}
+  .libs__intl-body{grid-template-columns:1fr}
 }
 @media (max-width:480px){
   .hero__ctas{flex-direction:column;align-items:stretch}

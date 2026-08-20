@@ -241,22 +241,71 @@
 <section class="autor" id="autor">
   <div class="wrap autor__grid">
     <figure class="autor__media">
-      <img src="img/observatorio.jpg" alt="Observatorio astronómico bajo la Vía Láctea" loading="lazy">
-      <figcaption>Placeholder — reemplazar por foto real del autor</figcaption>
+      <img src="img/autor.jpg" alt="Claudio Adrián Varrone presentando Solos en la galaxia" loading="lazy">
+      <figcaption>Claudio Adrián Varrone, en la presentación del libro</figcaption>
     </figure>
     <div class="autor__copy">
       <p class="kicker">Quién escribe</p>
       <h2 class="h2">Claudio Adrián<br>Varrone</h2>
       <p>
-        Escritor y divulgador argentino. Escribe sobre astronomía desde el lugar
-        del que mira el cielo y quiere entenderlo, no desde la cátedra: sin fórmulas
-        indigeribles, sin bajar el nivel.
+        Nacido en <b>Santa Fe</b> en 1972. A los 9 años tuvo sus primeros prismáticos
+        para cotejar el cielo; a los 13, un viernes 13 de diciembre de 1985, se asoció
+        al <b>Centro Observadores Del Espacio (C.O.D.E.)</b>. Nunca dejó de mirar hacia arriba.
       </p>
-      <p>
-        <b>Solos en la galaxia</b> es el resultado de años de leer, calcular y contar.
-        El libro se editó con <b>Editorial Autores de Argentina</b> y hoy se consigue
-        en librerías del país y en plataformas internacionales.
-      </p>
+
+      <ol class="autor__timeline" id="autorTimeline">
+        <li>
+          <span class="autor__tYear">1985</span>
+          <p>Se asocia al <b>C.O.D.E.</b> y cursa Matemática, Cosmografía y Construcción
+            de Telescopios con los profesores Jorge Coghlan y Ángel Meynet.</p>
+        </li>
+        <li>
+          <span class="autor__tYear">A los 23</span>
+          <p>Construye su <b>primer telescopio reflector</b> propio.</p>
+        </li>
+        <li>
+          <span class="autor__tYear">SETI@home</span>
+          <p>Receptor de datos del proyecto <b>SETI</b> (Search for Extraterrestrial
+            Intelligence), analizando señales de radio en la plataforma BOINC de la
+            Universidad de California, Berkeley.</p>
+        </li>
+        <li>
+          <span class="autor__tYear">ArTelescopio</span>
+          <p>Funda su propia empresa para la <b>comercialización e intercambio de
+            telescopios</b> por Internet.</p>
+        </li>
+        <li>
+          <span class="autor__tYear">Hoy</span>
+          <p>Dicta cursos de astronomía y escribe <b>Solos en la galaxia</b>, todavía
+            buscando la misma respuesta: ¿estamos solos o acompañados en el Universo Observable?</p>
+        </li>
+      </ol>
+
+      <details class="autor__full">
+        <summary>Leer la trayectoria completa</summary>
+        <p>
+          Nacido un martes 31 de octubre de 1972 en la ciudad de Santa Fe (Provincia de
+          Santa Fe, Argentina), cursó sus estudios en la Escuela Primaria Nº 15 "Juan de
+          Garay" de Santo Tomé, y los secundarios en la Escuela de Educación Secundaria
+          Orientada Nº 443 (ex Comercio), también de Santo Tomé. A los 9 años tuvo sus
+          primeros prismáticos para cotejar el cielo. A los 13, un viernes 13 de diciembre
+          de 1985, se asoció al Centro Observadores Del Espacio (C.O.D.E.) bajo el número
+          de asociado 531, donde realizó los Cursos Anuales de Matemática y Cosmografía
+          dictados por los profesores Jorge Coghlan y Ángel Meynet, además de los Cursos
+          de Construcción de Telescopios reflectores. A los 23 años construyó su primer
+          telescopio reflector. Con el tiempo presentó proyectos en Santo Tomé para crear
+          un lugar de observación propio. Participó como receptor de datos en el proyecto
+          SETI@home (Search for Extraterrestrial Intelligence), analizando señales de
+          radio en busca de orígenes de inteligencia extraterrestre, sobre la plataforma
+          BOINC (Berkeley Open Infrastructure for Network Computing) desarrollada por el
+          Space Sciences Laboratory de la Universidad de California en Berkeley. Dictó
+          cursos de astronomía para entusiastas y estudiantes primarios y secundarios.
+          Fundó la empresa ArTelescopio para la comercialización e intercambio de
+          telescopios por Internet. Actualmente sigue buscando las respuestas de si
+          estamos solos o acompañados en el Universo Observable.
+        </p>
+      </details>
+
       <blockquote class="autor__quote">
         “La astronomía no te hace sentir chiquito. Te hace sentir parte de algo enorme.”
       </blockquote>
@@ -278,12 +327,68 @@
         <h2 class="h2">Librerías asociadas</h2>
       </div>
       <p class="lede lede--right">
-        La red crece. Cada vez que se suma una librería o una plataforma nueva,
-        aparece acá.
+        Ya está en librerías de Rosario, Santa Fe, Paraná y más ciudades — y se pide
+        como ebook desde más de 30 países.
       </p>
     </header>
 
+    <div class="libs__gallery">
+      <img src="img/libs/observatorio.jpg" alt="El libro Solos en la galaxia frente a un observatorio astronómico" loading="lazy">
+      <img src="img/libs/tienda-1.jpg" alt="Solos en la galaxia en una librería" loading="lazy">
+      <img src="img/libs/tienda-2.jpg" alt="Solos en la galaxia exhibido en una librería" loading="lazy">
+      <img src="img/libs/tienda-3.jpg" alt="Solos en la galaxia en góndola de librería" loading="lazy">
+      <img src="img/libs/tienda-4.jpg" alt="Solos en la galaxia en vidriera de librería" loading="lazy">
+    </div>
+
+    <h3 class="libs__sub">Librerías físicas</h3>
     <div class="libs__grid" id="libsGrid"></div>
+
+    <h3 class="libs__sub">Ebook — tiendas destacadas</h3>
+    <div class="libs__grid" id="libsOnlineGrid"></div>
+
+    <details class="libs__intl">
+      <summary>Ver todas las tiendas internacionales <span>(30+ países)</span></summary>
+      <div class="libs__intl-body">
+        <div class="libs__intl-group">
+          <h4>Latinoamérica</h4>
+          <a href="https://latam.bajalibros.com/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Bajalibros (regional)</a>
+          <a href="https://ebooks.crisol.com.pe/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Crisol (Perú)</a>
+          <a href="https://www.librospatagonia.com/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Librería Patagonia (Chile)</a>
+          <a href="https://www.chilebooks.cl/ebook/0745558/solos-en-la-galaxia" target="_blank" rel="noopener">Chilebooks (Chile)</a>
+          <a href="https://ebooks.antartica.cl/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Antártica (Chile)</a>
+          <a href="https://www.amazon.com.br/Solos-galaxia-Hip%C3%B3tesis-Fragmentos-Spanish-ebook/dp/B0DZNZMYP3/" target="_blank" rel="noopener">Amazon (Brasil)</a>
+          <a href="https://libreriasiglo.com/238026-solos-en-la-galaxia" target="_blank" rel="noopener">Librería Siglo (Colombia)</a>
+          <a href="https://ebooks.hombredelamancha.com/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Hombre de la Mancha (Panamá)</a>
+          <a href="https://ebooks.bookshop.com.uy/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Bookshop (Uruguay)</a>
+          <a href="https://www.gandhi.com.mx/solos-en-la-galaxia-9789878758596/p" target="_blank" rel="noopener">Gandhi (México)</a>
+          <a href="https://porrua.mx/solos-en-la-galaxia-9789878758596.html" target="_blank" rel="noopener">Porrúa (México)</a>
+        </div>
+        <div class="libs__intl-group">
+          <h4>Europa</h4>
+          <a href="https://www.fnac.es/livre-numerique/a11780966/Solos-en-la-galaxia" target="_blank" rel="noopener">Fnac (España)</a>
+          <a href="https://www.popularlibros.com/ebook/solos-en-la-galaxia_E0002871500" target="_blank" rel="noopener">Popular Libros (España)</a>
+          <a href="https://ebooks.libreriaespanola.com/library/publication/solos-en-la-galaxia" target="_blank" rel="noopener">Librería Española (España)</a>
+          <a href="https://www.casadellibro.com/ebook-solos-en-la-galaxia-ebook/9789878758596/16796525" target="_blank" rel="noopener">Casa del Libro (España)</a>
+          <a href="https://www.fnac.com/livre-numerique/a21404171/Claudio-Adrian-Varrone-Solos-en-la-galaxia" target="_blank" rel="noopener">Fnac (Francia)</a>
+          <a href="https://www.amazon.it/-/en/Claudio-Adri%C3%A1n-Varrone-ebook/dp/B0DZNZMYP3/" target="_blank" rel="noopener">Amazon (Italia)</a>
+          <a href="https://uk.bookshop.org/p/books/solos-en-la-galaxia-hip-tesis-de-los-fragmentos-claudio-adri-n-varrone/70e2de8bc13e11b9" target="_blank" rel="noopener">Bookshop.org (Reino Unido)</a>
+          <a href="https://www.adlibris.com/sv/bok/solos-en-la-galaxia-9789878758596" target="_blank" rel="noopener">Adlibris (Suecia / Noruega / Finlandia)</a>
+          <a href="https://www.litres.ru/book/claudio-adrian-varrone/solos-en-la-galaxia-71739334/" target="_blank" rel="noopener">Litres (Rusia y CEI)</a>
+          <a href="https://www.morawa.at" target="_blank" rel="noopener">Morawa (Austria)</a>
+          <a href="https://www.bol.com" target="_blank" rel="noopener">Bol.com (Países Bajos)</a>
+        </div>
+        <div class="libs__intl-group">
+          <h4>Norteamérica y resto del mundo</h4>
+          <a href="https://www.barnesandnoble.com/w/solos-en-la-galaxia-claudio-adrian-varrone/1147111349" target="_blank" rel="noopener">Barnes &amp; Noble (EE.UU.)</a>
+          <a href="https://www.kobo.com/ca/en/ebook/solos-en-la-galaxia" target="_blank" rel="noopener">Kobo (Canadá)</a>
+          <a href="https://www.indigo.ca/products/solos-en-la-galaxia?variant=46347018535122" target="_blank" rel="noopener">Indigo (Canadá)</a>
+          <a href="https://books.rakuten.co.jp/rk/c1538e0a952d3759b66b87dc2b830f3b/" target="_blank" rel="noopener">Rakuten Books (Japón)</a>
+          <a href="https://24h.pchome.com.tw/books/prod/DJBQ80-D900IFG2E" target="_blank" rel="noopener">PChome (Taiwán)</a>
+          <a href="https://www.amazon.in/Solos-galaxia-Hip%C3%B3tesis-Fragmentos-Spanish-ebook/dp/B0DZNZMYP3/" target="_blank" rel="noopener">Amazon (India)</a>
+        </div>
+      </div>
+      <p class="libs__intl-more">Y en 20 páginas más asociadas alrededor del mundo.</p>
+    </details>
 
     <div class="libs__cta">
       <div>

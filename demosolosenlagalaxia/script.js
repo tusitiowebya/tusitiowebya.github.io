@@ -58,7 +58,7 @@
   }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
 
   document.querySelectorAll(
-    '.reveal, .espiral__head, .espiral__grid, .autor__media, .autor__copy, .libs__head, .lib, .libs__cta, .reps__head, .rep, .pedido__copy, .pedido__form, .cierre .wrap > *'
+    '.reveal, .espiral__head, .espiral__grid, .autor__media, .autor__copy, .libs__head, .libs__gallery, .lib, .libs__intl, .libs__cta, .reps__head, .rep, .pedido__copy, .pedido__form, .cierre .wrap > *'
   ).forEach(function (el, i) {
     el.classList.add('reveal');
     el.style.transitionDelay = (i % 6) * 70 + 'ms';
@@ -312,19 +312,38 @@
 
   /* ── LIBRERÍAS ──────────────────────────── */
   var LIBRERIAS = [
-    { tag: 'Tienda oficial', name: 'Editorial Autores de Argentina', where: 'Envíos a todo el país', url: 'https://autoresdeargentina.com' },
-    { tag: 'Santa Fe', name: 'Librería Colmegna', where: 'San Martín 2546, Santa Fe', url: '#' },
-    { tag: 'Cadena nacional', name: 'Cúspide Libros', where: 'Sucursales y tienda online', url: 'https://www.cuspide.com' },
-    { tag: 'Cadena nacional', name: 'El Ateneo', where: 'Sucursales y tienda online', url: 'https://www.yenny-elateneo.com' },
-    { tag: 'Marketplace', name: 'Mercado Libre', where: 'Papel · envío a domicilio', url: 'https://www.mercadolibre.com.ar' },
-    { tag: 'Internacional', name: 'Amazon', where: 'Kindle y papel · todo el mundo', url: 'https://www.amazon.com' },
-    { tag: 'Internacional', name: 'Google Play Libros', where: 'Ebook · lectura en cualquier dispositivo', url: 'https://play.google.com/store/books' },
-    { tag: 'Internacional', name: 'Buscalibre', where: 'Latinoamérica y España', url: 'https://www.buscalibre.com.ar' }
+    { tag: 'Tienda oficial', name: 'Editorial Autores de Argentina', where: 'Envíos a todo el país', url: 'https://autoresdeargentina.com/product/solos-en-la-galaxia-claudio-adrian-varrone/' },
+    { tag: 'Rosario', name: 'Homo Sapiens Libros', where: 'Sarmiento 829, Rosario', url: '#' },
+    { tag: 'Rosario', name: 'Oliva Libros', where: 'Entre Ríos 579, Rosario', url: '#' },
+    { tag: 'Rosario', name: 'Librería Petite Ross', where: 'Salta 2250, Rosario', url: '#' },
+    { tag: 'Rosario', name: 'Libros del Sur', where: 'Garay 1038, Rosario', url: '#' },
+    { tag: 'Santa Fe', name: 'Alicia Libros', where: 'San Martín 2546 · Puerto Plaza (Av. Alem y Marcial Candioti)', url: '#' },
+    { tag: 'Santa Fe', name: 'Del Otro Lado Libros', where: '25 de Mayo 2867, Santa Fe', url: '#' },
+    { tag: 'Santa Fe', name: 'Ferrovía', where: '9 de Julio 3137 y San Jerónimo 1745, Santa Fe', url: '#' },
+    { tag: 'Santa Fe', name: 'Letra e', where: '9 de Julio 2883 Loc 2, Santa Fe', url: '#' },
+    { tag: 'Santo Tomé', name: 'Santo Tomé Libros', where: 'Iriondo 2072, Santo Tomé', url: '#' },
+    { tag: 'Paraná', name: 'Vaporeso Librería y Café', where: 'Nogoyá 324, Paraná', url: '#' },
+    { tag: 'Paraná', name: 'El Templo del Libro', where: 'San Juan 200, Paraná', url: '#' },
+    { tag: 'Esperanza', name: 'Librería Manantial', where: 'San Martín 1840, Esperanza', url: '#' },
+    { tag: 'Rafaela', name: 'Faber Libros', where: 'Saavedra 52, Rafaela', url: '#' },
+    { tag: 'San Jerónimo Norte', name: 'Peldaños', where: '1 de Mayo 143, San Jerónimo Norte', url: '#' }
   ];
 
-  var grid = document.getElementById('libsGrid');
-  if (grid) {
-    LIBRERIAS.forEach(function (l) {
+  var LIBS_ONLINE = [
+    { tag: 'Marketplace', name: 'Mercado Libre', where: 'Papel · envío a domicilio', url: 'https://www.mercadolibre.com.ar/solos-en-la-galaxia-hipotesis-de-los-fragmentos/up/MLAU3070673978' },
+    { tag: 'Ebook', name: 'Homo Sapiens Libros', where: 'Tienda online', url: 'https://homosapienslibros.com.ar/productos/solos-en-la-galaxia-hipotesis-de-los-fragmentos/' },
+    { tag: 'Internacional', name: 'Amazon', where: 'Kindle · todo el mundo', url: 'https://www.amazon.com/Solos-galaxia-Hip%C3%B3tesis-Fragmentos-Spanish-ebook/dp/B0DZNZMYP3' },
+    { tag: 'Internacional', name: 'Apple Books', where: 'iPhone, iPad y Mac', url: 'https://books.apple.com/us/book/solos-en-la-galaxia/id6742993863' },
+    { tag: 'Internacional', name: 'Google Play Libros', where: 'Cualquier dispositivo', url: 'https://play.google.com/store/books/details?id=hjRNEQAAQBAJ&gl=ar' },
+    { tag: 'Ebook', name: 'Yenny · El Ateneo', where: 'Tienda online', url: 'https://ebooks.yenny-elateneo.com/library/publication/solos-en-la-galaxia' },
+    { tag: 'Ebook', name: 'Librería El Palito', where: 'Tienda online', url: 'https://libreriapalito.publica.la/library/publication/solos-en-la-galaxia' },
+    { tag: 'Ebook', name: 'ArgentinaEbooks', where: 'Tienda online', url: 'https://www.argentinabooks.com.ar/ebook/0745558/solos-en-la-galaxia' }
+  ];
+
+  function paintLibs(list, gridId) {
+    var g = document.getElementById(gridId);
+    if (!g) return;
+    list.forEach(function (l) {
       var a = document.createElement('a');
       a.className = 'lib';
       a.href = l.url;
@@ -334,9 +353,11 @@
         '<h3 class="lib__name">' + l.name + '</h3>' +
         '<p class="lib__where">' + l.where + '</p>' +
         '<span class="lib__go">Ver dónde comprar <span>→</span></span>';
-      grid.appendChild(a);
+      g.appendChild(a);
     });
   }
+  paintLibs(LIBRERIAS, 'libsGrid');
+  paintLibs(LIBS_ONLINE, 'libsOnlineGrid');
 
   /* ── PEDIDO → WHATSAPP ──────────────────── */
   var form = document.getElementById('pedidoForm');
