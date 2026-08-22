@@ -1,23 +1,23 @@
 /* ===== Gestoría María — sistema visual "papel oficial" ===== */
 
 :root{
-  --paper: #F4EEE1;
-  --paper-2: #EAE1CB;
-  --paper-3: #E1D5B4;
-  --ink: #142A44;
-  --ink-2: #0D1D30;
-  --ink-3: #0A1622;
-  --rust: #B14F2B;
-  --rust-2: #8C3A1F;
-  --rust-light: #D97B4F;
-  --text-on-paper: #24211B;
-  --text-muted: #6B6355;
-  --text-on-ink: #F4EEE1;
-  --text-on-ink-muted: #AEB9C6;
-  --line: rgba(20,42,68,0.14);
-  --line-ink: rgba(244,238,225,0.16);
-  --shadow-soft: 0 20px 50px -20px rgba(20,20,15,0.35);
-  --shadow-card: 0 12px 34px -14px rgba(20,20,15,0.28);
+  --paper: #F6FAFD;
+  --paper-2: #EAF1F8;
+  --paper-3: #D9E6F0;
+  --ink: #0F2740;
+  --ink-2: #0A1D30;
+  --ink-3: #060F1A;
+  --rust: #2467A0;
+  --rust-2: #17466D;
+  --rust-light: #5FA0D6;
+  --text-on-paper: #14212F;
+  --text-muted: #56697D;
+  --text-on-ink: #F6FAFD;
+  --text-on-ink-muted: #9FB4C7;
+  --line: rgba(15,39,64,0.14);
+  --line-ink: rgba(246,250,253,0.16);
+  --shadow-soft: 0 20px 50px -20px rgba(6,15,26,0.35);
+  --shadow-card: 0 12px 34px -14px rgba(6,15,26,0.28);
   --radius: 18px;
   --radius-sm: 10px;
   --f-disp: "Newsreader", serif;
@@ -95,9 +95,12 @@ section{position:relative;}
 }
 .nav .container{display:flex; align-items:center; justify-content:space-between; gap:24px;}
 .brand{display:flex; align-items:center; gap:12px;}
-.brand-seal{
-  width:44px; height:44px; color:var(--rust); flex-shrink:0;
-  font-family:var(--f-disp); font-weight:600; font-size:15px; letter-spacing:.02em;
+.brand-logo{
+  width:46px; height:46px; flex-shrink:0;
+  object-fit:contain; border-radius:10px;
+}
+.foot-logo{
+  background:var(--paper); padding:4px;
 }
 .brand-text{display:flex; flex-direction:column; line-height:1.15;}
 .brand-name{font-family:var(--f-disp); font-style:italic; font-weight:500; font-size:19px; color:var(--ink);}
