@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iTEMA News — Actualidad, Educación y Región</title>
+<meta name="description" content="iTEMA News: la actualidad de la región al instante. Educación, economía, deportes y tecnología, actualizado todos los días.">
+<meta name="keywords" content="noticias, diario digital, actualidad, educación, iTEMA News, portal de noticias">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#16130F">
+<link rel="canonical" href="https://tusitiowebya.github.io/demoitemanews/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="iTEMA News — Actualidad, Educación y Región">
+<meta property="og:description" content="La actualidad de la región al instante. Educación, economía, deportes y tecnología, todos los días.">
+<meta property="og:url" content="https://tusitiowebya.github.io/demoitemanews/">
+<meta property="og:image" content="https://tusitiowebya.github.io/demoitemanews/images/og-image.jpg">
+<meta property="og:site_name" content="iTEMA News">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iTEMA News — Actualidad, Educación y Región">
+<meta name="twitter:description" content="La actualidad de la región al instante, todos los días.">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demoitemanews/images/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "iTEMA News",
+  "url": "https://tusitiowebya.github.io/demoitemanews/",
+  "logo": "https://tusitiowebya.github.io/demoitemanews/images/logoitema.png",
+  "description": "Portal de noticias digital con actualidad, educación, economía, deportes y tecnología de la región.",
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<div class="readbar" id="readbar"></div>
+
+<!-- UTILITY BAR -->
+<div class="utilitybar">
+  <div class="wrap utilitybar__in">
+    <span class="utilitybar__date" id="fecha">—</span>
+    <div class="utilitybar__dolar">
+      <span class="utilitybar__dolar-label">Dólar hoy</span>
+      <span>Oficial <b>$1.475</b> / <b>$1.525</b></span>
+      <span class="utilitybar__sep">·</span>
+      <span>Blue <b>$1.540</b> / <b>$1.560</b></span>
+    </div>
+    <div class="utilitybar__right">
+      <a href="#" class="utilitybar__link">Iniciar sesión</a>
+      <span class="utilitybar__sep">·</span>
+      <a href="#suscribite" class="utilitybar__link utilitybar__link--accent">Suscribite</a>
+    </div>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a href="./" class="masthead__logo" aria-label="iTEMA News — portada">
+      <img src="images/logoitema.png" alt="Instituto ITEMA" class="masthead__shield">
+      <span class="masthead__wordmark"><span class="masthead__i">i</span>TEMA<span class="masthead__news">NEWS</span></span>
+    </a>
+    <p class="masthead__tag">Edición digital · La región, todos los días</p>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap nav__in">
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__list" id="navList">
+      <li><a href="#portada" class="active">Portada</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#economia">Economía</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#deportes">Deportes</a></li>
+      <li><a href="#region">Región</a></li>
+      <li><a href="#opinion">Opinión</a></li>
+    </ul>
+    <button class="nav__search" id="navSearch" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- BREAKING TICKER -->
+<div class="ticker">
+  <div class="ticker__label">ÚLTIMO MOMENTO</div>
+  <div class="ticker__track">
+    <div class="ticker__content" id="tickerContent">
+      <span>Municipio anunció obras de repavimentación en seis barrios para el próximo trimestre</span>
+      <span>Suba la temperatura: se esperan hasta 31° para el fin de semana en la región</span>
+      <span>Comenzó la inscripción a becas estudiantiles 2026 — cierre el 15 de septiembre</span>
+      <span>El equipo local venció 2 a 1 en el clásico y quedó a tres puntos de la punta</span>
+      <span>Aumentó 4,3% la ocupación hotelera en la temporada respecto al año anterior</span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="portada">
+
+  <!-- HERO -->
+  <section class="hero">
+    <article class="hero__main">
+      <a href="#" class="hero__img-link">
+        <img src="images/hero.jpg" alt="Vista aérea de la ciudad al atardecer" class="hero__img">
+        <span class="tag tag--region">Región</span>
+      </a>
+      <h1 class="hero__title"><a href="#">El Concejo aprobó el presupuesto 2027 con foco en infraestructura y transporte</a></h1>
+      <p class="hero__excerpt">La iniciativa contempla obras viales, ampliación del alumbrado público y una partida especial para escuelas técnicas. Entrará en vigencia desde enero.</p>
+      <div class="hero__meta">
+        <span>Por Redacción iTEMA</span><span class="dot">·</span><span>Hace 2 horas</span><span class="dot">·</span><span>4 min de lectura</span>
+      </div>
+    </article>
+
+    <aside class="hero__side">
+      <article class="side-item">
+        <a href="#" class="side-item__img-link"><img src="images/economia.jpg" alt="Gráficos de mercado financiero"></a>
+        <div>
+          <span class="tag tag--economia">Economía</span>
+          <h3><a href="#">El dólar minorista cerró estable y el volumen operado bajó respecto al viernes</a></h3>
+          <span class="side-item__time">Hace 3 horas</span>
+        </div>
+      </article>
+      <article class="side-item">
+        <a href="#" class="side-item__img-link"><img src="images/deportes.jpg" alt="Estadio de fútbol"></a>
+        <div>
+          <span class="tag tag--deportes">Deportes</span>
+          <h3><a href="#">Triunfo agónico en el clásico: así se vivió el 2 a 1 desde la tribuna local</a></h3>
+          <span class="side-item__time">Hace 5 horas</span>
+        </div>
+      </article>
+      <article class="side-item">
+        <a href="#" class="side-item__img-link"><img src="images/clima.jpg" alt="Cielo con nubes de tormenta"></a>
+        <div>
+          <span class="tag tag--region">Clima</span>
+          <h3><a href="#">Alerta amarilla por tormentas fuertes durante la madrugada del jueves</a></h3>
+          <span class="side-item__time">Hace 6 horas</span>
+        </div>
+      </article>
+    </aside>
+  </section>
+
+  <!-- AD SLOT -->
+  <div class="adslot">
+    <span class="adslot__label">Espacio publicitario</span>
+    <span class="adslot__size">728 × 90</span>
+  </div>
+
+  <div class="layout">
+    <div class="layout__main">
+
+      <!-- EDUCACION -->
+      <section class="section" id="educacion">
+        <div class="section__head">
+          <h2>Educación</h2>
+          <a href="#" class="section__more">Ver todas →</a>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--featured">
+            <a href="#" class="card__img-link"><img src="images/educacion.jpg" alt="Estudiantes en un aula"></a>
+            <span class="tag tag--educacion">Educación</span>
+            <h3><a href="#">Abrió la inscripción a becas estudiantiles 2026: quiénes pueden anotarse y hasta cuándo</a></h3>
+            <p>El cupo alcanza a estudiantes de nivel medio y terciario con domicilio en la región. El trámite es 100% online.</p>
+            <span class="card__time">Hace 1 hora</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/tech.jpg" alt="Persona usando notebook"></a>
+            <span class="tag tag--educacion">Educación</span>
+            <h3><a href="#">Institutos técnicos suman orientación en oficios digitales para 2026</a></h3>
+            <span class="card__time">Hace 4 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/cultura.jpg" alt="Público en un evento"></a>
+            <span class="tag tag--educacion">Educación</span>
+            <h3><a href="#">Feria de orientación vocacional: más de 20 instituciones participaron este año</a></h3>
+            <span class="card__time">Ayer</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ECONOMIA -->
+      <section class="section" id="economia">
+        <div class="section__head">
+          <h2>Economía</h2>
+          <a href="#" class="section__more">Ver todas →</a>
+        </div>
+        <div class="grid grid--3">
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/economia.jpg" alt="Gráficos financieros"></a>
+            <span class="tag tag--economia">Economía</span>
+            <h3><a href="#">El dólar minorista cerró estable y el volumen operado bajó respecto al viernes</a></h3>
+            <span class="card__time">Hace 3 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/hero.jpg" alt="Vista de la ciudad"></a>
+            <span class="tag tag--economia">Economía</span>
+            <h3><a href="#">Creció 4,3% la ocupación hotelera de la temporada frente al año anterior</a></h3>
+            <span class="card__time">Hace 6 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/policiales.jpg" alt="Comercio local"></a>
+            <span class="tag tag--economia">Economía</span>
+            <h3><a href="#">Comerciantes de la zona piden más controles de precios para la temporada</a></h3>
+            <span class="card__time">Ayer</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- AD SLOT -->
+      <div class="adslot adslot--wide">
+        <span class="adslot__label">Espacio publicitario</span>
+        <span class="adslot__size">970 × 250</span>
+      </div>
+
+      <!-- TECNOLOGIA -->
+      <section class="section" id="tecnologia">
+        <div class="section__head">
+          <h2>Tecnología</h2>
+          <a href="#" class="section__more">Ver todas →</a>
+        </div>
+        <div class="grid grid--2">
+          <article class="card card--horizontal">
+            <a href="#" class="card__img-link"><img src="images/tech.jpg" alt="Oficina con notebooks"></a>
+            <div>
+              <span class="tag tag--tecnologia">Tecnología</span>
+              <h3><a href="#">Cinco apps argentinas que están simplificando el día a día de las pymes locales</a></h3>
+              <p>Desde facturación hasta logística: un repaso por herramientas hechas en el país que ganan terreno.</p>
+              <span class="card__time">Hace 5 horas</span>
+            </div>
+          </article>
+          <article class="card card--horizontal">
+            <a href="#" class="card__img-link"><img src="images/cultura.jpg" alt="Evento con público"></a>
+            <div>
+              <span class="tag tag--tecnologia">Tecnología</span>
+              <h3><a href="#">La región suma su primer polo de coworking orientado a desarrollo de software</a></h3>
+              <p>El espacio ofrecerá capacitaciones gratuitas en articulación con institutos locales.</p>
+              <span class="card__time">Ayer</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- DEPORTES -->
+      <section class="section" id="deportes">
+        <div class="section__head">
+          <h2>Deportes</h2>
+          <a href="#" class="section__more">Ver todas →</a>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--featured">
+            <a href="#" class="card__img-link"><img src="images/deportes.jpg" alt="Estadio de fútbol"></a>
+            <span class="tag tag--deportes">Deportes</span>
+            <h3><a href="#">Triunfo agónico en el clásico: así se vivió el 2 a 1 desde la tribuna local</a></h3>
+            <p>Con gol sobre el final, el equipo de la ciudad se acomoda a tres puntos de la punta del torneo.</p>
+            <span class="card__time">Hace 5 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/hero.jpg" alt="Vista panorámica"></a>
+            <span class="tag tag--deportes">Deportes</span>
+            <h3><a href="#">El club de básquet confirmó los amistosos de pretemporada</a></h3>
+            <span class="card__time">Ayer</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/clima.jpg" alt="Cielo nublado"></a>
+            <span class="tag tag--deportes">Deportes</span>
+            <h3><a href="#">Se reprogramó la maratón 10K por pronóstico de tormenta</a></h3>
+            <span class="card__time">Ayer</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- REGION -->
+      <section class="section" id="region">
+        <div class="section__head">
+          <h2>Región</h2>
+          <a href="#" class="section__more">Ver todas →</a>
+        </div>
+        <div class="grid grid--3">
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/policiales.jpg" alt="Calle de la ciudad de noche"></a>
+            <span class="tag tag--region">Región</span>
+            <h3><a href="#">Refuerzan la iluminación en tres avenidas del centro</a></h3>
+            <span class="card__time">Hace 8 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/clima.jpg" alt="Cielo con nubes"></a>
+            <span class="tag tag--region">Región</span>
+            <h3><a href="#">Alerta amarilla por tormentas fuertes durante la madrugada del jueves</a></h3>
+            <span class="card__time">Hace 6 horas</span>
+          </article>
+          <article class="card">
+            <a href="#" class="card__img-link"><img src="images/cultura.jpg" alt="Feria en la plaza"></a>
+            <span class="tag tag--region">Región</span>
+            <h3><a href="#">Vuelve la feria de artesanos a la plaza principal todos los sábados</a></h3>
+            <span class="card__time">Hace 2 días</span>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="layout__side">
+      <div class="widget">
+        <h4 class="widget__title">Lo más leído</h4>
+        <ol class="ranking">
+          <li><span class="ranking__n">1</span><a href="#">El Concejo aprobó el presupuesto 2027 con foco en infraestructura</a></li>
+          <li><span class="ranking__n">2</span><a href="#">Triunfo agónico en el clásico: así se vivió desde la tribuna</a></li>
+          <li><span class="ranking__n">3</span><a href="#">Abrió la inscripción a becas estudiantiles 2026</a></li>
+          <li><span class="ranking__n">4</span><a href="#">Alerta amarilla por tormentas fuertes en la madrugada</a></li>
+          <li><span class="ranking__n">5</span><a href="#">El dólar minorista cerró estable esta semana</a></li>
+        </ol>
+      </div>
+
+      <div class="adslot adslot--side">
+        <span class="adslot__label">Espacio publicitario</span>
+        <span class="adslot__size">300 × 600</span>
+      </div>
+
+      <div class="widget widget--newsletter" id="suscribite">
+        <h4 class="widget__title">Recibí las noticias en tu mail</h4>
+        <p>Un resumen todas las mañanas, sin spam.</p>
+        <form class="newsletter__form" action="https://formsubmit.co/EMAIL_DEL_CLIENTE" method="POST">
+          <input type="hidden" name="_subject" value="Nueva suscripción — iTEMA News">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" placeholder="tu@email.com" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__col footer__brand">
+      <span class="masthead__logo masthead__logo--footer">
+        <img src="images/logoitema.png" alt="Instituto ITEMA" class="masthead__shield">
+        <span class="masthead__wordmark"><span class="masthead__i">i</span>TEMA<span class="masthead__news">NEWS</span></span>
+      </span>
+      <p>Edición digital de actualidad regional. Educación, economía, deportes y tecnología, todos los días.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Secciones</h5>
+      <a href="#educacion">Educación</a>
+      <a href="#economia">Economía</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#deportes">Deportes</a>
+      <a href="#region">Región</a>
+    </div>
+    <div class="footer__col">
+      <h5>El diario</h5>
+      <a href="#">Quiénes somos</a>
+      <a href="#">Publicidad</a>
+      <a href="#">Contacto</a>
+      <a href="#suscribite">Newsletter</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="anio"></span> iTEMA News. Todos los derechos reservados.</span>
+    <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">Diseñado por TuPaginaYa</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
