@@ -9,6 +9,31 @@
   el.textContent = `${dias[d.getDay()]} ${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
 })();
 
+// Dólar en vivo (dolarapi.com — gratis, sin key)
+(function(){
+  const fmt = n => '$' + Math.round(n).toLocaleString('es-AR');
+  const oficialEl = document.getElementById('dolarOficial');
+  const blueEl = document.getElementById('dolarBlue');
+  if (!oficialEl || !blueEl) return;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+
+  Promise.all([
+    fetch('https://dolarapi.com/v1/dolares/oficial', { signal: controller.signal }).then(r => r.json()),
+    fetch('https://dolarapi.com/v1/dolares/blue', { signal: controller.signal }).then(r => r.json())
+  ])
+  .then(([oficial, blue]) => {
+    oficialEl.textContent = `${fmt(oficial.compra)} / ${fmt(oficial.venta)}`;
+    blueEl.textContent = `${fmt(blue.compra)} / ${fmt(blue.venta)}`;
+  })
+  .catch(() => {
+    oficialEl.textContent = 'no disponible';
+    blueEl.textContent = 'no disponible';
+  })
+  .finally(() => clearTimeout(timeout));
+})();
+
 // Año en footer
 document.getElementById('anio').textContent = new Date().getFullYear();
 
