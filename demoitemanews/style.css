@@ -140,6 +140,25 @@ img{max-width:100%;display:block;}
 .card--horizontal{display:grid;grid-template-columns:180px 1fr;gap:16px;}
 .card--horizontal .card__img-link img{height:130px;}
 
+/* ---------- Curso cards ---------- */
+.curso-card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;transition:box-shadow .2s, transform .2s;}
+.curso-card:hover{box-shadow:0 8px 24px rgba(22,19,15,.1);transform:translateY(-2px);}
+.curso-card__img-wrap{position:relative;}
+.curso-card__img-wrap img{width:100%;height:170px;object-fit:cover;display:block;}
+.curso-card__modalidad{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-family:var(--ff-head);font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;}
+.curso-card__modalidad--grabado{background:var(--gold);}
+.curso-card__body{padding:18px;display:flex;flex-direction:column;flex:1;}
+.curso-card__body h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.curso-card__meta{font-family:var(--ff-head);font-size:.78rem;color:#8A8272;text-transform:uppercase;letter-spacing:.03em;margin-bottom:16px;}
+.curso-card__footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.curso-card__precio{font-family:var(--ff-head);font-weight:700;font-size:1.1rem;color:var(--ink);}
+.curso-card__cta{background:var(--red);color:#fff;font-family:var(--ff-head);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:9px 16px;transition:background .2s;}
+.curso-card__cta:hover{background:var(--red-dark);}
+
+/* ---------- Anuncios dinámicos ---------- */
+.adslot__banner{display:block;width:100%;height:100%;object-fit:cover;}
+.adslot.has-banner, .adslot--wide.has-banner, .adslot--side.has-banner{border:none;padding:0;overflow:hidden;}
+
 /* ---------- Sidebar widgets ---------- */
 .widget{background:var(--white);border:1px solid var(--line);padding:20px;}
 .widget__title{font-family:var(--ff-head);text-transform:uppercase;font-size:1rem;letter-spacing:.03em;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:14px;}

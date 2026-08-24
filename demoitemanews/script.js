@@ -34,12 +34,13 @@
   .finally(() => clearTimeout(timeout));
 })();
 
-// Notas reales desde el panel (si el cliente ya cargó algo, reemplaza los ejemplos de la demo)
+// Contenido real desde el panel (notas, cursos y publicidad) — si no hay nada cargado, se queda la demo de ejemplo
 (function(){
   const API = 'https://itemanews-panel.tupaginaya.com.ar';
-  const CATEGORIA_LABEL = { educacion: 'Educación', economia: 'Economía', tecnologia: 'Tecnología', deportes: 'Deportes', region: 'Región', opinion: 'Opinión' };
-  const TAG_CLASS = { educacion: 'tag--educacion', economia: 'tag--economia', tecnologia: 'tag--tecnologia', deportes: 'tag--deportes', region: 'tag--region', opinion: 'tag--region' };
+  const CATEGORIA_LABEL = { inyeccion: 'Inyección Electrónica', motor: 'Motor', electrica: 'Eléctrica y Electrónica', diagnostico: 'Diagnóstico', mantenimiento: 'Mantenimiento', institucional: 'Institucional' };
+  const TAG_CLASS = { inyeccion: 'tag--educacion', motor: 'tag--deportes', electrica: 'tag--tecnologia', diagnostico: 'tag--region', mantenimiento: 'tag--economia', institucional: 'tag--tecnologia' };
   const IMG_FALLBACK = 'images/hero.jpg';
+  const WHATSAPP = '5493424296808';
 
   function tiempoRelativo(iso) {
     const diffMs = Date.now() - new Date(iso).getTime();
@@ -50,7 +51,11 @@
     return dias === 1 ? 'Ayer' : `Hace ${dias} días`;
   }
 
-  function cardHTML(a, variante) {
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function notaCardHTML(a, variante) {
     const tag = TAG_CLASS[a.categoria] || 'tag--region';
     const label = CATEGORIA_LABEL[a.categoria] || a.categoria;
     const img = a.imagen_url || IMG_FALLBACK;
@@ -74,54 +79,110 @@
     </article>`;
   }
 
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  function cursoCardHTML(c) {
+    const img = c.imagen_url || IMG_FALLBACK;
+    const grabado = c.modalidad === 'grabado';
+    const mensaje = encodeURIComponent(`Hola! Quiero ${grabado ? 'info del curso grabado' : 'anotarme al curso'} de ${c.titulo}`);
+    return `<article class="curso-card">
+      <div class="curso-card__img-wrap">
+        <img src="${img}" alt="">
+        <span class="curso-card__modalidad${grabado ? ' curso-card__modalidad--grabado' : ''}">${grabado ? 'Grabado' : 'Presencial'}</span>
+      </div>
+      <div class="curso-card__body">
+        <h3>${escapeHtml(c.titulo)}</h3>
+        <p class="curso-card__meta">${[c.duracion, c.cupos].filter(Boolean).map(escapeHtml).join(' · ') || (grabado ? 'Acceso inmediato' : 'Consultar disponibilidad')}</p>
+        <div class="curso-card__footer">
+          <span class="curso-card__precio">${escapeHtml(c.precio || 'Consultar')}</span>
+          <a href="https://wa.me/${WHATSAPP}?text=${mensaje}" target="_blank" rel="noopener" class="curso-card__cta">${grabado ? 'Consultar' : 'Anotarme'}</a>
+        </div>
+      </div>
+    </article>`;
   }
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 6000);
+  function pintarAdSlot(id, auspiciante) {
+    const el = document.getElementById(id);
+    if (!el || !auspiciante) return;
+    el.classList.add('has-banner');
+    el.innerHTML = '';
+    const link = document.createElement('a');
+    link.href = auspiciante.link || '#';
+    if (auspiciante.link) { link.target = '_blank'; link.rel = 'noopener'; }
+    const img = document.createElement('img');
+    img.src = auspiciante.imagen_url;
+    img.alt = auspiciante.nombre;
+    img.className = 'adslot__banner';
+    link.appendChild(img);
+    el.appendChild(link);
+  }
 
-  fetch(`${API}/api/articulos`, { signal: controller.signal })
-    .then((r) => r.json())
+  const fetchJSON = (url) => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
+    return fetch(url, { signal: controller.signal }).then((r) => r.json()).finally(() => clearTimeout(timeout));
+  };
+
+  // Notas técnicas
+  fetchJSON(`${API}/api/articulos`)
     .then((articulos) => {
-      if (!Array.isArray(articulos) || articulos.length === 0) return; // sin notas reales: se queda la demo de ejemplo
+      if (!Array.isArray(articulos) || articulos.length === 0) return;
 
-      // Hero: la nota destacada más nueva (si hay)
-      const destacada = articulos.find((a) => a.destacado);
+      const destacada = articulos.find((a) => a.destacado) || articulos[0];
       if (destacada) {
-        const heroImg = document.querySelector('.hero__img');
-        const heroTag = document.querySelector('.hero__img-link .tag');
-        const heroTitle = document.querySelector('.hero__title a');
-        const heroExcerpt = document.querySelector('.hero__excerpt');
-        const heroMeta = document.querySelector('.hero__meta');
+        const heroImg = document.getElementById('heroImg');
+        const heroTag = document.getElementById('heroTag');
+        const heroTitle = document.getElementById('heroTitleLink');
+        const heroExcerpt = document.getElementById('heroExcerpt');
+        const heroMeta = document.getElementById('heroMeta');
         if (heroImg && destacada.imagen_url) heroImg.src = destacada.imagen_url;
         if (heroTag) { heroTag.textContent = CATEGORIA_LABEL[destacada.categoria] || destacada.categoria; heroTag.className = 'tag ' + (TAG_CLASS[destacada.categoria] || 'tag--region'); }
         if (heroTitle) heroTitle.textContent = destacada.titulo;
         if (heroExcerpt) heroExcerpt.textContent = destacada.resumen || '';
-        if (heroMeta) heroMeta.innerHTML = `<span>Por ${escapeHtml(destacada.autor || 'Redacción iTEMA')}</span><span class="dot">·</span><span>${tiempoRelativo(destacada.creado_en)}</span>`;
+        if (heroMeta) heroMeta.innerHTML = `<span>Por ${escapeHtml(destacada.autor || 'Redacción ITEMA')}</span><span class="dot">·</span><span>${tiempoRelativo(destacada.creado_en)}</span>`;
       }
 
-      // Ticker: últimos títulos reales
       const tickerContent = document.getElementById('tickerContent');
-      if (tickerContent) {
-        tickerContent.innerHTML = articulos.slice(0, 6).map((a) => `<span>${escapeHtml(a.titulo)}</span>`).join('');
+      if (tickerContent) tickerContent.innerHTML = articulos.slice(0, 6).map((a) => `<span>${escapeHtml(a.titulo)}</span>`).join('');
+
+      const generales = articulos.filter((a) => a.categoria !== 'institucional');
+      const gridNotas = document.getElementById('gridNotas');
+      if (gridNotas && generales.length > 0) {
+        gridNotas.innerHTML = generales.slice(0, 3).map((a, i) => notaCardHTML(a, i === 0 ? 'featured' : '')).join('');
       }
 
-      // Grillas por sección: si hay notas de esa categoría, reemplazan los ejemplos
-      Object.keys(CATEGORIA_LABEL).forEach((cat) => {
-        const notas = articulos.filter((a) => a.categoria === cat);
-        if (notas.length === 0) return;
-        const seccion = document.getElementById(cat);
-        const grid = seccion && seccion.querySelector('.grid');
-        if (!grid) return;
-        const esGrid2 = grid.classList.contains('grid--2');
-        grid.innerHTML = notas.slice(0, 3).map((a, i) =>
-          cardHTML(a, esGrid2 ? 'horizontal' : (i === 0 ? 'featured' : ''))
-        ).join('');
-      });
+      const institucionales = articulos.filter((a) => a.categoria === 'institucional');
+      const gridInstitucional = document.getElementById('gridInstitucional');
+      if (gridInstitucional && institucionales.length > 0) {
+        gridInstitucional.innerHTML = institucionales.slice(0, 2).map((a) => notaCardHTML(a, 'horizontal')).join('');
+      }
     })
-    .catch(() => { /* API no disponible: se queda la demo de ejemplo tal cual */ })
-    .finally(() => clearTimeout(timeout));
+    .catch(() => {});
+
+  // Cursos presenciales
+  fetchJSON(`${API}/api/cursos?modalidad=presencial`)
+    .then((cursos) => {
+      const grid = document.getElementById('gridCursos');
+      if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
+    })
+    .catch(() => {});
+
+  // Cursos grabados
+  fetchJSON(`${API}/api/cursos?modalidad=grabado`)
+    .then((cursos) => {
+      const grid = document.getElementById('gridGrabados');
+      if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
+    })
+    .catch(() => {});
+
+  // Publicidad / auspiciantes
+  fetchJSON(`${API}/api/auspiciantes`)
+    .then((auspiciantes) => {
+      if (!Array.isArray(auspiciantes)) return;
+      const byPos = (pos) => auspiciantes.find((a) => a.posicion === pos);
+      pintarAdSlot('adHero', byPos('hero_bar'));
+      pintarAdSlot('adWide', byPos('wide_bar'));
+      pintarAdSlot('adSide', byPos('sidebar'));
+    })
+    .catch(() => {});
 })();
 
 // Año en footer
