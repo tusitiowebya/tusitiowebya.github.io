@@ -34,6 +34,96 @@
   .finally(() => clearTimeout(timeout));
 })();
 
+// Notas reales desde el panel (si el cliente ya cargó algo, reemplaza los ejemplos de la demo)
+(function(){
+  const API = 'https://itemanews-panel.tupaginaya.com.ar';
+  const CATEGORIA_LABEL = { educacion: 'Educación', economia: 'Economía', tecnologia: 'Tecnología', deportes: 'Deportes', region: 'Región', opinion: 'Opinión' };
+  const TAG_CLASS = { educacion: 'tag--educacion', economia: 'tag--economia', tecnologia: 'tag--tecnologia', deportes: 'tag--deportes', region: 'tag--region', opinion: 'tag--region' };
+  const IMG_FALLBACK = 'images/hero.jpg';
+
+  function tiempoRelativo(iso) {
+    const diffMs = Date.now() - new Date(iso).getTime();
+    const horas = Math.floor(diffMs / 3600000);
+    if (horas < 1) return 'Hace instantes';
+    if (horas < 24) return `Hace ${horas} hora${horas === 1 ? '' : 's'}`;
+    const dias = Math.floor(horas / 24);
+    return dias === 1 ? 'Ayer' : `Hace ${dias} días`;
+  }
+
+  function cardHTML(a, variante) {
+    const tag = TAG_CLASS[a.categoria] || 'tag--region';
+    const label = CATEGORIA_LABEL[a.categoria] || a.categoria;
+    const img = a.imagen_url || IMG_FALLBACK;
+    if (variante === 'horizontal') {
+      return `<article class="card card--horizontal">
+        <a href="#" class="card__img-link"><img src="${img}" alt=""></a>
+        <div>
+          <span class="tag ${tag}">${label}</span>
+          <h3><a href="#">${escapeHtml(a.titulo)}</a></h3>
+          ${a.resumen ? `<p>${escapeHtml(a.resumen)}</p>` : ''}
+          <span class="card__time">${tiempoRelativo(a.creado_en)}</span>
+        </div>
+      </article>`;
+    }
+    return `<article class="card${variante === 'featured' ? ' card--featured' : ''}">
+      <a href="#" class="card__img-link"><img src="${img}" alt=""></a>
+      <span class="tag ${tag}">${label}</span>
+      <h3><a href="#">${escapeHtml(a.titulo)}</a></h3>
+      ${a.resumen ? `<p>${escapeHtml(a.resumen)}</p>` : ''}
+      <span class="card__time">${tiempoRelativo(a.creado_en)}</span>
+    </article>`;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+
+  fetch(`${API}/api/articulos`, { signal: controller.signal })
+    .then((r) => r.json())
+    .then((articulos) => {
+      if (!Array.isArray(articulos) || articulos.length === 0) return; // sin notas reales: se queda la demo de ejemplo
+
+      // Hero: la nota destacada más nueva (si hay)
+      const destacada = articulos.find((a) => a.destacado);
+      if (destacada) {
+        const heroImg = document.querySelector('.hero__img');
+        const heroTag = document.querySelector('.hero__img-link .tag');
+        const heroTitle = document.querySelector('.hero__title a');
+        const heroExcerpt = document.querySelector('.hero__excerpt');
+        const heroMeta = document.querySelector('.hero__meta');
+        if (heroImg && destacada.imagen_url) heroImg.src = destacada.imagen_url;
+        if (heroTag) { heroTag.textContent = CATEGORIA_LABEL[destacada.categoria] || destacada.categoria; heroTag.className = 'tag ' + (TAG_CLASS[destacada.categoria] || 'tag--region'); }
+        if (heroTitle) heroTitle.textContent = destacada.titulo;
+        if (heroExcerpt) heroExcerpt.textContent = destacada.resumen || '';
+        if (heroMeta) heroMeta.innerHTML = `<span>Por ${escapeHtml(destacada.autor || 'Redacción iTEMA')}</span><span class="dot">·</span><span>${tiempoRelativo(destacada.creado_en)}</span>`;
+      }
+
+      // Ticker: últimos títulos reales
+      const tickerContent = document.getElementById('tickerContent');
+      if (tickerContent) {
+        tickerContent.innerHTML = articulos.slice(0, 6).map((a) => `<span>${escapeHtml(a.titulo)}</span>`).join('');
+      }
+
+      // Grillas por sección: si hay notas de esa categoría, reemplazan los ejemplos
+      Object.keys(CATEGORIA_LABEL).forEach((cat) => {
+        const notas = articulos.filter((a) => a.categoria === cat);
+        if (notas.length === 0) return;
+        const seccion = document.getElementById(cat);
+        const grid = seccion && seccion.querySelector('.grid');
+        if (!grid) return;
+        const esGrid2 = grid.classList.contains('grid--2');
+        grid.innerHTML = notas.slice(0, 3).map((a, i) =>
+          cardHTML(a, esGrid2 ? 'horizontal' : (i === 0 ? 'featured' : ''))
+        ).join('');
+      });
+    })
+    .catch(() => { /* API no disponible: se queda la demo de ejemplo tal cual */ })
+    .finally(() => clearTimeout(timeout));
+})();
+
 // Año en footer
 document.getElementById('anio').textContent = new Date().getFullYear();
 
