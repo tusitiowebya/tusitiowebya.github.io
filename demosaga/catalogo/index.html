@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catálogo — Saga Tienda | Insumos para el hogar</title>
+<meta name="description" content="Catálogo completo de Saga Tienda: organización, cocina, bolsos y limpieza para tu casa. Filtrá por categoría y pedí por WhatsApp.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1E3A2F">
+<link rel="canonical" href="https://tusitiowebya.github.io/demosaga/catalogo/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catálogo — Saga Tienda">
+<meta property="og:description" content="Organización, cocina, bolsos y limpieza para tu casa. Pedidos por WhatsApp.">
+<meta property="og:url" content="https://tusitiowebya.github.io/demosaga/catalogo/">
+<meta property="og:image" content="https://tusitiowebya.github.io/demosaga/og-image.jpg">
+<meta property="og:site_name" content="Saga Tienda">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demosaga/og-image.jpg">
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="catalogo.css">
+</head>
+<body class="catalogo-page">
+
+<header class="cheader">
+  <a class="cheader__brand" href="../" aria-label="Saga Tienda — inicio">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="47" fill="none" stroke="#C1592B" stroke-width="2.4"/>
+      <path d="M50 20 L79 42 V80 H62 V60 H38 V80 H21 V42 Z" fill="none" stroke="#1E3A2F" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="4.2" fill="#C1592B"/>
+    </svg>
+    <span>Saga</span>
+  </a>
+  <div class="cheader__search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input type="search" id="search-input" placeholder="Buscar en el catálogo...">
+  </div>
+  <div class="cheader__actions">
+    <a class="cheader__wa" href="#" id="cheader-wa-link" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="cheader__cart" id="cart-open-btn" aria-label="Ver pedido">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h2l1.5 10.5A2 2 0 0 0 9.5 18h7a2 2 0 0 0 2-1.7L20 8H7"/><circle cx="10" cy="21" r="1.4" fill="currentColor" stroke="none"/><circle cx="17" cy="21" r="1.4" fill="currentColor" stroke="none"/></svg>
+      <span class="cheader__cart-count" id="cart-count" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="../">Inicio</a><span>/</span><span>Catálogo</span>
+</div>
+
+<main class="cshop">
+  <aside class="csidebar">
+    <h2>Categorías</h2>
+    <ul class="csidebar__list" id="sidebar-cats">
+      <li><button class="csidebar__cat is-active" data-cat="todos">Todos<span id="count-todos"></span></button></li>
+      <li><button class="csidebar__cat" data-cat="cocina">Cocina y despensa<span id="count-cocina"></span></button></li>
+      <li><button class="csidebar__cat" data-cat="bolsos">Bolsos y térmicos<span id="count-bolsos"></span></button></li>
+      <li><button class="csidebar__cat" data-cat="organizacion">Organización del hogar<span id="count-organizacion"></span></button></li>
+      <li><button class="csidebar__cat" data-cat="limpieza">Limpieza<span id="count-limpieza"></span></button></li>
+    </ul>
+    <div class="csidebar__card">
+      <p>¿No encontrás lo que buscás?</p>
+      <a href="#" id="sidebar-wa-link" target="_blank" rel="noopener">Consultanos por WhatsApp</a>
+    </div>
+  </aside>
+
+  <section class="cmain">
+    <div class="ctoolbar">
+      <p id="result-count" class="ctoolbar__count"></p>
+      <div class="ctoolbar__sort">
+        <label for="sort-select">Ordenar</label>
+        <select id="sort-select">
+          <option value="destacado">Destacados</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A-Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="cgrid" id="cgrid"></div>
+    <p class="cempty" id="cempty" hidden>No encontramos productos con ese filtro. Probá con otra categoría o búsqueda.</p>
+  </section>
+</main>
+
+<footer class="cfooter">
+  <p>Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
+</footer>
+
+<!-- Quick view -->
+<div class="quickview" id="quickview" aria-hidden="true">
+  <div class="quickview__backdrop" id="quickview-backdrop"></div>
+  <div class="quickview__panel">
+    <button class="quickview__close" id="quickview-close" aria-label="Cerrar">&times;</button>
+    <div class="quickview__body" id="quickview-body"></div>
+  </div>
+</div>
+
+<!-- Cart drawer (mismo markup/ids que el home) -->
+<div class="cart" id="cart-panel" aria-hidden="true">
+  <div class="cart__backdrop" id="cart-backdrop"></div>
+  <div class="cart__panel">
+    <div class="cart__head">
+      <h3>Tu pedido</h3>
+      <button class="cart__close" id="cart-close-btn" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="cart__items" id="cart-items"></div>
+    <div class="cart__empty" id="cart-empty">Todavía no agregaste productos.</div>
+    <div class="cart__footer" id="cart-footer" hidden>
+      <div class="cart__total"><span>Total</span><strong id="cart-total">$0</strong></div>
+      <a href="#" id="cart-wa-link" target="_blank" rel="noopener" class="btn btn--primary btn--full">Confirmar por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<a href="#" id="float-wa" class="float-wa is-visible" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.8 5 2.1 7L3 29l6.7-2.2c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.6-5.6C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.8 16 25.8zm5.8-7.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script src="../config.js"></script>
+<script src="../store.js"></script>
+<script src="catalogo.js"></script>
+</body>
+</html>
