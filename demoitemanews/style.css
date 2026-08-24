@@ -55,7 +55,7 @@ img{max-width:100%;display:block;}
 .masthead__tag{font-family:var(--ff-head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;}
 .masthead__logo--footer{display:inline-flex;}
 .masthead__logo--footer .masthead__shield{height:40px;}
-.masthead__logo--footer .masthead__wordmark{font-size:1.6rem;}
+.masthead__logo--footer .masthead__wordmark{font-size:1.6rem;color:#EDE8DA;}
 .masthead__logo--footer .masthead__news{font-size:.95rem;}
 
 /* ---------- Nav ---------- */
