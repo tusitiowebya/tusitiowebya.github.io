@@ -229,7 +229,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .armador__item img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;}
 .armador__item h4{color:var(--crema);font-family:var(--font-serif);font-size:1.05rem;margin:0;}
 .armador__item .price{color:var(--terracota-soft);font-weight:600;}
-.armador__add-all{margin-top:10px;}
+.armador__add-all{
+  grid-column:1/-1;
+  justify-self:center;align-self:start;
+  width:auto;height:auto;margin-top:10px;
+}
 
 /* ===== DESTACADOS (vidriera de alto impacto, home) ===== */
 .destacados{padding:100px clamp(20px,5vw,60px);}
