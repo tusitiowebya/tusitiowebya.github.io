@@ -317,6 +317,7 @@
       }
 
       // veredicto
+      outNum.classList.remove('is-empty');
       animateNum(score);
       var b = BANDAS.find(function (x) { return score >= x[0] && score <= x[1]; }) || BANDAS[0];
       outTitle.textContent = completo ? b[2] : 'Vas ' + keys.length + ' de ' + VECS.length;
@@ -351,7 +352,7 @@
         });
         fill.setAttribute('height', 0); fill.setAttribute('y', 386);
         sp.setAttribute('d', '');
-        outNum.textContent = '—';
+        outNum.textContent = '—'; outNum.classList.add('is-empty');
         outTitle.textContent = 'Marcá los seis vectores';
         outTxt.textContent = 'Cada vector es una manera de mirar lo mismo: si el grupo puede trabajar junto o si algo lo traba. No hay respuesta correcta — hay lectura.';
         outList.innerHTML = '';
