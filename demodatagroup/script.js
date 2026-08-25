@@ -34,13 +34,15 @@
     });
   }
 
+  var LITE = document.documentElement.classList.contains('lite');
+
   /* ---------- modo QA (?qa): saltea animaciones para capturas ---------- */
   var QA = /(?:\?|&)qa/.test(location.search) || /HeadlessChrome/.test(navigator.userAgent);
   if (QA) document.documentElement.classList.add('qa');
 
   /* ---------- REVEAL ---------- */
   var reveals = document.querySelectorAll('.reveal');
-  if (QA) {
+  if (QA || LITE) {
     reveals.forEach(function (el) { el.classList.add('in'); });
   } else if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -56,38 +58,26 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- HERO: grilla que se abre celda por celda ---------- */
-  var cells = document.getElementById('heroCells');
-  if (cells && hero) {
-    var cols = window.innerWidth < 900 ? 4 : 8;
-    var rows = window.innerWidth < 900 ? 6 : 5;
-    cells.style.gridTemplateColumns = 'repeat(' + cols + ',1fr)';
-    cells.style.gridTemplateRows = 'repeat(' + rows + ',1fr)';
-    var total = cols * rows;
-    var orden = [];
-    for (var i = 0; i < total; i++) orden.push(i);
-    // se abre desde la esquina inferior izquierda hacia afuera
-    orden.sort(function (a, b) {
-      var ax = a % cols, ay = Math.floor(a / cols);
-      var bx = b % cols, by = Math.floor(b / cols);
-      var da = ax + (rows - 1 - ay), db = bx + (rows - 1 - by);
-      return da - db || Math.random() - 0.5;
-    });
-    var frag = document.createDocumentFragment();
-    var nodos = [];
-    for (var j = 0; j < total; j++) { var n = document.createElement('i'); nodos.push(n); frag.appendChild(n); }
-    orden.forEach(function (idx, pos) { nodos[idx].style.transitionDelay = (pos * 26) + 'ms'; });
-    cells.appendChild(frag);
+  /* ---------- HERO: el mp4 sólo se pide si NO estamos en LITE ---------- */
+  var vid = document.getElementById('heroVideo');
+  if (vid && !LITE && vid.dataset.src) {
+    var src = document.createElement('source');
+    src.type = 'video/mp4';
+    src.src = vid.dataset.src;
+    vid.appendChild(src);
+    vid.load();
+    var play = vid.play();
+    if (play && play.catch) play.catch(function () { /* autoplay bloqueado: queda el poster */ });
   }
 
   /* ---------- HERO: barra de uptime ---------- */
   var bars = document.getElementById('uptimeBars');
   if (bars) {
     var n = 52;
-    var warn = [Math.floor(n * 0.32), Math.floor(n * 0.71)];
+    var hi = [Math.floor(n * 0.32), Math.floor(n * 0.71)];
     for (var k = 0; k < n; k++) {
       var b = document.createElement('i');
-      if (warn.indexOf(k) > -1) b.className = 'is-warn';
+      if (hi.indexOf(k) > -1) b.className = 'is-hi';
       b.style.transitionDelay = (240 + k * 22) + 'ms';
       bars.appendChild(b);
     }
@@ -124,6 +114,23 @@
   /* ---------- AÑO ---------- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- WATCHDOG DE FPS: degrada en caliente si el equipo no da ---------- */
+  if (!LITE && !QA && window.requestAnimationFrame) {
+    var frames = 0, t0 = performance.now();
+    (function tick(now) {
+      frames++;
+      if (now - t0 < 2000) { requestAnimationFrame(tick); return; }
+      var fps = frames / ((now - t0) / 1000);
+      if (fps < 28) {
+        document.documentElement.classList.add('lite');
+        try { sessionStorage.setItem('dg_lite', '1'); } catch (e) {}
+        var v = document.getElementById('heroVideo');
+        if (v) { v.pause(); v.removeAttribute('autoplay'); }
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
+    })(t0);
+  }
 
   /* ---------- MARQUEE: duplicar filas si hace falta ---------- */
   var mq = document.getElementById('marquee');

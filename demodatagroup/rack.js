@@ -27,61 +27,61 @@
   /* u = altura en unidades · color = color de frente · leds = cantidad de luces */
   var CATALOGO = [
     {
-      id: 'ups', nombre: 'UPS on-line', u: 2, color: '#1B2C45', led: '#12C48B', leds: 2,
+      id: 'ups', nombre: 'UPS on-line', u: 2, color: '#102843', led: '#4E86E8', leds: 2,
       marca: 'APC / Lyonn',
       desc: 'Autonomía para bajar los equipos como corresponde y protección contra picos de tensión.',
       cuando: function (e) { return e.nec.indexOf('luz') > -1 || e.nec.indexOf('caidas') > -1 || e.tam !== 'chica'; }
     },
     {
-      id: 'srv2', nombre: 'Servidor secundario', u: 2, color: '#24405F', led: '#5B8CFF', leds: 4,
+      id: 'srv2', nombre: 'Servidor secundario', u: 2, color: '#1B3A57', led: '#9FC2FA', leds: 4,
       marca: 'Dell / Lenovo',
       desc: 'Redundancia real: si el principal se cae, la operación sigue. Recomendado a partir de 50 puestos.',
       cuando: function (e) { return e.tam === 'grande'; }
     },
     {
-      id: 'srv', nombre: 'Servidor principal', u: 2, color: '#24405F', led: '#5B8CFF', leds: 4,
+      id: 'srv', nombre: 'Servidor principal', u: 2, color: '#1B3A57', led: '#9FC2FA', leds: 4,
       marca: 'Dell / Lenovo / HP',
       desc: 'Archivos, sistema de gestión, controlador de dominio y usuarios centralizados.',
       cuando: function (e) { return true; }
     },
     {
-      id: 'nas', nombre: 'Storage / backup', u: 2, color: '#1F3A55', led: '#12C48B', leds: 4,
+      id: 'nas', nombre: 'Storage / backup', u: 2, color: '#173251', led: '#6FA0F0', leds: 4,
       marca: 'Western Digital / Synology',
       desc: 'Copias automáticas con retención. Si mañana perdés un equipo, no perdés la información.',
       cuando: function (e) { return e.nec.indexOf('datos') > -1 || e.tam !== 'chica'; }
     },
     {
-      id: 'nvr', nombre: 'Grabador NVR', u: 1, color: '#152538', led: '#FFC24B', leds: 3,
+      id: 'nvr', nombre: 'Grabador NVR', u: 1, color: '#0F2338', led: '#C9DBFA', leds: 3,
       marca: 'Hikvision',
       desc: 'Grabación continua de las cámaras IP, con acceso remoto desde el celular.',
       cuando: function (e) { return e.nec.indexOf('camaras') > -1; }
     },
     {
-      id: 'fw', nombre: 'Firewall / VPN', u: 1, color: '#2B2140', led: '#B48CFF', leds: 2,
+      id: 'fw', nombre: 'Firewall / VPN', u: 1, color: '#0B2E5E', led: '#3F6FD8', leds: 2,
       marca: 'Cisco',
       desc: 'Acceso remoto seguro para que tu gente trabaje desde afuera sin exponer la red.',
       cuando: function (e) { return e.nec.indexOf('remoto') > -1 || e.tam === 'grande'; }
     },
     {
-      id: 'sw', nombre: 'Switch administrable', u: 1, color: '#1B2C45', led: '#5B8CFF', leds: 8,
+      id: 'sw', nombre: 'Switch administrable', u: 1, color: '#102843', led: '#8FB4F5', leds: 8,
       marca: 'Cisco',
       desc: 'El nudo de la red. Administrable para separar tráfico y aislar problemas sin cortar todo.',
       cuando: function (e) { return true; }
     },
     {
-      id: 'sw2', nombre: 'Switch de acceso extra', u: 1, color: '#1B2C45', led: '#5B8CFF', leds: 8,
+      id: 'sw2', nombre: 'Switch de acceso extra', u: 1, color: '#102843', led: '#8FB4F5', leds: 8,
       marca: 'Cisco',
       desc: 'Bocas adicionales para cubrir todos los puestos sin cascadear equipos hogareños.',
       cuando: function (e) { return e.tam === 'grande'; }
     },
     {
-      id: 'wifi', nombre: 'Controladora WiFi + APs', u: 1, color: '#173A38', led: '#12C48B', leds: 3,
+      id: 'wifi', nombre: 'Controladora WiFi + APs', u: 1, color: '#14314F', led: '#5F93EC', leds: 3,
       marca: 'Cisco / Ubiquiti',
       desc: 'Cobertura pareja en toda la planta, roaming entre antenas y red de invitados separada.',
       cuando: function (e) { return e.nec.indexOf('wifi') > -1; }
     },
     {
-      id: 'patch', nombre: 'Patchera + cableado', u: 1, color: '#0F1D2E', led: '#63748C', leds: 12,
+      id: 'patch', nombre: 'Patchera + cableado', u: 1, color: '#0B1B2D', led: '#7B8DA6', leds: 12,
       marca: 'Cableado estructurado',
       desc: 'Cableado certificado y ordenado. Es lo que hace que un problema se resuelva en minutos y no en horas.',
       cuando: function (e) { return true; }
@@ -91,17 +91,17 @@
   /* extras que no ocupan U pero forman parte de la propuesta */
   var EXTRAS = [
     {
-      id: 'abono', nombre: 'Abono de soporte gestionado', color: '#12C48B',
+      id: 'abono', nombre: 'Abono de soporte gestionado', color: '#7BA6F5',
       desc: 'Si adentro no hay nadie que lo administre, lo administramos nosotros: monitoreo, backups y mesa de ayuda.',
       cuando: function (e) { return e.admin === 'nadie'; }
     },
     {
-      id: 'coord', nombre: 'Coordinación con tu IT interno', color: '#5B8CFF',
+      id: 'coord', nombre: 'Coordinación con tu IT interno', color: '#4E86E8',
       desc: 'Trabajamos como refuerzo de tu equipo: nosotros ponemos el equipamiento y la segunda opinión técnica.',
       cuando: function (e) { return e.admin === 'interno' || e.admin === 'externo'; }
     },
     {
-      id: 'licencias', nombre: 'Licenciamiento Microsoft', color: '#B48CFF',
+      id: 'licencias', nombre: 'Licenciamiento Microsoft', color: '#C9DBFA',
       desc: 'Sistemas operativos, Office y CALs en regla, con las renovaciones controladas por nosotros.',
       cuando: function (e) { return true; }
     }
@@ -113,13 +113,13 @@
     var defs = document.createElementNS(NS, 'defs');
     defs.innerHTML =
       '<linearGradient id="rackBg" x1="0" y1="0" x2="0" y2="1">' +
-      '<stop offset="0" stop-color="#0B1524"/><stop offset="1" stop-color="#070E19"/></linearGradient>';
+      '<stop offset="0" stop-color="#08192F"/><stop offset="1" stop-color="#050F1E"/></linearGradient>';
     svg.appendChild(defs);
 
-    add('rect', { x: 8, y: 14, width: 174, height: BOT - 14 + 12, rx: 8, fill: 'url(#rackBg)', stroke: 'rgba(91,140,255,.28)', 'stroke-width': 1.4 });
+    add('rect', { x: 8, y: 14, width: 174, height: BOT - 14 + 12, rx: 8, fill: 'url(#rackBg)', stroke: 'rgba(123,166,245,.3)', 'stroke-width': 1.4 });
     // rieles
-    add('rect', { x: X0 - 8, y: TOP - 4, width: 6, height: BOT - TOP + 8, rx: 2, fill: 'rgba(91,140,255,.14)' });
-    add('rect', { x: X1 + 2, y: TOP - 4, width: 6, height: BOT - TOP + 8, rx: 2, fill: 'rgba(91,140,255,.14)' });
+    add('rect', { x: X0 - 8, y: TOP - 4, width: 6, height: BOT - TOP + 8, rx: 2, fill: 'rgba(123,166,245,.16)' });
+    add('rect', { x: X1 + 2, y: TOP - 4, width: 6, height: BOT - TOP + 8, rx: 2, fill: 'rgba(123,166,245,.16)' });
 
     // marcas de U
     for (var i = 0; i < US; i++) {

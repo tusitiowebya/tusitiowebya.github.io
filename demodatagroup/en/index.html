@@ -7,7 +7,7 @@
 <meta name="description" content="Datagroup is your outsourced IT department in Argentina: servers, storage, networking, security, licensing and support for SMEs and large companies. A bilingual company.">
 <meta name="keywords" content="IT services Argentina, IT consulting Buenos Aires, managed IT support, servers, storage, networking, structured cabling, IP cameras, Microsoft licensing, bilingual IT provider">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#0A1626">
+<meta name="theme-color" content="#07182E">
 <link rel="canonical" href="https://tusitiowebya.github.io/demodatagroup/en/">
 <link rel="alternate" hreflang="es-AR" href="https://tusitiowebya.github.io/demodatagroup/">
 <link rel="alternate" hreflang="en" href="https://tusitiowebya.github.io/demodatagroup/en/">
@@ -31,6 +31,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600&family=Azeret+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<script src="../lite.js"></script>
 
 <script type="application/ld+json">
 {
@@ -59,7 +60,7 @@
       <circle cx="24" cy="24" r="19" stroke="url(#ge)" stroke-width="2.2"/>
       <ellipse cx="24" cy="24" rx="8.2" ry="19" stroke="url(#ge)" stroke-width="1.5" opacity=".85"/>
       <path d="M5 24h38M8.2 14.2h31.6M8.2 33.8h31.6" stroke="url(#ge)" stroke-width="1.5" opacity=".85"/>
-      <circle cx="24" cy="24" r="2.6" fill="#12C48B"/>
+      <circle cx="24" cy="24" r="2.6" fill="#FFFFFF"/>
     </svg>
     <span class="brand__txt">
       <span class="brand__name">DATAGROUP</span>
@@ -83,20 +84,17 @@
 
 <header class="hero" id="hero">
   <div class="hero__media">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="../poster.jpg">
-      <source src="../hero.mp4" type="video/mp4">
-    </video>
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto"
+           poster="../poster.jpg" data-src="../hero.mp4"></video>
   </div>
   <div class="hero__scrim"></div>
-  <div class="hero__cells" id="heroCells" aria-hidden="true"></div>
-  <div class="hero__lines" aria-hidden="true"></div>
 
   <div style="position:relative;z-index:5;width:100%">
     <div class="hero__inner">
-      <p class="term">
-        <span class="term__dot"></span>
-        datagroup@buenosaires:~$ status <span style="color:#12C48B">online</span>
-        <span class="term__cursor"></span>
+      <p class="credbar">
+        <span><b><i class="credbar__dot"></i>IT Services &amp; Consulting</b></span>
+        <span>Buenos Aires &middot; Argentina</span>
+        <span>A bilingual company</span>
       </p>
       <h1>Your <em>IT</em> department, without building one&nbsp;in&#8209;house.</h1>
       <p class="hero__lead">
@@ -105,7 +103,7 @@
         in Argentina.
       </p>
       <div class="hero__cta">
-        <a class="btn btn--wa" href="https://api.whatsapp.com/send?phone=5491121906969&text=Hello%20Datagroup!%20I%20would%20like%20a%20free%20assessment%20of%20our%20IT%20environment." target="_blank" rel="noopener">Request a free assessment</a>
+        <a class="btn btn--primary" href="#contact">Request a free assessment</a>
         <a class="btn btn--ghost" href="#services">See what we do →</a>
       </div>
     </div>
@@ -336,7 +334,7 @@
   <div class="container">
     <div class="contacto-grid">
       <div class="reveal">
-        <span class="eyebrow-path" style="color:#12C48B">/ contact</span>
+        <span class="eyebrow-path" style="color:var(--azul-2)">/ contact</span>
         <h2 class="section__title">Tell us what you need to solve.</h2>
         <p class="section__lead">We reply on whichever channel suits you best. If it is urgent, WhatsApp is the fastest.</p>
 
@@ -427,7 +425,7 @@
             <circle cx="24" cy="24" r="19" stroke="url(#gef)" stroke-width="2.2"/>
             <ellipse cx="24" cy="24" rx="8.2" ry="19" stroke="url(#gef)" stroke-width="1.5" opacity=".85"/>
             <path d="M5 24h38M8.2 14.2h31.6M8.2 33.8h31.6" stroke="url(#gef)" stroke-width="1.5" opacity=".85"/>
-            <circle cx="24" cy="24" r="2.6" fill="#12C48B"/>
+            <circle cx="24" cy="24" r="2.6" fill="#FFFFFF"/>
           </svg>
           <span class="brand__txt">
             <span class="brand__name">DATAGROUP</span>
