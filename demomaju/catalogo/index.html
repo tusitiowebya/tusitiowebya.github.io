@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Catálogo | MAju — Indumentaria femenina en La Plata</title>
+<meta name="description" content="Catálogo completo de MAju: vestidos, camisas, pantalones, faldas, abrigos y accesorios. Filtrá por ocasión, rubro y talle. Pedidos por WhatsApp con envío a todo el país.">
+<meta name="keywords" content="catalogo ropa mujer la plata, vestidos, pantalones mujer, indumentaria femenina online, MAju">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#191512">
+<link rel="canonical" href="https://tusitiowebya.github.io/demomaju/catalogo/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MAju">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Catálogo | MAju — Indumentaria femenina en La Plata">
+<meta property="og:description" content="Filtrá por ocasión, rubro y talle. Armás el pedido y lo cerrás por WhatsApp.">
+<meta property="og:url" content="https://tusitiowebya.github.io/demomaju/catalogo/">
+<meta property="og:image" content="https://tusitiowebya.github.io/demomaju/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../catalogo.css">
+</head>
+<body class="is-catalogo">
+
+<header class="nav solid" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="../" aria-label="MAju, inicio">
+      <span class="brand-word"><em>MA</em>ju</span>
+      <svg class="brand-stitch" viewBox="0 0 120 6" aria-hidden="true" focusable="false"><path d="M1 3 H119"/></svg>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="../">Inicio</a>
+      <a href="../#tulook">Armá tu look</a>
+      <a href="./">Catálogo</a>
+      <a href="../#talles">Talles</a>
+      <a href="../#nosotras">Nosotras</a>
+    </nav>
+    <div class="nav-side">
+      <a class="nav-ig" href="https://instagram.com/majulaplataa" target="_blank" rel="noopener" aria-label="Instagram de MAju">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <button class="nav-cart" id="navCart" aria-label="Ver mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1.2 12H7.2L6 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Abrir menú"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="cat">
+  <div class="wrap">
+
+    <header class="cat-head">
+      <nav class="crumbs" aria-label="Migas"><a href="../">Inicio</a><span>/</span><b>Catálogo</b></nav>
+      <h1>El catálogo completo</h1>
+      <p>Todo lo que hay en el showroom, con precio final y talles disponibles. Filtrá por la ocasión y quedate solo con lo que te sirve.</p>
+    </header>
+
+    <div class="cat-tools">
+      <div class="cat-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="q" type="search" placeholder="Buscar una prenda, una tela…" aria-label="Buscar en el catálogo">
+      </div>
+      <label class="cat-sort">
+        <span>Ordenar</span>
+        <select id="orden" aria-label="Ordenar el catálogo">
+          <option value="dest">Destacadas</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A–Z</option>
+        </select>
+      </label>
+      <button class="cat-filtros-btn" id="filtrosBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M7 12h10"/><path d="M10 17h4"/></svg>
+        Filtros
+      </button>
+    </div>
+
+    <div class="cat-layout">
+      <aside class="cat-side" id="catSide" aria-label="Filtros">
+        <div class="cs-block">
+          <h2>Ocasión</h2>
+          <div class="cs-chips" id="fPlanes"></div>
+        </div>
+        <div class="cs-block">
+          <h2>Rubro</h2>
+          <ul class="cs-cats" id="fCats"></ul>
+        </div>
+        <div class="cs-block">
+          <h2>Talle</h2>
+          <div class="cs-chips cs-chips--talles" id="fTalles"></div>
+        </div>
+        <button class="cs-clear" id="limpiar" type="button">Limpiar filtros</button>
+      </aside>
+
+      <section class="cat-main">
+        <p class="cat-count" id="conteo" aria-live="polite"></p>
+        <div class="cat-grid" id="catGrid"></div>
+        <div class="cat-vacio" id="vacio" hidden>
+          <h3>No encontramos prendas con esos filtros</h3>
+          <p>Probá sacando alguno, o escribinos y te decimos qué tenemos parecido.</p>
+          <a class="btn btn-line" id="waVacio" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-word"><em>MA</em>ju</span>
+      <p>Indumentaria femenina · La Plata, Buenos Aires</p>
+    </div>
+    <nav class="foot-links" aria-label="Enlaces del pie">
+      <a href="../">Inicio</a>
+      <a href="../#tulook">Armá tu look</a>
+      <a href="../#talles">Guía de talles</a>
+      <a href="https://instagram.com/majulaplataa" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <div class="foot-legal">
+      <p>© <span id="year">2026</span> MAju. Todos los derechos reservados.</p>
+      <p>Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Ficha lateral de prenda -->
+<div class="ficha-backdrop" id="fichaBackdrop" hidden></div>
+<aside class="ficha" id="ficha" aria-hidden="true" aria-label="Detalle de la prenda">
+  <button class="ficha-close" id="fichaClose" aria-label="Cerrar">×</button>
+  <div class="ficha-body" id="fichaBody"></div>
+</aside>
+
+<!-- Carrito -->
+<div class="cart-backdrop" id="cartBackdrop" hidden></div>
+<aside class="cart" id="cart" aria-hidden="true" aria-label="Tu pedido">
+  <header class="cart-head">
+    <h3>Tu pedido</h3>
+    <button id="cartClose" aria-label="Cerrar">×</button>
+  </header>
+  <div class="cart-body" id="cartBody"></div>
+  <footer class="cart-foot">
+    <div class="cart-sum" id="cartSum"></div>
+    <button class="btn btn-ink btn-block" id="cartNext" disabled>Continuar</button>
+    <p class="cart-note" id="cartNote" hidden>Confirmamos stock y talles por WhatsApp antes de despachar.</p>
+  </footer>
+</aside>
+
+<script src="../config.js"></script>
+<script src="../store.js"></script>
+<script src="../catalogo.js"></script>
+</body>
+</html>
