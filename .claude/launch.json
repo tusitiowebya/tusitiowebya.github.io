@@ -108,6 +108,18 @@
         "demosolosenlagalaxia"
       ],
       "port": 8791
+    },
+    {
+      "name": "demoiiti",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--directory",
+        "demoiiti"
+      ],
+      "port": 8793
     }
   ]
 }
