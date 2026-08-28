@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="128" height="128" fill="#EFEAE3"/>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#16140F">
+    <text x="14" y="90" font-size="86">C</text>
+    <text x="52" y="102" font-size="80">A</text>
+  </g>
+  <g fill="none" stroke="#16140F" stroke-width="2" opacity="0.5">
+    <path d="M12 110 H116"/>
+    <path d="M26 110 V82 L52 66 L78 82 V110"/>
+  </g>
+  <path d="M36 108 V84 L56 72 V108 Z" fill="#B99B6B" opacity="0.85"/>
+</svg>
