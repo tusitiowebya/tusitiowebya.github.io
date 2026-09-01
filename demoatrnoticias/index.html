@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATR Noticias — Formosa: locales, policiales, deportes y radio</title>
+<meta name="description" content="ATR Noticias, el diario digital de Formosa: locales, nacionales, internacionales, policiales, política, economía, deportes, espectáculos y tecnología. Radio online las 24 horas.">
+<meta name="keywords" content="noticias Formosa, ATR Noticias, diario Formosa, policiales Formosa, radio online Formosa, Clorinda, Pirané, El Colorado, quiniela Formosa">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#101114">
+<link rel="canonical" href="https://tusitiowebya.github.io/demoatrnoticias/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ATR Noticias — El pulso de Formosa, todo el día">
+<meta property="og:description" content="Locales, policiales, política, deportes y espectáculos de Formosa. Con radio online en vivo, el tiempo, quiniela y la tabla del fútbol argentino.">
+<meta property="og:url" content="https://tusitiowebya.github.io/demoatrnoticias/">
+<meta property="og:image" content="https://tusitiowebya.github.io/demoatrnoticias/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="ATR Noticias">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ATR Noticias — El pulso de Formosa, todo el día">
+<meta name="twitter:description" content="El diario digital de Formosa. Noticias, radio en vivo, el tiempo, quiniela y fútbol.">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demoatrnoticias/images/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "ATR Noticias",
+  "alternateName": "ATR",
+  "url": "https://tusitiowebya.github.io/demoatrnoticias/",
+  "logo": "https://tusitiowebya.github.io/demoatrnoticias/images/favicon-512.png",
+  "description": "Diario digital de la provincia de Formosa con radio online en vivo.",
+  "areaServed": { "@type": "State", "name": "Formosa, Argentina" },
+  "inLanguage": "es-AR",
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<div class="readbar" id="readbar"></div>
+
+<!-- ══════════ TOPBAR ══════════ -->
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <span class="topbar__fecha" id="fecha">—</span>
+
+    <span class="topbar__chip topbar__chip--clock">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b id="relojTop">--:--:--</b>
+    </span>
+
+    <a href="#clima" class="topbar__chip topbar__chip--clima" id="climaTop">
+      <span class="topbar__clima-ico" id="climaTopIco">·</span>
+      <b id="climaTopTemp">--°</b>
+      <span class="topbar__muted">Formosa</span>
+    </a>
+
+    <span class="topbar__chip topbar__chip--dolar">
+      <span class="topbar__muted">Dólar</span>
+      <b id="dolarOficial">—</b>
+      <span class="topbar__sep">/</span>
+      <span class="topbar__muted">Blue</span>
+      <b id="dolarBlue">—</b>
+    </span>
+
+    <span class="topbar__chip topbar__chip--visitas" title="Visitas totales de ATR Noticias">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+      <b id="visitasTop">—</b>
+      <span class="topbar__muted">visitas</span>
+    </span>
+  </div>
+</div>
+
+<!-- ══════════ MASTHEAD ══════════ -->
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <button class="masthead__btn masthead__btn--theme" id="themeBtn" aria-label="Cambiar modo claro / oscuro">
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+
+    <a href="./" class="brand" aria-label="ATR Noticias — portada">
+      <span class="brand__atr">ATR</span>
+      <span class="brand__noticias">NOTICIAS</span>
+    </a>
+
+    <button class="masthead__btn masthead__btn--radio" id="radioTopBtn">
+      <span class="live-dot"></span> <span class="hide-xs">RADIO </span>EN VIVO
+    </button>
+  </div>
+  <p class="masthead__tag">El pulso de Formosa, todo el día <span>· Formosa capital · Clorinda · Pirané · El Colorado · Las Lomitas</span></p>
+</header>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav__in">
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__list" id="navList">
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#locales">Locales</a></li>
+      <li><a href="#nacionales">Nacionales</a></li>
+      <li><a href="#internacionales">Internacionales</a></li>
+      <li><a href="#deportes">Deportes</a></li>
+      <li><a href="#espectaculos">Espectáculos</a></li>
+      <li><a href="#policiales">Policiales</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#politica">Política</a></li>
+      <li><a href="#economia">Economía</a></li>
+    </ul>
+    <button class="nav__search" id="navSearch" aria-label="Buscar en ATR Noticias">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker">
+  <div class="ticker__label"><span class="live-dot"></span> ÚLTIMO MOMENTO</div>
+  <div class="ticker__track"><div class="ticker__content" id="tickerContent"></div></div>
+</div>
+
+<main id="inicio">
+<div class="wrap">
+
+  <!-- ══════════ PORTADA ══════════ -->
+  <section class="portada">
+    <article class="lead">
+      <a href="#locales" class="lead__media">
+        <img src="images/hero.jpg" alt="Vista de la ciudad de Formosa" width="1400" height="800">
+        <span class="lead__badge">Locales</span>
+      </a>
+      <h1 class="lead__title"><a href="#locales">Avanza la repavimentación de la Ruta 11 y anuncian desvíos en el acceso norte a la capital</a></h1>
+      <p class="lead__excerpt">Las obras alcanzan el tramo entre Formosa y Villa Escolar. Habrá tránsito reducido durante las mañanas y un desvío señalizado por el camino vecinal. Desde Vialidad estiman que la traza quedará liberada antes de fin de mes.</p>
+      <div class="byline">
+        <span class="byline__author">Redacción ATR</span>
+        <span class="byline__dot">·</span>
+        <span>Hace 25 minutos</span>
+        <span class="byline__dot">·</span>
+        <span>4 min de lectura</span>
+      </div>
+    </article>
+
+    <div class="portada__side">
+      <article class="sub">
+        <a href="#policiales" class="sub__media"><img src="images/policiales.jpg" alt="Operativo policial nocturno" loading="lazy"></a>
+        <div>
+          <span class="kicker kicker--policiales">Policiales</span>
+          <h3><a href="#policiales">Secuestran mercadería en un control de la Ruta 81 a la altura de Ibarreta</a></h3>
+          <span class="sub__time">Hace 1 hora</span>
+        </div>
+      </article>
+      <article class="sub">
+        <a href="#deportes" class="sub__media"><img src="images/deportes.jpg" alt="Partido de fútbol nocturno" loading="lazy"></a>
+        <div>
+          <span class="kicker kicker--deportes">Deportes</span>
+          <h3><a href="#deportes">Arranca el Regional Amateur: los tres equipos formoseños ya conocen sus rivales</a></h3>
+          <span class="sub__time">Hace 2 horas</span>
+        </div>
+      </article>
+
+      <div class="minuto">
+        <h4 class="minuto__head"><span class="live-dot"></span> Minuto a minuto</h4>
+        <ol class="minuto__list" id="minutoList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- AD -->
+  <div class="adslot" id="adTop">
+    <span class="adslot__label">Espacio publicitario</span>
+    <span class="adslot__size">970 × 90</span>
+  </div>
+
+  <div class="layout">
+  <div class="layout__main">
+
+    <!-- ══════════ LOCALES ══════════ -->
+    <section class="block" id="locales">
+      <header class="block__head"><h2>Locales</h2><a href="#" class="block__more">Ver todas</a></header>
+
+      <article class="wide">
+        <a href="#" class="wide__media"><img src="images/locales.jpg" alt="Calle céntrica de la ciudad" loading="lazy"></a>
+        <div class="wide__body">
+          <span class="kicker kicker--locales">Formosa capital</span>
+          <h3><a href="#">Reordenan el estacionamiento en el microcentro: cómo queda cada cuadra</a></h3>
+          <p>El municipio confirmó los nuevos horarios de carga y descarga sobre las calles céntricas y sumó dársenas para transporte escolar. Rige desde el lunes próximo.</p>
+          <span class="card__time">Hace 3 horas</span>
+        </div>
+      </article>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n1.jpg" alt="Obra pública" loading="lazy"></a>
+          <span class="kicker kicker--locales">Clorinda</span>
+          <h3><a href="#">Renuevan el alumbrado del acceso al puente Loyola con luminarias LED</a></h3>
+          <span class="card__time">Hace 4 horas</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n2.jpg" alt="Personal de salud" loading="lazy"></a>
+          <span class="kicker kicker--locales">Pirané</span>
+          <h3><a href="#">El hospital sumó turnos de guardia los fines de semana largos</a></h3>
+          <span class="card__time">Hace 6 horas</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n9.jpg" alt="Paisaje del río al atardecer" loading="lazy"></a>
+          <span class="kicker kicker--locales">Herradura</span>
+          <h3><a href="#">Preparan la temporada en la costanera con nuevos puestos gastronómicos</a></h3>
+          <span class="card__time">Ayer</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ POLICIALES + POLÍTICA ══════════ -->
+    <div class="duo">
+      <section class="block block--compact" id="policiales">
+        <header class="block__head block__head--sm"><h2>Policiales</h2><a href="#" class="block__more">Ver todas</a></header>
+        <article class="feat feat--policiales">
+          <a href="#" class="feat__media"><img src="images/policiales.jpg" alt="Móvil policial" loading="lazy"></a>
+          <h3><a href="#">Investigan un incendio en un depósito del parque industrial</a></h3>
+          <span class="card__time">Hace 1 hora</span>
+        </article>
+        <ul class="list">
+          <li><a href="#">Detienen a dos personas por robo de motos en el barrio San Miguel</a><span>Hace 3 h</span></li>
+          <li><a href="#">Choque múltiple en la Ruta 86: cuatro heridos leves</a><span>Hace 5 h</span></li>
+          <li><a href="#">Operativo de tránsito: 38 vehículos retenidos durante el fin de semana</a><span>Ayer</span></li>
+          <li><a href="#">Recuperan elementos sustraídos de una escuela de Laguna Blanca</a><span>Ayer</span></li>
+        </ul>
+      </section>
+
+      <section class="block block--compact" id="politica">
+        <header class="block__head block__head--sm"><h2>Política</h2><a href="#" class="block__more">Ver todas</a></header>
+        <article class="feat feat--politica">
+          <a href="#" class="feat__media"><img src="images/politica.jpg" alt="Conferencia de prensa" loading="lazy"></a>
+          <h3><a href="#">La Legislatura debate el presupuesto provincial en sesión extraordinaria</a></h3>
+          <span class="card__time">Hace 2 horas</span>
+        </article>
+        <ul class="list">
+          <li><a href="#">Intendentes del interior pidieron una mesa de obras conjunta</a><span>Hace 4 h</span></li>
+          <li><a href="#">Se define el cronograma electoral para las próximas municipales</a><span>Hace 7 h</span></li>
+          <li><a href="#">Aprueban el nuevo régimen de coparticipación municipal</a><span>Ayer</span></li>
+          <li><a href="#">Audiencia pública por el trazado del acueducto del oeste</a><span>Hace 2 días</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- AD -->
+    <div class="adslot adslot--wide" id="adMid">
+      <span class="adslot__label">Espacio publicitario</span>
+      <span class="adslot__size">970 × 250</span>
+    </div>
+
+    <!-- ══════════ DEPORTES ══════════ -->
+    <section class="block" id="deportes">
+      <header class="block__head"><h2>Deportes</h2><a href="#" class="block__more">Ver todas</a></header>
+      <div class="grid grid--3">
+        <article class="card card--big">
+          <a href="#" class="card__media"><img src="images/deportes.jpg" alt="Estadio de fútbol" loading="lazy"></a>
+          <span class="kicker kicker--deportes">Fútbol</span>
+          <h3><a href="#">Clásico formoseño: se juega el sábado a las 17 y habrá dos tribunas populares</a></h3>
+          <p>La organización confirmó el operativo de seguridad y la venta anticipada de entradas por sistema digital.</p>
+          <span class="card__time">Hace 1 hora</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n4.jpg" alt="Partido de básquet" loading="lazy"></a>
+          <span class="kicker kicker--deportes">Básquet</span>
+          <h3><a href="#">La Liga Formoseña define los cruces de playoffs este fin de semana</a></h3>
+          <span class="card__time">Hace 5 horas</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n6.jpg" alt="Camino rural" loading="lazy"></a>
+          <span class="kicker kicker--deportes">Automovilismo</span>
+          <h3><a href="#">El TC Regional del NEA llega al autódromo con más de 60 inscriptos</a></h3>
+          <span class="card__time">Ayer</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ NACIONALES ══════════ -->
+    <section class="block" id="nacionales">
+      <header class="block__head"><h2>Nacionales</h2><a href="#" class="block__more">Ver todas</a></header>
+      <div class="grid grid--3">
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/nacionales.jpg" alt="Edificio de gobierno" loading="lazy"></a>
+          <span class="kicker kicker--nacionales">País</span>
+          <h3><a href="#">Definen el cronograma de pagos y los aumentos que rigen desde este mes</a></h3>
+          <span class="card__time">Hace 2 horas</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n7.jpg" alt="Movilización en la calle" loading="lazy"></a>
+          <span class="kicker kicker--nacionales">Gremios</span>
+          <h3><a href="#">Paritarias: los estatales vuelven a la mesa de negociación la semana próxima</a></h3>
+          <span class="card__time">Hace 4 horas</span>
+        </article>
+        <article class="card">
+          <a href="#" class="card__media"><img src="images/n3.jpg" alt="Aula de escuela" loading="lazy"></a>
+          <span class="kicker kicker--nacionales">Educación</span>
+          <h3><a href="#">Publican el calendario escolar con los feriados puente confirmados</a></h3>
+          <span class="card__time">Ayer</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ INTERNACIONALES ══════════ -->
+    <section class="block" id="internacionales">
+      <header class="block__head"><h2>Internacionales</h2><a href="#" class="block__more">Ver todas</a></header>
+      <article class="wide wide--reverse">
+        <a href="#" class="wide__media"><img src="images/internacionales.jpg" alt="Mapa del mundo" loading="lazy"></a>
+        <div class="wide__body">
+          <span class="kicker kicker--intern">Mundo</span>
+          <h3><a href="#">Cumbre regional: avanza un acuerdo de facilitación fronteriza en el Mercosur</a></h3>
+          <p>El punto más observado desde Formosa es el paso Clorinda–Puerto Falcón, donde se busca reducir los tiempos de trámite para el tránsito vecinal.</p>
+          <span class="card__time">Hace 3 horas</span>
+        </div>
+      </article>
+      <ul class="list list--2col">
+        <li><a href="#">Suben los commodities agrícolas tras el informe mensual de cosecha</a><span>Hace 5 h</span></li>
+        <li><a href="#">Alerta meteorológica en el sur de Brasil por lluvias intensas</a><span>Hace 6 h</span></li>
+        <li><a href="#">Paraguay habilita un horario extendido en pasos fronterizos</a><span>Ayer</span></li>
+        <li><a href="#">Europa define nuevas reglas para el uso de inteligencia artificial</a><span>Ayer</span></li>
+      </ul>
+    </section>
+
+    <!-- ══════════ ESPECTÁCULOS ══════════ -->
+    <section class="block" id="espectaculos">
+      <header class="block__head">
+        <h2>Espectáculos</h2>
+        <div class="rail__nav">
+          <button class="rail__btn" id="railPrev" aria-label="Anterior">‹</button>
+          <button class="rail__btn" id="railNext" aria-label="Siguiente">›</button>
+        </div>
+      </header>
+      <div class="rail" id="rail">
+        <article class="rail__card">
+          <a href="#" class="rail__media"><img src="images/espectaculos.jpg" alt="Recital con luces" loading="lazy"></a>
+          <span class="kicker kicker--espectaculos">Música</span>
+          <h3><a href="#">Se viene el Festival de la Costanera con tres noches de chamamé</a></h3>
+          <span class="card__time">Hace 2 horas</span>
+        </article>
+        <article class="rail__card">
+          <a href="#" class="rail__media"><img src="images/n5.jpg" alt="Sala de cine" loading="lazy"></a>
+          <span class="kicker kicker--espectaculos">Cine</span>
+          <h3><a href="#">Cartelera del fin de semana: los cuatro estrenos que llegan a la ciudad</a></h3>
+          <span class="card__time">Hace 4 horas</span>
+        </article>
+        <article class="rail__card">
+          <a href="#" class="rail__media"><img src="images/n11.jpg" alt="Muestra de arte" loading="lazy"></a>
+          <span class="kicker kicker--espectaculos">Cultura</span>
+          <h3><a href="#">Abren la convocatoria para artistas locales del ciclo de verano</a></h3>
+          <span class="card__time">Hace 8 horas</span>
+        </article>
+        <article class="rail__card">
+          <a href="#" class="rail__media"><img src="images/n10.jpg" alt="Feria" loading="lazy"></a>
+          <span class="kicker kicker--espectaculos">Ferias</span>
+          <h3><a href="#">Vuelve la feria de emprendedores a la plaza San Martín</a></h3>
+          <span class="card__time">Ayer</span>
+        </article>
+        <article class="rail__card">
+          <a href="#" class="rail__media"><img src="images/radio.jpg" alt="Estudio de radio" loading="lazy"></a>
+          <span class="kicker kicker--espectaculos">Medios</span>
+          <h3><a href="#">ATR Radio suma un nuevo programa de música regional a la mañana</a></h3>
+          <span class="card__time">Ayer</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ TECNOLOGÍA + ECONOMÍA ══════════ -->
+    <div class="duo">
+      <section class="block block--compact" id="tecnologia">
+        <header class="block__head block__head--sm"><h2>Tecnología</h2><a href="#" class="block__more">Ver todas</a></header>
+        <article class="feat feat--tecnologia">
+          <a href="#" class="feat__media"><img src="images/tecnologia.jpg" alt="Placa electrónica" loading="lazy"></a>
+          <h3><a href="#">Amplían la red de fibra óptica hacia cinco localidades del centro provincial</a></h3>
+          <span class="card__time">Hace 3 horas</span>
+        </article>
+        <ul class="list">
+          <li><a href="#">Cómo pedir turnos online en las oficinas provinciales</a><span>Hace 6 h</span></li>
+          <li><a href="#">Guía rápida: reconocer estafas por WhatsApp y qué hacer</a><span>Ayer</span></li>
+          <li><a href="#">Escuelas técnicas suman robótica al programa del próximo ciclo</a><span>Hace 2 días</span></li>
+        </ul>
+      </section>
+
+      <section class="block block--compact" id="economia">
+        <header class="block__head block__head--sm"><h2>Economía</h2><a href="#" class="block__more">Ver todas</a></header>
+        <article class="feat feat--economia">
+          <a href="#" class="feat__media"><img src="images/economia.jpg" alt="Billetes argentinos" loading="lazy"></a>
+          <h3><a href="#">Comercios del centro reportan una mejora en las ventas de la primera quincena</a></h3>
+          <span class="card__time">Hace 2 horas</span>
+        </article>
+        <div class="cotiza">
+          <h4>Cotizaciones de hoy</h4>
+          <div class="cotiza__grid" id="cotizaGrid">
+            <div class="cotiza__item"><span>Oficial</span><b>—</b></div>
+            <div class="cotiza__item"><span>Blue</span><b>—</b></div>
+            <div class="cotiza__item"><span>MEP</span><b>—</b></div>
+            <div class="cotiza__item"><span>Tarjeta</span><b>—</b></div>
+          </div>
+          <span class="cotiza__src">Fuente: dolarapi.com · en vivo</span>
+        </div>
+      </section>
+    </div>
+
+  </div><!-- /layout__main -->
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside class="layout__side">
+
+    <!-- RADIO -->
+    <div class="widget widget--radio" id="radio">
+      <div class="radio__top">
+        <span class="radio__live"><span class="live-dot"></span> AL AIRE</span>
+        <span class="radio__hora" id="radioHora">--:--</span>
+      </div>
+      <h4 class="radio__name">ATR Radio <span>FM 101.5</span></h4>
+      <p class="radio__show" id="radioShow">Programación musical</p>
+
+      <div class="radio__eq" id="radioEq" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="radio__controls">
+        <button class="radio__play" id="radioPlay" aria-label="Reproducir la radio">
+          <svg class="ico-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="ico-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          <svg class="ico-load" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3a9 9 0 109 9"/></svg>
+        </button>
+        <div class="radio__vol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7"/></svg>
+          <input type="range" id="radioVol" min="0" max="100" value="80" aria-label="Volumen">
+        </div>
+      </div>
+      <p class="radio__status" id="radioStatus">Tocá play para escuchar en vivo</p>
+      <audio id="radioAudio" preload="none"></audio>
+    </div>
+
+    <!-- CLIMA -->
+    <div class="widget widget--clima" id="clima">
+      <h4 class="widget__title">El tiempo en Formosa</h4>
+      <div class="clima__now">
+        <span class="clima__ico" id="climaIco">·</span>
+        <div>
+          <span class="clima__temp" id="climaTemp">--°</span>
+          <span class="clima__desc" id="climaDesc">Cargando…</span>
+        </div>
+      </div>
+      <div class="clima__meta">
+        <span>Humedad <b id="climaHum">—</b></span>
+        <span>Viento <b id="climaViento">—</b></span>
+      </div>
+      <div class="clima__dias" id="climaDias"></div>
+      <span class="widget__src">Datos en vivo · Open-Meteo</span>
+    </div>
+
+    <!-- QUINIELA -->
+    <div class="widget widget--quiniela" id="quiniela">
+      <div class="quiniela__sponsor">
+        <span class="quiniela__sponsor-label">Te lo trae</span>
+        <span class="quiniela__sponsor-name">Agencia La Formoseña</span>
+      </div>
+      <h4 class="widget__title">Quiniela</h4>
+      <div class="quiniela__tabs" id="quinielaTabs"></div>
+      <div class="quiniela__cabeza">
+        <span class="quiniela__cabeza-label">A la cabeza</span>
+        <b id="quinielaCabeza">--</b>
+      </div>
+      <div class="quiniela__grid" id="quinielaGrid"></div>
+      <div class="quiniela__foot">
+        <span id="quinielaSorteo">—</span>
+        <span id="quinielaFecha">—</span>
+      </div>
+    </div>
+
+    <!-- TABLA -->
+    <div class="widget widget--tabla" id="tabla">
+      <h4 class="widget__title">Tabla de posiciones <span>Torneo argentino</span></h4>
+      <table class="tabla">
+        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead>
+        <tbody id="tablaBody"></tbody>
+      </table>
+      <button class="tabla__toggle" id="tablaToggle">Ver tabla completa</button>
+      <span class="widget__src" id="tablaFecha">—</span>
+    </div>
+
+    <!-- MÁS LEÍDO -->
+    <div class="widget">
+      <h4 class="widget__title">Lo más leído</h4>
+      <ol class="ranking">
+        <li><span class="ranking__n">1</span><a href="#locales">Reordenan el estacionamiento en el microcentro</a></li>
+        <li><span class="ranking__n">2</span><a href="#policiales">Secuestran mercadería en un control de la Ruta 81</a></li>
+        <li><span class="ranking__n">3</span><a href="#deportes">Clásico formoseño: se juega el sábado a las 17</a></li>
+        <li><span class="ranking__n">4</span><a href="#economia">Mejoran las ventas en el centro de la capital</a></li>
+        <li><span class="ranking__n">5</span><a href="#espectaculos">Festival de la Costanera: tres noches de chamamé</a></li>
+      </ol>
+    </div>
+
+    <div class="adslot adslot--side" id="adSide">
+      <span class="adslot__label">Espacio publicitario</span>
+      <span class="adslot__size">300 × 600</span>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="widget widget--news" id="suscribite">
+      <h4 class="widget__title">El resumen de ATR</h4>
+      <p>Las noticias de Formosa en tu mail, todas las mañanas. Sin spam.</p>
+      <form class="news__form" action="https://formsubmit.co/EMAIL_DEL_CLIENTE" method="POST">
+        <input type="hidden" name="_subject" value="Nueva suscripción — ATR Noticias">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="email" name="email" placeholder="tu@email.com" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+
+  </aside>
+  </div><!-- /layout -->
+</div><!-- /wrap -->
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__col footer__brand">
+      <span class="brand brand--footer">
+        <span class="brand__atr">ATR</span><span class="brand__noticias">NOTICIAS</span>
+      </span>
+      <p>El diario digital de Formosa. Noticias las 24 horas, radio online y toda la información de la provincia.</p>
+      <div class="contador">
+        <span class="contador__label">Visitas totales</span>
+        <b class="contador__n" id="visitasFooter">—</b>
+        <span class="contador__hoy">Estás conectado ahora</span>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h5>Secciones</h5>
+      <a href="#locales">Locales</a>
+      <a href="#nacionales">Nacionales</a>
+      <a href="#internacionales">Internacionales</a>
+      <a href="#deportes">Deportes</a>
+      <a href="#espectaculos">Espectáculos</a>
+    </div>
+    <div class="footer__col">
+      <h5>Más</h5>
+      <a href="#policiales">Policiales</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#politica">Política</a>
+      <a href="#economia">Economía</a>
+      <a href="#clima">El tiempo</a>
+    </div>
+    <div class="footer__col">
+      <h5>El medio</h5>
+      <a href="#radio">ATR Radio en vivo</a>
+      <a href="#quiniela">Quiniela</a>
+      <a href="#suscribite">Newsletter</a>
+      <a href="https://wa.me/5493704000000" target="_blank" rel="noopener">Publicidad</a>
+      <a href="https://wa.me/5493704000000" target="_blank" rel="noopener">Contacto</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="anio"></span> ATR Noticias · Formosa, Argentina. Todos los derechos reservados.</span>
+    <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">Diseñado por TuPaginaYa</a>
+  </div>
+  <div class="wrap footer__demo">Sitio de muestra: los títulos de las notas, la quiniela y la tabla son contenido de ejemplo. El clima, el dólar, el reloj y el contador de visitas funcionan con datos reales.</div>
+</footer>
+
+<!-- ══════════ DOCK ══════════ -->
+<div class="dock" id="dock">
+  <div class="wrap dock__in">
+    <button class="dock__play" id="dockPlay" aria-label="Reproducir la radio">
+      <svg class="ico-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      <svg class="ico-load" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3a9 9 0 109 9"/></svg>
+    </button>
+    <div class="dock__info">
+      <span class="dock__name">ATR Radio <b>FM 101.5</b></span>
+      <span class="dock__show" id="dockShow">Programación musical</span>
+    </div>
+    <div class="dock__eq" id="dockEq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="dock__data">
+      <span class="dock__clock" id="dockClock">--:--:--</span>
+      <span class="dock__temp" id="dockTemp">--°</span>
+    </div>
+    <button class="dock__close" id="dockClose" aria-label="Ocultar la barra">×</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
