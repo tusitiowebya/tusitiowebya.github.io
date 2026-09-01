@@ -62,51 +62,31 @@ const CONFIG = {
     { hora: '08:10', texto: 'Pronóstico: jornada agradable y sin lluvias en toda la provincia' }
   ],
 
-  /* ── QUINIELA (auspiciada) ────────────────────────────────────
-     Se cargan a mano después de cada sorteo. Van 20 números por
-     sorteo; el primero es "a la cabeza".                        */
-  quiniela: {
-    fecha: 'Sorteo del día',
-    sorteos: [
-      { id: 'primera',   nombre: 'La Primera', hora: '10:15',
-        numeros: ['4721','8093','1547','6280','3914','7756','2038','9461','5172','0685',
-                  '3327','8814','6059','1493','7205','4638','9970','2841','5306','0177'] },
-      { id: 'matutina',  nombre: 'Matutina', hora: '12:00',
-        numeros: ['9318','2704','6851','0493','7126','3580','8267','1935','5042','4718',
-                  '6390','2856','9174','0629','7483','1057','8902','3641','5238','4795'] },
-      { id: 'vespertina',nombre: 'Vespertina', hora: '15:00',
-        numeros: ['0562','7419','3087','9634','1258','6903','4771','2340','8195','5826',
-                  '0417','9068','3752','6189','2504','7931','1673','8248','4590','5316'] },
-      { id: 'nocturna',  nombre: 'Nocturna', hora: '21:00',
-        numeros: ['6134','0879','5246','3691','8408','1723','9560','4085','2917','7352',
-                  '6608','1194','8735','0261','5943','3470','9128','7586','4302','2859'] }
-    ]
-  },
+  /* ── QUINIELA Y TABLA: DATOS EN VIVO ──────────────────────────
+     Ya NO se cargan a mano. Un recolector que corre en el servidor
+     cada 15 minutos deja este JSON actualizado:
 
-  /* ── TABLA DE POSICIONES ──────────────────────────────────────
-     Se actualiza a mano después de cada fecha.
-     zona: 'copa' (verde) / 'play' (azul) / '' (sin destacar)    */
-  tabla: {
-    fecha: 'Actualizada a la fecha 12',
-    equipos: [
-      { eq:'River Plate',      pj:12, dg: 14, pts:26, zona:'copa' },
-      { eq:'Boca Juniors',     pj:12, dg: 11, pts:25, zona:'copa' },
-      { eq:'Racing Club',      pj:12, dg:  9, pts:23, zona:'copa' },
-      { eq:'Vélez Sarsfield',  pj:12, dg:  8, pts:22, zona:'copa' },
-      { eq:'Estudiantes (LP)', pj:12, dg:  6, pts:21, zona:'play' },
-      { eq:'San Lorenzo',      pj:12, dg:  4, pts:20, zona:'play' },
-      { eq:'Independiente',    pj:12, dg:  3, pts:19, zona:'play' },
-      { eq:'Talleres (C)',     pj:12, dg:  2, pts:18, zona:'play' },
-      { eq:'Argentinos Jrs',   pj:12, dg:  1, pts:17, zona:'' },
-      { eq:'Lanús',            pj:12, dg:  0, pts:16, zona:'' },
-      { eq:'Rosario Central',  pj:12, dg: -1, pts:15, zona:'' },
-      { eq:'Huracán',          pj:12, dg: -2, pts:14, zona:'' },
-      { eq:'Newell’s',    pj:12, dg: -4, pts:13, zona:'' },
-      { eq:'Defensa y Just.',  pj:12, dg: -5, pts:12, zona:'' },
-      { eq:'Banfield',         pj:12, dg: -7, pts:11, zona:'' },
-      { eq:'Gimnasia (LP)',    pj:12, dg: -9, pts: 9, zona:'' }
+       quiniela → vivitusuerte.com  (Formosa, Nacional, Provincia,
+                                     Chaco y Corrientes, los 5 turnos)
+       tabla    → promiedos.com.ar  (Liga Profesional, las 2 zonas)
+
+     Si el JSON no responde, los widgets muestran "no disponible".
+     A propósito: en una quiniela, un número viejo o inventado es
+     peor que no mostrar nada.                                   */
+  datos: {
+    url: 'https://tupaginaya.com.ar/atr/datos.json',
+
+    // los 5 turnos del día, para poder mostrar también los que
+    // todavía no se sortearon
+    turnos: [
+      { id: 'previa',     nombre: 'Previa',     hora: '10:15' },
+      { id: 'primera',    nombre: 'Primera',    hora: '12:00' },
+      { id: 'matutina',   nombre: 'Matutina',   hora: '15:00' },
+      { id: 'vespertina', nombre: 'Vespertina', hora: '18:00' },
+      { id: 'nocturna',   nombre: 'Nocturna',   hora: '21:00' }
     ],
-    visiblesAlInicio: 8
+
+    equiposVisibles: 8   // cuántos muestra la tabla antes de "ver completa"
   }
 };
 
@@ -448,82 +428,170 @@ const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
   if (vol) vol.addEventListener('input', () => { audio.volume = vol.value / 100; });
 })();
 
+/* ─────────── DATOS EN VIVO (quiniela + tabla) ───────────
+   Una sola descarga que comparten los dos widgets. */
+const DATOS = (function cargarDatos() {
+  const ctrl = new AbortController();
+  const to = setTimeout(() => ctrl.abort(), 9000);
+  return fetch(CONFIG.datos.url, { signal: ctrl.signal, cache: 'no-cache' })
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .catch(() => null)
+    .finally(() => clearTimeout(to));
+})();
+
+/* "hace 12 minutos" a partir del sello ISO del recolector */
+function desdeHace(iso) {
+  if (!iso) return '';
+  const min = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+  if (!isFinite(min) || min < 0) return '';
+  if (min < 1)  return 'recién actualizado';
+  if (min < 60) return `hace ${min} min`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `hace ${h} h`;
+  return `hace ${Math.floor(h / 24)} d`;
+}
+
 /* ─────────── QUINIELA ─────────── */
 (function quiniela() {
-  const tabs   = $('#quinielaTabs');
-  const grid   = $('#quinielaGrid');
-  const cabeza = $('#quinielaCabeza');
+  const lotEl    = $('#quinielaLoterias');
+  const tabs     = $('#quinielaTabs');
+  const grid     = $('#quinielaGrid');
+  const cabeza   = $('#quinielaCabeza');
   const sorteoEl = $('#quinielaSorteo');
   const fechaEl  = $('#quinielaFecha');
   if (!tabs || !grid) return;
 
-  const lista = CONFIG.quiniela.sorteos;
+  const noDisponible = (msg) => {
+    if (lotEl) lotEl.innerHTML = '';
+    tabs.innerHTML = '';
+    if (cabeza) cabeza.textContent = '----';
+    grid.innerHTML = `<p class="widget__vacio">${msg}</p>`;
+    if (sorteoEl) sorteoEl.textContent = '';
+    if (fechaEl)  fechaEl.textContent  = '';
+  };
 
-  function pintar(id) {
-    const s = lista.find(x => x.id === id) || lista[0];
-    if (!s) return;
+  DATOS.then(d => {
+    const q = d && d.quiniela;
+    if (!q || !Array.isArray(q.loterias) || !q.loterias.length) {
+      noDisponible('Resultados no disponibles en este momento.');
+      return;
+    }
 
-    $$('.quiniela__tab', tabs).forEach(b => b.classList.toggle('is-active', b.dataset.id === s.id));
+    let lotActual = q.loterias[0].id;   // Formosa primero: es un diario formoseño
+    let turnoActual = null;
 
-    if (cabeza) cabeza.textContent = s.numeros[0] || '----';
-    // se muestran del 2 al 11 (los diez que siguen a la cabeza)
-    grid.innerHTML = s.numeros.slice(1, 11).map((n, i) =>
-      `<span class="quiniela__n"><i>${String(i + 2).padStart(2, '0')}</i><b>${n}</b></span>`
+    function pintar() {
+      const lot = q.loterias.find(l => l.id === lotActual) || q.loterias[0];
+
+      $$('.quiniela__lot', lotEl).forEach(b =>
+        b.classList.toggle('is-active', b.dataset.id === lot.id));
+
+      // los 5 turnos del día; los que aún no salieron van deshabilitados
+      tabs.innerHTML = CONFIG.datos.turnos.map(t => {
+        const hay = lot.sorteos.some(s => s.id === t.id);
+        return `<button class="quiniela__tab${hay ? '' : ' is-pendiente'}" data-id="${t.id}"${hay ? '' : ' disabled'} title="${hay ? t.nombre + ' · ' + t.hora + ' hs' : 'Se sortea a las ' + t.hora}">${t.nombre}</button>`;
+      }).join('');
+
+      // si el turno elegido no existe en esta lotería, tomamos el último con datos
+      let s = lot.sorteos.find(x => x.id === turnoActual);
+      if (!s) s = lot.sorteos[lot.sorteos.length - 1];
+      if (!s) { grid.innerHTML = `<p class="widget__vacio">Todavía no hay sorteos de hoy.</p>`; return; }
+      turnoActual = s.id;
+
+      $$('.quiniela__tab', tabs).forEach(b =>
+        b.classList.toggle('is-active', b.dataset.id === s.id));
+
+      if (cabeza) cabeza.textContent = s.cabeza || '----';
+      grid.innerHTML = s.numeros.slice(1, 11).map((n, i) =>
+        `<span class="quiniela__n"><i>${String(i + 2).padStart(2, '0')}</i><b>${n || '----'}</b></span>`
+      ).join('');
+
+      if (sorteoEl) sorteoEl.textContent = `${lot.nombre} · ${s.nombre} ${s.hora} hs`;
+      if (fechaEl)  fechaEl.textContent  = desdeHace(d.generado);
+    }
+
+    lotEl.innerHTML = q.loterias.map(l =>
+      `<button class="quiniela__lot" data-id="${l.id}">${l.nombre}</button>`
     ).join('');
 
-    if (sorteoEl) sorteoEl.textContent = `${s.nombre} · ${s.hora} hs`;
-    if (fechaEl)  fechaEl.textContent  = CONFIG.quiniela.fecha;
-  }
+    lotEl.addEventListener('click', e => {
+      const b = e.target.closest('.quiniela__lot');
+      if (b) { lotActual = b.dataset.id; pintar(); }
+    });
+    tabs.addEventListener('click', e => {
+      const b = e.target.closest('.quiniela__tab');
+      if (b && !b.disabled) { turnoActual = b.dataset.id; pintar(); }
+    });
 
-  tabs.innerHTML = lista.map(s =>
-    `<button class="quiniela__tab" data-id="${s.id}">${s.nombre}</button>`
-  ).join('');
-
-  tabs.addEventListener('click', e => {
-    const b = e.target.closest('.quiniela__tab');
-    if (b) pintar(b.dataset.id);
+    pintar();
   });
-
-  // arranca en el sorteo más cercano a la hora actual
-  const h = (typeof window.__horaAR === 'function') ? window.__horaAR() : new Date().getHours();
-  const inicial = h >= 21 ? 'nocturna' : h >= 15 ? 'vespertina' : h >= 12 ? 'matutina' : 'primera';
-  pintar(inicial);
 })();
 
 /* ─────────── TABLA DE POSICIONES ─────────── */
 (function tabla() {
-  const body   = $('#tablaBody');
-  const toggle = $('#tablaToggle');
-  const fecha  = $('#tablaFecha');
+  const zonasEl = $('#tablaZonas');
+  const body    = $('#tablaBody');
+  const toggle  = $('#tablaToggle');
+  const pie     = $('#tablaFecha');
   if (!body) return;
 
-  const { equipos, visiblesAlInicio } = CONFIG.tabla;
+  const TOPE = CONFIG.datos.equiposVisibles;
 
-  body.innerHTML = equipos.map((e, i) => {
-    const oculta = i >= visiblesAlInicio ? ' class="is-hidden"' : '';
-    const cls = e.zona === 'copa' ? ' tabla__pos--copa' : e.zona === 'play' ? ' tabla__pos--play' : '';
-    const dg = e.dg > 0 ? `+${e.dg}` : e.dg;
-    return `<tr${oculta}>
-      <td><span class="tabla__pos${cls}">${i + 1}</span></td>
-      <td>${e.eq}</td>
-      <td>${e.pj}</td>
-      <td>${dg}</td>
-      <td class="tabla__pts">${e.pts}</td>
-    </tr>`;
-  }).join('');
+  DATOS.then(d => {
+    const t = d && d.tabla;
+    if (!t || !Array.isArray(t.zonas) || !t.zonas.length) {
+      body.innerHTML = `<tr><td colspan="5"><p class="widget__vacio">Tabla no disponible en este momento.</p></td></tr>`;
+      if (toggle) toggle.hidden = true;
+      if (pie) pie.textContent = '';
+      return;
+    }
 
-  if (fecha) fecha.textContent = CONFIG.tabla.fecha;
-
-  if (toggle) {
+    let iZona = 0;
     let abierta = false;
-    toggle.addEventListener('click', () => {
-      abierta = !abierta;
-      $$('tr', body).forEach((tr, i) => {
-        if (i >= visiblesAlInicio) tr.classList.toggle('is-hidden', !abierta);
+
+    function pintar() {
+      const z = t.zonas[iZona];
+
+      if (zonasEl) $$('.tabla__zona', zonasEl).forEach((b, i) =>
+        b.classList.toggle('is-active', i === iZona));
+
+      body.innerHTML = z.equipos.map((e, i) => {
+        const oculta = (!abierta && i >= TOPE) ? ' class="is-hidden"' : '';
+        // el color lo marca la fuente: son los que clasifican
+        const clasifica = e.color ? ' tabla__pos--clasifica' : '';
+        const dg = e.dg > 0 ? `+${e.dg}` : e.dg;
+        return `<tr${oculta}>
+          <td><span class="tabla__pos${clasifica}">${e.pos}</span></td>
+          <td><span class="tabla__eq">${e.eq}</span>${e.racha.length ? `<span class="tabla__racha">${e.racha.map(r => `<i class="r-${r}">${r}</i>`).join('')}</span>` : ''}</td>
+          <td>${e.pj}</td>
+          <td>${dg}</td>
+          <td class="tabla__pts">${e.pts}</td>
+        </tr>`;
+      }).join('');
+
+      if (toggle) {
+        toggle.hidden = z.equipos.length <= TOPE;
+        toggle.textContent = abierta ? 'Ver menos' : 'Ver tabla completa';
+      }
+      if (pie) pie.textContent = `${t.torneo} · ${desdeHace(d.generado)}`;
+    }
+
+    if (zonasEl && t.zonas.length > 1) {
+      zonasEl.innerHTML = t.zonas.map(z =>
+        `<button class="tabla__zona">${z.nombre.replace(/^Grupo/, 'Zona')}</button>`
+      ).join('');
+      zonasEl.addEventListener('click', e => {
+        const b = e.target.closest('.tabla__zona');
+        if (!b) return;
+        iZona = $$('.tabla__zona', zonasEl).indexOf(b);
+        pintar();
       });
-      toggle.textContent = abierta ? 'Ver menos' : 'Ver tabla completa';
-    });
-  }
+    }
+
+    if (toggle) toggle.addEventListener('click', () => { abierta = !abierta; pintar(); });
+
+    pintar();
+  });
 })();
 
 /* ─────────── RIEL HORIZONTAL (espectáculos) ─────────── */

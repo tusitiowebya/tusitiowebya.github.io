@@ -420,7 +420,26 @@ main{padding-top:30px;}
 }
 .quiniela__sponsor-label{font-family:var(--ff-head);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
 .quiniela__sponsor-name{font-family:var(--ff-head);font-size:.82rem;font-weight:800;color:var(--oro);letter-spacing:-.01em;}
+/* solapas de lotería (Formosa, Nacional, Provincia, Chaco, Corrientes) */
+.quiniela__loterias{display:flex;gap:3px;margin-bottom:9px;flex-wrap:wrap;}
+.quiniela__lot{
+  font-family:var(--ff-head);font-size:.63rem;font-weight:800;letter-spacing:.05em;
+  text-transform:uppercase;padding:4px 8px;border-radius:2px;
+  background:var(--paper-2);color:var(--muted);transition:.18s;
+}
+.quiniela__lot:hover{color:var(--ink);}
+.quiniela__lot.is-active{background:var(--oro);color:#fff;}
+[data-theme="dark"] .quiniela__lot.is-active{color:#17130A;}
+
 .quiniela__tabs{display:flex;gap:4px;margin-bottom:13px;flex-wrap:wrap;}
+.quiniela__tab.is-pendiente{opacity:.4;cursor:not-allowed;border-style:dashed;}
+.quiniela__tab.is-pendiente:hover{border-color:var(--line);color:var(--muted);}
+
+/* estado vacío compartido por los widgets de datos en vivo */
+.widget__vacio{
+  grid-column:1/-1;font-family:var(--ff-head);font-size:.78rem;
+  color:var(--muted);text-align:center;padding:14px 6px;line-height:1.4;
+}
 .quiniela__tab{
   font-family:var(--ff-head);font-size:.66rem;font-weight:700;letter-spacing:.05em;
   padding:5px 9px;border:1px solid var(--line);border-radius:3px;color:var(--muted);transition:.18s;
@@ -447,6 +466,14 @@ main{padding-top:30px;}
 }
 
 /* --- TABLA --- */
+.tabla__zonas{display:flex;gap:4px;margin-bottom:11px;}
+.tabla__zona{
+  flex:1;font-family:var(--ff-head);font-size:.68rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:6px 4px;border:1px solid var(--line);border-radius:3px;
+  color:var(--muted);transition:.18s;
+}
+.tabla__zona:hover{border-color:var(--ink-3);color:var(--ink);}
+.tabla__zona.is-active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
 .tabla{width:100%;border-collapse:collapse;font-family:var(--ff-head);font-size:.79rem;}
 .tabla th{
   font-size:.6rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
@@ -464,8 +491,19 @@ main{padding-top:30px;}
   width:19px;height:19px;border-radius:3px;font-size:.66rem;font-weight:700;
   background:var(--paper-3);color:var(--ink-3);
 }
-.tabla__pos--copa{background:var(--verde);color:#fff;}
-.tabla__pos--play{background:var(--azul);color:#fff;}
+.tabla__pos--clasifica{background:var(--verde);color:#fff;}
+
+/* nombre del equipo + racha de los últimos 5 */
+.tabla__eq{display:block;line-height:1.25;}
+.tabla__racha{display:flex;gap:2px;margin-top:3px;}
+.tabla__racha i{
+  width:11px;height:11px;border-radius:2px;font-style:normal;
+  font-family:var(--ff-mono);font-size:.5rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.tabla__racha .r-G{background:#2E7D4F;}
+.tabla__racha .r-E{background:#9A9384;}
+.tabla__racha .r-P{background:#B23B36;}
 .tabla__pts{font-family:var(--ff-mono);font-weight:600;color:var(--ink);}
 .tabla__toggle{
   width:100%;margin-top:11px;padding:8px;border:1px solid var(--line);border-radius:3px;
