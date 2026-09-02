@@ -445,6 +445,16 @@
         </div>
       </div>
       <p class="radio__status" id="radioStatus">Tocá play para escuchar en vivo</p>
+
+      <button class="radio__otro" id="radioOtroBtn" aria-expanded="false" aria-controls="radioOtro">
+        Escuchar en Winamp, VLC u otro reproductor
+      </button>
+      <div class="radio__url" id="radioOtro" hidden>
+        <code id="radioUrl">—</code>
+        <button id="radioCopiar" type="button">Copiar</button>
+        <span class="radio__url-tip">En Winamp: <b>Ctrl+L</b>, pegás y Enter.</span>
+      </div>
+
       <audio id="radioAudio" preload="none"></audio>
     </div>
 

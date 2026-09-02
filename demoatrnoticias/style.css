@@ -398,6 +398,36 @@ main{padding-top:30px;}
 .radio__vol input[type=range]::-moz-range-thumb{width:13px;height:13px;border:none;border-radius:50%;background:var(--oro);cursor:pointer;}
 .radio__status{margin-top:12px;font-family:var(--ff-mono);font-size:.66rem;color:#7E7A73;position:relative;}
 
+/* escuchar en un reproductor externo */
+.radio__otro{
+  position:relative;margin-top:11px;padding:0;text-align:left;
+  font-family:var(--ff-head);font-size:.68rem;font-weight:600;letter-spacing:.02em;
+  color:var(--oro);border-bottom:1px dotted rgba(224,172,72,.5);transition:color .2s;
+}
+.radio__otro:hover{color:#fff;border-bottom-color:#fff;}
+.radio__url{
+  position:relative;margin-top:10px;padding:10px 11px;border-radius:4px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+}
+[data-theme="dark"] .radio__url{background:var(--paper-2);border-color:var(--line);}
+.radio__url code{
+  flex:1;min-width:0;font-family:var(--ff-mono);font-size:.63rem;color:#EFECE6;
+  overflow-wrap:anywhere;line-height:1.4;
+}
+[data-theme="dark"] .radio__url code{color:var(--ink-2);}
+.radio__url button{
+  flex-shrink:0;font-family:var(--ff-head);font-size:.62rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:3px;
+  background:var(--oro);color:#17130A;transition:.2s;
+}
+.radio__url button:hover{background:#fff;}
+.radio__url-tip{
+  flex-basis:100%;font-family:var(--ff-head);font-size:.65rem;color:#8E8A83;
+}
+.radio__url-tip b{color:#EFECE6;font-weight:700;}
+[data-theme="dark"] .radio__url-tip b{color:var(--ink);}
+
 /* --- CLIMA --- */
 .clima__now{display:flex;align-items:center;gap:14px;}
 .clima__ico{font-size:2.6rem;line-height:1;}

@@ -426,6 +426,46 @@ const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
   });
 
   if (vol) vol.addEventListener('input', () => { audio.volume = vol.value / 100; });
+
+  /* --- escuchar en un reproductor externo (Winamp, VLC, foobar, el auto) ---
+     Se muestra la URL del stream para copiar y pegar. Sale de CONFIG, así que
+     cuando se cambie el stream real esto queda correcto solo.                */
+  (function reproductorExterno() {
+    const btn   = $('#radioOtroBtn');
+    const caja  = $('#radioOtro');
+    const urlEl = $('#radioUrl');
+    const copiar = $('#radioCopiar');
+    if (!btn || !caja || !urlEl) return;
+
+    urlEl.textContent = CONFIG.radio.stream;
+
+    btn.addEventListener('click', () => {
+      const abierto = !caja.hidden;
+      caja.hidden = abierto;
+      btn.setAttribute('aria-expanded', String(!abierto));
+    });
+
+    if (copiar) copiar.addEventListener('click', async () => {
+      const texto = CONFIG.radio.stream;
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(texto);
+        ok = true;
+      } catch (e) {
+        // sin permiso de portapapeles (o http): seleccionamos el texto para
+        // que el usuario copie con Ctrl+C
+        try {
+          const r = document.createRange();
+          r.selectNodeContents(urlEl);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(r);
+        } catch (e2) {}
+      }
+      copiar.textContent = ok ? '¡Copiado!' : 'Copiá con Ctrl+C';
+      setTimeout(() => { copiar.textContent = 'Copiar'; }, 2200);
+    });
+  })();
 })();
 
 /* ─────────── DATOS EN VIVO (quiniela + tabla) ───────────
