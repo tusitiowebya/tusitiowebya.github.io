@@ -39,7 +39,7 @@
   }
 
   /* ---- formulario "lista de precios" -> WhatsApp ---- */
-  var WA_NUM = '5491150620365';
+  var WA_NUM = '5491159289280';
   var listaForm = document.getElementById('listaForm');
   if (listaForm) {
     listaForm.addEventListener('submit', function (e) {

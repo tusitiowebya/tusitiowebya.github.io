@@ -120,6 +120,18 @@
         "demoiiti"
       ],
       "port": 8793
+    },
+    {
+      "name": "demodatagroup",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8794",
+        "--directory",
+        "demodatagroup"
+      ],
+      "port": 8794
     }
   ]
 }
