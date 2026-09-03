@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo | Grace Deco — decoración de interiores</title>
+<meta name="description" content="Catálogo completo de Grace Deco: floreros, espejos, cuadros, textiles, iluminación, alfombras, velas y organización. Filtrá por ambiente y armá tu pedido online.">
+<meta name="keywords" content="catálogo decoración, floreros, espejos, lámparas, alfombras, almohadones, velas, Tigre, Buenos Aires">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F4EDE7">
+<link rel="canonical" href="https://tusitiowebya.github.io/demogracedeco/catalogo/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catálogo | Grace Deco">
+<meta property="og:description" content="Floreros, espejos, lámparas, textiles y alfombras. Filtrá por ambiente y armá tu pedido online.">
+<meta property="og:url" content="https://tusitiowebya.github.io/demogracedeco/catalogo/">
+<meta property="og:image" content="https://tusitiowebya.github.io/demogracedeco/og-image.jpg">
+<meta property="og:site_name" content="Grace Deco">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demogracedeco/og-image.jpg">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../catalogo.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tusitiowebya.github.io/demogracedeco/" },
+    { "@type": "ListItem", "position": 2, "name": "Catálogo", "item": "https://tusitiowebya.github.io/demogracedeco/catalogo/" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav solid" id="nav">
+  <a class="brand" href="../" aria-label="Grace Deco — inicio">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="none" stroke="#16130F" stroke-width="1"/>
+      <circle cx="32" cy="32" r="26.5" fill="none" stroke="#C4A484" stroke-width="1"/>
+      <path d="M19 41c-5.5-3-7-8.5-5-13 3 .3 7.5 2.3 9.3 6" fill="none" stroke="#C4A484" stroke-width="1" stroke-linecap="round"/>
+      <text x="15" y="41" font-family="Marcellus, serif" font-size="24" fill="#16130F">G</text>
+      <text x="31" y="41" font-family="Marcellus, serif" font-size="24" fill="#C4A484">D</text>
+    </svg>
+    <span class="brand-txt"><b>GRACE</b><span>Deco</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Principal">
+    <a href="../#ambientes">Ambientes</a>
+    <a href="./">Catálogo</a>
+    <a href="../#medidas">Las medidas justas</a>
+    <a href="../#como">Cómo compramos</a>
+    <a href="../#faq">Preguntas</a>
+  </nav>
+  <button class="nav-cart" data-cart-open aria-label="Ver mi pedido">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9.5 8V6a2.5 2.5 0 0 1 5 0v2"/>
+    </svg>
+    <span class="cart-count" data-cart-count>0</span>
+  </button>
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<section class="cat-hero">
+  <p class="cat-crumbs"><a href="../">Inicio</a> · Catálogo</p>
+  <h1>Todo el catálogo</h1>
+  <p class="lead">Filtrá por rubro o por el ambiente que estás resolviendo. Sumás lo que te gusta y lo cerramos juntas por WhatsApp: te confirmamos stock, envío y forma de pago.</p>
+</section>
+
+<div class="cat-layout">
+  <aside class="side" id="side">
+    <button class="side-toggle" id="sideToggle">Filtrar y ordenar <span>▾</span></button>
+    <div class="side-body">
+      <div class="side-block">
+        <h3>Rubro</h3>
+        <div class="side-list" id="sideCats"></div>
+      </div>
+      <div class="side-block">
+        <h3>Ambiente</h3>
+        <div class="side-list" id="sideAmb"></div>
+      </div>
+      <div class="side-block">
+        <button class="side-reset" id="reset">Limpiar filtros</button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="tools">
+      <div class="buscador">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <input id="q" type="search" placeholder="Buscar un florero, un espejo, una lámpara…" aria-label="Buscar en el catálogo">
+      </div>
+      <select id="orden" aria-label="Ordenar">
+        <option value="destacado">Destacados</option>
+        <option value="precio-asc">Precio: menor a mayor</option>
+        <option value="precio-desc">Precio: mayor a menor</option>
+        <option value="nombre">Nombre A-Z</option>
+      </select>
+      <span class="tools-count" id="count"></span>
+    </div>
+    <div class="chips-activos" id="chips"></div>
+
+    <div class="prod-grid grid-cat" id="grid"></div>
+
+    <div class="cat-nota">
+      <div>
+        <b>¿No sabés cuál va en tu ambiente?</b>
+        <p>Mandanos una foto y las medidas. Te armamos una propuesta con piezas del catálogo, sin cargo.</p>
+      </div>
+      <a class="btn btn-arena" href="../#medidas">Usar “Las medidas justas”</a>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../" aria-label="Grace Deco">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="none" stroke="#F4EDE7" stroke-width="1"/>
+            <circle cx="32" cy="32" r="26.5" fill="none" stroke="#C4A484" stroke-width="1"/>
+            <path d="M19 41c-5.5-3-7-8.5-5-13 3 .3 7.5 2.3 9.3 6" fill="none" stroke="#C4A484" stroke-width="1" stroke-linecap="round"/>
+            <text x="15" y="41" font-family="Marcellus, serif" font-size="24" fill="#F4EDE7">G</text>
+            <text x="31" y="41" font-family="Marcellus, serif" font-size="24" fill="#C4A484">D</text>
+          </svg>
+          <span class="brand-txt"><b>GRACE</b><span>Deco</span></span>
+        </a>
+        <p style="margin-top:18px;max-width:34ch">Detalles que transforman. Decoración elegida una pieza por vez, desde Tigre a todo el país.</p>
+      </div>
+      <div>
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="./">Catálogo completo</a></li>
+          <li><a href="?cat=floreros">Floreros y vasijas</a></li>
+          <li><a href="?cat=espejos">Espejos</a></li>
+          <li><a href="?cat=iluminacion">Iluminación</a></li>
+          <li><a href="?cat=textiles">Textiles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a id="waFooter" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/gracedeco__" target="_blank" rel="noopener">@gracedeco__</a></li>
+          <li>Tigre, Buenos Aires</li>
+          <li>Lunes a viernes de 10 a 19 h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© <span id="anio">2026</span> Grace Deco · Tigre, Buenos Aires</span>
+      <span>Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Z"/></svg>
+</a>
+
+<aside class="ficha" id="ficha" aria-hidden="true" aria-label="Detalle del producto"></aside>
+
+<div class="cart-scrim" id="cartScrim" data-cart-close></div>
+<aside class="cart" id="cart" aria-hidden="true" aria-label="Tu pedido">
+  <div class="cart-head">
+    <h3>Tu pedido</h3>
+    <button data-cart-close aria-label="Cerrar">×</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFoot"></div>
+  <div class="cart-panel" id="cartPanel" hidden></div>
+</aside>
+
+<script src="../config.js"></script>
+<script src="../store.js"></script>
+<script src="../catalogo.js"></script>
+</body>
+</html>
