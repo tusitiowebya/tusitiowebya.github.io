@@ -40,8 +40,7 @@ window.NEGOCIO = {
   NOMBRE: "Grace Deco",
   CIUDAD: "Tigre, Buenos Aires",
 
-  // ⚠️ WhatsApp PLACEHOLDER — reemplazar por el número real del cliente.
-  WA: "5491122334455",
+  WA: "5491166519721",
   WA_TEXTO: "Hola Grace Deco, quiero hacer un pedido:",
   IG: "gracedeco__",
 

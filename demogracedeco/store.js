@@ -11,7 +11,7 @@
   'use strict';
 
   var CFG = window.NEGOCIO || {};
-  var WA = CFG.WA || '5491122334455';
+  var WA = CFG.WA || '5491166519721';
   var AMBIENTES = CFG.AMBIENTES || [];
 
   /* ── Catálogo de muestra ─────────────────────────────────
