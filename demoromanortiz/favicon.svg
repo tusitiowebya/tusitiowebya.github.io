@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#1B1815"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#C1502E" stroke-width="2.5"/>
+  <text x="32" y="41" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#F3ECE0" text-anchor="middle">RO</text>
+</svg>
