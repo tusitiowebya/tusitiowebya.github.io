@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Biblioteca digital | Creciendo con el Fútbol</title>
+<meta name="description" content="Planificaciones, ejercicios, manuales y cursos grabados de fútbol formativo. Comprás online y te llega el enlace de descarga al email, al instante.">
+<meta name="keywords" content="material digital futbol base, planificacion anual futbol infantil, ejercicios futbol formativo pdf, curso entrenador online argentina">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07120C">
+<link rel="canonical" href="https://tusitiowebya.github.io/democcef/tienda/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Creciendo con el Fútbol Capacitaciones">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Biblioteca digital | Creciendo con el Fútbol">
+<meta property="og:description" content="Material descargable para entrenadores, directivos y jugadores de fútbol base. Entrega inmediata por email.">
+<meta property="og:url" content="https://tusitiowebya.github.io/democcef/tienda/">
+<meta property="og:image" content="https://tusitiowebya.github.io/democcef/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/democcef/og.jpg">
+
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="tienda.css">
+</head>
+
+<body data-base="../" class="pag-tienda">
+
+<nav class="nav solida" id="nav">
+  <a class="marca" href="../" aria-label="Creciendo con el Fútbol — inicio">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="2" y="2" width="60" height="60" rx="16" fill="#2CC257"/>
+      <rect x="6.5" y="6.5" width="51" height="51" rx="12.5" fill="none" stroke="#F2E23F" stroke-width="2.5"/>
+      <circle cx="32" cy="32" r="14" fill="#EFF3E9"/>
+      <path d="M32 21.5l6.4 4.6-2.4 7.5h-8L25.6 26z" fill="#07120C"/>
+      <path d="M32 18.6v3M20.5 30.6l2.9.9M43.5 30.6l-2.9.9M25.8 43.2l1.8-2.5M38.2 43.2l-1.8-2.5" stroke="#07120C" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span class="marca-txt">
+      <b class="marca-largo">Creciendo con el Fútbol</b>
+      <b class="marca-corto">CCEF</b>
+      <span>Biblioteca digital</span>
+    </span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../">Inicio</a></li>
+    <li><a href="../#formamos">A quién formamos</a></li>
+    <li><a href="../#pizarra">La pizarra</a></li>
+    <li><a href="./">Biblioteca</a></li>
+    <li><a href="../#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-acc">
+    <button class="nav-carrito" data-abrir-pedido aria-label="Ver tu pedido">Pedido <b data-carrito-n class="vacio">0</b></button>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="tienda-hero">
+  <div class="wrap">
+    <span class="kicker">Biblioteca digital</span>
+    <h1>Material para trabajar el lunes</h1>
+    <p>Todo lo que damos en las capacitaciones, ordenado y listo para bajar. Elegís, dejás tu email y te llega tu enlace de descarga.</p>
+    <div class="tienda-datos" id="tiendaDatos"></div>
+  </div>
+</header>
+
+<main class="wrap tienda-cuerpo">
+  <aside class="tienda-filtros">
+    <div class="tf-bloque">
+      <label class="tf-buscar">
+        <span class="tf-lupa" aria-hidden="true">⌕</span>
+        <input type="search" id="buscar" placeholder="Buscar material…" aria-label="Buscar material">
+      </label>
+    </div>
+    <div class="tf-bloque">
+      <h3>Categorías</h3>
+      <ul id="cats" class="tf-cats"></ul>
+    </div>
+    <div class="tf-bloque">
+      <h3>Formato</h3>
+      <ul id="formatos" class="tf-cats"></ul>
+    </div>
+    <div class="tf-bloque tf-precio">
+      <h3>Precio</h3>
+      <div class="pz-ops" data-filtro="precio">
+        <button class="pz-op on" data-v="todos">Todos</button>
+        <button class="pz-op" data-v="gratis">Gratis</button>
+        <button class="pz-op" data-v="pago">Con costo</button>
+      </div>
+    </div>
+    <div class="tf-ayuda">
+      <b>¿No sabés por dónde empezar?</b>
+      <p>Contanos con qué categoría trabajás y te decimos qué material te sirve.</p>
+      <a class="btn btn-wa btn-sm" id="waAyuda" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </aside>
+
+  <section class="tienda-lista">
+    <div class="tienda-barra">
+      <span id="conteo">—</span>
+      <div class="tb-orden">
+        <label for="orden">Ordenar</label>
+        <select id="orden">
+          <option value="destacado">Destacados</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A-Z</option>
+        </select>
+      </div>
+    </div>
+    <div id="aviso"></div>
+    <div class="libreria" id="grilla"></div>
+    <p class="sin-resultados" id="sinResultados" hidden>No encontramos material con ese filtro. Probá con otra palabra o escribinos y lo armamos.</p>
+  </section>
+</main>
+
+<!-- Ficha lateral del producto -->
+<div class="ficha" id="ficha" aria-hidden="true">
+  <div class="ficha-fondo" data-cerrar-ficha></div>
+  <aside class="ficha-caja" role="dialog" aria-label="Detalle del material">
+    <button class="cc-cerrar ficha-x" data-cerrar-ficha aria-label="Cerrar">&times;</button>
+    <div class="ficha-cuerpo" id="fichaCuerpo"></div>
+  </aside>
+</div>
+
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <h4>Creciendo con el Fútbol</h4>
+        <p style="color:var(--tiza-2);font-size:.9rem;max-width:38ch">ONG de capacitaciones deportivas. El material digital sostiene el proyecto y llega a clubes de todo el país.</p>
+      </div>
+      <div>
+        <h4>Cómo se entrega</h4>
+        <ul>
+          <li>Enlace propio por email</li>
+          <li>Con vencimiento y tope de descargas</li>
+          <li>Si algo falla, te lo reenviamos</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a id="waPie" href="#" target="_blank" rel="noopener">WhatsApp 15 5837-7120</a></li>
+          <li><a href="mailto:creciendoconelfutbol@hotmail.com">creciendoconelfutbol@hotmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-bajo">
+      <span>© <span id="anio">2026</span> Creciendo con el Fútbol Capacitaciones</span>
+      <span>Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="../store.js"></script>
+<script src="tienda.js"></script>
+</body>
+</html>

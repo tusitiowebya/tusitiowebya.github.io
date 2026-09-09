@@ -1,0 +1,153 @@
+/* CCEF — biblioteca digital (/tienda/). Hereda todo de ../style.css. */
+
+.pag-tienda { background: var(--noche); }
+
+.tienda-hero {
+  padding: 8.5rem 0 2.6rem;
+  background:
+    radial-gradient(80% 120% at 12% 0%, rgba(44, 194, 87, .18) 0%, transparent 60%),
+    repeating-linear-gradient(90deg, #08150E 0 60px, #0A1911 60px 120px);
+  border-bottom: 1px solid rgba(239, 243, 233, .12);
+}
+.tienda-hero h1 { font-size: clamp(2.2rem, 6.4vw, 4.2rem); margin: .7rem 0 .9rem; }
+.tienda-hero p { max-width: 58ch; color: var(--tiza-2); }
+.tienda-datos { display: flex; flex-wrap: wrap; gap: 1.8rem; margin-top: 1.8rem; }
+.tienda-datos div b { display: block; font-family: var(--f-display); font-size: 1.6rem; color: var(--amarillo); line-height: 1; }
+.tienda-datos div span { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gris); }
+
+.tienda-cuerpo {
+  display: grid;
+  grid-template-columns: 268px 1fr;
+  gap: 2rem;
+  padding: 2.6rem 0 4.5rem;
+  align-items: start;
+}
+
+/* ── Filtros ─────────────────────────────────────────────────────────────── */
+.tienda-filtros { position: sticky; top: 5.6rem; display: grid; gap: 1.6rem; }
+.tf-bloque h3 {
+  font-family: var(--f-texto);
+  text-transform: uppercase;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  color: var(--gris);
+  font-weight: 600;
+  margin-bottom: .7rem;
+}
+.tf-buscar { display: flex; align-items: center; gap: .5rem; border: 1px solid rgba(239, 243, 233, .22); border-radius: 999px; padding: .1rem .9rem; }
+.tf-buscar:focus-within { border-color: var(--cesped); }
+.tf-lupa { color: var(--gris); font-size: 1.1rem; }
+.tf-buscar input { flex: 1; background: none; border: 0; padding: .65rem 0; font-size: .88rem; outline: none; }
+.tf-cats { display: grid; gap: .1rem; }
+.tf-cats button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: .6rem;
+  align-items: center;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  padding: .5rem .6rem;
+  font-size: .87rem;
+  color: var(--tiza-2);
+  cursor: pointer;
+  text-align: left;
+  transition: .16s;
+}
+.tf-cats button:hover { background: rgba(239, 243, 233, .06); color: var(--tiza); }
+.tf-cats button.on { background: rgba(44, 194, 87, .16); color: var(--tiza); font-weight: 600; }
+.tf-cats button i { font-style: normal; font-size: .72rem; color: var(--gris); }
+.tf-ayuda {
+  border: 1px solid rgba(239, 243, 233, .16);
+  border-radius: var(--radio);
+  padding: 1.1rem;
+  background: rgba(239, 243, 233, .04);
+  display: grid;
+  gap: .5rem;
+  justify-items: start;
+}
+.tf-ayuda b { font-size: .92rem; }
+.tf-ayuda p { font-size: .8rem; color: var(--gris); }
+
+/* ── Lista ───────────────────────────────────────────────────────────────── */
+.tienda-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  margin-bottom: 1.3rem;
+  border-bottom: 1px solid rgba(239, 243, 233, .12);
+}
+.tienda-barra span { font-size: .82rem; color: var(--gris); }
+.tb-orden { display: flex; align-items: center; gap: .5rem; font-size: .78rem; color: var(--gris); }
+.tb-orden select {
+  background: rgba(239, 243, 233, .05);
+  border: 1px solid rgba(239, 243, 233, .2);
+  border-radius: 8px;
+  padding: .45rem .6rem;
+  font-size: .82rem;
+}
+.tienda-lista .card { cursor: pointer; }
+.sin-resultados { color: var(--gris); padding: 3rem 0; text-align: center; }
+
+/* ── Ficha lateral ───────────────────────────────────────────────────────── */
+.ficha { position: fixed; inset: 0; z-index: 88; visibility: hidden; }
+.ficha.abierta { visibility: visible; }
+.ficha-fondo { position: absolute; inset: 0; background: rgba(4, 11, 7, .72); opacity: 0; transition: opacity .3s; }
+.ficha.abierta .ficha-fondo { opacity: 1; }
+.ficha-caja {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: min(460px, 100%);
+  background: var(--pizarra);
+  border-left: 1px solid rgba(239, 243, 233, .14);
+  overflow-y: auto;
+  transform: translateX(102%);
+  transition: transform .34s cubic-bezier(.4, 0, .2, 1);
+}
+.ficha.abierta .ficha-caja { transform: none; }
+.ficha-x { position: absolute; top: .6rem; right: 1rem; z-index: 3; }
+.ficha-cuerpo { padding: 0 0 2rem; }
+.ficha-tapa {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  font-size: 3.4rem;
+  color: var(--cesped);
+  background: repeating-linear-gradient(90deg, #0d2417 0 34px, #0f291b 34px 68px);
+  border-bottom: 1px solid rgba(239, 243, 233, .14);
+}
+.ficha-txt { padding: 1.4rem 1.5rem 0; display: grid; gap: .8rem; }
+.ficha-txt h3 { font-family: var(--f-texto); text-transform: none; font-size: 1.35rem; font-weight: 700; line-height: 1.25; }
+.ficha-txt > p { color: var(--tiza-2); font-size: .93rem; }
+.ficha-specs { display: grid; gap: .1rem; margin-top: .4rem; }
+.ficha-specs div { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px dashed rgba(239, 243, 233, .14); font-size: .85rem; }
+.ficha-specs div span { color: var(--gris); }
+.ficha-precio { display: flex; align-items: baseline; gap: .6rem; margin-top: .6rem; }
+.ficha-precio b { font-family: var(--f-display); font-size: 2.4rem; }
+.ficha-precio b.es-gratis { color: var(--cesped); }
+.ficha-entrega {
+  border: 1px solid rgba(44, 194, 87, .35);
+  background: rgba(44, 194, 87, .1);
+  border-radius: 10px;
+  padding: .8rem .9rem;
+  font-size: .82rem;
+  color: var(--tiza-2);
+}
+
+@media (max-width: 900px) {
+  .tienda-cuerpo { grid-template-columns: 1fr; }
+  .tienda-filtros { position: static; }
+  .tf-cats { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; gap: .4rem; padding-bottom: .4rem; }
+  .tf-cats button { border: 1px solid rgba(239, 243, 233, .2); border-radius: 999px; white-space: nowrap; }
+  .tienda-hero { padding-top: 7rem; }
+}
+
+/* En mobile la tira de chips es scroll horizontal: sin min-width:0 los items
+   del grid crecen con su contenido y desbordan la página entera. */
+@media (max-width: 900px) {
+  .tienda-cuerpo, .tienda-filtros, .tienda-lista, .tf-bloque { min-width: 0; }
+  .tf-cats { max-width: 100%; }
+}
