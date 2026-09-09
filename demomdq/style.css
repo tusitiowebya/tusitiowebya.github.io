@@ -64,17 +64,14 @@ em{font-style:italic}
   transition:background .3s,box-shadow .3s,padding .3s;
 }
 .nav.solid{background:rgba(244,239,227,.96);box-shadow:0 2px 22px rgba(15,61,37,.12);padding-block:.7rem}
-.brand{display:flex;align-items:center;gap:.7rem;margin-right:auto}
-.mark{width:40px;height:33px;flex:none}
-.mk-sun{fill:var(--amarillo)}
-.mk-ridge{fill:#F1EADC}
-.mk-ridge2{fill:var(--verde)}
-.mk-base{fill:var(--rojo)}
-.nav.solid .mk-ridge{fill:var(--verde-hondo)}
-.brand-txt{display:flex;flex-direction:column;line-height:1}
-.brand-txt b{font-family:'Alegreya',serif;font-size:1.5rem;letter-spacing:.02em;color:#F6F2E7}
-.brand-txt small{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(246,242,231,.75);margin-top:.22rem}
-.nav.solid .brand-txt b{color:var(--verde-hondo)}
+.brand{display:flex;align-items:center;gap:.75rem;margin-right:auto;position:relative}
+.mark{width:auto;height:54px;flex:none;transition:opacity .3s,height .3s}
+.nav.solid .mark{height:46px}
+.mark.oscuro{position:absolute;left:0;top:50%;transform:translateY(-50%);opacity:0}
+.nav.solid .mark.claro{opacity:0}
+.nav.solid .mark.oscuro{opacity:1}
+.brand-txt{display:flex;flex-direction:column;line-height:1;padding-bottom:.2rem}
+.brand-txt small{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,242,231,.8)}
 .nav.solid .brand-txt small{color:var(--piedra)}
 .nav-links{display:flex;gap:1.5rem}
 .nav-links a{font-size:.86rem;color:rgba(246,242,231,.9);position:relative;padding-bottom:2px}
@@ -141,6 +138,7 @@ h1 em{color:var(--amarillo);font-weight:500}
 .pillars li:nth-child(2)::before{background:var(--amarillo)}
 .pillars li:nth-child(3)::before{background:var(--rojo)}
 .pillars li:nth-child(4)::before{background:#F4EFE3}
+.pillars li:nth-child(5)::before{background:var(--piedra)}
 
 /* ============ CIFRAS ============ */
 .figures{background:var(--papel);padding:clamp(2.6rem,6vw,3.6rem) 0;border-bottom:1px solid rgba(20,24,15,.09)}
@@ -179,7 +177,14 @@ h1 em{color:var(--amarillo);font-weight:500}
 .cpx-photo{position:relative;min-height:340px;overflow:hidden}
 .cpx-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .cpx:hover .cpx-photo img{transform:scale(1.05)}
-.cpx-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,26,17,.35))}
+.cpx-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(8,20,13,.82))}
+.cpx-photo img.cpx-logo{
+  position:absolute;left:clamp(1rem,2.4vw,1.8rem);bottom:clamp(1rem,2.4vw,1.6rem);
+  z-index:2;width:auto;height:clamp(104px,13.5vw,152px);max-width:74%;object-fit:contain;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.55));
+  transition:none;
+}
+.cpx:hover .cpx-photo img.cpx-logo{transform:none}
 .cpx-body{padding:clamp(1.8rem,3.4vw,3rem)}
 .cpx-top{display:flex;align-items:center;gap:.65rem;margin-bottom:.7rem}
 .cpx-dot{width:10px;height:10px;border-radius:50%;flex:none}
@@ -301,10 +306,11 @@ h1 em{color:var(--amarillo);font-weight:500}
 /* ============ FOOTER ============ */
 .foot{background:#0A1A11;color:rgba(244,239,227,.8);padding:clamp(3rem,6vw,4.5rem) 0 1.5rem}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
-.mark.big{width:56px;height:46px}
-.foot .mk-ridge{fill:#F1EADC}
-.foot-name{font-family:'Alegreya',serif;font-size:1.7rem;color:#F6F2E7;margin-top:.7rem;line-height:1.1}
-.foot-name span{display:block;font-family:'Chivo',sans-serif;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,227,.6);margin-top:.3rem}
+.foot-logo{width:auto;height:78px}
+.foot-name{margin-top:.9rem;line-height:1.1}
+.foot-name span{display:block;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,227,.6)}
+.foot-lema{margin-top:.5rem;font-size:.82rem;letter-spacing:.06em;color:rgba(244,239,227,.55)}
+.foot-lema b{color:var(--rojo)}
 .foot-claim{font-family:'Alegreya',serif;font-style:italic;margin-top:.8rem;color:rgba(244,239,227,.65)}
 .foot-col h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--amarillo);margin-bottom:.9rem;font-family:'Chivo',sans-serif;font-weight:600}
 .foot-col p{font-size:.9rem;margin-bottom:.45rem;font-weight:300}
@@ -393,3 +399,14 @@ html.qa .wa-float{display:none}
 
 /* offset para los anclas con nav fija */
 section[id]{scroll-margin-top:86px}
+
+/* logo de la nav en mobile */
+@media (max-width:600px){
+  .mark{height:42px}
+  .brand-txt{display:none}
+}
+
+/* que el botón flotante de WhatsApp no tape el crédito del pie */
+@media (max-width:900px){
+  .foot-bar{flex-direction:column;align-items:flex-start;gap:.35rem;padding-bottom:3.4rem}
+}
