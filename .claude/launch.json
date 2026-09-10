@@ -132,6 +132,30 @@
         "demodatagroup"
       ],
       "port": 8794
+    },
+    {
+      "name": "demomicrocosmos",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8801",
+        "--directory",
+        "demomicrocosmos"
+      ],
+      "port": 8801
+    },
+    {
+      "name": "demoperfumesgg",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8810",
+        "--directory",
+        "demoperfumesgg"
+      ],
+      "port": 8810
     }
   ]
 }
