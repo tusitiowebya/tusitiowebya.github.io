@@ -122,6 +122,10 @@ svg{fill:currentColor}
   font-size:clamp(2.5rem,4.6vw,3.9rem);color:var(--tinta);margin:0 0 22px;
 }
 .hero__copy h1 em{font-style:italic;color:var(--oro-d)}
+.hero__tagline{
+  font-family:var(--txt);font-style:italic;font-weight:600;font-size:1.05rem;color:var(--oro-d);
+  margin:-10px 0 20px;
+}
 .hero__lead{font-size:1.06rem;line-height:1.62;color:var(--gris);max-width:46ch;margin-bottom:34px}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px}
 .hero__stats{display:flex;gap:34px}
@@ -282,6 +286,11 @@ svg{fill:currentColor}
 .cta-final__mark{width:74px;height:74px;margin-bottom:26px}
 .cta-final h2{color:var(--lino);font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:16px}
 .cta-final p{color:var(--gris-cl);font-size:1.02rem;line-height:1.6;margin-bottom:36px}
+.cta-final__contact{
+  margin-top:28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  justify-content:center;font-size:.85rem;color:var(--gris-cl);
+}
+.cta-final__contact a{color:var(--oro-cl);font-weight:700}
 
 /* footer */
 .footer{background:var(--carbon);padding:44px 32px 30px;border-top:1px solid rgba(232,206,147,.14)}
@@ -290,6 +299,9 @@ svg{fill:currentColor}
 .footer__brand span{color:var(--lino);font-family:var(--disp);font-size:1rem;line-height:1.3}
 .footer__brand i{color:var(--oro-cl);font-style:italic;font-size:.78rem}
 .footer__addr{color:var(--gris-cl);font-size:.85rem}
+.footer__contact{display:flex;gap:8px;align-items:center;font-size:.85rem}
+.footer__contact a{color:var(--oro-cl);font-weight:700}
+.footer__contact span{color:var(--gris-cl)}
 .footer__made{color:var(--gris);font-size:.78rem;margin-top:8px}
 .footer__made a{color:var(--oro-d);font-weight:700}
 

@@ -56,8 +56,8 @@
 
   var state = { trip:'aeropuerto', base:9000, rate:450, km:18, wait:0 };
   var tripLabels = {
-    aeropuerto:'Aeropuerto', ciudad:'Dentro de la ciudad', larga:'Larga distancia',
-    corporativo:'Corporativo', encomienda:'Encomienda'
+    aeropuerto:'Aeropuertos', ciudad:'Ciudadanos', interior:'Al interior',
+    fiestas:'Fiestas', encomienda:'Encomienda'
   };
 
   function fmtThousands(n){
