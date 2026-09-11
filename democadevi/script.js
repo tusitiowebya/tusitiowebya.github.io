@@ -64,6 +64,97 @@
   }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
+
+  /* ===========================================================
+     CONTADORES ANIMADOS
+     =========================================================== */
+  var counters = document.querySelectorAll("[data-count]");
+  if (counters.length) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        cio.unobserve(e.target);
+        var el = e.target;
+        var end = parseInt(el.dataset.count, 10);
+        var pre = el.dataset.prefix || "";
+        var suf = el.dataset.suffix || "";
+        if (document.documentElement.classList.contains("qa") ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          el.textContent = pre + end + suf;
+          return;
+        }
+        var t0 = null, dur = 1100;
+        function step(t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min(1, (t - t0) / dur);
+          var eased = 1 - Math.pow(1 - k, 3);
+          el.textContent = pre + Math.round(end * eased) + suf;
+          if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ===========================================================
+     ZONAS DE COBERTURA (buscador)
+     =========================================================== */
+  var zoInput = document.getElementById("zoInput");
+  if (zoInput) {
+    var CABA = ["Caballito", "Flores", "Floresta", "Almagro", "Boedo", "Villa Crespo", "Villa del Parque",
+      "Villa Devoto", "Paternal", "Chacarita", "Colegiales", "Belgrano", "Núñez", "Palermo", "Recoleta",
+      "Balvanera", "San Cristóbal", "Parque Patricios", "Barracas", "La Boca", "San Telmo", "Constitución",
+      "Monserrat", "Retiro", "Saavedra", "Villa Urquiza", "Villa Pueyrredón", "Agronomía", "Liniers",
+      "Mataderos", "Parque Chacabuco", "Versalles", "Vélez Sarsfield", "Villa Luro", "Villa Real",
+      "Monte Castro", "Villa Santa Rita", "Villa General Mitre", "Parque Avellaneda", "Nueva Pompeya"];
+    var GBA = ["Avellaneda", "Lanús", "Lomas de Zamora", "Banfield", "Temperley", "Quilmes", "Vicente López",
+      "Olivos", "Florida", "San Isidro", "Martínez", "San Martín", "Villa Ballester", "Tres de Febrero",
+      "Caseros", "Ciudadela", "Ramos Mejía", "Haedo", "Morón", "Castelar", "Ituzaingó", "San Justo",
+      "Wilde", "Sarandí", "Valentín Alsina"];
+
+    var zoList = document.getElementById("zoList");
+    var zoMsg = document.getElementById("zoMsg");
+    var zoNone = document.getElementById("zoNone");
+
+    function norm(t) {
+      return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    }
+
+    function render(q) {
+      var nq = norm(q.trim());
+      var caba = CABA.filter(function (z) { return norm(z).indexOf(nq) > -1; });
+      var gba = GBA.filter(function (z) { return norm(z).indexOf(nq) > -1; });
+      var total = caba.length + gba.length;
+
+      zoList.innerHTML = "";
+      caba.forEach(function (z) {
+        var li = document.createElement("li");
+        li.textContent = z;
+        zoList.appendChild(li);
+      });
+      gba.forEach(function (z) {
+        var li = document.createElement("li");
+        li.className = "gba";
+        li.textContent = z;
+        zoList.appendChild(li);
+      });
+
+      zoNone.hidden = total > 0;
+      if (!nq) {
+        zoMsg.innerHTML = "Mostrando las <b>" + (CABA.length + GBA.length) + "</b> zonas donde trabajamos · <b>" +
+          CABA.length + "</b> barrios de CABA y <b>" + GBA.length + "</b> localidades del conurbano.";
+      } else if (total > 0) {
+        zoMsg.innerHTML = "<b>Sí, llegamos.</b> " + total + (total === 1 ? " zona encontrada" : " zonas encontradas") + " para “" + q.trim() + "”.";
+      } else {
+        zoMsg.innerHTML = "No encontramos “" + q.trim() + "” en la lista.";
+      }
+    }
+
+    render("");
+    zoInput.addEventListener("input", function () { render(zoInput.value); });
+  }
+
   /* ===========================================================
      RELOJ DE TURNOS (signature)
      =========================================================== */
