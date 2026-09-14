@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <script src="lite.js"></script>
+
+  <title>Autytec · Domótica y casa inteligente en CABA y GBA</title>
+  <meta name="description" content="Automatizamos tu casa sin romper paredes: luces, persianas, aire, portón, cámaras y alarma desde el celular o por voz. Pedí tu relevamiento por WhatsApp.">
+  <meta name="keywords" content="domótica, casa inteligente, automatización del hogar, luces inteligentes, persianas motorizadas, control por voz, Alexa, Google Home, domótica CABA, domótica GBA, Autytec">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090F">
+  <link rel="canonical" href="https://autytec.tupaginaya.com.ar/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Autytec">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Autytec · Tu casa, en tu mano">
+  <meta property="og:description" content="Domótica a medida: luces, persianas, clima, accesos y seguridad desde el celular o por voz, sin romper paredes.">
+  <meta property="og:url" content="https://autytec.tupaginaya.com.ar/">
+  <meta property="og:image" content="https://tusitiowebya.github.io/demoautytec/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autytec · Tu casa, en tu mano">
+  <meta name="twitter:description" content="Domótica a medida: luces, persianas, clima, accesos y seguridad desde el celular o por voz.">
+  <meta name="twitter:image" content="https://tusitiowebya.github.io/demoautytec/og-image.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Lexend:wght@200;300;400;500;600&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Autytec",
+    "description": "Domótica y automatización del hogar: iluminación, persianas, climatización, accesos, cámaras, alarma y control por voz.",
+    "url": "https://autytec.tupaginaya.com.ar/",
+    "logo": "https://tusitiowebya.github.io/demoautytec/favicon-512.png",
+    "image": "https://tusitiowebya.github.io/demoautytec/og-image.jpg",
+    "telephone": "+54 9 11 3649-9113",
+    "areaServed": ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"],
+    "address": { "@type": "PostalAddress", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+    "sameAs": ["https://www.instagram.com/autytec/"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de domótica",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Iluminación inteligente" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Persianas y cortinas motorizadas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Climatización inteligente" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accesos, portones y cerraduras" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cámaras y alarma integradas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control por voz y escenas" } }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Hay que romper paredes para automatizar la casa?", "acceptedAnswer": { "@type": "Answer", "text": "No. En una casa existente usamos módulos que van dentro de la caja de la tecla y equipos inalámbricos. La instalación es limpia y se hace en el día en la mayoría de los casos." } },
+      { "@type": "Question", "name": "¿Qué pasa si se corta internet?", "acceptedAnswer": { "@type": "Answer", "text": "Las teclas siguen funcionando como siempre y las escenas locales también. Lo que depende de internet es el control desde afuera de casa y los asistentes de voz." } },
+      { "@type": "Question", "name": "¿Puedo seguir usando las teclas de luz normales?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. La tecla de la pared sigue funcionando: sumás el celular, la voz y las escenas, no reemplazás nada." } },
+      { "@type": "Question", "name": "¿Cuánto cuesta automatizar una casa?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de cuántos ambientes y qué querés controlar. Se puede empezar por un solo ambiente e ir sumando. Mandanos por WhatsApp qué te gustaría y te pasamos un presupuesto." } },
+      { "@type": "Question", "name": "¿Con qué asistentes de voz funciona?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con Google Home, Alexa y Apple Home, además de la app del sistema para controlar todo desde el celular." } },
+      { "@type": "Question", "name": "¿Hacen obras nuevas, oficinas y locales?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. En obra nueva conviene sumarnos desde el proyecto eléctrico; también automatizamos oficinas, consultorios y locales." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="brand" aria-label="Autytec, inicio">
+        <svg class="brand__mark" viewBox="0 0 48 28" aria-hidden="true"><rect x="1.5" y="1.5" width="45" height="25" rx="12.5" fill="none" stroke="currentColor" stroke-width="2"/><circle class="brand__knob" cx="34" cy="14" r="8"/></svg>
+        <span class="brand__word">auty<span>tec</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Secciones">
+        <a href="#automatizar">Qué automatizamos</a>
+        <a href="#escenas">Armá tu escena</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <a class="btn btn--wa btn--sm nav__cta" data-wa="Hola Autytec! Quiero automatizar mi casa, ¿me asesoran?" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="poster.jpg" data-src="hero.mp4"></video>
+        <div class="hero__scrim"></div>
+        <div class="hero__warm" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="term" aria-live="polite">
+          <span class="term__prompt">autytec@casa:~$</span>
+          <span class="term__cmd" id="termCmd">escena --llegué</span><span class="term__caret" aria-hidden="true"></span>
+        </p>
+
+        <h1 class="hero__title">
+          Tu casa hace lo que<br>
+          <span class="hero__glow">vos le pedís.</span>
+        </h1>
+
+        <p class="hero__lead">Luces, persianas, aire, portón, cámaras y alarma desde el celular, por voz o solos a la hora que elijas. Instalamos domótica a medida, <strong>sin romper paredes</strong>.</p>
+
+        <div class="plate-wrap">
+          <button class="plate" id="heroSwitch" role="switch" aria-checked="false" aria-label="Encender las luces de la casa">
+            <span class="plate__screw plate__screw--t"></span>
+            <span class="plate__key"><span class="plate__led"></span></span>
+            <span class="plate__screw plate__screw--b"></span>
+          </button>
+          <span class="plate__hint" id="plateHint">Tocá la tecla</span>
+        </div>
+
+        <div class="hero__ctas">
+          <a class="btn btn--wa btn--lg" data-wa="Hola Autytec! Quiero automatizar mi casa. ¿Coordinamos un relevamiento?" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Pedí tu relevamiento
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#escenas">Probá una escena</a>
+        </div>
+      </div>
+
+      <!-- tablero de estado -->
+      <div class="dash" id="dash" aria-label="Estado de la casa">
+        <div class="dash__item"><span class="dash__k">Luces</span><span class="dash__v" data-d="luces">0 / 6</span></div>
+        <div class="dash__item"><span class="dash__k">Clima</span><span class="dash__v" data-d="clima">Apagado</span></div>
+        <div class="dash__item"><span class="dash__k">Persianas</span><span class="dash__v" data-d="pers">Bajas</span></div>
+        <div class="dash__item"><span class="dash__k">Puerta</span><span class="dash__v" data-d="puerta">Trabada</span></div>
+        <div class="dash__item dash__item--hide-sm"><span class="dash__k">Alarma</span><span class="dash__v" data-d="alarma">Armada</span></div>
+        <div class="dash__item dash__item--hide-sm"><span class="dash__k">Hora</span><span class="dash__v" id="dashHora">--:--</span></div>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ AUTOMATIZAMOS ============ -->
+    <section class="section" id="automatizar">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="kicker"><span class="kicker__dot"></span>01 · Qué automatizamos</p>
+          <h2 class="h2">Todo lo que hoy hacés a mano, la casa lo puede hacer sola.</h2>
+          <p class="sub">Arrancá por un ambiente o automatizá la casa entera. Cada cosa se controla desde la misma app, por voz, o con escenas que se disparan solas.</p>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile--xl reveal">
+            <img src="img/living.jpg" alt="Living con iluminación cálida regulable" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">A</span>
+              <h3>Iluminación inteligente</h3>
+              <p>Encendé, regulá la intensidad y el tono de la luz de cada ambiente. Horarios, sensores de presencia y escenas.</p>
+            </div>
+          </article>
+          <article class="tile tile--pe reveal">
+            <img src="img/persianas.jpg" alt="Cortina plisada de madera filtrando la luz" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">B</span>
+              <h3>Persianas y cortinas</h3>
+              <p>Que suban con el sol y bajen solas cuando anochece.</p>
+            </div>
+          </article>
+          <article class="tile tile--cl reveal">
+            <img src="img/clima.jpg" alt="Mano ajustando un termostato digital de pared" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">C</span>
+              <h3>Climatización</h3>
+              <p>Prendé el aire antes de llegar. Tus splits de siempre, ahora inteligentes.</p>
+            </div>
+          </article>
+          <article class="tile tile--ce reveal">
+            <img src="img/cerradura.jpg" alt="Cerradura electrónica en una puerta de entrada" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">D</span>
+              <h3>Accesos y portón</h3>
+              <p>Abrí el portón desde el auto, dale acceso temporal a quien limpia y enterate quién entró.</p>
+            </div>
+          </article>
+          <article class="tile tile--ca reveal">
+            <img src="img/camara.jpg" alt="Cámara de seguridad para interior" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">E</span>
+              <h3>Cámaras y alarma</h3>
+              <p>Integradas al resto: si se dispara, se prenden todas las luces.</p>
+            </div>
+          </article>
+          <article class="tile tile--vo reveal">
+            <img src="img/voz.jpg" alt="Parlante inteligente con aro de luz" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">F</span>
+              <h3>Control por voz</h3>
+              <p>“Ok Google, modo cine”. Alexa, Google Home y Apple Home.</p>
+            </div>
+          </article>
+          <article class="tile tile--co reveal">
+            <img src="img/cocina.jpg" alt="Cocina con tiras LED bajo las alacenas" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">G</span>
+              <h3>Tiras LED y ambientación</h3>
+              <p>Luz indirecta bajo alacenas, detrás de la tele o en la escalera, con color y dimmer.</p>
+            </div>
+          </article>
+          <article class="tile tile--in reveal">
+            <img src="img/instalacion.jpg" alt="Técnico trabajando en un tablero eléctrico" loading="lazy">
+            <div class="tile__body">
+              <span class="tile__n">H</span>
+              <h3>Tablero y consumo</h3>
+              <p>Medí cuánto gasta la casa y cortá lo que quedó prendido.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE: ESCENAS ============ -->
+    <section class="section section--scene" id="escenas">
+      <div class="wrap">
+        <header class="head head--split reveal">
+          <div>
+            <p class="kicker kicker--amber">02 · Armá tu escena</p>
+            <h2 class="h2">Elegí un momento del día. Mirá qué hace tu casa.</h2>
+          </div>
+          <p class="sub">Una escena es una orden que junta varias: tocás un botón (o pasa algo) y la casa hace todo junta. Tocá un momento, ajustá lo que quieras y mandanos tu escena.</p>
+        </header>
+
+        <div class="lab reveal">
+          <!-- panel de control -->
+          <div class="lab__panel">
+            <p class="lab__step"><span>1</span>Cuando…</p>
+            <div class="triggers" id="triggers" role="radiogroup" aria-label="Momento que dispara la escena">
+              <button class="trig" role="radio" data-t="llego"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg>Llego a casa</button>
+              <button class="trig" role="radio" data-t="anochece"><svg viewBox="0 0 24 24"><use href="#i-moon"/></svg>Anochece</button>
+              <button class="trig" role="radio" data-t="cine"><svg viewBox="0 0 24 24"><use href="#i-tv"/></svg>Digo “modo cine”</button>
+              <button class="trig" role="radio" data-t="dormir"><svg viewBox="0 0 24 24"><use href="#i-bed"/></svg>Me voy a dormir</button>
+              <button class="trig" role="radio" data-t="salgo"><svg viewBox="0 0 24 24"><use href="#i-key"/></svg>Me voy de casa</button>
+            </div>
+
+            <p class="lab__step"><span>2</span>…entonces la casa:</p>
+            <div class="devs">
+              <div class="dev" data-dev="luces">
+                <div class="dev__top">
+                  <span class="dev__name">Luces</span>
+                  <label class="tog"><input type="checkbox" id="cLuces"><span></span></label>
+                </div>
+                <div class="dev__ctrl">
+                  <label class="rng"><span>Intensidad <b id="vDim">70%</b></span><input type="range" id="cDim" min="5" max="100" value="70"></label>
+                  <label class="rng rng--temp"><span>Tono <b id="vTemp">Cálida</b></span><input type="range" id="cTemp" min="0" max="100" value="15"></label>
+                </div>
+              </div>
+
+              <div class="dev" data-dev="pers">
+                <div class="dev__top">
+                  <span class="dev__name">Persianas</span>
+                  <span class="dev__val" id="vPers">Bajas</span>
+                </div>
+                <div class="dev__ctrl">
+                  <label class="rng"><span class="sr">Apertura de persianas</span><input type="range" id="cPers" min="0" max="100" value="0" step="5"></label>
+                </div>
+              </div>
+
+              <div class="dev" data-dev="aire">
+                <div class="dev__top">
+                  <span class="dev__name">Aire</span>
+                  <label class="tog"><input type="checkbox" id="cAire"><span></span></label>
+                </div>
+                <div class="dev__ctrl dev__ctrl--row">
+                  <button class="step" data-step="-1" aria-label="Bajar temperatura">−</button>
+                  <output class="deg" id="vAire">22°</output>
+                  <button class="step" data-step="1" aria-label="Subir temperatura">+</button>
+                </div>
+              </div>
+
+              <div class="dev" data-dev="led">
+                <div class="dev__top">
+                  <span class="dev__name">Tira LED</span>
+                  <label class="tog"><input type="checkbox" id="cLed"><span></span></label>
+                </div>
+                <div class="swatches" id="swatches" role="radiogroup" aria-label="Color de la tira LED">
+                  <button class="sw" role="radio" data-c="ambar" style="--c:#FFB347" aria-label="Ámbar"></button>
+                  <button class="sw" role="radio" data-c="cian" style="--c:#3DE0E8" aria-label="Cian"></button>
+                  <button class="sw" role="radio" data-c="violeta" style="--c:#9B7BFF" aria-label="Violeta"></button>
+                  <button class="sw" role="radio" data-c="rojo" style="--c:#FF5A5F" aria-label="Rojo tenue"></button>
+                </div>
+              </div>
+
+              <div class="dev dev--mini" data-dev="tv">
+                <span class="dev__name">Tele</span>
+                <label class="tog"><input type="checkbox" id="cTv"><span></span></label>
+              </div>
+              <div class="dev dev--mini" data-dev="puerta">
+                <span class="dev__name">Trabar puerta</span>
+                <label class="tog"><input type="checkbox" id="cPuerta"><span></span></label>
+              </div>
+              <div class="dev dev--mini" data-dev="alarma">
+                <span class="dev__name">Armar alarma</span>
+                <label class="tog"><input type="checkbox" id="cAlarma"><span></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ambiente -->
+          <div class="lab__stage">
+            <div class="room-frame">
+              <div class="room-bar">
+                <span class="room-bar__dot"></span>
+                <span id="roomTitle">Living · escena “Llego a casa”</span>
+                <span class="room-bar__time" id="roomTime">19:40</span>
+              </div>
+              <svg class="room" id="room" viewBox="0 0 640 420" role="img" aria-label="Living ilustrado que reacciona a la escena elegida">
+                <defs>
+                  <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop id="sky1" offset="0" stop-color="#1B2A55"/>
+                    <stop id="sky2" offset="1" stop-color="#E88A4A"/>
+                  </linearGradient>
+                  <radialGradient id="gLamp" cx="50%" cy="0%" r="75%">
+                    <stop offset="0" stop-color="var(--lamp)" stop-opacity=".95"/>
+                    <stop offset=".45" stop-color="var(--lamp)" stop-opacity=".28"/>
+                    <stop offset="1" stop-color="var(--lamp)" stop-opacity="0"/>
+                  </radialGradient>
+                  <radialGradient id="gFloor" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="var(--lamp)" stop-opacity=".7"/>
+                    <stop offset="1" stop-color="var(--lamp)" stop-opacity="0"/>
+                  </radialGradient>
+                  <radialGradient id="gLed" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="var(--led)" stop-opacity=".75"/>
+                    <stop offset="1" stop-color="var(--led)" stop-opacity="0"/>
+                  </radialGradient>
+                  <linearGradient id="gTv" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#2B4CFF"/>
+                    <stop offset=".55" stop-color="#9B7BFF"/>
+                    <stop offset="1" stop-color="#3DE0E8"/>
+                  </linearGradient>
+                  <clipPath id="clipWin"><rect x="52" y="64" width="150" height="190" rx="3"/></clipPath>
+                </defs>
+
+                <!-- estructura -->
+                <rect x="0" y="0" width="640" height="420" fill="#0C1019"/>
+                <rect x="0" y="0" width="640" height="318" fill="#141A27"/>
+                <polygon points="0,318 640,318 640,420 0,420" fill="#0E131D"/>
+                <line x1="0" y1="318" x2="640" y2="318" stroke="#232B3B" stroke-width="2"/>
+
+                <!-- ventana -->
+                <g>
+                  <rect x="44" y="56" width="166" height="206" rx="5" fill="#0A0D14" stroke="#2A3346" stroke-width="3"/>
+                  <g clip-path="url(#clipWin)">
+                    <rect x="52" y="64" width="150" height="190" fill="url(#gSky)"/>
+                    <g id="stars" opacity="0">
+                      <circle cx="70" cy="84" r="1.2" fill="#fff"/><circle cx="120" cy="96" r="1" fill="#fff"/><circle cx="170" cy="78" r="1.4" fill="#fff"/><circle cx="92" cy="130" r=".9" fill="#fff"/><circle cx="186" cy="124" r="1" fill="#fff"/><circle cx="146" cy="150" r=".8" fill="#fff"/>
+                    </g>
+                    <circle id="sun" cx="150" cy="200" r="16" fill="#FFD27A"/>
+                    <circle id="moon" cx="160" cy="98" r="12" fill="#EEF0F4" opacity="0"/>
+                    <path d="M52 232 Q90 214 124 228 T202 222 V254 H52Z" fill="#070A10" opacity=".85"/>
+                    <!-- persiana -->
+                    <g id="blind">
+                      <rect x="52" y="64" width="150" height="190" fill="#C9CFDA"/>
+                      <g stroke="#9AA3B3" stroke-width="1.2">
+                        <line x1="52" y1="76" x2="202" y2="76"/><line x1="52" y1="88" x2="202" y2="88"/><line x1="52" y1="100" x2="202" y2="100"/><line x1="52" y1="112" x2="202" y2="112"/><line x1="52" y1="124" x2="202" y2="124"/><line x1="52" y1="136" x2="202" y2="136"/><line x1="52" y1="148" x2="202" y2="148"/><line x1="52" y1="160" x2="202" y2="160"/><line x1="52" y1="172" x2="202" y2="172"/><line x1="52" y1="184" x2="202" y2="184"/><line x1="52" y1="196" x2="202" y2="196"/><line x1="52" y1="208" x2="202" y2="208"/><line x1="52" y1="220" x2="202" y2="220"/><line x1="52" y1="232" x2="202" y2="232"/><line x1="52" y1="244" x2="202" y2="244"/>
+                      </g>
+                    </g>
+                  </g>
+                  <rect x="40" y="48" width="174" height="12" rx="3" fill="#232B3B"/>
+                  <line x1="127" y1="56" x2="127" y2="262" stroke="#2A3346" stroke-width="3"/>
+                </g>
+
+                <!-- aire split -->
+                <g id="ac">
+                  <rect x="400" y="46" width="176" height="52" rx="10" fill="#E6E9EF"/>
+                  <rect x="400" y="84" width="176" height="14" rx="4" fill="#C8CDD7"/>
+                  <line x1="414" y1="91" x2="562" y2="91" stroke="#9AA3B3" stroke-width="2"/>
+                  <text id="acTxt" x="532" y="66" font-family="Martian Mono, monospace" font-size="11" fill="#39414F" text-anchor="end"></text>
+                  <g id="airflow" opacity="0" stroke="#9FE9F0" stroke-width="2" fill="none" stroke-linecap="round">
+                    <path class="air" d="M420 108 q20 14 0 28 q-20 14 0 28"/>
+                    <path class="air" d="M470 108 q20 14 0 28 q-20 14 0 28"/>
+                    <path class="air" d="M520 108 q20 14 0 28 q-20 14 0 28"/>
+                  </g>
+                </g>
+
+                <!-- cuadro -->
+                <rect x="262" y="96" width="92" height="66" rx="3" fill="#1C2332" stroke="#2A3346" stroke-width="3"/>
+                <path d="M270 150 l20-24 16 16 12-10 26 18z" fill="#2A3346"/>
+
+                <!-- lámpara colgante -->
+                <line x1="306" y1="0" x2="306" y2="30" stroke="#39414F" stroke-width="2"/>
+                <path d="M286 40 Q306 18 326 40Z" fill="#39414F"/>
+
+                <!-- mueble + tele -->
+                <rect x="398" y="150" width="164" height="94" rx="5" fill="#05070B" stroke="#2A3346" stroke-width="3"/>
+                <rect x="372" y="258" width="216" height="46" rx="4" fill="#1C2332"/>
+                <rect x="384" y="304" width="8" height="14" fill="#1C2332"/><rect x="568" y="304" width="8" height="14" fill="#1C2332"/>
+
+                <!-- lámpara de pie -->
+                <line x1="96" y1="306" x2="96" y2="340" stroke="#39414F" stroke-width="3"/>
+                <ellipse cx="96" cy="342" rx="16" ry="4" fill="#232B3B"/>
+
+                <!-- sillón -->
+                <g>
+                  <rect x="170" y="312" width="250" height="62" rx="14" fill="#232B3B"/>
+                  <rect x="182" y="286" width="226" height="46" rx="12" fill="#2A3346"/>
+                  <rect x="160" y="300" width="30" height="78" rx="12" fill="#2A3346"/>
+                  <rect x="400" y="300" width="30" height="78" rx="12" fill="#2A3346"/>
+                  <rect x="178" y="374" width="8" height="12" fill="#1C2332"/><rect x="404" y="374" width="8" height="12" fill="#1C2332"/>
+                </g>
+
+                <!-- puerta con cerradura -->
+                <g>
+                  <rect x="604" y="112" width="36" height="206" fill="#1C2332" stroke="#2A3346" stroke-width="3"/>
+                  <rect x="610" y="206" width="12" height="22" rx="3" fill="#0A0D14"/>
+                </g>
+
+                <!-- sensor alarma -->
+                <g>
+                  <rect x="236" y="22" width="22" height="16" rx="4" fill="#E6E9EF"/>
+                </g>
+
+                <!-- oscuridad ambiente -->
+                <rect id="dark" x="0" y="0" width="640" height="420" fill="#03050A" opacity=".55" pointer-events="none"/>
+
+                <!-- fuentes de luz: por encima de la oscuridad -->
+                <g class="emit">
+                  <polygon id="beam" points="296,40 316,40 430,318 182,318" fill="url(#gLamp)" opacity="0"/>
+                  <ellipse id="bulb" cx="306" cy="41" rx="9" ry="4" fill="#39414F"/>
+                  <ellipse id="floorGlow" cx="96" cy="296" rx="92" ry="74" fill="url(#gFloor)" opacity="0"/>
+                  <path id="shade" d="M80 276 h32 l8 30 h-48z" fill="#39414F"/>
+                  <rect id="ledGlow" x="350" y="262" width="260" height="96" fill="url(#gLed)" opacity="0"/>
+                  <line id="ledStrip" x1="378" y1="304" x2="582" y2="304" stroke="var(--led)" stroke-width="3" stroke-linecap="round" opacity="0"/>
+                  <rect id="tvScreen" x="403" y="155" width="154" height="84" rx="2" fill="url(#gTv)" opacity="0"/>
+                  <circle id="acLed" cx="556" cy="62" r="3" fill="#39414F"/>
+                  <circle id="lockLed" cx="616" cy="213" r="2.6" fill="#39414F"/>
+                  <circle id="alarmLed" cx="247" cy="30" r="2.6" fill="#39414F"/>
+                </g>
+              </svg>
+              <div class="room-chips" id="roomChips" aria-live="polite"></div>
+            </div>
+
+            <div class="recipe">
+              <p class="recipe__label">Tu escena</p>
+              <p class="recipe__text" id="recipeText">—</p>
+              <div class="recipe__kit">
+                <p class="recipe__label">Lo que lleva <span id="kitCount"></span></p>
+                <ul id="kitList"></ul>
+              </div>
+              <a class="btn btn--wa btn--block" id="sceneWa" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Quiero esta escena en mi casa
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIN ROMPER PAREDES ============ -->
+    <section class="section section--layers">
+      <div class="wrap layers">
+        <div class="layers__copy reveal">
+          <h2 class="h2">La tecla de siempre. <span class="amber">Con un cerebro atrás.</span></h2>
+          <p class="sub">En una casa ya hecha no hace falta cablear de nuevo. Un módulo chiquito entra en la caja de la tecla, se conecta al Wi-Fi o a la red Zigbee y listo: la tecla sigue funcionando como siempre y además la manejás desde el celular, por voz o con escenas.</p>
+          <ul class="checks">
+            <li>Instalación limpia, sin canaletas ni roturas</li>
+            <li>Si se corta internet, la tecla sigue andando</li>
+            <li>Se puede empezar por un ambiente e ir sumando</li>
+          </ul>
+        </div>
+        <div class="explode reveal" id="explode" aria-hidden="true">
+          <div class="explode__layer explode__layer--plate"><span class="explode__tag">Tecla y placa</span><i class="explode__key"></i></div>
+          <div class="explode__layer explode__layer--frame"><span class="explode__tag">Bastidor</span></div>
+          <div class="explode__layer explode__layer--module"><span class="explode__tag">Módulo Autytec</span><i class="explode__chip"></i><i class="explode__wave"></i></div>
+          <div class="explode__layer explode__layer--box"><span class="explode__tag">Caja de luz existente</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="section section--light" id="proceso">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="kicker kicker--ink">03 · Cómo trabajamos</p>
+          <h2 class="h2">De la idea a tu casa andando, en cuatro pasos.</h2>
+        </header>
+        <ol class="steps">
+          <li class="step-card reveal">
+            <span class="step-card__n">01</span>
+            <h3>Nos contás</h3>
+            <p>Por WhatsApp nos decís qué te gustaría controlar. Con un par de fotos de las teclas y el tablero ya nos hacemos una idea.</p>
+          </li>
+          <li class="step-card reveal">
+            <span class="step-card__n">02</span>
+            <h3>Relevamiento</h3>
+            <p>Vamos a tu casa, revisamos la instalación y la señal Wi-Fi, y te armamos una propuesta por ambiente, sin sumar cosas que no necesitás.</p>
+          </li>
+          <li class="step-card reveal">
+            <span class="step-card__n">03</span>
+            <h3>Instalación</h3>
+            <p>Instalamos, configuramos los equipos y dejamos listas las escenas que elegiste. Limpio y en el día en la mayoría de los casos.</p>
+          </li>
+          <li class="step-card reveal">
+            <span class="step-card__n">04</span>
+            <h3>App y soporte</h3>
+            <p>Te enseñamos a usar la app y los asistentes de voz a vos y a tu familia. Si después querés cambiar una escena, nos escribís.</p>
+          </li>
+        </ol>
+
+        <div class="compat reveal">
+          <p class="compat__label">Funciona con</p>
+          <ul class="compat__list">
+            <li>Google Home</li><li>Alexa</li><li>Apple Home</li><li>Smart Life</li><li>Zigbee</li><li>Wi-Fi</li><li>Matter</li>
+          </ul>
+        </div>
+
+        <div class="duo">
+          <article class="duo__card reveal">
+            <p class="duo__tag">Casa o depto ya hecho</p>
+            <h3>Automatizamos lo que tenés</h3>
+            <p>Módulos en las cajas de luz, motores para tus persianas, control por infrarrojo para los aires y cerraduras que se colocan sobre la puerta actual.</p>
+          </article>
+          <article class="duo__card duo__card--dark reveal">
+            <p class="duo__tag">Obra nueva o reforma</p>
+            <h3>Pensado desde el plano</h3>
+            <p>Si estás construyendo, sumanos desde el proyecto eléctrico: dejamos las cañerías, el tablero y los puntos listos para una casa inteligente completa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <header class="head reveal">
+          <p class="kicker"><span class="kicker__dot"></span>04 · Preguntas frecuentes</p>
+          <h2 class="h2">Lo que todos nos preguntan antes de arrancar.</h2>
+          <p class="sub">¿Tenés otra duda? Escribinos, respondemos en el día.</p>
+        </header>
+        <div class="faq__list">
+          <details class="qa reveal" open>
+            <summary>¿Hay que romper paredes?</summary>
+            <p>No. En una casa existente usamos módulos que van dentro de la caja de la tecla y equipos inalámbricos. La instalación es limpia y se hace en el día en la mayoría de los casos.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>¿Qué pasa si se corta internet?</summary>
+            <p>Las teclas siguen funcionando como siempre y las escenas locales también. Lo que depende de internet es el control desde afuera de casa y los asistentes de voz.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>¿Puedo seguir usando las teclas normales?</summary>
+            <p>Sí. La tecla de la pared sigue funcionando: sumás el celular, la voz y las escenas, no reemplazás nada.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>¿Cuánto sale automatizar una casa?</summary>
+            <p>Depende de cuántos ambientes y qué querés controlar. Se puede empezar por un solo ambiente e ir sumando. Mandanos por WhatsApp qué te gustaría y te pasamos un presupuesto.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>¿Con qué asistentes de voz funciona?</summary>
+            <p>Con Google Home, Alexa y Apple Home, además de la app del sistema para manejar todo desde el celular, estés donde estés.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>¿Hacen oficinas y locales?</summary>
+            <p>Sí. Automatizamos oficinas, consultorios y locales: luces por horario, aires que se apagan solos al cerrar y control de accesos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta" id="contacto">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="wrap cta__inner reveal">
+        <svg class="cta__mark" viewBox="0 0 48 28" aria-hidden="true"><rect x="1.5" y="1.5" width="45" height="25" rx="12.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="34" cy="14" r="8" fill="#FFB347"/></svg>
+        <h2 class="cta__title">Llegá a una casa<br>que ya te está esperando.</h2>
+        <p class="sub">Contanos qué querés automatizar y coordinamos un relevamiento en CABA o GBA.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--wa btn--lg" data-wa="Hola Autytec! Quiero automatizar mi casa. ¿Coordinamos un relevamiento?" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>11 3649-9113
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/autytec/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg>@autytec
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <a href="#inicio" class="brand" aria-label="Autytec">
+        <svg class="brand__mark" viewBox="0 0 48 28" aria-hidden="true"><rect x="1.5" y="1.5" width="45" height="25" rx="12.5" fill="none" stroke="currentColor" stroke-width="2"/><circle class="brand__knob" cx="34" cy="14" r="8"/></svg>
+        <span class="brand__word">auty<span>tec</span></span>
+      </a>
+      <p class="foot__txt">Domótica y automatización del hogar · CABA y GBA</p>
+      <p class="foot__txt">© <span id="year">2026</span> Autytec · Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Hola Autytec! Quiero automatizar mi casa, ¿me asesoran?" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- íconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></g></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V6M3 14h18v5M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M15 8l2 2"/></g></symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
