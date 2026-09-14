@@ -82,7 +82,8 @@ h1,h2,h3{ font-family:'Italiana',Georgia,serif; font-weight:400; letter-spacing:
 .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; flex:0 0 auto; }
 .brand__mark{ width:40px; height:40px; flex:0 0 auto; }
 .brand__txt{ display:flex; flex-direction:column; line-height:1; }
-.brand__name{ font-family:'Italiana',Georgia,serif; font-size:20px; color:var(--ink); letter-spacing:.02em; }
+.brand__mark{ color:var(--ink); }
+.brand__name{ font-family:'Jost',system-ui,sans-serif; font-weight:400; font-size:15px; color:var(--ink); letter-spacing:.24em; text-transform:uppercase; }
 .brand__sub{
   font-size:9.5px; letter-spacing:.34em; text-transform:uppercase;
   color:var(--sand-deep); margin-top:4px; font-weight:400;
@@ -379,11 +380,12 @@ h1,h2,h3{ font-family:'Italiana',Georgia,serif; font-weight:400; letter-spacing:
 .foot{ background:var(--ink); color:rgba(239,234,227,.72); padding:clamp(50px,6vw,76px) 0 0; }
 .foot__inner{ display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; align-items:flex-start; padding-bottom:44px; }
 .foot__brand{ display:flex; gap:14px; align-items:center; }
-.brand__mark--lg{ width:56px; height:56px; }
+.brand__mark--lg{ width:84px; height:90px; }
+.foot .brand__mark{ color:var(--bone); }
 .foot .mono-c,.foot .mono-a{ fill:var(--bone); }
 .foot .mono-line{ stroke:var(--bone); opacity:.4; }
 .foot .mono-fill{ fill:var(--sand); }
-.foot__brand strong{ display:block; font-family:'Italiana',Georgia,serif; font-weight:400; font-size:22px; color:var(--bone); }
+.foot__brand strong{ display:block; font-family:'Jost',system-ui,sans-serif; font-weight:400; font-size:17px; letter-spacing:.24em; text-transform:uppercase; color:var(--bone); }
 .foot__brand span{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--sand); }
 .foot__nav{ display:flex; flex-wrap:wrap; gap:18px; }
 .foot__nav a,.foot__meta a{ text-decoration:none; font-size:13px; letter-spacing:.06em; transition:color .3s; }
@@ -516,7 +518,7 @@ body.plano .shead__t,body.plano .hero__title{ letter-spacing:.06em; }
   .wrap{ width:min(100% - 32px, var(--wrap)); }
   .hero__inner{ width:min(100% - 52px, var(--wrap)); padding:110px 0 176px; }
   .sheet{ inset:78px 16px 30px; }
-  .brand__name{ font-size:17px; }
+  .brand__name{ font-size:12.5px; letter-spacing:.18em; }
   .brand__sub{ font-size:8px; letter-spacing:.26em; }
   .brand__mark{ width:34px; height:34px; }
   .cota__txt{ font-size:9px; letter-spacing:.22em; }
