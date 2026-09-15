@@ -40,15 +40,21 @@
     a.addEventListener("click", function () { nav.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); });
   });
 
-  /* ---------- video del hero (en LITE ni se pide) ---------- */
-  function loadVideo() {
-    var v = $(".hero__video");
-    if (!v || LITE() || v.getAttribute("src")) return;
-    v.src = v.getAttribute("data-src");
-    var p = v.play();
-    if (p && p.catch) p.catch(function () {});
-  }
-  loadVideo();
+  /* ---------- fondo del hero: el escudo de la cartera (canvas propio) ---------- */
+  var heroBG = null;
+  (function () {
+    var cv = $("#heroCanvas");
+    if (!cv || !window.ASHeroBG) return;
+    heroBG = window.ASHeroBG(cv);
+    if (LITE() || QA) { heroBG.still(); return; }
+    var visible = true;
+    function sync() { if (visible && !document.hidden && !LITE()) heroBG.start(); else heroBG.stop(); }
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; sync(); }).observe($(".hero"));
+    }
+    document.addEventListener("visibilitychange", sync);
+    sync();
+  })();
 
   /* ---------- reloj de sincronización ---------- */
   (function () {
@@ -327,8 +333,7 @@
     function goLite() {
       html.classList.add("lite");
       try { sessionStorage.setItem("as-lite", "1"); } catch (e) {}
-      var v = $(".hero__video");
-      if (v) { v.pause(); v.removeAttribute("src"); v.load(); }
+      if (heroBG) { heroBG.stop(); heroBG.still(); }
       $$(".reveal").forEach(function (e) { e.classList.add("is-in"); });
     }
     function loop(t) {
