@@ -593,11 +593,25 @@ html:not(.js) .window-shade, html.qa .window-shade{transform:translateY(-101%)}
   .kicker-num{font-size:2.6rem}
 }
 
-/* modo liviano: sin animaciones pesadas */
-.lite .stamp svg, .lite .ribbon-track, .lite .wa-float::after, .lite .hero-scroll span::after{animation:none}
+/* modo liviano: sin pins, sin smooth scroll, sin animaciones continuas */
+.lite .stamp svg, .lite .wa-float::after, .lite .hero-scroll span::after{animation:none}
+.lite .ribbon-track{animation-duration:90s}
 .lite .intro{display:none}
+.lite .hero-video{transform:none}
+.lite .window-shade{transform:translateY(-101%);transition:none}
+.lite .hero-script path{stroke-dashoffset:0;transition:none}
+.lite .flight-text{display:none}
+.lite .hero-title .line>span{transform:none;transition:none}
+.lite .ticket, .lite .ticket img, .lite .b-card, .lite .rv, .lite .svc a, .lite .pp{transition-duration:.2s}
+.lite .ticket:hover img{transform:none}
+.lite .dest-pin, .qa .dest-pin{height:auto;padding-bottom:60px}
+.lite .dest-track, .qa .dest-track{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--rosa) transparent}
+.lite .ticket{scroll-snap-align:start}
+.lite .dest-progress{display:none}
+.lite .svc-float{display:none}
+.lite .why-bg{inset:0}
+.lite .rv-up{transition:none}
 
 /* modo QA para capturas */
 .qa .hero{min-height:900px}
-.qa .dest-pin{height:auto}
 .qa *,.qa *::before,.qa *::after{transition:none !important;animation:none !important}

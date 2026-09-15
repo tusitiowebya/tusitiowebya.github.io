@@ -29,6 +29,7 @@
 
   const QA = html.classList.contains('qa');
   const LITE = html.classList.contains('lite');
+  const isLite = () => html.classList.contains('lite');
   const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
   const isDesktop = () => innerWidth > 900;
   const hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
@@ -46,10 +47,11 @@
 
   /* ---------- smooth scroll ---------- */
   let lenis = null;
+  const lenisTick = time => { if (lenis) lenis.raf(time * 1000); };
   if (FULL && finePointer && typeof window.Lenis !== 'undefined') {
     lenis = new Lenis({ duration: 1.15, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.add(lenisTick);
     gsap.ticker.lagSmoothing(0);
   }
   if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
@@ -161,6 +163,7 @@
         mouse.ty = (e.clientY / innerHeight - .5) * 1.2;
       });
       (function loop() {
+        if (isLite()) return;
         mouse.x = lerp(mouse.x, mouse.tx, .06);
         mouse.y = lerp(mouse.y, mouse.ty, .06);
         if (Math.abs(mouse.x - mouse.tx) > .001 || Math.abs(mouse.y - mouse.ty) > .001) renderHero();
@@ -180,7 +183,7 @@
 
   /* ---------- servicios: imagen flotante ---------- */
   const float = $('.svc-float');
-  if (float && finePointer) {
+  if (float && finePointer && !LITE) {
     const img = $('img', float);
     const pos = { x: 0, y: 0, tx: 0, ty: 0 };
     let active = false;
@@ -190,6 +193,7 @@
     });
     window.addEventListener('pointermove', e => { pos.tx = e.clientX + 150; pos.ty = e.clientY; if (!active) { pos.x = pos.tx; pos.y = pos.ty; } });
     (function loop() {
+      if (isLite()) { float.classList.remove('on'); return; }
       pos.x = lerp(pos.x, pos.tx, .14); pos.y = lerp(pos.y, pos.ty, .14);
       float.style.left = pos.x + 'px'; float.style.top = pos.y + 'px';
       requestAnimationFrame(loop);
@@ -243,7 +247,7 @@
       photoWrap.classList.remove('swap'); info.classList.remove('swap');
       nStamp.classList.remove('slam'); void nStamp.offsetWidth; nStamp.classList.add('slam');
     };
-    if (!animate || LITE) { apply(); return; }
+    if (!animate || isLite()) { apply(); return; }
     photoWrap.classList.add('swap'); info.classList.add('swap');
     setTimeout(apply, 320);
   }
@@ -253,10 +257,11 @@
   Object.keys(NATIONS).forEach(k => { const i = new Image(); i.src = `img/${k}.jpg`; });
 
   /* ---------- destinos: scroll horizontal ---------- */
+  let destTween = null;
   const dest = $('.dest'), destPin = $('.dest-pin'), destTrack = $('.dest-track'), destBar = $('.dest-progress span');
   if (FULL && dest && isDesktop()) {
     const dist = () => Math.max(0, destTrack.scrollWidth - innerWidth);
-    gsap.to(destTrack, {
+    destTween = gsap.to(destTrack, {
       x: () => -dist(), ease: 'none',
       scrollTrigger: {
         trigger: dest, start: 'top top', end: () => '+=' + dist(), pin: destPin, scrub: .6, invalidateOnRefresh: true,
@@ -269,6 +274,7 @@
   if (finePointer && !LITE) {
     $$('.tilt').forEach(el => {
       el.addEventListener('pointermove', e => {
+        if (isLite()) return;
         const r = el.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
         el.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
@@ -304,7 +310,7 @@
       const p = clamp((vh * .55 - r.top) / r.height, 0, 1);
       itin.style.setProperty('--p', p.toFixed(4));
     }
-    if (why && whyImg && !LITE) {
+    if (why && whyImg && !isLite()) {
       const r = why.getBoundingClientRect();
       if (r.bottom > 0 && r.top < vh) {
         const p = (r.top + r.height / 2 - vh / 2) / vh;
@@ -362,6 +368,61 @@
       if (mensaje) txt += `\n\n${mensaje}`;
       window.open(waLink(txt), '_blank', 'noopener');
     });
+  }
+
+
+  /* ---------- watchdog de FPS: si el equipo no da, pasamos a modo liviano ---------- */
+  function goLite(reason) {
+    if (isLite()) return;
+    html.classList.add('lite');
+    try { sessionStorage.setItem('mila-lite', '1'); } catch (e) {}
+    const y = window.scrollY;
+    if (lenis) { lenis.destroy(); lenis = null; if (hasGSAP) gsap.ticker.remove(lenisTick); }
+    html.classList.remove('lenis', 'lenis-smooth', 'lenis-scrolling');
+    if (hasGSAP) {
+      if (destTween) { destTween.scrollTrigger && destTween.scrollTrigger.kill(true); destTween.kill(); }
+      ScrollTrigger.getAll().forEach(t => t.kill(true));
+      gsap.set(destTrack, { clearProps: 'transform' });
+    }
+    heroP = 0; measureWindow();
+    [copy, win, route, scrollCue, flight].forEach(el => { if (el) { el.style.opacity = ''; el.style.transform = ''; } });
+    cards.forEach(el => { el.style.opacity = ''; el.style.transform = ''; });
+    if (whyImg) whyImg.style.transform = '';
+    $$('.rv-up').forEach(el => el.classList.add('in'));
+    // la página se acortó al sacar los pins: mantenemos la sección visible
+    const target = Math.min(y, document.documentElement.scrollHeight - innerHeight);
+    window.scrollTo(0, target);
+    onScroll();
+    if (window.console) console.info('[mila] modo liviano:', reason);
+  }
+
+  const FORCE_FULL = /[?&]full/.test(location.search);
+  if (FULL && !FORCE_FULL) {
+    let frames = 0, slow = 0, last = 0, start = 0, sampling = false, retries = 0;
+    const sample = now => {
+      if (!sampling) return;
+      if (document.visibilityState !== 'visible') { last = 0; requestAnimationFrame(sample); return; }
+      if (last) {
+        const dt = now - last;
+        frames++;
+        if (dt > 50) slow++;
+      } else start = now;
+      last = now;
+      if (now - start > 2500 && frames > 0) {
+        sampling = false;
+        const fps = frames / ((now - start) / 1000);
+        // < 12 fps no es un equipo lento: el navegador no está pintando (ventana tapada) → volvemos a medir
+        if (fps < 12) { if (++retries < 4) setTimeout(begin, 3000); return; }
+        if (fps < 38 || slow / frames > .25) goLite(`fps ${fps.toFixed(0)}`);
+        return;
+      }
+      requestAnimationFrame(sample);
+    };
+    const begin = () => { if (sampling || isLite()) return; sampling = true; frames = slow = last = 0; requestAnimationFrame(sample); };
+    // medimos al terminar la intro y otra vez con el primer scroll (cuando trabajan los pins)
+    setTimeout(begin, 2200);
+    let scrolledOnce = false;
+    window.addEventListener('scroll', () => { if (!scrolledOnce && window.scrollY > 120) { scrolledOnce = true; setTimeout(begin, 2800); } }, { passive: true });
   }
 
   /* refrescar medidas cuando cargan fuentes e imágenes */
