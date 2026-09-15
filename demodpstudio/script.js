@@ -26,6 +26,30 @@
   burger.addEventListener('click', () => setMenu(!mnav.classList.contains('open')));
   mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
+  /* ---------- fit text: Android text scaling enlarges px fonts but not vw widths ---------- */
+  const FIT = '.hero__title, .hero__kicker, .brushlabel span, .h2, .btn, .result__name, .htag h3, .case h3, .step h3, .steps b, .mnav a, .foot__claim, .sticker';
+  const fitEls = [...document.querySelectorAll(FIT)];
+  const overflows = el => el.scrollWidth > el.clientWidth + 1;
+  const fitText = () => {
+    fitEls.forEach(el => { el.style.fontSize = ''; });
+    fitEls.forEach(el => {
+      if (!el.getClientRects().length) return;
+      let size = parseFloat(getComputedStyle(el).fontSize);
+      const min = Math.max(12, size * .45);
+      let guard = 30;
+      while (overflows(el) && size > min && guard--) {
+        size = Math.max(min, size * Math.min(.96, el.clientWidth / el.scrollWidth + .01));
+        el.style.fontSize = size.toFixed(1) + 'px';
+      }
+    });
+  };
+  window.__dpFit = fitText;
+  fitText();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitText);
+  addEventListener('load', fitText);
+  let fitT;
+  addEventListener('resize', () => { clearTimeout(fitT); fitT = setTimeout(fitText, 120); });
+
   /* ---------- reveal ---------- */
   const rvIO = new IntersectionObserver(entries => {
     let i = 0;

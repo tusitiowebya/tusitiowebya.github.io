@@ -284,6 +284,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 [data-par]{translate:0 var(--py,0px)}
 .lite [data-par]{translate:none}
 
+.picker>*,.picker__q,.step>*,.picker__a>*,.hacemos__grid>*,.exp__grid>*,.contacto__grid>*,.case--wide>*,.cases3>*,.line>*,.chips>*{min-width:0}
+.chip{max-width:100%;overflow-wrap:anywhere}
+
+/* single-line pieces shrink (script.js fitText) instead of wrapping */
+.btn,.brushlabel,.hero__kicker{max-width:100%}
+.btn > span,.brushlabel span,.hero__kicker{white-space:nowrap}
+
 /* ---------- reveal ---------- */
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
