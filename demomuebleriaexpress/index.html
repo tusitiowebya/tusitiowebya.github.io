@@ -91,9 +91,6 @@
         <a href="#faq">Preguntas</a>
       </nav>
       <div class="nav__cta">
-        <button class="cartbtn" type="button" data-open-cart aria-label="Ver tu pedido">
-          <svg aria-hidden="true"><use href="#i-cart"/></svg><span class="t">Pedido</span><span class="badge" data-count hidden>0</span>
-        </button>
         <a class="btn btn--wa nav__wa" href="https://wa.me/5493412773692?text=Hola%20Muebler%C3%ADa%20Express!%20Tengo%20un%20negocio%20y%20quiero%20consultar." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
         <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
@@ -126,7 +123,7 @@
             <div class="gondola__top"><span>Precio de góndola</span><em data-g-rubro></em></div>
             <button class="gondola__img" type="button" data-ficha="" style="border:0;background:none;width:100%"><img src="" alt="" width="560" height="560"></button>
             <p class="gondola__name" data-g-name></p>
-            <button class="add gondola__add" type="button" data-add="" aria-label="Agregar al pedido"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+            <a class="wa-mini gondola__add" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
             <div class="gondola__tag">
               <p class="gondola__precio" style="margin:0" data-fit data-g-precio></p>
               <p class="gondola__plan" style="margin:0" data-g-plan></p>
@@ -184,8 +181,8 @@
             <div class="ruta__truck"><svg><use href="#truck"/></svg></div>
           </div>
           <ol class="pasos">
-            <li class="paso rv"><span class="paso__n">01</span><h3>Elegís en la tienda</h3><p>Armá tu ticket con lo que le falta al local: frío, mostradores, gastronomía, cartelería o muebles.</p></li>
-            <li class="paso rv rv-d1"><span class="paso__n">02</span><h3>Elegís el plan</h3><p>85, 155 o 250 días. Cuanto más largo el plan, más baja la cuota de cada día.</p></li>
+            <li class="paso rv"><span class="paso__n">01</span><h3>Mirás el catálogo</h3><p>Buscá lo que le falta al local: frío, mostradores, gastronomía, cartelería o muebles, con la cuota de cada plan.</p></li>
+            <li class="paso rv rv-d1"><span class="paso__n">02</span><h3>Nos escribís</h3><p>Tocá el botón de WhatsApp del producto: el mensaje sale con el producto y el plan (85, 155 o 250 días).</p></li>
             <li class="paso rv rv-d2"><span class="paso__n">03</span><h3>Te lo llevamos</h3><p>Entregamos en Rosario y alrededores. Los aires van con instalación y materiales sin costo.</p></li>
             <li class="paso rv rv-d3"><span class="paso__n">04</span><h3>Pagás por día</h3><p>Una cuota chica y fija todos los días, que sale de lo que el mismo equipo te ayuda a vender.</p></li>
           </ol>
@@ -250,7 +247,7 @@
           <div class="rv">
             <p class="numero">03 — POR RUBRO</p>
             <h2 id="kits-t">Kioscos, almacenes, panaderías y más</h2>
-            <p class="sec__lead">Kits armados con productos reales del catálogo. Sumalos completos al ticket o cambiá lo que quieras.</p>
+            <p class="sec__lead">Kits armados con productos reales del catálogo. Consultalos completos por WhatsApp o preguntá por cada producto.</p>
           </div>
         </div>
         <div class="kits" data-kits></div>
@@ -292,7 +289,7 @@
           <details><summary>¿Hacen envíos?</summary><p>Sí, entregamos en Rosario y alrededores. Coordinamos día y horario por WhatsApp cuando confirmás el pedido.</p></details>
           <details><summary>¿Los aires incluyen instalación?</summary><p>Los aires acondicionados split se entregan con instalación y materiales sin costo.</p></details>
           <details><summary>¿Los precios están actualizados?</summary><p>Son los del catálogo de septiembre. Al mandar tu pedido te confirmamos stock y precio final antes de entregar.</p></details>
-          <details><summary>¿Qué necesito para empezar?</summary><p>Mandanos tu pedido desde el ticket con el nombre y el rubro de tu negocio, y te contamos los pasos por WhatsApp.</p></details>
+          <details><summary>¿Cómo hago el pedido?</summary><p>Tocá el botón de WhatsApp del producto que te interesa. Te llega el mensaje armado con el producto y el plan, y lo terminamos de coordinar por ahí.</p></details>
         </div>
       </div>
     </section>
@@ -303,9 +300,9 @@
       <div class="wrap cta__in">
         <div class="rv">
           <h2 id="cta-t">Tu local, <span class="grad-text">equipado esta semana</span></h2>
-          <p>Armá el ticket, mandalo por WhatsApp y coordinamos la entrega. Lo pagás por día con lo que vendés.</p>
+          <p>Escribinos por WhatsApp con lo que necesitás y coordinamos la entrega. Lo pagás por día con lo que vendés.</p>
           <div class="cta__btns">
-            <button class="btn btn--grad" type="button" data-open-cart>Ver mi pedido</button>
+            <a class="btn btn--grad" href="catalogo/">Ver el catálogo</a>
             <a class="btn btn--wa" href="https://wa.me/5493412773692?text=Hola%20Muebler%C3%ADa%20Express!%20Quiero%20equipar%20mi%20negocio." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>341 277-3692</a>
           </div>
         </div>
@@ -329,7 +326,6 @@
   </footer>
 
   <div class="fab">
-    <button class="fab__cart" type="button" data-open-cart aria-label="Ver tu pedido"><svg aria-hidden="true"><use href="#i-cart"/></svg><span class="badge" data-count hidden>0</span></button>
     <a class="fab__wa" href="https://wa.me/5493412773692?text=Hola%20Muebler%C3%ADa%20Express!" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
   </div>
 

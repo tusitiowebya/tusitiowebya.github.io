@@ -38,7 +38,8 @@
     const img = $('.gondola__img img');
     img.src = `img/p/${p.id}.jpg`; img.alt = p.n;
     $('.gondola__img').dataset.ficha = p.id;
-    $('.gondola__add').dataset.add = p.id;
+    $('.gondola__add').href = ME.linkProducto(p);
+    $('.gondola__add').setAttribute('aria-label', 'Consultar ' + p.n + ' por WhatsApp');
     $('[data-g-rubro]').textContent = ME.RUBROS[p.c];
     $('[data-g-name]').textContent = p.n;
     $('[data-g-precio]').innerHTML = c ? `${ME.fmt(c.v)}<small>por día</small>` : 'Consultar';
@@ -115,13 +116,9 @@
   const selProd = $('[data-alm-prod]'), rango = $('[data-alm-extra]'), cal = $('[data-cal]');
   let almPlan = 250, almAnim;
   function opcionesAlm() {
-    const actual = selProd.value;
-    const ped = ME.count() ? `<option value="__pedido">Mi pedido (${ME.count()} art.)</option>` : '';
-    selProd.innerHTML = ALM.map(p => `<option value="${p.id}">${esc(p.n)}</option>`).join('') + ped;
-    if ([...selProd.options].some(o => o.value === actual)) selProd.value = actual;
+    selProd.innerHTML = ALM.map(p => `<option value="${p.id}">${esc(p.n)}</option>`).join('');
   }
   function cuotaAlm() {
-    if (selProd.value === '__pedido') return { v: ME.resumen(almPlan).dia, d: almPlan };
     const p = ME.porId[selProd.value]; const c = p && ME.cuota(p, almPlan);
     return c ? { v: c.v, d: c.d } : { v: 0, d: almPlan };
   }
@@ -194,19 +191,13 @@
         <ul class="kit__items">${lis}</ul>
         <div class="kit__foot">
           <div class="kit__total"><small>Kit en ${ME.plan} días</small><b>${ME.fmt(tot)}/día${cons ? '*' : ''}</b></div>
-          <button class="btn btn--grad" type="button" data-kit="${i}">Sumar kit</button>
+          <a class="btn btn--wa" href="${ME.waLink(`Hola Mueblería Express! Me interesa el kit para ${k.t.toLowerCase()}: ${k.items.map(p => p.n).join(', ')} (plan de ${ME.plan} días). ¿Me pasan info?`)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar kit</a>
         </div>
       </article>`;
     }).join('');
     U.reveal(kitsEl);
     $$('.kit', kitsEl).forEach(el => el.classList.add('in'));
   }
-  kitsEl.addEventListener('click', e => {
-    const b = e.target.closest('[data-kit]'); if (!b) return;
-    const k = KITS[+b.dataset.kit];
-    k.items.forEach(p => ME.add(p.id));
-    U.toast(`Kit ${k.t} sumado al ticket (${k.items.length} productos)`);
-  });
   renderKits();
   // los kits entran con reveal la primera vez
   $$('.kit', kitsEl).forEach(el => el.classList.remove('in')); U.reveal(kitsEl);
