@@ -173,6 +173,10 @@
       <h2 class="h2">Hacemos<br>realidad<br><span class="lime">tus ideas.</span></h2>
       <p class="lead">Desde el primer boceto hasta la prenda terminada. Trabajamos cada pedido a medida: colores, escudos, logos, nombres, números y talles.</p>
       <p class="hand hacemos__note">diseño sin cargo<br>+ promos vigentes <svg><use href="#crown"/></svg></p>
+      <button class="flyer" type="button" data-zoom="img/flyer-identidad.jpg" aria-label="Ver la placa de servicios de DPSTUDIO en grande">
+        <img src="img/flyer-identidad-sm.jpg" alt="Placa de DPSTUDIO: Diseñamos tu identidad, vestimos tu pasión. Diseño gráfico, indumentaria deportiva y urbana, sublimación total y parcial, estampados DTF y 100% personalizado. Pedí tu presupuesto sin compromiso: 11 3078-4813, @dpstudio.10." width="720" height="720" loading="lazy">
+        <span class="flyer__hint hand">tocá para verla</span>
+      </button>
     </div>
 
     <div class="line" id="tags">
@@ -375,6 +379,11 @@
     <p class="foot__credit">© DPSTUDIO · Caballito, CABA · Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
   </div>
 </footer>
+
+<dialog class="zoom" id="zoom" aria-label="Imagen ampliada">
+  <button class="zoom__close" type="button" aria-label="Cerrar">×</button>
+  <img alt="" id="zoomImg">
+</dialog>
 
 <script src="script.js"></script>
 </body>

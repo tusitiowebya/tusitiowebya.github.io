@@ -201,6 +201,16 @@
     hero.addEventListener('pointerleave', () => { wall.style.setProperty('--rx', '0deg'); wall.style.setProperty('--ry', '0deg'); });
   }
 
+  /* ---------- zoom (flyer) ---------- */
+  const zoom = document.getElementById('zoom');
+  const zoomImg = document.getElementById('zoomImg');
+  document.querySelectorAll('[data-zoom]').forEach(b => b.addEventListener('click', () => {
+    zoomImg.src = b.dataset.zoom;
+    zoomImg.alt = b.querySelector('img').alt;
+    if (zoom.showModal) zoom.showModal(); else window.open(b.dataset.zoom, '_blank');
+  }));
+  zoom.addEventListener('click', e => { if (e.target === zoom || e.target.classList.contains('zoom__close')) zoom.close(); });
+
   /* ---------- parallax on photos ---------- */
   const parEls = [...document.querySelectorAll('[data-par]')];
   let parRaf = 0;

@@ -135,8 +135,18 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* ---------- qué hacemos ---------- */
 .hacemos{padding:clamp(90px,11vw,160px) 0}
-.hacemos__grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(40px,6vw,90px);align-items:start}
-.hacemos__head{position:sticky;top:120px}
+.hacemos__grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(40px,6vw,90px);align-items:center}
+.hacemos__head{position:relative}
+.flyer{position:relative;display:block;width:min(100%,430px);margin:44px 0 0 6px;padding:0;background:none;border:0;cursor:zoom-in;transform:rotate(-2.5deg);transition:transform .35s var(--ease)}
+.flyer img{width:100%;aspect-ratio:1;object-fit:cover;border:7px solid #ECECE4;box-shadow:0 34px 60px -26px rgba(0,0,0,.95)}
+.flyer::before{content:"";position:absolute;top:-15px;left:50%;width:110px;height:32px;margin-left:-55px;background:rgba(232,232,220,.85);transform:rotate(3deg);z-index:2;clip-path:polygon(3% 8%,12% 0,24% 7%,37% 1%,50% 8%,63% 0,76% 7%,88% 1%,97% 9%,100% 92%,88% 100%,75% 93%,62% 100%,50% 93%,37% 100%,24% 94%,12% 100%,0 91%)}
+.flyer:hover{transform:rotate(-1deg) scale(1.02)}
+.flyer:focus-visible{outline:3px solid var(--lime);outline-offset:6px}
+.flyer__hint{position:absolute;right:-8px;bottom:-26px;background:var(--lime);color:var(--ink);font-size:15px;padding:4px 10px;transform:rotate(-4deg);box-shadow:3px 3px 0 var(--ink)}
+.zoom{padding:0;border:0;background:transparent;max-width:min(94vw,94vh);max-height:94vh;overflow:visible}
+.zoom::backdrop{background:rgba(5,5,5,.9)}
+.zoom img{display:block;width:100%;height:auto;max-height:94vh;object-fit:contain}
+.zoom__close{position:absolute;top:-14px;right:-14px;width:46px;height:46px;border-radius:50%;border:0;background:var(--lime);color:var(--ink);font-size:30px;line-height:1;box-shadow:3px 3px 0 var(--bone)}
 .hacemos__head .lead{margin-top:6px}
 .hacemos__note{display:inline-block;color:var(--lime);font-size:23px;line-height:1.25;margin:34px 0 0;transform:rotate(-4deg)}
 .hacemos__note svg{width:40px;height:34px;color:var(--bone);vertical-align:-6px;margin-left:6px}
