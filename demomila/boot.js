@@ -1,0 +1,1 @@
+(function(){var h=document.documentElement,q=location.search;h.classList.add('js');if(/[?&]qa\b/.test(q))h.classList.add('qa');if(/[?&]lite\b/.test(q)||(matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]full\b/.test(q)))h.classList.add('lite');})();
