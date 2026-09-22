@@ -156,6 +156,42 @@
         "demoperfumesgg"
       ],
       "port": 8810
+    },
+    {
+      "name": "demomydhogar",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8812",
+        "--directory",
+        "demomydhogar"
+      ],
+      "port": 8812
+    },
+    {
+      "name": "demomuebleriaexpress",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8816",
+        "--directory",
+        "demomuebleriaexpress"
+      ],
+      "port": 8816
+    },
+    {
+      "name": "democertain",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8821",
+        "--directory",
+        "democertain"
+      ],
+      "port": 8821
     }
   ]
 }
