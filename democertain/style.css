@@ -173,7 +173,7 @@ h1 em{font-style:italic;font-weight:400;color:var(--red)}
   opacity:.82;
 }
 .stamp::before{content:"";position:absolute;inset:5px;border:1px dashed currentColor;border-radius:50%}
-.stamp--card{position:absolute;right:-26px;top:-26px;width:86px;height:86px;background:rgba(247,243,236,.9);transform:rotate(-14deg)}
+.stamp--card{position:absolute;right:-34px;top:-44px;width:86px;height:86px;background:rgba(247,243,236,.9);transform:rotate(-14deg)}
 .stamp--book{
   position:absolute;right:30px;bottom:30px;width:104px;height:104px;z-index:3;
   transform:rotate(-12deg) scale(.6);background:rgba(255,253,248,.72);
