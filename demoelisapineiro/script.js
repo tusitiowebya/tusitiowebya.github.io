@@ -9,7 +9,7 @@
      WA: número de WhatsApp con código de país, sin + ni espacios.
      REDES: links reales de cada red (dejar '' para ocultar).
      --------------------------------------------------------- */
-  var WA = '5491100000000';            // TODO: número real de Elisa
+  var WA = '5491126419821';
   var REDES = {
     facebook: '',                      // TODO
     youtube: '',                       // TODO
