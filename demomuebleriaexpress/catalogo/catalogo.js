@@ -4,22 +4,24 @@
   const ME = window.ME, U = window.MEUI;
   const { $, $$, esc } = U;
   const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  const ORDEN = ['frio', 'mostradores', 'gastro', 'combos', 'carteleria', 'hogar', 'electro', 'tecno', 'herramientas'];
 
-  const url = new URLSearchParams(location.search);
-  const st = {
-    r: ORDEN.includes(url.get('r')) ? url.get('r') : 'todos',
-    q: url.get('q') || '',
-    o: ['rel', 'asc', 'desc', 'az'].includes(url.get('o')) ? url.get('o') : 'rel'
-  };
-
-  /* Nav mobile */
+  /* Nav mobile (no depende del catálogo) */
   const nav = $('.nav'), burger = $('.burger');
   burger.addEventListener('click', () => {
     const o = nav.classList.toggle('is-open');
     burger.setAttribute('aria-expanded', String(o));
     document.documentElement.classList.toggle('no-scroll', o);
   });
+
+  /* El catálogo llega de CobrOS (o del respaldo local) */
+  ME.ready.then(function () {
+  const ORDEN = ME.ORDEN;
+  const url = new URLSearchParams(location.search);
+  const st = {
+    r: ORDEN.includes(url.get('r')) ? url.get('r') : 'todos',
+    q: url.get('q') || '',
+    o: ['rel', 'asc', 'desc', 'az'].includes(url.get('o')) ? url.get('o') : 'rel'
+  };
 
   const count = r => r === 'todos' ? ME.productos.length : ME.productos.filter(p => p.c === r).length;
   const nombre = r => r === 'todos' ? 'Todos los productos' : ME.RUBROS[r];
@@ -64,4 +66,5 @@
 
   ME.on(() => render());
   render();
+  });
 })();

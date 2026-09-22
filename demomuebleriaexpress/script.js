@@ -25,18 +25,21 @@
   if (document.documentElement.classList.contains('lite')) video.remove();
   else { video.src = video.dataset.src; const pl = video.play(); if (pl) pl.catch(() => {}); }
 
+  /* El catálogo llega de CobrOS (o del respaldo local): todo lo que sigue espera a ME.ready. */
+  ME.ready.then(function () {
+
   /* ---------- Góndola: productos reales rotando ---------- */
   const HERO = ['Exhibidora Briket M3000', 'Balanza digital Systel', 'Horno pizzero 12 moldes',
     'Tribuna caramelera con cigarrera 1,50', 'Heladera mostrador 1,70', 'Cortadora de fiambres Bianchi']
     .map(find).filter(Boolean);
-  HERO.forEach(p => { const i = new Image(); i.src = `img/p/${p.id}.jpg`; });
+  HERO.forEach(p => { const i = new Image(); i.src = ME.img(p); });
   const gCard = $('.gondola__card'), gDots = $('.gondola__dots');
   let gi = 0, gT;
   gDots.innerHTML = HERO.map(p => `<button type="button" aria-label="${esc(p.n)}"></button>`).join('');
   function paintHero() {
     const p = HERO[gi], c = ME.cuota(p);
     const img = $('.gondola__img img');
-    img.src = `img/p/${p.id}.jpg`; img.alt = p.n;
+    img.src = ME.img(p); img.alt = p.n;
     $('.gondola__img').dataset.ficha = p.id;
     $('.gondola__add').href = ME.linkProducto(p);
     $('.gondola__add').setAttribute('aria-label', 'Consultar ' + p.n + ' por WhatsApp');
@@ -63,9 +66,9 @@
 
   /* ---------- Tienda destacada ---------- */
   const DESTACADOS = ['Exhibidora Briket M5000', 'Heladera mostrador 2 m', 'Balanza digital Kretz Aura', 'Tribuna caramelera 1,50',
-    'Freezer Briket FR4500', 'Horno convector Morelli', 'Combo comercial 4', 'Cartel luminoso horizontal',
-    'Sommier 2 plazas', 'Smart TV Enova 43', 'Aire acondicionado split Hisense', 'Mesa París'].map(find).filter(Boolean);
-  const ORDEN_RUBROS = ['frio', 'mostradores', 'gastro', 'combos', 'carteleria', 'hogar', 'electro', 'tecno', 'herramientas'];
+    'Freezer Briket FR4500', 'Horno convector Morelli', 'Combo Comercial 2', 'Cartel luminoso horizontal',
+    'Sommier 2 plazas', 'Smart TV Enova 43', 'Aire acondicionado split Hisense', 'Termotanque eléctrico Señorial Zafiro'].map(find).filter(Boolean);
+  const ORDEN_RUBROS = ME.ORDEN;
   let rubro = 'todos', query = '';
   const chips = $('[data-chips]'), grid = $('[data-grid]'), more = $('[data-more]');
   const cuenta = r => ME.productos.filter(p => p.c === r).length;
@@ -175,7 +178,7 @@
     { t: 'Verdulería', txt: 'Cajones a la vista, canastos que aguantan peso y balanza a batería.', ids: ['Mueble verdulero', 'Exhibidor de alambre 12', 'Balanza digital Kretz Novel'] },
     { t: 'Panadería', txt: 'Horno de convección, amasadora y panera para exhibir.', ids: ['Horno convector Morelli', 'Amasadora 20 kg', 'Panera 2 divisiones'] },
     { t: 'Rotisería y pizzería', txt: 'Horno pizzero, freidora a gas y cocina con plancha.', ids: ['Horno pizzero 12 moldes', 'Freidora a gas 18', 'Cocina 4 hornallas con plancha'] },
-    { t: 'Carnicería y fiambrería', txt: 'Sierra, cortadora de fiambres y envasadora al vacío.', ids: ['Sierra carnicera', 'Cortadora de fiambres Bianchi', 'Envasadora al vacío'] }
+    { t: 'Carnicería y fiambrería', txt: 'Sierra, cortadora de fiambres y envasadora al vacío.', ids: ['Sierra carnicera', 'Cortadora de fiambres Bianchi', 'Termoselladora'] }
   ].map(k => ({ ...k, items: k.ids.map(find).filter(Boolean) }));
   const kitsEl = $('[data-kits]');
   function renderKits() {
@@ -183,7 +186,7 @@
       let tot = 0, cons = false;
       const lis = k.items.map(p => {
         const c = ME.cuota(p); if (c) tot += c.v; if (!c || !c.exacto) cons = true;
-        return `<li><button type="button" data-ficha="${p.id}"><img src="img/p/${p.id}.jpg" alt="" loading="lazy" width="52" height="52"><span>${esc(p.n)}${c && !c.exacto ? ` <small>(plan ${c.d} días)</small>` : ''}</span><em>${c ? ME.fmt(c.v) : 'Consultar'}</em></button></li>`;
+        return `<li><button type="button" data-ficha="${p.id}"><img src="${ME.img(p)}" alt="" loading="lazy" width="52" height="52"><span>${esc(p.n)}${c && !c.exacto ? ` <small>(plan ${c.d} días)</small>` : ''}</span><em>${c ? ME.fmt(c.v) : 'Consultar'}</em></button></li>`;
       }).join('');
       return `<article class="kit rv ${i % 3 ? 'rv-d' + (i % 3) : ''}">
         <div class="kit__head"><h3>${k.t}</h3></div>
@@ -219,6 +222,7 @@
   lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
   $$('[data-pr]').forEach(b => b.addEventListener('click', () => promos.scrollBy({ left: +b.dataset.pr * promos.clientWidth * .8, behavior: 'smooth' })));
 
-  /* ---------- Reacciones a plan / carrito ---------- */
+  /* ---------- Reacciones a plan ---------- */
   ME.on(() => { paintHero(); renderTienda(); opcionesAlm(); renderAlm(false); renderKits(); });
+  });
 })();

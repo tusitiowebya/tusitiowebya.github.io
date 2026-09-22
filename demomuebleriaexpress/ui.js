@@ -17,7 +17,7 @@
   function card(p) {
     return `<article class="card" data-id="${p.id}">
       <button class="card__img" type="button" data-ficha="${p.id}" aria-label="Ver ${esc(p.n)}">
-        <img src="${B}img/p/${p.id}.jpg" alt="${esc(p.n)}" loading="lazy" width="560" height="560">
+        <img src="${ME.img(p)}" alt="${esc(p.n)}" loading="lazy" width="560" height="560">
       </button>
       <div class="card__body">
         <small class="card__rubro">${ME.RUBROS[p.c]}</small>
@@ -47,14 +47,14 @@
           : `<tr class="is-na"><td>${d} días</td><td>no disponible</td></tr>`).join('')
       }</tbody></table>`;
     $('[data-ficha-body]', ficha).innerHTML = `
-      <figure class="ficha__flyer"><img src="${B}img/f/${p.id}.jpg" alt="Flyer de ${esc(p.n)}" width="760" height="760"></figure>
+      <figure class="ficha__flyer"><img src="${ME.flyer(p)}" alt="Flyer de ${esc(p.n)}" width="760" height="760"></figure>
       <div class="ficha__info">
         <small class="card__rubro">${ME.RUBROS[p.c]}</small>
         <h2>${esc(p.n)}</h2>
         <p class="ficha__spec">${esc(p.s)}</p>
         ${filas}
         <a class="btn btn--wa btn--block" href="${ME.linkProducto(p)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar o pedir por WhatsApp</a>
-        <p class="nota">Tocá un plan para elegirlo: el mensaje sale con ese plan. Precios de septiembre 2026, se confirman por WhatsApp.</p>
+        <p class="nota">Tocá un plan para elegirlo: el mensaje sale con ese plan. Precios y stock se confirman por WhatsApp.</p>
       </div>`;
   }
   function openFicha(id) {
