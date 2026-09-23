@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catálogo EGAM · Frutos secos y vinos por menor y mayor</title>
+  <meta name="description" content="Catálogo completo de EGAM: frutos secos, deshidratados, semillas, vinos mendocinos y cajas regalo. Armá tu pedido por menor o por mayor y mandalo por WhatsApp.">
+  <meta name="keywords" content="catálogo frutos secos, frutos secos por mayor, almendras por kilo, nueces por mayor, vinos mendocinos, cajas regalo, EGAM">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3E0C18">
+  <link rel="canonical" href="https://egam.tupaginaya.com.ar/catalogo/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EGAM Frutos Secos & Vinos">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Catálogo EGAM · Menor y mayor">
+  <meta property="og:description" content="Frutos secos, deshidratados y vinos mendocinos. Armá tu pedido y mandalo por WhatsApp.">
+  <meta property="og:url" content="https://egam.tupaginaya.com.ar/catalogo/">
+  <meta property="og:image" content="https://tusitiowebya.github.io/demoegam/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tusitiowebya.github.io/demoegam/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=IM+Fell+English:ital@0;1&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="page-cat">
+
+<header class="nav solid" id="nav">
+  <a class="brand" href="../" aria-label="EGAM, inicio">
+    <img src="../img/egam-crest-sm.webp" alt="" width="46" height="46">
+    <span class="brand-w"><b>E.G.A.M</b><i>Frutos secos &amp; vinos</i></span>
+  </a>
+  <nav class="nav-links" aria-label="Secciones">
+    <a href="../">Inicio</a>
+    <a href="../#caja">Armá tu caja</a>
+    <a href="../#mayoristas">Mayoristas</a>
+    <a href="../#contacto">Contacto</a>
+  </nav>
+  <div class="nav-act">
+    <button class="cart-btn" data-open-cart aria-label="Ver tu pedido">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-n">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="cat-hero">
+    <div class="wrap cat-hero-g">
+      <div>
+        <p class="lot lot-light">Catálogo completo</p>
+        <h1>Todo lo que tenemos,<br><i>por menor y por mayor.</i></h1>
+        <p class="cat-hero-p">Elegí cómo comprás, sumá productos al pedido y mandalo por WhatsApp. Te respondemos con precio, stock y envío.</p>
+      </div>
+      <div class="cat-stubs" role="group" aria-label="Tipo de compra">
+        <button class="stub" data-setmode="menor" aria-pressed="true">
+          <span class="stub-k">Talón I</span><b>Por menor</b><small>250 g · 500 g · 1 kg · botella</small>
+        </button>
+        <button class="stub stub-oro" data-setmode="mayor" aria-pressed="false">
+          <span class="stub-k">Talón II</span><b>Por mayor</b><small>5 kg · 10 kg · bolsa cerrada · cajas</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-body">
+    <div class="wrap">
+      <div class="cat-bar" id="catBar">
+        <label class="cat-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <span class="sr">Buscar</span>
+          <input type="search" id="catQ" placeholder="Buscar: almendras, malbec, chía…" autocomplete="off">
+        </label>
+        <label class="cat-sort"><span class="sr">Ordenar</span>
+          <select id="catO">
+            <option value="">Destacados</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
+        </label>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Categorías" id="catTabs"></div>
+      <p class="cat-count" id="catCount" aria-live="polite"></p>
+      <div class="pgrid" id="catGrid"></div>
+      <div class="cat-empty" id="catEmpty" hidden>
+        <p>No encontramos “<b id="catEmptyQ"></b>”.</p>
+        <a class="btn btn-wa" id="catEmptyWa" target="_blank" rel="noopener" href="#">Preguntanos si lo tenemos</a>
+      </div>
+
+      <aside class="cat-mayor-note" id="catMayorNote">
+        <b>¿Comprás por mayor?</b> Las presentaciones mayoristas y los mínimos se confirman por WhatsApp según stock. Si tenés un negocio, contanos el rubro y te pasamos lista de precios por volumen.
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-g">
+    <img class="foot-seal" src="../img/egam-sello-sm.webp" alt="Sello de EGAM Frutos Secos & Vinos" width="450" height="450" loading="lazy">
+    <div class="foot-b">
+      <p class="foot-t">E.G.A.M · Frutos secos &amp; vinos</p>
+      <p>Mendoza, Argentina · Mayorista y minorista · Envíos a todo el país</p>
+      <p><a href="https://wa.me/5492622528672">Exequiel 2622 52-8672</a> · <a href="https://wa.me/5492622577848">Alexis 2622 57-7848</a></p>
+      <p class="foot-legal">Beber con moderación. Prohibida la venta de bebidas alcohólicas a menores de 18 años.</p>
+      <p class="foot-legal">Productos, fotos y descripciones de referencia para la demo. Precios a consultar.</p>
+      <p class="foot-by">Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="cat-fab" data-open-cart aria-label="Ver tu pedido">
+  <span>Ver mi pedido</span><b class="cart-n">0</b>
+</button>
+
+<script src="../products.js"></script>
+<script src="../shop.js"></script>
+<script src="catalogo.js"></script>
+</body>
+</html>
