@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Emblema de Organización Premium">
+  <defs>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ef2639"/><stop offset=".52" stop-color="#a70d1a"/><stop offset="1" stop-color="#4e0911"/></linearGradient>
+  </defs>
+  <path d="M76 10C43 10 19 29 19 51c0 22 24 40 57 40C52 84 37 70 37 51c0-19 15-34 39-41Z" fill="url(#r)"/>
+  <circle cx="59" cy="50" r="8" fill="url(#r)"/>
+  <path d="M69 50h23" stroke="url(#r)" stroke-width="3" stroke-linecap="round"/>
+</svg>
