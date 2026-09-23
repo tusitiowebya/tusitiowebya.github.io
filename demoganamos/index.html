@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ganamos 365 · Pedí tu usuario por WhatsApp</title>
+<meta name="description" content="Creá tu usuario de Ganamos 365 en minutos. Escribinos por WhatsApp y te lo damos al instante. Atención 24 hs.">
+<meta name="theme-color" content="#1a0b2e">
+<meta property="og:title" content="Ganamos 365 · Pedí tu usuario por WhatsApp">
+<meta property="og:description" content="Tu usuario en 2 minutos. Atención 24 hs, pagos inmediatos.">
+<meta property="og:image" content="https://tusitiowebya.github.io/demoganamos/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ganamos.tupaginaya.com.ar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tusitiowebya.github.io/demoganamos/og-image.jpg">
+<link rel="canonical" href="https://ganamos.tupaginaya.com.ar">
+<link rel="icon" type="image/webp" href="img/ganamos_dog.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1a0b2e; --bg2:#240f40; --card:#2a1250; --card2:#3a1a66;
+    --violet:#7b2cff; --violet2:#a855f7; --gold:#f5b820;
+    --text:#fff; --muted:#c9b8ea; --wa:#25d366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{background:var(--bg);color:var(--text);font-family:Roboto,system-ui,sans-serif;min-height:100vh;padding-bottom:96px;overflow-x:hidden;
+    background-image:radial-gradient(ellipse 90% 35% at 50% 18%,#3b1470 0%,transparent 70%)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:720px;margin:0 auto;padding:0 12px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:30;background:#1c0b33;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:10px;height:64px}
+  .burger{width:28px;display:grid;gap:5px;cursor:pointer;flex:none}
+  .burger span{height:3px;border-radius:3px;background:#d9ccf3}
+  .logo img{height:clamp(36px,10vw,48px);width:auto}
+  .btn-in{font-family:Roboto,sans-serif;font-weight:700;font-size:clamp(14px,4vw,17px);padding:13px 16px;border-radius:999px;flex:none;
+    background:linear-gradient(135deg,#9b4dff,#6a1fd6);box-shadow:0 0 16px rgba(123,44,255,.5)}
+
+  /* Carousel */
+  .car{margin:16px 0 22px;position:relative}
+  .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:16px}
+  .track::-webkit-scrollbar{display:none}
+  .track a{flex:0 0 100%;scroll-snap-align:center}
+  .track img{width:100%;aspect-ratio:19/5;object-fit:cover;border-radius:16px}
+  .dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+  .dots i{width:6px;height:6px;border-radius:6px;background:#5b3b8c;transition:.25s}
+  .dots i.on{width:18px;background:var(--gold)}
+
+  /* Big cards */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .big{position:relative;display:block;padding-top:14px}
+  .big .frame{border-radius:20px;border:2px solid #8b4dff;background:linear-gradient(180deg,#2a1152,#241046);box-shadow:inset 0 0 26px rgba(168,85,247,.25);
+    height:clamp(120px,34vw,170px);display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px}
+  .big img{position:absolute;left:50%;top:0;transform:translateX(-50%);width:88%;pointer-events:none}
+  .big b{position:relative;font-weight:500;font-size:clamp(14px,4.4vw,19px)}
+  .big:active{transform:scale(.97)}
+  .small{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .sm{background:var(--card);border-radius:16px;padding:14px 6px;text-align:center;display:grid;gap:8px;justify-items:center}
+  .sm img{width:28px;height:28px}
+  .sm span{font-size:clamp(13px,3.9vw,16px);font-weight:500}
+  .sm.wa{background:linear-gradient(160deg,#1f8a4c,#136b39)}
+
+  /* Slots */
+  .sec{display:flex;justify-content:space-between;align-items:center;margin:30px 0 16px}
+  .sec h2{font-weight:700;font-size:clamp(19px,5.6vw,26px);position:relative;padding-bottom:12px}
+  .sec h2::after{content:"";position:absolute;left:0;bottom:0;width:140px;max-width:45%;height:4px;border-radius:4px;background:var(--gold)}
+  .sec a{background:var(--card2);padding:10px 14px;border-radius:12px;font-weight:500;flex:none}
+  .slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .thumb{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:450/345;background:#2a1250}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .thumb img.heart{position:absolute;right:6px;bottom:6px;width:28px;height:28px}
+  .slot p{margin-top:6px;font-size:clamp(12.5px,3.7vw,15px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  /* CTA block */
+  .how{margin:34px 0 10px;position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border-radius:22px;padding:70px 18px 22px;border:1px solid rgba(168,85,247,.35)}
+  .how .dog{position:absolute;left:50%;top:-54px;transform:translateX(-50%);width:120px;filter:drop-shadow(0 0 18px rgba(168,85,247,.7))}
+  .how h3{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(20px,5.8vw,26px);text-align:center}
+  .how h3 em{font-style:normal;color:var(--gold)}
+  .steps{list-style:none;display:grid;gap:14px;margin:20px 0 22px}
+  .steps li{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:15px;line-height:1.35}
+  .steps li b{color:#fff}
+  .steps .n{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--violet2),var(--violet))}
+  .btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px 14px;border-radius:16px;background:var(--wa);color:#07301a;
+    font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(14px,4.3vw,18px);animation:pulse 2.2s infinite}
+  .btn-wa svg{width:26px;height:26px;flex:none}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}60%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
+  .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;text-align:center;font-size:12.5px;color:var(--muted)}
+  .perks b{display:block;color:#fff;font-size:15px;margin-bottom:2px}
+
+  footer{text-align:center;color:#8f7fb0;font-size:12px;padding:26px 0 18px;line-height:1.6}
+  footer .age{display:inline-grid;place-items:center;width:34px;height:34px;border:2px solid #8f7fb0;border-radius:50%;font-weight:700;margin-bottom:8px}
+
+  /* Bottom nav */
+  nav.bottom{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#2a0f4f;border-top:1px solid rgba(168,85,247,.25);padding-bottom:env(safe-area-inset-bottom)}
+  .bn{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);height:76px;align-items:end;padding-bottom:10px}
+  .bn a{display:grid;justify-items:center;gap:6px;font-size:clamp(11px,3.3vw,13px);font-weight:700;text-align:center;line-height:1.1}
+  .bn a img{width:26px;height:26px}
+  .bn .home{position:relative}
+  .bn .home img{position:absolute;top:-78px;left:50%;transform:translateX(-50%);width:84px;height:84px;filter:drop-shadow(0 0 12px rgba(168,85,247,.8))}
+  .bn .home span{margin-top:32px}
+
+  /* Floating WA */
+  .fab{position:fixed;right:14px;bottom:96px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.45)}
+  .fab svg{width:32px;height:32px}
+
+  /* Drawer */
+  .drawer{position:fixed;inset:0;z-index:60;display:none}
+  .drawer.open{display:block}
+  .drawer .ov{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+  .drawer .pn{position:absolute;left:0;top:0;bottom:0;width:78%;max-width:320px;background:var(--bg2);padding:20px 14px;display:grid;align-content:start;gap:4px}
+  .drawer .pn img.lg{width:180px;margin:0 0 14px 8px}
+  .drawer .pn a{padding:13px 12px;border-radius:12px;font-weight:500;display:flex;gap:12px;align-items:center}
+  .drawer .pn a img{width:22px;height:22px}
+  @media (min-width:600px){.slots{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <div class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></div>
+    <a class="logo" data-wa="usuario"><img src="img/logos_ganamos.webp" alt="Ganamos 365" width="500" height="113"></a>
+    <a class="btn-in" data-wa="usuario">INGRESAR</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="car">
+    <div class="track" id="track">
+      <a data-wa="usuario"><img src="img/banner_03.webp" alt="Juegos Slots - Diversión 24 horas"></a>
+      <a data-wa="usuario"><img src="img/banner_02.webp" alt="Pagos inmediatos" loading="lazy"></a>
+      <a data-wa="Tragamonedas"><img src="img/banner_01.webp" alt="Super Slots" loading="lazy"></a>
+      <a data-wa="Casino"><img src="img/banner_04.webp" alt="Casino" loading="lazy"></a>
+      <a data-wa="Casino en vivo"><img src="img/banner_06.webp" alt="Casino en vivo 365 días" loading="lazy"></a>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <div class="grid2">
+    <a class="big" data-wa="Black Jack"><img src="img/blackjack.webp" alt=""><div class="frame"><b>Black Jack</b></div></a>
+    <a class="big" data-wa="Carrera Universal"><img src="img/horses.webp" alt=""><div class="frame"><b>Carrera Universal</b></div></a>
+  </div>
+  <div class="small">
+    <a class="sm" data-wa="Deportes"><img src="img/ic_sports.png" alt=""><span>Deporte</span></a>
+    <a class="sm" data-wa="Casino"><img src="img/ic_casino.png" alt=""><span>Casino</span></a>
+    <a class="sm wa" data-wa="usuario"><svg width="28" height="28" viewBox="0 0 32 32"><use href="#wa-ic" fill="#fff"/></svg><span>Mi usuario</span></a>
+  </div>
+
+  <div id="secs"></div>
+
+  <section class="how">
+    <img class="dog" src="img/ganamos_dog.webp" alt="">
+    <h3>Tu usuario en <em>2 minutos</em></h3>
+    <ol class="steps">
+      <li><span class="n">1</span><span><b>Tocá el botón</b> y se abre nuestro WhatsApp.</span></li>
+      <li><span class="n">2</span><span><b>Mandanos el mensaje</b> y te creamos el usuario al instante.</span></li>
+      <li><span class="n">3</span><span><b>Cargá y empezá a jugar.</b> Pagos inmediatos, atención 24 hs.</span></li>
+    </ol>
+    <a class="btn-wa" data-wa="usuario"><svg viewBox="0 0 32 32"><use href="#wa-ic" fill="#07301a"/></svg>PEDIR MI USUARIO POR WHATSAPP</a>
+    <div class="perks"><div><b>24/7</b>Atención</div><div><b>⚡</b>Pagos inmediatos</div><div><b>🔒</b>Seguro</div></div>
+  </section>
+
+  <footer>
+    <div class="age">+18</div><br>
+    Solo para mayores de 18 años. Jugá con responsabilidad.<br>
+    El juego compulsivo es perjudicial para la salud.
+  </footer>
+</main>
+
+<a class="fab" data-wa="usuario" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><use href="#wa-ic" fill="#fff"/></svg></a>
+
+<nav class="bottom">
+  <div class="bn">
+    <a data-wa="Deportes"><img src="img/ganamos_deporte.png" alt="">Deportes</a>
+    <a data-wa="Apuestas en vivo"><img src="img/ganamos_envivo.png" alt="">Apuestas En Vivo</a>
+    <a class="home" data-wa="usuario"><img src="img/ganamos_dog.webp" alt=""><span>Inicio</span></a>
+    <a data-wa="Casino"><img src="img/ganamos_casino.png" alt="">Casino</a>
+    <a data-wa="Casino en vivo"><img src="img/ganamos_casinolive.png" alt="">Casino En Vivo</a>
+  </div>
+</nav>
+
+<div class="drawer" id="drawer">
+  <div class="ov" id="ov"></div>
+  <div class="pn">
+    <img class="lg" src="img/logos_ganamos.webp" alt="Ganamos 365">
+    <a data-wa="usuario"><svg width="22" height="22" viewBox="0 0 32 32"><use href="#wa-ic" fill="#25d366"/></svg>Pedir usuario</a>
+    <a data-wa="Deportes"><img src="img/ganamos_deporte.png" alt="">Deportes</a>
+    <a data-wa="Apuestas en vivo"><img src="img/ganamos_envivo.png" alt="">Apuestas en vivo</a>
+    <a data-wa="Casino"><img src="img/ganamos_casino.png" alt="">Casino</a>
+    <a data-wa="Casino en vivo"><img src="img/ganamos_casinolive.png" alt="">Casino en vivo</a>
+    <a data-wa="Hípicas"><img src="img/ganamos_hipicas.png" alt="">Hípicas</a>
+    <a data-wa="Crash"><img src="img/ganamos_crash.png" alt="">Crash</a>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="wa-ic" viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></symbol></svg>
+
+<script>
+  /* ===== CONFIG: editá esto ===== */
+  const WHATSAPP = "5491125192096";           // número sin +, sin espacios
+  const MSG_USUARIO = "Hola! Quiero crear mi usuario en Ganamos 🎰";
+  /* ============================== */
+
+  const SECCIONES = [
+    ["Tragamonedas Destacados", [
+      ["5 Candy Eggs","s_candy"],["Hot Spin Fiesta","s_hotspin"],["20 Joker Reels","s_20joker"],
+      ["Super Crazy Red x1000","s_supercrazy"],["Crazy Chilli Party","s_chilli"],["Jokers Jewels","s_jokersjewels"]]],
+    ["Tragamonedas del Joker", [["Jokers Jewels","s_jokersjewels"],["Jokers Jewels Dice","s_jjdice"],["20 Joker Reels","s_20joker"]]],
+    ["Tragamonedas Clásicas", [
+      ["Diamond Explosion 7s","s_diamond"],["Vegas No Limit Wins","s_vegas"],["Immortal Ways Cleopatra","s_cleopatra"],
+      ["Wolf Haven","s_wolf"],["African Cats","s_cats"],["Hot Spin Fiesta","s_hotspin"]]],
+  ];
+  document.getElementById("secs").innerHTML = SECCIONES.map(([t, games]) =>
+    `<div class="sec"><h2>${t}</h2><a data-wa="Tragamonedas">Todos</a></div>
+     <div class="slots">${games.map(([n,f]) =>
+       `<a class="slot" data-wa="${n}"><div class="thumb"><img src="img/${f}.webp" alt="${n}" loading="lazy"><img class="heart" src="img/corazon.png" alt=""></div><p>${n}</p></a>`
+     ).join("")}</div>`
+  ).join("");
+
+  const waLink = key => {
+    const txt = key === "usuario" ? MSG_USUARIO : `Hola! Quiero crear mi usuario en Ganamos para jugar ${key} 🎰`;
+    return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
+  };
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = waLink(a.dataset.wa);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  // Carrusel
+  const track = document.getElementById("track"), dots = document.getElementById("dots");
+  const n = track.children.length;
+  dots.innerHTML = "<i></i>".repeat(n);
+  const setDot = i => [...dots.children].forEach((d,k) => d.classList.toggle("on", k === i));
+  let idx = 0; setDot(0);
+  track.addEventListener("scroll", () => { idx = Math.round(track.scrollLeft / track.clientWidth); setDot(idx); }, {passive:true});
+  setInterval(() => { idx = (idx + 1) % n; track.scrollTo({left: idx * track.clientWidth, behavior: "smooth"}); }, 4000);
+
+  const dr = document.getElementById("drawer");
+  document.getElementById("burger").onclick = () => dr.classList.add("open");
+  document.getElementById("ov").onclick = () => dr.classList.remove("open");
+</script>
+</body>
+</html>
