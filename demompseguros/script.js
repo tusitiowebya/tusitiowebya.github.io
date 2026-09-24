@@ -3,9 +3,10 @@
   'use strict';
 
   var WA = '5491154959207';
+  var WA_ALT = '5491152299827';
   var qs = function (s, c) { return (c || document).querySelector(s); };
   var qsa = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
-  var waLink = function (msg) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg); };
+  var waLink = function (msg, number) { return 'https://wa.me/' + (number || WA) + '?text=' + encodeURIComponent(msg); };
 
   if (/[?&]qa\b/.test(location.search)) document.documentElement.classList.add('qa');
 
@@ -124,6 +125,7 @@
   var stepYear = qs('#stepYear');
   var ficha = qs('#ficha');
   var send = qs('#quoteSend');
+  var sendAlt = qs('#quoteSendAlt');
   var nameIn = qs('#qName');
   var zoneIn = qs('#qZone');
   var touched = false;
@@ -215,8 +217,10 @@
     if (zoneIn.value.trim()) lines.push('• Localidad: ' + zoneIn.value.trim());
     if (type === 'hogar') lines.push('Les paso la dirección aproximada por acá.');
     else if (type === 'bici') lines.push('Les mando una foto de la bici y la factura si la tengo.');
-    else lines.push('Les mando foto de la cédula (frente y dorso).');
-    send.href = waLink(lines.join('\n'));
+    else lines.push('Les mando foto de la cédula verde (frente y dorso).');
+    var message = lines.join('\n');
+    send.href = waLink(message);
+    sendAlt.href = waLink(message, WA_ALT);
     qbarSend.href = send.href;
     qs('#qbarTitle').textContent = cfg.label + (cfg.year ? ' · ' + year : '') + ' · ' + useTxt;
     qs('#qbarSub').textContent = covs.length ? covs.join(', ') : 'Coberturas a definir con el asesor';
@@ -256,6 +260,10 @@
       var target = qs('#cotizar');
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+
+  qsa('[data-product]').forEach(function (a) {
+    a.href = waLink('Hola MP Seguros! Quiero consultar por ' + a.dataset.product + '.');
   });
 
   /* ---------- Ya soy cliente: chat de muestra + WhatsApp ---------- */
