@@ -23,7 +23,8 @@
   <meta name="twitter:title" content="Organización Premium · Gestoría en Florencio Varela">
   <meta name="twitter:description" content="Trámites automotores e inmobiliarios, escrituraciones y seguros. Reservá online o consultá por WhatsApp.">
   <meta name="twitter:image" content="https://tusitiowebya.github.io/demoorganizacionpremium/og-image.jpg">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -37,7 +38,7 @@
     "description": "Gestoría automotor e inmobiliaria, trámites vinculados a escrituraciones y seguros generales en Florencio Varela.",
     "url": "https://organizacionpremium.tupaginaya.com.ar/",
     "image": "https://tusitiowebya.github.io/demoorganizacionpremium/og-image.jpg",
-    "logo": "https://tusitiowebya.github.io/demoorganizacionpremium/brand-mark.svg",
+    "logo": "https://tusitiowebya.github.io/demoorganizacionpremium/assets/logo.png",
     "telephone": "+54 9 11 5229-9827",
     "address": {"@type": "PostalAddress", "streetAddress": "Presidente Illia 357", "addressLocality": "Florencio Varela", "addressRegion": "Buenos Aires", "addressCountry": "AR"},
     "areaServed": {"@type": "Place", "name": "Florencio Varela, Buenos Aires"},
@@ -59,8 +60,7 @@
   <a class="skip" href="#contenido">Ir al contenido</a>
   <header class="site-header" id="header">
     <a class="brand" href="#inicio" aria-label="Organización Premium, inicio">
-      <img src="brand-mark.svg" width="52" height="52" alt="">
-      <span class="brand-name"><strong>Organización</strong><strong>Premium</strong><small>GESTORÍA · SEGUROS</small></span>
+      <img class="brand-logo" src="assets/logo.webp" width="585" height="289" alt="Organización Premium Gestoría">
     </a>
     <nav class="nav" id="nav" aria-label="Navegación principal">
       <a href="#tramites">Trámites</a>
@@ -77,7 +77,7 @@
       <div class="hero-copy">
         <p class="hero-kicker"><span class="red-rule"></span> FLORENCIO VARELA · BUENOS AIRES</p>
         <h1 id="hero-title">Tus trámites,<br><em>en orden.</em></h1>
-        <p class="hero-lead">Gestoría automotor e inmobiliaria, escrituraciones y seguros en un solo lugar. Contanos qué necesitás y te ayudamos a dar el próximo paso.</p>
+        <p class="hero-lead"><strong>Experiencia y respaldo en cada gestión.</strong> Expertos en trámites del automotor, operaciones inmobiliarias y escrituraciones. Asesoramiento integral para dar el próximo paso con tranquilidad.</p>
         <div class="hero-actions">
           <a class="button button-red" href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Reservar turno online <span aria-hidden="true">↗</span></a>
           <a class="button button-outline" href="https://wa.me/5491152299827?text=Hola%20Organizaci%C3%B3n%20Premium%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
@@ -96,18 +96,18 @@
     </section>
 
     <section class="route-section section-shell" id="tramites" aria-labelledby="route-title">
-      <div class="section-heading"><p class="eyebrow">EL PRIMER PASO</p><h2 id="route-title">Encontrá el camino para <em>tu trámite.</em></h2><p>Elegí el tema de tu consulta. Te mostramos las gestiones que Organización Premium comunica y te dejamos el mensaje listo para escribirles.</p></div>
+      <div class="section-heading"><p class="eyebrow">EL PRIMER PASO</p><h2 id="route-title">¿Por dónde <em>arrancamos?</em></h2><p>Elegí el tipo de gestión que necesitás y dejanos tu mensaje para empezar a resolverlo ahora.</p></div>
       <div class="route-layout">
         <div class="route-tabs" role="tablist" aria-label="Tipo de trámite">
-          <button class="route-tab active" id="tab-auto" type="button" role="tab" aria-selected="true" aria-controls="panel-route" data-area="auto"><span class="route-num">01</span><span><strong>Automotor</strong><small>Transferencias, informes y patentes</small></span><span aria-hidden="true">↗</span></button>
-          <button class="route-tab" id="tab-inmuebles" type="button" role="tab" aria-selected="false" aria-controls="panel-route" data-area="inmuebles"><span class="route-num">02</span><span><strong>Inmuebles</strong><small>Boletos, contratos y escrituras</small></span><span aria-hidden="true">↗</span></button>
+          <button class="route-tab active" id="tab-auto" type="button" role="tab" aria-selected="true" aria-controls="panel-route" data-area="auto"><span class="route-num">01</span><span><strong>Automotor</strong><small>Transferencias, informes, patentes y multas</small></span><span aria-hidden="true">↗</span></button>
+          <button class="route-tab" id="tab-inmuebles" type="button" role="tab" aria-selected="false" aria-controls="panel-route" data-area="inmuebles"><span class="route-num">02</span><span><strong>Inmuebles</strong><small>Operaciones, informes y escrituras</small></span><span aria-hidden="true">↗</span></button>
           <button class="route-tab" id="tab-seguros" type="button" role="tab" aria-selected="false" aria-controls="panel-route" data-area="seguros"><span class="route-num">03</span><span><strong>Seguros</strong><small>Consultas personales y patrimoniales</small></span><span aria-hidden="true">↗</span></button>
         </div>
         <div class="route-panel" id="panel-route" role="tabpanel" aria-labelledby="tab-auto" tabindex="0">
           <div class="panel-top"><span id="panelIndex">EXPEDIENTE 01</span><span>ORGANIZACIÓN PREMIUM</span></div>
-          <h3 id="panelTitle">Gestoría automotor</h3>
-          <p id="panelDesc">Para avanzar con los papeles de tu vehículo, empezá por contarnos qué necesitás resolver.</p>
-          <ul id="panelList" class="panel-list"><li>Transferencias</li><li>Informes de dominio e inhibiciones</li><li>Patentes: altas, bajas y consultas</li><li>Denuncias de venta, robo o extravío</li><li>Asesoramiento personalizado</li></ul>
+          <h3 id="panelTitle">Gestión automotor sin vueltas.</h3>
+          <p id="panelDesc">Para avanzar con los papeles de tu vehículo y resolver cualquier trámite en el acto, empezá por contarnos qué necesitás:</p>
+          <ul id="panelList" class="panel-list panel-list-detail"><li><strong>Transferencias y Operaciones</strong><span>Transferencias, búsqueda de titulares y localización de personas.</span></li><li><strong>Informes y Estado Legal</strong><span>Informes de dominio, inhibiciones y estado financiero.</span></li><li><strong>Patentes y Multas</strong><span>Altas, bajas y consultas de patentes, planes de pago y descargo de multas.</span></li><li><strong>Seguridad y Denuncias</strong><span>Denuncias de venta, robo o extravío, y bajas por robo.</span></li><li><strong>Certificaciones</strong><span>Certificaciones de firma en el acto y asesoramiento personalizado.</span></li></ul>
           <div class="panel-actions"><a class="button button-red" id="panelWhatsApp" href="https://wa.me/5491152299827?text=Hola%20Organizaci%C3%B3n%20Premium%2C%20necesito%20consultar%20por%20un%20tr%C3%A1mite%20automotor." target="_blank" rel="noopener noreferrer">Consultar este trámite <span aria-hidden="true">↗</span></a><a class="text-link" href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">O reservá un turno online <span aria-hidden="true">↗</span></a></div>
           <div class="panel-stamp" aria-hidden="true">OP<span>+</span></div>
         </div>
@@ -118,7 +118,7 @@
     <section class="booking-section" id="turnos" aria-labelledby="booking-title">
       <div class="booking-wrap section-shell">
         <div class="booking-copy"><p class="eyebrow light">AGENDA ONLINE VINCULADA</p><h2 id="booking-title">Elegí el momento.<br><em>Nos vemos en la oficina.</em></h2><p>Reservá directamente en la agenda de Organización Premium de TurnOS. Vas a poder elegir el horario disponible y completar tus datos en la plataforma.</p><a class="button button-white" href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Abrir agenda y reservar <span aria-hidden="true">↗</span></a><small>La reserva se confirma en TurnOS. Si tu trámite necesita orientación previa, escribinos.</small></div>
-        <div class="availability-card" aria-live="polite"><div class="availability-top"><span class="calendar-icon" aria-hidden="true">▦</span><div><strong>Próximos horarios</strong><small>Organización Premium · TurnOS</small></div><span class="live-dot" id="liveDot" aria-hidden="true"></span></div><div class="availability-body" id="availabilityBody"><p class="availability-status">Consultando la agenda…</p></div><div class="availability-foot"><span id="connectionStatus">Conectando con TurnOS</span><span aria-hidden="true">↗</span></div></div>
+        <div class="availability-card" aria-live="polite"><div class="availability-top"><span class="calendar-icon" aria-hidden="true">▦</span><div><strong>Próximos horarios</strong><small>Mariana · atención presencial</small></div><span class="live-dot" id="liveDot" aria-hidden="true"></span></div><div class="availability-body" id="availabilityBody"><p class="availability-status">Consultando la agenda…</p></div><div class="availability-foot"><span id="connectionStatus">Conectando con TurnOS</span><span aria-hidden="true">↗</span></div></div>
       </div>
     </section>
 
@@ -135,10 +135,10 @@
       <button class="material" type="button" data-image="assets/instagram.webp" data-alt="Flyer del Instagram de Organización Premium"><img src="assets/instagram.webp" alt="Flyer del Instagram de Organización Premium" loading="lazy" width="1024" height="1536"><span>SEGUINOS</span></button>
     </div></div></section>
 
-    <section class="contact-section section-shell" id="contacto" aria-labelledby="contact-title"><div class="contact-mark" aria-hidden="true"><img src="brand-mark.svg" alt=""></div><div class="contact-copy"><p class="eyebrow">HABLEMOS DE TU CASO</p><h2 id="contact-title">¿Qué trámite tenés <em>en mente?</em></h2><p>Si ya sabés qué necesitás, reservá tu turno. Si todavía tenés dudas, mandanos un mensaje y contanos tu situación.</p><div class="contact-actions"><a class="button button-red" href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Reservar turno online <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://wa.me/5491152299827?text=Hola%20Organizaci%C3%B3n%20Premium%2C%20quiero%20consultar%20por%20un%20tr%C3%A1mite." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a></div></div></section>
+    <section class="contact-section section-shell" id="contacto" aria-labelledby="contact-title"><div class="contact-mark" aria-hidden="true"><img src="assets/emblema.png" alt="" width="240" height="240" loading="lazy"></div><div class="contact-copy"><p class="eyebrow">HABLEMOS DE TU CASO</p><h2 id="contact-title">¿Qué trámite tenés <em>en mente?</em></h2><p>Si ya sabés qué necesitás, reservá tu turno. Si todavía tenés dudas, mandanos un mensaje y contanos tu situación.</p><div class="contact-actions"><a class="button button-red" href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Reservar turno online <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://wa.me/5491152299827?text=Hola%20Organizaci%C3%B3n%20Premium%2C%20quiero%20consultar%20por%20un%20tr%C3%A1mite." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a></div></div></section>
   </main>
 
-  <footer class="footer"><div class="section-shell footer-inner"><div><a class="brand brand-footer" href="#inicio"><img src="brand-mark.svg" width="52" height="52" alt=""><span class="brand-name"><strong>Organización</strong><strong>Premium</strong><small>GESTORÍA · SEGUROS</small></span></a><p>Presidente Illia 357, Florencio Varela</p></div><div class="footer-links"><a href="https://wa.me/5491152299827" target="_blank" rel="noopener noreferrer">WhatsApp · 11 5229-9827</a><a href="https://www.instagram.com/organizacionpremium/" target="_blank" rel="noopener noreferrer">Instagram · @organizacionpremium</a><a href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Reservar turno online</a></div><div class="footer-credit"><small>Video de firma ilustrativo. Fotografías y piezas gráficas provistas por Organización Premium.</small><small>Diseñado por <a href="https://tupaginaya.com.ar/" target="_blank" rel="noopener noreferrer">TuPaginaYa</a></small></div></div></footer>
+  <footer class="footer"><div class="section-shell footer-inner"><div><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="assets/logo-light.webp" width="585" height="289" alt="Organización Premium Gestoría"></a><p>Presidente Illia 357, Florencio Varela</p></div><div class="footer-links"><a href="https://wa.me/5491152299827" target="_blank" rel="noopener noreferrer">WhatsApp · 11 5229-9827</a><a href="https://www.instagram.com/organizacionpremium/" target="_blank" rel="noopener noreferrer">Instagram · @organizacionpremium</a><a href="https://turnos.tusventas.com.ar/n/organizacion-premium" target="_blank" rel="noopener noreferrer">Reservar turno online</a></div><div class="footer-credit"><small>Video de firma ilustrativo. Fotografías y piezas gráficas provistas por Organización Premium.</small><small>Diseñado por <a href="https://tupaginaya.com.ar/" target="_blank" rel="noopener noreferrer">TuPaginaYa</a></small></div></div></footer>
   <a class="floating-wa" href="https://wa.me/5491152299827?text=Hola%20Organizaci%C3%B3n%20Premium%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3 23.6L.9 31l7.6-2A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.5 1.2 1.2-4.3-.3-.5A12.5 12.5 0 1 1 16 28.4Zm6.9-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2s-1 1.2-1.2 1.4c-.2.2-.4.3-.8.1-2.2-1.1-3.7-2-5.2-4.5-.4-.6.4-.5 1.1-1.9.1-.2.1-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.6-.5-.5-.8-.5h-.7c-.3 0-.7.1-1 .5-.3.4-1.3 1.2-1.3 3.1s1.3 3.7 1.5 4c.2.2 2.6 4 6.3 5.6 3.8 1.6 3.8 1.1 4.5 1 .7-.1 2.2-1 2.5-2 .3-1 .3-1.8.2-2-.1-.1-.4-.2-.7-.4Z"/></svg></a>
 
   <dialog class="lightbox" id="lightbox"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar imagen">×</button><img id="lightboxImage" src="" alt=""></dialog>

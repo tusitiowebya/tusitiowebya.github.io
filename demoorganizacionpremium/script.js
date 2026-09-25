@@ -1,20 +1,32 @@
 const BOOKING_URL = 'https://turnos.tusventas.com.ar/n/organizacion-premium';
 const API_URL = 'https://turnos.tusventas.com.ar/api/proxy/turnos-publico/organizacion-premium';
 const WHATSAPP = '5491152299827';
+// La agenda de la web muestra solo los turnos presenciales con Mariana
+const PROFESIONAL_ID = '6ab54806b0bd5059c93f4900';
 
 const areas = {
   auto: {
     index: 'EXPEDIENTE 01',
-    title: 'Gestoría automotor',
-    description: 'Para avanzar con los papeles de tu vehículo, empezá por contarnos qué necesitás resolver.',
-    items: ['Transferencias', 'Informes de dominio e inhibiciones', 'Patentes: altas, bajas y consultas', 'Denuncias de venta, robo o extravío', 'Asesoramiento personalizado'],
+    title: 'Gestión automotor sin vueltas.',
+    description: 'Para avanzar con los papeles de tu vehículo y resolver cualquier trámite en el acto, empezá por contarnos qué necesitás:',
+    items: [
+      ['Transferencias y Operaciones', 'Transferencias, búsqueda de titulares y localización de personas.'],
+      ['Informes y Estado Legal', 'Informes de dominio, inhibiciones y estado financiero.'],
+      ['Patentes y Multas', 'Altas, bajas y consultas de patentes, planes de pago y descargo de multas.'],
+      ['Seguridad y Denuncias', 'Denuncias de venta, robo o extravío, y bajas por robo.'],
+      ['Certificaciones', 'Certificaciones de firma en el acto y asesoramiento personalizado.']
+    ],
     message: 'Hola Organización Premium, necesito consultar por un trámite automotor.'
   },
   inmuebles: {
     index: 'EXPEDIENTE 02',
-    title: 'Gestoría inmobiliaria',
-    description: 'Si estás por comprar, vender, alquilar o regularizar documentación, contanos en qué etapa estás.',
-    items: ['Cesión de derechos y acciones posesorias', 'Boletos de compraventa', 'Informes de dominio', 'Contratos de alquiler', 'Escrituraciones'],
+    title: 'Gestión inmobiliaria y escrituraciones con respaldo total.',
+    description: 'Si estás por comprar, vender, alquilar o regularizar documentación, contanos en qué etapa estás y te acompañamos paso a paso:',
+    items: [
+      ['Operaciones y Contratos', 'Boletos de compraventa, contratos de alquiler y cesión de derechos y acciones posesorias.'],
+      ['Estudio y Seguridad', 'Informes de dominio e informes legales.'],
+      ['Escrituraciones', 'Asesoramiento y gestión integral para concretar tu escritura con tranquilidad.']
+    ],
     message: 'Hola Organización Premium, necesito consultar por un trámite inmobiliario.'
   },
   seguros: {
@@ -47,9 +59,18 @@ function selectArea(key) {
   panelIndex.textContent = data.index;
   panelTitle.textContent = data.title;
   panelDesc.textContent = data.description;
+  panelList.classList.toggle('panel-list-detail', Array.isArray(data.items[0]));
   panelList.replaceChildren(...data.items.map(item => {
     const li = document.createElement('li');
-    li.textContent = item;
+    if (Array.isArray(item)) {
+      const title = document.createElement('strong');
+      const text = document.createElement('span');
+      title.textContent = item[0];
+      text.textContent = item[1];
+      li.append(title, text);
+    } else {
+      li.textContent = item;
+    }
     return li;
   }));
   panelWhatsApp.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(data.message)}`;
@@ -123,7 +144,7 @@ function slotRow(slot) {
   const time = document.createElement('span');
   const instant = new Date(slot.inicio);
   day.textContent = new Intl.DateTimeFormat('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', weekday: 'long', day: 'numeric', month: 'long' }).format(instant);
-  who.textContent = slot.profesionalNombre ? `Con ${slot.profesionalNombre}` : 'Horario disponible';
+  who.textContent = 'Con Mariana · presencial';
   time.className = 'slot-time';
   time.textContent = new Intl.DateTimeFormat('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', hour: '2-digit', minute: '2-digit', hour12: false }).format(instant);
   info.append(day, who);
@@ -152,6 +173,7 @@ async function loadAvailability() {
     if (!good.length) throw new Error('Disponibilidad no disponible');
     const seen = new Set();
     const slots = good.flatMap(result => result.value.slots).filter(slot => {
+      if (slot.profesionalId !== PROFESIONAL_ID) return false;
       if (!slot.inicio || new Date(slot.inicio).getTime() < Date.now()) return false;
       const key = slot.inicio;
       if (seen.has(key)) return false;
