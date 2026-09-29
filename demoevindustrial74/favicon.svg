@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#18272b"/>
+  <path d="M7 8H57M7 56H57" stroke="#d3a84f" stroke-width="2"/>
+  <text x="8" y="44" fill="#d3a84f" font-family="Arial,sans-serif" font-weight="900" font-size="38" letter-spacing="-6">EV</text>
+  <path d="M51 21 43 46" stroke="#f3f0e8" stroke-width="3"/>
+</svg>
