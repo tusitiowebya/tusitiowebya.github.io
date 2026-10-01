@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tienda Sofiteens | Productos capilares y skin care online</title>
+  <meta name="description" content="Tienda online de Sofiteens: productos capilares y de skin care con precio y stock. Filtrá por pelo o piel, sumá al carrito y enviá tu pedido por WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#D7193F">
+  <link rel="canonical" href="https://sofiteens.tupaginaya.com.ar/tienda/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Sofiteens">
+  <meta property="og:title" content="Tienda Sofiteens | Productos capilares y skin care online">
+  <meta property="og:description" content="Productos capilares y de skin care con precio y stock. Filtrá por pelo o piel, sumá al carrito y enviá tu pedido por WhatsApp.">
+  <meta property="og:url" content="https://sofiteens.tupaginaya.com.ar/tienda/">
+  <meta property="og:image" content="https://tusitiowebya.github.io/demosofiteens/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tienda Sofiteens | Productos capilares y skin care online">
+  <meta name="twitter:description" content="Productos capilares y de skin care con precio y stock. Sumá al carrito y enviá tu pedido.">
+  <meta name="twitter:image" content="https://tusitiowebya.github.io/demosofiteens/og-image.jpg">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=Bagel+Fat+One&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tienda.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Tienda Sofiteens",
+    "url": "https://sofiteens.tupaginaya.com.ar/tienda/",
+    "description": "Productos capilares y de skin care de Sofiteens.",
+    "isPartOf": { "@id": "https://sofiteens.tupaginaya.com.ar/#negocio" }
+  }
+  </script>
+</head>
+<body data-page="tienda">
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="../" aria-label="Sofiteens, inicio">
+      <span class="brand__word" data-text="sofiteens">sofiteens</span>
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Principal">
+      <a href="../">Inicio</a>
+      <a href="../#rutina">Armá tu rutina</a>
+      <a href="./" aria-current="page">Tienda</a>
+      <a class="nav__wa" data-wa="Hola Sofiteens! Quiero hacer una consulta." href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-menu>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="shop-hero">
+      <p class="hand">pelo, piel o las dos ↓</p>
+      <h1>La tienda<br><span>Sofiteens</span></h1>
+      <p>Productos capilares y de skin care. Filtrá, sumá al carrito y mandá tu pedido: Sofiteens te confirma stock y entrega por WhatsApp.</p>
+    </section>
+
+    <section class="shop" aria-label="Productos">
+      <div class="shop__tools">
+        <label class="shop__search">
+          <span>Buscar</span>
+          <input type="search" placeholder="Shampoo, sérum, crema…" autocomplete="off" data-search>
+        </label>
+        <label class="shop__sort">
+          <span>Ordenar</span>
+          <select data-sort>
+            <option value="name">Nombre A–Z</option>
+            <option value="price-up">Menor precio</option>
+            <option value="price-down">Mayor precio</option>
+          </select>
+        </label>
+      </div>
+      <div class="shop__filters" data-filters aria-label="Filtrar por línea"></div>
+      <p class="shop__count" data-count></p>
+      <div class="shop__status" data-status role="status">Cargando productos…</div>
+      <div class="shop__grid" data-products></div>
+    </section>
+
+    <section class="shop-help">
+      <h2>¿No sabés qué elegir?</h2>
+      <p>Armá tu rutina en un minuto y mandala por WhatsApp.</p>
+      <a class="btn btn--cream" href="../#rutina">Armar mi rutina</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__brand">
+      <span class="brand__word brand__word--light" data-text="sofiteens">sofiteens</span>
+      <p>Productos capilares y skin care.</p>
+    </div>
+    <div class="foot__links">
+      <a href="../">Inicio</a>
+      <a href="../#rutina">Armá tu rutina</a>
+      <a data-wa="Hola Sofiteens! Quiero hacer una consulta." href="#" target="_blank" rel="noopener">WhatsApp 11 5528-1243</a>
+    </div>
+    <p class="foot__tpy">Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
+  </footer>
+
+  <button class="cart-btn" type="button" data-open-cart>Mi carrito <span data-cart-count>0</span></button>
+  <div class="cart-backdrop" data-cart-backdrop hidden></div>
+  <aside class="cart" data-cart-drawer role="dialog" aria-modal="true" aria-label="Mi carrito" hidden>
+    <div class="cart__top">
+      <strong>Mi carrito</strong>
+      <button class="cart__close" type="button" data-close-cart aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart__lines" data-cart-lines></div>
+    <div class="cart__bottom">
+      <div class="cart__total"><span>Total</span><strong data-cart-total>$ 0</strong></div>
+      <form class="cart__form" data-order-form>
+        <label>Tu nombre<input name="nombre" required autocomplete="name" placeholder="Nombre y apellido"></label>
+        <label>Tu WhatsApp<input name="telefono" type="tel" required autocomplete="tel" placeholder="Ej: 11 1234-5678"></label>
+        <label>Correo <small>(opcional)</small><input name="email" type="email" autocomplete="email" placeholder="tu@email.com"></label>
+        <label>Algo más <small>(opcional)</small><textarea name="nota" rows="2" maxlength="500" placeholder="Tono, tamaño u otra indicación"></textarea></label>
+        <p class="cart__status" data-order-status role="status"></p>
+        <button class="btn btn--cherry btn--block" type="submit" disabled>Enviar pedido</button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="../config.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

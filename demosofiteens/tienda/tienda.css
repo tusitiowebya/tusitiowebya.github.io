@@ -1,0 +1,105 @@
+/* Tienda Sofiteens — complementa ../style.css */
+.shop-hero { padding: 40px 16px 28px; max-width: 1180px; margin: 0 auto; display: grid; gap: 12px; }
+.shop-hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.8rem, 12vw, 6rem); line-height: .92; }
+.shop-hero h1 span { color: var(--cherry); text-shadow: 0 4px 0 var(--cherry-d); }
+.shop-hero > p:last-child { max-width: 52ch; color: var(--plum-2); font-size: 1.05rem; }
+
+.shop { padding: 0 16px 64px; max-width: 1180px; margin: 0 auto; }
+.shop__tools { display: grid; gap: 12px; margin-bottom: 14px; }
+.shop__tools label { display: grid; gap: 6px; font-weight: 800; font-size: .85rem; }
+.shop__tools input, .shop__tools select {
+  min-height: 48px; padding: 0 14px;
+  font: inherit; font-weight: 500; color: var(--plum);
+  border: 2px solid var(--plum); border-radius: 14px; background: #fff;
+}
+.shop__filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.shop__filters button {
+  min-height: 42px; padding: 0 18px; border-radius: 999px;
+  border: 2px solid var(--plum); background: var(--paper); font-weight: 800;
+}
+.shop__filters button[aria-pressed="true"] { background: var(--plum); color: var(--butter); }
+.shop__count { font-family: var(--hand); font-size: 1.2rem; color: var(--cherry-d); min-height: 1.4em; }
+.shop__status {
+  display: grid; justify-items: start; gap: 12px;
+  background: var(--paper); border: 2px dashed var(--plum); border-radius: 22px;
+  padding: 26px 20px;
+}
+.shop__status[hidden] { display: none; }
+.shop__status strong { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.05; }
+.shop__status p { color: var(--plum-2); max-width: 56ch; }
+.shop__status .btn { min-height: 46px; }
+.shop__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px; margin-top: 8px; }
+
+.product {
+  display: grid; grid-template-rows: auto 1fr;
+  background: var(--paper); border: 2px solid var(--plum); border-radius: 22px; overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+.product:hover { transform: translateY(-3px); box-shadow: 6px 8px 0 var(--mint); }
+.product__img { aspect-ratio: 1; display: grid; place-items: center; background: var(--blush); }
+.product__img--skin-care { background: var(--mint); }
+.product__img img { width: 100%; height: 100%; object-fit: cover; }
+.product__img span { font-family: var(--display); font-size: 2.4rem; color: #fff; text-shadow: 0 3px 0 var(--plum); }
+.product__body { padding: 14px 14px 16px; display: grid; gap: 6px; align-content: start; }
+.product__cat { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.product__body h2 { font-family: var(--sans); font-weight: 800; font-size: 1.1rem; line-height: 1.2; }
+.product__body p { font-size: .9rem; color: var(--plum-2); }
+.product__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.product__foot strong { font-size: 1.15rem; }
+.product__add {
+  min-height: 42px; padding: 0 16px; border-radius: 999px;
+  border: 2px solid var(--plum); background: var(--cherry); color: #fff;
+  font-weight: 800; text-decoration: none; display: inline-flex; align-items: center;
+}
+a.product__add { background: var(--paper); color: var(--plum); }
+
+.shop-help {
+  margin: 0 16px 72px; padding: 36px 20px;
+  background: var(--plum); color: var(--butter);
+  border-radius: 28px; text-align: center;
+  display: grid; justify-items: center; gap: 12px;
+}
+.shop-help h2 { color: var(--mint); }
+
+.cart-btn {
+  position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60;
+  min-height: 52px; padding: 0 18px;
+  border-radius: 999px; border: 2px solid var(--plum);
+  background: var(--butter); font-weight: 800;
+  box-shadow: 0 4px 0 var(--plum);
+}
+.cart-btn span { display: inline-grid; place-items: center; min-width: 26px; height: 26px; margin-left: 6px; border-radius: 13px; background: var(--cherry); color: #fff; font-size: .85rem; }
+.cart-backdrop { position: fixed; inset: 0; z-index: 80; background: rgba(43,18,48,.5); }
+.cart-backdrop[hidden], .cart[hidden] { display: none; }
+.cart {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 90;
+  width: min(100%, 420px);
+  background: var(--butter);
+  border-left: 2px solid var(--plum);
+  display: grid; grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+.cart__top { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 2px solid var(--plum); }
+.cart__top strong { font-family: var(--display); font-weight: 400; font-size: 1.5rem; }
+.cart__close { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--plum); background: var(--paper); font-size: 1.4rem; }
+.cart__lines { overflow-y: auto; padding: 12px 16px; display: grid; gap: 10px; align-content: start; }
+.cart__empty { font-family: var(--hand); font-size: 1.15rem; }
+.cart__line { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.cart__line small { grid-column: 1; color: var(--muted); }
+.cart__qty { grid-column: 2; grid-row: 1 / span 2; display: flex; align-items: center; gap: 6px; }
+.cart__qty button { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--plum); background: #fff; font-weight: 800; }
+.cart__bottom { padding: 14px 16px calc(16px + env(safe-area-inset-bottom)); border-top: 2px solid var(--plum); background: var(--paper); overflow-y: auto; max-height: 62vh; }
+.cart__total { display: flex; justify-content: space-between; font-size: 1.15rem; margin-bottom: 10px; }
+.cart__form { display: grid; gap: 10px; }
+.cart__form label { display: grid; gap: 4px; font-weight: 700; font-size: .88rem; }
+.cart__form input, .cart__form textarea { font: inherit; padding: 10px 12px; border: 2px solid var(--plum); border-radius: 12px; background: #fff; color: var(--plum); }
+.cart__form button[disabled] { opacity: .45; cursor: not-allowed; }
+.cart__status { font-size: .9rem; color: var(--cherry-d); }
+.cart__status a { font-weight: 800; color: var(--cherry-d); }
+body.cart-open { overflow: hidden; }
+
+@media (min-width: 768px) {
+  .shop-hero, .shop { padding-inline: 28px; }
+  .shop__tools { grid-template-columns: 1fr 220px; }
+  .shop-help { margin-inline: auto; max-width: 980px; }
+}
