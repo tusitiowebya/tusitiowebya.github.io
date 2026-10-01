@@ -26,25 +26,47 @@
       ],
       temas: ['Genograma', 'Proyecto-sentido', 'Entrevista', 'Conflictos programantes', 'Casos en vivo'],
       horas: '160 h',
-      meses: '7 meses'
+      meses: '7 meses',
+      pdf: 'programas/biodescodificacion.pdf'
     },
     {
       id: 'psi',
-      nombre: 'Psicoterapia Integrativa',
+      nombre: 'Diplomado en Psicoterapia Orgánica Integral',
       estado: 'Inscripción abierta',
       que: 'Entrevista, encuadre, escucha clínica y armado de un plan de trabajo por sesiones. La base sobre la que se apoyan todas las demás.',
       temas: ['Primera entrevista', 'Encuadre', 'Plan de sesiones'],
-      horas: '220 h',
-      meses: '9 meses'
+      horas: '120 h',
+      meses: '5 meses',
+      pdf: 'programas/psicoterapia-organica-integral.pdf'
     },
     {
-      id: 'leyes',
-      nombre: '5 Leyes Biológicas',
+      id: 'leyes-intensivo',
+      nombre: 'Curso Intensivo de 5 Leyes Biológicas',
       estado: 'Inscripción abierta',
-      que: 'El marco teórico completo: las cinco leyes, las fases, cómo se leen y —sobre todo— dónde están sus límites.',
-      temas: ['Las 5 leyes', 'Fases', 'Lectura y límites'],
-      horas: '90 h',
-      meses: '4 meses'
+      que: 'El marco teórico completo en formato intensivo: las cinco leyes, las fases y cómo se leen.',
+      temas: ['Las 5 leyes', 'Fases', 'Lectura de casos'],
+      horas: '48 h',
+      meses: '2 meses',
+      pdf: 'programas/intensivo-5-leyes-biologicas.pdf'
+    },
+    {
+      id: 'leyes-basico',
+      nombre: 'Curso Básico de 5 Leyes Biológicas',
+      estado: 'Inscripción abierta',
+      que: 'El marco teórico completo, con más tiempo de práctica y trabajo sobre casos que el intensivo.',
+      temas: ['Las 5 leyes', 'Fases', 'Práctica sobre casos'],
+      horas: '80 h',
+      meses: '3 meses'
+    },
+    {
+      id: 'leyes-avanzado',
+      nombre: 'Diplomado de Profundización Avanzado en 5 Leyes Biológicas',
+      estado: 'Inscripción abierta',
+      que: 'Profundización para quienes ya cursaron el nivel básico o intensivo: casos complejos, supervisión y criterio clínico avanzado.',
+      temas: ['Casos complejos', 'Supervisión', 'Criterio clínico avanzado'],
+      horas: '120 h',
+      meses: '5 meses',
+      pdf: 'programas/diplomado-avanzado-5-leyes-biologicas.pdf'
     },
     {
       id: 'mind',
@@ -57,9 +79,20 @@
       meses: '3 meses'
     },
     {
+      id: 'mind-psico',
+      nombre: 'Mindfulness en Psicoterapia',
+      estado: 'Próxima cohorte',
+      proxima: true,
+      que: 'Herramientas de mindfulness aplicadas al consultorio: regulación emocional, manejo de crisis y protocolos breves para incorporar en sesión.',
+      temas: ['Regulación emocional', 'Manejo de crisis', 'Protocolos breves en sesión'],
+      horas: '60 h',
+      meses: '3 meses'
+    },
+    {
       id: 'hip',
-      nombre: 'Hipnosis Ericksoniana',
-      estado: 'Inscripción abierta',
+      nombre: 'Hipnosis: Ericksoniana, clínica y de regresión',
+      estado: 'Próxima cohorte',
+      proxima: true,
       que: 'Inducciones, lenguaje hipnótico, trabajo con recursos internos y cierre seguro de la sesión.',
       temas: ['Inducciones', 'Lenguaje hipnótico', 'Sugestión', 'Cierre'],
       horas: '120 h',
@@ -76,84 +109,39 @@
     }
   ];
 
-  /* ---------------------------------------------------------
-     Datos: la matriz (6 temas × 6 enfoques)
-     --------------------------------------------------------- */
-  var ENFOQUES = [
-    { id: 'psi', sigla: 'Psico', nombre: 'Psicoterapia Integrativa' },
-    { id: 'bio', sigla: 'Bio', nombre: 'Biodescodificación' },
-    { id: 'leyes', sigla: '5 Leyes', nombre: '5 Leyes Biológicas' },
-    { id: 'mind', sigla: 'Mindful', nombre: 'Mindfulness' },
-    { id: 'hip', sigla: 'Hipnosis', nombre: 'Hipnosis Ericksoniana' },
-    { id: 'flo', sigla: 'Floral', nombre: 'Terapia Floral' }
-  ];
-
-  var TEMAS = [
+  // cursos cortos (info y fechas por WhatsApp)
+  var CORTOS = [
     {
-      nombre: 'Ansiedad y crisis',
-      celdas: {
-        psi: 'Contener la crisis, ordenar el relato y armar un plan de sesiones con objetivos que se puedan chequear.',
-        bio: 'Rastrear qué situación se vivió como amenaza y qué quedó sin resolver detrás de ese estado de alerta.',
-        leyes: 'Ubicar en qué fase está la persona —alerta sostenida o descarga posterior— y qué se observa en cada una.',
-        mind: 'Anclaje en respiración y cuerpo para bajar la activación antes de cualquier otra intervención.',
-        hip: 'Inducciones breves de calma y recursos internos que la persona después pueda repetir sola.',
-        flo: 'Fórmulas para la emergencia y para el miedo anticipatorio, con seguimiento semana a semana.'
-      }
+      nombre: 'Constelaciones esquizofrénicas desde la Nueva Medicina Germánica',
+      estado: 'Consultá fechas',
+      proxima: true,
+      que: 'Las constelaciones esquizofrénicas leídas desde el marco de la Nueva Medicina Germánica.',
+      meses: '3 meses',
+      modalidad: 'Online'
     },
     {
-      nombre: 'Duelo y pérdidas',
-      celdas: {
-        psi: 'Acompañar el proceso sin apurarlo: qué se perdió, qué sigue vivo y qué necesita ser dicho.',
-        bio: 'Leer el vínculo con lo perdido y los mandatos familiares que se activan alrededor de esa pérdida.',
-        leyes: 'Distinguir la etapa aguda de la etapa de recomposición y qué se espera en cada una.',
-        mind: 'Práctica de permanecer con lo que duele, sin evitarlo y sin quedarse a vivir ahí.',
-        hip: 'Trabajo con escenas de despedida y cierres simbólicos en estado de relajación profunda.',
-        flo: 'Esencias para la tristeza, la nostalgia y la dificultad para volver a arrancar.'
-      }
+      nombre: 'Constelaciones esquizofrénicas y Flores de Bach',
+      estado: 'Consultá fechas',
+      proxima: true,
+      que: 'Las constelaciones esquizofrénicas trabajadas junto con el sistema de Flores de Bach.',
+      meses: '3 meses',
+      modalidad: 'Online'
     },
     {
-      nombre: 'Vínculos y familia',
-      celdas: {
-        psi: 'Mapear roles, límites y repeticiones en la trama vincular que la persona tiene hoy.',
-        bio: 'Genograma y proyecto-sentido: qué lugar ocupa esta persona en la historia de su familia.',
-        leyes: 'Conflictos de territorio, de separación y de nido: cómo se plantean y qué observar.',
-        mind: 'Comunicación consciente: escuchar sin reaccionar, hablar sin acusar. Se practica en clase.',
-        hip: 'Reencuadre de escenas tempranas que siguen ordenando el vínculo del presente.',
-        flo: 'Esencias para la dependencia, el resentimiento y la sobreadaptación al otro.'
-      }
+      nombre: '5 Leyes Biológicas y Flores de Bach',
+      estado: 'Consultá fechas',
+      proxima: true,
+      que: 'El marco de las 5 Leyes Biológicas combinado con el sistema de Flores de Bach.',
+      meses: '3 meses',
+      modalidad: 'Online'
     },
     {
-      nombre: 'Hábitos y autoexigencia',
-      celdas: {
-        psi: 'Separar el hábito de la función que cumple, y trabajar sobre esa función.',
-        bio: 'Qué necesidad tapa la conducta que se repite, y desde cuándo está instalada.',
-        leyes: 'Ciclos de tensión y descarga aplicados a las conductas que vuelven una y otra vez.',
-        mind: 'Registrar el impulso antes del acto: la pausa como herramienta central de la práctica.',
-        hip: 'Sugestión post-hipnótica y ensayo mental de la conducta nueva, paso por paso.',
-        flo: 'Esencias para la rigidez, el perfeccionismo y la dificultad para poner límites propios.'
-      }
-    },
-    {
-      nombre: 'Síntoma físico recurrente',
-      celdas: {
-        psi: 'Escuchar el relato que rodea al síntoma, siempre en paralelo a la consulta médica, nunca en lugar de ella.',
-        bio: 'Explorar qué estaba pasando en la vida de la persona cuando ese síntoma apareció por primera vez.',
-        leyes: 'El marco completo de las cinco leyes, sus fases y una regla que no se negocia: acompañar, no prometer.',
-        mind: 'Relación con el malestar: exploración corporal y regulación de la respuesta al dolor.',
-        hip: 'Técnicas de acompañamiento del malestar como complemento del tratamiento médico indicado.',
-        flo: 'Esencias para el estado emocional que rodea al cuadro, siempre como complemento.'
-      }
-    },
-    {
-      nombre: 'Autoestima e identidad',
-      celdas: {
-        psi: 'Historia personal, imagen de sí y qué sostiene hoy esa mirada devaluada.',
-        bio: 'Lealtades y mandatos: de quién es, en realidad, esa voz que descalifica.',
-        leyes: 'Conflictos de desvalorización: cómo se plantean, cómo se leen y qué observar.',
-        mind: 'Autocompasión practicada, no declamada: ejercicios concretos para llevar a la sesión.',
-        hip: 'Recuperación de recursos propios y anclaje de una imagen de sí más firme.',
-        flo: 'Esencias para la inseguridad, la comparación permanente y la falta de confianza.'
-      }
+      nombre: '5 Leyes Biológicas y Fitoterapia',
+      estado: 'Curso grabado',
+      grabado: true,
+      que: 'Las 5 Leyes Biológicas junto con la fitoterapia, en formato grabado para ver a tu ritmo.',
+      meses: 'A tu ritmo',
+      modalidad: 'Grabado'
     }
   ];
 
@@ -234,121 +222,63 @@
   /* ---------------------------------------------------------
      Formaciones
      --------------------------------------------------------- */
-  var grid = $('#cursosGrid');
-  if (grid) {
-    grid.innerHTML = CURSOS.map(function (c) {
-      var msg = '¡Hola! Me interesa la formación de ' + c.nombre + '. ¿Cuándo arranca la próxima cohorte y cuál es el arancel?';
-      return '' +
-        '<article class="curso' + (c.destacado ? ' curso--destacado' : '') + ' rv">' +
-          '<span class="curso__estado' + (c.proxima ? ' curso__estado--proxima' : '') + '"><i></i>' + c.estado + '</span>' +
-          '<h3>' + c.nombre + '</h3>' +
-          '<p class="curso__que">' + c.que + '</p>' +
-          (c.extra ? '<ul class="curso__extra">' + c.extra.map(function (e) { return '<li>' + e + '</li>'; }).join('') + '</ul>' : '') +
-          '<ul class="curso__temas">' + c.temas.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' +
-          '<ul class="curso__meta">' +
-            '<li><span>Carga horaria</span><strong>' + c.horas + '</strong></li>' +
-            '<li><span>Duración</span><strong>' + c.meses + '</strong></li>' +
-            '<li><span>Modalidad</span><strong>Online en vivo</strong></li>' +
-          '</ul>' +
-          '<a class="curso__link" href="' + wa(msg) + '" target="_blank" rel="noopener">Consultar fechas y arancel →</a>' +
-        '</article>';
-    }).join('');
+  function tarjeta(c) {
+    var msg = c.grabado
+      ? '¡Hola! Me interesa el curso grabado de ' + c.nombre + '. ¿Cómo accedo y cuál es el arancel?'
+      : '¡Hola! Me interesa ' + (c.horas ? 'la formación' : 'el curso') + ' de ' + c.nombre + '. ¿Cuándo arranca la próxima cohorte y cuál es el arancel?';
+    return '' +
+      '<article class="curso' + (c.destacado ? ' curso--destacado' : '') + ' rv">' +
+        '<span class="curso__estado' + (c.proxima ? ' curso__estado--proxima' : '') + '"><i></i>' + c.estado + '</span>' +
+        '<h3>' + c.nombre + '</h3>' +
+        '<p class="curso__que">' + c.que + '</p>' +
+        (c.extra ? '<ul class="curso__extra">' + c.extra.map(function (e) { return '<li>' + e + '</li>'; }).join('') + '</ul>' : '') +
+        (c.temas ? '<ul class="curso__temas">' + c.temas.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : '') +
+        '<ul class="curso__meta">' +
+          (c.horas ? '<li><span>Carga horaria</span><strong>' + c.horas + '</strong></li>' : '') +
+          '<li><span>Duración</span><strong>' + c.meses + '</strong></li>' +
+          '<li><span>Modalidad</span><strong>' + (c.modalidad || 'Online en vivo') + '</strong></li>' +
+        '</ul>' +
+        (c.pdf ? '<a class="curso__pdf" href="' + c.pdf + '" target="_blank" rel="noopener">Ver programa (PDF)</a>' : '') +
+        '<a class="curso__link" href="' + wa(msg) + '" target="_blank" rel="noopener">' + (c.grabado ? 'Pedir acceso y arancel' : 'Consultar fechas y arancel') + ' →</a>' +
+      '</article>';
   }
+  var grid = $('#cursosGrid');
+  if (grid) grid.innerHTML = CURSOS.map(tarjeta).join('');
+  var cortos = $('#cortosGrid');
+  if (cortos) cortos.innerHTML = CORTOS.map(tarjeta).join('');
 
   /* ---------------------------------------------------------
-     LA MATRIZ (signature)
+     Clase gratuita — el iframe de Drive se carga recién al dar play
      --------------------------------------------------------- */
-  var mgrid = $('#mgrid');
-  var celdas = [];
-  var temasBtn = [];
-  var headBtn = [];
-  var selT = 0, selE = 1;
+  var cLista = $('#claseLista');
+  var cPantalla = $('#clasePantalla');
+  if (cLista && cPantalla) {
+    var cBtns = cLista.querySelectorAll('button');
+    var cActual = cBtns[0];
 
-  function pintar() {
-    temasBtn.forEach(function (b, r) { b.classList.toggle('is-on', r === selT); });
-    headBtn.forEach(function (h, c) { h.classList.toggle('is-on', c === selE); });
-    celdas.forEach(function (cell) {
-      var r = +cell.dataset.r, c = +cell.dataset.c;
-      cell.classList.toggle('is-on', r === selT && c === selE);
-      cell.classList.toggle('is-row', r === selT && c !== selE);
-      cell.classList.toggle('is-col', c === selE && r !== selT);
-      cell.setAttribute('aria-selected', (r === selT && c === selE) ? 'true' : 'false');
+    var cargar = function () {
+      cPantalla.innerHTML = '<iframe src="https://drive.google.com/file/d/' + cActual.dataset.id +
+        '/preview" title="Clase ' + cActual.dataset.n + ' — Introducción a las 5 Leyes Biológicas" ' +
+        'allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>';
+    };
+    var portada = function () {
+      cPantalla.innerHTML = '<button type="button" class="clase__play" aria-label="Reproducir la clase ' + cActual.dataset.n + '">' +
+        '<i aria-hidden="true"></i><strong>Clase ' + cActual.dataset.n + '</strong><small>Video en Google Drive</small></button>';
+    };
+
+    cPantalla.addEventListener('click', function (e) {
+      if (e.target.closest('.clase__play')) cargar();
     });
-
-    var tema = TEMAS[selT];
-    var enf = ENFOQUES[selE];
-    $('#lecTema').textContent = tema.nombre;
-    $('#lecEnf').textContent = enf.sigla;
-    $('#lecTexto').textContent = tema.celdas[enf.id];
-    $('#lecCurso').textContent = 'Se aprende en: ' + enf.nombre;
-    $('#lecWa').href = wa('¡Hola! Vi en la web el cruce de "' + tema.nombre + '" con ' + enf.nombre +
-      '. Me gustaría saber más sobre esa formación: fechas, cursada y arancel.');
-  }
-
-  if (mgrid) {
-    var frag = document.createDocumentFragment();
-
-    var corner = document.createElement('div');
-    corner.className = 'mcorner';
-    corner.setAttribute('role', 'presentation');
-    frag.appendChild(corner);
-
-    ENFOQUES.forEach(function (e, c) {
-      var h = document.createElement('button');
-      h.type = 'button';
-      h.className = 'mhead';
-      h.textContent = e.sigla;
-      h.title = e.nombre;
-      h.addEventListener('click', function () { selE = c; pintar(); });
-      headBtn.push(h);
-      frag.appendChild(h);
-    });
-
-    TEMAS.forEach(function (t, r) {
-      var tb = document.createElement('button');
-      tb.type = 'button';
-      tb.className = 'mcell mtema';
-      tb.textContent = t.nombre;
-      tb.addEventListener('click', function () { selT = r; pintar(); });
-      temasBtn.push(tb);
-      frag.appendChild(tb);
-
-      ENFOQUES.forEach(function (e, c) {
-        var cell = document.createElement('button');
-        cell.type = 'button';
-        cell.className = 'mcell';
-        cell.dataset.r = r;
-        cell.dataset.c = c;
-        cell.setAttribute('role', 'gridcell');
-        cell.setAttribute('aria-label', t.nombre + ' según ' + e.nombre);
-        cell.addEventListener('click', function () { selT = r; selE = c; pintar(); });
-        celdas.push(cell);
-        frag.appendChild(cell);
+    Array.prototype.forEach.call(cBtns, function (btn) {
+      btn.addEventListener('click', function () {
+        var habiaVideo = !!cPantalla.querySelector('iframe');
+        cActual = btn;
+        Array.prototype.forEach.call(cBtns, function (x) { x.classList.toggle('is-on', x === btn); });
+        $('#claseDrive').href = 'https://drive.google.com/file/d/' + btn.dataset.id + '/view?usp=sharing';
+        if (habiaVideo) cargar(); else portada();
+        if (window.innerWidth <= 1100) cPantalla.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
-
-    mgrid.appendChild(frag);
-    pintar();
-
-    // auto-demo: recorre la diagonal una vez al entrar en viewport
-    if (!LITE && 'IntersectionObserver' in window) {
-      var demoHecha = false;
-      var ioM = new IntersectionObserver(function (ent) {
-        ent.forEach(function (en) {
-          if (!en.isIntersecting || demoHecha) return;
-          demoHecha = true;
-          var pasos = [[1, 1], [2, 4], [4, 2], [0, 3], [0, 1]];
-          pasos.forEach(function (p, k) {
-            setTimeout(function () {
-              if (mgrid.dataset.tocado === '1') return;
-              selT = p[0]; selE = p[1]; pintar();
-            }, 500 + k * 1150);
-          });
-        });
-      }, { threshold: .35 });
-      ioM.observe(mgrid);
-      mgrid.addEventListener('click', function () { mgrid.dataset.tocado = '1'; }, { once: true });
-    }
   }
 
   /* ---------------------------------------------------------
@@ -378,7 +308,7 @@
      Reveals
      --------------------------------------------------------- */
   if (!LITE && !QA && 'IntersectionObserver' in window) {
-    var sel = '.sec-head, .promesa__frase, .promesa__cols article, .curso, .matriz__cuerpo, ' +
+    var sel = '.sec-head, .promesa__frase, .promesa__cols article, .curso, .clase__lista, .clase__player, ' +
               '.pasos li, .instituto__texto, .instituto__sello, .voz, .faq__head, .faq__lista, .cierre__in, .datos';
     var items = document.querySelectorAll(sel);
     Array.prototype.forEach.call(items, function (el) { el.classList.add('rv'); });
