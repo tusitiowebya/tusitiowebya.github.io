@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de videojuegos | El Tecla Ventas Online</title>
+  <meta name="description" content="Buscá videojuegos en el catálogo de El Tecla Ventas Online. Filtrá los títulos publicados, armá tu lista y consultá precio y disponibilidad por WhatsApp.">
+  <meta name="keywords" content="catálogo El Tecla, videojuegos online, juegos, El Tecla Ventas Online, catálogo de juegos, venta online, consultar videojuegos">
+  <meta name="author" content="TuPaginaYa">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#08090d">
+  <link rel="canonical" href="https://tusitiowebya.github.io/demoeltecla/catalogo/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Catálogo de videojuegos | El Tecla Ventas Online">
+  <meta property="og:description" content="Buscá un título, armá tu lista de juegos y consultá a El Tecla por WhatsApp.">
+  <meta property="og:url" content="https://tusitiowebya.github.io/demoeltecla/catalogo/">
+  <meta property="og:site_name" content="El Tecla Ventas Online">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:image" content="https://tusitiowebya.github.io/demoeltecla/media/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="El Tecla Ventas Online. Elegí tu próxima partida.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Catálogo de videojuegos | El Tecla">
+  <meta name="twitter:description" content="Títulos publicados y consultas directas por WhatsApp.">
+  <meta name="twitter:image" content="https://tusitiowebya.github.io/demoeltecla/media/og-image.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../media/favicon-512.png">
+  <link rel="apple-touch-icon" href="../media/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tusitiowebya.github.io/demoeltecla/catalogo/#pagina","name":"Catálogo de videojuegos de El Tecla Ventas Online","url":"https://tusitiowebya.github.io/demoeltecla/catalogo/","description":"Videojuegos publicados por El Tecla. Búsqueda por título y consultas de precio y disponibilidad.","inLanguage":"es-AR","isPartOf":{"@id":"https://eltecla.tupaginaya.com.ar/#web"},"about":{"@id":"https://eltecla.tupaginaya.com.ar/#negocio"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"El Tecla","item":"https://eltecla.tupaginaya.com.ar/"},{"@type":"ListItem","position":2,"name":"Catálogo","item":"https://tusitiowebya.github.io/demoeltecla/catalogo/"}]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al catálogo</a>
+  <header class="header"><div class="wrap header-inner"><a class="brand" href="../" aria-label="El Tecla, inicio"><img src="../media/logo-nav.webp" alt="El Tecla Ventas Online" width="156" height="70"></a><nav class="nav" id="nav" aria-label="Navegación principal"><a href="./" aria-current="page">Catálogo <span>01</span></a><a href="../#radar">Buscá tu juego <span>02</span></a><a href="../#como-comprar">Cómo comprar <span>03</span></a></nav><a class="cart-toggle" href="#mi-lista">Mi lista <span id="headerCartCount">0</span></a><button class="menu-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span></button></div></header>
+  <main id="contenido" class="catalog-page"><div class="wrap">
+    <div class="catalog-head"><div><p class="section-label"><span class="section-number">01</span> LA BIBLIOTECA DE EL TECLA</p><h1>Tu próxima<br><span>partida.</span></h1><p>Buscá ese título, sumalo a tu lista y consultanos. El precio y la disponibilidad final se confirman antes de comprar.</p></div><a href="../" class="back-link">← VOLVER AL INICIO</a></div>
+    <noscript><div class="noscript">Activá JavaScript para cargar el catálogo. También podés <a href="https://wa.me/5491124035261?text=Hola%2C%20El%20Tecla.%20Quiero%20consultar%20por%20juegos." target="_blank" rel="noopener noreferrer">consultarnos por WhatsApp</a>.</div></noscript>
+    <div class="catalog-tools"><label class="search-wrap" for="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><input id="search" type="search" placeholder="Buscá un título en el catálogo" aria-label="Buscar por título o descripción" maxlength="120"></label><select id="sort" aria-label="Ordenar juegos"><option value="name">Título: A a Z</option><option value="priceAsc">Precio: menor a mayor</option><option value="priceDesc">Precio: mayor a menor</option></select></div>
+    <div class="filter-list" id="filters" role="group" aria-label="Filtrar por categoría"></div>
+    <div class="catalog-status-bar"><span id="resultsCount" role="status">PREPARANDO CATÁLOGO…</span><button class="refresh-button" id="refresh" type="button">↻ Actualizar</button></div>
+    <p class="catalog-notice" id="catalogNotice" role="status" hidden></p>
+    <div class="catalog-layout"><div id="catalogContent" aria-busy="true"><div class="skeleton-grid" aria-label="Cargando catálogo"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div></div>
+      <aside class="cart-panel" id="mi-lista" aria-labelledby="cart-title"><div class="cart-header"><h2 id="cart-title">Tu selección.</h2><span class="cart-count" id="cartCount">00</span></div><p class="cart-empty" id="cartEmpty">Sumá los juegos que te interesan. Tu consulta sale con todos los títulos en un solo mensaje.</p><ul class="cart-list" id="cartList"></ul><div class="cart-total" id="cartTotal" hidden><span>Total publicado</span><strong id="totalValue"></strong></div><a class="button button-blue" id="cartWhatsApp" href="https://wa.me/5491124035261?text=Hola%2C%20El%20Tecla.%20Quiero%20consultar%20por%20juegos." target="_blank" rel="noopener noreferrer">CONSULTAR POR WHATSAPP ↗</a><button class="button button-outline" id="showCheckout" type="button" hidden>PREPARAR PEDIDO</button><p class="form-note">Tu lista es una consulta. No reserva los juegos ni confirma una compra.</p><p class="cart-note" id="cartNote" role="status" hidden></p>
+        <form class="checkout" id="checkout" hidden><h3>Los datos de tu pedido.</h3><p>Al enviarlo, el comercio recibe tu pedido y tus datos de contacto. Coordiná disponibilidad, pago y entrega con El Tecla.</p><label for="customerName">TU NOMBRE</label><input id="customerName" name="nombre" autocomplete="name" maxlength="100" required><label for="customerPhone">TU TELÉFONO</label><input id="customerPhone" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" required><label for="orderNote">¿QUERÉS SUMAR ALGO? (OPCIONAL)</label><textarea id="orderNote" name="nota" maxlength="350"></textarea><button type="submit" class="button button-red" id="submitOrder">ENVIAR PEDIDO ↗</button><p class="checkout-result" id="checkoutResult" role="status"></p></form>
+      </aside>
+    </div>
+    <div class="catalog-help"><span>¿No encontraste el que tenías en mente?</span><a href="../#radar">Prepará tu consulta →</a></div>
+  </div></main>
+  <footer class="footer"><div class="wrap footer-main"><a href="../"><img src="../media/logo-nav.webp" width="156" height="70" alt="El Tecla Ventas Online"></a><p>Un título. Una charla.<br>Una nueva partida.</p><a href="../">Inicio ↗</a><a href="https://wa.me/5491124035261?text=Hola%2C%20El%20Tecla.%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><div class="wrap footer-bottom"><span>© <span data-year>2026</span> El Tecla Ventas Online</span><a href="https://tupaginaya.com.ar/" target="_blank" rel="noopener noreferrer">Diseñado por <strong>TuPaginaYa</strong></a></div></footer>
+  <a class="wa-dock" href="https://wa.me/5491124035261?text=Hola%2C%20El%20Tecla.%20Quiero%20consultar%20por%20un%20juego." target="_blank" rel="noopener noreferrer" aria-label="Consultar a El Tecla por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7a8.5 8.5 0 1 1 16.1-4.2Z"/><path d="M8 7.5c.6 4.4 3.1 6.9 7.5 8l1.1-2.4-2.7-1.3-1 1.2c-1.6-.6-2.7-1.7-3.3-3.3l1.2-1L9.5 6Z"/></svg><span>Consultanos</span></a>
+  <script src="../config.js"></script><script src="../script.js"></script><script src="catalogo.js"></script>
+</body>
+</html>
