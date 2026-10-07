@@ -39,3 +39,11 @@ Portada prevista: `https://zonadigital.tupaginaya.com.ar/`. El subdominio del ha
 Auditoría SEO y assets de la skill, inspección completa desktop 1440×900 e iPhone 13 emulado 390×844 (touch y escala de dispositivo), además de 360×780. Se revisan búsqueda sin acentos, filtros, estado sin coincidencias, fichas, selección entre páginas, mensaje WhatsApp, menú, video/pausa, movimiento reducido, imágenes y desborde horizontal. Pruebas de CobrOS con fixtures interceptados localmente: payload, pago, entrega gratis, cambio de precio, duplicados, error, timeout y catálogo vacío. No se enviaron pedidos ni mensajes reales.
 
 Pendientes para la activación comercial: logo oficial, URL exacta de Facebook, productos/portadas/precios reales, slug de CobrOS y configuración de pago/entrega. Localidad o zona solo si el cliente la confirma y resulta relevante para la venta digital.
+
+## Publicación provisional · 7 de octubre de 2026
+
+GitHub rechazó el push con `Internal Server Error` y su API Git devolvió HTTP 500. El código quedó comprometido localmente, sin force push ni cambios de otros clientes. Para entregar una demo usable se publicó una copia idéntica en `/home/tupagina/public_html/demozonadigital` del hosting TuPaginaYa; solo las URLs absolutas de assets, catálogo y sitemap del espejo se sustituyeron por `https://tupaginaya.com.ar/demozonadigital/` para evitar referencias a Pages aún inexistentes.
+
+`https://zonadigital.tupaginaya.com.ar/` tiene temporalmente un 302 a ese espejo. Se modificó únicamente la regla de Zona Digital, con backup y escritura atómica, preservando las reglas de otros clientes. Portada, catálogo, CSS/JS, video, póster, OG 1200×630 y favicons respondieron HTTP 200; la página pública pasó revisión desktop/iPhone sin errores ni desborde.
+
+Cuando GitHub vuelva a aceptar escritura: subir los commits pendientes a `origin main`, esperar el build de Pages y comprobar sus assets; recién entonces restaurar la regla de este cliente a `RewriteRule ^(.*)$ https://tusitiowebya.github.io/demozonadigital [R=301,L]`. La copia local ya conserva las URLs de Pages previstas y no necesita cambios de código. No se debe restaurar el `.htaccess` compartido completo desde un backup, porque podría borrar altas posteriores de otros clientes; cambiar solo la regla de Zona Digital.
