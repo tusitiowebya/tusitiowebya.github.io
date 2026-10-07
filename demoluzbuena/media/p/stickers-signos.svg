@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#3B2A55"/><stop offset="1" stop-color="#1A100B"/></radialGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <g font-family="'Segoe UI Symbol','Noto Sans Symbols 2','Apple Symbols',serif" font-size="58" text-anchor="middle" fill="#F7ECDF">
+    <g fill="#F2B8C6"><circle cx="170" cy="250" r="62" fill="#F7ECDF"/><circle cx="320" cy="250" r="62" fill="#F2B8C6"/><circle cx="470" cy="250" r="62" fill="#F7ECDF"/>
+    <circle cx="170" cy="400" r="62" fill="#F2B8C6"/><circle cx="320" cy="400" r="62" fill="#F7ECDF"/><circle cx="470" cy="400" r="62" fill="#F2B8C6"/>
+    <circle cx="170" cy="550" r="62" fill="#F7ECDF"/><circle cx="320" cy="550" r="62" fill="#F2B8C6"/><circle cx="470" cy="550" r="62" fill="#F7ECDF"/></g>
+    <g fill="#3A2418">
+      <text x="170" y="270">♈&#xFE0E;</text><text x="320" y="270">♉&#xFE0E;</text><text x="470" y="270">♊&#xFE0E;</text>
+      <text x="170" y="420">♋&#xFE0E;</text><text x="320" y="420">♌&#xFE0E;</text><text x="470" y="420">♍&#xFE0E;</text>
+      <text x="170" y="570">♎&#xFE0E;</text><text x="320" y="570">♏&#xFE0E;</text><text x="470" y="570">♐&#xFE0E;</text>
+    </g>
+  </g>
+  <text x="320" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#F7ECDF">Stickers de signos</text>
+  <text x="320" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F0A35E" letter-spacing="3">LOS 12 SIGNOS DEL ZODÍACO</text>
+</svg>
