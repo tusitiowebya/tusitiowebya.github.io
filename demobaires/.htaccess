@@ -1,0 +1,9 @@
+# Versión principal del sitio entregado: HTTPS sin www.
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+RewriteRule ^index\.html$ https://bairescerrajero.com.ar/ [R=301,L]
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^bairescerrajero\.com\.ar$ [NC]
+RewriteRule ^ https://bairescerrajero.com.ar%{REQUEST_URI} [R=301,L]
