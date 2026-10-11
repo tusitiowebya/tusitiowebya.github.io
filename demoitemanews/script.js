@@ -36,7 +36,7 @@
 
 // Contenido real desde el panel (notas, cursos y publicidad) — si no hay nada cargado, se queda la demo de ejemplo
 (function(){
-  const API = 'https://itemanews-panel.tupaginaya.com.ar';
+  const { mediaURL, articleHref, fetchJSON } = window.ITEMA_CONTENT;
   const CATEGORIA_LABEL = { inyeccion: 'Inyección Electrónica', motor: 'Motor', electrica: 'Eléctrica y Electrónica', diagnostico: 'Diagnóstico', mantenimiento: 'Mantenimiento', institucional: 'Institucional' };
   const TAG_CLASS = { inyeccion: 'tag--educacion', motor: 'tag--deportes', electrica: 'tag--tecnologia', diagnostico: 'tag--region', mantenimiento: 'tag--economia', institucional: 'tag--tecnologia' };
   const IMG_FALLBACK = 'images/hero.jpg';
@@ -58,29 +58,30 @@
   function notaCardHTML(a, variante) {
     const tag = TAG_CLASS[a.categoria] || 'tag--region';
     const label = CATEGORIA_LABEL[a.categoria] || a.categoria;
-    const img = a.imagen_url || IMG_FALLBACK;
+    const img = escapeHtml(mediaURL(a.imagen_url, IMG_FALLBACK));
+    const href = articleHref(a.id);
     if (variante === 'horizontal') {
       return `<article class="card card--horizontal">
-        <a href="#" class="card__img-link"><img src="${img}" alt=""></a>
+        <a href="${href}" class="card__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>
         <div>
           <span class="tag ${tag}">${label}</span>
-          <h3><a href="#">${escapeHtml(a.titulo)}</a></h3>
+          <h3><a href="${href}">${escapeHtml(a.titulo)}</a></h3>
           ${a.resumen ? `<p>${escapeHtml(a.resumen)}</p>` : ''}
           <span class="card__time">${tiempoRelativo(a.creado_en)}</span>
         </div>
       </article>`;
     }
     return `<article class="card${variante === 'featured' ? ' card--featured' : ''}">
-      <a href="#" class="card__img-link"><img src="${img}" alt=""></a>
+      <a href="${href}" class="card__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>
       <span class="tag ${tag}">${label}</span>
-      <h3><a href="#">${escapeHtml(a.titulo)}</a></h3>
+      <h3><a href="${href}">${escapeHtml(a.titulo)}</a></h3>
       ${a.resumen ? `<p>${escapeHtml(a.resumen)}</p>` : ''}
       <span class="card__time">${tiempoRelativo(a.creado_en)}</span>
     </article>`;
   }
 
   function cursoCardHTML(c) {
-    const img = c.imagen_url || IMG_FALLBACK;
+    const img = escapeHtml(mediaURL(c.imagen_url, IMG_FALLBACK));
     const grabado = c.modalidad === 'grabado';
     const mensaje = encodeURIComponent(`Hola! Quiero ${grabado ? 'info del curso grabado' : 'anotarme al curso'} de ${c.titulo}`);
     return `<article class="curso-card">
@@ -108,21 +109,15 @@
     link.href = auspiciante.link || '#';
     if (auspiciante.link) { link.target = '_blank'; link.rel = 'noopener'; }
     const img = document.createElement('img');
-    img.src = auspiciante.imagen_url;
+    img.src = mediaURL(auspiciante.imagen_url, IMG_FALLBACK);
     img.alt = auspiciante.nombre;
     img.className = 'adslot__banner';
     link.appendChild(img);
     el.appendChild(link);
   }
 
-  const fetchJSON = (url) => {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 6000);
-    return fetch(url, { signal: controller.signal }).then((r) => r.json()).finally(() => clearTimeout(timeout));
-  };
-
   // Notas técnicas
-  fetchJSON(`${API}/api/articulos`)
+  fetchJSON('/api/articulos')
     .then((articulos) => {
       if (!Array.isArray(articulos) || articulos.length === 0) return;
 
@@ -133,9 +128,16 @@
         const heroTitle = document.getElementById('heroTitleLink');
         const heroExcerpt = document.getElementById('heroExcerpt');
         const heroMeta = document.getElementById('heroMeta');
-        if (heroImg && destacada.imagen_url) heroImg.src = destacada.imagen_url;
+        if (heroImg) {
+          heroImg.src = mediaURL(destacada.imagen_url, IMG_FALLBACK);
+          heroImg.alt = destacada.titulo;
+          heroImg.closest('a').href = articleHref(destacada.id);
+        }
         if (heroTag) { heroTag.textContent = CATEGORIA_LABEL[destacada.categoria] || destacada.categoria; heroTag.className = 'tag ' + (TAG_CLASS[destacada.categoria] || 'tag--region'); }
-        if (heroTitle) heroTitle.textContent = destacada.titulo;
+        if (heroTitle) {
+          heroTitle.textContent = destacada.titulo;
+          heroTitle.href = articleHref(destacada.id);
+        }
         if (heroExcerpt) heroExcerpt.textContent = destacada.resumen || '';
         if (heroMeta) heroMeta.innerHTML = `<span>Por ${escapeHtml(destacada.autor || 'Redacción ITEMA')}</span><span class="dot">·</span><span>${tiempoRelativo(destacada.creado_en)}</span>`;
       }
@@ -158,7 +160,7 @@
     .catch(() => {});
 
   // Cursos presenciales
-  fetchJSON(`${API}/api/cursos?modalidad=presencial`)
+  fetchJSON('/api/cursos?modalidad=presencial')
     .then((cursos) => {
       const grid = document.getElementById('gridCursos');
       if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
@@ -166,7 +168,7 @@
     .catch(() => {});
 
   // Cursos grabados
-  fetchJSON(`${API}/api/cursos?modalidad=grabado`)
+  fetchJSON('/api/cursos?modalidad=grabado')
     .then((cursos) => {
       const grid = document.getElementById('gridGrabados');
       if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
@@ -174,7 +176,7 @@
     .catch(() => {});
 
   // Publicidad / auspiciantes
-  fetchJSON(`${API}/api/auspiciantes`)
+  fetchJSON('/api/auspiciantes')
     .then((auspiciantes) => {
       if (!Array.isArray(auspiciantes)) return;
       const byPos = (pos) => auspiciantes.find((a) => a.posicion === pos);
