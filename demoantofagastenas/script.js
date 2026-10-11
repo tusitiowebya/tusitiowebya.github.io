@@ -17,7 +17,6 @@
   }
 
   /* galería de videos: visor a pantalla completa */
-  var hero = document.querySelector('.hero-vid');
   var items = Array.prototype.slice.call(document.querySelectorAll('.gal-item'));
   var visor = document.getElementById('visor');
   if (items.length && visor) {
@@ -45,7 +44,6 @@
     }
 
     function abrir(i) {
-      if (hero) hero.pause();
       visor.hidden = false;
       document.body.classList.add('visor-abierto');
       requestAnimationFrame(function () { visor.classList.add('abierto'); });
@@ -62,7 +60,6 @@
         vid.querySelectorAll('source').forEach(function (s) { s.remove(); });
         vid.load();
       }, 260);
-      if (hero) hero.play().catch(function () {});
     }
 
     items.forEach(function (it, i) {

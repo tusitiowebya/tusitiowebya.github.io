@@ -64,8 +64,9 @@ h1 em,h2 em,.brand-name em{font-style:normal;color:var(--ochre)}
   border-bottom:1px solid var(--line-d)}
 .nav-in{display:flex;align-items:center;gap:1.4rem;padding:.7rem 0}
 .brand{display:flex;align-items:center;gap:.65rem;flex-shrink:0}
-.brand-mark{width:30px;height:30px;color:var(--ochre);flex-shrink:0}
+.brand-mark{width:54px;height:54px;color:var(--ochre);flex-shrink:0}
 .brand-mark svg{width:100%;height:100%}
+.brand-mark img{width:100%;height:100%;object-fit:contain;border-radius:50%}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .nav .brand-name{font-size:1.06rem;color:var(--salt)}
 .nav .brand-name em{color:var(--ochre)}
@@ -93,14 +94,16 @@ h1 em,h2 em,.brand-name em{font-style:normal;color:var(--ochre)}
 
 /* ===================== HERO ===================== */
 .hero{position:relative;min-height:88svh;display:flex;align-items:center;overflow:hidden;background:var(--night)}
-.hero-media{position:absolute;inset:0;z-index:0}
-.hero-vid{width:100%;height:100%;object-fit:cover}
+.hero-media{position:absolute;inset:0;z-index:0;
+  background-image:url("img/logo-rutas.png");background-repeat:no-repeat;
+  background-size:min(46vw,680px) auto;
+  background-position:right clamp(1.1rem,4vw,2.2rem) center}
 .hero-veil{position:absolute;inset:0;
-  background:
-    linear-gradient(92deg,rgba(22,35,43,.94) 0%,rgba(22,35,43,.68) 42%,rgba(22,35,43,.24) 72%,rgba(22,35,43,.55) 100%),
-    linear-gradient(0deg,rgba(22,35,43,.85),transparent 32%,transparent 78%,rgba(22,35,43,.5))}
-.hero-in{position:relative;z-index:1;padding:clamp(5rem,10vw,7rem) 0 clamp(3.5rem,7vw,5rem);max-width:38rem}
-.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:1.3rem}
+  background:linear-gradient(90deg,var(--night) 0%,rgba(22,35,43,.95) 34%,transparent 58%)}
+.hero-in{position:relative;z-index:1;width:100%;max-width:var(--maxw);
+  padding:clamp(3.6rem,6vw,6rem) clamp(1.1rem,4vw,2.2rem)}
+.hero-copy{max-width:calc(52% - 2rem)}
+.hero h1{font-size:clamp(2.1rem,4.2vw,3.45rem);margin-bottom:1.3rem}
 .hero-sub{font-size:1.08rem;color:rgba(244,240,230,.72);max-width:29rem;margin-bottom:2rem}
 .hero-cta{display:flex;gap:.85rem;flex-wrap:wrap}
 .hero-cta.center{justify-content:center}
@@ -278,7 +281,7 @@ body.visor-abierto{overflow:hidden}
 .footer{background:#111C22;color:rgba(244,240,230,.6);padding:clamp(2.4rem,5vw,3.4rem) 0 1.5rem}
 .ft-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:2rem}
 .ft-brand{display:flex;gap:.9rem;align-items:flex-start}
-.ft-brand .brand-mark{width:30px;height:30px;color:var(--ochre);flex-shrink:0}
+.ft-brand .brand-mark{width:54px;height:54px;color:var(--ochre);flex-shrink:0}
 .ft-brand .brand-name{font-size:1.06rem;color:var(--salt);display:block}
 .ft-brand p{color:rgba(244,240,230,.5);font-size:.9rem;margin-top:.5rem;max-width:22rem}
 .ft-col h5{font-family:"Karla",sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
@@ -305,11 +308,23 @@ body.visor-abierto{overflow:hidden}
   .route-map{order:-1}
   .ft-grid{grid-template-columns:1fr 1fr}
   .ft-brand{grid-column:1/-1}
+  .hero{--hero-logo-size:min(65vw,340px);min-height:88svh;align-items:flex-start}
+  .hero-media{background-size:var(--hero-logo-size) auto;background-position:center 1.8rem}
+  .hero-veil{background:none}
+  .hero-in{padding-top:calc(var(--hero-logo-size) + 3.2rem);padding-bottom:2.5rem}
+  .hero-copy{max-width:42rem;margin:0 auto}
+  .hero h1{font-size:clamp(1.8rem,4.3vw,2.65rem)}
 }
 @media (max-width:980px){
   .gal{grid-template-columns:repeat(3,1fr);grid-auto-rows:170px}
 }
 @media (max-width:620px){
+  .nav-in{gap:.75rem;min-height:68px}
+  .brand{min-width:0;flex-shrink:1;gap:.5rem}
+  .brand-mark{width:40px;height:40px}
+  .nav .brand-name{font-size:.82rem}
+  .brand-sub{font-size:.58rem;letter-spacing:.04em;max-width:230px}
+  .nav-mobile{top:69px}
   .serv-grid,.circ-list{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:.6rem}
   .gal-item.is-wide{grid-column:span 2}
