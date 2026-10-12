@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261012">
 
 <script type="application/ld+json">
 {
@@ -78,7 +78,7 @@
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="wrap nav__in">
-    <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navList">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav__list" id="navList">
@@ -88,9 +88,6 @@
       <li><a href="#grabados">Cursos Grabados</a></li>
       <li><a href="#institucional">Institucional</a></li>
     </ul>
-    <button class="nav__search" id="navSearch" aria-label="Buscar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    </button>
   </div>
 </nav>
 
@@ -98,58 +95,27 @@
 <div class="ticker">
   <div class="ticker__label">ÚLTIMO MOMENTO</div>
   <div class="ticker__track">
-    <div class="ticker__content" id="tickerContent">
-      <span>Nuevo curso de Inyección Electrónica Diésel — inscripción abierta</span>
-      <span>Notas técnicas actualizadas: diagnóstico de fallas en sistemas common rail</span>
-      <span>Cursos grabados disponibles: accedé cuando quieras desde tu cuenta</span>
-      <span>Instituto ITEMA: más de 30 años formando técnicos automotrices</span>
-      <span>Cupos limitados para la próxima capacitación presencial</span>
-    </div>
+    <div class="ticker__content" id="tickerContent"><span>Notas de mecánica y cursos del Instituto ITEMA</span></div>
   </div>
 </div>
 
 <main class="wrap" id="portada">
 
   <!-- HERO -->
-  <section class="hero">
-    <article class="hero__main">
+  <section class="hero hero--single">
+    <div class="content-state" id="heroStatus" role="status">Cargando notas…</div>
+    <article class="hero__main" id="heroMain" hidden>
       <a href="#notas" class="hero__img-link">
-        <img src="images/hero.jpg" alt="Taller de mecánica automotriz" class="hero__img" id="heroImg">
+        <img alt="" class="hero__img" id="heroImg" hidden>
         <span class="tag tag--region" id="heroTag">Institucional</span>
       </a>
-      <h1 class="hero__title"><a href="#notas" id="heroTitleLink">Instituto ITEMA lanza su portal de notas técnicas y cursos</a></h1>
+      <h1 class="hero__title"><a href="#notas" id="heroTitleLink">iTEMA News · Notas técnicas</a></h1>
       <p class="hero__excerpt" id="heroExcerpt">Mecánica, inyección electrónica, eléctrica y diagnóstico: contenido pensado para técnicos y estudiantes, más los cursos presenciales y grabados del instituto.</p>
-      <div class="hero__meta" id="heroMeta">
-        <span>Por Redacción ITEMA</span><span class="dot">·</span><span>Hace instantes</span><span class="dot">·</span><span>3 min de lectura</span>
-      </div>
+      <div class="hero__meta" id="heroMeta"></div>
+      <a class="hero__read" id="heroReadMore" href="#notas">Leer la nota completa →</a>
     </article>
 
-    <aside class="hero__side" id="heroSide">
-      <article class="side-item">
-        <a href="#notas" class="side-item__img-link"><img src="images/economia.jpg" alt="Sistema de inyección electrónica"></a>
-        <div>
-          <span class="tag tag--economia">Inyección</span>
-          <h3><a href="#notas">Diagnóstico de fallas en sistemas common rail: guía paso a paso</a></h3>
-          <span class="side-item__time">Hace 3 horas</span>
-        </div>
-      </article>
-      <article class="side-item">
-        <a href="#cursos" class="side-item__img-link"><img src="images/deportes.jpg" alt="Taller de motores"></a>
-        <div>
-          <span class="tag tag--deportes">Motor</span>
-          <h3><a href="#notas">Puesta a punto de motores: errores comunes que acortan su vida útil</a></h3>
-          <span class="side-item__time">Hace 5 horas</span>
-        </div>
-      </article>
-      <article class="side-item">
-        <a href="#cursos" class="side-item__img-link"><img src="images/clima.jpg" alt="Diagnóstico automotriz"></a>
-        <div>
-          <span class="tag tag--region">Diagnóstico</span>
-          <h3><a href="#notas">Scanner automotriz: cómo interpretar los códigos de falla más frecuentes</a></h3>
-          <span class="side-item__time">Hace 6 horas</span>
-        </div>
-      </article>
-    </aside>
+    <aside class="hero__side" id="heroSide" hidden></aside>
   </section>
 
   <!-- AD SLOT -->
@@ -165,28 +131,9 @@
       <section class="section" id="notas">
         <div class="section__head">
           <h2>Notas Técnicas</h2>
-          <a href="#" class="section__more">Ver todas →</a>
         </div>
-        <div class="grid grid--3" id="gridNotas">
-          <article class="card card--featured">
-            <a href="#" class="card__img-link"><img src="images/educacion.jpg" alt="Inyección electrónica"></a>
-            <span class="tag tag--educacion">Inyección Electrónica</span>
-            <h3><a href="#">Cómo diagnosticar fallas en el sistema de inyección paso a paso</a></h3>
-            <p>Repaso de las herramientas y el procedimiento básico para identificar fallas comunes en sistemas de inyección electrónica.</p>
-            <span class="card__time">Hace 1 hora</span>
-          </article>
-          <article class="card">
-            <a href="#" class="card__img-link"><img src="images/tech.jpg" alt="Sistema eléctrico"></a>
-            <span class="tag tag--educacion">Eléctrica y Electrónica</span>
-            <h3><a href="#">Multímetro en el taller: mediciones básicas que todo técnico debe dominar</a></h3>
-            <span class="card__time">Hace 4 horas</span>
-          </article>
-          <article class="card">
-            <a href="#" class="card__img-link"><img src="images/cultura.jpg" alt="Mantenimiento preventivo"></a>
-            <span class="tag tag--educacion">Mantenimiento</span>
-            <h3><a href="#">Plan de mantenimiento preventivo: qué revisar cada 10.000 km</a></h3>
-            <span class="card__time">Ayer</span>
-          </article>
+        <div class="grid grid--3" id="gridNotas" aria-live="polite">
+          <p class="content-state">Cargando notas…</p>
         </div>
       </section>
 
@@ -202,21 +149,8 @@
           <h2>Cursos Presenciales</h2>
           <a href="https://wa.me/5493424296808" target="_blank" rel="noopener" class="section__more">Consultar por WhatsApp →</a>
         </div>
-        <div class="grid grid--3" id="gridCursos">
-          <article class="curso-card">
-            <div class="curso-card__img-wrap">
-              <img src="images/tech.jpg" alt="Curso de inyección electrónica">
-              <span class="curso-card__modalidad">Presencial</span>
-            </div>
-            <div class="curso-card__body">
-              <h3>Inyección Electrónica Diésel</h3>
-              <p class="curso-card__meta">4 clases · Cupos limitados</p>
-              <div class="curso-card__footer">
-                <span class="curso-card__precio">$45.000</span>
-                <a href="https://wa.me/5493424296808?text=Hola!%20Quiero%20anotarme%20al%20curso%20de%20Inyecci%C3%B3n%20Electr%C3%B3nica%20Di%C3%A9sel" target="_blank" rel="noopener" class="curso-card__cta">Anotarme</a>
-              </div>
-            </div>
-          </article>
+        <div class="grid grid--3" id="gridCursos" aria-live="polite">
+          <p class="content-state">Cargando cursos…</p>
         </div>
       </section>
 
@@ -226,21 +160,8 @@
           <h2>Cursos Grabados</h2>
           <a href="https://wa.me/5493424296808" target="_blank" rel="noopener" class="section__more">Consultar por WhatsApp →</a>
         </div>
-        <div class="grid grid--3" id="gridGrabados">
-          <article class="curso-card">
-            <div class="curso-card__img-wrap">
-              <img src="images/economia.jpg" alt="Curso grabado de electrónica automotriz">
-              <span class="curso-card__modalidad curso-card__modalidad--grabado">Grabado</span>
-            </div>
-            <div class="curso-card__body">
-              <h3>Electrónica Automotriz Aplicada</h3>
-              <p class="curso-card__meta">Acceso inmediato · A tu ritmo</p>
-              <div class="curso-card__footer">
-                <span class="curso-card__precio">Consultar</span>
-                <a href="https://wa.me/5493424296808?text=Hola!%20Quiero%20info%20del%20curso%20grabado%20de%20Electr%C3%B3nica%20Automotriz" target="_blank" rel="noopener" class="curso-card__cta">Consultar</a>
-              </div>
-            </div>
-          </article>
+        <div class="grid grid--3" id="gridGrabados" aria-live="polite">
+          <p class="content-state">Cargando cursos…</p>
         </div>
       </section>
 
@@ -248,27 +169,9 @@
       <section class="section" id="institucional">
         <div class="section__head">
           <h2>Institucional</h2>
-          <a href="#" class="section__more">Ver todas →</a>
         </div>
-        <div class="grid grid--2" id="gridInstitucional">
-          <article class="card card--horizontal">
-            <a href="#" class="card__img-link"><img src="images/hero.jpg" alt="Instituto ITEMA"></a>
-            <div>
-              <span class="tag tag--tecnologia">Institucional</span>
-              <h3><a href="#">30 años formando técnicos: la historia del Instituto ITEMA</a></h3>
-              <p>Desde 1994, ITEMA capacita profesionales del sector automotriz con cursos presenciales y virtuales.</p>
-              <span class="card__time">Hace 2 días</span>
-            </div>
-          </article>
-          <article class="card card--horizontal">
-            <a href="#" class="card__img-link"><img src="images/policiales.jpg" alt="Certificación"></a>
-            <div>
-              <span class="tag tag--tecnologia">Institucional</span>
-              <h3><a href="#">Certificación oficial: qué acredita el diploma de ITEMA</a></h3>
-              <p>Al finalizar cada curso, los alumnos reciben un certificado que acredita la competencia adquirida.</p>
-              <span class="card__time">Hace 3 días</span>
-            </div>
-          </article>
+        <div class="grid grid--2" id="gridInstitucional" aria-live="polite">
+          <p class="content-state">Cargando notas…</p>
         </div>
       </section>
 
@@ -277,14 +180,8 @@
     <!-- SIDEBAR -->
     <aside class="layout__side">
       <div class="widget">
-        <h4 class="widget__title">Lo más leído</h4>
-        <ol class="ranking">
-          <li><span class="ranking__n">1</span><a href="#notas">Cómo diagnosticar fallas en el sistema de inyección</a></li>
-          <li><span class="ranking__n">2</span><a href="#cursos">Inyección Electrónica Diésel — inscripción abierta</a></li>
-          <li><span class="ranking__n">3</span><a href="#notas">Multímetro en el taller: mediciones básicas</a></li>
-          <li><span class="ranking__n">4</span><a href="#grabados">Electrónica Automotriz Aplicada (grabado)</a></li>
-          <li><span class="ranking__n">5</span><a href="#notas">Plan de mantenimiento preventivo cada 10.000 km</a></li>
-        </ol>
+        <h4 class="widget__title">Últimas notas</h4>
+        <ol class="ranking" id="latestNotes"></ol>
       </div>
 
       <div class="adslot adslot--side" id="adSide">
@@ -293,14 +190,9 @@
       </div>
 
       <div class="widget widget--newsletter" id="suscribite">
-        <h4 class="widget__title">Recibí notas técnicas y cursos nuevos</h4>
-        <p>Un resumen mensual, sin spam.</p>
-        <form class="newsletter__form" action="https://formsubmit.co/EMAIL_DEL_CLIENTE" method="POST">
-          <input type="hidden" name="_subject" value="Nueva suscripción — iTEMA News">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="email" name="email" placeholder="tu@email.com" required>
-          <button type="submit">Suscribirme</button>
-        </form>
+        <h4 class="widget__title">Novedades del instituto</h4>
+        <p>Consultá por las próximas capacitaciones y novedades.</p>
+        <a class="curso-card__cta" href="https://wa.me/5493424296808?text=Hola%2C%20quiero%20consultar%20por%20las%20pr%C3%B3ximas%20capacitaciones%20y%20novedades%20del%20Instituto%20ITEMA." target="_blank" rel="noopener">Consultar por WhatsApp →</a>
       </div>
     </aside>
   </div>
@@ -327,7 +219,7 @@
       <a href="https://itemacursos.com.ar" target="_blank" rel="noopener">Sitio de cursos</a>
       <a href="https://wa.me/5493424296808" target="_blank" rel="noopener">Publicidad</a>
       <a href="https://wa.me/5493424296808" target="_blank" rel="noopener">Contacto</a>
-      <a href="#suscribite">Newsletter</a>
+      <a href="#suscribite">Novedades</a>
     </div>
   </div>
   <div class="wrap footer__bottom">
@@ -337,6 +229,6 @@
 </footer>
 
 <script src="content.js?v=20261011"></script>
-<script src="script.js?v=20261011"></script>
+<script src="script.js?v=20261012"></script>
 </body>
 </html>

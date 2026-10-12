@@ -34,7 +34,7 @@
   .finally(() => clearTimeout(timeout));
 })();
 
-// Contenido real desde el panel (notas, cursos y publicidad) — si no hay nada cargado, se queda la demo de ejemplo
+// La portada muestra únicamente contenido publicado en el panel.
 (function(){
   const { mediaURL, articleHref, fetchJSON } = window.ITEMA_CONTENT;
   const CATEGORIA_LABEL = { inyeccion: 'Inyección Electrónica', motor: 'Motor', electrica: 'Eléctrica y Electrónica', diagnostico: 'Diagnóstico', mantenimiento: 'Mantenimiento', institucional: 'Institucional' };
@@ -55,14 +55,47 @@
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
+  function estado(id, mensaje, reintentar) {
+    const el = document.getElementById(id);
+    const texto = document.createElement(el.tagName === 'OL' ? 'li' : 'p');
+    texto.className = 'content-state';
+    texto.textContent = mensaje;
+    el.replaceChildren(texto);
+    if (reintentar) {
+      const boton = document.createElement('button');
+      boton.type = 'button';
+      boton.className = 'content-retry';
+      boton.textContent = 'Volver a intentar';
+      boton.addEventListener('click', reintentar);
+      texto.appendChild(boton);
+    }
+  }
+
+  function pintarGrid(id, rows, pintar, mensaje) {
+    const grid = document.getElementById(id);
+    grid.classList.toggle('grid--single', rows.length === 1);
+    if (rows.length) grid.innerHTML = rows.map(pintar).join('');
+    else estado(id, mensaje);
+  }
+
   function notaCardHTML(a, variante) {
     const tag = TAG_CLASS[a.categoria] || 'tag--region';
     const label = CATEGORIA_LABEL[a.categoria] || a.categoria;
-    const img = escapeHtml(mediaURL(a.imagen_url, IMG_FALLBACK));
+    const img = escapeHtml(mediaURL(a.imagen_url, ''));
+    const imagen = img ? `<a href="${articleHref(a.id)}" class="card__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>` : '';
     const href = articleHref(a.id);
+    if (variante === 'side') {
+      return `<article class="side-item${img ? '' : ' side-item--text'}">
+        ${img ? `<a href="${href}" class="side-item__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>` : ''}
+        <div><span class="tag ${tag}">${escapeHtml(label)}</span>
+          <h3><a href="${href}">${escapeHtml(a.titulo)}</a></h3>
+          <span class="side-item__time">${tiempoRelativo(a.creado_en)}</span>
+        </div>
+      </article>`;
+    }
     if (variante === 'horizontal') {
-      return `<article class="card card--horizontal">
-        <a href="${href}" class="card__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>
+      return `<article class="card card--horizontal${img ? '' : ' card--text'}">
+        ${imagen}
         <div>
           <span class="tag ${tag}">${label}</span>
           <h3><a href="${href}">${escapeHtml(a.titulo)}</a></h3>
@@ -72,7 +105,7 @@
       </article>`;
     }
     return `<article class="card${variante === 'featured' ? ' card--featured' : ''}">
-      <a href="${href}" class="card__img-link"><img src="${img}" alt="${escapeHtml(a.titulo)}"></a>
+      ${imagen}
       <span class="tag ${tag}">${label}</span>
       <h3><a href="${href}">${escapeHtml(a.titulo)}</a></h3>
       ${a.resumen ? `<p>${escapeHtml(a.resumen)}</p>` : ''}
@@ -81,12 +114,12 @@
   }
 
   function cursoCardHTML(c) {
-    const img = escapeHtml(mediaURL(c.imagen_url, IMG_FALLBACK));
+    const img = escapeHtml(mediaURL(c.imagen_url, ''));
     const grabado = c.modalidad === 'grabado';
     const mensaje = encodeURIComponent(`Hola! Quiero ${grabado ? 'info del curso grabado' : 'anotarme al curso'} de ${c.titulo}`);
-    return `<article class="curso-card">
+    return `<article class="curso-card${img ? '' : ' curso-card--text'}">
       <div class="curso-card__img-wrap">
-        <img src="${img}" alt="">
+        ${img ? `<img src="${img}" alt="${escapeHtml(c.titulo)}">` : ''}
         <span class="curso-card__modalidad${grabado ? ' curso-card__modalidad--grabado' : ''}">${grabado ? 'Grabado' : 'Presencial'}</span>
       </div>
       <div class="curso-card__body">
@@ -117,11 +150,19 @@
   }
 
   // Notas técnicas
-  fetchJSON('/api/articulos')
+  function cargarNotas() {
+    const status = document.getElementById('heroStatus');
+    status.hidden = false;
+    estado('heroStatus', 'Cargando notas…');
+    ['gridNotas', 'gridInstitucional', 'latestNotes'].forEach(id => estado(id, 'Cargando notas…'));
+    return fetchJSON('/api/articulos')
     .then((articulos) => {
-      if (!Array.isArray(articulos) || articulos.length === 0) return;
+      if (!Array.isArray(articulos)) throw new Error('Respuesta inválida');
+      articulos = articulos.filter(a => a.estado === 'publicado' && /^[a-f0-9]{24}$/i.test(a.id));
 
       const destacada = articulos.find((a) => a.destacado) || articulos[0];
+      document.getElementById('heroMain').hidden = !destacada;
+      document.querySelector('.hero').classList.toggle('hero--single', articulos.length < 2);
       if (destacada) {
         const heroImg = document.getElementById('heroImg');
         const heroTag = document.getElementById('heroTag');
@@ -129,51 +170,68 @@
         const heroExcerpt = document.getElementById('heroExcerpt');
         const heroMeta = document.getElementById('heroMeta');
         if (heroImg) {
-          heroImg.src = mediaURL(destacada.imagen_url, IMG_FALLBACK);
+          const imagen = mediaURL(destacada.imagen_url, '');
+          heroImg.hidden = !imagen;
+          if (imagen) heroImg.src = imagen;
           heroImg.alt = destacada.titulo;
           heroImg.closest('a').href = articleHref(destacada.id);
+          heroImg.closest('a').classList.toggle('hero__img-link--text', !imagen);
         }
         if (heroTag) { heroTag.textContent = CATEGORIA_LABEL[destacada.categoria] || destacada.categoria; heroTag.className = 'tag ' + (TAG_CLASS[destacada.categoria] || 'tag--region'); }
         if (heroTitle) {
           heroTitle.textContent = destacada.titulo;
           heroTitle.href = articleHref(destacada.id);
         }
+        document.getElementById('heroReadMore').href = articleHref(destacada.id);
         if (heroExcerpt) heroExcerpt.textContent = destacada.resumen || '';
         if (heroMeta) heroMeta.innerHTML = `<span>Por ${escapeHtml(destacada.autor || 'Redacción ITEMA')}</span><span class="dot">·</span><span>${tiempoRelativo(destacada.creado_en)}</span>`;
+        status.hidden = true;
+      } else {
+        estado('heroStatus', 'Por ahora no hay notas publicadas.');
       }
+
+      const secundarias = articulos.filter(a => a.id !== destacada?.id).slice(0, 3);
+      const side = document.getElementById('heroSide');
+      side.hidden = secundarias.length === 0;
+      side.innerHTML = secundarias.map(a => notaCardHTML(a, 'side')).join('');
 
       const tickerContent = document.getElementById('tickerContent');
-      if (tickerContent) tickerContent.innerHTML = articulos.slice(0, 6).map((a) => `<span>${escapeHtml(a.titulo)}</span>`).join('');
+      if (tickerContent) tickerContent.innerHTML = articulos.length ? articulos.slice(0, 6).map((a) => `<span>${escapeHtml(a.titulo)}</span>`).join('') : '<span>Notas de mecánica y cursos del Instituto ITEMA</span>';
 
       const generales = articulos.filter((a) => a.categoria !== 'institucional');
-      const gridNotas = document.getElementById('gridNotas');
-      if (gridNotas && generales.length > 0) {
-        gridNotas.innerHTML = generales.slice(0, 3).map((a, i) => notaCardHTML(a, i === 0 ? 'featured' : '')).join('');
-      }
+      pintarGrid('gridNotas', generales, (a, i) => notaCardHTML(a, i === 0 ? 'featured' : ''), 'Todavía no hay notas técnicas publicadas.');
 
       const institucionales = articulos.filter((a) => a.categoria === 'institucional');
-      const gridInstitucional = document.getElementById('gridInstitucional');
-      if (gridInstitucional && institucionales.length > 0) {
-        gridInstitucional.innerHTML = institucionales.slice(0, 2).map((a) => notaCardHTML(a, 'horizontal')).join('');
+      pintarGrid('gridInstitucional', institucionales, a => notaCardHTML(a, 'horizontal'), 'Todavía no hay novedades institucionales publicadas.');
+      const ultimas = [...articulos].sort((a, b) => new Date(b.creado_en) - new Date(a.creado_en)).slice(0, 5);
+      const ranking = document.getElementById('latestNotes');
+      if (ultimas.length) {
+        ranking.innerHTML = ultimas.map((a, i) => `<li><span class="ranking__n">${i + 1}</span><a href="${articleHref(a.id)}">${escapeHtml(a.titulo)}</a></li>`).join('');
+      } else {
+        estado('latestNotes', 'Todavía no hay notas publicadas.');
       }
     })
-    .catch(() => {});
+    .catch(() => {
+      document.getElementById('heroMain').hidden = true;
+      document.getElementById('heroSide').hidden = true;
+      document.querySelector('.hero').classList.add('hero--single');
+      ['heroStatus', 'gridNotas', 'gridInstitucional', 'latestNotes'].forEach(id => estado(id, 'No pudimos cargar las notas. Volvé a intentar.', cargarNotas));
+    });
+  }
+  cargarNotas();
 
-  // Cursos presenciales
-  fetchJSON('/api/cursos?modalidad=presencial')
-    .then((cursos) => {
-      const grid = document.getElementById('gridCursos');
-      if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
-    })
-    .catch(() => {});
-
-  // Cursos grabados
-  fetchJSON('/api/cursos?modalidad=grabado')
-    .then((cursos) => {
-      const grid = document.getElementById('gridGrabados');
-      if (grid && Array.isArray(cursos) && cursos.length > 0) grid.innerHTML = cursos.slice(0, 6).map(cursoCardHTML).join('');
-    })
-    .catch(() => {});
+  function cargarCursos() {
+    ['gridCursos', 'gridGrabados'].forEach(id => estado(id, 'Cargando cursos…'));
+    return fetchJSON('/api/cursos')
+      .then(cursos => {
+        if (!Array.isArray(cursos)) throw new Error('Respuesta inválida');
+        cursos = cursos.filter(c => c.estado === 'publicado');
+        pintarGrid('gridCursos', cursos.filter(c => c.modalidad === 'presencial'), cursoCardHTML, 'Por ahora no hay cursos presenciales publicados. Consultá las próximas fechas por WhatsApp.');
+        pintarGrid('gridGrabados', cursos.filter(c => c.modalidad === 'grabado'), cursoCardHTML, 'Por ahora no hay cursos grabados publicados. Consultá las opciones por WhatsApp.');
+      })
+      .catch(() => ['gridCursos', 'gridGrabados'].forEach(id => estado(id, 'No pudimos cargar los cursos. Volvé a intentar.', cargarCursos)));
+  }
+  cargarCursos();
 
   // Publicidad / auspiciantes
   fetchJSON('/api/auspiciantes')
@@ -206,9 +264,13 @@ document.getElementById('anio').textContent = new Date().getFullYear();
   const list = document.getElementById('navList');
   burger.addEventListener('click', () => {
     list.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(list.classList.contains('is-open')));
   });
   list.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => list.classList.remove('is-open'));
+    a.addEventListener('click', () => {
+      list.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
   });
 })();
 
@@ -237,13 +299,4 @@ document.getElementById('anio').textContent = new Date().getFullYear();
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
   document.querySelectorAll('main section[id], main[id]').forEach(s => navIo.observe(s));
-})();
-
-// Buscador simple (placeholder funcional)
-(function(){
-  const btn = document.getElementById('navSearch');
-  btn.addEventListener('click', () => {
-    const q = prompt('Buscar en iTEMA News:');
-    if (q) alert(`Mostrando resultados para "${q}" (demo — sin backend conectado)`);
-  });
 })();
