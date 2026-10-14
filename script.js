@@ -166,7 +166,7 @@
           `Rubro: ${enc($("#rubro").value)}%0A`+
           `Ofrece: ${enc($("#productos").value)}%0A`+
           `WhatsApp: ${enc($("#whatsapp").value)}`;
-        window.open(`https://wa.me/5491126966153?text=${msg}`,"_blank","noopener");
+        window.open(`https://wa.me/5491157204355?text=${msg}`,"_blank","noopener");
 
         form.style.display="none";
         $("#demoOk").style.display="block";

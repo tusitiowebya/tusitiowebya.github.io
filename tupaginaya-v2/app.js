@@ -462,7 +462,7 @@ function initUI() {
     if (wa.value.trim() && !/^[\d+\s()\-]{8,20}$/.test(wa.value.trim())) { setErr(wa, "Número inválido"); ok = false; }
     if (!ok) return;
     const msg = `Hola TuPaginaYa! Quiero mi demo.%0ANegocio: ${enc($("#nombre").value)}%0ARubro: ${enc($("#rubro").value)}%0AOfrece: ${enc($("#productos").value)}%0AWhatsApp: ${enc($("#whatsapp").value)}`;
-    window.open(`https://wa.me/5491126966153?text=${msg}`, "_blank", "noopener");
+    window.open(`https://wa.me/5491157204355?text=${msg}`, "_blank", "noopener");
     form.style.display = "none";
     const okBox = $("#demoOk"); okBox.style.display = "flex";
     gsap.fromTo(okBox, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" });

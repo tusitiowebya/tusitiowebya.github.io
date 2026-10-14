@@ -12,7 +12,7 @@
   window.__TPY_ACTIVAR__ = true;
 
   var thisScript = document.currentScript;
-  var WA = "5491126966153";                       // WhatsApp TuPaginaYa
+  var WA = "5491157204355";                       // WhatsApp TuPaginaYa
 
   // ---- ref de la demo (data-ref > global > carpeta de la URL > dominio) ----
   function getRef() {
