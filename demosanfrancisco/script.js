@@ -81,25 +81,22 @@
   function updateStatus() {
     var d = nowAR();
     var mins = d.getHours() * 60 + d.getMinutes();
-    var sunday = d.getDay() === 0;
+    var day = d.getDay(); // 0 = domingo: atienden de lunes a sábado
     var state, detail, cls;
 
-    if (sunday) {
-      state = 'Hoy es domingo';
-      detail = 'Consultá por WhatsApp antes de venir';
-      cls = '';
+    var open = day !== 0 && SLOTS.find(function (s) { return mins >= s[0] && mins < s[1]; });
+    if (open) {
+      state = 'Abierto ahora';
+      detail = 'Hasta las ' + hhmm(open[1]) + ' · Rogelio Leach esq. Miguel Aráoz';
+      cls = 'is-open';
     } else {
-      var open = SLOTS.find(function (s) { return mins >= s[0] && mins < s[1]; });
-      if (open) {
-        state = 'Abierto ahora';
-        detail = 'Hasta las ' + hhmm(open[1]) + ' · Rogelio Leach esq. Miguel Aráoz';
-        cls = 'is-open';
-      } else {
-        var next = SLOTS.find(function (s) { return mins < s[0]; });
-        state = 'Cerrado ahora';
-        detail = next ? 'Abre a las ' + hhmm(next[0]) + ' · escribinos igual' : 'Abre mañana a las 09:00 · escribinos igual';
-        cls = 'is-closed';
-      }
+      var next = day !== 0 && SLOTS.find(function (s) { return mins < s[0]; });
+      state = 'Cerrado ahora';
+      if (next) detail = 'Abre hoy a las ' + hhmm(next[0]);
+      else if (day === 6 || day === 0) detail = 'Abre el lunes a las 09:00';
+      else detail = 'Abre mañana a las 09:00';
+      detail += ' · escribinos igual por WhatsApp';
+      cls = 'is-closed';
     }
 
     document.querySelectorAll('[data-status-text]').forEach(function (el) { el.textContent = state; });
