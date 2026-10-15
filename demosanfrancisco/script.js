@@ -2,7 +2,6 @@
 (function () {
   'use strict';
 
-  var WA = '5493888682650';
   var doc = document.documentElement;
   doc.classList.add('js');
 
@@ -110,20 +109,28 @@
   setInterval(updateStatus, 60000);
 
   /* ---------- Buscador: arma el mensaje de WhatsApp ---------- */
-  var STORE = 'sfa-busqueda';
+  var STORE = 'sfa-busqueda-v2';
   var form = document.getElementById('finder');
   var list = document.getElementById('ticketList');
-  var send = document.getElementById('ticketSend');
+  var sendBtns = document.querySelectorAll('[data-send]');
   var reset = document.getElementById('ticketReset');
   var inPres = document.getElementById('presupuesto');
   var inName = document.getElementById('nombre');
-  var state = { tipo: [], uso: [], pago: [], visita: [], presupuesto: '', nombre: '' };
+  var groups = Array.prototype.slice.call(form.querySelectorAll('.chips'));
+  var KEYS = groups.map(function (g) { return g.getAttribute('data-group'); });
+
+  function emptyState() {
+    var st = { presupuesto: '', nombre: '' };
+    KEYS.forEach(function (k) { st[k] = []; });
+    return st;
+  }
+  var state = emptyState();
 
   function load() {
     try {
       var saved = JSON.parse(localStorage.getItem(STORE) || 'null');
       if (saved && typeof saved === 'object') {
-        ['tipo', 'uso', 'pago', 'visita'].forEach(function (k) {
+        KEYS.forEach(function (k) {
           if (Array.isArray(saved[k])) state[k] = saved[k].filter(function (v) { return typeof v === 'string'; });
         });
         state.presupuesto = typeof saved.presupuesto === 'string' ? saved.presupuesto : '';
@@ -136,7 +143,7 @@
   }
 
   function syncChips() {
-    form.querySelectorAll('.chips').forEach(function (group) {
+    groups.forEach(function (group) {
       var key = group.getAttribute('data-group');
       group.querySelectorAll('.chip').forEach(function (chip) {
         chip.setAttribute('aria-pressed', String(state[key].indexOf(chip.getAttribute('data-value')) !== -1));
@@ -146,9 +153,12 @@
     inName.value = state.nombre;
   }
 
-  function labelOf(key, value) {
-    var chip = form.querySelector('.chips[data-group="' + key + '"] .chip[data-value="' + value.replace(/"/g, '\\"') + '"]');
-    return chip ? chip.textContent.trim() : value;
+  function labelOf(group, value) {
+    var chips = group.querySelectorAll('.chip');
+    for (var i = 0; i < chips.length; i++) {
+      if (chips[i].getAttribute('data-value') === value) return chips[i].textContent.trim();
+    }
+    return value;
   }
 
   function lineEl(text, hl) {
@@ -163,14 +173,22 @@
     return li;
   }
 
+  var SHORT = { tipo: '', estado: '', uso: 'Para', pago: 'Pago:', usado: 'Usado:' };
+
+  function anySelected() {
+    return KEYS.some(function (k) { return state[k].length; }) || state.presupuesto.trim();
+  }
+
   function render() {
     list.textContent = '';
     var lines = [];
-    if (state.tipo.length) lines.push(lineEl(labelOf('tipo', state.tipo[0]), ''));
-    if (state.uso.length) lines.push(lineEl(state.uso.map(function (v) { return labelOf('uso', v); }).join(' · '), 'Para'));
-    if (state.pago.length) lines.push(lineEl(labelOf('pago', state.pago[0]), 'Pago:'));
+    groups.forEach(function (group) {
+      var key = group.getAttribute('data-group');
+      if (!state[key].length) return;
+      var text = state[key].map(function (v) { return labelOf(group, v); }).join(' · ');
+      lines.push(lineEl(text, SHORT[key] || ''));
+    });
     if (state.presupuesto.trim()) lines.push(lineEl(state.presupuesto.trim(), 'Hasta:'));
-    if (state.visita.length) lines.push(lineEl(labelOf('visita', state.visita[0]), 'Paso:'));
 
     if (!lines.length) {
       var empty = document.createElement('li');
@@ -180,23 +198,25 @@
     } else {
       lines.forEach(function (li) { list.appendChild(li); });
     }
-    send.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(buildMessage());
+    var msg = encodeURIComponent(buildMessage());
+    sendBtns.forEach(function (a) {
+      a.href = 'https://wa.me/' + a.getAttribute('data-send') + '?text=' + msg;
+    });
   }
 
   function buildMessage() {
     var m = ['Hola, Grupo San Francisco Automotores.'];
     if (state.nombre.trim()) m[0] += ' Soy ' + state.nombre.trim() + '.';
-    var any = state.tipo.length || state.uso.length || state.pago.length || state.presupuesto.trim() || state.visita.length;
-    if (!any) {
+    if (!anySelected()) {
       m.push('Estoy buscando mi próximo vehículo. ¿Qué unidades tienen disponibles?');
       return m.join('\n');
     }
     m.push('Armé mi búsqueda en la web:');
-    if (state.tipo.length) m.push('• Tipo: ' + state.tipo[0]);
-    if (state.uso.length) m.push('• Lo voy a usar para: ' + state.uso.join(', '));
-    if (state.pago.length) m.push('• Pago: ' + state.pago[0]);
+    groups.forEach(function (group) {
+      var key = group.getAttribute('data-group');
+      if (state[key].length) m.push('• ' + group.getAttribute('data-label') + ': ' + state[key].join(', '));
+    });
     if (state.presupuesto.trim()) m.push('• Presupuesto aproximado: ' + state.presupuesto.trim());
-    if (state.visita.length) m.push('• Para pasar por el local: ' + state.visita[0]);
     m.push('¿Qué unidades tienen que se ajusten?');
     return m.join('\n');
   }
@@ -220,7 +240,7 @@
   form.addEventListener('submit', function (e) { e.preventDefault(); });
 
   reset.addEventListener('click', function () {
-    state = { tipo: [], uso: [], pago: [], visita: [], presupuesto: '', nombre: '' };
+    state = emptyState();
     syncChips(); render(); save();
   });
 
