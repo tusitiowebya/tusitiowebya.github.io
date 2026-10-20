@@ -320,7 +320,7 @@
       afuera: { src: 'media/feed-entrada.mp4', srcM: 'media/feed-entrada.mp4', poster: 'media/feed-entrada.jpg', cam: 'CAM 02 · AFUERA', tag: 'VEHÍCULO' }
     };
     const CAMS = {
-      interior: { img: 'media/cam-interior.webp', w: 700, h: 1087, alt: 'Cámara WiFi de interior blanca con cabezal que gira' },
+      interior: { img: 'media/ranger2-caja.webp', w: 638, h: 1158, alt: 'Caja de la cámara Imou Ranger 2 de interior' },
       exterior: { img: 'media/cam-exterior.webp', w: 900, h: 481, alt: 'Cámara WiFi de exterior blanca y negra con soporte de pared' },
       bateria: { img: 'media/cam-bateria.webp', w: 640, h: 711, alt: 'Cámara a batería blanca, vista de frente' }
     };
@@ -589,6 +589,17 @@
   if (!finePointer && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('is-lit', e.isIntersecting)), { rootMargin: '-38% 0px -38% 0px' });
     $$('.marca').forEach(m => io.observe(m));
+  }
+
+  /* ---------- en stock: el giro de la Ranger 2 corre solo mientras se ve ---------- */
+  const giro = $('#giroVideo');
+  if (giro && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) {
+        if (!giro.src) { giro.muted = true; giro.src = giro.dataset.src; }
+        playSafe(giro);
+      } else if (!giro.paused) giro.pause();
+    }), { rootMargin: '120px 0px' }).observe(giro);
   }
 
   /* ---------- barra de reproducción + estados del scroll ---------- */
