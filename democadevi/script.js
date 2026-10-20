@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var WA = "5491149367769"; // 11 4936-7769
+  var WA = "5491124579398"; // 11 2457-9398
 
   /* ---------- modo QA (capturas headless): ?qa ---------- */
   if (location.search.indexOf("qa") > -1) document.documentElement.classList.add("qa");
