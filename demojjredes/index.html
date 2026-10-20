@@ -84,6 +84,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "¿Para qué sirven las redes?", "acceptedAnswer": { "@type": "Answer", "text": "Para cuidar a chicos y gatos (aptas para todo tipo de mascotas), evitar que entren palomas y otras aves, y contener pelotas en canchas y terrazas." } },
         { "@type": "Question", "name": "¿La red transparente se nota?", "acceptedAnswer": { "@type": "Answer", "text": "Casi nada: es de nylon monofilamento de 0,8 mm con malla romboidal de 5x5 cm, así que no te tapa la vista." } },
+        { "@type": "Question", "name": "¿Cuánto aguanta y cuánto dura?", "acceptedAnswer": { "@type": "Answer", "text": "Cada pitón soporta de 15 a 20 kg y, sumando la soga perimetral, la red aguanta hasta 180 kg por metro cuadrado. Tiene doble nudo termosellado y tratamiento UV: dura de 7 a 10 años." } },
         { "@type": "Question", "name": "¿Dónde instalan?", "acceptedAnswer": { "@type": "Answer", "text": "En todo Buenos Aires: balcones, ventanas, terrazas, escaleras, piletas, techos, hogares y comercios." } },
         { "@type": "Question", "name": "¿Qué trae el kit autoinstalable?", "acceptedAnswer": { "@type": "Answer", "text": "La red (multifilamento o transparente), soga perimetral, pitones de fijación, tarugos y un manual de instrucciones." } },
         { "@type": "Question", "name": "¿En qué horario atienden?", "acceptedAnswer": { "@type": "Answer", "text": "De lunes a sábados, de 8 a 18 hs, por WhatsApp al 11 3398-0947." } }
@@ -195,7 +196,7 @@
         </div>
       </div>
       <div class="cuidar-pan" role="tabpanel" id="pan-chicos" aria-labelledby="tab-chicos" hidden>
-        <img src="img/balcon-estructura-1100.webp" srcset="img/balcon-estructura-640.webp 640w, img/balcon-estructura-1100.webp 899w" sizes="(max-width: 900px) 92vw, 44vw" width="899" height="899" loading="lazy" decoding="async" alt="Balcón con estructura metálica y red de protección sobre la baranda.">
+        <img src="img/escalera-metalica-1100.webp" srcset="img/escalera-metalica-640.webp 640w, img/escalera-metalica-1100.webp 774w" sizes="(max-width: 900px) 92vw, 44vw" width="774" height="774" loading="lazy" decoding="async" alt="Escalera de peldaños de madera con baranda metálica cerrada con red transparente.">
         <div class="cuidar-txt">
           <h3>Balcones y escaleras seguras para los chicos</h3>
           <p>La red transparente es apta para chicos pequeños y medianos. Donde la baranda no alcanza o el espacio es complicado, sumamos una estructura metálica a medida.</p>
@@ -253,7 +254,7 @@
           <h3>Estructuras metálicas</h3>
           <p>Soportes y cerramientos metálicos a medida para zonas complejas o que necesitan un refuerzo extra de seguridad.</p>
         </div>
-        <figure class="serv-foto"><img src="img/puerta-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Marco metálico negro hecho a medida para cerrar una abertura."></figure>
+        <figure class="serv-foto"><img src="img/estructura-interior-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Estructura metálica a medida con red en el vacío de un hall interior."></figure>
       </li>
       <li class="serv rv">
         <span class="serv-n">03</span>
@@ -290,8 +291,11 @@
       <dl class="specs rv">
         <div><dt>Material</dt><dd>Nylon monofilamento</dd></div>
         <div><dt>Malla</dt><dd>Romboidal de 5×5 cm</dd></div>
-        <div><dt>Intemperie</dt><dd>Resistente al agua y al sol</dd></div>
-        <div><dt>Mantenimiento</dt><dd>No se oxida, no necesita</dd></div>
+        <div><dt>Nudos</dt><dd>Doble nudo termosellado</dd></div>
+        <div><dt>Intemperie</dt><dd>Tratamiento UV contra el sol y la lluvia</dd></div>
+        <div><dt>Resistencia</dt><dd>Hasta 180 kg por m² con la soga perimetral</dd></div>
+        <div><dt>Vida útil</dt><dd>De 7 a 10 años</dd></div>
+        <div><dt>Mantenimiento</dt><dd>No necesita: se limpia con un trapo húmedo</dd></div>
         <div><dt>Sirve para</dt><dd>Gatos, chicos pequeños y medianos, palomas y aves</dd></div>
       </dl>
     </div>
@@ -367,21 +371,40 @@
         <button type="button" class="f is-on" data-f="todos" aria-pressed="true">Todos</button>
         <button type="button" class="f" data-f="balcon" aria-pressed="false">Balcones</button>
         <button type="button" class="f" data-f="terraza" aria-pressed="false">Terrazas</button>
+        <button type="button" class="f" data-f="escalera" aria-pressed="false">Escaleras y ventanas</button>
         <button type="button" class="f" data-f="otros" aria-pressed="false">Piletas y estructuras</button>
       </div>
     </div>
     <ul class="grilla" id="grilla">
       <li data-t="balcon" class="g-alto"><img src="img/balcon-alto-1100.webp" srcset="img/balcon-alto-640.webp 640w, img/balcon-alto-1100.webp 864w" sizes="(max-width: 768px) 92vw, 33vw" width="864" height="864" loading="lazy" decoding="async" alt="Balcón en altura cerrado con red frente a torres y árboles."><span>Balcón en altura</span></li>
-      <li data-t="otros"><img src="img/pileta-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Cerco de pileta con red y postes negros en un jardín."><span>Cerco de pileta</span></li>
+      <li data-t="escalera"><img src="img/escalera-metalica-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Escalera de peldaños de madera con baranda metálica y red transparente."><span>Escalera</span></li>
+      <li data-t="otros"><img src="img/pileta-jardin-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Cerco de pileta con caños blancos y red en un patio con jardín."><span>Cerco de pileta</span></li>
+      <li data-t="balcon"><img src="img/balcon-ciudad-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón corrido con red transparente frente a edificios del barrio."><span>Balcón corrido</span></li>
+      <li data-t="escalera"><img src="img/ventanal-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Ventanal con red transparente fijada con pitones y vista a los árboles."><span>Ventanal</span></li>
       <li data-t="terraza"><img src="img/terraza-blanca-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza blanca con red en todo el perímetro."><span>Terraza</span></li>
-      <li data-t="balcon"><img src="img/balcon-verde-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón curvo con red entre los árboles."><span>Balcón con verde</span></li>
-      <li data-t="otros"><img src="img/balcon-estructura-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Estructura metálica con red sobre un balcón."><span>Estructura metálica</span></li>
-      <li data-t="terraza"><img src="img/terraza-palmera-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza con red y plantas."><span>Terraza con plantas</span></li>
-      <li data-t="balcon"><img src="img/balcon-edificios-640.webp" width="464" height="464" loading="lazy" decoding="async" alt="Balcón con red frente a edificios de la ciudad."><span>Balcón urbano</span></li>
-      <li data-t="balcon"><img src="img/balcon-arboles-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón con red y vista a los árboles."><span>Balcón al frente</span></li>
-      <li data-t="terraza"><img src="img/terraza-red-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza con baranda y red tensada."><span>Terraza en esquina</span></li>
-      <li data-t="otros"><img src="img/puerta-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Marco metálico a medida."><span>Cerramiento a medida</span></li>
+      <li data-t="escalera"><img src="img/escalera-caracol-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Escalera interior con baranda y puerta metálica con red."><span>Escalera con puerta</span></li>
+      <li data-t="balcon"><img src="img/balcon-largo-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón largo cerrado con red hasta el techo frente a los árboles."><span>Balcón largo</span></li>
+      <li data-t="otros"><img src="img/pileta-cerco-640.webp" width="581" height="581" loading="lazy" decoding="async" alt="Cerco de pileta con estructura metálica gris y red en el jardín."><span>Pileta con estructura</span></li>
+      <li data-t="balcon"><img src="img/balcon-sansevieria-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón con plantas y red sobre la baranda de vidrio."><span>Balcón con plantas</span></li>
+      <li data-t="escalera"><img src="img/baranda-interior-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Baranda interior de madera con red hasta el techo."><span>Baranda interior</span></li>
+      <li data-t="terraza"><img src="img/terraza-casa-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza de una casa con estructura y red sobre el borde."><span>Terraza de casa</span></li>
+      <li data-t="otros"><img src="img/estructura-interior-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Estructura metálica con red en el vacío de un hall interior."><span>Estructura en hall</span></li>
+      <li data-t="balcon" class="extra"><img src="img/balcon-verde-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón curvo con red entre los árboles."><span>Balcón con verde</span></li>
+      <li data-t="escalera" class="extra"><img src="img/escalera-hormigon-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Escalera de cemento con baranda metálica y red."><span>Escalera de cemento</span></li>
+      <li data-t="terraza" class="extra"><img src="img/terraza-deck-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Deck de madera cerrado con red entre la vegetación."><span>Deck con red</span></li>
+      <li data-t="balcon" class="extra"><img src="img/balcon-edificio-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón de departamento con red sobre la baranda."><span>Balcón de depto</span></li>
+      <li data-t="escalera" class="extra"><img src="img/ventana-ladrillo-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Ventana en pared de ladrillo con red de protección."><span>Ventana</span></li>
+      <li data-t="otros" class="extra"><img src="img/balcon-estructura-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Estructura metálica con red sobre un balcón."><span>Estructura metálica</span></li>
+      <li data-t="terraza" class="extra"><img src="img/terraza-palmera-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza con red y plantas."><span>Terraza con plantas</span></li>
+      <li data-t="balcon" class="extra"><img src="img/balcon-baranda-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón con baranda blanca y red transparente hasta arriba."><span>Balcón al frente</span></li>
+      <li data-t="otros" class="extra"><img src="img/cerco-jardin-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Cerco con red y postes negros en el jardín."><span>Cerco de jardín</span></li>
+      <li data-t="balcon" class="extra"><img src="img/balcon-edificios-640.webp" width="464" height="464" loading="lazy" decoding="async" alt="Balcón con red frente a edificios de la ciudad."><span>Balcón urbano</span></li>
+      <li data-t="otros" class="extra"><img src="img/pileta-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Cerco de pileta con red y postes negros en un jardín."><span>Cerco de pileta</span></li>
+      <li data-t="balcon" class="extra"><img src="img/balcon-arboles-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Balcón con red y vista a los árboles."><span>Balcón arbolado</span></li>
+      <li data-t="terraza" class="extra"><img src="img/terraza-red-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Terraza con baranda y red tensada."><span>Terraza en esquina</span></li>
+      <li data-t="otros" class="extra"><img src="img/puerta-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Marco metálico a medida."><span>Cerramiento a medida</span></li>
     </ul>
+    <button type="button" class="ver-mas" id="verMas" aria-controls="grilla">Ver más trabajos <span>(14)</span></button>
     <a class="ig-link rv" href="https://www.instagram.com/jjredesproteccion/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Más trabajos en <b>@jjredesproteccion</b></a>
   </div>
 </section>
@@ -415,6 +438,7 @@
     <div class="faq">
       <details class="rv"><summary>¿Para qué sirven las redes?</summary><p>Para cuidar a chicos y gatos (son aptas para todo tipo de mascotas), evitar que entren palomas y otras aves, y contener pelotas en canchas y terrazas.</p></details>
       <details class="rv"><summary>¿La red transparente se nota?</summary><p>Casi nada. Es de nylon monofilamento de 0,8 mm con malla romboidal de 5×5 cm: te protege sin tapar la vista.</p></details>
+      <details class="rv"><summary>¿Cuánto aguanta y cuánto dura?</summary><p>Cada pitón soporta de 15 a 20 kg y, sumando la soga perimetral, la red aguanta hasta 180 kg por metro cuadrado. Tiene doble nudo termosellado y tratamiento UV, así que dura de 7 a 10 años.</p></details>
       <details class="rv"><summary>¿Dónde la pueden instalar?</summary><p>En balcones, ventanas, terrazas, escaleras, piletas, techos y otros espacios de tu casa o comercio, en todo Buenos Aires.</p></details>
       <details class="rv"><summary>¿Y si mi balcón es complicado?</summary><p>Para zonas complejas o que piden más seguridad hacemos soportes y cerramientos metálicos a medida.</p></details>
       <details class="rv"><summary>¿Qué trae el kit autoinstalable?</summary><p>La red (multifilamento o transparente), soga perimetral, pitones de fijación, tarugos resistentes y un manual de instrucciones claro.</p></details>

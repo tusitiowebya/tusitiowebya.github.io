@@ -343,9 +343,17 @@
   /* ---------- filtros de trabajos ---------- */
   const fs = $$('.filtros .f');
   const items = $$('#grilla li');
+  const verMas = $('#verMas');
+  let todo = false; // con "Todos" se ven 13 hasta tocar "Ver más"
+  const filtrar = f => {
+    items.forEach(li => li.classList.toggle('oculto',
+      f === 'todos' ? (!todo && li.classList.contains('extra')) : li.dataset.t !== f));
+    if (verMas) verMas.hidden = todo || f !== 'todos';
+  };
   fs.forEach(b => b.addEventListener('click', () => {
-    const f = b.dataset.f;
     fs.forEach(x => { const on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', String(on)); });
-    items.forEach(li => li.classList.toggle('oculto', f !== 'todos' && li.dataset.t !== f));
+    filtrar(b.dataset.f);
   }));
+  if (verMas) verMas.addEventListener('click', () => { todo = true; filtrar('todos'); });
+  filtrar('todos');
 })();
