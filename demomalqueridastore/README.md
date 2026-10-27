@@ -1,34 +1,29 @@
 # MalqueridaStore — demo de TuPaginaYa
 
-Entrega: https://malqueridastore.tupaginaya.com.ar/
+Entrega: https://malqueridastore.tupaginaya.com.ar/ · catálogo: `catalogo/`
 
-Feria americana / moda circular. WhatsApp **5491127330114**, solo mensajes. Instagram @malqueridastore. Bio y publicaciones confirman Av. de Mayo 817, CABA, locales 55–58; lunes a viernes 10–18:30; envíos a todo el país; compra, venta y consignación. Información consultada el 07/10/2026.
+Feria americana seleccionada / moda circular. WhatsApp **5491127330114** (solo mensajes). Instagram, Facebook y TikTok @malqueridastore. Av. de Mayo 817, locales 55–58, CABA, "galería lateral a Café Tortoni" (caption del reel De9pKM9RTls, 26/10). L–V 10–18:30 (bio, 07/10). Envíos a todo el país.
 
-## Material real
+## Rediseño 27/10/2026
 
-- https://www.instagram.com/p/DeHu6_pxO2T/ — video de vidriera: hero optimizado (7 segundos / 720×1280, sin audio, faststart), póster y recortes de prendas.
-- https://www.instagram.com/p/DeMu0qOx5K1/ — look rojo y negro.
-- https://www.instagram.com/p/DeFkOkJR0J8/ — flyer de consignación y logo recortado conservando el diseño original.
-- https://www.instagram.com/malqueridastore/ — bio, actividad, dirección, WhatsApp y envíos.
+El cliente mandó una captura de su Tiendanube (malqueridastore.mitiendanube.com) con la identidad nueva: logo "M" en círculo con corazón, MALQUERIDASTORE en serif, "Feria americana seleccionada", negro/crema/bordó, "Prendas únicas. Estilo auténtico", ingresos semanales, hallazgos únicos, calidad seleccionada. Pidió **catálogo aparte**.
 
-El carrusel muestra **looks publicados**, no un inventario confirmado. La etiqueta, la ficha, la FAQ y el mensaje WhatsApp aclaran que se consulta disponibilidad. Sin precios, talles, stock, composición de las prendas, testimonios ni condiciones inventados. Los recortes pueden mostrar varias prendas; cada consulta incluye nombre, publicación original y URL absoluta de la foto para identificar el interés. Las medidas son una referencia de una prenda del visitante, no una recomendación automática de talle.
+- Logo: brandboard real de Tiendanube (`logo-…png` 2796×1290), alfa por luma → `media/logo.png`, `wordmark.png`, `emblem.png`; favicons con el emblema sobre negro.
+- La Tiendanube **no tiene productos cargados** (placeholders): no hay precios ni stock reales.
+- Hero: reel DeHvMpeR6A1 (vidriera), tramo 11,6–18,4 s recortado 3:4, 720×960, sin audio, faststart (860 KB).
+- Catálogo: 14 prendas recortadas de fotogramas de reels reales (De9pKM9RTls, DeuOS7Dx9Kf, DeekJfDRx6E, DeHvMpeR6A1) + el look DeMu0qOx5K1. Datos en `prendas.js`: nombre descriptivo de lo que se ve, categoría, reel de origen y fecha. Sin precio, talle, estado ni stock: todo "A consultar".
 
-## Interacción
+## Estructura
 
-Carrusel touch/scroll-snap, flechas y teclado; buscador sin distinción de acentos; categorías; ficha modal; favoritas persistidas en localStorage por catálogo; “Mi perchero” con medidas opcionales, nota y vista previa exacta de WhatsApp. Guardar no reserva stock. Los links abren la consulta: no envían mensajes automáticamente. La selección es una consulta comercial, no un checkout ni un pedido confirmado.
+- `index.html` + `script.js`: portada (vidriera en arco, recién colgado, Avisame, consignación, local con mapa, FAQ).
+- `catalogo/index.html` + `catalogo/script.js`: el perchero completo con filtros por tipo, búsqueda, ficha, estados de carga/vacío/error.
+- `tienda.js`: compartido (carga CobrOS o `prendas.js`, "Mis elegidas" en localStorage, mensajes WhatsApp, lista de espera "Avisame").
+- `style.css` compartido. `config.js`: CobrOS con `slug: ''`.
 
 ## CobrOS
 
-`config.js` mantiene `slug: ''`. No se creó un tenant: no tenemos email administrativo real ni productos con todos sus datos. Sin slug no hay llamadas al backend. Para activar, reemplazar el slug por el del comercio real; el GET público `/catalogo/{slug}` reemplaza por completo los looks de Instagram. Nunca mezcla ambos catálogos ni usa Instagram como fallback de un error.
+Sin tenant (falta email real y productos con datos). Con slug: GET público con timeout, reemplaza por completo `prendas.js`, categorías dinámicas, HTML escapado, foto inválida → emblema, precio 0 → "A consultar", stock 0 con `controlaStock` → "Ya se fue". Probado con mocks (ok/vacío/500/inválido/timeout + reintento). La selección es una consulta por WhatsApp: no hace POST `/pedido`.
 
-GET con timeout 8 segundos, carga/vacío/error con reintento; mapeo de `_id`, nombre, categoría, descripción, foto y precio. La ausencia de foto muestra el isotipo de la demo. Stock agotado solo si `controlaStock` es true y stock es numérico. Sin precios positivos confirmados se indica “A consultar”. La clave de persistencia separa las consultas de Instagram del inventario activo.
+## Pendientes del cliente
 
-El flujo solicitado vende por **consulta WhatsApp**: no ejecuta POST `/pedido`, no descuenta stock y no abre un pago. Para ofrecer checkout a futuro, acordar pagos, reservas, envíos y cargar productos reales; implementar confirmación y validación de inventario antes de activar pedidos de CobrOS.
-
-## SEO y publicación
-
-HTML/CSS/JS separados, rutas relativas. ClothingStore + WebSite con datos reales; canonical al subdominio, OG/Twitter en URL absoluta de GitHub Pages; OG propia 1200×630, favicon SVG/32/180/512, sitemap. No se publica Schema Product/Offer para los looks sin precio y disponibilidad confirmados.
-
-Commit y push restringidos a `demomalqueridastore/`. Subdominio mediante `/root/nuevo-demo.sh malqueridastore demomalqueridastore`.
-
-Pendientes de activación comercial: disponibilidad y datos por prenda, email del comercio y slug real de CobrOS, política de pago/reserva, condiciones de consignación y costo/plazo de envíos. La demo ya permite consultar con los datos públicos.
+Precios/talles/estado por prenda (o cargar Tiendanube/CobrOS), condiciones de consignación, costo de envíos, si el horario sigue L–V 10–18:30, y si la web debe enlazar a la Tiendanube cuando tenga productos.
