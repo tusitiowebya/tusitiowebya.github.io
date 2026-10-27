@@ -19,11 +19,11 @@
       opts: ['Es de pie', 'Es de techo', 'No arranca', 'Gira lento', 'Hace ruido o vibra', 'Falla una velocidad', 'Huele a quemado']
     },
     microondas: {
-      name: 'Microondas',
+      name: 'Horno microondas',
       opts: ['No enciende', 'No calienta', 'Hace chispas', 'El plato no gira', 'No responde el panel', 'Corta la luz al usarlo']
     },
     instalacion: {
-      name: 'Instalación eléctrica',
+      name: 'Electricidad e instalación',
       opts: ['Salta la térmica', 'Salta el disyuntor', 'Enchufes sin corriente', 'Olor a quemado', 'Sumar circuitos o tomas', 'Revisión general', 'Necesito firma de matriculado']
     },
     cargador: {
@@ -31,7 +31,7 @@
       opts: ['Quiero instalar uno', 'Ya tengo el cargador', 'Saber si mi instalación lo soporta', 'Va en cochera o garage', 'Va en exterior']
     }
   };
-  var ORDER = ['lavarropas', 'ventilador', 'microondas', 'instalacion', 'cargador'];
+  var ORDER = ['instalacion', 'lavarropas', 'microondas', 'ventilador', 'cargador'];
 
   function waUrl(text) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
   function openWa(url) {
@@ -170,7 +170,7 @@
         card.appendChild(h);
         var chips = el('div', 'chips');
         chips.setAttribute('role', 'group');
-        chips.setAttribute('aria-label', '¿Qué le pasa al ' + SERVICES[k].name.toLowerCase() + '?');
+        chips.setAttribute('aria-label', 'Qué pasa: ' + SERVICES[k].name);
         SERVICES[k].opts.forEach(function (o) {
           var c = el('button', 'chip', o);
           c.type = 'button';
