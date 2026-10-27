@@ -228,7 +228,7 @@
     if (ex.length) lines.push('Me interesa: ' + ex.join(', '));
     var barrio = document.getElementById('barrio').value.trim();
     var nombre = document.getElementById('nombre').value.trim();
-    if (barrio) lines.push('Barrio/localidad: ' + barrio);
+    if (barrio) lines.push('Localidad/barrio: ' + barrio);
     if (nombre) lines.push('Soy ' + nombre + '.');
     if (!picked.length) lines.push('Todavía no marqué puntos en el plano, ¿me asesoran?');
     return lines.join('\n');
