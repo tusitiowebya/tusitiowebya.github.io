@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8"/>
+<title>TuPaginaYa · 3 conceptos de identidad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Onest:wght@400;500;600&family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800;62..125,900&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Sans:wdth,wght@75..100,400;75..100,600;75..100,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0820; --bg2:#120E33; --ink:#F4F1EA; --soft:#A9A6B4; --dim:#6E6B7A;
+  --blue:#3D6DFF; --violet:#7C5CFF; --mag:#C13B8A; --orange:#FF7A18;
+  --grad:linear-gradient(95deg,#3D6DFF 0%,#7C5CFF 36%,#C13B8A 70%,#FF7A18 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#05040F;color:var(--ink);font-family:"Onest",system-ui,sans-serif;width:1600px}
+.concept{padding:64px 72px 72px;border-bottom:1px solid rgba(255,255,255,.08);position:relative}
+.tag{font:600 13px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);display:flex;gap:18px;align-items:center;margin-bottom:28px}
+.tag b{color:var(--ink);font-size:15px}
+.tag i{font-style:normal;color:var(--dim)}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:28px}
+.hero{background:var(--bg);border-radius:28px;min-height:520px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;position:relative;overflow:hidden}
+.apps{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:20px}
+.card{background:var(--bg);border-radius:20px;padding:22px;position:relative;overflow:hidden}
+.card .lbl{font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:16px;display:block}
+.og{grid-column:1/3;aspect-ratio:1200/630;padding:0;border-radius:20px}
+.og .lbl{position:absolute;top:16px;right:18px;z-index:3}
+.fav{display:flex;align-items:flex-end;gap:18px}
+.fav .tab{background:#1d1a2e;border-radius:10px 10px 0 0;padding:9px 14px;display:flex;gap:9px;align-items:center;font-size:13px;color:#ddd;width:210px}
+.avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;display:grid;place-items:center}
+.mono{display:flex;gap:16px;align-items:center}
+.mono .chip{width:96px;height:96px;border-radius:18px;display:grid;place-items:center}
+.notes{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;color:var(--soft);font-size:15px;line-height:1.5}
+.notes b{color:var(--ink);display:block;font-weight:600;margin-bottom:4px}
+.sw{display:flex;gap:8px;margin-top:8px}
+.sw span{width:26px;height:26px;border-radius:7px}
+
+/* ---------- A · Ventana Ya ---------- */
+.A .word{font-family:"Bricolage Grotesque";font-weight:800;letter-spacing:-.035em;font-variation-settings:"opsz" 96}
+.A .word .ya{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.A .lock{display:flex;align-items:center;gap:22px}
+.A .hero::before{content:"";position:absolute;inset:40px;border:1.5px solid rgba(255,255,255,.07);border-radius:22px}
+.A .hero::after{content:"";position:absolute;left:40px;right:40px;top:92px;height:1.5px;background:rgba(255,255,255,.07)}
+.A .dots{position:absolute;top:60px;left:64px;display:flex;gap:9px}
+.A .dots span{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.12)}
+.A .claim{font-family:"Onest";font-size:20px;color:var(--soft)}
+
+/* ---------- B · Monograma TY ---------- */
+.B .word{font-family:"Archivo";font-weight:900;font-stretch:125%;letter-spacing:.02em;text-transform:uppercase}
+.B .word .ya{color:var(--orange)}
+.B .lock{display:flex;align-items:center;gap:26px}
+.B .lock .sep{width:1.5px;align-self:stretch;background:rgba(255,255,255,.2)}
+.B .hero{background:
+  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/48px 48px,
+  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/48px 48px,var(--bg)}
+.B .claim{font-family:"Hanken Grotesk";font-size:18px;color:var(--soft);letter-spacing:.18em;text-transform:uppercase}
+
+/* ---------- C · Cursor 48 h ---------- */
+.C .word{font-family:"Instrument Sans";font-weight:700;letter-spacing:-.045em;font-stretch:88%}
+.C .word .ya{position:relative;background:linear-gradient(95deg,#C13B8A,#FF7A18);-webkit-background-clip:text;background-clip:text;color:transparent}
+.C .caret{display:inline-block;width:.075em;height:.78em;background:var(--orange);margin-left:.06em;vertical-align:-.04em;border-radius:2px}
+.C .lock{display:flex;align-items:center;gap:20px}
+.C .trail{position:absolute;left:-10%;width:70%;height:2px;border-radius:2px;opacity:.55}
+.C .claim{font-family:"JetBrains Mono";font-size:16px;color:var(--soft)}
+.C .claim em{font-style:normal;color:var(--orange)}
+</style>
+</head>
+<body>
+
+<!-- SVG symbols -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3D6DFF"/><stop offset=".38" stop-color="#7C5CFF"/><stop offset=".7" stop-color="#C13B8A"/><stop offset="1" stop-color="#FF7A18"/>
+    </linearGradient>
+    <linearGradient id="gh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3D6DFF"/><stop offset=".38" stop-color="#7C5CFF"/><stop offset=".7" stop-color="#C13B8A"/><stop offset="1" stop-color="#FF7A18"/>
+    </linearGradient>
+    <!-- A: ventana con check que se escapa del marco -->
+    <symbol id="symA" viewBox="0 0 64 64">
+      <path d="M40 8H14a8 8 0 0 0-8 8v34a8 8 0 0 0 8 8h34a8 8 0 0 0 8-8V32" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M6 21h22" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M20 37l9 9L59 9" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="symAm" viewBox="0 0 64 64">
+      <path d="M40 8H14a8 8 0 0 0-8 8v34a8 8 0 0 0 8 8h34a8 8 0 0 0 8-8V32" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M6 21h22" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M20 37l9 9L59 9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- B: T + Y comparten el asta -->
+    <symbol id="symB" viewBox="0 0 64 64">
+      <path d="M4 6h20l8 11 8-11h20v10H45L37 28v30H27V28L19 16H4z" fill="url(#g)"/>
+    </symbol>
+    <symbol id="symBm" viewBox="0 0 64 64">
+      <path d="M4 6h20l8 11 8-11h20v10H45L37 28v30H27V28L19 16H4z" fill="currentColor"/>
+    </symbol>
+    <!-- C: cursor con estela -->
+    <symbol id="symC" viewBox="0 0 64 64">
+      <path d="M4 22h16" stroke="#3D6DFF" stroke-width="5" stroke-linecap="round"/>
+      <path d="M2 33h18" stroke="#7C5CFF" stroke-width="5" stroke-linecap="round"/>
+      <path d="M8 44h14" stroke="#C13B8A" stroke-width="5" stroke-linecap="round"/>
+      <path d="M27 8l31 24-14 3 8 16-7 4-8-16-10 10z" fill="#FF7A18" stroke="#FF7A18" stroke-width="3" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="symCm" viewBox="0 0 64 64">
+      <path d="M4 22h16M2 33h18M8 44h14" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M27 8l31 24-14 3 8 16-7 4-8-16-10 10z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= A ================= -->
+<section class="concept A">
+  <div class="tag"><b>A · Ventana Ya</b><i>Bricolage Grotesque + Onest</i><i>Motivo: el marco de navegador</i></div>
+  <div class="grid">
+    <div class="hero">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="lock">
+        <svg width="132" height="132" style="color:var(--ink)"><use href="#symA"/></svg>
+        <span class="word" style="font-size:104px">Tu<span>Pagina</span><span class="ya">Ya</span></span>
+      </div>
+      <p class="claim">Tu web, lista. Diseñada a medida y online en 48 horas.</p>
+    </div>
+    <div class="apps">
+      <div class="card"><span class="lbl">Favicon 32 px</span>
+        <div class="fav"><div class="tab"><svg width="16" height="16" style="color:#fff"><use href="#symA"/></svg>TuPaginaYa · Diseño…</div>
+        <svg width="32" height="32" style="color:#fff"><use href="#symA"/></svg></div></div>
+      <div class="card"><span class="lbl">Avatar IG / WhatsApp</span>
+        <div class="avatar" style="background:var(--bg2)"><svg width="68" height="68" style="color:#fff"><use href="#symA"/></svg></div></div>
+      <div class="card og">
+        <span class="lbl">OG 1200×630</span>
+        <div style="position:absolute;inset:0;background:var(--bg);padding:34px 40px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;gap:12px;align-items:center"><svg width="36" height="36" style="color:#fff"><use href="#symA"/></svg><span class="word" style="font-size:28px">TuPagina<span class="ya">Ya</span></span></div>
+          <div class="word" style="font-size:44px;line-height:1">Páginas web para<br>negocios <span class="ya">en Argentina</span></div>
+          <div style="font:500 13px 'JetBrains Mono';color:var(--soft)">tupaginaya.com.ar · demo gratis</div>
+        </div>
+        <svg width="250" height="250" style="position:absolute;right:-30px;bottom:-40px;color:rgba(255,255,255,.06)"><use href="#symAm"/></svg>
+      </div>
+      <div class="card"><span class="lbl">Monocromo</span>
+        <div class="mono"><div class="chip" style="background:#fff;color:#0A0820"><svg width="58" height="58"><use href="#symAm"/></svg></div><div class="chip" style="background:var(--grad);color:#fff"><svg width="58" height="58"><use href="#symAm"/></svg></div></div></div>
+      <div class="card"><span class="lbl">Header</span>
+        <div style="display:flex;align-items:center;gap:10px"><svg width="30" height="30" style="color:#fff"><use href="#symA"/></svg><span class="word" style="font-size:24px">TuPagina<span class="ya">Ya</span></span></div></div>
+    </div>
+  </div>
+  <div class="notes">
+    <div><b>Idea</b>Un navegador vacío y un check que se escapa del marco: la web ya está lista. Explica el servicio sin necesidad de texto.</div>
+    <div><b>Motivo gráfico</b>Marcos de ventana con barra y 3 puntos para enmarcar trabajos, secciones y placas. Ese marco es la retícula de toda la web.</div>
+    <div><b>Tipografía</b>Bricolage Grotesque es expresiva y redondeada en los títulos; Onest, limpia y legible en el texto. Se siente cercana, no corporativa.</div>
+  </div>
+</section>
+
+<!-- ================= B ================= -->
+<section class="concept B">
+  <div class="tag"><b>B · Monograma TY</b><i>Archivo Expanded + Hanken Grotesk</i><i>Motivo: la grilla</i></div>
+  <div class="grid">
+    <div class="hero">
+      <div class="lock">
+        <svg width="112" height="112"><use href="#symB"/></svg>
+        <span class="sep"></span>
+        <span class="word" style="font-size:58px;line-height:.95">TuPagina<span class="ya">Ya</span></span>
+      </div>
+      <p class="claim">Estudio de diseño web · Argentina</p>
+    </div>
+    <div class="apps">
+      <div class="card"><span class="lbl">Favicon 32 px</span>
+        <div class="fav"><div class="tab"><svg width="16" height="16"><use href="#symB"/></svg>TuPaginaYa · Diseño…</div>
+        <svg width="32" height="32"><use href="#symB"/></svg></div></div>
+      <div class="card"><span class="lbl">Avatar IG / WhatsApp</span>
+        <div class="avatar" style="background:var(--bg2)"><svg width="62" height="62"><use href="#symB"/></svg></div></div>
+      <div class="card og">
+        <span class="lbl">OG 1200×630</span>
+        <div style="position:absolute;inset:0;padding:34px 40px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/32px 32px,var(--bg)">
+          <div style="display:flex;gap:12px;align-items:center"><svg width="34" height="34"><use href="#symB"/></svg><span class="word" style="font-size:20px">TuPagina<span class="ya">Ya</span></span></div>
+          <div class="word" style="font-size:38px;line-height:1.02">Páginas web<br>para negocios<br>en Argentina</div>
+          <div style="font:500 13px 'JetBrains Mono';color:var(--soft)">tupaginaya.com.ar · demo gratis</div>
+        </div>
+      </div>
+      <div class="card"><span class="lbl">Monocromo</span>
+        <div class="mono"><div class="chip" style="background:#fff;color:#0A0820"><svg width="56" height="56"><use href="#symBm"/></svg></div><div class="chip" style="background:var(--grad);color:#fff"><svg width="56" height="56"><use href="#symBm"/></svg></div></div></div>
+      <div class="card"><span class="lbl">Header</span>
+        <div style="display:flex;align-items:center;gap:10px"><svg width="28" height="28"><use href="#symB"/></svg><span class="word" style="font-size:18px">TuPagina<span class="ya">Ya</span></span></div></div>
+    </div>
+  </div>
+  <div class="notes">
+    <div><b>Idea</b>La T y la Y comparten el mismo asta: es un solo trazo que también parece un embudo, porque llevamos a la gente hacia tu negocio. Sólido y fácil de recordar.</div>
+    <div><b>Motivo gráfico</b>Una grilla de 48 px de fondo con piezas que encastran. El tono es de estudio de arquitectura de webs: más sobrio y más "empresa".</div>
+    <div><b>Tipografía</b>Archivo Expanded en mayúsculas bien anchas tiene presencia de marca grande; Hanken Grotesk queda neutra en los textos largos.</div>
+  </div>
+</section>
+
+<!-- ================= C ================= -->
+<section class="concept C">
+  <div class="tag"><b>C · Cursor 48 h</b><i>Instrument Sans + JetBrains Mono</i><i>Motivo: las estelas de velocidad</i></div>
+  <div class="grid">
+    <div class="hero">
+      <span class="trail" style="top:24%;background:linear-gradient(90deg,transparent,#3D6DFF)"></span>
+      <span class="trail" style="top:30%;left:-20%;background:linear-gradient(90deg,transparent,#7C5CFF)"></span>
+      <span class="trail" style="top:78%;left:-14%;background:linear-gradient(90deg,transparent,#C13B8A)"></span>
+      <div class="lock">
+        <svg width="124" height="124"><use href="#symC"/></svg>
+        <span class="word" style="font-size:112px">tupagina<span class="ya">ya</span><span class="caret"></span></span>
+      </div>
+      <p class="claim">&gt; tu negocio online en <em>48 h</em>_</p>
+    </div>
+    <div class="apps">
+      <div class="card"><span class="lbl">Favicon 32 px</span>
+        <div class="fav"><div class="tab"><svg width="16" height="16"><use href="#symC"/></svg>TuPaginaYa · Diseño…</div>
+        <svg width="32" height="32"><use href="#symC"/></svg></div></div>
+      <div class="card"><span class="lbl">Avatar IG / WhatsApp</span>
+        <div class="avatar" style="background:var(--bg2)"><svg width="72" height="72"><use href="#symC"/></svg></div></div>
+      <div class="card og">
+        <span class="lbl">OG 1200×630</span>
+        <div style="position:absolute;inset:0;background:var(--bg);padding:34px 40px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;gap:10px;align-items:center"><svg width="36" height="36"><use href="#symC"/></svg><span class="word" style="font-size:30px">tupagina<span class="ya">ya</span></span></div>
+          <div class="word" style="font-size:46px;line-height:1">Páginas web para<br>negocios en Argentina<span class="caret"></span></div>
+          <div style="font:500 13px 'JetBrains Mono';color:var(--soft)">tupaginaya.com.ar · demo gratis</div>
+        </div>
+      </div>
+      <div class="card"><span class="lbl">Monocromo</span>
+        <div class="mono"><div class="chip" style="background:#fff;color:#0A0820"><svg width="58" height="58"><use href="#symCm"/></svg></div><div class="chip" style="background:var(--grad);color:#fff"><svg width="58" height="58"><use href="#symCm"/></svg></div></div></div>
+      <div class="card"><span class="lbl">Header</span>
+        <div style="display:flex;align-items:center;gap:8px"><svg width="30" height="30"><use href="#symC"/></svg><span class="word" style="font-size:26px">tupagina<span class="ya">ya</span></span></div></div>
+    </div>
+  </div>
+  <div class="notes">
+    <div><b>Idea</b>El cursor en movimiento, con una estela en los colores de la marca: velocidad y clic. El cursor que titila después de "ya" dice que está pasando ahora.</div>
+    <div><b>Motivo gráfico</b>Estelas de luz horizontales y líneas de prompt en mono (">"), que conectan con el hero 3D y con el discurso de "48 h". Es el más tech y dinámico de los tres.</div>
+    <div><b>Tipografía</b>Instrument Sans condensada en minúsculas da un wordmark ágil; JetBrains Mono funciona como voz utilitaria para datos, precios y plazos.</div>
+  </div>
+</section>
+
+</body>
+</html>
