@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tusitiowebya.github.io/demovola/sitemap.xml
