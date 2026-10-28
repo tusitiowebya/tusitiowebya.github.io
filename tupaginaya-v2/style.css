@@ -223,6 +223,24 @@ h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em}
 .plan-activation{max-width:760px;margin:2.4rem auto 0;text-align:center;padding:1.4rem 1.6rem;border-radius:18px;color:var(--ink-soft);font-size:.95rem;font-weight:300}
 .plan-activation .big{display:block;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.2rem}
 
+/* ---------- referidos ---------- */
+.ref-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,4vw,3.6rem);align-items:center;
+  border-radius:28px;padding:clamp(1.8rem,4vw,3.4rem);overflow:hidden}
+.ref-card::before{content:"";position:absolute;right:-12%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,122,24,.22),transparent 65%);pointer-events:none}
+.ref-copy{position:relative}
+.ref-copy .eyebrow{margin-bottom:1rem}
+.ref-copy h2{font-size:clamp(2rem,4.2vw,3.3rem)}
+.ref-copy h2 .grad{white-space:nowrap}
+.ref-copy>p{color:var(--ink-soft);font-weight:300;margin:1.1rem 0 1.8rem;max-width:520px}
+.ref-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.ref-steps{position:relative;list-style:none;display:flex;flex-direction:column;gap:1rem}
+.ref-steps li{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.2rem;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.ref-n{flex:0 0 auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#0B0710;font-family:var(--serif);font-size:1.4rem;line-height:1}
+.ref-steps b{display:block;font-size:1rem;margin-bottom:.15rem}
+.ref-steps p{color:var(--ink-soft);font-size:.88rem;font-weight:300;line-height:1.45}
+.ref-legal{grid-column:1/-1;position:relative;font-size:.8rem;color:var(--ink-dim);border-top:1px solid var(--line);padding-top:1.2rem}
+
 /* ---------- trabajos ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.4rem}
 .chip{font-family:var(--disp);font-size:.85rem;font-weight:500;color:var(--ink-soft);padding:.55rem 1.1rem;border-radius:100px;
@@ -308,6 +326,7 @@ h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em}
   .cobros-grid{grid-template-columns:1fr;gap:3rem}
   .phone-stage{order:-1}
   .demo-grid{grid-template-columns:1fr}
+  .ref-card{grid-template-columns:1fr}
   .modal-card{grid-template-columns:1fr}
   .modal-shot img{min-height:200px;max-height:240px}
 }
@@ -324,6 +343,8 @@ h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em}
   .footer-grid{grid-template-columns:1fr}
   .hero-actions{flex-direction:column}
   .hero-actions .btn{width:100%}
+  .ref-actions{flex-direction:column}
+  .ref-actions .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.05ms!important}
