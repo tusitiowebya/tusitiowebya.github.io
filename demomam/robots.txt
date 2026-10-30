@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mamconstrucciones.tupaginaya.com.ar/sitemap.xml
