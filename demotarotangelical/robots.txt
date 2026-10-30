@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tarotangelical.tupaginaya.com.ar/sitemap.xml
