@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cisnerosconstrucciones.tupaginaya.com.ar/sitemap.xml
