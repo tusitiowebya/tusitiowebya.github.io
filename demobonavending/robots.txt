@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bonavending.tupaginaya.com.ar/sitemap.xml
