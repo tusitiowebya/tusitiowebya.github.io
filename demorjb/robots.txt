@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estudiorjb.tupaginaya.com.ar/sitemap.xml
