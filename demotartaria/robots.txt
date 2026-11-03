@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tartaria.tupaginaya.com.ar/sitemap.xml
