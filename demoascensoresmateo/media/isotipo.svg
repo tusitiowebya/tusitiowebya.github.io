@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 212">
+<defs>
+<linearGradient id="ac" x1="0" x2="1"><stop offset="0" stop-color="#7E828C"/><stop offset=".07" stop-color="#F6F7F9"/><stop offset=".14" stop-color="#A9ADB6"/><stop offset=".8" stop-color="#A9ADB6"/><stop offset=".88" stop-color="#F4F5F8"/><stop offset="1" stop-color="#80848E"/></linearGradient>
+<linearGradient id="az" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#020935"/><stop offset=".6" stop-color="#141C58"/><stop offset="1" stop-color="#3A4592"/></linearGradient>
+<linearGradient id="or" x1="0" x2="1"><stop offset="0" stop-color="#8C6A2C"/><stop offset=".5" stop-color="#ECD197"/><stop offset="1" stop-color="#94702F"/></linearGradient>
+<linearGradient id="orv" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E8CB8E"/><stop offset=".6" stop-color="#B08A4E"/><stop offset="1" stop-color="#8A6629"/></linearGradient>
+<linearGradient id="fl" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#C9CCD3"/><stop offset="1" stop-color="#8E929B"/></linearGradient>
+</defs>
+<rect width="185" height="212" rx="24" fill="url(#ac)"/>
+<rect x="29" y="6" width="120" height="206" fill="url(#az)"/>
+<rect x="29" y="6" width="120" height="16" fill="url(#or)"/>
+<rect x="78" y="80" width="22" height="132" fill="url(#orv)"/>
+<path d="M89 44 L132 104 L109 104 L89 76 L69 104 L46 104 Z" fill="url(#fl)"/>
+<rect x="157" y="84" width="15" height="34" rx="2.5" fill="#0A0E2C"/>
+<rect x="160.5" y="89.5" width="8" height="8" rx="1.2" fill="#EEF2F8"/>
+<rect x="160.5" y="104" width="8" height="8" rx="1.2" fill="#EEF2F8"/>
+</svg>
