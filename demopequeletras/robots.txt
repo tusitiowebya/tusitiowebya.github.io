@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pequeletras.tupaginaya.com.ar/sitemap.xml
