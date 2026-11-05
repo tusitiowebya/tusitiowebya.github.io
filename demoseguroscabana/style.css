@@ -424,7 +424,7 @@ details p { padding: 0 20px 20px; color: var(--gris); }
 }
 @media (min-width: 768px) {
   .estado { display: inline-flex; }
-  .online__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .online__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .seguros__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .faq__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
