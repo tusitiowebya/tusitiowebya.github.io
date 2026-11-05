@@ -104,7 +104,7 @@
         var s = stars[i];
         var a = calma ? 0.6 : 0.35 + 0.55 * (0.5 + 0.5 * Math.sin(t / 1000 * s.s + s.p));
         ctx.globalAlpha = a * (1 - s.y / h * 0.6);
-        ctx.fillStyle = s.r > 1.1 ? '#FFE2A1' : '#DCEBFF';
+        ctx.fillStyle = s.r > 1.1 ? '#BDF0D4' : '#DCEBFF';
         ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
       }
     }
@@ -279,4 +279,42 @@
 
   var yEl = $('[data-year]');
   if (yEl) yEl.textContent = new Date().getFullYear();
+})();
+
+/* Multicotizador Woker + simulador prendario Autify: se cargan al acercarse a la sección */
+(function () {
+  var box = document.getElementById('multicotizador');
+  if (!box) return;
+  var tabs = box.querySelectorAll('[role="tab"]'), hecho = {};
+  function cargar(id) {
+    if (hecho[id]) return; hecho[id] = true;
+    if (id === 'panel-multi') {
+      // Woker solo habilita el widget en www.seguroscabana.com.ar (frame-ancestors): en otro dominio, aviso
+      if (location.hostname !== 'www.seguroscabana.com.ar') {
+        document.getElementById('woker-cotizador').innerHTML = '<div class="herramientas__previa"><b>Acá va el multicotizador de Woker</b><p>Comparás varias compañías a la vez. Woker lo habilita solo en <strong>www.seguroscabana.com.ar</strong>, así que aparece funcionando cuando la web está en ese dominio.</p></div>';
+        return;
+      }
+      var s = document.createElement('script');
+      s.src = 'https://mentabrokers.woker.ar/embed/JCabana/';
+      s.async = true; s.setAttribute('data-woker-embed', 'true'); s.setAttribute('data-container', 'woker-cotizador');
+      s.onload = function () { var c = box.querySelector('#woker-cotizador .herramientas__carga'); if (c) c.remove(); };
+      s.onerror = function () { document.getElementById('woker-cotizador').innerHTML = '<p class="herramientas__carga">No pudimos cargar el multicotizador. <a href="https://wa.me/5493704346024?text=Hola%20Juan%2C%20quiero%20cotizar%20un%20seguro.">Pedime la cotización por WhatsApp</a>.</p>'; };
+      document.body.appendChild(s);
+    } else {
+      document.getElementById('autify-prendario').innerHTML = '<iframe src="https://prod.autify.com.ar/widget/prendario?rol=6&uid=ee51535a-b652-4580-b303-14fd154339a9&contacto=1" height="750" loading="lazy" title="Simulador de crédito prendario"></iframe>';
+    }
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (o) {
+        var on = o === t; o.setAttribute('aria-selected', on);
+        document.getElementById(o.getAttribute('aria-controls')).hidden = !on;
+      });
+      cargar(t.getAttribute('aria-controls'));
+    });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { cargar('panel-multi'); io.disconnect(); } }, { rootMargin: '600px' });
+    io.observe(box);
+  } else cargar('panel-multi');
 })();
