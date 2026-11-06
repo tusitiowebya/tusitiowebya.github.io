@@ -80,6 +80,7 @@
         "sameAs": [
           "https://www.facebook.com/profile.php?id=100063564921942",
           "https://www.linkedin.com/in/juan-enrique-caba%C3%B1a-3a515318",
+          "https://twitter.com/juanenriquecaba",
           "https://appseguros.ar/productores/cabana-tu-asesor-de-seguros",
           "https://www.seguroscabana.com.ar/"
         ],
@@ -91,7 +92,7 @@
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de auto" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de moto" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eco movilidad: monopatines" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auxilio 24" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Asistencia al vehículo IKE Argentina" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de viaje" } }
             ]},
             { "@type": "OfferCatalog", "name": "Casa, comercio y campo", "itemListElement": [
@@ -177,8 +178,8 @@
         <h1 id="hero-title" class="hero__title"><span class="fit">Asegurá lo tuyo</span> <em class="fit">y dormí tranquilo.</em></h1>
         <p class="hero__lead">Soy <strong>Juan Cabaña</strong>, productor asesor de seguros con matrícula SSN 90160. Comparo <strong>21&nbsp;compañías</strong> para tu auto, tu moto, tu casa, tu comercio o tu familia, y te acompaño también cuando hay un siniestro.</p>
         <div class="hero__ctas">
-          <a class="btn btn--luz" href="#multicotizador">Multicotizador online</a>
-          <a class="btn btn--ghost" href="#encender">Armar mi cotización</a>
+          <a class="btn btn--luz" href="#multicotizador" data-tab="tab-multi">Cotizar online</a>
+          <a class="btn btn--luz" href="#multicotizador" data-tab="tab-prend">Crédito prendario</a>
           <a class="btn btn--ghost" href="https://wa.me/5493704346024?text=Hola%20Juan%2C%20quiero%20cotizar%20un%20seguro." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.6 14.1c-.2.7-1.4 1.3-2 1.3-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.7-.7 13.4 13.4 0 0 1-5.2-4.6c-.4-.5-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2a7.5 7.5 0 0 0 2.3 1.4c.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3Z"/></svg>Escribir por WhatsApp</a>
         </div>
         <ul class="hero__datos" aria-label="Datos de la agencia">
@@ -215,6 +216,44 @@
         </div>
         <figcaption>Video ilustrativo · el logo de Cabaña, con las luces prendidas</figcaption>
       </figure>
+    </section>
+
+    <!-- ONLINE -->
+    <section class="online" id="online" aria-labelledby="online-title">
+      <div class="online__head">
+        <h2 id="online-title">¿Preferís cotizar ya, <em>vos mismo?</em></h2>
+        <p>Con el multicotizador comparás varias compañías en un minuto, y con el simulador calculás un crédito prendario. También están los cotizadores oficiales vinculados a mi código de productor. Cotizás en el momento y, si contratás, me tenés a mí para cualquier consulta o siniestro.</p>
+      </div>
+      <div class="herramientas" id="multicotizador">
+        <div class="herramientas__tabs" role="tablist" aria-label="Cotizadores online">
+          <button type="button" role="tab" id="tab-multi" aria-controls="panel-multi" aria-selected="true">Multicotizador<small>varias compañías a la vez</small></button>
+          <button type="button" role="tab" id="tab-prend" aria-controls="panel-prend" aria-selected="false">Crédito prendario<small>simulá tu cuota</small></button>
+        </div>
+        <div class="herramientas__panel" role="tabpanel" id="panel-multi" aria-labelledby="tab-multi">
+          <div id="woker-cotizador"><p class="herramientas__carga">Cargando el multicotizador…</p></div>
+        </div>
+        <div class="herramientas__panel" role="tabpanel" id="panel-prend" aria-labelledby="tab-prend" hidden>
+          <div id="autify-prendario"><p class="herramientas__carga">Cargando el simulador…</p></div>
+        </div>
+      </div>
+      <div class="online__lista">
+        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-auto-socios/?socio=75793" target="_blank" rel="noopener">
+          <span class="cotizador__cia">La Caja</span><b>Cotizá tu auto</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-moto-socios/?socio=75793" target="_blank" rel="noopener">
+          <span class="cotizador__cia">La Caja</span><b>Cotizá tu moto</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-hogar-socios/?socio=75793" target="_blank" rel="noopener">
+          <span class="cotizador__cia">La Caja</span><b>Cotizá tu hogar</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="cotizador" href="https://asistencia.ikeargentina.com.ar/pas/?codigoproductor=2332" target="_blank" rel="noopener">
+          <span class="cotizador__cia">IKE Argentina</span><b>Asistencia al vehículo</b><span class="cotizador__ir">Contratar asistencia <i aria-hidden="true">→</i></span>
+        </a>
+        <a class="cotizador" href="https://www.sancristobal.com.ar/pas/caba%C3%B1atuasesordeseguros" target="_blank" rel="noopener">
+          <span class="cotizador__cia">San Cristóbal</span><b>Cotizá tu seguro</b><span class="cotizador__ir">Abrir mi página de productor <i aria-hidden="true">→</i></span>
+        </a>
+      </div>
+      <p class="online__nota">¿No sabés qué cobertura elegir? Mejor <a href="#encender">armá el pedido</a> y te paso varias opciones comparadas.</p>
     </section>
 
     <!-- ENCENDER -->
@@ -288,7 +327,7 @@
 
           <fieldset class="ficha" data-ficha="otros" hidden>
             <legend>Viaje y otros</legend>
-            <div class="chips" data-name="otros_que"><span>Me interesa</span><button type="button" data-v="Seguro de viaje">Viaje</button><button type="button" data-v="Caución de alquiler">Caución de alquiler</button><button type="button" data-v="Auxilio 24">Auxilio 24</button><button type="button" data-v="Otro">Otro</button></div>
+            <div class="chips" data-name="otros_que"><span>Me interesa</span><button type="button" data-v="Seguro de viaje">Viaje</button><button type="button" data-v="Caución de alquiler">Caución de alquiler</button><button type="button" data-v="Asistencia IKE">Asistencia IKE</button><button type="button" data-v="Otro">Otro</button></div>
             <label>Contame un poco más<input name="otros_detalle" autocomplete="off" placeholder="Ej.: viajo a Paraguay en enero, 2 personas"></label>
           </fieldset>
         </div>
@@ -309,41 +348,6 @@
       </form>
     </section>
 
-    <!-- ONLINE -->
-    <section class="online" id="online" aria-labelledby="online-title">
-      <div class="online__head">
-        <h2 id="online-title">¿Preferís cotizar ya, <em>vos mismo?</em></h2>
-        <p>Con el multicotizador comparás varias compañías en un minuto, y con el simulador calculás un crédito prendario. También están los cotizadores oficiales vinculados a mi código de productor. Cotizás en el momento y, si contratás, me tenés a mí para cualquier consulta o siniestro.</p>
-      </div>
-      <div class="herramientas" id="multicotizador">
-        <div class="herramientas__tabs" role="tablist" aria-label="Cotizadores online">
-          <button type="button" role="tab" id="tab-multi" aria-controls="panel-multi" aria-selected="true">Multicotizador<small>varias compañías a la vez</small></button>
-          <button type="button" role="tab" id="tab-prend" aria-controls="panel-prend" aria-selected="false">Crédito prendario<small>simulá tu cuota</small></button>
-        </div>
-        <div class="herramientas__panel" role="tabpanel" id="panel-multi" aria-labelledby="tab-multi">
-          <div id="woker-cotizador"><p class="herramientas__carga">Cargando el multicotizador…</p></div>
-        </div>
-        <div class="herramientas__panel" role="tabpanel" id="panel-prend" aria-labelledby="tab-prend" hidden>
-          <div id="autify-prendario"><p class="herramientas__carga">Cargando el simulador…</p></div>
-        </div>
-      </div>
-      <div class="online__lista">
-        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-auto-socios/?socio=75793" target="_blank" rel="noopener">
-          <span class="cotizador__cia">La Caja</span><b>Cotizá tu auto</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
-        </a>
-        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-moto-socios/?socio=75793" target="_blank" rel="noopener">
-          <span class="cotizador__cia">La Caja</span><b>Cotizá tu moto</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
-        </a>
-        <a class="cotizador" href="https://cotizadorsocios.lacaja.com.ar/seguro-hogar-socios/?socio=75793" target="_blank" rel="noopener">
-          <span class="cotizador__cia">La Caja</span><b>Cotizá tu hogar</b><span class="cotizador__ir">Abrir cotizador <i aria-hidden="true">→</i></span>
-        </a>
-        <a class="cotizador" href="https://www.sancristobal.com.ar/pas/caba%C3%B1atuasesordeseguros" target="_blank" rel="noopener">
-          <span class="cotizador__cia">San Cristóbal</span><b>Cotizá tu seguro</b><span class="cotizador__ir">Abrir mi página de productor <i aria-hidden="true">→</i></span>
-        </a>
-      </div>
-      <p class="online__nota">¿No sabés qué cobertura elegir? Mejor <a href="#encender">armá el pedido</a> y te paso varias opciones comparadas.</p>
-    </section>
-
     <!-- SEGUROS -->
     <section class="seguros" id="seguros" aria-labelledby="seg-title">
       <h2 id="seg-title" class="seguros__title">Todo lo que se puede <em>asegurar</em>, en un solo lugar.</h2>
@@ -351,7 +355,7 @@
         <article class="manzana reveal">
           <p class="manzana__num">01</p>
           <h3>En movimiento</h3>
-          <ul><li>Autos</li><li>Motos</li><li>Eco movilidad: monopatines</li><li>Auxilio 24</li><li>Viaje</li></ul>
+          <ul><li>Autos</li><li>Motos</li><li>Eco movilidad: monopatines</li><li>Asistencia al vehículo (IKE)</li><li>Viaje</li></ul>
           <p class="manzana__pie">Responsabilidad civil, terceros completo o todo riesgo: te explico la diferencia con tu vehículo y tu uso.</p>
         </article>
         <article class="manzana reveal">
@@ -400,8 +404,6 @@
         </ul>
         <p class="quien__links">
           <a href="https://appseguros.ar/productores/cabana-tu-asesor-de-seguros" target="_blank" rel="noopener">Ficha en AppSeguros</a>
-          <a href="https://www.linkedin.com/in/juan-enrique-caba%C3%B1a-3a515318" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.facebook.com/profile.php?id=100063564921942" target="_blank" rel="noopener">Facebook</a>
         </p>
       </div>
     </section>
@@ -460,12 +462,15 @@
       <svg viewBox="0 0 906 617" aria-hidden="true"><use href="#mark"/></svg>
       <p>CABAÑA<small>tu asesor de seguros · Formosa</small></p>
     </div>
+    <div class="redes" aria-label="Redes sociales"><a href="https://www.facebook.com/profile.php?id=100063564921942" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2-4 4.3V8H7.5v3.5H10V22h4V11.5h2.8L17.3 8Z"/></svg></a><a href="https://www.linkedin.com/in/juan-enrique-caba%C3%B1a-3a515318" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM2.6 9h3.8v12H2.6Zm6.2 0h3.6v1.7h.1c.5-.9 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.8V21h-3.8v-5.8c0-1.4 0-3.2-1.9-3.2s-2.2 1.5-2.2 3.1V21H8.8Z"/></svg></a><a href="https://twitter.com/juanenriquecaba" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.3l-7.2 8.2L22.4 21h-6.6l-5.2-6.8L4.7 21H1.4l7.7-8.8L1 3h6.8l4.7 6.2Zm-1.2 16h1.8L7.5 4.9H5.6Z"/></svg></a></div>
+    <p class="pie__leyenda">La entidad aseguradora dispone de un Servicio de Atención al Asegurado que atenderá las consultas y reclamos que presenten los tomadores de seguros, asegurados, beneficiarios y/o derechohabientes.</p>
+    <p class="pie__credito">© <span data-year>2026</span> Cabaña Tu Asesor de Seguros · Todos los derechos reservados.</p>
     <div class="pie__ssn">
-      <p><b>Juan Enrique Cabaña</b> · Productor Asesor de Seguros · Matrícula SSN N.º 90160</p>
-      <p>Departamento de Orientación y Asistencia al Asegurado: <a href="tel:08006668400">0800-666-8400</a> · <a href="https://www.argentina.gob.ar/ssn" target="_blank" rel="noopener">argentina.gob.ar/ssn</a></p>
-      <p>La entidad aseguradora dispone de un Servicio de Atención al Asegurado que atenderá las consultas y reclamos que presenten los tomadores de seguros, asegurados, beneficiarios y/o derechohabientes.</p>
+      <div><small>N.º de matrícula SSN</small><b>90160</b></div>
+      <div><small>Departamento de Orientación y Asistencia al Asegurado</small><a href="tel:08006668400"><b>0800-666-8400</b></a></div>
+      <div><small>Superintendencia de Seguros de la Nación</small><a href="https://www.argentina.gob.ar/ssn" target="_blank" rel="noopener">https://www.argentina.gob.ar/ssn</a></div>
+      <a class="pie__ssnlogo" href="https://www.argentina.gob.ar/ssn" target="_blank" rel="noopener"><img src="media/logo-ssn.png" alt="SSN, Superintendencia de Seguros de la Nación" width="250" height="43" loading="lazy"></a>
     </div>
-    <p class="pie__credito">Video ilustrativo de Pexels (William Adams). © <span data-year>2026</span> Cabaña · Diseñado por <a href="https://tupaginaya.com.ar" target="_blank" rel="noopener">TuPaginaYa</a></p>
   </footer>
 
   <a class="fab" href="https://wa.me/5493704346024?text=Hola%20Juan%2C%20quiero%20cotizar%20un%20seguro." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">

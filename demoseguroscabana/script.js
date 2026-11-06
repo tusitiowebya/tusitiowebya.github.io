@@ -313,6 +313,9 @@
       cargar(t.getAttribute('aria-controls'));
     });
   });
+  document.querySelectorAll('[data-tab]').forEach(function (l) {
+    l.addEventListener('click', function () { var t = document.getElementById(l.getAttribute('data-tab')); if (t) t.click(); });
+  });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { cargar('panel-multi'); io.disconnect(); } }, { rootMargin: '600px' });
     io.observe(box);

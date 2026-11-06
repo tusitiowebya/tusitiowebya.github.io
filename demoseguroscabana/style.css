@@ -2,9 +2,9 @@
    Noche del logo: luna azul, casas y ventanas encendidas. */
 
 :root {
-  --noche: #052848;
-  --noche-2: #08386A;
-  --noche-3: #0D4A86;
+  --noche: #00539C;
+  --noche-2: #0066C2;
+  --noche-3: #0084E1;
   --azul: #0084E1;
   --celeste: #4DB6F2;
   --luz: #2DC07E;
@@ -75,7 +75,7 @@ button { font: inherit; color: inherit; }
   padding: 12px var(--pad); padding-top: max(12px, env(safe-area-inset-top));
   color: #fff; transition: background .35s, box-shadow .35s, padding .35s;
 }
-.nav.is-solid { background: rgba(7, 23, 48, .86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--linea-n); }
+.nav.is-solid { background: rgba(0, 92, 176, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--linea-n); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
 .brand__mark { width: 52px; height: auto; --mk: #fff; --mp: var(--luz); }
 .brand__name { font-weight: 800; font-size: 19px; letter-spacing: .02em; line-height: 1; }
@@ -92,7 +92,7 @@ button { font: inherit; color: inherit; }
 .nav.is-open .nav__burger span:last-child { transform: translateY(-4px) rotate(-45deg); }
 .nav.is-open .nav__links {
   display: flex; flex-direction: column; position: fixed; inset: 70px 12px auto; padding: 14px;
-  background: rgba(7, 23, 48, .97); border-radius: 22px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6), inset 0 0 0 1px var(--linea-n);
+  background: rgba(0, 86, 166, .98); border-radius: 22px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6), inset 0 0 0 1px var(--linea-n);
 }
 .nav.is-open .nav__links a { padding: 14px 12px; text-decoration: none; font-weight: 600; font-size: 19px; border-bottom: 1px solid var(--linea-n); }
 .nav.is-open .nav__links .nav__wa-m { margin-top: 10px; border: 0; background: var(--luz); color: var(--tinta); border-radius: 999px; text-align: center; }
@@ -105,7 +105,7 @@ button { font: inherit; color: inherit; }
   padding: calc(96px + env(safe-area-inset-top)) var(--pad) 40px;
   background:
     radial-gradient(120% 70% at 78% 30%, rgba(0, 132, 225, .28), transparent 60%),
-    linear-gradient(180deg, #041E38 0%, var(--noche) 45%, var(--noche-2) 100%);
+    linear-gradient(180deg, #003E7A 0%, var(--noche) 45%, var(--noche-2) 100%);
   overflow: clip;
 }
 .hero__sky { position: absolute; inset: 0; z-index: -1; }
@@ -171,7 +171,7 @@ button { font: inherit; color: inherit; }
   padding: clamp(72px, 10vw, 130px) var(--pad);
   background:
     radial-gradient(60% 40% at 50% 0%, rgba(0, 132, 225, .18), transparent 70%),
-    linear-gradient(180deg, var(--noche-2), #073460 60%, #062B50);
+    linear-gradient(180deg, var(--noche-2), #0068C4 60%, #0058A8);
 }
 .encender__head { max-width: 780px; }
 .encender__head h2 em { color: var(--luz-2); }
@@ -237,7 +237,7 @@ label { display: grid; gap: 7px; font-size: 14px; font-weight: 500; color: rgba(
 input {
   width: 100%; min-height: 50px; padding: 12px 15px; border-radius: 12px;
   font: inherit; font-size: 16px; color: #fff;
-  background: rgba(3, 12, 28, .55); border: 1.5px solid rgba(214, 232, 255, .18);
+  background: rgba(0, 40, 90, .35); border: 1.5px solid rgba(214, 232, 255, .18);
   transition: border-color .2s, box-shadow .2s;
 }
 input::placeholder { color: rgba(214, 232, 255, .38); }
@@ -320,7 +320,7 @@ input:focus { outline: 0; border-color: var(--luz); box-shadow: 0 0 0 4px rgba(4
 .companias {
   position: relative; isolation: isolate; color: #fff; overflow: hidden;
   padding: clamp(80px, 11vw, 140px) var(--pad);
-  background: radial-gradient(80% 60% at 20% 0%, rgba(0, 132, 225, .3), transparent 60%), linear-gradient(180deg, #052848, var(--noche-2));
+  background: radial-gradient(80% 60% at 20% 0%, rgba(0, 132, 225, .3), transparent 60%), linear-gradient(180deg, var(--noche), var(--noche-2));
 }
 .companias .stars { z-index: -1; }
 .companias__head { max-width: 760px; }
@@ -363,7 +363,7 @@ input:focus { outline: 0; border-color: var(--luz); box-shadow: 0 0 0 4px rgba(4
 .siniestro__head h2 em { color: var(--luz-2); }
 .siniestro__head p { margin-top: 14px; color: rgba(255, 255, 255, .85); }
 .pasos { position: relative; list-style: none; margin: 40px 0 34px; padding: 0; display: grid; gap: 14px; }
-.pasos li { padding: 22px; border-radius: 20px; background: rgba(4, 30, 64, .3); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16); }
+.pasos li { padding: 22px; border-radius: 20px; background: rgba(0, 50, 110, .25); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16); }
 .pasos li > span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--luz); color: var(--tinta); font-weight: 800; }
 .pasos h3 { margin-top: 14px; font-size: 21px; }
 .pasos p { margin-top: 8px; color: rgba(255, 255, 255, .86); font-size: 15.5px; }
@@ -393,7 +393,7 @@ details p { padding: 0 20px 20px; color: var(--gris); }
 .contacto__mapa iframe { width: 100%; height: 100%; min-height: 320px; border: 0; filter: saturate(.85); }
 
 /* ---------- pie ---------- */
-.pie { background: #040D1C; color: rgba(229, 239, 252, .72); padding: 54px var(--pad) calc(96px + env(safe-area-inset-bottom)); display: grid; gap: 28px; font-size: 14px; }
+.pie { background: #003F7D; color: rgba(229, 239, 252, .72); padding: 54px var(--pad) calc(96px + env(safe-area-inset-bottom)); display: grid; gap: 28px; font-size: 14px; }
 .pie__marca { display: flex; align-items: center; gap: 14px; color: #fff; }
 .pie__marca svg { width: 70px; --mk: #fff; --mp: var(--luz); }
 .pie__marca p { font-weight: 800; font-size: 22px; letter-spacing: .02em; line-height: 1; }
@@ -494,3 +494,18 @@ details p { padding: 0 20px 20px; color: var(--gris); }
 .herramientas__previa { display: grid; place-content: center; gap: 10px; min-height: 340px; padding: 30px; text-align: center; border: 2px dashed var(--linea); border-radius: 16px; background: var(--dia); }
 .herramientas__previa b { font-size: 22px; }
 .herramientas__previa p { color: var(--gris); max-width: 52ch; margin: 0 auto; }
+
+/* 06/11: redes + franja SSN */
+.redes { display: flex; gap: 10px; }
+.redes a { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #fff; transition: background .2s; }
+.redes a:hover { background: var(--luz); }
+.redes svg { width: 20px; height: 20px; fill: currentColor; }
+.pie__leyenda { font-size: 12.5px; opacity: .85; max-width: 90ch; }
+.pie__credito { font-size: 13px; }
+.pie__ssn { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); align-items: center; padding: 18px 20px; border-radius: 14px; background: #fff; color: #33475F; box-shadow: none; }
+.pie__ssn div { display: grid; gap: 2px; font-size: 12.5px; }
+.pie__ssn small { font-size: 11.5px; }
+.pie__ssn b { color: #0A1A2E; }
+.pie__ssn a { color: #0063BC; word-break: break-word; }
+.pie__ssn p:last-child { font-size: inherit; opacity: 1; }
+.pie__ssnlogo img { width: 180px; height: auto; }
