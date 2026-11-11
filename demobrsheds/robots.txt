@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brsheds.tupaginaya.com.ar/sitemap.xml
