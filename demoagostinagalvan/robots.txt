@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agostinagalvan.tupaginaya.com.ar/sitemap.xml
