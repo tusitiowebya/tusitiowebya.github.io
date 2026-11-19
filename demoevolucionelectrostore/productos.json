@@ -1,0 +1,19 @@
+{
+  "aviso": "Catálogo de MUESTRA para la demo: productos genéricos, fotos ilustrativas y precios de ejemplo. Con el slug de CobrOS en config.js se reemplaza por el catálogo real.",
+  "productos": [
+    { "_id": "ej-heladera", "nombre": "Heladera no frost con freezer 400 L", "categoria": "Línea blanca", "precio": 1250000, "foto": "media/prod/heladera.jpg", "descripcion": "Frío seco no frost · Freezer superior · Acero inoxidable · Dispenser de agua", "destacado": 9 },
+    { "_id": "ej-lavarropas", "nombre": "Lavarropas automático carga frontal 8 kg", "categoria": "Línea blanca", "precio": 980000, "foto": "media/prod/lavarropas.jpg", "descripcion": "8 kg de carga · 1200 rpm · Programas rápidos y de agua fría · Display digital", "destacado": 8 },
+    { "_id": "ej-aire", "nombre": "Aire acondicionado split frío/calor 3000 frigorías", "categoria": "Climatización", "precio": 1100000, "foto": "media/prod/aire.jpg", "descripcion": "Frío y calor · Control remoto · Modo sueño · Filtro lavable", "destacado": 7 },
+    { "_id": "ej-tv", "nombre": "Smart TV 50\" 4K", "categoria": "TV y audio", "precio": 720000, "foto": "media/prod/tv.jpg", "descripcion": "Pantalla 4K UHD · Apps de streaming · Wi-Fi · 3 HDMI", "destacado": 10 },
+    { "_id": "ej-barra", "nombre": "Barra de sonido 2.1", "categoria": "TV y audio", "precio": 210000, "foto": "media/prod/barra.jpg", "descripcion": "Bluetooth · HDMI ARC y óptica · Ideal para TV de 40\" o más", "destacado": 4 },
+    { "_id": "ej-auriculares", "nombre": "Auriculares inalámbricos de vincha", "categoria": "TV y audio", "precio": 65000, "foto": "media/prod/auriculares.jpg", "descripcion": "Bluetooth · Plegables · Micrófono para llamadas · Batería recargable", "destacado": 3 },
+    { "_id": "ej-microondas", "nombre": "Microondas 20 L", "categoria": "Cocina", "precio": 230000, "foto": "media/prod/microondas.jpg", "descripcion": "20 litros · Perillas mecánicas · Descongelado por peso · Plato giratorio", "destacado": 6 },
+    { "_id": "ej-horno", "nombre": "Horno eléctrico 40 L", "categoria": "Cocina", "precio": 260000, "foto": "media/prod/horno.jpg", "descripcion": "40 litros · Temperatura regulable · Timer · Bandeja y parrilla", "destacado": 5 },
+    { "_id": "ej-freidora", "nombre": "Freidora de aire 4 L", "categoria": "Cocina", "precio": 140000, "foto": "media/prod/freidora.jpg", "descripcion": "Cocina sin aceite · Canasto de 4 L antiadherente · Timer 60 min", "destacado": 9 },
+    { "_id": "ej-licuadora", "nombre": "Licuadora 1,5 L", "categoria": "Cocina", "precio": 85000, "foto": "media/prod/licuadora.jpg", "descripcion": "Jarra de 1,5 L · Cuchillas de acero · Pica hielo · Varias velocidades", "destacado": 4 },
+    { "_id": "ej-pava", "nombre": "Pava eléctrica 1,7 L", "categoria": "Cocina", "precio": 48000, "foto": "media/prod/pava.jpg", "descripcion": "1,7 litros · Corte automático · Base giratoria 360°", "destacado": 6 },
+    { "_id": "ej-tostadora", "nombre": "Tostadora de 2 ranuras", "categoria": "Cocina", "precio": 52000, "foto": "media/prod/tostadora.jpg", "descripcion": "2 ranuras anchas · 7 niveles de tostado · Bandeja para migas", "destacado": 2 },
+    { "_id": "ej-aspiradora", "nombre": "Aspiradora vertical inalámbrica", "categoria": "Cuidado del hogar", "precio": 190000, "foto": "media/prod/aspiradora.jpg", "descripcion": "Sin cable · Se convierte en aspiradora de mano · Batería recargable", "destacado": 7 },
+    { "_id": "ej-plancha", "nombre": "Plancha a vapor", "categoria": "Cuidado del hogar", "precio": 55000, "foto": "media/prod/plancha.jpg", "descripcion": "Golpe de vapor · Suela antiadherente · Antigoteo", "destacado": 3 }
+  ]
+}
