@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "Nexo TV",
+  "short_name": "Nexo TV",
+  "description": "Canal de streaming y radio en vivo: programas, grilla y saludos al aire.",
+  "lang": "es-AR",
+  "dir": "ltr",
+  "start_url": "./?app=1",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#04060D",
+  "theme_color": "#04060D",
+  "categories": ["entertainment", "music", "news"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
