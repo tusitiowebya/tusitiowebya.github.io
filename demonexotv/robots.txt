@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nexotv.tupaginaya.com.ar/sitemap.xml
