@@ -1,0 +1,22 @@
+{
+  "aviso": "Stock de muestra armado con las unidades que Automotores Molina publicó en sus flyers. Sin precios: disponibilidad y valor se confirman por WhatsApp. Los datos que no figuraban en el flyer quedan sin completar.",
+  "unidades": [
+    { "id": "hilux-srx-2019", "marca": "Toyota", "modelo": "Hilux SRX 2.8 TDI", "anio": 2019, "tipo": "pickup", "caja": "manual", "traccion": "4x4", "motor": "2.8 TDI", "km": 100000, "extras": ["Tapizado de cuero"], "fotos": ["media/stock/toyota-hilux-srx-2019.jpg"] },
+    { "id": "sw4-srx-2016", "marca": "Toyota", "modelo": "SW4 SRX", "anio": 2016, "tipo": "suv", "caja": "automatica", "traccion": "4x4", "motor": null, "km": null, "extras": ["7 asientos", "Tapizado de cuero"], "fotos": ["media/stock/toyota-sw4-2016.jpg", "media/stock/toyota-sw4-2016-b.jpg"] },
+    { "id": "amarok-2018", "marca": "Volkswagen", "modelo": "Amarok", "anio": 2018, "tipo": "pickup", "caja": "automatica", "traccion": null, "motor": "180 CV", "km": null, "extras": ["Full"], "fotos": ["media/stock/vw-amarok-2018.jpg"] },
+    { "id": "s10-ls-2020", "marca": "Chevrolet", "modelo": "S10 LS", "anio": 2020, "tipo": "pickup", "caja": null, "traccion": "4x2", "motor": null, "km": null, "extras": [], "fotos": ["media/stock/chevrolet-s10-2020.jpg"] },
+    { "id": "hilux-2014", "marca": "Toyota", "modelo": "Hilux 2.5 TDI", "anio": 2014, "tipo": "pickup", "caja": "manual", "traccion": "4x4", "motor": "2.5 TDI", "km": null, "extras": [], "fotos": ["media/stock/toyota-hilux-2014.jpg"] },
+    { "id": "corolla-xli-2018", "marca": "Toyota", "modelo": "Corolla XLI", "anio": 2018, "tipo": "auto", "caja": "manual", "traccion": null, "motor": null, "km": 80000, "extras": ["Sedán"], "fotos": ["media/stock/toyota-corolla-2018.jpg"] },
+    { "id": "onix-joy-2021", "marca": "Chevrolet", "modelo": "Onix Joy 1.4", "anio": 2021, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.4", "km": 69000, "extras": [], "fotos": ["media/stock/chevrolet-onix-joy-2021.jpg"] },
+    { "id": "ka-s-2020", "marca": "Ford", "modelo": "Ka S", "anio": 2020, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.5", "km": null, "extras": [], "fotos": ["media/stock/ford-ka-2020.jpg"] },
+    { "id": "partner-2018", "marca": "Peugeot", "modelo": "Partner HDi", "anio": 2018, "tipo": "utilitario", "caja": null, "traccion": null, "motor": "1.6 HDi", "km": null, "extras": ["5 asientos", "Doble portón lateral"], "fotos": ["media/stock/peugeot-partner-2018.jpg"] },
+    { "id": "onix-ltz-2018", "marca": "Chevrolet", "modelo": "Onix LTZ", "anio": 2018, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.4", "km": null, "extras": [], "fotos": ["media/stock/chevrolet-onix-ltz-2018.jpg"] },
+    { "id": "c3-2017", "marca": "Citroën", "modelo": "C3", "anio": 2017, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.6 nafta", "km": 73000, "extras": [], "fotos": ["media/stock/citroen-c3-2017.jpg"] },
+    { "id": "palio-2017", "marca": "Fiat", "modelo": "Palio Attractive", "anio": 2017, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.4 nafta", "km": 83000, "extras": [], "fotos": ["media/stock/fiat-palio-2017.jpg"] },
+    { "id": "gol-trend-2017", "marca": "Volkswagen", "modelo": "Gol Trend Trendline", "anio": 2017, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.6", "km": 56000, "extras": ["3 puertas"], "fotos": ["media/stock/vw-gol-trend-2017.jpg"] },
+    { "id": "tracker-ltz-2016", "marca": "Chevrolet", "modelo": "Tracker LTZ", "anio": 2016, "tipo": "suv", "caja": "manual", "traccion": "4x2", "motor": null, "km": null, "extras": [], "fotos": ["media/stock/chevrolet-tracker-2016.jpg"] },
+    { "id": "fiesta-s-2016", "marca": "Ford", "modelo": "Fiesta S", "anio": 2016, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.6 nafta", "km": 85000, "extras": ["5 puertas"], "fotos": ["media/stock/ford-fiesta-2016.jpg"] },
+    { "id": "c3-2015", "marca": "Citroën", "modelo": "C3", "anio": 2015, "tipo": "auto", "caja": null, "traccion": null, "motor": "1.5 nafta", "km": 70000, "extras": [], "fotos": ["media/stock/citroen-c3-2015.jpg"] },
+    { "id": "ecosport-titanium-2013", "marca": "Ford", "modelo": "EcoSport Titanium", "anio": 2013, "tipo": "suv", "caja": "manual", "traccion": "4x2", "motor": "1.6 nafta", "km": null, "extras": [], "fotos": ["media/stock/ford-ecosport-2013.jpg"] }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://automotoresmolina.tupaginaya.com.ar/sitemap.xml
