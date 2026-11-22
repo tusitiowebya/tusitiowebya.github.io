@@ -18,6 +18,7 @@ const DIST = path.join(ROOT, 'dist');
 const REPO = path.resolve(ROOT, '..');
 const DO_OG = process.argv.includes('--og');
 const ASSET_V = Date.now().toString(36); // cache-busting de css/js
+const CHAT_KIT = path.resolve(REPO, '../landings-src/_kit/tpy-chat'); // motor del asistente de chat
 
 /* ---------------------------------------------------------------------
    utilidades
@@ -166,6 +167,7 @@ function head(p) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/chat.css?v=${ASSET_V}">
 <link rel="stylesheet" href="/assets/site.css?v=${ASSET_V}">
 <script>(function(d){d.className+=" js";try{var s=location.search;if(/[?&]lite/.test(s)||(!/[?&]full/.test(s)&&(sessionStorage.getItem("tpy-lite")||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2))))d.className+=" lite"}catch(e){}})(document.documentElement)</script>
 <script type="application/ld+json">${ld}</script>
@@ -207,7 +209,9 @@ function footer() {
   </div>
 </footer>
 <a class="wa-float" href="${wa('Hola TuPaginaYa! Quiero consultar por una página web')}" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">${ICON.wa}</a>
-<script src="/assets/site.js?v=${ASSET_V}" defer></script>`;
+<script src="/assets/site.js?v=${ASSET_V}" defer></script>
+<script src="/assets/chat.js?v=${ASSET_V}" defer></script>
+<script src="/assets/chat-tpy.js?v=${ASSET_V}" defer></script>`;
 }
 
 /* prompt con la ruta real (breadcrumb visible) */
@@ -360,7 +364,7 @@ page({
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div class="ticker-track">${[0, 1].map(() => `<span>demo gratis antes de pagar</span><span>dominio .com.ar incluido</span><span>${N_SITIOS} webs en vivo</span><span>sin permanencia</span><span>diseño a medida, no plantillas</span><span>pedidos por WhatsApp</span>`).join('')}</div></div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track">${[0, 1].map(() => `<span>demo gratis antes de pagar</span><span>dominio .com.ar incluido</span><span>${N_SITIOS} webs en vivo</span><span>sin permanencia</span><span>diseño a medida, no plantillas</span><span>pedidos por WhatsApp</span><span>chat que atiende 24/7</span>`).join('')}</div></div>
 
 <section class="sec">
   <div class="wrap">
@@ -403,7 +407,37 @@ page({
   </div>
 </section>
 
-<section class="sec sec-alt">
+<section class="sec sec-alt" id="asistente">
+  <div class="wrap split">
+    <div>
+      <p class="prompt"><a href="#asistente">#asistente</a><span class="sep">·</span><span>incluido en los dos planes</span></p>
+      <h2 class="rv">Tu web atiende sola, 24/7. <span class="ya">Vos solo confirmás la venta.</span></h2>
+      <p class="lead rv">Un asistente de chat responde al instante las preguntas de siempre de tu rubro y, cuando el cliente está listo, te lo pasa por WhatsApp con su nombre y lo que necesita.</p>
+      <div class="feats">
+        <div class="feat rv">${ICON.chat}<div><b>Responde a cualquier hora</b><span>Precios, horarios, zonas, turnos o envíos, aunque estés atendiendo o durmiendo.</span></div></div>
+        <div class="feat rv">${ICON.grid}<div><b>Respuestas de tu rubro</b><span>Las armamos con vos y con los datos reales de tu negocio.</span></div></div>
+        <div class="feat rv">${ICON.wa}<div><b>El cliente te llega listo</b><span>Nombre, qué necesita y desde dónde, directo a tu WhatsApp.</span></div></div>
+      </div>
+      <div class="more"><button class="btn btn-primary" type="button" data-tpyc-open="chat">${ICON.chat}<span>Probalo acá</span></button><a class="btn btn-ghost" href="/planes/">Ver planes</a></div>
+    </div>
+    <div class="botdemo rv" aria-hidden="true">
+      <div class="bd-chat">
+        <div class="bd-head"><i></i><div><b>Tu negocio</b><span>En línea · 24 h</span></div><em>23:47</em></div>
+        <div class="bd-log">
+          <p class="bd-me">Hola! ¿Trabajan en Morón?</p>
+          <p class="bd-bot">¡Hola! Sí, cubrimos Morón y toda Zona Oeste. ¿Qué necesitás?</p>
+          <p class="bd-me">Instalar un aire split</p>
+          <p class="bd-bot">Perfecto. ¿Cómo te llamás así te paso con el equipo?</p>
+          <p class="bd-me">Lucía</p>
+          <p class="bd-bot">¡Gracias, Lucía! Te paso por WhatsApp para coordinar la visita 👇</p>
+        </div>
+      </div>
+      <div class="bd-notif">${ICON.wa}<div><b>Nuevo cliente desde tu web</b><span>Lucía · Morón · instalar un aire split</span></div><em>ahora</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
   <div class="wrap">
     <div class="sec-head center">
       <p class="prompt"><a href="/planes/">/planes</a></p>
@@ -415,7 +449,7 @@ page({
   </div>
 </section>
 
-<section class="sec">
+<section class="sec sec-alt">
   <div class="wrap split">
     <div>
       <p class="prompt"><a href="/cobros/">/cobros</a></p>
@@ -440,7 +474,7 @@ page({
   </div>
 </section>
 
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="band rv">
       <div>
@@ -458,7 +492,7 @@ page({
   </div>
 </section>
 
-<section class="sec">
+<section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head center">
       <p class="prompt"><a href="/preguntas-frecuentes/">/preguntas-frecuentes</a></p>
@@ -469,7 +503,7 @@ page({
   </div>
 </section>
 
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head">
       <p class="prompt"><a href="/guias/">/guias</a></p>
@@ -479,7 +513,7 @@ page({
   </div>
 </section>
 
-<section class="sec">
+<section class="sec sec-alt">
   <div class="wrap">${demoForm()}</div>
 </section>`);
 
@@ -503,7 +537,7 @@ ${phero({
   answer: 'TuPaginaYa diseña páginas web a medida para negocios y profesionales de toda Argentina. Te mostramos una demo gratis en menos de 24 horas y, cuando la aprobás, la publicamos en 48 horas con dominio .com.ar, hosting y WhatsApp.',
   extra: `<div class="more"><a class="btn btn-primary" href="${wa('Hola TuPaginaYa! Quiero mi demo gratis')}" target="_blank" rel="noopener">${ICON.wa}<span>Pedir demo gratis</span></a><a class="btn btn-ghost" href="/planes/">Ver planes</a></div>`,
 })}
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head"><h2 class="rv">Qué incluye tu web</h2></div>
     <div class="needs">
@@ -516,7 +550,7 @@ ${phero({
     </div>
   </div>
 </section>
-<section class="sec">
+<section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head"><h2 class="rv">Cómo trabajamos</h2></div>
     <ol class="timeline">
@@ -527,7 +561,7 @@ ${phero({
     </ol>
   </div>
 </section>
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head"><h2 class="rv">Qué necesitamos de vos</h2></div>
     <dl class="facts">
@@ -538,7 +572,7 @@ ${phero({
     </dl>
   </div>
 </section>
-<section class="sec"><div class="wrap">${demoForm()}</div></section>`);
+<section class="sec sec-alt"><div class="wrap">${demoForm()}</div></section>`);
 
 /* ---------- PLANES ---------- */
 page({
@@ -565,6 +599,7 @@ ${phero({
         <tr><td>Diseño a medida</td><td class="y">Sí</td><td class="y">Sí</td></tr>
         <tr><td>Dominio .com.ar + hosting</td><td class="y">Sí</td><td class="y">Sí</td></tr>
         <tr><td>WhatsApp y redes integrados</td><td class="y">Sí</td><td class="y">Sí</td></tr>
+        <tr><td>Asistente de chat 24/7 con respuestas de tu rubro</td><td class="y">Sí</td><td class="y">Sí</td></tr>
         <tr><td>Actualizaciones por mes</td><td>5</td><td>5</td></tr>
         <tr><td>Correos corporativos</td><td>2</td><td>2</td></tr>
         <tr><td>Soporte</td><td>24/7</td><td>24/7</td></tr>
@@ -962,6 +997,14 @@ ${footer()}
    assets, marca, íconos
    ------------------------------------------------------------------- */
 for (const f of ['site.css', 'site.js', 'home.js']) copy(path.join(ROOT, 'src/assets', f), `assets/${f}`);
+for (const f of ['chat.js', 'chat.css']) copy(path.join(CHAT_KIT, f), `assets/${f}`);
+write('assets/chat-tpy.js', fs.readFileSync(path.join(ROOT, 'src/assets/chat-tpy.js'), 'utf8').replace('/*__DATA__*/null', JSON.stringify({
+  wa: SITE.waNumber,
+  nSitios: N_SITIOS,
+  planes: PLANES.map((p) => ({ id: p.id, name: p.name, monthly: money(p.monthly), activation: money(p.activation) })),
+  faq: FAQ,
+  rubros: RUBROS.map((r) => ({ slug: r.slug, short: r.short, n: sitiosDe(r.slug).length })),
+})));
 for (const f of fs.readdirSync(path.join(ROOT, 'brand'))) {
   if (/^(concept|_)/.test(f) || f.endsWith('.html')) continue;
   copy(path.join(ROOT, 'brand', f), `brand/${f}`);
