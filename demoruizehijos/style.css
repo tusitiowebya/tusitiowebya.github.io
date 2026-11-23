@@ -75,7 +75,7 @@ section{ position:relative; }
 
 /* ===== LOGO ===== */
 .logo{ display:inline-flex; align-items:center; gap:12px; color:var(--teja); }
-.logo-roof{ width:54px; height:26px; flex-shrink:0; }
+.logo-roof{ width:62px; height:36px; flex-shrink:0; }
 .logo-word{ display:flex; flex-direction:column; line-height:1; }
 .logo-name{ font-family:var(--disp); font-size:21px; letter-spacing:.04em; color:var(--bone); }
 .logo-sub{ font-family:var(--mono); font-size:9px; letter-spacing:.32em; text-transform:uppercase; color:rgba(244,240,232,.55); margin-top:4px; }
@@ -214,6 +214,10 @@ section{ position:relative; }
 .cta-mini{ display:flex; gap:14px; justify-content:center; align-items:center; flex-wrap:wrap; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:rgba(244,240,232,.55); }
 .cta-mini a{ color:rgba(244,240,232,.8); transition:color .2s; }
 .cta-mini a:hover{ color:var(--teja-l); }
+.zonas{ margin:26px auto 30px; max-width:720px; text-align:center; }
+.zonas-t{ display:block; font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--clay); margin-bottom:14px; }
+.zonas ul{ list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:0; margin:0; }
+.zonas li{ padding:7px 14px; border:1px solid rgba(244,240,232,.25); border-radius:2px; color:var(--bone); font-size:14px; }
 
 /* ===== FOOTER ===== */
 .footer{ background:#0A0C10; color:var(--bone); padding:70px 0 28px; }
