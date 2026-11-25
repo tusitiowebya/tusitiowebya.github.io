@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dicarcerrajeria.tupaginaya.com.ar/sitemap.xml
