@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jyfcerrajeria.tupaginaya.com.ar/sitemap.xml
