@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oscars.tupaginaya.com.ar/sitemap.xml
