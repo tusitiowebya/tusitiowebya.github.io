@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://voxcerrajeria.tupaginaya.com.ar/sitemap.xml
