@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fedeelectricista.tupaginaya.com.ar/sitemap.xml
