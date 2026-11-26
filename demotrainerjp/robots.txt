@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trainerjuanpablo.tupaginaya.com.ar/sitemap.xml
