@@ -1,0 +1,15 @@
+{
+  "aviso": "Catálogo inicial de la demo con las fotos reales de Punch Color. Sin precios: se consultan. Con el slug de CobrOS en config.js se reemplaza por el catálogo cargado en el panel.",
+  "productos": [
+    { "_id": "mochila-geometrica", "nombre": "Mochila Geométrica", "categoria": "Mochilas", "precio": 0, "foto": "media/prod/mochila-geometrica.jpg", "descripcion": "Estampa de diseño propio en gris, turquesa y rojo · Bolsillo frontal con cierre · Impermeable y lavable", "destacado": 10 },
+    { "_id": "mochila-gatos", "nombre": "Mochila Gatos", "categoria": "Mochilas", "precio": 0, "foto": "media/prod/mochila-gatos.jpg", "descripcion": "Estampa de gatitos en amarillo, fucsia y turquesa · Bolsillo frontal con cierre · Impermeable y lavable", "destacado": 9 },
+    { "_id": "mochila-espirales", "nombre": "Mochila Espirales", "categoria": "Mochilas", "precio": 0, "foto": "media/prod/mochila-espirales.jpg", "descripcion": "Espirales rojas sobre amarillo y turquesa · Bolsillo frontal con cierre · Impermeable y lavable", "destacado": 7 },
+    { "_id": "mochila-bloques", "nombre": "Mochila Bloques", "categoria": "Mochilas", "precio": 0, "foto": "media/prod/set-bloques.jpg", "descripcion": "Bloques de color fucsia, amarillo y turquesa · Bolsillo frontal con cierre · Impermeable y lavable", "destacado": 8 },
+    { "_id": "cartuchera-geometrica", "nombre": "Cartuchera Geométrica", "categoria": "Cartucheras", "precio": 0, "foto": "media/prod/set-geometrica.jpg", "descripcion": "Misma estampa que la mochila Geométrica · Impermeable y lavable", "destacado": 6 },
+    { "_id": "cartuchera-bloques", "nombre": "Cartuchera Bloques", "categoria": "Cartucheras", "precio": 0, "foto": "media/prod/cartucheras-bloques.jpg", "descripcion": "Bloques de color en tonos vivos · Combina con la mochila Bloques · Impermeable y lavable", "destacado": 6 },
+    { "_id": "cartuchera-gatos", "nombre": "Cartuchera Gatos", "categoria": "Cartucheras", "precio": 0, "foto": "media/prod/set-gatos.jpg", "descripcion": "Misma estampa que la mochila Gatos · Impermeable y lavable", "destacado": 5 },
+    { "_id": "cartucheras-estampas", "nombre": "Cartucheras: más estampas", "categoria": "Cartucheras", "precio": 0, "foto": "media/prod/cartucheras-fila.jpg", "descripcion": "Otras estampas de diseño propio · Preguntanos cuáles hay disponibles", "destacado": 3 },
+    { "_id": "agenda-geometrica", "nombre": "Agenda 2027 Geométrica", "categoria": "Agendas", "precio": 0, "foto": "media/prod/agenda-geometrica.jpg", "descripcion": "Agenda 2027 · 10 × 15 cm · Cierre con elástico · Portabirome", "etiqueta": "Próximamente", "destacado": 4 },
+    { "_id": "agenda-gatos", "nombre": "Agenda 2027 Gatos", "categoria": "Agendas", "precio": 0, "foto": "media/prod/agenda-gatos.jpg", "descripcion": "Agenda 2027 · 10 × 15 cm · Cierre con elástico · Portabirome", "etiqueta": "Próximamente", "destacado": 4 }
+  ]
+}
