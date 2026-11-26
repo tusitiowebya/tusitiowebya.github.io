@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://albertodiazplomero.tupaginaya.com.ar/sitemap.xml
