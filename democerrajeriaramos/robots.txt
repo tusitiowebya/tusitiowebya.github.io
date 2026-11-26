@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cerrajeriaramosmejia.tupaginaya.com.ar/sitemap.xml
