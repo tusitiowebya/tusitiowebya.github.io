@@ -1,0 +1,35 @@
+{
+  "aviso": "Catálogo de lanzamiento de VRECAM: 3 productos reales con fotos del proveedor. Precios de lanzamiento a confirmar. Con el slug de CobrOS en config.js se reemplaza por el catálogo cargado en la app.",
+  "productos": [
+    {
+      "_id": "afeitadora-cleane",
+      "nombre": "Afeitadora eléctrica portátil CLEANE",
+      "categoria": "Afeitado",
+      "precio": 0,
+      "foto": "media/cleane1.webp",
+      "fotos": ["media/cleane1.webp", "media/cleane2.webp", "media/cleane0.webp"],
+      "descripcion": "Tamaño compacto, entra en un bolsillo o en el neceser · Viene en caja negra con estuche de accesorios · En la caja se ven cable de carga, cepillito de limpieza y manual · Colores: Negro",
+      "destacado": 3
+    },
+    {
+      "_id": "cortadora-resuxi",
+      "nombre": "Cortadora corporal recargable Resuxi",
+      "categoria": "Corte y cuerpo",
+      "precio": 0,
+      "foto": "media/resuxi.webp",
+      "fotos": ["media/resuxi.webp"],
+      "descripcion": "Recargable, con base de apoyo y carga · Display que muestra la batería restante · Para corte de vello corporal · Colores: Negro, Verde, Rosa",
+      "destacado": 2
+    },
+    {
+      "_id": "alarma-llavero",
+      "nombre": "Alarma personal tipo llavero con luz",
+      "categoria": "Seguridad personal",
+      "precio": 0,
+      "foto": "media/alarmas.webp",
+      "fotos": ["media/alarmas.webp"],
+      "descripcion": "Formato llavero, para la mochila, la cartera o las llaves · Con luz LED · Liviana y fácil de llevar siempre encima · Colores: Negro, Azul, Blanco, Celeste, Rosa, Violeta",
+      "destacado": 1
+    }
+  ]
+}
