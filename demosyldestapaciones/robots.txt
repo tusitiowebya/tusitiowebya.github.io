@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://syldestapaciones.tupaginaya.com.ar/sitemap.xml
