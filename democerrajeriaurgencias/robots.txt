@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cerrajeriaurgencias24.tupaginaya.com.ar/sitemap.xml
