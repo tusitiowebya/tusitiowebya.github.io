@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://compumoron.tupaginaya.com.ar/sitemap.xml
