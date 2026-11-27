@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://baufivet.tupaginaya.com.ar/sitemap.xml
