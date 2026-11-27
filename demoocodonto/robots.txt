@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ocodontologiatigre.tupaginaya.com.ar/sitemap.xml
