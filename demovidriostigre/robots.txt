@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vidriostigre.tupaginaya.com.ar/sitemap.xml
