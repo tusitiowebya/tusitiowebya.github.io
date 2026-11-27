@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://veterinariavida.tupaginaya.com.ar/sitemap.xml
