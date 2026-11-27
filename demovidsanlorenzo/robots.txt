@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vidrieriasanlorenzo.tupaginaya.com.ar/sitemap.xml
