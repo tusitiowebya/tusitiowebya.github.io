@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://odontologiasoledadlopez.tupaginaya.com.ar/sitemap.xml
