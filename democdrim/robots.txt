@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cdrimkinesiologia.tupaginaya.com.ar/sitemap.xml
