@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kinesiaballester.tupaginaya.com.ar/sitemap.xml
