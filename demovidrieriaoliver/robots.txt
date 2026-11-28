@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vidrieriaoliversanmiguel.tupaginaya.com.ar/sitemap.xml
