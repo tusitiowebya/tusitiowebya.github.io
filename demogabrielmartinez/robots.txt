@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gabrielmartinezpsicologo.tupaginaya.com.ar/sitemap.xml
